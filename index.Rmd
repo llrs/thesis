@@ -11,10 +11,6 @@ github-repo: llrs/thesis
 description: "This is the home of the thesis."
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Preface {-}
 
 This is the preface of my thesis
