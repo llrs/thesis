@@ -1,3 +1,3 @@
 #!/bin/sh
 
-Rscript -e "bookdown::render_site(encoding = 'UTF-8')"
+Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
