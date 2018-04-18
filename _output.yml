@@ -3,7 +3,8 @@ bookdown::gitbook:
   split_by: section
   config:
     toc:
-      collapse: subsection
+      collapse: section
+      toc_appendix: yes
       scroll_highlight: yes
       before: |
         <li><a href="./">PhD thesis</a></li>
