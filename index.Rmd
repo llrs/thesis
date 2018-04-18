@@ -3,7 +3,6 @@ title: "My thesis"
 author: "Lluís Revilla Sancho"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
 documentclass: book
 biblio-style: apalike
 link-citations: yes

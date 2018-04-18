@@ -1,6 +1,9 @@
-book_filename: "bookdown-demo"
+book_filename: "Thesis"
 # output_dir: "docs" ## Needs to have its own url per https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch
+edit: https://github.com/llrs/thesis/edit/master/%s
+github-repo: "llrs/thesis"
 language:
   ui:
     chapter_name: ""
 delete_merged_file: true
+author: "Lluís Revilla Sancho"
