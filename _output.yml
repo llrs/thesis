@@ -10,8 +10,19 @@ bookdown::gitbook:
         <li><a href="./">PhD thesis</a></li>
       after: |
         <li><a href="https://bookdown.org/yihui/bookdown/" target="_blank">Published with bookdown</a></li>
-    download: [pdf, epub, mobi]
+    download: [pdf]
     edit: https://github.com/llrs/thesis/edit/master/%s
     sharing:
       github: yes
       facebook: no
+bookdown::pdf_book:
+  keep_tex: yes
+  dev: "cairo_pdf"
+  latex_engine: xelatex
+  citation_package: natbib
+  template: null
+  pandoc_args: --top-level-division=chapter
+  toc_depth: 3
+  toc_unnumbered: no
+  toc_appendix: yes
+  quote_footer: ["\\VA{", "}{}"]
