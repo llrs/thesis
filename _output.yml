@@ -16,12 +16,11 @@ bookdown::gitbook:
       github: yes
       facebook: no
 bookdown::pdf_book:
-  keep_tex: yes
+  keep_tex: no
   dev: "cairo_pdf"
-  latex_engine: xelatex
+  latex_engine: pdflatex
   citation_package: natbib
   template: null
-  pandoc_args: --top-level-division=chapter
   toc_depth: 3
   toc_unnumbered: no
   toc_appendix: yes
