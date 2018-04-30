@@ -25,7 +25,7 @@
 <meta name="author" content="Lluís Revilla Sancho">
 
 
-<meta name="date" content="2018-04-19">
+<meta name="date" content="2018-04-30">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -69,8 +69,8 @@
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="data-type-numeric-vs-categorical.html"><a href="data-type-numeric-vs-categorical.html"><i class="fa fa-check"></i><b>1.1</b> Data type: numeric vs categorical</a></li>
 <li class="chapter" data-level="1.2" data-path="goal.html"><a href="goal.html"><i class="fa fa-check"></i><b>1.2</b> Goal</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="goal.html"><a href="goal.html#new-relationships"><i class="fa fa-check"></i><b>1.2.1</b> New relationships</a></li>
-<li class="chapter" data-level="1.2.2" data-path="goal.html"><a href="goal.html#explore-known-relationships"><i class="fa fa-check"></i><b>1.2.2</b> Explore known relationships</a></li>
+<li class="chapter" data-level="1.2.1" data-path="goal.html"><a href="goal.html#explore-known-relationships"><i class="fa fa-check"></i><b>1.2.1</b> Explore known relationships</a></li>
+<li class="chapter" data-level="1.2.2" data-path="goal.html"><a href="goal.html#new-relationships"><i class="fa fa-check"></i><b>1.2.2</b> New relationships</a></li>
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="relationship-between-variables-and-samples.html"><a href="relationship-between-variables-and-samples.html"><i class="fa fa-check"></i><b>1.3</b> Relationship between variables and samples</a><ul>
 <li class="chapter" data-level="1.3.1" data-path="relationship-between-variables-and-samples.html"><a href="relationship-between-variables-and-samples.html#more-variables-than-samples"><i class="fa fa-check"></i><b>1.3.1</b> More variables than samples</a></li>
@@ -83,6 +83,7 @@
 <li class="chapter" data-level="1.7.1" data-path="interpretation.html"><a href="interpretation.html#individually"><i class="fa fa-check"></i><b>1.7.1</b> Individually</a></li>
 <li class="chapter" data-level="1.7.2" data-path="interpretation.html"><a href="interpretation.html#globally"><i class="fa fa-check"></i><b>1.7.2</b> Globally</a></li>
 </ul></li>
+<li class="chapter" data-level="1.8" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>1.8</b> Conclusion</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org/yihui/bookdown/" target="_blank">Published with bookdown</a></li>
@@ -106,13 +107,14 @@
             <section class="normal" id="section-">
 <div id="relationship-between-variables-and-samples" class="section level2">
 <h2><span class="header-section-number">1.3</span> Relationship between variables and samples</h2>
+<p>Traditionally for each sample few variable has been measured, for instance for a tree only the height and width are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample</p>
 <div id="more-variables-than-samples" class="section level3">
 <h3><span class="header-section-number">1.3.1</span> More variables than samples</h3>
-<p>The new techniques of transcriptomics, metabolomics, methylomics, genomics are based on evaluating a large amount of variables of a single sample, which lead to the case where there are (many) more variables than samples. Generally “old” statistics don’t consider this case.</p>
+<p>For a single sample of RNA around 50k genome identifers (genes, long non coding RNAs, iRNA, pseudogenes,…) can be measured. Which lead to the case where there are (many) more variables than samples, generally “old” statistics don’t consider this case, as it has its own complications like covariance between the variables. When two variables are tighly correlated, discerning which is the lead and which is following is near to impossible.</p>
 </div>
 <div id="more-samples-than-variables" class="section level3">
 <h3><span class="header-section-number">1.3.2</span> More samples than variables</h3>
-<p>This is the typical example when from a cohort of patients the temperature is measured along the stage of a disease, two variables for each sample</p>
+<p>This is the typical example when from a cohort of patients the temperature is measured along the stage of a disease, two variables for each sample.</p>
 </div>
 </div>
             </section>
