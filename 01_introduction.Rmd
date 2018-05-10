@@ -26,10 +26,10 @@ However on the second case is difficult because there is no prior information ab
 Traditionally for each sample few variable has been measured, for instance for a tree only the height and width are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample
 
 ### More variables than samples
-For a single sample of RNA around 50k genome identifers (genes, long non coding RNAs, iRNA, pseudogenes,...) can be measured.  Which lead to the case where there are (many) more variables than samples, generally "old" statistics don't consider this case, as it has its own complications like covariance between the variables. When two variables are tighly correlated, discerning which is the lead and which is following is near to impossible.
+For a single sample of RNA around 50k genome identifers (genes, long non coding RNAs, iRNA, pseudogenes,...) can be measured. High-throughput data analysis typically falls into the category of $p \gg n$ problems, where the number of genes or proteins, $p$, is considerably larger than the number of samples, $n$. Which leads to the case where there are (many) more variables than samples, generally "old" statistics don't consider this case, as it has its own complications like covariance between the variables. When two variables are tighly correlated, discerning which is the lead and which is following is near to impossible.
 
 ### More samples than variables
-This is the typical example when from a cohort of patients the temperature is measured along the stage of a disease, two variables for each sample.
+This is the typical example when from a cohort of patients the temperature is measured along the stage of a disease, two variables for each sample. This would be a case where $n \gt p$.
 
 ## Relationship between samples
 Each sample has the correspondent sample on the other data-set or not, so if for the same patient we can measure the transcriptomics, the metabolomics and the methylation at the same time it is XXXX.
