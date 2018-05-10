@@ -25,7 +25,7 @@
 <meta name="author" content="Lluís Revilla Sancho">
 
 
-<meta name="date" content="2018-04-30">
+<meta name="date" content="2018-05-10">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -108,7 +108,7 @@
 <div id="header">
 <h1 class="title">My thesis</h1>
 <h4 class="author"><em>Lluís Revilla Sancho</em></h4>
-<h4 class="date"><em>2018-04-30</em></h4>
+<h4 class="date"><em>2018-05-10</em></h4>
 </div>
 <div id="preface" class="section level1 unnumbered">
 <h1>Preface</h1>
@@ -164,6 +164,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

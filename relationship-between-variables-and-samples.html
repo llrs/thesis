@@ -25,7 +25,7 @@
 <meta name="author" content="Lluís Revilla Sancho">
 
 
-<meta name="date" content="2018-04-30">
+<meta name="date" content="2018-05-10">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -110,11 +110,11 @@
 <p>Traditionally for each sample few variable has been measured, for instance for a tree only the height and width are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample</p>
 <div id="more-variables-than-samples" class="section level3">
 <h3><span class="header-section-number">1.3.1</span> More variables than samples</h3>
-<p>For a single sample of RNA around 50k genome identifers (genes, long non coding RNAs, iRNA, pseudogenes,…) can be measured. Which lead to the case where there are (many) more variables than samples, generally “old” statistics don’t consider this case, as it has its own complications like covariance between the variables. When two variables are tighly correlated, discerning which is the lead and which is following is near to impossible.</p>
+<p>For a single sample of RNA around 50k genome identifers (genes, long non coding RNAs, iRNA, pseudogenes,…) can be measured. High-throughput data analysis typically falls into the category of <span class="math inline">\(p \gg n\)</span> problems, where the number of genes or proteins, <span class="math inline">\(p\)</span>, is considerably larger than the number of samples, <span class="math inline">\(n\)</span>. Which leads to the case where there are (many) more variables than samples, generally “old” statistics don’t consider this case, as it has its own complications like covariance between the variables. When two variables are tighly correlated, discerning which is the lead and which is following is near to impossible.</p>
 </div>
 <div id="more-samples-than-variables" class="section level3">
 <h3><span class="header-section-number">1.3.2</span> More samples than variables</h3>
-<p>This is the typical example when from a cohort of patients the temperature is measured along the stage of a disease, two variables for each sample.</p>
+<p>This is the typical example when from a cohort of patients the temperature is measured along the stage of a disease, two variables for each sample. This would be a case where <span class="math inline">\(n \gt p\)</span>.</p>
 </div>
 </div>
             </section>
@@ -166,6 +166,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
