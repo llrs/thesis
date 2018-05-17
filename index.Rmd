@@ -12,4 +12,19 @@ description: "This is the home of the thesis."
 
 # Preface {-}
 
-This is the preface of my thesis
+The main topic of the thesis is 
+[data integration](https://en.wikipedia.org/wiki/Data_integration) applied in the 
+[inflammatory bowel disease (IBD)](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) 
+research. This disease is complex and there are hypothesis pointing that the 
+[microbiome](https://en.wikipedia.org/wiki/Microbiota) is a major factor in the 
+disease. The data I will be integrating are different omics data and the 
+phenotype of the patients.
+
+The thesis is performed on the [IDIBAPS](http://www.idibaps.org/) research 
+institute. My colleges are biologist, microbiologists, veterinaries... and we 
+have weekly meetings with the doctors visiting at the nearby hospital.
+
+The thesis program allows one to defend the thesis after 3 years, and up to 5 
+in total. My timeline is to finish in 3 years (I'll add it when it is finished) 
+with the guide of my thesis directors are Juanjo Lozano and Azucena Sala, who 
+help as bioinformatician and disease expert respectively.
