@@ -1,7 +1,11 @@
 # Purpose 
-This repository host my PhD thesis (like an online book) while I work on the PhD.
+
+This repository host my PhD thesis (like an [online book](https://llrs.github.io/thesis)) while I work on the PhD.
 
 # Other information
+
+It is automatically generated as website and as pdf each time I push on the repository.
+
 **Program**: PhD in Biomedicine by [UB](https://ub.edu) in the research line of *bioinformatics*
 
 **Thesis advisors**: [Juanjo Lozano](https://orcid.org/0000-0001-7613-3908) and  [Azucena Sala]()
