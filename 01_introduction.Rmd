@@ -1,5 +1,4 @@
 # Introduction
-
 The [inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) 
  (IBD) involves [Crohn disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD) and 
 [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (UC). 
@@ -13,40 +12,46 @@ The treatments provided for the IBD are palliative and include, mainly, noninfla
 The therapeutic options can induce remission in some patients, however they often need continuous treatment to avoid recurrence. 
 Nevertheless, many patients are refractory or intolerant to those therapies and need to undergo surgery. 
 
-## Inflammatory bowel disease
-
 ## Integration
-
 Integration is usually defined as:
 
->  the process of combining two or more things into one
+> "the process of combining two or more things into one""
 >
->  ---[Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/integration)
+> --- [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/integration)
 
-We can classify and explore integration in several ways, here I outline some classifications in the bioscience field, with relationships to concrete methodology and usages.
+We can classify and explore integration in several ways, here I outline some classifications in the bioscience field, with relationships to concrete methodology and usages. 
+In the following sections different characteristics of integration are described.
 
 ### Data type: numeric vs categorical
-
-Sometimes doctors want to understand the relationship between some phenotype they observe as a defined state from the underlying mechanistic point of view. Usually this involves looking how the metabolites, the gene expression, the methylation, the number of variants a gene has, and other quantified variables are related to the observed phenotype. Which means relating numeric and categorical data types.
+Sometimes doctors want to understand the relationship between some phenotype they observe as a defined state from the underlying mechanistic point of view. 
+Usually this involves looking how the metabolites, the gene expression, the methylation, the number of variants a gene has, and other quantified variables are related to the observed phenotype (like pain). 
+Which means relating numeric and categorical data types. 
+The most common way to handle this is converting the different categorical values to a mock variable, where each number represents a category, then the methods use these values to correlate and relate the variables.
 
 ### Goal
-The purpose of the integration can be divided in two:
-- Knowing a relation explore a particular case.
-- Explore two sets of variables to find how do they relate
+The purpose of an integration can be divided in two, depending on the goals and previous knowledge:
 
-#### Explore known relationships
-When checking a particular case or condition for a given relationship it is easier because one already knows what kind of relationship do the variables have. If we already know that X is related to Y, we need to check if this holds or not. 
+- Knowing a relation explore a particular case or dataset(s):
 
-#### New relationships
-However on the second case is difficult because there is no prior information about the type of relationship between the variables, which makes it harder to find it. When there isn't any information about how two sets of variables relate, for instance how the methylation affects the microorganism of the gastrointestinal tract, it is difficult to select a tool to analyze it.
+When checking a particular case or condition for a given relationship it is easier because one already knows what kind of relationship do the variables have. 
+If we already know that X is related to Y, we need to check if this holds or not. 
+
+- Explore two (sets of) variables to find how do they relate:  
+
+However on the second case is difficult because there is no prior information about the type of relationship between the variables, which makes it harder to find it. 
+When there isn't any information about how two sets of variables relate, for instance how the methylation affects the microorganism of the gastrointestinal tract, it is difficult to select a tool to analyze it.
 
 ### Relationship between variables and samples
-Traditionally for each sample few variable has been measured, for instance for a tree only the height and width are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample
+Traditionally for each sample few variable has been measured, for instance for a tree only the height and width are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample.
 
-#### More variables than samples
-For a single sample of RNA around 50k genome identifiers (genes, long non coding RNAs, iRNA, pseudogenes,...) can be measured. High-throughput data analysis typically falls into the category of $p \gg n$ problems, where the number of genes or proteins, $p$, is considerably larger than the number of samples, $n$. Which leads to the case where there are (many) more variables than samples, generally "old" statistics don't consider this case, as it has its own complications like covariance between the variables. When two variables are tightly correlated, discerning which is the lead and which is following is near to impossible.
+- More variables than samples:  
 
-#### More samples than variables
+For a single sample of RNA around 50k genome identifiers (genes, long non coding RNAs, iRNA, pseudogenes,...) can be measured. High-throughput data analysis typically falls into the category of $p \gg n$ problems, where the number of genes or proteins, $p$, is considerably larger than the number of samples, $n$. 
+Which leads to the case where there are (many) more variables than samples, generally "old" statistics don't consider this case, as it has its own complications like covariance between the variables. 
+When two variables are tightly correlated, discerning which is the lead and which is following is near to impossible.
+
+- More samples than variables:  
+
 This is the typical example when from a cohort of patients the temperature is measured along the stage of a disease, two variables for each sample. This would be a case where $n \gt p$.
 
 ### Relationship between samples
@@ -55,28 +60,41 @@ Sometimes because the piece of the patient obtained through surgery is not big e
 In some cases we have transcriptomics data from some patients and microbiome data of other patients. This results in a new source of variation that has to be dealt with. Which complicates the conclusion one can draw from the studies of these kind of data.
 
 ### Time
-Time is one of the factors that we can't usually control, despite having programmed visits every two weeks some patients might come early due to calendar reasons (holidays), family reasons, or disease state. 
-At the same time is very important to consider it because two variables can seem correlated if we don't take time into consideration
+Time is one of the factors that we can't usually control, despite having programmed visits every two weeks some patients might come early due to calendar reasons (holidays), family reasons, or disease state.  
+At the same time is very important to consider it because two variables can seem correlated if we don't take time into consideration.
+If one wants to discover causality in the relationship between two variables the cause must be before the consequence. 
+Being aware of the time differences and time scales is crucial in this cases.
 
 ### Relationship between the variables
-Since the lactose operon we know how some genes regulated between them, but for other variables we don't know how they are related. For instance how does the increase in expression of a gene affects the growth of a microorganism?
+Since the lactose operon we know how some genes regulated between them, but for other variables we don't know how they are related. 
+For instance how does the increase in expression of a gene affects the growth of a microorganism?
 
 It is important to note that some integrations may lead to interactions while others don't, that is, the relationship of two different type of variables might be due to a physical relationship or through a more obscure relationship with no known direct contact. 
 
 ### Interpretation
-If one does a correlation between two variables, the interpretation of the analysis is clear, if one variable increase, the other too. However as more complicated methodologies are developed the interpretation is not so clear, for instance how can one interpret the result of a canonical correlation analysis?
+Understanding how to interpret the results of the methods is highly tight to understanding the method. 
+If one does a correlation between two variables, the interpretation of the analysis is clear, if one variable increase, the other too. 
+However as more complicated methodologies are developed the interpretation is not so clear, for instance how can one interpret the result of a canonical correlation analysis?
 
-#### Individually
+- Individually:
+
 How each variable relates to another, like in the correlation analysis, the relationship between two variables under study.
-
 Or by patient: how do interpret that in these patient variable A and B is X and Y? 
 
-#### Globally
-In a PCA for instance how do we interpret that some variables have the same loading? What happens in a more difficult method like canonical correlation analysis.
+- Globally:
 
-What does all these variables say about each patient?
+In a PCA for instance how do we interpret that some variables have the same loading? 
+What happens in a more difficult method like canonical correlation analysis?
 
 ### Conclusion
-
 The field of integration is large and complex, with high interest in the recent days, specially in the psychology and omics field, which lacks of a large study. 
+
+## Inflammatory bowel disease {#IBD}
+Inflammatory bowel disease (IBD) includes both Crohn's disease (CD) and ulcerative colitis (UC). 
+CD is a cronic, progressive reincident disease. Usually it affects both terminal ilium and colon, but it can develop in any site of the gastrointestinal tract. 
+The UC is a colonic reincident and cronic disease characterized by a continous inflammation of the colon and rectum.
+
+## Conclusion
+The integration of data might help to improve the medicine and it is interesting in difficult disease as like IBD. 
+Few tools handle the case when lot of information is known of a specific person but each person is highly different from each other. 
 
