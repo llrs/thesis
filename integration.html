@@ -25,7 +25,7 @@
 <meta name="author" content="Lluís Revilla Sancho">
 
 
-<meta name="date" content="2018-05-23">
+<meta name="date" content="2018-05-31">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -110,7 +110,8 @@
 <p>We can classify and explore integration in several ways, here I outline some classifications in the bioscience field, with relationships to concrete methodology and usages. In the following sections different characteristics of integration are described.</p>
 <div id="data-type-numeric-vs-categorical" class="section level3">
 <h3><span class="header-section-number">1.1.1</span> Data type: numeric vs categorical</h3>
-<p>Sometimes doctors want to understand the relationship between some phenotype they observe as a defined state from the underlying mechanistic point of view. Usually this involves looking how the metabolites, the gene expression, the methylation, the number of variants a gene has, and other quantified variables are related to the observed phenotype (like pain). Which means relating numeric and categorical data types. The most common way to handle this is converting the different categorical values to a mock variable, where each number represents a category, then the methods use these values to correlate and relate the variables.</p>
+<p>Sometimes doctors want to understand the relationship between some phenotype they observe as a defined state from the underlying mechanistic point of view. Usually this involves looking how the metabolites, the gene expression, the methylation, the number of variants a gene has, and other quantified variables are related to the observed phenotype (like pain). Which means relating numeric and categorical data types.</p>
+<p>The most common way to handle different type of data is converting the categorical values to a mock variable, where each number represents a category, then the methods use these values to correlate and relate the variables. Sometimes if the categorical variable has three values (A, B, C) it is converted to A (1, 0, 0) B (0, 1, 0) and C (0, 0, 1).</p>
 </div>
 <div id="goal" class="section level3">
 <h3><span class="header-section-number">1.1.2</span> Goal</h3>
