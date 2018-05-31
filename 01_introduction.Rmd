@@ -26,7 +26,9 @@ In the following sections different characteristics of integration are described
 Sometimes doctors want to understand the relationship between some phenotype they observe as a defined state from the underlying mechanistic point of view. 
 Usually this involves looking how the metabolites, the gene expression, the methylation, the number of variants a gene has, and other quantified variables are related to the observed phenotype (like pain). 
 Which means relating numeric and categorical data types. 
-The most common way to handle this is converting the different categorical values to a mock variable, where each number represents a category, then the methods use these values to correlate and relate the variables.
+
+The most common way to handle different type of data is converting the categorical values to a mock variable, where each number represents a category, then the methods use these values to correlate and relate the variables.
+Sometimes if the categorical variable has three values (A, B, C) it is converted to A (1, 0, 0) B (0, 1, 0) and C (0, 0, 1). 
 
 ### Goal
 The purpose of an integration can be divided in two, depending on the goals and previous knowledge:
@@ -93,6 +95,8 @@ The field of integration is large and complex, with high interest in the recent 
 Inflammatory bowel disease (IBD) includes both Crohn's disease (CD) and ulcerative colitis (UC). 
 CD is a cronic, progressive reincident disease. Usually it affects both terminal ilium and colon, but it can develop in any site of the gastrointestinal tract. 
 The UC is a colonic reincident and cronic disease characterized by a continous inflammation of the colon and rectum.
+
+The relationship between host and microbiome has been proposed to play a fundamental role to maintain the disease. Little is known of the influence of the gastrointestinal microbiome in the expression of the gastrointestinal tract. 
 
 ## Conclusion
 The integration of data might help to improve the medicine and it is interesting in difficult disease as like IBD. 
