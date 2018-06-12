@@ -3,14 +3,17 @@ The [inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowe
  (IBD) involves [Crohn disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD) and 
 [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (UC). 
 It generally affect the terminal ileum and the colon but it can affect any segment of the gastrointestinal tract.
-UC is a recurrent and chronic of colon characterized by a continuous inflammation of the colon and rectum.
+UC is a recurrent and chronic of colon characterized by a continuous inflammation of the colon and rectum while the CD is not a continuous inflammation and affects the whole epithelium. 
 
 IBD etiology is unknown. 
-The most prevalent hypothesis of its origin is that starts with an aberrant immunological response to a antigens of the comensal microbiome.
+The most prevalent hypothesis of its origin suggests that starts with an aberrant immunological response to antigens of the comensal microbiome. 
+However, the factors that initiate IBD are unknown. 
 
-The treatments provided for the IBD are palliative and include, mainly, noninflammatory drugs, suppressors and biologic. 
+Treatments provided for the IBD are palliative and include, mainly, noninflammatory drugs, suppressors and biologic. 
 The therapeutic options can induce remission in some patients, however they often need continuous treatment to avoid recurrence. 
 Nevertheless, many patients are refractory or intolerant to those therapies and need to undergo surgery. 
+
+The disease present unique characteristics that require the usage of integration methods.
 
 ## Integration
 Integration is usually defined as:
@@ -19,49 +22,69 @@ Integration is usually defined as:
 >
 > --- [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/integration)
 
-We can classify and explore integration in several ways, here I outline some classifications in the bioscience field, with relationships to concrete methodology and usages. 
-In the following sections different characteristics of integration are described.
+We can classify and explore integration in several ways, here I outline some classifications in the bioscience field, with relationships (and references) to concrete methodology and usages. 
 
 ### Data type: numeric vs categorical
+The most important distinction in integration methods is what kind of data are combined. 
+In general data can be divided between categorical and numeric values, which are usually found in several fields.
 Sometimes doctors want to understand the relationship between some phenotype they observe as a defined state from the underlying mechanistic point of view. 
-Usually this involves looking how the metabolites, the gene expression, the methylation, the number of variants a gene has, and other quantified variables are related to the observed phenotype (like pain). 
-Which means relating numeric and categorical data types. 
+Usually this involves looking how the metabolites, the gene expression, the methylation, the number of variants a gene has, and other numeric variables are related to the observed (categorical) phenotype (like pain). 
 
+Depending on what is a method aimed for it handles both data types or just one, often they are used differently.
 The most common way to handle different type of data is converting the categorical values to a mock variable, where each number represents a category, then the methods use these values to correlate and relate the variables.
-Sometimes if the categorical variable has three values (A, B, C) it is converted to A (1, 0, 0) B (0, 1, 0) and C (0, 0, 1). 
+If the categorical variable has three values (A, B, C) it would be converted to A (1, 0, 0) B (0, 1, 0) and C (0, 0, 1). 
 
-### Goal
-The purpose of an integration can be divided in two, depending on the goals and previous knowledge:
+### Aim
+The results and methods of data integration depend on the question they seek to answer and on the (biological) question. 
+Most of the times one (or all) of the following results are expected:
 
-- Knowing a relation explore a particular case or dataset(s):
+- An overview of the role of each ‘omics in a biological system
 
-When checking a particular case or condition for a given relationship it is easier because one already knows what kind of relationship do the variables have. 
-If we already know that X is related to Y, we need to check if this holds or not. 
+Sometimes several omics are used and the question is which omic method is the best one to describe the disease.
+Or several methods are used to understand better how two omics interact.
 
-- Explore two (sets of) variables to find how do they relate:  
+- A better understanding of the relationship (correlation) between the ’omics types
 
-However on the second case is difficult because there is no prior information about the type of relationship between the variables, which makes it harder to find it. 
-When there isn't any information about how two sets of variables relate, for instance how the methylation affects the microorganism of the gastrointestinal tract, it is difficult to select a tool to analyze it.
+When the relationship between omics is known there are methods to find those relationships and improve upon previous knowledge.
+For instance, checking that in a particular case or condition there is a given relationship, and that this relationships follows our model or not.
+
+- A molecular signature[^1] leading to more insight into molecular mechanisms
+
+[^1]:A signature is usually used to describe a group of features that describe a cell line or a phase.
+
+The usage of multifactor analysis might lead to the need to redefine the features that are essential for identifying a phase or a cell line. 
+
+- A predictive analytical model towards personalised medicine
+
+If a good model is known it can be used as a prediction if enough information is gathered, which might improve the treatment.
+
 
 ### Relationship between variables and samples
+Depending on the amount of variables and in which samples they have been measures we can classify in two types of integrations.
 Traditionally for each sample few variable has been measured, for instance for a tree only the height and width are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample.
 
 - More variables than samples:  
 
-For a single sample of RNA around 50k genome identifiers (genes, long non coding RNAs, iRNA, pseudogenes,...) can be measured. High-throughput data analysis typically falls into the category of $p \gg n$ problems, where the number of genes or proteins, $p$, is considerably larger than the number of samples, $n$. 
+For a single sample of RNA around 50k genome identifiers (genes, long non coding RNAs, iRNA, pseudogenes,...) can be measured.
+High-throughput data analysis typically falls into the category of $p \gg n$ problems, where the number of genes or proteins, $p$, is considerably larger than the number of samples, $n$. 
 Which leads to the case where there are (many) more variables than samples, generally "old" statistics don't consider this case, as it has its own complications like covariance between the variables. 
 When two variables are tightly correlated, discerning which is the lead and which is following is near to impossible.
 
 - More samples than variables:  
 
-This is the typical example when from a cohort of patients the temperature is measured along the stage of a disease, two variables for each sample. This would be a case where $n \gt p$.
+This is the typical example when from a cohort of patients the temperature is measured along the stage of a disease, two variables for each sample. 
+This is described in the literature as $n \gt p$.
 
 ### Relationship between samples
-Each sample has the correspondent sample on the other data-set or not, so if for the same patient we can measure the transcriptomics, the metabolomics and the methylation at the same time it is XXXX.
-Sometimes because the piece of the patient obtained through surgery is not big enough to be divided into the different experiments needed.
-In some cases we have transcriptomics data from some patients and microbiome data of other patients. This results in a new source of variation that has to be dealt with. Which complicates the conclusion one can draw from the studies of these kind of data.
+Depending on the relationship between the samples the questions answerable and the methods available differ.
+If each sample has all the cases we wanted to measure it is a complete case.
 
-### Time
+Sometimes because the sample is not enough, or there are some technical or organizational problems we might lose a case for a samples. 
+This results in a new source of variation that has to be dealt with, which complicates the conclusion one can draw from the studies of these kind of data.
+
+Even when all the cases of a sample are complete the samples can be from several sites of the same individual or from several sites or with different combinations of variables 
+
+#### Time
 Time is one of the factors that we can't usually control, despite having programmed visits every two weeks some patients might come early due to calendar reasons (holidays), family reasons, or disease state.  
 At the same time is very important to consider it because two variables can seem correlated if we don't take time into consideration.
 If one wants to discover causality in the relationship between two variables the cause must be before the consequence. 
@@ -93,8 +116,8 @@ The field of integration is large and complex, with high interest in the recent 
 
 ## Inflammatory bowel disease {#IBD}
 Inflammatory bowel disease (IBD) includes both Crohn's disease (CD) and ulcerative colitis (UC). 
-CD is a cronic, progressive reincident disease. Usually it affects both terminal ilium and colon, but it can develop in any site of the gastrointestinal tract. 
-The UC is a colonic reincident and cronic disease characterized by a continous inflammation of the colon and rectum.
+CD is a chronic, progressive reincident disease that affects both terminal ilium and colon, but it can develop in any site of the gastrointestinal tract. 
+The UC is a colonic reincident and chronic disease characterized by a continuous inflammation of the colon and rectum.
 
 The relationship between host and microbiome has been proposed to play a fundamental role to maintain the disease. Little is known of the influence of the gastrointestinal microbiome in the expression of the gastrointestinal tract. 
 
