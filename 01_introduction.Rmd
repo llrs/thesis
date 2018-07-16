@@ -1,127 +1,178 @@
-# Introduction
-The [inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) 
- (IBD) involves [Crohn disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD) and 
-[ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (UC). 
-It generally affect the terminal ileum and the colon but it can affect any segment of the gastrointestinal tract.
-UC is a recurrent and chronic of colon characterized by a continuous inflammation of the colon and rectum while the CD is not a continuous inflammation and affects the whole epithelium. 
+# Introduction The [inflammatory bowel
+disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) (IBD)
+involves [Crohn disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD)
+and [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (UC).
+It generally affect the terminal ileum and the colon but it can affect any
+segment of the gastrointestinal tract. UC is a recurrent and chronic of colon
+characterized by a continuous inflammation of the colon and rectum while the CD
+is not a continuous inflammation and affects the whole epithelium.
 
-IBD etiology is unknown. 
-The most prevalent hypothesis of its origin suggests that starts with an aberrant immunological response to antigens of the comensal microbiome. 
-However, the factors that initiate IBD are unknown. 
+IBD etiology is unknown. The most prevalent hypothesis of its origin suggests
+that starts with an aberrant immunological response to antigens of the comensal
+microbiome. However, the factors that initiate IBD are unknown.
 
-Treatments provided for the IBD are palliative and include, mainly, noninflammatory drugs, suppressors and biologic. 
-The therapeutic options can induce remission in some patients, however they often need continuous treatment to avoid recurrence. 
-Nevertheless, many patients are refractory or intolerant to those therapies and need to undergo surgery. 
+Treatments provided for the IBD are palliative and include, mainly,
+noninflammatory drugs, suppressors and biologic. The therapeutic options can
+induce remission in some patients, however they often need continuous treatment
+to avoid recurrence. Nevertheless, many patients are refractory or intolerant to
+those therapies and need to undergo surgery.
 
-The disease present unique characteristics that require the usage of integration methods.
+The disease present unique characteristics that require the usage of integration
+methods.
 
-## Integration
-Integration is usually defined as:
+## Integration Integration is usually defined as:
 
-> "the process of combining two or more things into one""
->
-> --- [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/integration)
+> "the process of combining two or more things into one"" > > --- [Cambridge
+Dictionary](https://dictionary.cambridge.org/dictionary/english/integration)
 
-We can classify and explore integration in several ways, here I outline some classifications in the bioscience field, with relationships (and references) to concrete methodology and usages. 
+We can classify and explore integration in several ways, here I outline some
+classifications in the bioscience field, with relationships (and references) to
+concrete methodology and usages.
 
-### Data type: numeric vs categorical
-The most important distinction in integration methods is what kind of data are combined. 
-In general data can be divided between categorical and numeric values, which are usually found in several fields.
-Sometimes doctors want to understand the relationship between some phenotype they observe as a defined state from the underlying mechanistic point of view. 
-Usually this involves looking how the metabolites, the gene expression, the methylation, the number of variants a gene has, and other numeric variables are related to the observed (categorical) phenotype (like pain). 
+### Data type: numeric vs categorical The most important distinction in
+integration methods is what kind of data are combined. In general data can be
+divided between categorical and numeric values, which are usually found in
+several fields. Sometimes doctors want to understand the relationship between
+some phenotype they observe as a defined state from the underlying mechanistic
+point of view. Usually this involves looking how the metabolites, the gene
+expression, the methylation, the number of variants a gene has, and other
+numeric variables are related to the observed (categorical) phenotype (like
+pain).
 
-Depending on what is a method aimed for it handles both data types or just one, often they are used differently.
-The most common way to handle different type of data is converting the categorical values to a mock variable, where each number represents a category, then the methods use these values to correlate and relate the variables.
-If the categorical variable has three values (A, B, C) it would be converted to A (1, 0, 0) B (0, 1, 0) and C (0, 0, 1). 
+Depending on what is a method aimed for it handles both data types or just one,
+often they are used differently. The most common way to handle different type of
+data is converting the categorical values to a mock variable, where each number
+represents a category, then the methods use these values to correlate and relate
+the variables. If the categorical variable has three values (A, B, C) it would
+be converted to A (1, 0, 0) B (0, 1, 0) and C (0, 0, 1).
 
-### Aim
-The results and methods of data integration depend on the question they seek to answer and on the (biological) question. 
-Most of the times one (or all) of the following results are expected:
+### Aim The results and methods of data integration depend on the question they
+seek to answer and on the (biological) question. Most of the times one (or all)
+of the following results are expected:
 
 - An overview of the role of each ‘omics in a biological system
 
-Sometimes several omics are used and the question is which omic method is the best one to describe the disease.
-Or several methods are used to understand better how two omics interact.
+Sometimes several omics are used and the question is which omic method is the
+best one to describe the disease. Or several methods are used to understand
+better how two omics interact.
 
-- A better understanding of the relationship (correlation) between the ’omics types
+- A better understanding of the relationship (correlation) between the ’omics
+  types
 
-When the relationship between omics is known there are methods to find those relationships and improve upon previous knowledge.
-For instance, checking that in a particular case or condition there is a given relationship, and that this relationships follows our model or not.
+When the relationship between omics is known there are methods to find those
+relationships and improve upon previous knowledge. For instance, checking that
+in a particular case or condition there is a given relationship, and that this
+relationships follows our model or not.
 
 - A molecular signature[^1] leading to more insight into molecular mechanisms
 
-[^1]:A signature is usually used to describe a group of features that describe a cell line or a phase.
+[^1]:A signature is usually used to describe a group of features that describe a
+cell line or a phase.
 
-The usage of multifactor analysis might lead to the need to redefine the features that are essential for identifying a phase or a cell line. 
+The usage of multifactor analysis might lead to the need to redefine the
+features that are essential for identifying a phase or a cell line.
 
 - A predictive analytical model towards personalised medicine
 
-If a good model is known it can be used as a prediction if enough information is gathered, which might improve the treatment.
+If a good model is known it can be used as a prediction if enough information is
+gathered, which might improve the treatment.
 
+### Relationship between variables and samples Depending on the amount of
+variables and in which samples they have been measures we can classify in two
+types of integrations. Traditionally for each sample few variable has been
+measured, for instance for a tree only the height and width are measured,
+however with the new omics techniques (transcriptomics, metabolomics,
+methylomics, genomics), thousands of variables are measured for the same
+sample.
 
-### Relationship between variables and samples
-Depending on the amount of variables and in which samples they have been measures we can classify in two types of integrations.
-Traditionally for each sample few variable has been measured, for instance for a tree only the height and width are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample.
+- More variables than samples:
 
-- More variables than samples:  
+For a single sample of RNA around 50k genome identifiers (genes, long non coding
+RNAs, iRNA, pseudogenes,...) can be measured. High-throughput data analysis
+typically falls into the category of $p \gg n$ problems, where the number of
+genes or proteins, $p$, is considerably larger than the number of samples, $n$.
+Which leads to the case where there are (many) more variables than samples,
+generally "old" statistics don't consider this case, as it has its own
+complications like covariance between the variables. When two variables are
+tightly correlated, discerning which is the lead and which is following is near
+to impossible.
 
-For a single sample of RNA around 50k genome identifiers (genes, long non coding RNAs, iRNA, pseudogenes,...) can be measured.
-High-throughput data analysis typically falls into the category of $p \gg n$ problems, where the number of genes or proteins, $p$, is considerably larger than the number of samples, $n$. 
-Which leads to the case where there are (many) more variables than samples, generally "old" statistics don't consider this case, as it has its own complications like covariance between the variables. 
-When two variables are tightly correlated, discerning which is the lead and which is following is near to impossible.
+- More samples than variables:
 
-- More samples than variables:  
+This is the typical example when from a cohort of patients the temperature is
+measured along the stage of a disease, two variables for each sample. This is
+described in the literature as $n \gt p$.
 
-This is the typical example when from a cohort of patients the temperature is measured along the stage of a disease, two variables for each sample. 
-This is described in the literature as $n \gt p$.
+### Relationship between samples Depending on the relationship between the
+samples the questions answerable and the methods available differ. If each
+sample has all the cases we wanted to measure it is a complete case.
 
-### Relationship between samples
-Depending on the relationship between the samples the questions answerable and the methods available differ.
-If each sample has all the cases we wanted to measure it is a complete case.
+Sometimes because the sample is not enough, or there are some technical or
+organizational problems we might lose a case for a samples. This results in a
+new source of variation that has to be dealt with, which complicates the
+conclusion one can draw from the studies of these kind of data.
 
-Sometimes because the sample is not enough, or there are some technical or organizational problems we might lose a case for a samples. 
-This results in a new source of variation that has to be dealt with, which complicates the conclusion one can draw from the studies of these kind of data.
+Even when all the cases of a sample are complete the samples can be from several
+sites of the same individual or from several sites or with different
+combinations of variables
 
-Even when all the cases of a sample are complete the samples can be from several sites of the same individual or from several sites or with different combinations of variables 
+#### Time Time is one of the factors that sometimes cannot be controled, despite
+having programmed visits every two weeks some patients might come early due to
+calendar reasons (holidays), family reasons, or disease state. Sometimes is
+precisely the object of the study, to see the relationships at different time,
+or see how the relationships change with time. Simultaneously is very important
+to consider it because two variables can seem correlated if we don't take time
+into consideration. Also, to discover causality between two variables the cause
+must be before the consequence, which highlights the importance of time. Being
+aware of the time differences and time scales is crucial in most cases.
 
-#### Time
-Time is one of the factors that we can't usually control, despite having programmed visits every two weeks some patients might come early due to calendar reasons (holidays), family reasons, or disease state.  
-At the same time is very important to consider it because two variables can seem correlated if we don't take time into consideration.
-If one wants to discover causality in the relationship between two variables the cause must be before the consequence. 
-Being aware of the time differences and time scales is crucial in this cases.
+### Relationship between the variables Since the lactose operon we know how some
+genes regulated between them, but for other variables we don't know how they are
+related. For instance how does the increase in expression of a gene affects the
+growth of a microorganism?
 
-### Relationship between the variables
-Since the lactose operon we know how some genes regulated between them, but for other variables we don't know how they are related. 
-For instance how does the increase in expression of a gene affects the growth of a microorganism?
+It is important to note that some integrations may lead to interactions while
+others don't, that is, the relationship of two different type of variables might
+be due to a physical relationship or through a more obscure relationship with no
+known direct contact.
 
-It is important to note that some integrations may lead to interactions while others don't, that is, the relationship of two different type of variables might be due to a physical relationship or through a more obscure relationship with no known direct contact. 
-
-### Interpretation
-Understanding how to interpret the results of the methods is highly tight to understanding the method. 
-If one does a correlation between two variables, the interpretation of the analysis is clear, if one variable increase, the other too. 
-However as more complicated methodologies are developed the interpretation is not so clear, for instance how can one interpret the result of a canonical correlation analysis?
+### Interpretation Understanding how to interpret the results of the methods is
+highly tight to understanding the method. If one does a correlation between two
+variables, the interpretation of the analysis is clear, if one variable
+increase, the other too. However as more complicated methodologies are developed
+the interpretation is not so clear, for instance how can one interpret the
+result of a canonical correlation analysis?
 
 - Individually:
 
-How each variable relates to another, like in the correlation analysis, the relationship between two variables under study.
-Or by patient: how do interpret that in these patient variable A and B is X and Y? 
+How each variable relates to another, like in the correlation analysis, the
+relationship between two variables under study. Or by patient: how do interpret
+that in these patient variable A and B is X and Y?
 
 - Globally:
 
-In a PCA for instance how do we interpret that some variables have the same loading? 
-What happens in a more difficult method like canonical correlation analysis?
+In a PCA for instance how do we interpret that some variables have the same
+loading? What happens in a more difficult method like canonical correlation
+analysis?
 
-### Conclusion
-The field of integration is large and complex, with high interest in the recent days, specially in the psychology and omics field, which lacks of a large study. 
+### Conclusion The field of integration is large and complex, with high interest
+in the recent days, specially in the psychology and omics field, which lacks of
+a large study.
 
-## Inflammatory bowel disease {#IBD}
-Inflammatory bowel disease (IBD) includes both Crohn's disease (CD) and ulcerative colitis (UC). 
-CD is a chronic, progressive reincident disease that affects both terminal ilium and colon, but it can develop in any site of the gastrointestinal tract. 
-The UC is a colonic reincident and chronic disease characterized by a continuous inflammation of the colon and rectum.
+## Inflammatory bowel disease {#IBD} Inflammatory bowel disease (IBD) includes
+both Crohn's disease (CD) and ulcerative colitis (UC). CD is a chronic,
+progressive reincident disease that affects both terminal ilium and colon, but
+it can develop in any site of the gastrointestinal tract. The UC is a colonic
+reincident and chronic disease characterized by a continuous inflammation of the
+colon and rectum.
 
-The relationship between host and microbiome has been proposed to play a fundamental role to maintain the disease. Little is known of the influence of the gastrointestinal microbiome in the expression of the gastrointestinal tract. 
+The relationship between host and microbiome has been proposed to play a
+fundamental role to maintain the disease. Little is known of the influence of
+the gastrointestinal microbiome in the expression of the gastrointestinal tract.
 
-## Conclusion
-The integration of data might help to improve the medicine and it is interesting in difficult disease as like IBD. 
-Few tools handle the case when lot of information is known of a specific person but each person is highly different from each other. 
+
+## Conclusion The integration of data might help to improve the medicine and it
+is interesting in difficult disease as like IBD. Few tools handle the case when
+lot of information is known of a specific person but each person is highly
+different from each other.
 
