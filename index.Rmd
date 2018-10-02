@@ -8,6 +8,7 @@ bibliography: [packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: llrs/thesis
+twitter-handle: Lluis_Rev
 description: "This is the home of the thesis."
 ---
 
