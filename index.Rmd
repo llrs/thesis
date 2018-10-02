@@ -4,7 +4,7 @@ author: "Lluís Revilla Sancho"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-# bibliography: [book.bib, packages.bib]
+bibliography: [packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: llrs/thesis
@@ -31,4 +31,10 @@ The thesis program allows one to defend the thesis after 3 years, and up to 5 in
 total. My timeline is to finish in 3 years (I'll add it when it is finished to
 see how it went :) with the guide of my thesis directors are Juanjo Lozano and
 Azucena Sala, who help as bioinformatician and disease expert respectively.
+
+```{r include=FALSE}
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
 
