@@ -1,5 +1,6 @@
-# Introduction The [inflammatory bowel
-disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) (IBD)
+# Introduction 
+
+The [inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) (IBD)
 involves [Crohn disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD)
 and [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (UC).
 It generally affect the terminal ileum and the colon but it can affect any
@@ -20,16 +21,20 @@ those therapies and need to undergo surgery.
 The disease present unique characteristics that require the usage of integration
 methods.
 
-## Integration Integration is usually defined as:
+## Integration 
 
-> "the process of combining two or more things into one"" > > --- [Cambridge
+Integration is usually defined as:
+
+> "the process of combining two or more things into one" --- [Cambridge
 Dictionary](https://dictionary.cambridge.org/dictionary/english/integration)
 
 We can classify and explore integration in several ways, here I outline some
 classifications in the bioscience field, with relationships (and references) to
 concrete methodology and usages.
 
-### Data type: numeric vs categorical The most important distinction in
+### Data type: numeric vs categorical 
+
+The most important distinction in
 integration methods is what kind of data are combined. In general data can be
 divided between categorical and numeric values, which are usually found in
 several fields. Sometimes doctors want to understand the relationship between
@@ -46,7 +51,9 @@ represents a category, then the methods use these values to correlate and relate
 the variables. If the categorical variable has three values (A, B, C) it would
 be converted to A (1, 0, 0) B (0, 1, 0) and C (0, 0, 1).
 
-### Aim The results and methods of data integration depend on the question they
+### Aim 
+
+The results and methods of data integration depend on the question they
 seek to answer and on the (biological) question. Most of the times one (or all)
 of the following results are expected:
 
@@ -77,7 +84,9 @@ features that are essential for identifying a phase or a cell line.
 If a good model is known it can be used as a prediction if enough information is
 gathered, which might improve the treatment.
 
-### Relationship between variables and samples Depending on the amount of
+### Relationship between variables and samples 
+
+Depending on the amount of
 variables and in which samples they have been measures we can classify in two
 types of integrations. Traditionally for each sample few variable has been
 measured, for instance for a tree only the height and width are measured,
@@ -103,7 +112,9 @@ This is the typical example when from a cohort of patients the temperature is
 measured along the stage of a disease, two variables for each sample. This is
 described in the literature as $n \gt p$.
 
-### Relationship between samples Depending on the relationship between the
+### Relationship between samples 
+
+Depending on the relationship between the
 samples the questions answerable and the methods available differ. If each
 sample has all the cases we wanted to measure it is a complete case.
 
@@ -116,7 +127,9 @@ Even when all the cases of a sample are complete the samples can be from several
 sites of the same individual or from several sites or with different
 combinations of variables
 
-#### Time Time is one of the factors that sometimes cannot be controled, despite
+#### Time 
+
+Time is one of the factors that sometimes cannot be controled, despite
 having programmed visits every two weeks some patients might come early due to
 calendar reasons (holidays), family reasons, or disease state. Sometimes is
 precisely the object of the study, to see the relationships at different time,
@@ -126,7 +139,9 @@ into consideration. Also, to discover causality between two variables the cause
 must be before the consequence, which highlights the importance of time. Being
 aware of the time differences and time scales is crucial in most cases.
 
-### Relationship between the variables Since the lactose operon we know how some
+### Relationship between the variables 
+
+Since the lactose operon we know how some
 genes regulated between them, but for other variables we don't know how they are
 related. For instance how does the increase in expression of a gene affects the
 growth of a microorganism?
@@ -136,7 +151,9 @@ others don't, that is, the relationship of two different type of variables might
 be due to a physical relationship or through a more obscure relationship with no
 known direct contact.
 
-### Interpretation Understanding how to interpret the results of the methods is
+### Interpretation 
+
+Understanding how to interpret the results of the methods is
 highly tight to understanding the method. If one does a correlation between two
 variables, the interpretation of the analysis is clear, if one variable
 increase, the other too. However as more complicated methodologies are developed
@@ -155,12 +172,16 @@ In a PCA for instance how do we interpret that some variables have the same
 loading? What happens in a more difficult method like canonical correlation
 analysis?
 
-### Conclusion The field of integration is large and complex, with high interest
+### Conclusion
+
+The field of integration is large and complex, with high interest
 in the recent days, specially in the psychology and omics field, which lacks of
 a large study.
 
-## Inflammatory bowel disease {#IBD} Inflammatory bowel disease (IBD) includes
-both Crohn's disease (CD) and ulcerative colitis (UC). CD is a chronic,
+## Inflammatory bowel disease {#IBD} 
+
+Inflammatory bowel disease (IBD) includes both Crohn's disease (CD) and 
+ulcerative colitis (UC). CD is a chronic,
 progressive reincident disease that affects both terminal ilium and colon, but
 it can develop in any site of the gastrointestinal tract. The UC is a colonic
 reincident and chronic disease characterized by a continuous inflammation of the
@@ -171,7 +192,9 @@ fundamental role to maintain the disease. Little is known of the influence of
 the gastrointestinal microbiome in the expression of the gastrointestinal tract.
 
 
-## Conclusion The integration of data might help to improve the medicine and it
+## Conclusion 
+
+The integration of data might help to improve the medicine and it
 is interesting in difficult disease as like IBD. Few tools handle the case when
 lot of information is known of a specific person but each person is highly
 different from each other.
