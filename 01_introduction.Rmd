@@ -73,8 +73,8 @@ relationships follows our model or not.
 
 - A molecular signature[^1] leading to more insight into molecular mechanisms
 
-[^1]:A signature is usually used to describe a group of features that describe a
-cell line or a phase.
+[^1]:A signature is usually a group of features that describe/are representative 
+of a cell line or a process or a stage.
 
 The usage of multifactor analysis might lead to the need to redefine the
 features that are essential for identifying a phase or a cell line.
@@ -110,7 +110,7 @@ to impossible.
 
 This is the typical example when from a cohort of patients the temperature is
 measured along the stage of a disease, two variables for each sample. This is
-described in the literature as $n \gt p$.
+described in the literature as $n \gg p$.
 
 ### Relationship between samples 
 
@@ -127,7 +127,7 @@ Even when all the cases of a sample are complete the samples can be from several
 sites of the same individual or from several sites or with different
 combinations of variables
 
-#### Time 
+#### Time {-}
 
 Time is one of the factors that sometimes cannot be controled, despite
 having programmed visits every two weeks some patients might come early due to
