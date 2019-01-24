@@ -6,3 +6,8 @@ from the same sample, that is designed for the case where there are more
 variables than samples.
 
 
+
+[@esposito_vinzi_bridge_2010; @tenenhaus_component-based_2008; @tenenhaus_kernel_2015; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014]
+
+
+[@R-base]
