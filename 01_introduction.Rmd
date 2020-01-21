@@ -1,9 +1,9 @@
 # Introduction 
 
 The [inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) (IBD)
-involves [Crohn disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD)
+involves [Crohn's disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD)
 and [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (UC).
-It generally affect the terminal ileum and the colon but it can affect any
+It generally affects the terminal ileum and the colon but it can affect any
 segment of the gastrointestinal tract. UC is a recurrent and chronic of colon
 characterized by a continuous inflammation of the colon and rectum while the CD
 is not a continuous inflammation and affects the whole epithelium.
@@ -245,7 +245,7 @@ could be due to both the genetic predisposistoin and environmental factors;
 for instance, bacterial or viral infection, diet, usage of antibiotic, and 
 eventually the socioeconomic status. 
 
-[@human_microbiome_project_consortium_framework_2012]
+(see @human_microbiome_project_consortium_framework_2012) 
 
 The relationship between host and microbiome has been proposed to play a
 fundamental role to maintain the disease. Little is known of the influence of
