@@ -34,8 +34,9 @@ see how it went :) with the guide of my thesis directors are Juanjo Lozano and
 Azucena Sala, who help as bioinformatician and disease expert respectively.
 
 ```{r include=FALSE}
-knitr::write_bib(c(
+bib <- knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown', "citr", 'base'
-), 'packages.bib')
+), file = NULL)
+xfun::write_utf8(unlist(bib), 'packages.bib')
 ```
 

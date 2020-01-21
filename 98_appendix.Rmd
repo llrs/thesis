@@ -1,0 +1,6 @@
+# (APPENDIX) Appendix {-} 
+
+# Online resources
+
+- [Awesome multi-omics](https://github.com/mikelove/awesome-multi-omics): An online repository of references to multi-omics methods.
+- [Bookdown](https://github.com/mikelove/awesome-multi-omics): The book about how to write this type of books.
