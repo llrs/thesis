@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>1.1 Integration | My thesis</title>
-  <meta name="description" content="This is the home of the thesis.">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta name="description" content="This is the home of the thesis." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content="1.1 Integration | My thesis" />
   <meta property="og:type" content="book" />
@@ -22,18 +21,18 @@
   <meta name="twitter:description" content="This is the home of the thesis." />
   
 
-<meta name="author" content="Lluís Revilla Sancho">
+<meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2019-01-24">
+<meta name="date" content="2020-01-21" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction.html">
-<link rel="next" href="IBD.html">
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="IBD.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -41,6 +40,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -74,8 +76,10 @@
 <li class="chapter" data-level="1.1.3" data-path="integration.html"><a href="integration.html#relationship-between-variables-and-samples"><i class="fa fa-check"></i><b>1.1.3</b> Relationship between variables and samples</a></li>
 <li class="chapter" data-level="1.1.4" data-path="integration.html"><a href="integration.html#relationship-between-samples"><i class="fa fa-check"></i><b>1.1.4</b> Relationship between samples</a></li>
 <li class="chapter" data-level="1.1.5" data-path="integration.html"><a href="integration.html#relationship-between-the-variables"><i class="fa fa-check"></i><b>1.1.5</b> Relationship between the variables</a></li>
-<li class="chapter" data-level="1.1.6" data-path="integration.html"><a href="integration.html#interpretation"><i class="fa fa-check"></i><b>1.1.6</b> Interpretation</a></li>
-<li class="chapter" data-level="1.1.7" data-path="integration.html"><a href="integration.html#conclusion"><i class="fa fa-check"></i><b>1.1.7</b> Conclusion</a></li>
+<li class="chapter" data-level="1.1.6" data-path="integration.html"><a href="integration.html#input-data"><i class="fa fa-check"></i><b>1.1.6</b> Input data</a></li>
+<li class="chapter" data-level="1.1.7" data-path="integration.html"><a href="integration.html#output-factors"><i class="fa fa-check"></i><b>1.1.7</b> Output factors</a></li>
+<li class="chapter" data-level="1.1.8" data-path="integration.html"><a href="integration.html#interpretation"><i class="fa fa-check"></i><b>1.1.8</b> Interpretation</a></li>
+<li class="chapter" data-level="1.1.9" data-path="integration.html"><a href="integration.html#conclusion"><i class="fa fa-check"></i><b>1.1.9</b> Conclusion</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="IBD.html"><a href="IBD.html"><i class="fa fa-check"></i><b>1.2</b> Inflammatory bowel disease</a></li>
 <li class="chapter" data-level="1.3" data-path="conclusion-1.html"><a href="conclusion-1.html"><i class="fa fa-check"></i><b>1.3</b> Conclusion</a></li>
@@ -161,8 +165,36 @@
 <p>Since the lactose operon we know how some genes regulated between them, but for other variables we don’t know how they are related. For instance how does the increase in expression of a gene affects the growth of a microorganism?</p>
 <p>It is important to note that some integrations may lead to interactions while others don’t, that is, the relationship of two different type of variables might be due to a physical relationship or through a more obscure relationship with no known direct contact.</p>
 </div>
+<div id="input-data" class="section level3">
+<h3><span class="header-section-number">1.1.6</span> Input data</h3>
+<p>Methods can be classified by the kind of input data required. Some of them need data from the same patients while other do not.</p>
+<ul>
+<li>Same samples data:</li>
+</ul>
+<p>These methods do not handle well or at all missing data. They need complete data of the samples in order to be able to integrate the results.</p>
+<ul>
+<li>Different sample data:</li>
+</ul>
+<p>These methods do not need data from the same sample. They draw their conclusions generalizing from the the data available. Some of them handle missing data, while others do use the data at face value.</p>
+</div>
+<div id="output-factors" class="section level3">
+<h3><span class="header-section-number">1.1.7</span> Output factors</h3>
+<p>According to the output the integration methods can be classified in three groups: Shared factor across the data, specific factors for each data or mixed factors.</p>
+<ul>
+<li>Shared factors:</li>
+</ul>
+<p>The integration results in a vector of the samples in a lower dimensional space that is shared by all the data used to integrate. Such methods include iCluster, Multi-Omics Factor Analysis (MOFA)</p>
+<ul>
+<li>Specific factors:</li>
+</ul>
+<p>The integration results in several vectors of the samples in a lower dimensional space of each data used to integrate. Such methods include Regularized Generalized Canonical Correlation Analysis (RGCCA), Multiple co-inertia analysis (MCIA), Multi-Study Factor Analysis (MSFA)</p>
+<ul>
+<li>Mixed factors:</li>
+</ul>
+<p>The integration results in both previous factors, specific of each data and common to all the data. Such methods include Joint and Individual Variation Explained (JIVE), integrative Non-negative Matrix Factorization (intNMF).</p>
+</div>
 <div id="interpretation" class="section level3">
-<h3><span class="header-section-number">1.1.6</span> Interpretation</h3>
+<h3><span class="header-section-number">1.1.8</span> Interpretation</h3>
 <p>Understanding how to interpret the results of the methods is highly tight to understanding the method. If one does a correlation between two variables, the interpretation of the analysis is clear, if one variable increase, the other too. However as more complicated methodologies are developed the interpretation is not so clear, for instance how can one interpret the result of a canonical correlation analysis?</p>
 <ul>
 <li>Individually:</li>
@@ -174,7 +206,7 @@
 <p>In a PCA for instance how do we interpret that some variables have the same loading? What happens in a more difficult method like canonical correlation analysis?</p>
 </div>
 <div id="conclusion" class="section level3">
-<h3><span class="header-section-number">1.1.7</span> Conclusion</h3>
+<h3><span class="header-section-number">1.1.9</span> Conclusion</h3>
 <p>The field of integration is large and complex, with high interest in the recent days, specially in the psychology and omics field, which lacks of a large study.</p>
 </div>
 </div>
@@ -195,11 +227,13 @@
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -207,12 +241,11 @@ gitbook.start({
 "github": true,
 "facebook": false,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -224,6 +257,10 @@ gitbook.start({
 "text": "Edit"
 },
 "history": {
+"link": null,
+"text": null
+},
+"view": {
 "link": null,
 "text": null
 },
@@ -244,8 +281,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
