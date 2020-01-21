@@ -86,13 +86,12 @@ gathered, which might improve the treatment.
 
 ### Relationship between variables and samples 
 
-Depending on the amount of
-variables and in which samples they have been measures we can classify in two
-types of integrations. Traditionally for each sample few variable has been
-measured, for instance for a tree only the height and width are measured,
-however with the new omics techniques (transcriptomics, metabolomics,
-methylomics, genomics), thousands of variables are measured for the same
-sample.
+Depending on the amount of variables and in which samples they have been 
+measures we can classify in two types of integrations. Traditionally for each 
+sample few variable has been measured, for instance for a tree only the height 
+and width are measured, however with the new omics techniques (transcriptomics, 
+metabolomics, methylomics, genomics), thousands of variables are measured for 
+the same sample.
 
 - More variables than samples:
 
@@ -150,6 +149,47 @@ It is important to note that some integrations may lead to interactions while
 others don't, that is, the relationship of two different type of variables might
 be due to a physical relationship or through a more obscure relationship with no
 known direct contact.
+
+### Input data
+
+Methods can be classified by the kind of input data required. Some of them need
+data from the same patients while other do not.
+
+- Same samples data:
+
+These methods do not handle well or at all missing data. They need complete data 
+of the samples in order to be able to integrate the results. 
+
+- Different sample data:
+
+These methods do not need data from the same sample. They draw their conclusions 
+generalizing from the the data available. Some of them handle missing data, 
+while others do use the data at face value. 
+
+### Output factors
+
+According to the output the integration methods can be classified in three 
+groups: Shared factor across the data, specific factors for each data or mixed 
+factors.
+
+- Shared factors:
+
+The integration results in a vector of the samples in a lower dimensional space 
+that is shared by all the data used to integrate. Such methods include iCluster, 
+Multi-Omics Factor Analysis (MOFA)
+
+- Specific factors: 
+
+The integration results in several vectors of the samples in a lower 
+dimensional space of each data used to integrate. Such methods include 
+Regularized Generalized Canonical Correlation Analysis (RGCCA), Multiple 
+co-inertia analysis (MCIA), Multi-Study Factor Analysis (MSFA)
+
+- Mixed factors:
+
+The integration results in both previous factors, specific of each data and 
+common to all the data. Such methods include Joint and Individual Variation 
+Explained (JIVE), integrative Non-negative Matrix Factorization (intNMF). 
 
 ### Interpretation 
 
