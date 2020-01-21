@@ -14,7 +14,6 @@ bookdown::gitbook:
     edit: https://github.com/llrs/thesis/edit/master/%s
     sharing:
       github: yes
-      twitter: yes
       facebook: no
 bookdown::pdf_book:
   keep_tex: no
