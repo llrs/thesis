@@ -176,14 +176,14 @@ factors.
 
 The integration results in a vector of the samples in a lower dimensional space 
 that is shared by all the data used to integrate. Such methods include iCluster, 
-Multi-Omics Factor Analysis (MOFA)
+Multi-Omics Factor Analysis (MOFA) [@argelaguet_multi-omics_2018]
 
 - Specific factors: 
 
 The integration results in several vectors of the samples in a lower 
 dimensional space of each data used to integrate. Such methods include 
-Regularized Generalized Canonical Correlation Analysis (RGCCA), Multiple 
-co-inertia analysis (MCIA), Multi-Study Factor Analysis (MSFA)
+Regularized Generalized Canonical Correlation Analysis (RGCCA) [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], Multiple 
+co-inertia analysis (MCIA) [@culhane_cross-platform_2003], Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019]
 
 - Mixed factors:
 
