@@ -13,8 +13,11 @@ bookdown::gitbook:
     download: [pdf]
     edit: https://github.com/llrs/thesis/edit/master/%s
     sharing:
-      github: yes
+      github:
+        href: https://github.com/llrs/thesis/
       facebook: no
+      twitter:
+        href: https://twitter.com/intent/tweet?text=Nice%20read%20of%20%40Lluis_Rev%20thesis
 bookdown::pdf_book:
   keep_tex: no
   dev: "cairo_pdf"
