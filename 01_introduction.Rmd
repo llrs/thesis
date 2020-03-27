@@ -1,9 +1,9 @@
 # Introduction 
 
 The [inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) (IBD)
-involves [Crohn disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD)
+involves [Crohn's disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD)
 and [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (UC).
-It generally affect the terminal ileum and the colon but it can affect any
+It generally affects the terminal ileum and the colon but it can affect any
 segment of the gastrointestinal tract. UC is a recurrent and chronic of colon
 characterized by a continuous inflammation of the colon and rectum while the CD
 is not a continuous inflammation and affects the whole epithelium.
@@ -73,8 +73,8 @@ relationships follows our model or not.
 
 - A molecular signature[^1] leading to more insight into molecular mechanisms
 
-[^1]:A signature is usually used to describe a group of features that describe a
-cell line or a phase.
+[^1]:A signature is usually a group of features that describe/are representative 
+of a cell line or a process or a stage.
 
 The usage of multifactor analysis might lead to the need to redefine the
 features that are essential for identifying a phase or a cell line.
@@ -86,13 +86,12 @@ gathered, which might improve the treatment.
 
 ### Relationship between variables and samples 
 
-Depending on the amount of
-variables and in which samples they have been measures we can classify in two
-types of integrations. Traditionally for each sample few variable has been
-measured, for instance for a tree only the height and width are measured,
-however with the new omics techniques (transcriptomics, metabolomics,
-methylomics, genomics), thousands of variables are measured for the same
-sample.
+Depending on the amount of variables and in which samples they have been 
+measures we can classify in two types of integrations. Traditionally for each 
+sample few variable has been measured, for instance for a tree only the height 
+and width are measured, however with the new omics techniques (transcriptomics, 
+metabolomics, methylomics, genomics), thousands of variables are measured for 
+the same sample.
 
 - More variables than samples:
 
@@ -110,7 +109,7 @@ to impossible.
 
 This is the typical example when from a cohort of patients the temperature is
 measured along the stage of a disease, two variables for each sample. This is
-described in the literature as $n \gt p$.
+described in the literature as $n \gg p$.
 
 ### Relationship between samples 
 
@@ -127,7 +126,7 @@ Even when all the cases of a sample are complete the samples can be from several
 sites of the same individual or from several sites or with different
 combinations of variables
 
-#### Time 
+#### Time {-}
 
 Time is one of the factors that sometimes cannot be controled, despite
 having programmed visits every two weeks some patients might come early due to
@@ -150,6 +149,47 @@ It is important to note that some integrations may lead to interactions while
 others don't, that is, the relationship of two different type of variables might
 be due to a physical relationship or through a more obscure relationship with no
 known direct contact.
+
+### Input data
+
+Methods can be classified by the kind of input data required. Some of them need
+data from the same patients while other do not.
+
+- Same samples data:
+
+These methods do not handle well or at all missing data. They need complete data 
+of the samples in order to be able to integrate the results. 
+
+- Different sample data:
+
+These methods do not need data from the same sample. They draw their conclusions 
+generalizing from the the data available. Some of them handle missing data, 
+while others do use the data at face value. 
+
+### Output factors
+
+According to the output the integration methods can be classified in three 
+groups: Shared factor across the data, specific factors for each data or mixed 
+factors.
+
+- Shared factors:
+
+The integration results in a vector of the samples in a lower dimensional space 
+that is shared by all the data used to integrate. Such methods include iCluster, 
+Multi-Omics Factor Analysis (MOFA) [@argelaguet_multi-omics_2018]
+
+- Specific factors: 
+
+The integration results in several vectors of the samples in a lower 
+dimensional space of each data used to integrate. Such methods include 
+Regularized Generalized Canonical Correlation Analysis (RGCCA) [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], Multiple 
+co-inertia analysis (MCIA) [@culhane_cross-platform_2003], Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019]
+
+- Mixed factors:
+
+The integration results in both previous factors, specific of each data and 
+common to all the data. Such methods include Joint and Individual Variation 
+Explained (JIVE), integrative Non-negative Matrix Factorization (intNMF). 
 
 ### Interpretation 
 
@@ -187,6 +227,26 @@ it can develop in any site of the gastrointestinal tract. The UC is a colonic
 reincident and chronic disease characterized by a continuous inflammation of the
 colon and rectum.
 
+Around 4,2 million individuals suffer from IBD in Europe and North America 
+combined. The dysregulation of the inflammatory response observed in IBD 
+requires interplay between host genetic factors and the intestinal microbiota.
+Several studies support the concept that IBD arise from an exacerbate immune 
+response against commensal gut microorganisms. Nontheless, the disease could 
+result from an imbalanced microbial composition leading to generalized or 
+localized ysbiosis. 
+
+The role of the gut microbiota in IBD is an ongoing field of research. Several 
+authors are currently studying the alterations reported in IBD of the intestinal 
+microbiota. However, it is stillunclear the cause-effect relation between 
+dysbiosis and IBD. This is partly due to the multiple variables that might 
+contribute to the disease progression; for instance, age, diet, usage of 
+antibiotic, tobacco, environment, and eventually socioeconomic status. This 
+could be due to both the genetic predisposistoin and environmental factors; 
+for instance, bacterial or viral infection, diet, usage of antibiotic, and 
+eventually the socioeconomic status. 
+
+(see @human_microbiome_project_consortium_framework_2012) 
+
 The relationship between host and microbiome has been proposed to play a
 fundamental role to maintain the disease. Little is known of the influence of
 the gastrointestinal microbiome in the expression of the gastrointestinal tract.
@@ -195,7 +255,7 @@ the gastrointestinal microbiome in the expression of the gastrointestinal tract.
 ## Conclusion 
 
 The integration of data might help to improve the medicine and it
-is interesting in difficult disease as like IBD. Few tools handle the case when
+is interesting in difficult diseases like IBD. Few tools handle the case when
 lot of information is known of a specific person but each person is highly
 different from each other.
 

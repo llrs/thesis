@@ -1,8 +1,10 @@
 # RGCCA
 
-The Regularized generalized canonical correlation is a method developed by Tenenhaus
-It is a method that combines several datasets, what is called a multi-omics method,
-from the same sample, that is designed for the case where there are more 
-variables than samples.
+The regularized generalized canonical correlation is a method that combines 
+several datasets, using data from the same sample, that is appropiate when the 
+number of variables is higher than samples.
 
+
+
+[@esposito_vinzi_bridge_2010; @tenenhaus_component-based_2008; @tenenhaus_kernel_2015; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014]
 

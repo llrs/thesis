@@ -4,6 +4,8 @@ edit: https://github.com/llrs/thesis/edit/master/%s
 github-repo: "llrs/thesis"
 language:
   ui:
-    chapter_name: ""
+    edit: "Edit"
+    chapter_name: "Chapter "
 delete_merged_file: true
 author: "Lluís Revilla Sancho"
+link-citations: true
