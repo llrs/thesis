@@ -1,18 +1,18 @@
 # Introduction 
 
 The [inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) (IBD)
-involves [Crohn's disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD)
-and [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (UC).
+involves [Crohn's disease](https://en.wikipedia.org/wiki/Crohn%27s_disease)(CD)
+and [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis)(UC).
 It generally affects the terminal ileum and the colon but it can affect any
-segment of the gastrointestinal tract. UC is a recurrent and chronic of colon
-characterized by a continuous inflammation of the colon and rectum while the CD
-is not a continuous inflammation and affects the whole epithelium.
+segment of the gastrointestinal tract. UC is a recurrent, chronic and continuous
+inflammation of the colon and rectum while the CD
+is not a continuous inflammation and affects the whole gastrointestinal tract.
 
-IBD etiology is unknown. The most prevalent hypothesis of its origin suggests
-that starts with an aberrant immunological response to antigens of the comensal
-microbiome. However, the factors that initiate IBD are unknown.
+IBD etiology is unknown. However, once it has initiated the most prevalent 
+hypothesis of its chronicity suggests an aberrant immunological response to 
+antigens of the comensal microbiome. 
 
-Treatments provided for the IBD are palliative and include, mainly,
+Treatments provided for the IBD are palliative. Those treatments include, 
 noninflammatory drugs, suppressors and biologic. The therapeutic options can
 induce remission in some patients, however they often need continuous treatment
 to avoid recurrence. Nevertheless, many patients are refractory or intolerant to
@@ -79,7 +79,7 @@ of a cell line or a process or a stage.
 The usage of multifactor analysis might lead to the need to redefine the
 features that are essential for identifying a phase or a cell line.
 
-- A predictive analytical model towards personalised medicine
+- A predictive analytic model towards personalized medicine
 
 If a good model is known it can be used as a prediction if enough information is
 gathered, which might improve the treatment.
@@ -87,7 +87,7 @@ gathered, which might improve the treatment.
 ### Relationship between variables and samples 
 
 Depending on the amount of variables and in which samples they have been 
-measures we can classify in two types of integrations. Traditionally for each 
+measures we can classify in two types of integration. Traditionally for each 
 sample few variable has been measured, for instance for a tree only the height 
 and width are measured, however with the new omics techniques (transcriptomics, 
 metabolomics, methylomics, genomics), thousands of variables are measured for 
@@ -101,35 +101,38 @@ typically falls into the category of $p \gg n$ problems, where the number of
 genes or proteins, $p$, is considerably larger than the number of samples, $n$.
 Which leads to the case where there are (many) more variables than samples,
 generally "old" statistics don't consider this case, as it has its own
-complications like covariance between the variables. When two variables are
+complications like co-variance between the variables. When two variables are
 tightly correlated, discerning which is the lead and which is following is near
 to impossible.
 
 - More samples than variables:
 
-This is the typical example when from a cohort of patients the temperature is
-measured along the stage of a disease, two variables for each sample. This is
-described in the literature as $n \gg p$.
+An example would be when from a cohort of patients the temperature is
+measured along the stage of a disease: two variables for each sample. If in the 
+cohort there are more than 2 patients, then the number of samples is greater 
+than the number of variables studied. This is described in the literature as 
+$n \gg p$.
 
 ### Relationship between samples 
 
-Depending on the relationship between the
-samples the questions answerable and the methods available differ. If each
-sample has all the cases we wanted to measure it is a complete case.
+Depending on the relationship between the samples, the questions answerable and 
+the methods available differ. If each sample has all the expected data we wanted to 
+measure it is a complete case.
 
 Sometimes because the sample is not enough, or there are some technical or
-organizational problems we might lose a case for a samples. This results in a
-new source of variation that has to be dealt with, which complicates the
-conclusion one can draw from the studies of these kind of data.
+organizational problems we might lose a source of data for a sample (which is 
+known as an incomplete case). This results in a new source of variation that has 
+to be dealt with, which complicates the conclusion one can draw from the studies 
+of these kind of data.
 
-Even when all the cases of a sample are complete the samples can be from several
-sites of the same individual or from several sites or with different
-combinations of variables
+Even when all the cases of a sample are complete the samples can come from several
+sites of the same individual or with different combinations of variables, 
+which makes is relevant to understand.
 
 #### Time {-}
 
-Time is one of the factors that sometimes cannot be controled, despite
-having programmed visits every two weeks some patients might come early due to
+Time is one of the factors that sometimes cannot be controlled, despite
+having programmed visits every two weeks some patients might come early or later due to
 calendar reasons (holidays), family reasons, or disease state. Sometimes is
 precisely the object of the study, to see the relationships at different time,
 or see how the relationships change with time. Simultaneously is very important
@@ -145,7 +148,7 @@ genes regulated between them, but for other variables we don't know how they are
 related. For instance how does the increase in expression of a gene affects the
 growth of a microorganism?
 
-It is important to note that some integrations may lead to interactions while
+It is important to note that some integration may lead to interactions while
 others don't, that is, the relationship of two different type of variables might
 be due to a physical relationship or through a more obscure relationship with no
 known direct contact.
@@ -157,14 +160,15 @@ data from the same patients while other do not.
 
 - Same samples data:
 
-These methods do not handle well or at all missing data. They need complete data 
-of the samples in order to be able to integrate the results. 
+These methods do not handle well or at all missing data. They need complete cases/data 
+of the samples in order to be able to integrate the results. These methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], Multiple 
+co-inertia analysis (MCIA) [@culhane_cross-platform_2003], Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019], Multi-Omics Factor Analysis (MOFA) [@argelaguet_multi-omics_2018], STATegRa [@gomez-cabreroSTATegraComprehensiveMultiomics2019]
 
 - Different sample data:
 
 These methods do not need data from the same sample. They draw their conclusions 
 generalizing from the the data available. Some of them handle missing data, 
-while others do use the data at face value. 
+while others do use the data at face value. These method includes HUMAnN
 
 ### Output factors
 
@@ -196,9 +200,9 @@ Explained (JIVE), integrative Non-negative Matrix Factorization (intNMF).
 Understanding how to interpret the results of the methods is
 highly tight to understanding the method. If one does a correlation between two
 variables, the interpretation of the analysis is clear, if one variable
-increase, the other too. However as more complicated methodologies are developed
-the interpretation is not so clear, for instance how can one interpret the
-result of a canonical correlation analysis?
+increase, the other one too. However as more complicated methodologies are developed
+the interpretation becomes less clear, for instance how can one interpret the
+result of a canonical correlation analysis? [@sherryConductingInterpretingCanonical1981]
 
 - Individually:
 
@@ -229,19 +233,19 @@ colon and rectum.
 
 Around 4,2 million individuals suffer from IBD in Europe and North America 
 combined. The dysregulation of the inflammatory response observed in IBD 
-requires interplay between host genetic factors and the intestinal microbiota.
+requires interplay between host genetic factors and the intestinal microbiome.
 Several studies support the concept that IBD arise from an exacerbate immune 
-response against commensal gut microorganisms. Nontheless, the disease could 
+response against commensal gut microorganisms. Nonetheless, the disease could 
 result from an imbalanced microbial composition leading to generalized or 
-localized ysbiosis. 
+localized dysbiosis. 
 
-The role of the gut microbiota in IBD is an ongoing field of research. Several 
+The role of the gut microbiome in IBD is an ongoing field of research. Several 
 authors are currently studying the alterations reported in IBD of the intestinal 
-microbiota. However, it is stillunclear the cause-effect relation between 
-dysbiosis and IBD. This is partly due to the multiple variables that might 
+microbiome. However, it is still unclear the cause-effect relation between 
+dysbiosis and IBD. Partly due to the multiple variables that might 
 contribute to the disease progression; for instance, age, diet, usage of 
 antibiotic, tobacco, environment, and eventually socioeconomic status. This 
-could be due to both the genetic predisposistoin and environmental factors; 
+could be due to both the genetic predisposition and environmental factors; 
 for instance, bacterial or viral infection, diet, usage of antibiotic, and 
 eventually the socioeconomic status. 
 
@@ -251,11 +255,18 @@ The relationship between host and microbiome has been proposed to play a
 fundamental role to maintain the disease. Little is known of the influence of
 the gastrointestinal microbiome in the expression of the gastrointestinal tract.
 
+### Integration on IBD
+
+One of the hypothesis behind the maintenance of the inflammation involves the microbiome.
+Several studies have been carried out to discover links between microbiome and the inflammation.
+Some of these studies used metabolites, DNA-seq sequencing of the microbiome content, or targeted 16S sequencing. 
+
+Also the technical method used can differ between extracted from stools or from biopsied samples at colonoscopy or from surgical samples.
+
+Previous methods used include the use of RGCCA, 
+
 
 ## Conclusion 
 
-The integration of data might help to improve the medicine and it
-is interesting in difficult diseases like IBD. Few tools handle the case when
-lot of information is known of a specific person but each person is highly
-different from each other.
+The integration of data might help to improve the medicine and reveal links in difficult diseases like IBD. 
 

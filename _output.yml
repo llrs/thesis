@@ -7,7 +7,7 @@ bookdown::gitbook:
       toc_appendix: yes
       scroll_highlight: yes
       before: |
-        <li><a href="./">PhD thesis</a></li>
+        <li><a href="./">Data integration on inflammatory bowel disease</a></li>
       after: |
         <li><a href="https://bookdown.org/yihui/bookdown/" target="_blank">Published with bookdown</a></li>
     download: [pdf]
