@@ -14,29 +14,21 @@ bibliography:
 twitter-handle: Lluis_Rev
 ---
 
-# Preface {-}
+![UB logo](ub_logo.png "University where I defend the thesis"){width="160"}
 
-The main topic of the thesis is [data
-integration](https://en.wikipedia.org/wiki/Data_integration) applied in the
-[inflammatory bowel disease
-(IBD)](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) research. The
-data I will be integrating are different omics data and the phenotype of the
-patients. This disease is complex and there are hypothesis pointing that the
-[microbiome](https://en.wikipedia.org/wiki/Microbiota) is a major factor in the
-disease. In the precision medicine framework data integration is important to
-consider all the relevant variables that influence a disease.
+![IDIBAPS logo](idibaps_logo.png "Research center"){width="160"}
 
-The thesis is performed on the [IDIBAPS](http://www.idibaps.org/) research
-institute. My colleges are biologist, microbiologists, veterinaries... and we
-have weekly meetings with the doctors visiting at the nearby hospital.
+![CIBER logo](logo_ciber.png "Hiring institution"){width="160" height="38"}
 
-The thesis program allows one to defend the thesis after 3 years, and up to 5 in
-total. My timeline is to finish in 2022 after 3 years (I'll add it when it is finished to
-see how it went) with the guide of my thesis directors are 
-[Juanjo Lozano](https://orcid.org/0000-0001-7613-3908) and
-[Azucena Sala](https://orcid.org/0000-0003-4572-2907), who help as 
-bioinformatician and disease expert respectively.
+# Preface {.unnumbered}
 
-<a href="https://www.ub.edu", target = "_blank"><img src:"ub_logo.png" alt="UB university logo"></a>
-<a href="https://idibaps.org", target = "_blank"><img src:"idibaps_logo.png" alt="IDIBAPS logo"></a>
-<a href="https://www.ciberisciii.es", target = "_blank"><img src:"logo_ciber.png" alt="CIBER logo"></a>
+The main topic of the thesis is [data integration](https://en.wikipedia.org/wiki/Data_integration) applied in the [inflammatory bowel disease (IBD)](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) research.
+The data I will be integrating are different omics data and the phenotype of the patients.
+This disease is complex and there are hypothesis pointing that the [microbiome](https://en.wikipedia.org/wiki/Microbiota) is a major factor in the disease.
+In the precision medicine framework data integration is important to consider all the relevant variables that influence a disease.
+
+The thesis is performed on the [IDIBAPS](http://www.idibaps.org/) research institute.
+My colleges are biologist, microbiologists, veterinaries... and we have weekly meetings with the doctors visiting at the nearby hospital.
+
+The thesis program allows one to defend the thesis after 3 years, and up to 5 in total.
+My timeline is to finish in 2022 after 3 years (I'll add it when it is finished to see how it went) with the guide of my thesis directors are [Juanjo Lozano](https://orcid.org/0000-0001-7613-3908) and [Azucena Sala](https://orcid.org/0000-0003-4572-2907), who help as bioinformatician and disease expert respectively.
