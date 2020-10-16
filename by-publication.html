@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.2 Inflammatory bowel disease | Data integration on inflammatory bowel disease</title>
+  <title>B.2 By publication | Data integration on inflammatory bowel disease</title>
   <meta name="description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.2 Inflammatory bowel disease | Data integration on inflammatory bowel disease" />
+  <meta property="og:title" content="B.2 By publication | Data integration on inflammatory bowel disease" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="llrs/thesis" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.2 Inflammatory bowel disease | Data integration on inflammatory bowel disease" />
+  <meta name="twitter:title" content="B.2 By publication | Data integration on inflammatory bowel disease" />
   <meta name="twitter:site" content="@Lluis_Rev" />
   <meta name="twitter:description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="integration.html"/>
-<link rel="next" href="rgcca.html"/>
+<link rel="prev" href="listed.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -115,74 +115,39 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="IBD" class="section level2">
-<h2><span class="header-section-number">1.2</span> Inflammatory bowel disease</h2>
-<p>Inflammatory bowel disease (IBD) includes both Crohn's disease (CD) and ulcerative colitis (UC). CD is a chronic, progressive reincident disease that affects both terminal ilium and colon, but it can develop in any site of the gastrointestinal tract. The UC is a colonic reincident and chronic disease characterized by a continuous inflammation of the colon and rectum.</p>
-<p>Around 4,2 million individuals suffer from IBD in Europe and North America combined. The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome. Several studies support the concept that IBD arise from an exacerbate immune response against commensal gut microorganisms. Nonetheless, the disease could result from an imbalanced microbial composition leading to generalized or localized dysbiosis<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>.</p>
-<p>The role of the gut microbiome in IBD is an ongoing field of research. Several authors are currently studying the alterations reported in IBD of the intestinal microbiome. However, it is still unclear the cause-effect relation between dysbiosis and IBD. Partly due to the multiple variables that might contribute to the disease progression; for instance, age, diet, usage of antibiotic, tobacco, environment, and eventually socioeconomic status. This could be due to both the genetic predisposition and environmental factors; for instance, bacterial or viral infection, diet, usage of antibiotic, and eventually the socioeconomic status.</p>
-<p>(see <span class="citation">[<a href="references.html#ref-human_microbiome_project_consortium_framework_2012">14</a>]</span> )</p>
-<p>The relationship between host and microbiome has been proposed to play a fundamental role to maintain the disease. Little is known of the influence of the gastrointestinal microbiome in the expression of the gastrointestinal tract.</p>
-<div id="disease-onset" class="section level3">
-<h3><span class="header-section-number">1.2.1</span> Disease onset</h3>
-<p>Differences between very early on-set and adult disease</p>
-</div>
-<div id="disease-discourse" class="section level3">
-<h3><span class="header-section-number">1.2.2</span> Disease discourse</h3>
-<p>Intermittent</p>
-<p>Disassociated between patient's report and colonoscopy</p>
-<div id="treatments" class="section level4">
-<h4><span class="header-section-number">1.2.2.1</span> Treatments</h4>
-<p>The ones given on the hospital more or less on the order of administration:</p>
+<div id="by-publication" class="section level2">
+<h2><span class="header-section-number">B.2</span> By publication</h2>
+<p>All code of the analysis of the publications is available (in his messed state and complicated history) and a brief description as to why they were used:</p>
+<p><a href="https://doi.org/10.1101/2020.04.16.20031492">Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a>:</p>
 <ul>
-<li>anti-TNF<span class="math inline">\(\alpha\)</span></li>
-<li>Vedolizumab</li>
-<li>Ustekinumab</li>
-<li>Risankizumab</li>
-<li>Tofacitinib</li>
-<li>surgery</li>
-<li>TRIM/HSCT</li>
-<li>5-asa</li>
-<li>corticoesteroids</li>
-<li>Azathiprine/Mercaptopurine 6MCP</li>
-<li>Methotrexate MTX</li>
-<li>Tacrolimus FK</li>
-<li>Cyclosporin A CyA</li>
-<li>Infliximab</li>
-<li>Adalimumab</li>
-<li>Antibiotics</li>
+<li><a href="https://github.com/llrs/TRIM">TRIM</a>: Mangle with the sample, dataset, explore several methods...</li>
+<li><a href="https://github.com/llrs/sgcca_hyperparameters">sgcca_hyperparameters</a>: Explore the effects of the hyperparameters on RGCCA on the provided dataset.</li>
+<li><a href="https://github.com/llrs/inteRmodel">inteRmodel</a>: Package for easy repeating the methodology developed on TRIM.</li>
+<li><a href="https://github.com/llrs/integration-helper">integration</a>: Package with functions that I wrote several times on the TRIM ended up here.</li>
 </ul>
-</div>
-</div>
-<div id="integration-on-ibd" class="section level3">
-<h3><span class="header-section-number">1.2.3</span> Integration on IBD</h3>
-<p>One of the hypothesis behind the maintenance of the inflammation involves the microbiome. Several studies have been carried out to discover links between microbiome and the inflammation. Some of these studies used metabolites, DNA-seq sequencing of the microbiome content, or targeted 16S sequencing.</p>
-<p>Also the technical method used can differ between extracted from stools or from biopsied samples at colonoscopy or from surgical samples.</p>
-<p>Some articles use correlation like <span class="citation">[<a href="references.html#ref-hasler_uncoupling_2016">15</a>]</span>. There are others that use a combination of methods</p>
-<p>Very rarely there is an experimental confirmation. This is due to how complicated it is to test an interaction and the simulate the conditions.</p>
-<p>One of the few methods published were the interaction is measured is to expose the ex-vivo sample or cell line with supernatant of a microbiome culture.</p>
-<p>Previous methods used include the use of RGCCA, <span class="citation">[<a href="references.html#ref-tang_integrated_2017">16</a>]</span></p>
-<p><span class="citation">[<a href="references.html#ref-de_souza_ibd_2017">17</a>]</span></p>
-</div>
-<div id="summary" class="section level3">
-<h3><span class="header-section-number">1.2.4</span> Summary</h3>
-<p>The integration of data might help to improve the medicine and reveal links in difficult diseases like IBD.</p>
+<p>Paper 2:</p>
+<ul>
+<li><a href="https://github.com/llrs/Barcelona">Barcelona</a>: Mangle with the sample, dataset ...</li>
+<li><a href="https://github.com/llrs/inteRmodel">inteRmodel</a>: To repeat the same procedure as in the first analysis.</li>
+<li><a href="https://github.com/llrs/integration-helper">integration</a>: To not repeat myself for the same process.</li>
+</ul>
 
 </div>
-</div>
 <!-- </div> -->
-<div class="footnotes">
-<hr />
-<ol start="2">
-<li id="fn2"><p>A signature is usually a group of features that describe/are representative of a cell line or a process or a stage.<a href="IBD.html#fnref2">↩</a></p></li>
-</ol>
-</div>
+
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="integration.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="rgcca.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="listed.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -217,7 +182,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/llrs/thesis/edit/master/01_introduction.Rmd",
+"link": "https://github.com/llrs/thesis/edit/master/98_appendix.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -225,7 +190,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/llrs/thesis/blob/master/01_introduction.Rmd",
+"link": "https://github.com/llrs/thesis/blob/master/98_appendix.Rmd",
 "text": null
 },
 "download": ["Data integration on inflammatory bowel disease.pdf", "Data integration on inflammatory bowel disease.epub"],
