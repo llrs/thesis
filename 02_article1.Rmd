@@ -1,10 +1,43 @@
 # RGCCA
 
-The regularized generalized canonical correlation is a method that combines 
-several datasets, using data from the same sample, that is appropiate when the 
-number of variables is higher than samples.
+The canonical correlation is a method that using data from the same sample but from different datasets.
+Characteristics
+Input
+Data type: numeric
+More variables than samples: It is appropriate when the number of variables is higher than the number of samples.
+Need to be a complete case.
+Time is not considered as a specially variable
+Relationship between variables
+
+Output:
+Specific factors
+Interpretation: Depending on the model and options used
 
 
+Over several years of progress [@tenenhaus_component-based_2008; 
+@esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; 
+@tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015] 
+on the field of canonical correlations it provides a robust method and 
+there is an implementation [@R-RGCCA].
 
-[@esposito_vinzi_bridge_2010; @tenenhaus_component-based_2008; @tenenhaus_kernel_2015; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014]
+## This requires a model of relationships.
 
+More blocks more possible models
+
+Limitations: symmetric Y -> X & X -> Y
+
+## Designing models
+
+What defines a block: Blocks of variables are treated independently
+
+Considering disease
+
+Randomly
+
+## Evaluating models
+
+AVE, inner and outer
+
+Bootstraping/validation on an external cohort.
+
+Biological relevance

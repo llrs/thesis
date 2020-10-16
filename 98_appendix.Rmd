@@ -1,6 +1,56 @@
+# References {-}
+
+```{r include=FALSE}
+knitr::write_bib(c('bookdown', 'knitr', 'rmarkdown', 'htmlwidgets', 'webshot', 'DT',
+  'miniUI', 'tufte', 'servr', 'citr', 'rticles', "RGCCA"
+), 'packages.bib')
+```
+
+<div id="refs"></div>
+
 # (APPENDIX) Appendix {-} 
 
 # Online resources
 
+Some links that I found useful on the thesis and could be useful if you are interested on the multi-omics field.
+
 - [Awesome multi-omics](https://github.com/mikelove/awesome-multi-omics): An online repository of references to multi-omics methods.
-- [Bookdown](https://github.com/mikelove/awesome-multi-omics): The book about how to write this type of books.
+- [Bookdown](https://github.com/rstudio/bookdown/): The book about how to write this type of books.
+
+# Software
+
+Along the years of this thesis several pieces of software have been generated as well as packages.
+Here they are listed for easier retrieval.
+They are listed on two ways, one with a brief explanation and another one ordered by what software piece is used on each analysis.
+
+## Listed
+
+An improved/tested version of [RGCCA](https://github.com/llrs/RGCCA), some modifications on the internal functions to ease the maintenance as well as adding tests and sometimes improving the documentation.
+Also modified so that it is possible to provide a vector of models so that the model of the first dimension is not the same as the model on the second dimension (not sure if mathematically speaking makes sense but from a biological one I think it might be interesting to have it). 
+
+Designed to be used with RGCCA I wrote [inteRmodel](https:github.com/llrs/inteRmodel) to ease the bootstrapping and model selection. 
+
+A package to design batches to avoid batch effect [experDesign](https://cran.r-project.org/package=experDesign) and its website on [GitHub](https://github.com/llrs/experDesign)
+
+
+A package to analyze sets and fuzzy sets [BaseSet](https://github.com/llrs/BaseSet).
+This package was meant to be used with the probabilities that arise from bootstrapping the models.
+However due to the long times of calculation that it would require it was not used. (A previous iteration of the package called [GSEAdv](https://github.com/llrs/GSEAdv) was developed too.)
+
+
+## By publication
+
+All code of the analysis of the publications is available (in his messed state and complicated history) and a brief description as to why they were used:
+
+[Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis](https://doi.org/10.1101/2020.04.16.20031492):
+
+ - [TRIM](https://github.com/llrs/TRIM): Mangle with the sample, dataset, explore several methods...
+ - [sgcca_hyperparameters](https://github.com/llrs/sgcca_hyperparameters):  Explore the effects of the hyperparameters on RGCCA on the provided dataset.
+ - [inteRmodel](https://github.com/llrs/inteRmodel): Package for easy repeating the methodology developed on TRIM. 
+ - [integration](https://github.com/llrs/integration-helper): Package with functions that I wrote several times on the TRIM ended up here.
+ 
+Paper 2:
+
+ - [Barcelona](https://github.com/llrs/Barcelona): Mangle with the sample, dataset ...
+ - [inteRmodel](https://github.com/llrs/inteRmodel): To repeat the same procedure as in the first analysis.
+ - [integration](https://github.com/llrs/integration-helper): To not repeat myself for the same process.
