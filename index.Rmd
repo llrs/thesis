@@ -1,16 +1,16 @@
 ---
-title: "My thesis"
+title: "Data integration on inflammatory bowel disease"
 author: "Lluís Revilla Sancho"
 date: "`r Sys.Date()`"
-description: This is the home of the thesis.
+description: |
+    Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship.
 documentclass: book
 github-repo: llrs/thesis
 link-citations: yes
+site: bookdown::bookdown_site
 bibliography:
 - packages.bib
 - references.bib
-site: bookdown::bookdown_site
-biblio-style: apalike
 twitter-handle: Lluis_Rev
 ---
 
@@ -31,14 +31,12 @@ institute. My colleges are biologist, microbiologists, veterinaries... and we
 have weekly meetings with the doctors visiting at the nearby hospital.
 
 The thesis program allows one to defend the thesis after 3 years, and up to 5 in
-total. My timeline is to finish in 3 years (I'll add it when it is finished to
-see how it went :) with the guide of my thesis directors are Juanjo Lozano and
-Azucena Sala, who help as bioinformatician and disease expert respectively.
+total. My timeline is to finish in 2022 after 3 years (I'll add it when it is finished to
+see how it went) with the guide of my thesis directors are 
+[Juanjo Lozano](https://orcid.org/0000-0001-7613-3908) and
+[Azucena Sala](https://orcid.org/0000-0003-4572-2907), who help as 
+bioinformatician and disease expert respectively.
 
-```{r include=FALSE}
-bib <- knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown', "citr", 'base'
-), file = NULL)
-xfun::write_utf8(unlist(bib), 'packages.bib')
-```
-
+<a href="https://www.ub.edu", target = "_blank"><img src:"ub_logo.png" alt="UB university logo"></a>
+<a href="https://idibaps.org", target = "_blank"><img src:"idibaps_logo.png" alt="IDIBAPS logo"></a>
+<a href="https://www.ciberisciii.es", target = "_blank"><img src:"logo_ciber.png" alt="CIBER logo"></a>
