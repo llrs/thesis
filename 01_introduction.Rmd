@@ -30,7 +30,8 @@ As is common, there are several words that are used integrati(-on, -ve), multi-o
 
 ### Classification
 
-We can classify and characterize integration in several ways, here I outline some classifications in the bioscience field, with relationships (and references) to concrete methodology and usages.
+We can characterize and classify integration methods in several ways.
+Here I outline some classifications in the bioscience field, with relationships (and references) to concrete methodology and usages.
 
 #### Data type: numeric vs categorical
 
@@ -106,32 +107,35 @@ Being aware of the time differences and time scales is crucial in most cases.
 
 #### Relationship between variables
 
-Since the lactose [operon](https://en.wikipedia.org/wiki/Operon) we know how some genes regulated between them, but for other variables we don't know how they are related.
-For instance how does the increase in expression of a gene affects the growth of a microorganism?
-
-It is important to note that some integration may lead to interactions while others don't, that is, the relationship of two different type of variables might be due to a physical relationship or through a more obscure relationship with no known direct contact.
+Since the lactose [operon](https://en.wikipedia.org/wiki/Operon) we know how some genes regulate each other.
+For other variables we don't know how they are related.
+For instance, how does the increase in expression of a gene affects the growth of a microorganism?
+Usually the relationships between variables are mediated by many factors or interactions.
 
 Network approaches relate the variables between them (such as [@koh_iomicspass_2019]).
+And are fairly new and despite being used in rare occasions they are growing in popularity.
+
+In partial correlations some or all of the other variables and considered on how much do they affect and deduced.
 
 #### Input data
 
 Methods can be classified by the kind of input data required.
-Some of them need data from the same patients while other do not.
+Some of them need data from the same patients on each data set used to integrate while other do not.
 
--   Same samples data:
+-   Data from the same samples:
 
 These methods do not handle well or at all missing data.
 They need complete cases/data of the samples in order to be able to integrate the results.
 These methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], Multiple co-inertia analysis (MCIA) [@culhane_cross-platform_2003], Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019], Multi-Omics Factor Analysis (MOFA) [@argelaguet_multi-omics_2018], STATegRa [@gomez-cabreroSTATegraComprehensiveMultiomics2019].
 
--   Different sample data:
+-   Data from different samples:
 
 These methods do not need data from the same sample.
 They draw their conclusions generalizing from the the data available.
 Some of them handle missing data, while others do use the data at face value.
-These method includes HUMAnN
+These method includes MetaPhlAn2, HUMAnN, LEfSe [@franzosa2018; @truong2015; @segata2011].
 
-#### Output factors
+#### Output results
 
 According to the output the integration methods can be classified in three groups: Shared factor across the data, specific factors for each data or mixed factors.
 
@@ -177,9 +181,9 @@ The field of integration is large and complex, with high interest in the recent 
 
 The comparison of methods independently from original authors have become a crucial step for selecting the right tool for a research [@cantini_benchmarking_2020].
 
-### Conclusions
+### Summary
 
-Bla bla
+Methods to integrate have many characteristics that allow to classify them which explains the diverse results one can have using one of them.
 
 ## Inflammatory bowel disease {#IBD}
 
@@ -261,3 +265,4 @@ Previous methods used include the use of RGCCA, [@tang_integrated_2017]
 ### Summary
 
 The integration of data might help to improve the medicine and reveal links in difficult diseases like IBD.
+So far it has been applied in IBD with partial success.
