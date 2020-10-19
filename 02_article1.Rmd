@@ -1,8 +1,28 @@
 # RGCCA
 
 The regularized generalized canonical correlation is a method that combines 
-several datasets, using data from the same sample, that is appropiate when the 
-number of variables is higher than samples.
+several datasets, using data from the same sample. It is appropiate when the 
+number of variables is higher than samples. 
+There have been some improvements to generalize the method when $p \gg n$. 
+Current practices include using a pre selected model of relations between blocks.
+However this model might not be accurate.
+To help find the fitting model for the data I created an R package.
+The package, which is named [inteRmodel](https://llrs.github.io/inteRmodel/) helps finding the right model and how fit it is for your data.
+
+This method applied to an existing dataset of an autologous haematopoietic stem cell transplantation  [@corralizaDifferencesPeripheralTissue]. From this dataset there is data about the human transcriptome and the 16S DNA present at biopsies from colonscopy. For several patients we have samples at different time point and at different locations. This allows us to see both location and time differences.
+
+We looked to several models and searched for the model that fit better with the data. 
+The first model just accounted the transcriptomics and the microbiome data, then in another family of models we added the information we know about those samples. 
+In a further family of models we split the information we know about these samples into three differents blocks groupping them according to how are they related between them.
+We fitted the best model for all the three family of models and we found that the most fitting model was from the family that had the data split on several.
+
+
+
+
+Additionally I introduced some changes to RGCCA package. The modified package can be found [here](https://llrs.github.io/RGCCA/).
+This version return the same results as the version on CRAN but provides also some code optimization for a lower computation time. Some of these changes are to to be able to change the design between different dimensions. The idea behind this change is that if the first dimensions correctly fits the data the second dimension might need a different model of relationships. For instance, the first dimensions are dominated by two blocks of data while the second is dominated by another block of data. 
+
+
 
 
 
