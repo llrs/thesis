@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2020-10-16" />
+<meta name="date" content="2020-10-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -53,6 +53,7 @@
 
 
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -66,9 +67,6 @@
 
 <ul class="summary">
 <li><strong><a href="./">Data integration on IBD</a></strong></li>
-<li><a href="https://www.ub.edu", target = "_blank"><img src:"ub_logo.png" alt="UB logo"/></a></li>
-<li><a href="https://idibaps.org", target = "_blank"><img src:"idibaps_logo.png" alt="IDIBAPS logo"/></a></li>
-<li><a href="https://www.ciberisciii.es", target = "_blank"><img src:'logo_ciber.png' alt="CIBER logo"/></a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
@@ -76,13 +74,13 @@
 <li class="chapter" data-level="1.1" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>1.1</b> Integration</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="integration.html"><a href="integration.html#classification"><i class="fa fa-check"></i><b>1.1.1</b> Classification</a></li>
 <li class="chapter" data-level="1.1.2" data-path="integration.html"><a href="integration.html#benchmarking"><i class="fa fa-check"></i><b>1.1.2</b> Benchmarking</a></li>
-<li class="chapter" data-level="1.1.3" data-path="integration.html"><a href="integration.html#conclusions"><i class="fa fa-check"></i><b>1.1.3</b> Conclusions</a></li>
+<li class="chapter" data-level="1.1.3" data-path="integration.html"><a href="integration.html#summary"><i class="fa fa-check"></i><b>1.1.3</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="IBD.html"><a href="IBD.html"><i class="fa fa-check"></i><b>1.2</b> Inflammatory bowel disease</a><ul>
 <li class="chapter" data-level="1.2.1" data-path="IBD.html"><a href="IBD.html#disease-onset"><i class="fa fa-check"></i><b>1.2.1</b> Disease onset</a></li>
 <li class="chapter" data-level="1.2.2" data-path="IBD.html"><a href="IBD.html#disease-discourse"><i class="fa fa-check"></i><b>1.2.2</b> Disease discourse</a></li>
 <li class="chapter" data-level="1.2.3" data-path="IBD.html"><a href="IBD.html#integration-on-ibd"><i class="fa fa-check"></i><b>1.2.3</b> Integration on IBD</a></li>
-<li class="chapter" data-level="1.2.4" data-path="IBD.html"><a href="IBD.html#summary"><i class="fa fa-check"></i><b>1.2.4</b> Summary</a></li>
+<li class="chapter" data-level="1.2.4" data-path="IBD.html"><a href="IBD.html#summary-1"><i class="fa fa-check"></i><b>1.2.4</b> Summary</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="rgcca.html"><a href="rgcca.html"><i class="fa fa-check"></i><b>2</b> RGCCA</a><ul>
@@ -115,12 +113,15 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<div class = "wip">
+This tesis is ongoing and still without hard date to finish it. Watch the <a href="https://github.com/llrs/thesis">GitHub repository</a> or wait for a release announcement on Twitter on <a href="https://twitter.com/Lluis_Rev">my profile</a>.
+</div>
 <div id="IBD" class="section level2">
 <h2><span class="header-section-number">1.2</span> Inflammatory bowel disease</h2>
 <p>Inflammatory bowel disease (IBD) includes both Crohn's disease (CD) and ulcerative colitis (UC). CD is a chronic, progressive reincident disease that affects both terminal ilium and colon, but it can develop in any site of the gastrointestinal tract. The UC is a colonic reincident and chronic disease characterized by a continuous inflammation of the colon and rectum.</p>
 <p>Around 4,2 million individuals suffer from IBD in Europe and North America combined. The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome. Several studies support the concept that IBD arise from an exacerbate immune response against commensal gut microorganisms. Nonetheless, the disease could result from an imbalanced microbial composition leading to generalized or localized dysbiosis<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>.</p>
 <p>The role of the gut microbiome in IBD is an ongoing field of research. Several authors are currently studying the alterations reported in IBD of the intestinal microbiome. However, it is still unclear the cause-effect relation between dysbiosis and IBD. Partly due to the multiple variables that might contribute to the disease progression; for instance, age, diet, usage of antibiotic, tobacco, environment, and eventually socioeconomic status. This could be due to both the genetic predisposition and environmental factors; for instance, bacterial or viral infection, diet, usage of antibiotic, and eventually the socioeconomic status.</p>
-<p>(see <span class="citation">[<a href="references.html#ref-human_microbiome_project_consortium_framework_2012">14</a>]</span> )</p>
+<p>(see <span class="citation">[<a href="#ref-human_microbiome_project_consortium_framework_2012">15</a>]</span> )</p>
 <p>The relationship between host and microbiome has been proposed to play a fundamental role to maintain the disease. Little is known of the influence of the gastrointestinal microbiome in the expression of the gastrointestinal tract.</p>
 <div id="disease-onset" class="section level3">
 <h3><span class="header-section-number">1.2.1</span> Disease onset</h3>
@@ -151,25 +152,41 @@
 <li>Adalimumab</li>
 <li>Antibiotics</li>
 </ul>
+<p>All these drugs and procedures are available at the time of writing.</p>
 </div>
 </div>
 <div id="integration-on-ibd" class="section level3">
 <h3><span class="header-section-number">1.2.3</span> Integration on IBD</h3>
 <p>One of the hypothesis behind the maintenance of the inflammation involves the microbiome. Several studies have been carried out to discover links between microbiome and the inflammation. Some of these studies used metabolites, DNA-seq sequencing of the microbiome content, or targeted 16S sequencing.</p>
 <p>Also the technical method used can differ between extracted from stools or from biopsied samples at colonoscopy or from surgical samples.</p>
-<p>Some articles use correlation like <span class="citation">[<a href="references.html#ref-hasler_uncoupling_2016">15</a>]</span>. There are others that use a combination of methods</p>
+<p>Some articles use correlation like <span class="citation">[<a href="#ref-hasler_uncoupling_2016">16</a>]</span>. There are others that use a combination of methods</p>
 <p>Very rarely there is an experimental confirmation. This is due to how complicated it is to test an interaction and the simulate the conditions.</p>
 <p>One of the few methods published were the interaction is measured is to expose the ex-vivo sample or cell line with supernatant of a microbiome culture.</p>
-<p>Previous methods used include the use of RGCCA, <span class="citation">[<a href="references.html#ref-tang_integrated_2017">16</a>]</span></p>
-<p><span class="citation">[<a href="references.html#ref-de_souza_ibd_2017">17</a>]</span></p>
+<p>Previous methods used include the use of RGCCA, <span class="citation">[<a href="#ref-tang_integrated_2017">17</a>]</span></p>
+<p><span class="citation">[<a href="#ref-de_souza_ibd_2017">18</a>]</span></p>
 </div>
-<div id="summary" class="section level3">
+<div id="summary-1" class="section level3">
 <h3><span class="header-section-number">1.2.4</span> Summary</h3>
-<p>The integration of data might help to improve the medicine and reveal links in difficult diseases like IBD.</p>
+<p>The integration of data might help to improve the medicine and reveal links in difficult diseases like IBD. So far it has been applied in IBD with partial success.</p>
 
 </div>
 </div>
 <!-- </div> -->
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-human_microbiome_project_consortium_framework_2012">
+<p>15. Human Microbiome Project Consortium BA, Nelson KE, Pop M, Creasy HH, Giglio MG, Huttenhower C, et al. A framework for human microbiome research. Nature. 2012;486:215–21.</p>
+</div>
+<div id="ref-hasler_uncoupling_2016">
+<p>16. Häsler R, Sheibani-Tezerji R, Sinha A, Barann M, Rehman A, Esser D, et al. Uncoupling of mucosal gene regulation, mRNA splicing and adherent microbiota signatures in inflammatory bowel disease. Gut. 2016;gutjnl–2016–311651.</p>
+</div>
+<div id="ref-tang_integrated_2017">
+<p>17. Tang MS, Bowcutt R, Leung JM, Wolff MJ, Gundra UM, Hudesman D, et al. Integrated Analysis of Biopsies from Inflammatory Bowel Disease Patients Identifies SAA1 as a Link Between Mucosal Microbes with TH17 and TH22 Cells. Inflammatory Bowel Diseases. 2017;23:1544–54.</p>
+</div>
+<div id="ref-de_souza_ibd_2017">
+<p>18. De Souza HS, Fiocchi C, Iliopoulos D. The IBD interactome: An integrated view of aetiology, pathogenesis and therapy. 2017;14.</p>
+</div>
+</div>
 <div class="footnotes">
 <hr />
 <ol start="2">
