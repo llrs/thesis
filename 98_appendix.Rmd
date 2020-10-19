@@ -1,8 +1,8 @@
 # References {.unnumbered}
 
 ```{r include=FALSE}
-knitr::write_bib(c('bookdown', 'knitr', 'rmarkdown', 'htmlwidgets', 'webshot', 'DT',
-  'miniUI', 'tufte', 'servr', 'citr', 'rticles', "RGCCA"
+knitr::write_bib(c('bookdown', 'knitr', 'rmarkdown', 'htmlwidgets',  'DT',
+  'miniUI', 'servr', 'citr', "RGCCA"
 ), 'packages.bib')
 ```
 
