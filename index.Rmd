@@ -9,8 +9,8 @@ github-repo: llrs/thesis
 link-citations: yes
 site: bookdown::bookdown_site
 bibliography:
-- packages.bib
 - references.bib
+- packages.bib
 twitter-handle: Lluis_Rev
 ---
 
