@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2020-10-19" />
+<meta name="date" content="2020-10-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 
@@ -73,7 +75,7 @@
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>1.1</b> Integration</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="integration.html"><a href="integration.html#classification"><i class="fa fa-check"></i><b>1.1.1</b> Classification</a></li>
-<li class="chapter" data-level="1.1.2" data-path="integration.html"><a href="integration.html#benchmarking"><i class="fa fa-check"></i><b>1.1.2</b> Benchmarking</a></li>
+<li class="chapter" data-level="1.1.2" data-path="integration.html"><a href="integration.html#reviews-and-benchmarking"><i class="fa fa-check"></i><b>1.1.2</b> Reviews and benchmarking</a></li>
 <li class="chapter" data-level="1.1.3" data-path="integration.html"><a href="integration.html#summary"><i class="fa fa-check"></i><b>1.1.3</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="IBD.html"><a href="IBD.html"><i class="fa fa-check"></i><b>1.2</b> Inflammatory bowel disease</a><ul>
@@ -122,9 +124,9 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <p>Output:</p>
 <p>Specific factors Interpretation:</p>
 <p>Depending on the model and options used.</p>
-<p>Over several years of progress <span class="citation">[<a href="#ref-tenenhaus_regularized_2011">4</a>, <a href="#ref-tenenhaus_variable_2014">5</a>, <a href="#ref-tenenhaus_component-based_2008">19</a>–<a href="#ref-tenenhaus_kernel_2015">22</a>]</span> on the field of canonical correlations it provides a robust method and there is an implementation <span class="citation">[<span class="citeproc-not-found" data-reference-id="R-RGCCA"><strong>???</strong></span>]</span>.</p>
+<p>Over several years of progress <span class="citation">[<a href="#ref-tenenhaus_regularized_2011">4</a>, <a href="#ref-tenenhaus_variable_2014">5</a>, <a href="#ref-tenenhaus_component-based_2008">21</a>–<a href="#ref-tenenhaus_kernel_2015">24</a>]</span> on the field of canonical correlations it provides a robust method and there is an implementation <span class="citation">[<span class="citeproc-not-found" data-reference-id="R-RGCCA"><strong>???</strong></span>]</span>.</p>
 <p>The regularized generalized canonical correlation is a method that combines several datasets, using data from the same sample. It is a good choice when the number of variables is higher than samples. There have been some improvements to generalize the method when <span class="math inline">\(p \gg n\)</span>. Current practices include using a pre selected model of relations between blocks. However this model might not be accurate. To help find the fitting model for the data I created an R package. The package, which is named <a href="https://llrs.github.io/inteRmodel/">inteRmodel</a> helps finding the right model and how fit it is for your data.</p>
-<p>This method applied to an existing dataset of an autologous haematopoietic stem cell transplantation <span class="citation">[<a href="#ref-corralizaDifferencesPeripheralTissue">23</a>]</span>. From this dataset there is data about the human transcriptome and the 16S DNA present at biopsies from colonoscopy. For several patients we have samples at different time point and at different locations. This allows us to see both location and time differences.</p>
+<p>This method applied to an existing dataset of an autologous haematopoietic stem cell transplantation <span class="citation">[<a href="#ref-corralizaDifferencesPeripheralTissue">25</a>]</span>. From this dataset there is data about the human transcriptome and the 16S DNA present at biopsies from colonoscopy. For several patients we have samples at different time point and at different locations. This allows us to see both location and time differences.</p>
 <p>We looked to several models and searched for the model that fit better with the data. The first model just accounted the transcriptomics and the microbiome data, then in another family of models we added the information we know about those samples. In a further family of models we split the information we know about these samples into three different blocks grouping them according to how are they related between them. We fitted the best model for all the three family of models and we found that the most fitting model was from the family that had the data split on several.</p>
 <p>Additionally I introduced some changes to RGCCA package. The modified package can be found <a href="https://llrs.github.io/RGCCA/">here</a>. This version return the same results as the version on CRAN but provides also some code optimization for a lower computation time. Some of these changes are to to be able to change the design between different dimensions. The idea behind this change is that if the first dimensions correctly fits the data the second dimension might need a different model of relationships. For instance, the first dimensions are dominated by two blocks of data while the second is dominated by another block of data.</p>
 </div>
@@ -137,13 +139,13 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <p>5. Tenenhaus A, Philippe C, Guillemot V, Le Cao K-A, Grill J, Frouin V. Variable selection for generalized canonical correlation analysis. Biostatistics. 2014;15:569–83.</p>
 </div>
 <div id="ref-tenenhaus_component-based_2008">
-<p>19. Tenenhaus M. Component-based Structural Equation Modelling. Total Quality Management &amp; Business Excellence. 2008;19:871–86.</p>
+<p>21. Tenenhaus M. Component-based Structural Equation Modelling. Total Quality Management &amp; Business Excellence. 2008;19:871–86.</p>
 </div>
 <div id="ref-tenenhaus_kernel_2015">
-<p>22. Tenenhaus A, Philippe C, Frouin V. Kernel Generalized Canonical Correlation Analysis. Computational Statistics &amp; Data Analysis. 2015;90:114–31.</p>
+<p>24. Tenenhaus A, Philippe C, Frouin V. Kernel Generalized Canonical Correlation Analysis. Computational Statistics &amp; Data Analysis. 2015;90:114–31.</p>
 </div>
 <div id="ref-corralizaDifferencesPeripheralTissue">
-<p>23. Corraliza AM, Ricart E, L’opez-García A, Carme Masamunt M, Veny M, Esteller M, et al. Differences in Peripheral and Tissue Immune Cell Populations Following Haematopoietic Stem Cell Transplantation in Crohn’s Disease Patients. Journal of Crohn’s and Colitis.</p>
+<p>25. Corraliza AM, Ricart E, L’opez-García A, Carme Masamunt M, Veny M, Esteller M, et al. Differences in Peripheral and Tissue Immune Cell Populations Following Haematopoietic Stem Cell Transplantation in Crohn’s Disease Patients. Journal of Crohn’s and Colitis.</p>
 </div>
 </div>
             </section>

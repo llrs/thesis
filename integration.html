@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2020-10-19" />
+<meta name="date" content="2020-10-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 
@@ -73,7 +75,7 @@
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>1.1</b> Integration</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="integration.html"><a href="integration.html#classification"><i class="fa fa-check"></i><b>1.1.1</b> Classification</a></li>
-<li class="chapter" data-level="1.1.2" data-path="integration.html"><a href="integration.html#benchmarking"><i class="fa fa-check"></i><b>1.1.2</b> Benchmarking</a></li>
+<li class="chapter" data-level="1.1.2" data-path="integration.html"><a href="integration.html#reviews-and-benchmarking"><i class="fa fa-check"></i><b>1.1.2</b> Reviews and benchmarking</a></li>
 <li class="chapter" data-level="1.1.3" data-path="integration.html"><a href="integration.html#summary"><i class="fa fa-check"></i><b>1.1.3</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="IBD.html"><a href="IBD.html"><i class="fa fa-check"></i><b>1.2</b> Inflammatory bowel disease</a><ul>
@@ -190,7 +192,7 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <ul>
 <li>Data from different samples:</li>
 </ul>
-<p>These methods do not need data from the same sample. They draw their conclusions generalizing from the the data available. Some of them handle missing data, while others do use the data at face value. These method includes MetaPhlAn2, HUMAnN, LEfSe <span class="citation">[<span class="citeproc-not-found" data-reference-id="truong2015"><strong>???</strong></span>, <span class="citeproc-not-found" data-reference-id="segata2011"><strong>???</strong></span>, <a href="#ref-franzosa2018">10</a>]</span>.</p>
+<p>These methods do not need data from the same sample. They draw their conclusions generalizing from the the data available. Some of them handle missing data, while others do use the data at face value. These method includes MetaPhlAn2, HUMAnN, LEfSe <span class="citation">[<a href="#ref-franzosaSpecieslevelFunctionalProfiling2018">10</a>–<a href="#ref-segataMetagenomicBiomarkerDiscovery2011">12</a>]</span>.</p>
 </div>
 <div id="output-results" class="section level4">
 <h4><span class="header-section-number">1.1.1.7</span> Output results</h4>
@@ -219,16 +221,17 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <li>Globally:</li>
 </ul>
 <p>In a PCA for instance how do we interpret that some variables have the same loading? What happens in a more difficult method like canonical correlation analysis?</p>
-<p>There have been some articles about how to interpret those methods on real datasets <span class="citation">[<a href="#ref-sherryConductingInterpretingCanonical1981">11</a>]</span>. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset <span class="citation">[<a href="#ref-chung_multi-omics_2019">12</a>, <a href="#ref-martinez-mira_mosim_2018">13</a>]</span>.</p>
+<p>There have been some articles about how to interpret those methods on real datasets <span class="citation">[<a href="#ref-sherryConductingInterpretingCanonical1981">13</a>]</span>. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset <span class="citation">[<a href="#ref-chung_multi-omics_2019">14</a>, <a href="#ref-martinez-mira_mosim_2018">15</a>]</span>.</p>
 </div>
 <div id="conclusion" class="section level4">
 <h4><span class="header-section-number">1.1.1.9</span> Conclusion</h4>
 <p>The field of integration is large and complex, with high interest in the recent days, specially in the psychology and omics field, which lacks of a large study.</p>
 </div>
 </div>
-<div id="benchmarking" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Benchmarking</h3>
-<p>The comparison of methods independently from original authors have become a crucial step for selecting the right tool for a research <span class="citation">[<a href="#ref-cantini_benchmarking_2020">14</a>]</span>.</p>
+<div id="reviews-and-benchmarking" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Reviews and benchmarking</h3>
+<p>The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool for a research <span class="citation">[<a href="#ref-cantini_benchmarking_2020">16</a>]</span>.</p>
+<p>Some of these reviews are focused on a field: metabolomics (ref), genomics, microbiomics... or on a specific characteristic: ?.</p>
 </div>
 <div id="summary" class="section level3">
 <h3><span class="header-section-number">1.1.3</span> Summary</h3>
@@ -264,20 +267,23 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <div id="ref-gomez-cabreroSTATegraComprehensiveMultiomics2019">
 <p>9. Gomez-Cabrero D, Tarazona S, Ferreir’os-Vidal I, Ramirez RN, Company C, Schmidt A, et al. STATegra, a comprehensive multi-omics dataset of B-cell differentiation in mouse. Scientific Data. 2019;6:1–15.</p>
 </div>
-<div id="ref-franzosa2018">
-<p>10. Franzosa E, McIver L, Rahnavard G, Thompson L, Schirmer M, Weingart G, et al. Species-level functional profiling of metagenomes and metatranscriptomes. Nature Methods. 2018;15:962. doi:<a href="https://doi.org/10.1038/s41592-018-0176-y">10.1038/s41592-018-0176-y</a>.</p>
+<div id="ref-franzosaSpecieslevelFunctionalProfiling2018">
+<p>10. Franzosa EA, McIver LJ, Rahnavard G, Thompson LR, Schirmer M, Weingart G, et al. Species-level functional profiling of metagenomes and metatranscriptomes. Nature Methods. 2018;15:962. doi:<a href="https://doi.org/10.1038/s41592-018-0176-y">10.1038/s41592-018-0176-y</a>.</p>
+</div>
+<div id="ref-segataMetagenomicBiomarkerDiscovery2011">
+<p>12. Segata N, Izard J, Waldron L, Gevers D, Miropolsky L, Garrett WS, et al. Metagenomic biomarker discovery and explanation. Genome Biology. 2011;12:R60. doi:<a href="https://doi.org/10.1186/gb-2011-12-6-r60">10.1186/gb-2011-12-6-r60</a>.</p>
 </div>
 <div id="ref-sherryConductingInterpretingCanonical1981">
-<p>11. Sherry A, Henson RK. Conducting and Interpreting Canonical Correlation Analysis in Personality Research: A User-Friendly Primer. 1981.</p>
+<p>13. Sherry A, Henson RK. Conducting and Interpreting Canonical Correlation Analysis in Personality Research: A User-Friendly Primer. 1981.</p>
 </div>
 <div id="ref-chung_multi-omics_2019">
-<p>12. Chung R-H, Kang C-Y. A multi-omics data simulator for complex disease studies and its application to evaluate multi-omics data analysis methods for disease classification. GigaScience. 2019;8.</p>
+<p>14. Chung R-H, Kang C-Y. A multi-omics data simulator for complex disease studies and its application to evaluate multi-omics data analysis methods for disease classification. GigaScience. 2019;8.</p>
 </div>
 <div id="ref-martinez-mira_mosim_2018">
-<p>13. Martínez-Mira C, Conesa A, Tarazona S. MOSim: Multi-Omics Simulation in R. Preprint. Bioinformatics; 2018.</p>
+<p>15. Martínez-Mira C, Conesa A, Tarazona S. MOSim: Multi-Omics Simulation in R. Preprint. Bioinformatics; 2018.</p>
 </div>
 <div id="ref-cantini_benchmarking_2020">
-<p>14. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. Benchmarking joint multi-omics dimensionality reduction approaches for cancer study. bioRxiv. 2020;2020.01.14.905760.</p>
+<p>16. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. Benchmarking joint multi-omics dimensionality reduction approaches for cancer study. bioRxiv. 2020;2020.01.14.905760.</p>
 </div>
 </div>
 <div class="footnotes">
