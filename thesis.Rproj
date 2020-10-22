@@ -17,4 +17,8 @@ StripTrailingWhitespace: Yes
 
 BuildType: Website
 
+QuitChildProcessesOnExit: Yes
+
 MarkdownWrap: Sentence
+
+SpellingDictionary: en_US

@@ -133,7 +133,7 @@ These methods include Regularized Generalized Canonical Correlation Analysis (RG
 These methods do not need data from the same sample.
 They draw their conclusions generalizing from the the data available.
 Some of them handle missing data, while others do use the data at face value.
-These method includes MetaPhlAn2, HUMAnN, LEfSe [@franzosaSpecieslevelFunctionalProfiling2018; @truongMetaPhlAn2EnhancedMetagenomic2015; @segataMetagenomicBiomarkerDiscovery2011]
+These method includes MetaPhlAn2, HUMAnN, LEfSe [@franzosaSpecieslevelFunctionalProfiling2018; @truongMetaPhlAn2EnhancedMetagenomic2015; @segataMetagenomicBiomarkerDiscovery2011].
 
 #### Output results
 
@@ -177,9 +177,11 @@ Others, to benchmark and to learn how to interpret propose analyzing a simulated
 
 The field of integration is large and complex, with high interest in the recent days, specially in the psychology and omics field, which lacks of a large study.
 
-### Benchmarking
+### Reviews and benchmarking
 
-The comparison of methods independently from original authors have become a crucial step for selecting the right tool for a research [@cantini_benchmarking_2020].
+The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool for a research [@cantini_benchmarking_2020].
+
+Some of these reviews are focused on a field: metabolomics (ref), genomics, microbiomics... or on a specific characteristic: ?.
 
 ### Summary
 
@@ -187,9 +189,9 @@ Methods to integrate have many characteristics that allow to classify them which
 
 ## Inflammatory bowel disease {#IBD}
 
-Inflammatory bowel disease (IBD) includes both Crohn's disease (CD) and ulcerative colitis (UC).
-CD is a chronic, progressive reincident disease that affects both terminal ilium and colon, but it can develop in any site of the gastrointestinal tract.
-The UC is a colonic reincident and chronic disease characterized by a continuous inflammation of the colon and rectum.
+Inflammatory bowel disease (IBD) includes the chronic diseases Crohn's disease (CD) and ulcerative colitis (UC).
+CD is a progressive reincident disease that can affect all the gastrointestinal tract but shows mostly on both terminal ilium and colon.
+The UC is a colonic reincident disease characterized by a continuous inflammation of the colon.
 
 Around 4,2 million individuals suffer from IBD in Europe and North America combined.
 The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome.
@@ -211,13 +213,49 @@ Little is known of the influence of the gastrointestinal microbiome in the expre
 
 ### Disease onset
 
-Differences between very early on-set and adult disease
+Although so far we do not know what starts the disease there are differences on the disease when appears at different age.
+There is a rough classification between very early, early or adult on-set disease.
+
+The main differences are [ask Isa?]
+.
 
 ### Disease discourse
 
 Intermittent
 
-Disassociated between patient's report and colonoscopy
+There is to some extent a disassociated between patient's (clinic) report and the colonoscopy report.
+When patients report being better but their gut has bigger ulcers or is more inflamed.
+
+Although Crohn's disease and colon disease are similar the drugs and treatments for each is different.
+The order of the treatment/drugs changes depending on the disease.
+
+Endoscopic and clinic response.
+
+Mucosal healing
+
+Colectomy
+
+Dysplasia
+
+Fistula
+
+Herpes and citomegalovirus virus.
+
+Scores:
+
+-   Mayo
+
+-   SESCD
+
+Other measured parameters:
+
+-   Weight
+
+-   Calprotectin
+
+-   PCR (Proteinc C reactive)
+
+-   Hemoglobine
 
 #### Treatments
 
@@ -241,6 +279,8 @@ The ones given on the hospital more or less on the order of administration:
 -   Antibiotics
 
 All these drugs and procedures are available at the time of writing.
+
+If there is a reduction in doses because the treatment is effective the patients sometimes lose the response to the drug, so after an increase of the dose the do not recover the initial response they had.
 
 ### Integration on IBD
 
