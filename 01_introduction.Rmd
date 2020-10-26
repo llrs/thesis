@@ -24,7 +24,7 @@ Since the beginning of the integration methods there have been many methods prop
 Some of these methods are specific for one application or data while others are more general.
 On the recent years with the increase of more datasets with more variables than previously has seen an increase on the number of methodologies available on several disciplines but mainly on the biological science.
 This in turn has increased the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset [@wu_selective_2019].
-Other times only the strategies used are used to classify the methods [@cavill_transcriptomic_2016].
+Other times only the strategies used are used to classify the methods [@cavill_transcriptomic_2016;@chongComputationalApproachesIntegrative2017].
 
 As is common, there are several words that are used integrati(-on, -ve), multi-omics, pluri-omics.
 
@@ -134,6 +134,11 @@ These methods do not need data from the same sample.
 They draw their conclusions generalizing from the the data available.
 Some of them handle missing data, while others do use the data at face value.
 These method includes MetaPhlAn2, HUMAnN, LEfSe [@franzosaSpecieslevelFunctionalProfiling2018; @truongMetaPhlAn2EnhancedMetagenomic2015; @segataMetagenomicBiomarkerDiscovery2011].
+
+-   Data types:
+
+HCG, 16S, RNA-seq, metabolomics do not share the same data distribution, and are different between them.
+Also even with the same data depending on the processing of the data they can have very different properties: OTUs (operational taxonomic unit) do not behave equally as ASV (amplicon sequence variants)
 
 #### Output results
 
