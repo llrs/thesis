@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2020-10-22" />
+<meta name="date" content="2020-10-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -124,7 +124,7 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <blockquote>
 <p>&quot;the process of combining two or more things into one&quot; --- <a href="https://dictionary.cambridge.org/dictionary/english/integration">Cambridge Dictionary</a></p>
 </blockquote>
-<p>Since the beginning of the integration methods there have been many methods proposed. Some of these methods are specific for one application or data while others are more general. On the recent years with the increase of more datasets with more variables than previously has seen an increase on the number of methodologies available on several disciplines but mainly on the biological science. This in turn has increased the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset <span class="citation">[<a href="#ref-wu_selective_2019">1</a>]</span>. Other times only the strategies used are used to classify the methods <span class="citation">[<a href="#ref-cavill_transcriptomic_2016">2</a>]</span>.</p>
+<p>Since the beginning of the integration methods there have been many methods proposed. Some of these methods are specific for one application or data while others are more general. On the recent years with the increase of more datasets with more variables than previously has seen an increase on the number of methodologies available on several disciplines but mainly on the biological science. This in turn has increased the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset <span class="citation">[<a href="#ref-wu_selective_2019">1</a>]</span>. Other times only the strategies used are used to classify the methods <span class="citation">[<a href="#ref-cavill_transcriptomic_2016">2</a>, <a href="#ref-chongComputationalApproachesIntegrative2017">3</a>]</span>.</p>
 <p>As is common, there are several words that are used integrati(-on, -ve), multi-omics, pluri-omics.</p>
 <div id="classification" class="section level3">
 <h3><span class="header-section-number">1.1.1</span> Classification</h3>
@@ -179,7 +179,7 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <div id="relationship-between-variables" class="section level4">
 <h4><span class="header-section-number">1.1.1.5</span> Relationship between variables</h4>
 <p>Since the lactose <a href="https://en.wikipedia.org/wiki/Operon">operon</a> we know how some genes regulate each other. For other variables we don't know how they are related. For instance, how does the increase in expression of a gene affects the growth of a microorganism? Usually the relationships between variables are mediated by many factors or interactions.</p>
-<p>Network approaches relate the variables between them (such as <span class="citation">[<a href="#ref-koh_iomicspass_2019">3</a>]</span>). And are fairly new and despite being used in rare occasions they are growing in popularity.</p>
+<p>Network approaches relate the variables between them (such as <span class="citation">[<a href="#ref-koh_iomicspass_2019">4</a>]</span>). And are fairly new and despite being used in rare occasions they are growing in popularity.</p>
 <p>In partial correlations some or all of the other variables and considered on how much do they affect and deduced.</p>
 </div>
 <div id="input-data" class="section level4">
@@ -188,11 +188,15 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <ul>
 <li>Data from the same samples:</li>
 </ul>
-<p>These methods do not handle well or at all missing data. They need complete cases/data of the samples in order to be able to integrate the results. These methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) <span class="citation">[<a href="#ref-tenenhaus_regularized_2011">4</a>, <a href="#ref-tenenhaus_variable_2014">5</a>]</span>, Multiple co-inertia analysis (MCIA) <span class="citation">[<a href="#ref-culhane_cross-platform_2003">6</a>]</span>, Multi-Study Factor Analysis (MSFA) <span class="citation">[<a href="#ref-vito_multi-study_2019">7</a>]</span>, Multi-Omics Factor Analysis (MOFA) <span class="citation">[<a href="#ref-argelaguet_multi-omics_2018">8</a>]</span>, STATegRa <span class="citation">[<a href="#ref-gomez-cabreroSTATegraComprehensiveMultiomics2019">9</a>]</span>.</p>
+<p>These methods do not handle well or at all missing data. They need complete cases/data of the samples in order to be able to integrate the results. These methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) <span class="citation">[<a href="#ref-tenenhaus_regularized_2011">5</a>, <a href="#ref-tenenhaus_variable_2014">6</a>]</span>, Multiple co-inertia analysis (MCIA) <span class="citation">[<a href="#ref-culhane_cross-platform_2003">7</a>]</span>, Multi-Study Factor Analysis (MSFA) <span class="citation">[<a href="#ref-vito_multi-study_2019">8</a>]</span>, Multi-Omics Factor Analysis (MOFA) <span class="citation">[<a href="#ref-argelaguet_multi-omics_2018">9</a>]</span>, STATegRa <span class="citation">[<a href="#ref-gomez-cabreroSTATegraComprehensiveMultiomics2019">10</a>]</span>.</p>
 <ul>
 <li>Data from different samples:</li>
 </ul>
-<p>These methods do not need data from the same sample. They draw their conclusions generalizing from the the data available. Some of them handle missing data, while others do use the data at face value. These method includes MetaPhlAn2, HUMAnN, LEfSe <span class="citation">[<a href="#ref-franzosaSpecieslevelFunctionalProfiling2018">10</a>–<a href="#ref-segataMetagenomicBiomarkerDiscovery2011">12</a>]</span>.</p>
+<p>These methods do not need data from the same sample. They draw their conclusions generalizing from the the data available. Some of them handle missing data, while others do use the data at face value. These method includes MetaPhlAn2, HUMAnN, LEfSe <span class="citation">[<a href="#ref-franzosaSpecieslevelFunctionalProfiling2018">11</a>–<a href="#ref-segataMetagenomicBiomarkerDiscovery2011">13</a>]</span>.</p>
+<ul>
+<li>Data types:</li>
+</ul>
+<p>HCG, 16S, RNA-seq, metabolomics do not share the same data distribution, and are different between them. Also even with the same data depending on the processing of the data they can have very different properties: OTUs (operational taxonomic unit) do not behave equally as ASV (amplicon sequence variants)</p>
 </div>
 <div id="output-results" class="section level4">
 <h4><span class="header-section-number">1.1.1.7</span> Output results</h4>
@@ -200,11 +204,11 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <ul>
 <li>Shared factors:</li>
 </ul>
-<p>The integration results in a vector of the samples in a lower dimensional space that is shared by all the data used to integrate. Such methods include iCluster, Multi-Omics Factor Analysis (MOFA) <span class="citation">[<a href="#ref-argelaguet_multi-omics_2018">8</a>]</span>.</p>
+<p>The integration results in a vector of the samples in a lower dimensional space that is shared by all the data used to integrate. Such methods include iCluster, Multi-Omics Factor Analysis (MOFA) <span class="citation">[<a href="#ref-argelaguet_multi-omics_2018">9</a>]</span>.</p>
 <ul>
 <li>Specific factors:</li>
 </ul>
-<p>The integration results in several vectors of the samples in a lower dimensional space of each data used to integrate. Such methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) <span class="citation">[<a href="#ref-tenenhaus_regularized_2011">4</a>, <a href="#ref-tenenhaus_variable_2014">5</a>]</span>, Multiple co-inertia analysis (MCIA) <span class="citation">[<a href="#ref-culhane_cross-platform_2003">6</a>]</span>, Multi-Study Factor Analysis (MSFA) <span class="citation">[<a href="#ref-vito_multi-study_2019">7</a>]</span>.</p>
+<p>The integration results in several vectors of the samples in a lower dimensional space of each data used to integrate. Such methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) <span class="citation">[<a href="#ref-tenenhaus_regularized_2011">5</a>, <a href="#ref-tenenhaus_variable_2014">6</a>]</span>, Multiple co-inertia analysis (MCIA) <span class="citation">[<a href="#ref-culhane_cross-platform_2003">7</a>]</span>, Multi-Study Factor Analysis (MSFA) <span class="citation">[<a href="#ref-vito_multi-study_2019">8</a>]</span>.</p>
 <ul>
 <li>Mixed factors:</li>
 </ul>
@@ -221,7 +225,7 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <li>Globally:</li>
 </ul>
 <p>In a PCA for instance how do we interpret that some variables have the same loading? What happens in a more difficult method like canonical correlation analysis?</p>
-<p>There have been some articles about how to interpret those methods on real datasets <span class="citation">[<a href="#ref-sherryConductingInterpretingCanonical1981">13</a>]</span>. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset <span class="citation">[<a href="#ref-chung_multi-omics_2019">14</a>, <a href="#ref-martinez-mira_mosim_2018">15</a>]</span>.</p>
+<p>There have been some articles about how to interpret those methods on real datasets <span class="citation">[<a href="#ref-sherryConductingInterpretingCanonical1981">14</a>]</span>. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset <span class="citation">[<a href="#ref-chung_multi-omics_2019">15</a>, <a href="#ref-martinez-mira_mosim_2018">16</a>]</span>.</p>
 </div>
 <div id="conclusion" class="section level4">
 <h4><span class="header-section-number">1.1.1.9</span> Conclusion</h4>
@@ -230,7 +234,7 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 </div>
 <div id="reviews-and-benchmarking" class="section level3">
 <h3><span class="header-section-number">1.1.2</span> Reviews and benchmarking</h3>
-<p>The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool for a research <span class="citation">[<a href="#ref-cantini_benchmarking_2020">16</a>]</span>.</p>
+<p>The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool for a research <span class="citation">[<a href="#ref-cantini_benchmarking_2020">17</a>]</span>.</p>
 <p>Some of these reviews are focused on a field: metabolomics (ref), genomics, microbiomics... or on a specific characteristic: ?.</p>
 </div>
 <div id="summary" class="section level3">
@@ -246,44 +250,47 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <div id="ref-cavill_transcriptomic_2016">
 <p>2. Cavill R, Jennen D, Kleinjans J, Bried’e JJ. Transcriptomic and metabolomic data integration. Briefings in Bioinformatics. 2016;17:891–901.</p>
 </div>
+<div id="ref-chongComputationalApproachesIntegrative2017">
+<p>3. Chong J, Xia J. Computational approaches for integrative analysis of the metabolome and microbiome. Metabolites. 2017;7:62. doi:<a href="https://doi.org/10.3390/metabo7040062">10.3390/metabo7040062</a>.</p>
+</div>
 <div id="ref-koh_iomicspass_2019">
-<p>3. Koh HWL, Fermin D, Vogel C, Choi KP, Ewing RM, Choi H. iOmicsPASS: Network-based integration of multiomics data for predictive subnetwork discovery. npj Systems Biology and Applications. 2019;5:1–10.</p>
+<p>4. Koh HWL, Fermin D, Vogel C, Choi KP, Ewing RM, Choi H. iOmicsPASS: Network-based integration of multiomics data for predictive subnetwork discovery. npj Systems Biology and Applications. 2019;5:1–10.</p>
 </div>
 <div id="ref-tenenhaus_regularized_2011">
-<p>4. Tenenhaus A, Tenenhaus M. Regularized Generalized Canonical Correlation Analysis. Psychometrika. 2011;76:257–84.</p>
+<p>5. Tenenhaus A, Tenenhaus M. Regularized Generalized Canonical Correlation Analysis. Psychometrika. 2011;76:257–84.</p>
 </div>
 <div id="ref-tenenhaus_variable_2014">
-<p>5. Tenenhaus A, Philippe C, Guillemot V, Le Cao K-A, Grill J, Frouin V. Variable selection for generalized canonical correlation analysis. Biostatistics. 2014;15:569–83.</p>
+<p>6. Tenenhaus A, Philippe C, Guillemot V, Le Cao K-A, Grill J, Frouin V. Variable selection for generalized canonical correlation analysis. Biostatistics. 2014;15:569–83.</p>
 </div>
 <div id="ref-culhane_cross-platform_2003">
-<p>6. Culhane AC, Perri‘ere G, Higgins DG. Cross-platform comparison and visualisation of gene expression data using co-inertia analysis. BMC Bioinformatics. 2003;4:59.</p>
+<p>7. Culhane AC, Perri‘ere G, Higgins DG. Cross-platform comparison and visualisation of gene expression data using co-inertia analysis. BMC Bioinformatics. 2003;4:59.</p>
 </div>
 <div id="ref-vito_multi-study_2019">
-<p>7. Vito RD, Bellio R, Trippa L, Parmigiani G. Multi-study factor analysis. Biometrics. 2019;75:337–46.</p>
+<p>8. Vito RD, Bellio R, Trippa L, Parmigiani G. Multi-study factor analysis. Biometrics. 2019;75:337–46.</p>
 </div>
 <div id="ref-argelaguet_multi-omics_2018">
-<p>8. Argelaguet R, Velten B, Arnol D, Dietrich S, Zenz T, Marioni JC, et al. Multi-Omics Factor Analysisa framework for unsupervised integration of multi-omics data sets. Molecular Systems Biology. 2018;14:e8124.</p>
+<p>9. Argelaguet R, Velten B, Arnol D, Dietrich S, Zenz T, Marioni JC, et al. Multi-Omics Factor Analysisa framework for unsupervised integration of multi-omics data sets. Molecular Systems Biology. 2018;14:e8124.</p>
 </div>
 <div id="ref-gomez-cabreroSTATegraComprehensiveMultiomics2019">
-<p>9. Gomez-Cabrero D, Tarazona S, Ferreir’os-Vidal I, Ramirez RN, Company C, Schmidt A, et al. STATegra, a comprehensive multi-omics dataset of B-cell differentiation in mouse. Scientific Data. 2019;6:1–15.</p>
+<p>10. Gomez-Cabrero D, Tarazona S, Ferreir’os-Vidal I, Ramirez RN, Company C, Schmidt A, et al. STATegra, a comprehensive multi-omics dataset of B-cell differentiation in mouse. Scientific Data. 2019;6:1–15.</p>
 </div>
 <div id="ref-franzosaSpecieslevelFunctionalProfiling2018">
-<p>10. Franzosa EA, McIver LJ, Rahnavard G, Thompson LR, Schirmer M, Weingart G, et al. Species-level functional profiling of metagenomes and metatranscriptomes. Nature Methods. 2018;15:962. doi:<a href="https://doi.org/10.1038/s41592-018-0176-y">10.1038/s41592-018-0176-y</a>.</p>
+<p>11. Franzosa EA, McIver LJ, Rahnavard G, Thompson LR, Schirmer M, Weingart G, et al. Species-level functional profiling of metagenomes and metatranscriptomes. Nature Methods. 2018;15:962. doi:<a href="https://doi.org/10.1038/s41592-018-0176-y">10.1038/s41592-018-0176-y</a>.</p>
 </div>
 <div id="ref-segataMetagenomicBiomarkerDiscovery2011">
-<p>12. Segata N, Izard J, Waldron L, Gevers D, Miropolsky L, Garrett WS, et al. Metagenomic biomarker discovery and explanation. Genome Biology. 2011;12:R60. doi:<a href="https://doi.org/10.1186/gb-2011-12-6-r60">10.1186/gb-2011-12-6-r60</a>.</p>
+<p>13. Segata N, Izard J, Waldron L, Gevers D, Miropolsky L, Garrett WS, et al. Metagenomic biomarker discovery and explanation. Genome Biology. 2011;12:R60. doi:<a href="https://doi.org/10.1186/gb-2011-12-6-r60">10.1186/gb-2011-12-6-r60</a>.</p>
 </div>
 <div id="ref-sherryConductingInterpretingCanonical1981">
-<p>13. Sherry A, Henson RK. Conducting and Interpreting Canonical Correlation Analysis in Personality Research: A User-Friendly Primer. 1981.</p>
+<p>14. Sherry A, Henson RK. Conducting and Interpreting Canonical Correlation Analysis in Personality Research: A User-Friendly Primer. 1981.</p>
 </div>
 <div id="ref-chung_multi-omics_2019">
-<p>14. Chung R-H, Kang C-Y. A multi-omics data simulator for complex disease studies and its application to evaluate multi-omics data analysis methods for disease classification. GigaScience. 2019;8.</p>
+<p>15. Chung R-H, Kang C-Y. A multi-omics data simulator for complex disease studies and its application to evaluate multi-omics data analysis methods for disease classification. GigaScience. 2019;8.</p>
 </div>
 <div id="ref-martinez-mira_mosim_2018">
-<p>15. Martínez-Mira C, Conesa A, Tarazona S. MOSim: Multi-Omics Simulation in R. Preprint. Bioinformatics; 2018.</p>
+<p>16. Martínez-Mira C, Conesa A, Tarazona S. MOSim: Multi-Omics Simulation in R. Preprint. Bioinformatics; 2018.</p>
 </div>
 <div id="ref-cantini_benchmarking_2020">
-<p>16. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. Benchmarking joint multi-omics dimensionality reduction approaches for cancer study. bioRxiv. 2020;2020.01.14.905760.</p>
+<p>17. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. Benchmarking joint multi-omics dimensionality reduction approaches for cancer study. bioRxiv. 2020;2020.01.14.905760.</p>
 </div>
 </div>
 <div class="footnotes">
