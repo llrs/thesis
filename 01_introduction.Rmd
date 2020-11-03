@@ -24,7 +24,7 @@ Since the beginning of the integration methods there have been many methods prop
 Some of these methods are specific for one application or data while others are more general.
 On the recent years with the increase of more datasets with more variables than previously has seen an increase on the number of methodologies available on several disciplines but mainly on the biological science.
 This in turn has increased the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset [@wu_selective_2019].
-Other times only the strategies used are used to classify the methods [@cavill_transcriptomic_2016;@chongComputationalApproachesIntegrative2017].
+Other times only the strategies used are used to classify the methods [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
 
 As is common, there are several words that are used integrati(-on, -ve), multi-omics, pluri-omics.
 
@@ -177,6 +177,11 @@ What happens in a more difficult method like canonical correlation analysis?
 
 There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981].
 Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
+
+To help interpretation frequently synthetic datasets are used to compare the results of the integration with the dataset of interest and to compare different tools.
+This datasets are created with some relationships that the tools are expected to find.
+
+There exists several methods to create synthetic datasets like MOSim, metaSPARSim, CAMISIM.
 
 #### Conclusion
 
