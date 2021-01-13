@@ -32,7 +32,7 @@ In a further family of models we split the information we know about these sampl
 We fitted the best model for all the three family of models and we found that the most fitting model was from the family that had the data split on several.
 
 Additionally I introduced some changes to RGCCA package.
-The modified package can be found [here](https://llrs.github.io/RGCCA/).
+The modified package can be found [here](https://github.com/llrs/RGCCA/).
 This version return the same results as the version on CRAN but provides also some code optimization for a lower computation time.
 Some of these changes are to to be able to change the design between different dimensions.
 The idea behind this change is that if the first dimensions correctly fits the data the second dimension might need a different model of relationships.
@@ -59,3 +59,9 @@ AVE, inner and outer
 Bootstraping/validation on an external cohort.
 
 Biological relevance
+
+## Comparing with other methods
+
+## Conclusions
+
+This has been [pre-published](https://www.medrxiv.org/content/10.1101/2020.04.16.20031492v1 "Preprint") and is now published on One Plus. 
