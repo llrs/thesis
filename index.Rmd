@@ -11,7 +11,7 @@ site: bookdown::bookdown_site
 bibliography:
 - references.bib
 - packages.bib
-twitter-handle: Lluis_Rev
+twitter-handle: Lluis_Revilla
 ---
 
 # Preface {.unnumbered}
