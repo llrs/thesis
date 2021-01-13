@@ -1,7 +1,7 @@
 # Purpose
 
 This repository host my PhD thesis (as an [online
-book](https://llrs.github.io/thesis)) while I work on the PhD.
+book](https://thesis.llrs.dev)) while I work on the PhD.
 
 # Other information
 
