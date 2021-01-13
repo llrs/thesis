@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>B.2 By publication | Data integration on inflammatory bowel disease</title>
+  <title>2.2 Comparing with other methods | Data integration on inflammatory bowel disease</title>
   <meta name="description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="B.2 By publication | Data integration on inflammatory bowel disease" />
+  <meta property="og:title" content="2.2 Comparing with other methods | Data integration on inflammatory bowel disease" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="llrs/thesis" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="B.2 By publication | Data integration on inflammatory bowel disease" />
+  <meta name="twitter:title" content="2.2 Comparing with other methods | Data integration on inflammatory bowel disease" />
   <meta name="twitter:site" content="@Lluis_Revilla" />
   <meta name="twitter:description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="listed.html"/>
-
+<link rel="prev" href="this-requires-a-model-of-relationships-.html"/>
+<link rel="next" href="conclusions.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -119,122 +119,24 @@
 <div class = "wip">
 This tesis is ongoing and still without hard date to finish it. Watch the <a href="https://github.com/llrs/thesis">GitHub repository</a> or wait for a release announcement on Twitter on <a href="https://twitter.com/Lluis_Rev">my profile</a>.
 </div>
-<div id="by-publication" class="section level2">
-<h2><span class="header-section-number">B.2</span> By publication</h2>
-<p>All code of the analysis of the publications is available (in his messed state and complicated history) and a brief description as to why they were used:</p>
-<p><a href="https://doi.org/10.1101/2020.04.16.20031492">Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a>:</p>
-<ul>
-<li><a href="https://github.com/llrs/TRIM">TRIM</a>: Mangle with the sample, dataset, explore several methods...</li>
-<li><a href="https://github.com/llrs/sgcca_hyperparameters">sgcca_hyperparameters</a>: Explore the effects of the hyperparameters on RGCCA on the provided dataset.</li>
-<li><a href="https://github.com/llrs/inteRmodel">inteRmodel</a>: Package for easy repeating the methodology developed on TRIM.</li>
-<li><a href="https://github.com/llrs/integration-helper">integration</a>: Package with functions that I wrote several times on the TRIM ended up here.</li>
-</ul>
-<p>Paper 2:</p>
-<ul>
-<li><a href="https://github.com/llrs/Barcelona">Barcelona</a>: Mangle with the sample, dataset ...</li>
-<li><a href="https://github.com/llrs/inteRmodel">inteRmodel</a>: To repeat the same procedure as in the first analysis.</li>
-<li><a href="https://github.com/llrs/integration-helper">integration</a>: To not repeat myself for the same process.</li>
-</ul>
-
+<div id="comparing-with-other-methods" class="section level2">
+<h2><span class="header-section-number">2.2</span> Comparing with other methods</h2>
+<p><a href="https://bioconductor.org/packages/omicade4" title="Omicade4">MCIA</a> was used to compare with the new method <span class="citation">[<a href="#ref-mengMultivariateApproachIntegration2014">27</a>]</span>.</p>
+<p><a href="https://bioconductor.org/packages/Maaslin2" title="Maaslin2">Maaslin2</a></p>
+</div>
+<h3>References</h3>
 <div id="refs" class="references">
-<div>
-<p>1. Wu C, Zhou F, Ren J, Li X, Jiang Y, Ma S. A Selective Review of Multi-Level Omics Data Integration Using Variable Selection. High-Throughput. 2019;8:4.</p>
-</div>
-<div>
-<p>2. Cavill R, Jennen D, Kleinjans J, Bried’e JJ. Transcriptomic and metabolomic data integration. Briefings in Bioinformatics. 2016;17:891–901.</p>
-</div>
-<div>
-<p>3. Chong J, Xia J. Computational approaches for integrative analysis of the metabolome and microbiome. Metabolites. 2017;7:62. doi:<a href="https://doi.org/10.3390/metabo7040062">10.3390/metabo7040062</a>.</p>
-</div>
-<div>
-<p>4. Koh HWL, Fermin D, Vogel C, Choi KP, Ewing RM, Choi H. iOmicsPASS: Network-based integration of multiomics data for predictive subnetwork discovery. npj Systems Biology and Applications. 2019;5:1–10.</p>
-</div>
-<div>
-<p>5. Tenenhaus A, Tenenhaus M. Regularized Generalized Canonical Correlation Analysis. Psychometrika. 2011;76:257–84.</p>
-</div>
-<div>
-<p>6. Tenenhaus A, Philippe C, Guillemot V, Le Cao K-A, Grill J, Frouin V. Variable selection for generalized canonical correlation analysis. Biostatistics. 2014;15:569–83.</p>
-</div>
-<div>
-<p>7. Culhane AC, Perri‘ere G, Higgins DG. Cross-platform comparison and visualisation of gene expression data using co-inertia analysis. BMC Bioinformatics. 2003;4:59.</p>
-</div>
-<div>
-<p>8. Vito RD, Bellio R, Trippa L, Parmigiani G. Multi-study factor analysis. Biometrics. 2019;75:337–46.</p>
-</div>
-<div>
-<p>9. Argelaguet R, Velten B, Arnol D, Dietrich S, Zenz T, Marioni JC, et al. Multi-Omics Factor Analysisa framework for unsupervised integration of multi-omics data sets. Molecular Systems Biology. 2018;14:e8124.</p>
-</div>
-<div>
-<p>10. Gomez-Cabrero D, Tarazona S, Ferreir’os-Vidal I, Ramirez RN, Company C, Schmidt A, et al. STATegra, a comprehensive multi-omics dataset of B-cell differentiation in mouse. Scientific Data. 2019;6:1–15.</p>
-</div>
-<div>
-<p>11. Franzosa EA, McIver LJ, Rahnavard G, Thompson LR, Schirmer M, Weingart G, et al. Species-level functional profiling of metagenomes and metatranscriptomes. Nature Methods. 2018;15:962. doi:<a href="https://doi.org/10.1038/s41592-018-0176-y">10.1038/s41592-018-0176-y</a>.</p>
-</div>
-<div>
-<p>12. Truong DT, Franzosa EA, Tickle TL, Scholz M, Weingart G, Pasolli E, et al. MetaPhlAn2 for enhanced metagenomic taxonomic profiling. Nature Methods. 2015;12:902–3. doi:<a href="https://doi.org/10.1038/nmeth.3589">10.1038/nmeth.3589</a>.</p>
-</div>
-<div>
-<p>13. Segata N, Izard J, Waldron L, Gevers D, Miropolsky L, Garrett WS, et al. Metagenomic biomarker discovery and explanation. Genome Biology. 2011;12:R60. doi:<a href="https://doi.org/10.1186/gb-2011-12-6-r60">10.1186/gb-2011-12-6-r60</a>.</p>
-</div>
-<div>
-<p>14. Sherry A, Henson RK. Conducting and Interpreting Canonical Correlation Analysis in Personality Research: A User-Friendly Primer. 1981.</p>
-</div>
-<div>
-<p>15. Chung R-H, Kang C-Y. A multi-omics data simulator for complex disease studies and its application to evaluate multi-omics data analysis methods for disease classification. GigaScience. 2019;8.</p>
-</div>
-<div>
-<p>16. Martínez-Mira C, Conesa A, Tarazona S. MOSim: Multi-Omics Simulation in R. Preprint. Bioinformatics; 2018.</p>
-</div>
-<div>
-<p>17. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. Benchmarking joint multi-omics dimensionality reduction approaches for cancer study. bioRxiv. 2020;2020.01.14.905760.</p>
-</div>
-<div>
-<p>18. Human Microbiome Project Consortium BA, Nelson KE, Pop M, Creasy HH, Giglio MG, Huttenhower C, et al. A framework for human microbiome research. Nature. 2012;486:215–21.</p>
-</div>
-<div>
-<p>19. Häsler R, Sheibani-Tezerji R, Sinha A, Barann M, Rehman A, Esser D, et al. Uncoupling of mucosal gene regulation, mRNA splicing and adherent microbiota signatures in inflammatory bowel disease. Gut. 2016;gutjnl–2016–311651.</p>
-</div>
-<div>
-<p>20. Tang MS, Bowcutt R, Leung JM, Wolff MJ, Gundra UM, Hudesman D, et al. Integrated Analysis of Biopsies from Inflammatory Bowel Disease Patients Identifies SAA1 as a Link Between Mucosal Microbes with TH17 and TH22 Cells. Inflammatory Bowel Diseases. 2017;23:1544–54.</p>
-</div>
-<div>
-<p>21. De Souza HS, Fiocchi C, Iliopoulos D. The IBD interactome: An integrated view of aetiology, pathogenesis and therapy. 2017;14.</p>
-</div>
-<div>
-<p>22. Tenenhaus M. Component-based Structural Equation Modelling. Total Quality Management &amp; Business Excellence. 2008;19:871–86.</p>
-</div>
-<div>
-<p>23. Tenenhaus M, Hanafi M. A Bridge Between PLS Path Modeling and Multi-Block Data Analysis. In: Esposito Vinzi V, Chin WW, Henseler J, Wang H, editors. Handbook of Partial Least Squares. Berlin, Heidelberg: Springer Berlin Heidelberg; 2010. pp. 99–123.</p>
-</div>
-<div>
-<p>24. Tenenhaus A, Tenenhaus M. Regularized generalized canonical correlation analysis for multiblock or multigroup data analysis. European Journal of Operational Research. 2014;238:391–403.</p>
-</div>
-<div>
-<p>25. Tenenhaus A, Philippe C, Frouin V. Kernel Generalized Canonical Correlation Analysis. Computational Statistics &amp; Data Analysis. 2015;90:114–31.</p>
-</div>
-<div>
-<p>26. Corraliza AM, Ricart E, L’opez-García A, Carme Masamunt M, Veny M, Esteller M, et al. Differences in Peripheral and Tissue Immune Cell Populations Following Haematopoietic Stem Cell Transplantation in Crohn’s Disease Patients. Journal of Crohn’s and Colitis.</p>
-</div>
-<div>
+<div id="ref-mengMultivariateApproachIntegration2014">
 <p>27. Meng C, Kuster B, Culhane AC, Gholami AM. A multivariate approach to the integration of multi-omics datasets. BMC Bioinformatics. 2014;15:162. doi:<a href="https://doi.org/10.1186/1471-2105-15-162">10.1186/1471-2105-15-162</a>.</p>
 </div>
 </div>
-</div>
-<!-- </div> -->
-
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="listed.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="this-requires-a-model-of-relationships-.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -269,7 +171,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/llrs/thesis/edit/master/98_appendix.Rmd",
+"link": "https://github.com/llrs/thesis/edit/master/02_article1.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -277,7 +179,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/llrs/thesis/blob/master/98_appendix.Rmd",
+"link": "https://github.com/llrs/thesis/blob/master/02_article1.Rmd",
 "text": null
 },
 "download": ["Data integration on inflammatory bowel disease.pdf", "Data integration on inflammatory bowel disease.epub"],

@@ -22,6 +22,8 @@ rgcca
 this-requires-a-model-of-relationships.
 designing-models
 evaluating-models
+comparing-with-other-methods
+conclusions
 biological-relevance-of-results
 online-resources
 software
