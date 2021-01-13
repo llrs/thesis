@@ -44,7 +44,7 @@ More blocks more possible models
 
 Limitations: symmetric Y -\> X & X -\> Y
 
-## Designing models
+### Designing models
 
 What defines a block: Blocks of variables are treated independently
 
@@ -52,7 +52,7 @@ Considering disease
 
 Randomly
 
-## Evaluating models
+### Evaluating models
 
 AVE, inner and outer
 
@@ -62,6 +62,10 @@ Biological relevance
 
 ## Comparing with other methods
 
+[MCIA](https://bioconductor.org/packages/omicade4 "Omicade4") was used to compare with the new method [@mengMultivariateApproachIntegration2014].
+
+[Maaslin2](https://bioconductor.org/packages/Maaslin2 "Maaslin2")
+
 ## Conclusions
 
-This has been [pre-published](https://www.medrxiv.org/content/10.1101/2020.04.16.20031492v1 "Preprint") and is now published on One Plus. 
+This has been [pre-published](https://www.medrxiv.org/content/10.1101/2020.04.16.20031492v1 "Preprint") and is now published on One Plus.
