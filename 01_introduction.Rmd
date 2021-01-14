@@ -181,7 +181,7 @@ Others, to benchmark and to learn how to interpret propose analyzing a simulated
 To help interpretation frequently synthetic datasets are used to compare the results of the integration with the dataset of interest and to compare different tools.
 This datasets are created with some relationships that the tools are expected to find.
 
-There exists several methods to create synthetic datasets like MOSim, metaSPARSim, CAMISIM.
+There exists several methods to create synthetic datasets like MOSim, metaSPARSim, CAMISIM, ballgown, polyester and even edgeR can be used.
 
 #### Conclusion
 
