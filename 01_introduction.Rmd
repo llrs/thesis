@@ -28,7 +28,7 @@ Other times only the strategies used are used to classify the methods [@cavill_t
 
 As is common, there are several words that are used integrati(-on, -ve), multi-omics, pluri-omics.
 
-### Classification
+### Classification of integration method's
 
 We can characterize and classify integration methods in several ways.
 Here I outline some classifications in the bioscience field, with relationships (and references) to concrete methodology and usages.
@@ -36,17 +36,20 @@ Here I outline some classifications in the bioscience field, with relationships 
 #### Data type: numeric vs categorical
 
 The most important distinction in integration methods is what kind of data are combined.
-In general data can be divided between categorical and numeric values, which are usually found in several fields.
-Sometimes doctors want to understand the relationship between some phenotype they observe as a defined state from the underlying mechanistic point of view.
+In general data can be divided between categorical and numeric variables, which are usually found in several fields.
+Sometimes doctors want to understand the relationship between a phenotype they observe and the underlying mechanism.
 Usually this involves looking how the metabolites, the gene expression, the methylation, the number of variants a gene has, and other numeric variables are related to the observed (categorical) phenotype (like pain).
 
 Depending on what is a method aimed for it handles both data types or just one, often they are used differently.
-The most common way to handle different type of data is converting the categorical values to a mock variable, where each number represents a category, then the methods use these values to correlate and relate the variables.
-If the categorical variable has three values (A, B, C) it would be converted to A (1, 0, 0) B (0, 1, 0) and C (0, 0, 1).
+The most common way to handle different type of data is converting the categorical values to a mock or dummy variable.
+For each categorical factor there is a new numerical value with 1 if that sample had this value or 0 otherwise.
+Sometimes Often the number of variables created is one less than the number of factors that existed.
+For instance, if the categorical variable has three values (A, B, C) it would be converted to A (1, 0, 0) B (0, 1, 0) and C (0, 0, 1) and usually one of these three variables is omitted.
+This transformation allows to use the categorical values in methods though for numeric variables.
 
 #### Aim
 
-The results and methods of data integration depend on the question they seek to answer and on the (biological) question.
+The results and methods of data integration depend on the objective of the method and on the (biological) question.
 Most of the times one (or all) of the following results are expected:
 
 -   An overview of the role of each 'omics in a biological system
@@ -54,18 +57,18 @@ Most of the times one (or all) of the following results are expected:
 Sometimes several omics are used and the question is which omic method is the best one to describe the disease.
 Or several methods are used to understand better how two omics interact.
 
--   A better understanding of the relationship (correlation) between the 'omics types
+-   A better understanding of the relationships between the 'omics types
 
 When the relationship between omics is known there are methods to find those relationships and improve upon previous knowledge.
 For instance, checking that in a particular case or condition there is a given relationship, and that this relationships follows our model or not.
 
 -   A molecular signature[^introduction-1] leading to more insight into molecular mechanisms
 
-[^introduction-1]: A signature is usually a group of features that describe/are representative of a cell line or a process or a stage.
+[^introduction-1]: A signature is usually a group of features that describe/are representative of a cell line, a process or a stage.
 
 The usage of multifactor analysis might lead to the need to redefine the features that are essential for identifying a phase or a cell line.
 
--   A predictive analytic model towards personalized medicine
+-   A predictive model
 
 If a good model is known it can be used as a prediction if enough information is gathered, which might improve the treatment.
 
@@ -221,25 +224,29 @@ This could be due to both the genetic predisposition and environmental factors; 
 The relationship between host and microbiome has been proposed to play a fundamental role to maintain the disease.
 Little is known of the influence of the gastrointestinal microbiome in the expression of the gastrointestinal tract.
 
-### Disease onset
+### Disease etiology 
+
+The origin of the disease is unknown.
+There are several articles that point out to a relationship between the immune system and the microbiome.
+
+As seen the Crohn's disease and the ulcerative colitis are considered two different disease due to their difference despite their similarities.
 
 Although so far we do not know what starts the disease there are differences on the disease when appears at different age.
 There is a rough classification between very early, early or adult on-set disease.
-
 The main differences are [ask Isa?]
 .
 
 ### Disease discourse
 
-Intermittent
+Several factors difficult the study of the disease, the intermittent discourse, the heterogeneity of the symptoms, and that the symptoms are common with other disease which often delays the right diagnosis.
 
-There is to some extent a disassociated between patient's (clinic) report and the colonoscopy report.
-When patients report being better but their gut has bigger ulcers or is more inflamed.
+There is to some extent a disassociated between patient's (clinic) well-being report and the colonoscopy observation.
+Sometimes when patients report being better but their gut has bigger ulcers or is more inflamed.
 
 Although Crohn's disease and colon disease are similar the drugs and treatments for each is different.
 The order of the treatment/drugs changes depending on the disease.
 
-Endoscopic and clinic response.
+### Clinical care
 
 Mucosal healing
 
@@ -267,7 +274,7 @@ Other measured parameters:
 
 -   Hemoglobine
 
-#### Treatments
+#### Drugs
 
 The ones given on the hospital more or less on the order of administration:
 
@@ -290,9 +297,19 @@ The ones given on the hospital more or less on the order of administration:
 
 All these drugs and procedures are available at the time of writing.
 
-If there is a reduction in doses because the treatment is effective the patients sometimes lose the response to the drug, so after an increase of the dose the do not recover the initial response they had.
+Often a reduction in dose results in losing the response to the drug.
+Thus, after an increase of the dose to the previous levels the patients not recover the initial response they had.
 
-### Integration on IBD
+Hematopoietic Stem Cell Transplant (HSCT)
+
+Fecal microbiota transplantation
+
+### Summary
+
+The integration of data might help to improve the medicine and reveal links in difficult diseases like IBD.
+So far it has been applied in IBD with partial success.
+
+## Integration on IBD
 
 One of the hypothesis behind the maintenance of the inflammation involves the microbiome.
 Several studies have been carried out to discover links between microbiome and the inflammation.
@@ -312,7 +329,16 @@ Previous methods used include the use of RGCCA, [@tang_integrated_2017]
 
 [@de_souza_ibd_2017]
 
+[Maaslin2](https://bioconductor.org/packages/Maaslin2 "Maaslin2 on Bioconductor") [@huWholeExomeSequencing2021]
+
+### Genetics
+
+### Microbiome 
+
+### Multiple data
+
 ### Summary
 
-The integration of data might help to improve the medicine and reveal links in difficult diseases like IBD.
-So far it has been applied in IBD with partial success.
+Multiple methods and multiple studies have been done
+
+Few focus on discovering the relationships on the disease [@huWholeExomeSequencing2021]
