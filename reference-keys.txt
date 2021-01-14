@@ -1,6 +1,6 @@
 introduction
 integration
-classification
+classification-of-integration-methods
 data-type-numeric-vs-categorical
 aim
 relationship-between-variables-and-samples
@@ -13,11 +13,16 @@ conclusion
 reviews-and-benchmarking
 summary
 IBD
-disease-onset
+disease-etiology
 disease-discourse
-treatments
-integration-on-ibd
+clinical-care
+drugs
 summary-1
+integration-on-ibd
+genetics
+microbiome
+multiple-data
+summary-2
 rgcca
 this-requires-a-model-of-relationships.
 designing-models

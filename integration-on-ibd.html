@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.1 This requires a model of relationships. | Data integration on inflammatory bowel disease</title>
+  <title>1.3 Integration on IBD | Data integration on inflammatory bowel disease</title>
   <meta name="description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.1 This requires a model of relationships. | Data integration on inflammatory bowel disease" />
+  <meta property="og:title" content="1.3 Integration on IBD | Data integration on inflammatory bowel disease" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="llrs/thesis" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.1 This requires a model of relationships. | Data integration on inflammatory bowel disease" />
+  <meta name="twitter:title" content="1.3 Integration on IBD | Data integration on inflammatory bowel disease" />
   <meta name="twitter:site" content="@Lluis_Revilla" />
   <meta name="twitter:description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="rgcca.html"/>
-<link rel="next" href="comparing-with-other-methods.html"/>
+<link rel="prev" href="IBD.html"/>
+<link rel="next" href="rgcca.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -125,21 +125,46 @@
 <div class = "wip">
 This tesis is ongoing and still without hard date to finish it. Watch the <a href="https://github.com/llrs/thesis">GitHub repository</a> or wait for a release announcement on Twitter on <a href="https://twitter.com/Lluis_Rev">my profile</a>.
 </div>
-<div id="this-requires-a-model-of-relationships." class="section level2">
-<h2><span class="header-section-number">2.1</span> This requires a model of relationships.</h2>
-<p>More blocks more possible models</p>
-<p>Limitations: symmetric Y -&gt; X &amp; X -&gt; Y</p>
-<div id="designing-models" class="section level3">
-<h3><span class="header-section-number">2.1.1</span> Designing models</h3>
-<p>What defines a block: Blocks of variables are treated independently</p>
-<p>Considering disease</p>
-<p>Randomly</p>
+<div id="integration-on-ibd" class="section level2">
+<h2><span class="header-section-number">1.3</span> Integration on IBD</h2>
+<p>One of the hypothesis behind the maintenance of the inflammation involves the microbiome. Several studies have been carried out to discover links between microbiome and the inflammation. Some of these studies used metabolites, DNA-seq sequencing of the microbiome content, or targeted 16S sequencing.</p>
+<p>Also the technical method used can differ between extracted from stools or from biopsied samples at colonoscopy or from surgical samples.</p>
+<p>Some articles use correlation like <span class="citation">[<a href="#ref-hasler_uncoupling_2016">19</a>]</span>. There are others that use a combination of methods</p>
+<p>Very rarely there is an experimental confirmation. This is due to how complicated it is to test an interaction and the simulate the conditions.</p>
+<p>One of the few methods published were the interaction is measured is to expose the ex-vivo sample or cell line with supernatant of a microbiome culture.</p>
+<p>Previous methods used include the use of RGCCA, <span class="citation">[<a href="#ref-tang_integrated_2017">20</a>]</span></p>
+<p><span class="citation">[<a href="#ref-de_souza_ibd_2017">21</a>]</span></p>
+<p><a href="https://bioconductor.org/packages/Maaslin2" title="Maaslin2 on Bioconductor">Maaslin2</a> <span class="citation">[<a href="#ref-huWholeExomeSequencing2021">22</a>]</span></p>
+<div id="genetics" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Genetics</h3>
 </div>
-<div id="evaluating-models" class="section level3">
-<h3><span class="header-section-number">2.1.2</span> Evaluating models</h3>
-<p>AVE, inner and outer</p>
-<p>Bootstraping/validation on an external cohort.</p>
-<p>Biological relevance</p>
+<div id="microbiome" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Microbiome</h3>
+</div>
+<div id="multiple-data" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> Multiple data</h3>
+</div>
+<div id="summary-2" class="section level3">
+<h3><span class="header-section-number">1.3.4</span> Summary</h3>
+<p>Multiple methods and multiple studies have been done</p>
+<p>Few focus on discovering the relationships on the disease <span class="citation">[<a href="#ref-huWholeExomeSequencing2021">22</a>]</span></p>
+
+</div>
+</div>
+<!-- </div> -->
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-hasler_uncoupling_2016">
+<p>19. Häsler R, Sheibani-Tezerji R, Sinha A, Barann M, Rehman A, Esser D, et al. Uncoupling of mucosal gene regulation, mRNA splicing and adherent microbiota signatures in inflammatory bowel disease. Gut. 2016;gutjnl–2016–311651.</p>
+</div>
+<div id="ref-tang_integrated_2017">
+<p>20. Tang MS, Bowcutt R, Leung JM, Wolff MJ, Gundra UM, Hudesman D, et al. Integrated Analysis of Biopsies from Inflammatory Bowel Disease Patients Identifies SAA1 as a Link Between Mucosal Microbes with TH17 and TH22 Cells. Inflammatory Bowel Diseases. 2017;23:1544–54.</p>
+</div>
+<div id="ref-de_souza_ibd_2017">
+<p>21. De Souza HS, Fiocchi C, Iliopoulos D. The IBD interactome: An integrated view of aetiology, pathogenesis and therapy. 2017;14.</p>
+</div>
+<div id="ref-huWholeExomeSequencing2021">
+<p>22. Hu S, Vila AV, Gacesa R, Collij V, Stevens C, Fu JM, et al. Whole exome sequencing analyses reveal gene–microbiota interactions in the context of ibd. Gut. 2021;70:285–96. doi:<a href="https://doi.org/10.1136/gutjnl-2019-319706">10.1136/gutjnl-2019-319706</a>.</p>
 </div>
 </div>
             </section>
@@ -147,8 +172,8 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
           </div>
         </div>
       </div>
-<a href="rgcca.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="comparing-with-other-methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="IBD.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rgcca.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -183,7 +208,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/llrs/thesis/edit/master/02_article1.Rmd",
+"link": "https://github.com/llrs/thesis/edit/master/01_introduction.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -191,7 +216,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/llrs/thesis/blob/master/02_article1.Rmd",
+"link": "https://github.com/llrs/thesis/blob/master/01_introduction.Rmd",
 "text": null
 },
 "download": ["Data integration on inflammatory bowel disease.pdf", "Data integration on inflammatory bowel disease.epub"],
