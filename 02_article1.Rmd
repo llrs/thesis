@@ -38,29 +38,31 @@ Some of these changes are to to be able to change the design between different d
 The idea behind this change is that if the first dimensions correctly fits the data the second dimension might need a different model of relationships.
 For instance, the first dimensions are dominated by two blocks of data while the second is dominated by another block of data.
 
-## This requires a model of relationships.
+## Model of relationships.
 
-More blocks more possible models
+More blocks more possible models.
 
 Limitations: symmetric Y -\> X & X -\> Y
 
+Not possible to find causal relationships.
+
 ### Designing models
 
-What defines a block: Blocks of variables are treated independently
+What defines a block: Blocks of variables are treated independently but variables within a block are used in a linear combination.
 
-Considering disease
+Create models with random links between blocks.
 
-Randomly
+Create models considering the knowledge of the system or disease.
 
 ### Evaluating models
 
-AVE, inner and outer
+Average variance explained (AVE), inner and outer
 
 Bootstraping/validation on an external cohort.
 
 Biological relevance
 
-## Comparing with other methods
+## Evaluating the method
 
 [MCIA](https://bioconductor.org/packages/omicade4 "Omicade4") was used to compare with the new method [@mengMultivariateApproachIntegration2014].
 
@@ -68,4 +70,4 @@ Biological relevance
 
 ## Conclusions
 
-This has been [pre-published](https://www.medrxiv.org/content/10.1101/2020.04.16.20031492v1 "Preprint") and is now published on One Plus.
+This has been [pre-published](https://www.medrxiv.org/content/10.1101/2020.04.16.20031492v1 "Preprint") and is now published on Plus One.

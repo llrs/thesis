@@ -16,17 +16,18 @@ The disease present unique characteristics that require the usage of integration
 
 ## Integration
 
-Integration is usually defined as:
+Integration is defined as:
 
 > "the process of combining two or more things into one" --- [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/integration)
 
+Other words that are used integrati(-on, -ve), multi-omics, pluri-omics.
+However, here integration will be used as it is the more general one and not restricted to omics. 
 Since the beginning of the integration methods there have been many methods proposed.
 Some of these methods are specific for one application or data while others are more general.
 On the recent years with the increase of more datasets with more variables than previously has seen an increase on the number of methodologies available on several disciplines but mainly on the biological science.
 This in turn has increased the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset [@wu_selective_2019].
 Other times only the strategies used are used to classify the methods [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
 
-As is common, there are several words that are used integrati(-on, -ve), multi-omics, pluri-omics.
 
 ### Classification of integration method's
 
@@ -143,9 +144,27 @@ These method includes MetaPhlAn2, HUMAnN, LEfSe [@franzosaSpecieslevelFunctional
 HCG, 16S, RNA-seq, metabolomics do not share the same data distribution, and are different between them.
 Also even with the same data depending on the processing of the data they can have very different properties: OTUs (operational taxonomic unit) do not behave equally as ASV (amplicon sequence variants)
 
+#### Mathematical framework
+
+Depending on the input and the objective methods use different mathematical framework to process the data.
+The most important ones are listed below:
+
+-  Network
+
+Multilayer, including the multiplex, Molti-C-DREAM, RWR-MH, RWR-M.
+Network embedding MultiVERSE
+
+-  Dimensional Reduction
+ Momix, RGCCA, 
+-  Active module identification
+Multiomic objective genetic algorithm (scores based in two metrics, node score and density of interactions score). MOGAMUN
+
+
+
 #### Output results
 
-According to the output the integration methods can be classified in three groups: Shared factor across the data, specific factors for each data or mixed factors.
+According to the output the integration methods can be classified in several groups:
+For those from dimensional reduction methods there are three: Shared factor across the data, specific factors for each data or mixed factors.
 
 -   Shared factors:
 
@@ -226,15 +245,21 @@ Little is known of the influence of the gastrointestinal microbiome in the expre
 
 ### Disease etiology 
 
-The origin of the disease is unknown.
+As noted on the introduction, the origin of the disease is unknown.
 There are several articles that point out to a relationship between the immune system and the microbiome.
 
-As seen the Crohn's disease and the ulcerative colitis are considered two different disease due to their difference despite their similarities.
+As seen the Crohn's disease and the ulcerative colitis are considered two different disease due to their differences despite their similarities.
 
 Although so far we do not know what starts the disease there are differences on the disease when appears at different age.
 There is a rough classification between very early, early or adult on-set disease.
-The main differences are [ask Isa?]
-.
+The main differences are [ask Isa?].
+
+### Ulcerative colitis
+
+
+
+### Crohn's disease
+
 
 ### Disease discourse
 
