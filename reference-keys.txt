@@ -7,6 +7,7 @@ relationship-between-variables-and-samples
 relationship-between-samples
 relationship-between-variables
 input-data
+mathematical-framework
 output-results
 interpretation
 conclusion
@@ -14,6 +15,8 @@ reviews-and-benchmarking
 summary
 IBD
 disease-etiology
+ulcerative-colitis
+crohns-disease
 disease-discourse
 clinical-care
 drugs
@@ -24,12 +27,15 @@ microbiome
 multiple-data
 summary-2
 rgcca
-this-requires-a-model-of-relationships.
+model-of-relationships.
 designing-models
 evaluating-models
-comparing-with-other-methods
+evaluating-the-method
 conclusions
 biological-relevance-of-results
+comparing-different-dataset
+shared-selected-variables
+conclusions-1
 online-resources
 software
 listed
