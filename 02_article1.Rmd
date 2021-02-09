@@ -1,9 +1,16 @@
-# RGCCA
+# Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis
 
 The canonical correlation is a method that using data from the same sample but from different datasets.
-Characteristics Input Data type: numeric More variables than samples: It is appropriate when the number of variables is higher than the number of samples.
+
+Characteristics
+
+Input Data type: numeric
+
+More variables than samples: It is appropriate when the number of variables is higher than the number of samples.
 Need to be a complete case.
-Time is not considered as a specially variable Relationship between variables
+Time is not considered as a specially variable
+
+Relationship between variables
 
 Output:
 
@@ -38,13 +45,20 @@ Some of these changes are to to be able to change the design between different d
 The idea behind this change is that if the first dimensions correctly fits the data the second dimension might need a different model of relationships.
 For instance, the first dimensions are dominated by two blocks of data while the second is dominated by another block of data.
 
-## Model of relationships.
+## Relationships' models
 
-More blocks more possible models.
+Most multi-omics and integration tools assume one block for each type of data.
+However, RGCCA uses linear relationships between blocks of data.
+But doesn't say what constitutes a block of data.
+Usually a block of data is just a source of data, such as an essay a survey or an experiment.
+We decided to split the block with data about the samples to separate independent variables from the same block.
+The hypothesis we made was that with independent blocks the combined linear model would fit better the data.
 
-Limitations: symmetric Y -\> X & X -\> Y
+These news blocks can also help make more interpretable the relationships, because instead of a big metadata block we have a block for time related variables, another one for location and so on.
+This allows to design a model with an expected relationships between these dimensions.
 
-Not possible to find causal relationships.
+However, one limitation of the generalized canonical correlation analysis an in general on the dimension reduction methods is that the design matrix must be symmetric.
+Which implies that we can't infer causal relationship using these methods.
 
 ### Designing models
 
@@ -56,18 +70,25 @@ Create models considering the knowledge of the system or disease.
 
 ### Evaluating models
 
-Average variance explained (AVE), inner and outer
+To evaluate a model RGCCA provides the average variance explained (AVE), inner and outer.
+Inner AVE is for how well do all the canonical dimensions correlate with the design of the experiment, so it a measure of how good the model is.
+While outer AVE is a measure of how well do the variables of each block correlate with the canonical dimension, so it measures the agreement between the variables and the canonical dimensions.
 
-Bootstraping/validation on an external cohort.
+To evaluate a design a bootstraping method can be used to know how well the design does apply to a variety of data.
+Another option is to use an external cohort to validate the same model, or using an external model to see if you reach the same model, which is what we did.
 
-Biological relevance
+Next it must be evaluated compared to other methods to see if it brings something new or not.
+Of the multiple methods available we used [MCIA](https://bioconductor.org/packages/omicade4 "Omicade4") [@mengMultivariateApproachIntegration2014].
+Which was compared by looking at the area under the curve for classifying the samples according to their location.
 
-## Evaluating the method
-
-[MCIA](https://bioconductor.org/packages/omicade4 "Omicade4") was used to compare with the new method [@mengMultivariateApproachIntegration2014].
-
-[Maaslin2](https://bioconductor.org/packages/Maaslin2 "Maaslin2")
+Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn's disease.
+In this article we didn't look in depth to the biological relevance of the microorganisms an genes found.
 
 ## Conclusions
 
-This has been [pre-published](https://www.medrxiv.org/content/10.1101/2020.04.16.20031492v1 "Preprint") and is now published on Plus One.
+The procedure of separating independent variables in their own block of data and later search the best model that fits the data provides a good strategy that should be consider for integration efforts.
+
+The procedural method of searching a model and testing them is implemented on [inteRmodel](https://llrs.github.io/inteRmodel/ "inteRmodel").
+But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling.
+
+This was published as a [preprint](https://www.medrxiv.org/content/10.1101/2020.04.16.20031492v1) and after peer review [published on Plus One](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367 "Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis") [@revilla2021].
