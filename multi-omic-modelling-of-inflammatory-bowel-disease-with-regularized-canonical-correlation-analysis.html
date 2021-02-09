@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>B.1 Listed | Data integration on inflammatory bowel disease</title>
+  <title>Chapter 2 Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis | Data integration on inflammatory bowel disease</title>
   <meta name="description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="B.1 Listed | Data integration on inflammatory bowel disease" />
+  <meta property="og:title" content="Chapter 2 Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis | Data integration on inflammatory bowel disease" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="llrs/thesis" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="B.1 Listed | Data integration on inflammatory bowel disease" />
+  <meta name="twitter:title" content="Chapter 2 Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis | Data integration on inflammatory bowel disease" />
   <meta name="twitter:site" content="@Lluis_Revilla" />
   <meta name="twitter:description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="software.html"/>
-<link rel="next" href="by-publication.html"/>
+<link rel="prev" href="integration-on-ibd.html"/>
+<link rel="next" href="relationships-models.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -130,20 +130,38 @@
 <div class = "wip">
 This tesis is ongoing and still without hard date to finish it. Watch the <a href="https://github.com/llrs/thesis">GitHub repository</a> or wait for a release announcement on Twitter on <a href="https://twitter.com/Lluis_Rev">my profile</a>.
 </div>
-<div id="listed" class="section level2">
-<h2><span class="header-section-number">B.1</span> Listed</h2>
-<p>An improved/tested version of <a href="https://github.com/llrs/RGCCA">RGCCA</a>, some modifications on the internal functions to ease the maintenance as well as adding tests and sometimes improving the documentation. Also modified so that it is possible to provide a vector of models so that the model of the first dimension is not the same as the model on the second dimension (not sure if mathematically speaking makes sense but from a biological one I think it might be interesting to have it).</p>
-<p>Designed to be used with RGCCA I wrote the package <a href="https:github.com/llrs/inteRmodel">inteRmodel</a> to ease the bootstrapping and model selection.</p>
-<p>A package to design batches to avoid batch effect <a href="https://cran.r-project.org/package=experDesign">experDesign</a> and its website on <a href="https://github.com/llrs/experDesign">GitHub</a>.</p>
-<p>Explore the effects of the hyperparameters on RGCCA on the provided dataset of <a href="https://github.com/llrs/gliomaData">gliomaData</a> (Originally provided <a href="http://biodev.cea.fr/sgcca/">here</a>) there is this repository <a href="https://github.com/llrs/sgcca_hyperparameters">sgcca_hyperparameters</a>.</p>
-<p>We used a pouchitis cohort published in this <a href="https://dx.doi.org/10.1186/s13059-015-0637-x">article</a><span class="citation">[<a href="#ref-morgan2015">30</a>]</span> that was used to compare how does our own method does in other's dataset: <a href="https://github.com/llrs/pouchitis">pouchitis</a>.</p>
-<p>Some functions used to explore the TRIM dataset ended up in the <a href="https://github.com/llrs/integration-helper">integration</a> package.This include functions for correlation and network analysis.</p>
-<p>A package to analyze sets and fuzzy sets <a href="https://github.com/rOpenSci/BaseSet">BaseSet</a>. This package was meant to be used with the probabilities that arise from bootstrapping the models. However due to the long times of calculation that it would require it was not used. (A previous iteration of the <a href="https://github.com/llrs/GSEAdv" title="GSEAdv package">package</a> existed previously)</p>
+<div id="multi-omic-modelling-of-inflammatory-bowel-disease-with-regularized-canonical-correlation-analysis" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</h1>
+<p>The canonical correlation is a method that using data from the same sample but from different datasets.</p>
+<p>Characteristics</p>
+<p>Input Data type: numeric</p>
+<p>More variables than samples: It is appropriate when the number of variables is higher than the number of samples. Need to be a complete case. Time is not considered as a specially variable</p>
+<p>Relationship between variables</p>
+<p>Output:</p>
+<p>Specific factors Interpretation:</p>
+<p>Depending on the model and options used.</p>
+<p>Over several years of progress <span class="citation">[<a href="#ref-tenenhaus_regularized_2011">5</a>, <a href="#ref-tenenhaus_variable_2014">6</a>, <a href="#ref-tenenhaus_component-based_2008">23</a>–<a href="#ref-tenenhaus_kernel_2015">26</a>]</span> on the field of canonical correlations it provides a robust method and there is an implementation <span class="citation">[<span class="citeproc-not-found" data-reference-id="R-RGCCA"><strong>???</strong></span>]</span>.</p>
+<p>The regularized generalized canonical correlation is a method that combines several datasets, using data from the same sample. It is a good choice when the number of variables is higher than samples. There have been some improvements to generalize the method when <span class="math inline">\(p \gg n\)</span>. Current practices include using a pre selected model of relations between blocks. However this model might not be accurate. To help find the fitting model for the data I created an R package. The package, which is named <a href="https://llrs.github.io/inteRmodel/">inteRmodel</a> helps finding the right model and how fit it is for your data.</p>
+<p>This method applied to an existing dataset of an autologous haematopoietic stem cell transplantation <span class="citation">[<a href="#ref-corralizaDifferencesPeripheralTissue">27</a>]</span>. From this dataset there is data about the human transcriptome and the 16S DNA present at biopsies from colonoscopy. For several patients we have samples at different time point and at different locations. This allows us to see both location and time differences.</p>
+<p>We looked to several models and searched for the model that fit better with the data. The first model just accounted the transcriptomics and the microbiome data, then in another family of models we added the information we know about those samples. In a further family of models we split the information we know about these samples into three different blocks grouping them according to how are they related between them. We fitted the best model for all the three family of models and we found that the most fitting model was from the family that had the data split on several.</p>
+<p>Additionally I introduced some changes to RGCCA package. The modified package can be found <a href="https://github.com/llrs/RGCCA/">here</a>. This version return the same results as the version on CRAN but provides also some code optimization for a lower computation time. Some of these changes are to to be able to change the design between different dimensions. The idea behind this change is that if the first dimensions correctly fits the data the second dimension might need a different model of relationships. For instance, the first dimensions are dominated by two blocks of data while the second is dominated by another block of data.</p>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-morgan2015">
-<p>30. Morgan X, Kabakchiev B, Waldron L, Tyler A, Tickle T, Milgrom R, et al. Associations between host gene expression, the mucosal microbiome, and clinical outcome in the pelvic pouch of patients with inflammatory bowel disease. Genome Biology. 2015;16:67. doi:<a href="https://doi.org/10.1186/s13059-015-0637-x">10.1186/s13059-015-0637-x</a>.</p>
+<div id="ref-tenenhaus_regularized_2011">
+<p>5. Tenenhaus A, Tenenhaus M. Regularized Generalized Canonical Correlation Analysis. Psychometrika. 2011;76:257–84.</p>
+</div>
+<div id="ref-tenenhaus_variable_2014">
+<p>6. Tenenhaus A, Philippe C, Guillemot V, Le Cao K-A, Grill J, Frouin V. Variable selection for generalized canonical correlation analysis. Biostatistics. 2014;15:569–83.</p>
+</div>
+<div id="ref-tenenhaus_component-based_2008">
+<p>23. Tenenhaus M. Component-based Structural Equation Modelling. Total Quality Management &amp; Business Excellence. 2008;19:871–86.</p>
+</div>
+<div id="ref-tenenhaus_kernel_2015">
+<p>26. Tenenhaus A, Philippe C, Frouin V. Kernel Generalized Canonical Correlation Analysis. Computational Statistics &amp; Data Analysis. 2015;90:114–31.</p>
+</div>
+<div id="ref-corralizaDifferencesPeripheralTissue">
+<p>27. Corraliza AM, Ricart E, L’opez-García A, Carme Masamunt M, Veny M, Esteller M, et al. Differences in Peripheral and Tissue Immune Cell Populations Following Haematopoietic Stem Cell Transplantation in Crohn’s Disease Patients. Journal of Crohn’s and Colitis.</p>
 </div>
 </div>
             </section>
@@ -151,8 +169,8 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
           </div>
         </div>
       </div>
-<a href="software.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="by-publication.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="integration-on-ibd.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="relationships-models.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -187,7 +205,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/llrs/thesis/edit/master/98_appendix.Rmd",
+"link": "https://github.com/llrs/thesis/edit/master/02_article1.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -195,7 +213,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/llrs/thesis/blob/master/98_appendix.Rmd",
+"link": "https://github.com/llrs/thesis/blob/master/02_article1.Rmd",
 "text": null
 },
 "download": ["Data integration on inflammatory bowel disease.pdf", "Data integration on inflammatory bowel disease.epub"],

@@ -26,11 +26,10 @@ genetics
 microbiome
 multiple-data
 summary-2
-rgcca
-model-of-relationships.
+multi-omic-modelling-of-inflammatory-bowel-disease-with-regularized-canonical-correlation-analysis
+relationships-models
 designing-models
 evaluating-models
-evaluating-the-method
 conclusions
 biological-relevance-of-results
 comparing-different-dataset

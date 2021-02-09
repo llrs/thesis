@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>B.1 Listed | Data integration on inflammatory bowel disease</title>
+  <title>2.1 Relationships' models | Data integration on inflammatory bowel disease</title>
   <meta name="description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="B.1 Listed | Data integration on inflammatory bowel disease" />
+  <meta property="og:title" content="2.1 Relationships' models | Data integration on inflammatory bowel disease" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="llrs/thesis" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="B.1 Listed | Data integration on inflammatory bowel disease" />
+  <meta name="twitter:title" content="2.1 Relationships' models | Data integration on inflammatory bowel disease" />
   <meta name="twitter:site" content="@Lluis_Revilla" />
   <meta name="twitter:description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="software.html"/>
-<link rel="next" href="by-publication.html"/>
+<link rel="prev" href="multi-omic-modelling-of-inflammatory-bowel-disease-with-regularized-canonical-correlation-analysis.html"/>
+<link rel="next" href="conclusions.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -130,20 +130,29 @@
 <div class = "wip">
 This tesis is ongoing and still without hard date to finish it. Watch the <a href="https://github.com/llrs/thesis">GitHub repository</a> or wait for a release announcement on Twitter on <a href="https://twitter.com/Lluis_Rev">my profile</a>.
 </div>
-<div id="listed" class="section level2">
-<h2><span class="header-section-number">B.1</span> Listed</h2>
-<p>An improved/tested version of <a href="https://github.com/llrs/RGCCA">RGCCA</a>, some modifications on the internal functions to ease the maintenance as well as adding tests and sometimes improving the documentation. Also modified so that it is possible to provide a vector of models so that the model of the first dimension is not the same as the model on the second dimension (not sure if mathematically speaking makes sense but from a biological one I think it might be interesting to have it).</p>
-<p>Designed to be used with RGCCA I wrote the package <a href="https:github.com/llrs/inteRmodel">inteRmodel</a> to ease the bootstrapping and model selection.</p>
-<p>A package to design batches to avoid batch effect <a href="https://cran.r-project.org/package=experDesign">experDesign</a> and its website on <a href="https://github.com/llrs/experDesign">GitHub</a>.</p>
-<p>Explore the effects of the hyperparameters on RGCCA on the provided dataset of <a href="https://github.com/llrs/gliomaData">gliomaData</a> (Originally provided <a href="http://biodev.cea.fr/sgcca/">here</a>) there is this repository <a href="https://github.com/llrs/sgcca_hyperparameters">sgcca_hyperparameters</a>.</p>
-<p>We used a pouchitis cohort published in this <a href="https://dx.doi.org/10.1186/s13059-015-0637-x">article</a><span class="citation">[<a href="#ref-morgan2015">30</a>]</span> that was used to compare how does our own method does in other's dataset: <a href="https://github.com/llrs/pouchitis">pouchitis</a>.</p>
-<p>Some functions used to explore the TRIM dataset ended up in the <a href="https://github.com/llrs/integration-helper">integration</a> package.This include functions for correlation and network analysis.</p>
-<p>A package to analyze sets and fuzzy sets <a href="https://github.com/rOpenSci/BaseSet">BaseSet</a>. This package was meant to be used with the probabilities that arise from bootstrapping the models. However due to the long times of calculation that it would require it was not used. (A previous iteration of the <a href="https://github.com/llrs/GSEAdv" title="GSEAdv package">package</a> existed previously)</p>
+<div id="relationships-models" class="section level2">
+<h2><span class="header-section-number">2.1</span> Relationships' models</h2>
+<p>Most multi-omics and integration tools assume one block for each type of data. However, RGCCA uses linear relationships between blocks of data. But doesn't say what constitutes a block of data. Usually a block of data is just a source of data, such as an essay a survey or an experiment. We decided to split the block with data about the samples to separate independent variables from the same block. The hypothesis we made was that with independent blocks the combined linear model would fit better the data.</p>
+<p>These news blocks can also help make more interpretable the relationships, because instead of a big metadata block we have a block for time related variables, another one for location and so on. This allows to design a model with an expected relationships between these dimensions.</p>
+<p>However, one limitation of the generalized canonical correlation analysis an in general on the dimension reduction methods is that the design matrix must be symmetric. Which implies that we can't infer causal relationship using these methods.</p>
+<div id="designing-models" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Designing models</h3>
+<p>What defines a block: Blocks of variables are treated independently but variables within a block are used in a linear combination.</p>
+<p>Create models with random links between blocks.</p>
+<p>Create models considering the knowledge of the system or disease.</p>
+</div>
+<div id="evaluating-models" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Evaluating models</h3>
+<p>To evaluate a model RGCCA provides the average variance explained (AVE), inner and outer. Inner AVE is for how well do all the canonical dimensions correlate with the design of the experiment, so it a measure of how good the model is. While outer AVE is a measure of how well do the variables of each block correlate with the canonical dimension, so it measures the agreement between the variables and the canonical dimensions.</p>
+<p>To evaluate a design a bootstraping method can be used to know how well the design does apply to a variety of data. Another option is to use an external cohort to validate the same model, or using an external model to see if you reach the same model, which is what we did.</p>
+<p>Next it must be evaluated compared to other methods to see if it brings something new or not. Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4">MCIA</a> <span class="citation">[<a href="#ref-mengMultivariateApproachIntegration2014">28</a>]</span>. Which was compared by looking at the area under the curve for classifying the samples according to their location.</p>
+<p>Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn's disease. In this article we didn't look in depth to the biological relevance of the microorganisms an genes found.</p>
+</div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-morgan2015">
-<p>30. Morgan X, Kabakchiev B, Waldron L, Tyler A, Tickle T, Milgrom R, et al. Associations between host gene expression, the mucosal microbiome, and clinical outcome in the pelvic pouch of patients with inflammatory bowel disease. Genome Biology. 2015;16:67. doi:<a href="https://doi.org/10.1186/s13059-015-0637-x">10.1186/s13059-015-0637-x</a>.</p>
+<div id="ref-mengMultivariateApproachIntegration2014">
+<p>28. Meng C, Kuster B, Culhane AC, Gholami AM. A multivariate approach to the integration of multi-omics datasets. BMC Bioinformatics. 2014;15:162. doi:<a href="https://doi.org/10.1186/1471-2105-15-162">10.1186/1471-2105-15-162</a>.</p>
 </div>
 </div>
             </section>
@@ -151,8 +160,8 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
           </div>
         </div>
       </div>
-<a href="software.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="by-publication.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="multi-omic-modelling-of-inflammatory-bowel-disease-with-regularized-canonical-correlation-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -187,7 +196,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/llrs/thesis/edit/master/98_appendix.Rmd",
+"link": "https://github.com/llrs/thesis/edit/master/02_article1.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -195,7 +204,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/llrs/thesis/blob/master/98_appendix.Rmd",
+"link": "https://github.com/llrs/thesis/blob/master/02_article1.Rmd",
 "text": null
 },
 "download": ["Data integration on inflammatory bowel disease.pdf", "Data integration on inflammatory bowel disease.epub"],
