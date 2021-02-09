@@ -29,25 +29,32 @@ They are listed on two ways, one with a brief explanation and another one ordere
 An improved/tested version of [RGCCA](https://github.com/llrs/RGCCA), some modifications on the internal functions to ease the maintenance as well as adding tests and sometimes improving the documentation.
 Also modified so that it is possible to provide a vector of models so that the model of the first dimension is not the same as the model on the second dimension (not sure if mathematically speaking makes sense but from a biological one I think it might be interesting to have it).
 
-Designed to be used with RGCCA I wrote [inteRmodel](https:github.com/llrs/inteRmodel) to ease the bootstrapping and model selection.
+Designed to be used with RGCCA I wrote the package [inteRmodel](https:github.com/llrs/inteRmodel) to ease the bootstrapping and model selection.
 
-A package to design batches to avoid batch effect [experDesign](https://cran.r-project.org/package=experDesign) and its website on [GitHub](https://github.com/llrs/experDesign)
+A package to design batches to avoid batch effect [experDesign](https://cran.r-project.org/package=experDesign) and its website on [GitHub](https://github.com/llrs/experDesign).
 
-A package to analyze sets and fuzzy sets [BaseSet](https://github.com/llrs/BaseSet).
+Explore the effects of the hyperparameters on RGCCA on the provided dataset of [gliomaData](https://github.com/llrs/gliomaData) (Originally provided [here](http://biodev.cea.fr/sgcca/)) there is this repository [sgcca_hyperparameters](https://github.com/llrs/sgcca_hyperparameters).
+
+We used a pouchitis cohort published in this [article](https://dx.doi.org/10.1186/s13059-015-0637-x)[@morgan2015] that was used to compare how does our own method does in other's dataset: [pouchitis](https://github.com/llrs/pouchitis).
+
+Some functions used to explore the TRIM dataset ended up in the [integration](https://github.com/llrs/integration-helper) package.This include functions for correlation and network analysis.
+
+A package to analyze sets and fuzzy sets [BaseSet](https://github.com/rOpenSci/BaseSet).
 This package was meant to be used with the probabilities that arise from bootstrapping the models.
 However due to the long times of calculation that it would require it was not used.
-(A previous iteration of the package called [GSEAdv](https://github.com/llrs/GSEAdv) was developed too.)
+(A previous iteration of the [package](https://github.com/llrs/GSEAdv "GSEAdv package") existed previously)
 
 ## By publication
 
 All code of the analysis of the publications is available (in his messed state and complicated history) and a brief description as to why they were used:
 
-[Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis](https://doi.org/10.1101/2020.04.16.20031492):
+[Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367):
 
 -   [TRIM](https://github.com/llrs/TRIM): Mangle with the sample, dataset, explore several methods...
 -   [sgcca_hyperparameters](https://github.com/llrs/sgcca_hyperparameters): Explore the effects of the hyperparameters on RGCCA on the provided dataset.
 -   [inteRmodel](https://github.com/llrs/inteRmodel): Package for easy repeating the methodology developed on TRIM.
--   [integration](https://github.com/llrs/integration-helper): Package with functions that I wrote several times on the TRIM ended up here.
+-   [pouchitis](https://github.com/llrs/pouchitis): Work with the pouchitis cohort used in this article.
+-   [integration](https://github.com/llrs/integration-helper): Package with functions that I wrote or used on different parts of exploring the TRIM dataset ended up here.
 
 Paper 2:
 
