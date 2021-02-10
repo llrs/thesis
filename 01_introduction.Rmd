@@ -21,13 +21,11 @@ Integration is defined as:
 > "the process of combining two or more things into one" --- [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/integration)
 
 Other words that are used integrati(-on, -ve), multi-omics, pluri-omics.
-However, here integration will be used as it is the more general one and not restricted to omics. 
+However, here integration will be used as it is the more general one and not restricted to omics.
 Since the beginning of the integration methods there have been many methods proposed.
 Some of these methods are specific for one application or data while others are more general.
 On the recent years with the increase of more datasets with more variables than previously has seen an increase on the number of methodologies available on several disciplines but mainly on the biological science.
-This in turn has increased the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset [@wu_selective_2019].
-Other times only the strategies used are used to classify the methods [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
-
+This in turn has increased the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset [@wu_selective_2019]. Other times only the strategies used are used to classify the methods [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
 
 ### Classification of integration method's
 
@@ -149,22 +147,16 @@ Also even with the same data depending on the processing of the data they can ha
 Depending on the input and the objective methods use different mathematical framework to process the data.
 The most important ones are listed below:
 
--  Network
+-   Network
 
-Multilayer, including the multiplex, Molti-C-DREAM, RWR-MH, RWR-M.
-Network embedding MultiVERSE
+Multilayer, including the multiplex, Molti-C-DREAM, RWR-MH, RWR-M. Network embedding MultiVERSE
 
--  Dimensional Reduction
- Momix, RGCCA, 
--  Active module identification
-Multiomic objective genetic algorithm (scores based in two metrics, node score and density of interactions score). MOGAMUN
-
-
+-   Dimensional Reduction Momix, RGCCA,
+-   Active module identification Multiomic objective genetic algorithm (scores based in two metrics, node score and density of interactions score). MOGAMUN
 
 #### Output results
 
-According to the output the integration methods can be classified in several groups:
-For those from dimensional reduction methods there are three: Shared factor across the data, specific factors for each data or mixed factors.
+According to the output the integration methods can be classified in several groups: For those from dimensional reduction methods there are three: Shared factor across the data, specific factors for each data or mixed factors.
 
 -   Shared factors:
 
@@ -197,8 +189,7 @@ Or by patient: how do interpret that in these patient variable A and B is X and 
 In a PCA for instance how do we interpret that some variables have the same loading?
 What happens in a more difficult method like canonical correlation analysis?
 
-There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981].
-Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
+There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981]. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
 
 To help interpretation frequently synthetic datasets are used to compare the results of the integration with the dataset of interest and to compare different tools.
 This datasets are created with some relationships that the tools are expected to find.
@@ -221,9 +212,22 @@ Methods to integrate have many characteristics that allow to classify them which
 
 ## Inflammatory bowel disease {#IBD}
 
-Inflammatory bowel disease (IBD) includes the chronic diseases Crohn's disease (CD) and ulcerative colitis (UC).
-CD is a progressive reincident disease that can affect all the gastrointestinal tract but shows mostly on both terminal ilium and colon.
+Inflammatory bowel disease (IBD) includes the chronic diseases Crohn's disease (CD) and ulcerative colitis (UC) which are characterized by alternating periods of remission and clinical relapse that mainly affect the gastrointestinal tract.
+CD is a progressive reincident disease that can affect all the gastrointestinal tract but shows mostly on both terminal ilium and colon with a discontinous inflammation.
 The UC is a colonic reincident disease characterized by a continuous inflammation of the colon.
+Both of them have different risk factors, clinical, endoscopic an histological characteristics.
+
+<!-- Check with Elena Basolas Tesis p18-->
+
+On CD the disease has a granulome that can appear on any intestinal layer that consists on big multinucleous cells.
+while on UC we observe a different damage consisting in many neutrophil in the cript lumen.
+
+In addition to the location(s) inflamed to distinguish between the diseases mosaic zones (patches of inflamed and non-inflamed areas) are more characteristic of CD.
+
+Sometimes blood analysis are also used to if there are some factors altered such as leucocits, a high globular sedimentation speed, increas of protein C reactive and anemia.
+Also if there is an increase of calprotectine in fecal samples is indication of CD disease.
+
+<!-- Finish -->
 
 Around 4,2 million individuals suffer from IBD in Europe and North America combined.
 The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome.
@@ -243,7 +247,7 @@ This could be due to both the genetic predisposition and environmental factors; 
 The relationship between host and microbiome has been proposed to play a fundamental role to maintain the disease.
 Little is known of the influence of the gastrointestinal microbiome in the expression of the gastrointestinal tract.
 
-### Disease etiology 
+### Disease etiology
 
 As noted on the introduction, the origin of the disease is unknown.
 There are several articles that point out to a relationship between the immune system and the microbiome.
@@ -252,24 +256,38 @@ As seen the Crohn's disease and the ulcerative colitis are considered two differ
 
 Although so far we do not know what starts the disease there are differences on the disease when appears at different age.
 There is a rough classification between very early, early or adult on-set disease.
-The main differences are [ask Isa?].
-
-### Ulcerative colitis
-
-
+The main differences are [ask Isa?]
+.
 
 ### Crohn's disease
 
+As previously introduced, Crohn's disease is a chronic inflammatory disorder characterized by alternating periods of remission and clinical relapse it is frequently associated with extraintestinal manifestation and/or concomitant immuno-mediated diseases.
+Inflammation on the gastrointestinal tract is transmural and can affect from the mouth to the anus, but mainly it manifests on the ileum and colon.
 
-### Disease discourse
+#### Clinical presentation
 
-Several factors difficult the study of the disease, the intermittent discourse, the heterogeneity of the symptoms, and that the symptoms are common with other disease which often delays the right diagnosis.
+The disease itself manifest an heterogeneous symptoms that can involve, diarrhea, weight loss, abdominal pain, fever, anorexia, malaise.
+Other co-occurring manifestations are arthritis, primary sclerosing cholangitis, skin disorders venous or arterial thromboembolism and/or pulmonary involvement.
+All these symptoms make it hard to provide a diagnosis by non-specialists and can lead to delays on correct diagnosis of the disease.
+The most accurate way to diagnose it is to perform a colonoscopy and see if there is inflammation on the gastroinestinal tract and where it is.
+
+To address this difficulty the Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behaviour.
+This classification assumes that the location of Crohn's disease remains stable over time after diagnosis but behavioral phenotypes change with most patients progressing from an inflammatory phenotype to a stricturing or penetrating one.
 
 There is to some extent a disassociated between patient's (clinic) well-being report and the colonoscopy observation.
-Sometimes when patients report being better but their gut has bigger ulcers or is more inflamed.
+Often patients report feeling better but their gut is as inflamed as previously.
+
+#### Disease course
+
+In the early stages of the disease the relapsing and remitting course is more frequent.
+Often relapses are accompanied by clinical symptoms, and very few have prolonged clinical remission.
+When there is clinical remission, as mentioned above there can still remain some other lesions and sublinical inflammation often persists.
+Often the damage caused by the disease evolves to fibrostenotic stricture or penetrating lesions (fistula and abscess).
 
 Although Crohn's disease and colon disease are similar the drugs and treatments for each is different.
 The order of the treatment/drugs changes depending on the disease.
+
+### Ulcerative colitis
 
 ### Clinical care
 
@@ -299,9 +317,9 @@ Other measured parameters:
 
 -   Hemoglobine
 
-#### Drugs
+#### Drugs and treaments
 
-The ones given on the hospital more or less on the order of administration:
+The ones given on the hospital more or less on the order of administration, although this varies between patients and time according to recurrent meetings doctors have and current recomendations:
 
 -   anti-TNF$\alpha$
 -   Vedolizumab
@@ -320,14 +338,17 @@ The ones given on the hospital more or less on the order of administration:
 -   Adalimumab
 -   Antibiotics
 
-All these drugs and procedures are available at the time of writing.
+All these drugs and procedures are available at the time of writing, and one or many of those drugs were given to patients.
 
 Often a reduction in dose results in losing the response to the drug.
 Thus, after an increase of the dose to the previous levels the patients not recover the initial response they had.
 
-Hematopoietic Stem Cell Transplant (HSCT)
+A separate procedure that is done on the Hospital is the Hematopoietic Stem Cell Transplant (HSCT).
+This is a new procedure given only to the most extreme cases for which several publications have checked that it resets the immunological state of the patient.
 
-Fecal microbiota transplantation
+Last there are several proposal of fecal microbiota transplantation, which are not done on the Hospital Clínic yet.
+But are proposed to reset or change the intestinal microbiome of the patients to help them on the disease.
+This has been doing experimentally on mice and mouse for some time and some experiments on patients resulted have been performed already.
 
 ### Summary
 
@@ -358,7 +379,7 @@ Previous methods used include the use of RGCCA, [@tang_integrated_2017]
 
 ### Genetics
 
-### Microbiome 
+### Microbiome
 
 ### Multiple data
 

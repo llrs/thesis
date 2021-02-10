@@ -35,14 +35,16 @@ A package to design batches to avoid batch effect [experDesign](https://cran.r-p
 
 Explore the effects of the hyperparameters on RGCCA on the provided dataset of [gliomaData](https://github.com/llrs/gliomaData) (Originally provided [here](http://biodev.cea.fr/sgcca/)) there is this repository [sgcca_hyperparameters](https://github.com/llrs/sgcca_hyperparameters).
 
-We used a pouchitis cohort published in this [article](https://dx.doi.org/10.1186/s13059-015-0637-x)[@morgan2015] that was used to compare how does our own method does in other's dataset: [pouchitis](https://github.com/llrs/pouchitis).
+We used a pouchitis cohort published in this [article](https://dx.doi.org/10.1186/s13059-015-0637-x)[@morgan2015] that was used to compare how performs our method in other's dataset.
+The code used can be found in [this repository](https://github.com/llrs/pouchitis).
 
-Some functions used to explore the TRIM dataset ended up in the [integration](https://github.com/llrs/integration-helper) package.This include functions for correlation and network analysis.
+Some functions used to explore the TRIM dataset ended up in the [integration](https://github.com/llrs/integration-helper) package.This include functions for correlation, network analysis, enrichment, normalization of metadata...
 
-A package to analyze sets and fuzzy sets [BaseSet](https://github.com/rOpenSci/BaseSet).
+I developed a package to analyze sets and fuzzy sets [BaseSet](https://github.com/rOpenSci/BaseSet) (based on what I learned from a previous iteration of the [package](https://github.com/llrs/GSEAdv "GSEAdv package")).
 This package was meant to be used with the probabilities that arise from bootstrapping the models.
 However due to the long times of calculation that it would require it was not used.
-(A previous iteration of the [package](https://github.com/llrs/GSEAdv "GSEAdv package") existed previously)
+
+To analyze the antiTNF cohort (also named BARCELONA) a [different repository](https://github.com/llrs/Barcelona "Barcelona repository") was created to analyze the data using the previously developed packages.
 
 ## By publication
 
@@ -59,5 +61,5 @@ All code of the analysis of the publications is available (in his messed state a
 Paper 2:
 
 -   [Barcelona](https://github.com/llrs/Barcelona): Mangle with the sample, dataset ...
--   [inteRmodel](https://github.com/llrs/inteRmodel): To repeat the same procedure as in the first analysis.
+-   [inteRmodel](https://github.com/llrs/inteRmodel): To repeat the same procedure as in the first analysis. Further modifications were done to ease the pain to look for a model when millions of models are possible.
 -   [integration](https://github.com/llrs/integration-helper): To not repeat myself for the same process.
