@@ -15,11 +15,12 @@ reviews-and-benchmarking
 summary
 IBD
 disease-etiology
-ulcerative-colitis
 crohns-disease
-disease-discourse
+clinical-presentation
+disease-course
+ulcerative-colitis
 clinical-care
-drugs
+drugs-and-treaments
 summary-1
 integration-on-ibd
 genetics
