@@ -268,14 +268,24 @@ Inflammation on the gastrointestinal tract is transmural and can affect from the
 
 The disease itself manifest an heterogeneous symptoms that can involve, diarrhea, weight loss, abdominal pain, fever, anorexia, malaise.
 Other co-occurring manifestations are arthritis, primary sclerosing cholangitis, skin disorders venous or arterial thromboembolism and/or pulmonary involvement.
-All these symptoms make it hard to provide a diagnosis by non-specialists and can lead to delays on correct diagnosis of the disease.
-The most accurate way to diagnose it is to perform a colonoscopy and see if there is inflammation on the gastroinestinal tract and where it is.
+All these symptoms make it hard to provide a diagnosis by non-specialists and can lead to delays on correct diagnosis of the disease as there isn't a single gold standard test for its diagnosis.
+
+<!--Tesis Ana p21-->
+
+The detection of parasites or bacteria, such as Clostridium difficile, would admit an infectious disease.
+The detection of fecal calprotectin, is a good marker of endocopic activity with sensitivity above 70% and specificity above 80% generally.
+Usually the diagnosis is performed with a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn's disease.
+This inflammation could also present as an ulceration and rectal sparing.
+Histological lesions also help to diagnose the patients.
+
+<!--Finish-->
 
 To address this difficulty the Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behaviour.
 This classification assumes that the location of Crohn's disease remains stable over time after diagnosis but behavioral phenotypes change with most patients progressing from an inflammatory phenotype to a stricturing or penetrating one.
 
 There is to some extent a disassociated between patient's (clinic) well-being report and the colonoscopy observation.
 Often patients report feeling better but their gut is as inflamed as previously.
+This has lead to several scores and thresholds used on research and treatment of the patients.
 
 #### Disease course
 
@@ -289,23 +299,52 @@ The order of the treatment/drugs changes depending on the disease.
 
 ### Ulcerative colitis
 
+Around a third of the patients with ulcerative colitis suffer proctitis, followed by left colitis, when the affected area starts on the rectum and extends to the left colon, distal colitis, defined as disease limited to rectum and sigmoid colon, extensive colitis as involvement of at least the descending colon, and pancolitis, when the disease affects all the colon.
+The extension and severity of the disease does correlate with the clinical observation, where longer extension is a worse prognosis [@etchevers2009]. Extensive colitis is also associated with extensive care [@etchevers2009].
+
 ### Clinical care
 
-Mucosal healing
+The goal of treatment is not limited to clinical remission[^introduction-3] but rather to mucosal healing, which means the reconstitution of the structure and function of the intestinal epithelial barrier.
+Mucosal healing is a first step towards the healing of deeper layers of the inflamed bowel wall on the Crohn's disease.
 
-Colectomy
+[^introduction-3]: clinical remission is the when the symptoms of IBD have lessened to the point that they're mostly absent, gone, or barely noticeable.
 
-Dysplasia
+Clinical remission is not enough to avoid relapse and the bowel may not be free of lesions, evolving to other phenotypes such as fibrostenotic stricture or penetrating lesions increasing the structural bowel damage.
 
-Fistula
+Colectomy[^introduction-4] is a surgery procedure done when there is colorectal cancer or the damage on the colon has been too big.
+That sometimes IBD patients have to endure.
+
+[^introduction-4]: A surgical procedure to remove part or all of your colon.
+
+Patients that undergo a colectomy need to have their bowel reconnected with a procedure called ileoanal anastomosis (J-pouch) surgery.
+This often ends up in a pouchitis[^introduction-5].
+Which might extend to healthy areas.
+
+[^introduction-5]: inflammation that occurs in the lining of a pouch created during surgery to treat ulcerative colitis or certain other diseases.
+
+Dysplasia[^introduction-6] is often associated with crhonic IBD patients, which is considered a precendence before colorectal cancer develops [@mark-christensen2018].
+
+[^introduction-6]: Abnormal development of cells within tissues or organs.
+
+Fistula[^introduction-7] is often found on the phenetrating phenotype of IBD patients.
+
+[^introduction-7]: An abnormal connection between two body parts.
 
 Herpes and citomegalovirus virus.
 
-Scores:
+Imaging techniques
 
--   Mayo
+Many scores have been proposed for several purposes, from quality of life to disease severity or patient status.
+Among the scores most used are the following:
 
--   SESCD
+-   Mayo: A score designed to be simple to calculate at the bedside based on stool frequency, bleeding, mucosal apperance at endocopy and disease activity.
+    [@schroeder1987]
+
+-   SES-CD: simple endoscopic score for Crohn's disease [@daperno2004].
+    Score based on size of ulcers, ulcerate surface percentage, affected surface and presence of narrowings on the bowel.
+
+-   IBDQ: A 32 questionnaire used to assess the quality of life grouped into four categories: bowel, systemic, social and emotional.
+    [@irvine1999]
 
 Other measured parameters:
 
@@ -338,7 +377,7 @@ The ones given on the hospital more or less on the order of administration, alth
 -   Adalimumab
 -   Antibiotics
 
-All these drugs and procedures are available at the time of writing, and one or many of those drugs were given to patients.
+All these drugs and procedures are available at the time of writing, and patients were taking one or more of those drugs as standard of care.
 
 Often a reduction in dose results in losing the response to the drug.
 Thus, after an increase of the dose to the previous levels the patients not recover the initial response they had.
@@ -352,8 +391,12 @@ This has been doing experimentally on mice and mouse for some time and some expe
 
 ### Summary
 
-The integration of data might help to improve the medicine and reveal links in difficult diseases like IBD.
-So far it has been applied in IBD with partial success.
+Inflammatory bowel disease is a complex disease that impacts the health of many people in different ways.
+
+Current clinical care in some cases is enough to have a sustained clinical and endoscopic remission but most often is not enough and relapse is expected.
+Several factors, such as becoming refractory to drugs, intermittent discourse of the disease, make the treatment complex.
+
+The lack of knowledge of what are the factors of the ethiology and causes of the disease make those treatments and drugs to be addressed to block further inflammation and damage, but cannot prevent it and often they do not stop it completely.
 
 ## Integration on IBD
 
@@ -379,12 +422,32 @@ Previous methods used include the use of RGCCA, [@tang_integrated_2017]
 
 ### Genetics
 
+Genome wide association studies (GWAS) is one of the most common genetic studies, together with methylation studies.
+
+With GWAS it has been seen that *NOD2* is one highly relevant for the disease [@momozawa2018].
+However, there hasn't been a proposed mechanism for how would this work.
+
 ### Microbiome
 
+Microbiome, is often studies, both with 16S DNA studies or with whole metagenome study on the fecal or intestinal samples.
+
+*Faecalibacterium prausnitzii* is the microorganism that has been more associated with IBD.
+But several other microorganisms have been also proposed.
+The mechanism for them has been associated to chemical compounds such as methane, which is later associated with mucosal healing.
+
+<!--Tesis Elena Ferrer-->
+
 ### Multiple data
+
+Some studies work with many dataset from IBD patients.
+
+Most of them are based on correlation analysis and microbiome.
 
 ### Summary
 
 Multiple methods and multiple studies have been done
 
 Few focus on discovering the relationships on the disease [@huWholeExomeSequencing2021]
+
+The integration of data might help to improve the medicine and reveal links in difficult diseases like IBD.
+So far it has been applied in IBD with partial success.
