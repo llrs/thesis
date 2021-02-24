@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2021-02-10" />
+<meta name="date" content="2021-02-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,14 +144,14 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <h3><span class="header-section-number">2.1.2</span> Evaluating models</h3>
 <p>To evaluate a model RGCCA provides the average variance explained (AVE), inner and outer. Inner AVE is for how well do all the canonical dimensions correlate with the design of the experiment, so it a measure of how good the model is. While outer AVE is a measure of how well do the variables of each block correlate with the canonical dimension, so it measures the agreement between the variables and the canonical dimensions.</p>
 <p>To evaluate a design a bootstraping method can be used to know how well the design does apply to a variety of data. Another option is to use an external cohort to validate the same model, or using an external model to see if you reach the same model, which is what we did.</p>
-<p>Next it must be evaluated compared to other methods to see if it brings something new or not. Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4">MCIA</a> <span class="citation">[<a href="#ref-mengMultivariateApproachIntegration2014">28</a>]</span>. Which was compared by looking at the area under the curve for classifying the samples according to their location.</p>
+<p>Next it must be evaluated compared to other methods to see if it brings something new or not. Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4">MCIA</a> <span class="citation">[<a href="#ref-mengMultivariateApproachIntegration2014">34</a>]</span>. Which was compared by looking at the area under the curve for classifying the samples according to their location.</p>
 <p>Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn's disease. In this article we didn't look in depth to the biological relevance of the microorganisms an genes found.</p>
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-mengMultivariateApproachIntegration2014">
-<p>28. Meng C, Kuster B, Culhane AC, Gholami AM. A multivariate approach to the integration of multi-omics datasets. BMC Bioinformatics. 2014;15:162. doi:<a href="https://doi.org/10.1186/1471-2105-15-162">10.1186/1471-2105-15-162</a>.</p>
+<p>34. Meng C, Kuster B, Culhane AC, Gholami AM. A multivariate approach to the integration of multi-omics datasets. BMC Bioinformatics. 2014;15:162. doi:<a href="https://doi.org/10.1186/1471-2105-15-162">10.1186/1471-2105-15-162</a>.</p>
 </div>
 </div>
             </section>
