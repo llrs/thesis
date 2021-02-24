@@ -25,7 +25,8 @@ However, here integration will be used as it is the more general one and not res
 Since the beginning of the integration methods there have been many methods proposed.
 Some of these methods are specific for one application or data while others are more general.
 On the recent years with the increase of more datasets with more variables than previously has seen an increase on the number of methodologies available on several disciplines but mainly on the biological science.
-This in turn has increased the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset [@wu_selective_2019]. Other times only the strategies used are used to classify the methods [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
+This in turn has increased the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset [@wu_selective_2019].
+Other times only the strategies used are used to classify the methods [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
 
 ### Classification of integration method's
 
@@ -189,7 +190,8 @@ Or by patient: how do interpret that in these patient variable A and B is X and 
 In a PCA for instance how do we interpret that some variables have the same loading?
 What happens in a more difficult method like canonical correlation analysis?
 
-There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981]. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
+There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981].
+Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
 
 To help interpretation frequently synthetic datasets are used to compare the results of the integration with the dataset of interest and to compare different tools.
 This datasets are created with some relationships that the tools are expected to find.
@@ -300,7 +302,8 @@ The order of the treatment/drugs changes depending on the disease.
 ### Ulcerative colitis
 
 Around a third of the patients with ulcerative colitis suffer proctitis, followed by left colitis, when the affected area starts on the rectum and extends to the left colon, distal colitis, defined as disease limited to rectum and sigmoid colon, extensive colitis as involvement of at least the descending colon, and pancolitis, when the disease affects all the colon.
-The extension and severity of the disease does correlate with the clinical observation, where longer extension is a worse prognosis [@etchevers2009]. Extensive colitis is also associated with extensive care [@etchevers2009].
+The extension and severity of the disease does correlate with the clinical observation, where longer extension is a worse prognosis [@etchevers2009].
+Extensive colitis is also associated with extensive care [@etchevers2009].
 
 ### Clinical care
 
