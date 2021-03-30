@@ -92,3 +92,4 @@ The procedural method of searching a model and testing them is implemented on [i
 But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling.
 
 This was published as a [preprint](https://www.medrxiv.org/content/10.1101/2020.04.16.20031492v1) and after peer review [published on Plus One](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367 "Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis") [@revilla2021].
+

@@ -26,9 +26,8 @@ bookdown::gitbook:
 bookdown::pdf_book:
   keep_tex: no
   dev: "cairo_pdf"
-  latex_engine: pdflatex
-  citation_package: natbib
-  pandoc_args: [ "--csl", "bmc_bioinformatics.csl" ]
+  latex_engine: pdflatex # BibLaTeX
+  citation_package: default # pandoc-citeproc
   template: null
   toc_depth: 3
   toc_unnumbered: yes
