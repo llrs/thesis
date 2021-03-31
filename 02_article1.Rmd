@@ -52,32 +52,28 @@ However, RGCCA uses linear relationships between blocks of data.
 But doesn't say what constitutes a block of data.
 Usually a block of data is just a source of data, such as an essay a survey or an experiment.
 We decided to split the block with data about the samples to separate independent variables from the same block.
-The hypothesis we made was that with independent blocks the combined linear model would fit better the data.
+The hypothesis we made was that more independent blocks would fit better the data.
 
-These news blocks can also help make more interpretable the relationships, because instead of a big metadata block we have a block for time related variables, another one for location and so on.
-This allows to design a model with an expected relationships between these dimensions.
+Instead of a big metadata block we have a block for time related variables, another one for location and so on.
+This allows to design a model with an expected relationships between these dimensions and help make more interpretable the relationships.
 
-However, one limitation of the generalized canonical correlation analysis an in general on the dimension reduction methods is that the design matrix must be symmetric.
-Which implies that we can't infer causal relationship using these methods.
+However, in general on the dimension reduction methods, as well as in the generalized canonical correlation analysis, they can't infer causal relationships. Which can be found with a symmetric design matrix.
 
 ### Designing models
 
-What defines a block: Blocks of variables are treated independently but variables within a block are used in a linear combination.
+The model of the generalized canonical correlation is highly dependent of the blocks present.
 
-Create models with random links between blocks.
-
-Create models considering the knowledge of the system or disease.
+If one has preexisting theories about the data, a specific model can be used stating these known or hypothetical relationships. However, if new relationships are being explored or no prior beliefs on the data are held the models should be created with random links between blocks, and evaluate which model is better.
 
 ### Evaluating models
 
 To evaluate a model RGCCA provides the average variance explained (AVE), inner and outer.
 Inner AVE is for how well do all the canonical dimensions correlate with the design of the experiment, so it a measure of how good the model is.
 While outer AVE is a measure of how well do the variables of each block correlate with the canonical dimension, so it measures the agreement between the variables and the canonical dimensions.
+Depending on the goals of the research one or the other should be used. If we are more interested on the model of the relationships the inner AVE makes more sense. 
 
-To evaluate a design a bootstraping method can be used to know how well the design does apply to a variety of data.
-Another option is to use an external cohort to validate the same model, or using an external model to see if you reach the same model, which is what we did.
-
-Next it must be evaluated compared to other methods to see if it brings something new or not.
+Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
+Another option is to use an external cohort to validate the same model, or using a different method to see if it  finds the same relationships or explains the data as accurately.
 Of the multiple methods available we used [MCIA](https://bioconductor.org/packages/omicade4 "Omicade4") [@mengMultivariateApproachIntegration2014].
 Which was compared by looking at the area under the curve for classifying the samples according to their location.
 
