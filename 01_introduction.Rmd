@@ -16,22 +16,19 @@ The disease present unique characteristics that require the usage of integration
 
 ## Integration
 
-Integration is defined as:
+Data integration is informally widely used with varying definitions, according to teh dictionary integration is defined as:
 
 > "the process of combining two or more things into one" --- [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/integration)
 
-Other words that are used integrati(-on, -ve), multi-omics, pluri-omics.
-However, here integration will be used as it is the more general one and not restricted to omics.
+Other words that are used are integrati(-on, -ve), if specific to data from sequencing technologies multi-omics, pluri-omics.
+Here integration will be used as it is the more general one and not restricted to omics or sequencing technologies.
 Since the beginning of the integration methods there have been many methods proposed.
-Some of these methods are specific for one application or data while others are more general.
-On the recent years with the increase of more datasets with more variables than previously has seen an increase on the number of methodologies available on several disciplines but mainly on the biological science.
-This in turn has increased the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset [@wu_selective_2019].
-Other times only the strategies used are used to classify the methods [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
+Some of the early methods were initially used for surveying the agreement of different evaluating systems, others were developed for agricultural sciences [@hotelling_relations_1936]. Some of these methods are specific for one application or data while others are more general. The explosion of data has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time. The increase of more datasets with more variables and often from the same samples has increased the focus of the research community on the methodologies available on several disciplines but mainly on the biological science. It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommedations to anyone wishing to use them [@wu_selective_2019]. Part of these efforts uses the methods' strategies to classify them [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
+Following this view I'll review the integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
 
 ### Classification of integration method's
 
-We can characterize and classify integration methods in several ways.
-Here I outline some classifications in the bioscience field, with relationships (and references) to concrete methodology and usages.
+Here I outline how to classify integration methods in the bioscience field, mainly using omics datasets, with relationships (and references) to concrete methodology and in occasions to articles using them.
 
 #### Data type: numeric vs categorical
 
@@ -47,48 +44,50 @@ Sometimes Often the number of variables created is one less than the number of f
 For instance, if the categorical variable has three values (A, B, C) it would be converted to A (1, 0, 0) B (0, 1, 0) and C (0, 0, 1) and usually one of these three variables is omitted.
 This transformation allows to use the categorical values in methods though for numeric variables.
 
-#### Aim
+#### Goal
 
-The results and methods of data integration depend on the objective of the method and on the (biological) question.
+Data integration can be classified according to their objective and the (biological) question they try to answer.
 Most of the times one (or all) of the following results are expected:
 
 -   An overview of the role of each 'omics in a biological system
 
-Sometimes several omics are used and the question is which omic method is the best one to describe the disease.
-Or several methods are used to understand better how two omics interact.
+Sometimes the question is which omic method is the best one to describe the disease.
+This could prevent to do expensive tests that can be estimated by other cheaper or easier techniques that are enough sensitive and specific for the task.
 
 -   A better understanding of the relationships between the 'omics types
 
-When the relationship between omics is known there are methods to find those relationships and improve upon previous knowledge.
-For instance, checking that in a particular case or condition there is a given relationship, and that this relationships follows our model or not.
+Several methods are used to understand better how the different data sets interact.
+When the relationship between omics is known further focused methods are used to understand the mechanistic relationship between them.
+For instance, checking that in a particular case or condition is present on a given relationship, and that this relationships follows our model or not.
 
--   A molecular signature[^introduction-1] leading to more insight into molecular mechanisms
+-   Finding a molecular signature[^introduction-1].
 
 [^introduction-1]: A signature is usually a group of features that describe/are representative of a cell line, a process or a stage.
 
-The usage of multifactor analysis might lead to the need to redefine the features that are essential for identifying a phase or a cell line.
+Identifying a subset of the variables from the omics that are related is often a desired goal.
 
 -   A predictive model
 
-If a good model is known it can be used as a prediction if enough information is gathered, which might improve the treatment.
+If a good model is known it can be used as a prediction if enough information is gathered, which might improve treatments, diagnosis, prognosis.
 
 #### Relationship between variables and samples
 
 Depending on the amount of variables and in which samples they have been measures we can classify in two types of integration.
-Traditionally for each sample few variable has been measured, for instance for a tree only the height and width are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample.
+Traditionally for each sample few variables were measured, for instance for a tree only the height and width are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample.
 
 -   More variables than samples:
 
 For a single sample of RNA around 50k genome identifiers (genes, long non coding RNAs, iRNA, pseudogenes,...) can be measured.
-High-throughput data analysis typically falls into the category of $p \gg n$ problems, where the number of genes or proteins, $p$, is considerably larger than the number of samples, $n$.
-Which leads to the case where there are (many) more variables than samples, generally "old" statistics don't consider this case, as it has its own complications like co-variance between the variables.
-When two variables are tightly correlated, discerning which is the lead and which is following is near to impossible.
+Which leads to the case where there are (many) more variables than samples.
+Thus high-throughput data analysis typically falls into the category of $p \gg n$ problems (or big-p problems), where the number of genes or proteins, $p$, is considerably larger than the number of samples, $n$.
+With such high number of variables the identification of the relevant variables is complicated because variables will co-variate.
+When two variables are tightly correlated, discerning which is the lead and which is following using just numerical methods is near to impossible.
 
 -   More samples than variables:
 
-An example would be when from a cohort of patients the temperature is measured along the stage of a disease: two variables for each sample.
-If in the cohort there are more than 2 patients, then the number of samples is greater than the number of variables studied.
-This is described in the literature as $n \gg p$.
+This was the usual case when for instance, when from a cohort of patients the temperature is measured along the stage of a disease: two variables for each sample.
+If there are more than 2 patients, then the number of samples is greater than the number of variables studied.
+This is described in the literature as $n \gg p$ or little n.
 
 #### Relationship between samples
 
@@ -174,7 +173,7 @@ Such methods include Regularized Generalized Canonical Correlation Analysis (RGC
 The integration results in both previous factors, specific of each data and common to all the data.
 Such methods include Joint and Individual Variation Explained (JIVE), integrative Non-negative Matrix Factorization (intNMF).
 
-#### Interpretation
+### Interpretation
 
 Understanding how to interpret the results of the methods is highly tight to understanding the method.
 If one does a correlation between two variables, the interpretation of the analysis is clear, if one variable increase, the other one too.
@@ -190,15 +189,14 @@ Or by patient: how do interpret that in these patient variable A and B is X and 
 In a PCA for instance how do we interpret that some variables have the same loading?
 What happens in a more difficult method like canonical correlation analysis?
 
-There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981].
-Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
+There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981]. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
 
 To help interpretation frequently synthetic datasets are used to compare the results of the integration with the dataset of interest and to compare different tools.
 This datasets are created with some relationships that the tools are expected to find.
 
 There exists several methods to create synthetic datasets like MOSim, metaSPARSim, CAMISIM, ballgown, polyester and even edgeR can be used.
 
-#### Conclusion
+### Conclusion
 
 The field of integration is large and complex, with high interest in the recent days, specially in the psychology and omics field, which lacks of a large study.
 
@@ -210,58 +208,95 @@ Some of these reviews are focused on a field: metabolomics (ref), genomics, micr
 
 ### Summary
 
-Methods to integrate have many characteristics that allow to classify them which explains the diverse results one can have using one of them.
+Methods to integrate have many characteristics, depending on the objectives and data that available some methods might not be yet available.
+Regardless of the method used, interpretation and reporting is usually a main problem when using any of these methods.
 
 ## Inflammatory bowel disease {#IBD}
 
 Inflammatory bowel disease (IBD) includes the chronic diseases Crohn's disease (CD) and ulcerative colitis (UC) which are characterized by alternating periods of remission and clinical relapse that mainly affect the gastrointestinal tract.
-CD is a progressive reincident disease that can affect all the gastrointestinal tract but shows mostly on both terminal ilium and colon with a discontinous inflammation.
-The UC is a colonic reincident disease characterized by a continuous inflammation of the colon.
+CD is a progressive relapsing disease that can affect all the gastrointestinal tract but shows mostly on both terminal ilium and colon with a discontinuous inflammation.
+The UC is a colonic relapsing disease characterized by a continuous inflammation of the colon.
 Both of them have different risk factors, clinical, endoscopic an histological characteristics.
 
 <!-- Check with Elena Basolas Tesis p18-->
 
-On CD the disease has a granulome that can appear on any intestinal layer that consists on big multinucleous cells.
-while on UC we observe a different damage consisting in many neutrophil in the cript lumen.
+Some differences between them is that on CD a granulome, that is a region with big multinucleous cells, can appear on any intestinal layer, while on UC we observe a different damage consisting in many neutrophil in the crypt lumen.
 
-In addition to the location(s) inflamed to distinguish between the diseases mosaic zones (patches of inflamed and non-inflamed areas) are more characteristic of CD.
+To distinguish between the diseases, in addition to the inflamed location(s), mosaic zones (patches of inflamed and non-inflamed areas) are more characteristic of CD [@bassolasmolina2018].
 
-Sometimes blood analysis are also used to if there are some factors altered such as leucocits, a high globular sedimentation speed, increas of protein C reactive and anemia.
-Also if there is an increase of calprotectine in fecal samples is indication of CD disease.
+Sometimes blood analysis are also used, if there are some factors altered such as leucocits, a high globular sedimentation speed, increas of protein C reactive and anemia could indicate inflammatory bowel disease.
+Also, if there is an increase of calprotectine in fecal samples is indication of CD disease [@sands2015].
 
 <!-- Finish -->
 
-Around 4,2 million individuals suffer from IBD in Europe and North America combined.
+Around 3.5 million individuals suffer from IBD in Europe and North America combined [@jairath2020].
 The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome.
 Several studies support the concept that IBD arise from an exacerbate immune response against commensal gut microorganisms.
 Nonetheless, the disease could result from an imbalanced microbial composition leading to generalized or localized dysbiosis[^introduction-2].
 
 [^introduction-2]: A signature is usually a group of features that describe/are representative of a cell line or a process or a stage.
 
-The role of the gut microbiome in IBD is an ongoing field of research.
+The role of the gut microbiome in IBD is an active ongoing field of research.
 Several authors are currently studying the alterations reported in IBD of the intestinal microbiome.
 However, it is still unclear the cause-effect relation between dysbiosis and IBD.
-Partly due to the multiple variables that might contribute to the disease progression; for instance, age, diet, usage of antibiotic, tobacco, environment, and eventually socioeconomic status.
-This could be due to both the genetic predisposition and environmental factors; for instance, bacterial or viral infection, diet, usage of antibiotic, and eventually the socioeconomic status.
-
-(see [@human_microbiome_project_consortium_framework_2012] )
+Partly due to the multiple variables already identified that might contribute to the disease progression; for instance, age, diet, usage of antibiotic, tobacco, and eventually socioeconomic status.
+Other variables that has been linked to IBD are genetic predisposition and environmental factors; for instance, bacterial or viral infection, diet, usage of antibiotic, and eventually the socioeconomic status (see [@human_microbiome_project_consortium_framework_2012]).
 
 The relationship between host and microbiome has been proposed to play a fundamental role to maintain the disease.
 Little is known of the influence of the gastrointestinal microbiome in the expression of the gastrointestinal tract.
 
-### Disease etiology
+### Etiology and pathogenesis 
 
 As noted on the introduction, the origin of the disease is unknown.
-There are several articles that point out to a relationship between the immune system and the microbiome.
+There are several hypothesis that point out to a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire.
+It is also unclear if Crohn's disease and the ulcerative colitis share the same origin considering their different symptoms.
 
-As seen the Crohn's disease and the ulcerative colitis are considered two different disease due to their differences despite their similarities.
+There is also evidence of some genetic component on the onset of the disease, specially if it is very early.
 
 Although so far we do not know what starts the disease there are differences on the disease when appears at different age.
 There is a rough classification between very early, early or adult on-set disease.
 The main differences are [ask Isa?]
 .
+On very early on-set the genetic component is high.
+GWAS studies has linked the IBD disease to *NOD2* gene, but so far there isn't any known mechanism how this gene could start the disease.
+On early and adult disease the genetic component is lower and it is thought that the environmental factors are the main cause of the disease.
 
-### Crohn's disease
+Either case it is not known how it starts or is maintained and causes those characteristics relapses.
+
+#### Genetics
+
+The inflammatory bowel disease is not an heritable disease but it has some genetic influence that predisposes people to have it.
+On some patients that the disease show up very early , diagnosed before the age of 2 or just early following the Montreal classification, the genetic component is higher.
+
+This has lead the studies looking for genetic factors on IBD both on general population and on the early cases.
+Genome wide association studies (GWAS) is one of the most common genetic studies, together with methylation studies.
+They help discover through linkage desequilibrium genetic variations linked to phenotypes.
+
+With GWAS several allels on protein coding loci have been found.
+Particularly, one on the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018].
+However, there hasn't been a proposed mechanism for how does it work.
+
+Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
+Recently expression quantitative trait loci (eQTL) particularly showed this [@mcgovern2015].
+Usually they are on enchancer or promoters like e.g.
+H3K27Ac or promoter e.g.
+H3K4me1 marks as found by ChIP-Seq (chromatin immunoprecipitation sequencing).
+
+#### Microbiome
+
+Microbiome, is often studies, both with 16S DNA studies or with whole metagenome study on the fecal or intestinal samples.
+
+*Faecalibacterium prausnitzii* is the microorganism that has been more associated with IBD.
+But several other microorganisms have been also proposed.
+The mechanism for them has been associated to chemical compounds such as methane, which is later associated with mucosal healing.
+
+#### Immunology
+
+As explained on the introduction
+
+#### Environmental 
+
+### Crohn's disease physiology
 
 As previously introduced, Crohn's disease is a chronic inflammatory disorder characterized by alternating periods of remission and clinical relapse it is frequently associated with extraintestinal manifestation and/or concomitant immuno-mediated diseases.
 Inflammation on the gastrointestinal tract is transmural and can affect from the mouth to the anus, but mainly it manifests on the ileum and colon.
@@ -275,10 +310,8 @@ All these symptoms make it hard to provide a diagnosis by non-specialists and ca
 <!--Tesis Ana p21-->
 
 The detection of parasites or bacteria, such as Clostridium difficile, would admit an infectious disease.
-The detection of fecal calprotectin, is a good marker of endocopic activity with sensitivity above 70% and specificity above 80% generally.
-Usually the diagnosis is performed with a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn's disease.
-This inflammation could also present as an ulceration and rectal sparing.
-Histological lesions also help to diagnose the patients.
+The detection of fecal calprotectin, is a good marker of endocopic activity with sensitivity above 70% and specificity above 80% generally [@guardiola2018]. Usually the diagnosis is performed with a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn's disease. This inflammation could also present as an ulceration and rectal sparing [@corralizamárquez2019].
+Histological lesions also help to diagnose the patients .
 
 <!--Finish-->
 
@@ -299,11 +332,14 @@ Often the damage caused by the disease evolves to fibrostenotic stricture or pen
 Although Crohn's disease and colon disease are similar the drugs and treatments for each is different.
 The order of the treatment/drugs changes depending on the disease.
 
-### Ulcerative colitis
+### Ulcerative colitis physiology
 
 Around a third of the patients with ulcerative colitis suffer proctitis, followed by left colitis, when the affected area starts on the rectum and extends to the left colon, distal colitis, defined as disease limited to rectum and sigmoid colon, extensive colitis as involvement of at least the descending colon, and pancolitis, when the disease affects all the colon.
-The extension and severity of the disease does correlate with the clinical observation, where longer extension is a worse prognosis [@etchevers2009].
-Extensive colitis is also associated with extensive care [@etchevers2009].
+The extension and severity of the disease does correlate with the clinical observation, where longer extension is a worse prognosis [@etchevers2009]. Extensive colitis is also associated with extensive care [@etchevers2009].
+
+#### Clinical presentation
+
+#### Disease course
 
 ### Clinical care
 
@@ -348,6 +384,8 @@ Among the scores most used are the following:
 
 -   IBDQ: A 32 questionnaire used to assess the quality of life grouped into four categories: bowel, systemic, social and emotional.
     [@irvine1999]
+
+-   Montreal classification allows for early onset of disease to be categorized separately those with age of diagnosis at 16 years or younger, diagnosis at 17--40 years and \>40 years, respectively[@satsangi2006].
 
 Other measured parameters:
 
@@ -425,18 +463,7 @@ Previous methods used include the use of RGCCA, [@tang_integrated_2017]
 
 ### Genetics
 
-Genome wide association studies (GWAS) is one of the most common genetic studies, together with methylation studies.
-
-With GWAS it has been seen that *NOD2* is one highly relevant for the disease [@momozawa2018].
-However, there hasn't been a proposed mechanism for how would this work.
-
 ### Microbiome
-
-Microbiome, is often studies, both with 16S DNA studies or with whole metagenome study on the fecal or intestinal samples.
-
-*Faecalibacterium prausnitzii* is the microorganism that has been more associated with IBD.
-But several other microorganisms have been also proposed.
-The mechanism for them has been associated to chemical compounds such as methane, which is later associated with mucosal healing.
 
 <!--Tesis Elena Ferrer-->
 
