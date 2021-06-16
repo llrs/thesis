@@ -245,10 +245,11 @@ Other variables that has been linked to IBD are genetic predisposition and envir
 The relationship between host and microbiome has been proposed to play a fundamental role to maintain the disease.
 Little is known of the influence of the gastrointestinal microbiome in the expression of the gastrointestinal tract.
 
-### Etiology and pathogenesis 
+### Etiology and pathogenesis
 
-As noted on the introduction, the origin of the disease is unknown.
-There are several hypothesis that point out to a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire.
+Several explanations has been proposed of the origin of the disease [?c
+itation needed].
+Some of them base on a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire [@corralizaDifferencesPeripheralTissue].
 It is also unclear if Crohn's disease and the ulcerative colitis share the same origin considering their different symptoms.
 
 There is also evidence of some genetic component on the onset of the disease, specially if it is very early.
@@ -266,7 +267,7 @@ Either case it is not known how it starts or is maintained and causes those char
 #### Genetics
 
 The inflammatory bowel disease is not an heritable disease but it has some genetic influence that predisposes people to have it.
-On some patients that the disease show up very early , diagnosed before the age of 2 or just early following the Montreal classification, the genetic component is higher.
+On some patients that the disease show up very early , diagnosed before the age of 2 or just early following the Montreal classification (See [Clinical care] section) , the genetic component is higher.
 
 This has lead the studies looking for genetic factors on IBD both on general population and on the early cases.
 Genome wide association studies (GWAS) is one of the most common genetic studies, together with methylation studies.
@@ -286,15 +287,41 @@ H3K4me1 marks as found by ChIP-Seq (chromatin immunoprecipitation sequencing).
 
 Microbiome, is often studies, both with 16S DNA studies or with whole metagenome study on the fecal or intestinal samples.
 
-*Faecalibacterium prausnitzii* is the microorganism that has been more associated with IBD.
-But several other microorganisms have been also proposed.
-The mechanism for them has been associated to chemical compounds such as methane, which is later associated with mucosal healing.
+*Faecalibacterium prausnitzii* is the microorganism that has been more associated with IBD [citation needed].
+But several other microorganisms have been also linked to it.
+One of the proposed mechanism is through the chemical compounds they generate.
+Chemical compounds may interact with the cells and modulate the state of the intestine.
+
+One example of such molecular is butyrate which has been linked to microorganisms presents on healthy intestines and to induce a better healing of intestine cells [@ferrer-picón2020].
 
 #### Immunology
 
-As explained on the introduction
+As explained on the introduction one of the possible causes of the inflammatory bowel disease is the immune system.
+Crohn's disease presents altered innate and adaptive immune responses.
+IBD is often characterized as an immune-mediated disease, if not outright autoimmune disease.
 
-#### Environmental 
+A loss of tolerance to commensal bacteria has been suggested as the underlying mechanism.
+The mechanism involves many different cells lines and regions.
+For a better understanding it is important to know the organization of the intestinal organization.
+
+<!--Image from Ana tesis p29-->
+
+![The intestinal epithelial barrier.](images/testing_image_pdf.png "The intestinal epithelial barrier")
+
+From the luminal side of intestine, the first layer is the mucosa.
+The mucus is organized in two layers: the inner layer, a firm mucus layer; and the outer, loose mucus layer [@okumura2017]. Later the intestinal epithelium is a single layer of cells organized into crypts and villi (and circular folds on the large intestine) that carries out a diverse array of functions besides digestion performed by specialized cell lineages.
+These cells usually come from the basal side of the crypt and mature as they move towards the apical side.
+
+Both the adaptive and the innate immunity related cells are present on the intestine, right below the epithelium.
+On IBD due to antigen translocation into the lamina propria, the immune response leads the adaptative cells to generate immune response to harmless components of the intestinal microbiota.
+This initial response would induce a local increase in the production of pro-inflammatory cytokines and mediators which would damage the epithelium.
+This damage is what would be later identified as inflammatory bowel disease.
+
+On these kind of diseases autologous haematopoietic stem cell transplantation has shown some benefits on IBD [@corraliza].
+The benefit of HSCT in autoimmunity is thought to originate from the depletion of auto-reactive cells regardless of their specificity.
+However, due to its associated risk this therapy is only given when patients are refractory to all available therapeutic options.
+
+#### Environmental
 
 ### Crohn's disease physiology
 
@@ -309,7 +336,7 @@ All these symptoms make it hard to provide a diagnosis by non-specialists and ca
 
 <!--Tesis Ana p21-->
 
-The detection of parasites or bacteria, such as Clostridium difficile, would admit an infectious disease.
+The detection of parasites or bacteria, such as *Clostridium difficile*, would admit an infectious disease.
 The detection of fecal calprotectin, is a good marker of endocopic activity with sensitivity above 70% and specificity above 80% generally [@guardiola2018]. Usually the diagnosis is performed with a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn's disease. This inflammation could also present as an ulceration and rectal sparing [@corralizamárquez2019].
 Histological lesions also help to diagnose the patients .
 
