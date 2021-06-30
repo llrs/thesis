@@ -34,3 +34,7 @@ bookdown::pdf_book:
   toc_appendix: yes
   quote_footer: ["\\VA{", "}{}"]
 bookdown::epub_book: default
+bookdown::word_document2:
+  pandoc_args: [ "--csl", "bmc_bioinformatics.csl" ]
+  fig_caption: true
+  output_dir: draft_phd
