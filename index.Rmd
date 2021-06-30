@@ -18,7 +18,7 @@ twitter-handle: Lluis_Revilla
 
 ![UB logo](ub_logo.png "University where I defend the thesis"){width="160"} ![IDIBAPS logo](idibaps_logo.png "Research center"){width="160"} ![CIBER logo](logo_ciber.png "Hiring institution"){width="160" height="38"}
 
-The main topic of the thesis is [data integration](https://en.wikipedia.org/wiki/Data_integration) applied in the [inflammatory bowel disease (IBD)](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) research.
+The main topic of the thesis is [data integration](https://en.wikipedia.org/wiki/Data_integration "Wikipedia page of integration") applied in the [inflammatory bowel disease (IBD)](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) research.
 The data I will be integrating are different omics data and the phenotype of the patients.
 This disease is complex and there are hypothesis pointing that the [microbiome](https://en.wikipedia.org/wiki/Microbiota) is a major factor in the disease.
 In the precision medicine framework data integration is important to consider all the relevant variables that influence a disease.

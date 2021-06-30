@@ -201,7 +201,8 @@ Some of them have previously appeared:
 
 -   Networks
 
-    Networks methods were mentioned because they use and find information about interaction of variables. Multilayer networks, including the multiplex, Molti-C-DREAM, RWR-MH, RWR-M. Network embedding MultiVERSE are some of the methods using networks.
+    Networks methods were mentioned because they use and find information about interaction of variables.
+    Multilayer networks, including the multiplex, Molti-C-DREAM, RWR-MH, RWR-M. Network embedding MultiVERSE are some of the methods using networks.
 
 -   Dimensional Reduction
 
@@ -209,7 +210,8 @@ Some of them have previously appeared:
 
 -   Active module identification
 
-    Multiomic objective genetic algorithm (scores based in two metrics, node score and density of interactions score). MOGAMUN
+    Multiomic objective genetic algorithm (scores based in two metrics, node score and density of interactions score).
+    MOGAMUN
 
 Usually depending on the mathematical framework used they return these methods return similar output.
 
@@ -271,12 +273,15 @@ These methods are useful to compare different setup and methods but they can mis
 
 The field of integration is large and complex, with high interest in the recent days, specially in the psychology and omics field.
 As a method they are quite complex and diverse which hasn't stopped the growing interest on them to help answer complex questions.
+The differences between the many methods that exist do not make the interpretation of the results easier
 
 ### Reviews and benchmarking
 
 The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool for a research [@cantini_benchmarking_2020].
 
 Some of these reviews are focused on a field: metabolomics (ref), genomics, microbiomics... or on a specific characteristic: ?.
+
+Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies [@de_souza_ibd_2017].
 
 ### Summary
 
@@ -301,7 +306,7 @@ Also, if there is an increase of calprotectine in fecal samples is indication of
 
 <!-- Finish -->
 
-Around 3.5 million individuals suffer from IBD in Europe and North America combined [@jairath2020].
+Around 3.5 million individuals have IBD in Europe and North America combined [@jairath2020]. The disease has been used as a condition that prevents people to [apply to certain positions](https://civio.es/el-boe-nuestro-de-cada-dia/2019/02/13/las-enfermedades-que-vetan-el-acceso-a-ciertos-empleos-publicos/ "Link to a Civio.es about disease disqualifying for some public positions").
 The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome.
 Several studies support the concept that IBD arise from an exacerbate immune response against commensal gut microorganisms.
 Nonetheless, the disease could result from an imbalanced microbial composition leading to generalized or localized dysbiosis[^introduction-1].
@@ -345,8 +350,7 @@ This has lead the studies looking for genetic factors on IBD both on general pop
 Genome wide association studies (GWAS) is one of the most common genetic studies, together with methylation studies.
 They help discover through linkage desequilibrium genetic variations linked to phenotypes.
 
-With GWAS several allels on protein coding loci have been found.
-Particularly, one on the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018].
+With GWAS several allels on protein coding loci have been found rising to around 300 genetic variants [@kumar2019]. Particularly, one on the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018].
 However, there hasn't been a proposed mechanism for how does it work.
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
@@ -359,12 +363,18 @@ H3K4me1 marks as found by ChIP-Seq (chromatin immunoprecipitation sequencing).
 
 Microbiome, is often studies, both with 16S DNA studies or with whole metagenome study on the fecal or intestinal samples.
 
-*Faecalibacterium prausnitzii* is the microorganism that has been more associated with IBD [citation needed].
-But several other microorganisms have been also linked to it.
+<!--Elenea tesis -->
+
+Many studies show that patients with inflammatory bowel disease has less biodiversity.
+Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
+$\alpha$-diversity is a mesure of the species present on a single sample and how much of each there is.
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive) at the mucosal layer of IBD patients [@ott2004]. At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* i *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014].
+
 One of the proposed mechanism is through the chemical compounds they generate.
 Chemical compounds may interact with the cells and modulate the state of the intestine.
-
 One example of such molecular is butyrate which has been linked to microorganisms presents on healthy intestines and to induce a better healing of intestine cells [@ferrer-picón2020].
+
+<!-- End-->
 
 #### Immunology
 
@@ -490,44 +500,25 @@ Among the scores most used are the following:
 
 -   Montreal classification allows for early onset of disease to be categorized separately those with age of diagnosis at 16 years or younger, diagnosis at 17--40 years and \>40 years, respectively[@satsangi2006].
 
-Other measured parameters:
-
--   Weight
-
--   Calprotectin
-
--   PCR (Proteinc C reactive)
-
--   Hemoglobine
+Other measured parameters include, weight, effective weight, calprotectin, Proteinc C reactive (PCR), hemoglobine.
 
 #### Drugs and treaments
 
 The ones given on the hospital more or less on the order of administration, although this varies between patients and time according to recurrent meetings doctors have and current recomendations:
 
--   anti-TNF$\alpha$
--   Vedolizumab
--   Ustekinumab
--   Risankizumab
--   Tofacitinib
--   surgery
--   TRIM/HSCT
--   5-asa
--   corticoesteroids
--   Azathiprine/Mercaptopurine 6MCP
--   Methotrexate MTX
--   Tacrolimus FK
--   Cyclosporin A CyA
--   Infliximab
--   Adalimumab
--   Antibiotics
+anti-TNF$\alpha$, vedolizumab, ustekinumab, risankizumab, tofacitinib, infliximab, adalimumab a 5-asa treatement, corticoesteroids, Azathiprine/Mercaptopurine 6MCP, Methotrexate MTX, Tacrolimus FK, Cyclosporin A CyA.
 
-All these drugs and procedures are available at the time of writing, and patients were taking one or more of those drugs as standard of care.
+All these drugs and procedures are available at the time of writing, and patients were taking one or more of those drugs as standard of care to contain the disease heal and have a good quality of life.
 
-Often a reduction in dose results in losing the response to the drug.
-Thus, after an increase of the dose to the previous levels the patients not recover the initial response they had.
+To reduce secondary effects of drugs or to find the right dose of the drugs often a reduction of dose is recommended.
+Dose reduction often results in losing the response to the drug.
+Thus, after an increase of the dose to the previous levels the patients not recover the initial response they had and doctors need to recommend other drugs or combinations of drugs.
 
-A separate procedure that is done on the Hospital is the Hematopoietic Stem Cell Transplant (HSCT).
+If the drugs fail to contain the inflammation and heal the epithelium doctors might recommend to perform a surgery to remove the damaged section.
+In some cases Hematopoietic Stem Cell Transplant (HSCT) is recommended.
+
 This is a new procedure given only to the most extreme cases for which several publications have checked that it resets the immunological state of the patient.
+Currently it is only performed on the Hospital Clínic (Barcelona).
 
 Last there are several proposal of fecal microbiota transplantation, which are not done on the Hospital Clínic yet.
 But are proposed to reset or change the intestinal microbiome of the patients to help them on the disease.
@@ -551,30 +542,32 @@ Some of these studies used metabolites, DNA-seq sequencing of the microbiome con
 Also the technical method used can differ between extracted from stools or from biopsied samples at colonoscopy or from surgical samples.
 
 Some articles use correlation like [@hasler_uncoupling_2016].
-There are others that use a combination of methods
+There are others that use a combination of methods from correlations to integrative methods.
 
-Very rarely there is an experimental confirmation.
-This is due to how complicated it is to test an interaction and the simulate the conditions.
+Very rarely there is an experimental confirmation because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
 
-One of the few methods published were the interaction is measured is to expose the ex-vivo sample or cell line with supernatant of a microbiome culture.
+One of the few methods published were the interaction is measured is to expose the ex-vivo sample or cell line with supernatant of a microbiome culture [aida].
 
-Previous methods used include the use of RGCCA, [@tang_integrated_2017]
-
-[@de_souza_ibd_2017]
-
-[Maaslin2](https://bioconductor.org/packages/Maaslin2 "Maaslin2 on Bioconductor") [@huWholeExomeSequencing2021]
+Previous integration research on IBD used [RGCCA](https://cran.r-project.org/package=RGCCA "RGCCA package on CRAN"), [@tang_integrated_2017], [Maaslin2](https://bioconductor.org/packages/Maaslin2 "Maaslin2 on Bioconductor") [@huWholeExomeSequencing2021], partial correlations,
 
 ### Genetics
+
+There aren't many studies integrating genetics and other data sources.
+Most studies on genetics and IBD are genome-wide association studies [@kumar2019; @knights2013].
+Probably because all the other factors are time dependent and the interpretation of any possible study would be far fetched.
+Most studies try to relate a genetic variant to some function and from there to the patient state of microbiome.
 
 ### Microbiome
 
 <!--Tesis Elena Ferrer-->
 
-### Multiple data
-
 Some studies work with many dataset from IBD patients.
+Most of them are based on correlation analysis between the microbiome and RNA-seq [@hasler_uncoupling_2016]. Conclusions of these integrations range from finding differences on the correlation depending on the disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang_integrated_2017].
 
-Most of them are based on correlation analysis and microbiome.
+### Metabolome
+
+Microorganisms interact with the host also via their products and metabolites.
+Some studies have integrated the metabolome with the RNAseq and state of the epithelium[@ahmed2016; @gallagher2021].
 
 ### Summary
 
