@@ -556,6 +556,18 @@ Several factors, such as becoming refractory to drugs, intermittent discourse of
 
 The lack of knowledge of what are the factors of the ethiology and causes of the disease make those treatments and drugs to be addressed to block further inflammation and damage, but cannot prevent it and often they do not stop it completely.
 
+#### Transcriptomics
+
+Most useful
+
+Healing, inflammation
+
+Response to treatemnts
+
+#### Microbiome
+
+Controls diversity vs IBD patients
+
 ## Integration on IBD
 
 One of the hypothesis behind the maintenance of the inflammation involves the microbiome.
