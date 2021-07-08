@@ -204,7 +204,17 @@ Some of them have previously appeared:
     Networks methods were mentioned because they use and find information about interaction of variables.
     Multilayer networks, including the multiplex, Molti-C-DREAM, RWR-MH, RWR-M. Network embedding MultiVERSE are some of the methods using networks.
 
+    Bayesian approaches are also quite frequent and methods use the Bayes theorem to see the relationships between variables.
+    Some methods that use these approaches are X, Y, Z.
+
 -   Dimensional Reduction
+
+    These methods focus on finding just a few variables and summarizing them using some function that has some properties.
+    The selection of variables is usually done with L1 or Lasso Regression regularization technique or L2 also known as Ridge Regression.
+    L1 regularization adds a penalty equal to the absolute value of the magnitude of coefficients which leads to some coefficients can become zero and the variable eliminated from the model.
+    On the other hand, L2 regularization doesn't result in elimination of coefficients or sparse models and can only be used when there is multicollinearity.
+
+    Other methods use bayesian approaches
 
     Momix, RGCCA,
 
@@ -220,6 +230,8 @@ Usually depending on the mathematical framework used they return these methods r
 According to the output the integration methods can be classified in several groups:
 
 For the network methods the following output is usually returned:
+
+Connection between the variables/nodes, a measure of how strong is the connection (or simply if there is a connection or if there isn't one).
 
 For those from dimensional reduction methods there are three: Shared factor across the data, specific factors for each data or mixed factors.
 
@@ -238,17 +250,21 @@ Such methods include Regularized Generalized Canonical Correlation Analysis (RGC
 The integration results in both previous factors, specific of each data and common to all the data.
 Such methods include Joint and Individual Variation Explained (JIVE), integrative Non-negative Matrix Factorization (intNMF).
 
-For active module identification the
+For active module identification the common output is XXXYYYZZZ.
 
 Given this output the researcher task is usually to understand and discuss the results with previous knowledge or independent sources of data.
 
 ### Interpretation
 
-Understanding how to interpret the results of the methods is highly tight to understanding the method and its output.
-If one does a correlation between two variables, the interpretation of the analysis is clear, if one variable increase, the other one too.
-However as more complicated methodologies are developed the interpretation becomes less clear, for instance how can one interpret the result of a canonical correlation analysis?
-The methods are so complex that they need some articles explaining it [@sherry2005].
-The interpretation also help to discuss the results and relate it to other previously know information.
+How to interpret the results of the methods is highly linked to understanding the method and its output.
+On a correlation between two variables, the interpretation of the analysis is clear, if one variable increase, the other one too.
+The implications of these observation can be far reaching but the principles to understand them are simple.
+
+However, on more complex methods the interpretation becomes less clear.
+The interpretation of a canonical correlation analysis is much harder [@sherry2005].
+Also on more complex methods the number of parameters required increases so the time and intellectual effort to understand the relationships between the parameters is also higher.
+
+The interpretation also helps to discuss the results and relate it to other previously know information.
 
 -   Individually:
 
@@ -306,7 +322,8 @@ Also, if there is an increase of calprotectine in fecal samples is indication of
 
 <!-- Finish -->
 
-Around 3.5 million individuals have IBD in Europe and North America combined [@jairath2020]. The disease has been used as a condition that prevents people to [apply to certain positions](https://civio.es/el-boe-nuestro-de-cada-dia/2019/02/13/las-enfermedades-que-vetan-el-acceso-a-ciertos-empleos-publicos/ "Link to a Civio.es about disease disqualifying for some public positions").
+Around 3.5 million individuals have IBD in Europe and North America combined [@jairath2020].
+The disease has been used as a condition that prevents people to [apply to certain positions](https://civio.es/el-boe-nuestro-de-cada-dia/2019/02/13/las-enfermedades-que-vetan-el-acceso-a-ciertos-empleos-publicos/ "Link to a Civio.es about disease disqualifying for some public positions").
 The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome.
 Several studies support the concept that IBD arise from an exacerbate immune response against commensal gut microorganisms.
 Nonetheless, the disease could result from an imbalanced microbial composition leading to generalized or localized dysbiosis[^introduction-1].
@@ -350,7 +367,8 @@ This has lead the studies looking for genetic factors on IBD both on general pop
 Genome wide association studies (GWAS) is one of the most common genetic studies, together with methylation studies.
 They help discover through linkage desequilibrium genetic variations linked to phenotypes.
 
-With GWAS several allels on protein coding loci have been found rising to around 300 genetic variants [@kumar2019]. Particularly, one on the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018].
+With GWAS several allels on protein coding loci have been found rising to around 300 genetic variants [@kumar2019].
+Particularly, one on the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018].
 However, there hasn't been a proposed mechanism for how does it work.
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
@@ -368,7 +386,8 @@ Microbiome, is often studies, both with 16S DNA studies or with whole metagenome
 Many studies show that patients with inflammatory bowel disease has less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
 $\alpha$-diversity is a mesure of the species present on a single sample and how much of each there is.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive) at the mucosal layer of IBD patients [@ott2004]. At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* i *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014].
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive) at the mucosal layer of IBD patients [@ott2004].
+At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* i *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014].
 
 One of the proposed mechanism is through the chemical compounds they generate.
 Chemical compounds may interact with the cells and modulate the state of the intestine.
@@ -386,7 +405,7 @@ A loss of tolerance to commensal bacteria has been suggested as the underlying m
 The mechanism involves many different cells lines and regions.
 For a better understanding it is important to know the organization of the intestinal organization.
 
-<!--Image from Ana tesis p29-->
+<!--Image from Ana tesis p29: -->
 
 ![The intestinal epithelial barrier.](images/testing_image_pdf.png "The intestinal epithelial barrier")
 
@@ -453,6 +472,10 @@ Extensive colitis is also associated with extensive care [@etchevers2009].
 #### Clinical presentation
 
 #### Disease course
+
+Starting age usually around 15-20?
+
+Some subset of early \< 17 and also very early subset \< 5 years.
 
 ### Clinical care
 
@@ -562,12 +585,17 @@ Most studies try to relate a genetic variant to some function and from there to 
 <!--Tesis Elena Ferrer-->
 
 Some studies work with many dataset from IBD patients.
-Most of them are based on correlation analysis between the microbiome and RNA-seq [@hasler_uncoupling_2016]. Conclusions of these integrations range from finding differences on the correlation depending on the disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang_integrated_2017].
+Most of them are based on correlation analysis between the microbiome and RNA-seq [@hasler_uncoupling_2016].
+Conclusions of these integrations range from finding differences on the correlation depending on the disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang_integrated_2017].
 
 ### Metabolome
 
 Microorganisms interact with the host also via their products and metabolites.
 Some studies have integrated the metabolome with the RNAseq and state of the epithelium[@ahmed2016; @gallagher2021].
+
+### Transcriptome
+
+Normal one?
 
 ### Summary
 
