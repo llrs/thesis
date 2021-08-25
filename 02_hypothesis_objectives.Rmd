@@ -1,2 +1,25 @@
 # Hypothesis and objectives
 
+## Hypothesis
+
+We hypothesize that the presence of certain microorganisms are related to the patient well being.
+Furthermore, the expression state of the epithelium and the amount of bacterial presence can identify if patients are suffering an inflammatory bowel disease.
+Finally, I believe that the environmental factors interact with the inflammatory bowel disease and are responsible of the big variability on the inflammatory bowel disease discourse.
+
+## Objectives
+
+Identify microorganisms and genes related to the inflammatory bowel disease.
+
+-   Genes and microorganisms that are related to healthy patients
+
+-   Genes and microorganisms that are related to inflammatory bowel disease patients while controlling for environmental factors.
+
+    -   Only related to Crohn's disease
+
+    -   Only related to ulcerative colitis
+
+    -   Related to both
+
+-   Effect of the genes and microorganisms related to the inflammatory bowel disease.
+
+    -   Identify causal relationships between genes and microorganisms.
