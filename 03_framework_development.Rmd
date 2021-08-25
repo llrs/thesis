@@ -1,3 +1,19 @@
+# Materials and methods
+
+R version 3.6.3 and the corresponding Bioconductor version 3.9. 
+
+## Sample collection
+
+## RNA sequencing
+
+## DNA sequencing
+
+## Statistics
+
+A false discovery rate (FDR) correction for multiple testing was performed when necessary. Nominal or FDR p. values <0.05 were considered significant.
+
+
+
 # Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis
 
 The canonical correlation is a method that using data from the same sample but from different datasets.
