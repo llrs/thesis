@@ -482,7 +482,11 @@ Histological lesions also help to diagnose the patients .
 <!--End-->
 
 To address this difficulty the Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behaviour.
-This classification assumes that the location of Crohn's disease remains stable over time after diagnosis but behavioral phenotypes change with most patients progressing from an inflammatory phenotype to a stricturing or penetrating one.
+This classification assumes that the location of Crohn's disease remains stable over time after diagnosis but behavioral phenotypes change with most patients progressing from an inflammatory phenotype to a stricturing or penetrating one [@satsangi2006a].
+
+<!--Add Figure 2 from ACM thesis?-->
+
+<!---->
 
 There is to some extent a disassociated between patient's (clinic) well-being report and the colonoscopy observation.
 Often patients report feeling better but their gut is as inflamed as previously.
@@ -491,12 +495,11 @@ This has lead to several scores and thresholds used on research and treatment of
 #### Disease course
 
 In the early stages of the disease the relapsing and remitting course is more frequent.
-Often relapses are accompanied by clinical symptoms, and very few have prolonged clinical remission.
+Often relapses are accompanied by clinical symptoms, and very few have prolonged clinical remission [@peyrin-biroulet2010].
 When there is clinical remission, as mentioned above there can still remain some other lesions and sublinical inflammation often persists.
 Often the damage caused by the disease evolves to fibrostenotic stricture or penetrating lesions (fistula and abscess).
 
-Although Crohn's disease and colon disease are similar the drugs and treatments for each is different.
-The order of the treatment/drugs changes depending on the disease.
+The damage of the disease might not be apparent to patients and might be only seen seeral years later than the first detection [@bhattacharya2016].
 
 ### Ulcerative colitis physiology
 
@@ -512,33 +515,25 @@ Starting age usually around 15-20?
 
 Some subset of early \< 17 and also very early subset \< 5 years.
 
+Rectum or descending colon
+
 ### Clinical care
 
-The goal of treatment is not limited to clinical remission[^introduction-2] but rather to mucosal healing, which means the reconstitution of the structure and function of the intestinal epithelial barrier.
+The goal of treatment is not limited to clinical remission, clinical remission is the when the symptoms of IBD have lessened to the point that they're mostly absent, gone, or barely noticeable, but rather to mucosal healing, which means the reconstitution of the structure and function of the intestinal epithelial barrier.
 Mucosal healing is a first step towards the healing of deeper layers of the inflamed bowel wall on the Crohn's disease.
-
-[^introduction-2]: clinical remission is the when the symptoms of IBD have lessened to the point that they're mostly absent, gone, or barely noticeable.
 
 Clinical remission is not enough to avoid relapse and the bowel may not be free of lesions, evolving to other phenotypes such as fibrostenotic stricture or penetrating lesions increasing the structural bowel damage.
 
-Colectomy[^introduction-3] is a surgery procedure done when there is colorectal cancer or the damage on the colon has been too big.
+Colectomy, a surgical procedure to remove part or all of your colon, is a surgery procedure done when there is colorectal cancer or the damage on the colon has been too big.
 That sometimes IBD patients have to endure.
 
-[^introduction-3]: A surgical procedure to remove part or all of your colon.
-
 Patients that undergo a colectomy need to have their bowel reconnected with a procedure called ileoanal anastomosis (J-pouch) surgery.
-This often ends up in a pouchitis[^introduction-4].
+This often ends up in a pouchitis, inflammation that occurs in the lining of a pouch created during surgery to treat ulcerative colitis or certain other diseases.
 Which might extend to healthy areas.
 
-[^introduction-4]: inflammation that occurs in the lining of a pouch created during surgery to treat ulcerative colitis or certain other diseases.
+Dysplasia, an abnormal development of cells within tissues or organs, is often associated with chronic IBD patients, which is considered a precedence before colorectal cancer develops [@mark-christensen2018].
 
-Dysplasia[^introduction-5] is often associated with crhonic IBD patients, which is considered a precendence before colorectal cancer develops [@mark-christensen2018].
-
-[^introduction-5]: Abnormal development of cells within tissues or organs.
-
-Fistula[^introduction-6] is often found on the phenetrating phenotype of IBD patients.
-
-[^introduction-6]: An abnormal connection between two body parts.
+Fistula, an abnormal connection between two body parts, is often found on the penetrating phenotype of IBD patients.
 
 Herpes and citomegalovirus virus.
 
