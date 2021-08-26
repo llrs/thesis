@@ -28,8 +28,7 @@ Some of these methods are specific for one application or data while others are 
 Lately, the increase of bigger datasets with more variables and often from the same samples has increased the focus of the research community on the methodologies available on several disciplines but mainly on the biological science.
 The explosion of data on the biological science has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time, if done with multiple sequencing tecnologies it is usually referred as multi-omics methods, which usually only integrate omic data.
 
-It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019].
-Part of these efforts uses the methods' strategies to classify them [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
+It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019]. Part of these efforts uses the methods' strategies to classify them [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
 Following this view I'll review the integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
 
 ### Classification of integration method's
@@ -276,8 +275,7 @@ Or by patient: how do interpret that in these patient variable A and B is X and 
 In a PCA for instance how do we interpret that some variables have the same loading?
 What happens in a more difficult method like canonical correlation analysis?
 
-There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981].
-Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
+There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981]. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
 
 To help interpretation frequently synthetic datasets are used to compare the results of the integration with the dataset of interest and to compare different tools.
 This datasets are created with some relationships that the tools are expected to find.
@@ -322,9 +320,7 @@ Also, if there is an increase of calprotectine in fecal samples is indication of
 
 <!-- End -->
 
-Around 3.5 million individuals have IBD in Europe and North America combined [@jairath2020].
-IBD is more commonly found in industrialized and developed regions, suggesting that environmental factors might greatly influence IBD occurrence.
-In addition, the incidence of IBD is increasing in areas, such as Asia or Eastern Europe, where the number of cases was relatively low hitherto [@burisch2015]
+Around 3.5 million individuals have IBD in Europe and North America combined [@jairath2020]. IBD is more commonly found in industrialized and developed regions, suggesting that environmental factors might greatly influence IBD occurrence. In addition, the incidence of IBD is increasing in areas, such as Asia or Eastern Europe, where the number of cases was relatively low hitherto [@burisch2015]
 
 The disease has been used as a condition that prevents people to [apply to certain positions](https://civio.es/el-boe-nuestro-de-cada-dia/2019/02/13/las-enfermedades-que-vetan-el-acceso-a-ciertos-empleos-publicos/ "Link to a Civio.es about disease disqualifying for some public positions").
 The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome.
@@ -370,8 +366,7 @@ This has lead the studies looking for genetic factors on IBD both on general pop
 Genome wide association studies (GWAS) is one of the most common genetic studies, together with methylation studies.
 They help discover through linkage desequilibrium genetic variations linked to phenotypes.
 
-With GWAS several allels on protein coding loci have been found rising to around 300 genetic variants [@kumar2019].
-Particularly, one on the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018].
+With GWAS several allels on protein coding loci have been found rising to around 300 genetic variants [@kumar2019]. Particularly, one on the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018].
 However, there hasn't been a proposed mechanism for how does it work.
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
@@ -397,8 +392,7 @@ IBD has been characterized by a breakdown in the balance between beneficial and 
 Many studies show that patients with inflammatory bowel disease has less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
 $\alpha$-diversity is a mesure of the species present on a single sample and how much of each there is.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive) at the mucosal layer of IBD patients [@ott2004].
-At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive) at the mucosal layer of IBD patients [@ott2004]. At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
 
 <!--Aida 2.3 p24-->
 
@@ -474,9 +468,7 @@ All these symptoms make it hard to provide a diagnosis by non-specialists and ca
 <!--Tesis Ana p21-->
 
 The detection of parasites or bacteria, such as *Clostridium difficile*, would admit an infectious disease.
-The detection of fecal calprotectin, is a good marker of endocopic activity with sensitivity above 70% and specificity above 80% generally [@guardiola2018].
-Usually the diagnosis is performed with a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn's disease.
-This inflammation could also present as an ulceration and rectal sparing [@corralizamárquez2019].
+The detection of fecal calprotectin, is a good marker of endocopic activity with sensitivity above 70% and specificity above 80% generally [@guardiola2018]. Usually the diagnosis is performed with a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn's disease. This inflammation could also present as an ulceration and rectal sparing [@corralizamárquez2019].
 Histological lesions also help to diagnose the patients .
 
 <!--End-->
@@ -504,8 +496,7 @@ The damage of the disease might not be apparent to patients and might be only se
 ### Ulcerative colitis physiology
 
 Around a third of the patients with ulcerative colitis suffer proctitis, followed by left colitis, when the affected area starts on the rectum and extends to the left colon, distal colitis, defined as disease limited to rectum and sigmoid colon, extensive colitis as involvement of at least the descending colon, and pancolitis, when the disease affects all the colon.
-The extension and severity of the disease does correlate with the clinical observation, where longer extension is a worse prognosis [@etchevers2009].
-Extensive colitis is also associated with extensive care [@etchevers2009].
+The extension and severity of the disease does correlate with the clinical observation, where longer extension is a worse prognosis [@etchevers2009]. Extensive colitis is also associated with extensive care [@etchevers2009].
 
 #### Clinical presentation
 
@@ -601,49 +592,51 @@ Controls diversity vs IBD patients
 ## Integration on IBD
 
 One of the hypothesis behind the maintenance of the inflammation involves the microbiome.
-Several studies have been carried out to discover links between microbiome and the inflammation.
-Some of these studies used metabolites, DNA-seq sequencing of the microbiome content, or targeted 16S sequencing.
+Several studies have been carried out to discover links between microbiome and the inflammation, followed by those looking for some relationship between genetics and the disease and more recently the metabolome.
 
-Also the technical method used can differ between extracted from stools or from biopsied samples at colonoscopy or from surgical samples.
+Also the technical methods used can differ between extracted from stools or from biopsied samples at colonoscopy or from surgical samples.
+And how are they processed, both the sample from patients and the data obtained once processed.
 
-Some articles use correlation like [@hasler_uncoupling_2016].
-There are others that use a combination of methods from correlations to integrative methods.
+Very rarely there is an experimental confirmation of the relationship between variables because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
+Some articles to find the relationships use correlation, like [@hasler_uncoupling_2016], there are others that use a combination of methods from correlations, partial correlations to integrative methods [@tang_integrated_2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations.
 
-Very rarely there is an experimental confirmation because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
+Most of the integrations refer some other source of data to the transcriptomics of the patient.
+The transcriptome of the patients has been extensively studied.
+There are known marker gens of inflammation and many research focus on identifying prognosis predictors, treatment response prediction based on gene expression.
+Recently single-cell technology has enabled to estimate cell populations of the samples with better degree of success than bulk RNA-sequencing.
+Single cell technologies are starting to be also for integration.
 
-One of the few methods published were the interaction is measured is to expose the ex-vivo sample or cell line with supernatant of a microbiome culture [aida].
-
-Previous integration research on IBD used [RGCCA](https://cran.r-project.org/package=RGCCA "RGCCA package on CRAN"), [@tang_integrated_2017], [Maaslin2](https://bioconductor.org/packages/Maaslin2 "Maaslin2 on Bioconductor") [@huWholeExomeSequencing2021], partial correlations,
-
-### Genetics
-
-There aren't many studies integrating genetics and other data sources.
-Most studies on genetics and IBD are genome-wide association studies [@kumar2019; @knights2013].
-Probably because all the other factors are time dependent and the interpretation of any possible study would be far fetched.
-Most studies try to relate a genetic variant to some function and from there to the patient state of microbiome.
+One of the few methods published that show an interaction between genes and microorganisms on the inflammatory bowel disease is to expose the ex-vivo sample or cell lines with microbiomes or supernatant of at their culture [aida].
 
 ### Microbiome
 
 <!--Tesis Elena Ferrer-->
 
-Some studies work with many dataset from IBD patients.
-Most of them are based on correlation analysis between the microbiome and RNA-seq [@hasler_uncoupling_2016].
-Conclusions of these integrations range from finding differences on the correlation depending on the disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang_integrated_2017].
+Many of the integration analysis on inflammatory bowel are done between host transcriptome and the microbiome.
+These studies use datasets from IBD patients usually stratified by some inflammatory index or location of the disease.
+Most of them are based on correlation analysis between the microbiome and RNA-seq [@hasler_uncoupling_2016]. Conclusions of these integrations range from finding differences on the correlation depending on the disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang_integrated_2017].
+
+Generally microbiome integrations show some relationship between an organism and a condition [citation needed].
+
+### Genetics
+
+Genetics is the next most common data source used to integrate data on the inflammatory bowel disease.
+Most studies on genetics and IBD are genome-wide association studies [@kumar2019; @knights2013; @huWholeExomeSequencing2021].
+No clear mechanism has been proved despite clear and significant findings, probably because inflammatory bowel disease is relapses and remit with time.
+
+When using genetic data to integrate it with transcriptomics it is usually to understand how a genetic variant is affecting a gene expression.
 
 ### Metabolome
 
-Microorganisms interact with the host also via their products and metabolites.
-Some studies have integrated the metabolome with the RNAseq and state of the epithelium[@ahmed2016; @gallagher2021].
+More recently an increased interest on metabolome has raised, given that microorganisms interact with the host also via their products and metabolites.
+Some studies have integrated the metabolome with the RNAseq and state of the epithelium [@ahmed2016; @gallagher2021].
 
-### Transcriptome
-
-Normal one?
+There is evidence some of these metabolome products, such as small chemicals regulate the epithelium cells and their interaction with the microbiome and outer agents [@ferrer-picón2020b].
 
 ### Summary
 
-Multiple methods and multiple studies have been done
+Multiple methods and multiple studies have been used to learn more about the interaction between different data and understand the inflammatory bowel disease.
+The task is challenging and with many different aspects one could use.
 
-Few focus on discovering the relationships on the disease [@huWholeExomeSequencing2021]
-
+There are many studies focused on understanding different aspects of the disease: the relation between location and severity, relapse, remission, treatments, origin.
 The integration of data might help to improve the medicine and reveal links in difficult diseases like IBD.
-So far it has been applied in IBD with partial success.
