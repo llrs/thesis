@@ -1,18 +1,95 @@
 # Materials and methods
 
-R version 3.6.3 and the corresponding Bioconductor version 3.9. 
-
 ## Sample collection
 
-## RNA sequencing
+### HSCT dataset
+
+<!--COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005-->
+
+Samples from the HSCT dataset included in this study were from a cohort of patients with severe refractory CD undergoing hematopoietic stem cell transplant.
+Patients were treated in the Department of Gastroenterology (Hospital Clínic de Barcelona --Spain--).
+The protocol was approved by the Catalan Transplantation Organization and by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number 2012/7244).
+All patients provided written consent following extensive counselling.
+Colonic and ileal biopsies were obtained at several time points during ileo-colonoscopy.
+Patients were followed-up for 4 years and biopsies were collected every six or twelve months after HSCT.
+Samples were obtained when possible from both uninvolved and involved areas.
+In addition, biopsies were taken from the ileum and colon regions of 19 non-IBD controls consisting of individuals with no history of IBD and who presented no significant pathological findings following endoscopic examination for colon cancer surveillance (Hospital Univesitari Mútua de Terrassa--Spain--).
+The protocol was approved by the Institutional Ethics Committee of the Hospital Univesitari Mútua de Terrassa (Study Number NA1651).
+At least one biopsy was collected and fresh-frozen at -80°C for microbial DNA extraction.
+The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen, Hilde, Germany) and stored at -80°C until total RNA extraction.
+
+## Transcriptome sequencing
+
+Total RNA from mucosal samples (HSCT cohort) was isolated using the RNeasy kit (Qiagen, Hilde, Germany).
+RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4000 platform.
+Later, cutadapt (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the STAR aligner (2.5.2a) with Ensembl annotation (release GRCh38.10) [@dobin2013].
+Read counts per gene were obtained with RSEM (version 1.2.31) [@li2011] as previously described [@corralizaDifferencesPeripheralTissue].
+Analysis was performed using R (version 3.6.1) and Bioconductor (Version 3.10) on Ubuntu 18.04.
+The host transcriptome was visually inspected for batch effects in PCA.
+Outliers and the top 10% genes using the coefficient of variation were removed (20593, with remaining 37685 genes).
+Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28) .
+
+## Microbial DNA extraction from mucosal samples
+
+Biopsies from the HSCT CD cohort were resuspended in 180 μl TET (TrisHCl 0.02M, EDTA 0.002M, Triton 1X) buffer and 20mg/ml lysozyme (Carl Roth, Quimivita, S.A.). Samples were incubated for 1h at 37°C and vortexed with 25 μl Proteinase K before incubating at 56°C for 3h.
+Buffer B3 (NucleoSpin Tissue Kit--Macherey-Nagel) was added followed by a heat treatment for 10 min at 70°C.
+After adding 100% ethanol, samples were centrifuged at 11000 x g for 1 min.
+Two washing steps were performed before eluting DNA.
+Concentrations and purity were checked using NanoDrop One (Thermo Fisher Scientific).
+Samples were immediately used or placed at -20°C for long-term storage.
 
 ## DNA sequencing
 
+Library preparation and sequencing were performed at the Technische Universität München.
+Briefly, volumes of 600μL DNA stabilization solution (STRATEC biomedical) and 400μL Phenol:choloform:isoamyl alcohol (25:24:1, Sigma-Aldrich) were added to the aliquots.
+Microbial cells were disrupted by mechanical lysis using FastPrep-24.: Heat treatment and centrifugation were conducted after adding a cooling adaptor.
+Supernatants were treated with RNase to eliminate RNA.
+Total DNA was purified using gDNA columns as described in detail previously [34].
+Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol [35] using forward and reverse primers 341F-785R [36].
+Purification of amplicons was performed by using the AMPure XP system (Beckmann).
+Next, sequencing was performed with pooled samples in paired-end modus (PE275) using an MiSeq system (Illumina, Inc.) according to the manufacturer's instructions and 25% (v/v) PhiX standard library.
+
+## Microbial profiling
+
+Processing of raw-reads was performed by using the IMNGS (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the UPARSE approach [@edgar2013a] .
+Sequences were demultiplexed, trimmed to the first base with a quality score \<3 and then paired.
+Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error \>3 were excluded from the analysis.
+Trimming of the remaining reads was done by trimming 5 nucleotides from each end to avoid GC bias and non-random base composition.
+Operational taxonomic units (OTUs) were clustered at 97% sequence similarity.
+Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project.
+Later the data was normalized using the same method as for RNA-seq described above.
+The microbiome was visually inspected for batch effects in PCA; none were found.
+The resulting OTUs table was normalized using edgeR (Version 3.28).
+
+<!--Finished the copied section-->
+
 ## Statistics
 
-A false discovery rate (FDR) correction for multiple testing was performed when necessary. Nominal or FDR p. values <0.05 were considered significant.
+A false discovery rate (FDR) correction for multiple testing was performed when necessary.
+Nominal or FDR p. values \<0.05 were considered significant.
 
+Functional enrichment
 
+To test if some variables according to a statistic like fold change or value fgsea is a software used to see if groups of variables present a
+
+GSVA is similar but instead of first computing the ordering values and then performing the test it first groups the variables and then they are tested.
+
+adonis method uses to test if microbiome data variation comes from known sources of variation.
+
+microbiome diversity is often measured in two distinct levels
+
+BaseSet use fuzzy set logic on the bootstrapped samples for each variable to find which are really involved.
+Computationally expensive: too many combinations.
+
+WGCNA, co-expression with all the microbiome and RNAseq, not working due to different type of data.
+
+MCIA, simple integration, two blocks
+
+clusterProfiler: genes enrichment for functionality on databases.
+
+globaltest for testing complex hipothesis and help decide if the variables were influencing.
+
+STATegRa, not interaction between variables.
 
 # Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis
 
@@ -73,23 +150,26 @@ The hypothesis we made was that more independent blocks would fit better the dat
 Instead of a big metadata block we have a block for time related variables, another one for location and so on.
 This allows to design a model with an expected relationships between these dimensions and help make more interpretable the relationships.
 
-However, in general on the dimension reduction methods, as well as in the generalized canonical correlation analysis, they can't infer causal relationships. Which can be found with a symmetric design matrix.
+However, in general on the dimension reduction methods, as well as in the generalized canonical correlation analysis, they can't infer causal relationships.
+Which can be found with a symmetric design matrix.
 
 ### Designing models
 
 The model of the generalized canonical correlation is highly dependent of the blocks present.
 
-If one has preexisting theories about the data, a specific model can be used stating these known or hypothetical relationships. However, if new relationships are being explored or no prior beliefs on the data are held the models should be created with random links between blocks, and evaluate which model is better.
+If one has preexisting theories about the data, a specific model can be used stating these known or hypothetical relationships.
+However, if new relationships are being explored or no prior beliefs on the data are held the models should be created with random links between blocks, and evaluate which model is better.
 
 ### Evaluating models
 
 To evaluate a model RGCCA provides the average variance explained (AVE), inner and outer.
 Inner AVE is for how well do all the canonical dimensions correlate with the design of the experiment, so it a measure of how good the model is.
 While outer AVE is a measure of how well do the variables of each block correlate with the canonical dimension, so it measures the agreement between the variables and the canonical dimensions.
-Depending on the goals of the research one or the other should be used. If we are more interested on the model of the relationships the inner AVE makes more sense. 
+Depending on the goals of the research one or the other should be used.
+If we are more interested on the model of the relationships the inner AVE makes more sense.
 
 Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
-Another option is to use an external cohort to validate the same model, or using a different method to see if it  finds the same relationships or explains the data as accurately.
+Another option is to use an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately.
 Of the multiple methods available we used [MCIA](https://bioconductor.org/packages/omicade4 "Omicade4") [@mengMultivariateApproachIntegration2014].
 Which was compared by looking at the area under the curve for classifying the samples according to their location.
 
@@ -104,4 +184,3 @@ The procedural method of searching a model and testing them is implemented on [i
 But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling.
 
 This was published as a [preprint](https://www.medrxiv.org/content/10.1101/2020.04.16.20031492v1) and after peer review [published on Plus One](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367 "Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis") [@revilla2021].
-
