@@ -78,43 +78,46 @@ For instance, checking that in a particular case or condition is present on a gi
 A signature is usually a group of features that describe/are representative of a cell line, a process or a stage.
 Identifying a subset of the variables from the omics that are related is often a desired goal because it reduces the amount of variables allowing to perform experiments on the bench on just those that might be important.
 In other fields, such as machine learning, selecting the important variables is known as [feature selection](https://en.wikipedia.org/wiki/Feature_selection "Wikipedia page of feature selection").
-There are several methods that are used to this.
+There are several methods that are used to do this.
 
 -   A predictive model
 
-Usually predictive models require also a very good understanding of the current or past relationships as well as a good feature selection.
+Predictive models usually require a very good understanding of the current or past relationships, as well as, a good feature selection.
 Often to make a prediction the model is first evaluated on a previously known data according to this features.
-If a good model is known it can be used as a prediction if enough information is gathered, which might improve treatments, diagnosis and prognosis prediction.
+If a good model of previous data exists it might be used to predict future events.
+Sometimes, models are only build to predict events without being able to accurately describe the mechanism, why they work.
+This kind of models might improve treatments, diagnosis and prognosis prediction.
 
 -   Impute values
 
 Some methods aim to make an accurate guess of which values does have one block given some other information.
-Missing values can happen for a variety of reasons from practical ones, sample not available to technical ones such as laboratory method failing.
+Missing values can happen for a variety of reasons from practical ones, like a sample not available, to technical ones, such as laboratory method failing.
 However, this is often a intermediate step to other goals.
 
-To complete these goals it is important to have enough statistical power to determine the significance of tests preformed (if any) and to understand how complete are the data sources used on the integration [@tarazona2021].
-This reflects on the relationships between variables and samples.
+To complete these goals it is important to have enough statistical power to determine the significance of tests performed (if any) and to understand how complete are the data sources used on the integration [@tarazona2021].
+Having more statistical powers helps identifying the relationships one seeks when using this methods.
 
 #### Relationship between variables and samples
 
 Depending on the amount of variables and in which samples they have been measures we can classify two types of integration.
-Traditionally for each sample few variables were measured, for instance for a tree only the height and width are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample.
+Traditionally for each sample few variables are measured, for instance on a biopsy with RT-PCR only a few genes are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample.
 This has lead to the following situation:
 
 -   More variables than samples
 
 For a single sample of RNA around 50k genome identifiers (genes, long non coding RNAs, iRNA, pseudogenes,...) can be measured.
-Which leads to the case where there are (many) more variables than samples.
+Which leads to the case where there are many more variables than samples.
 Thus high-throughput data analysis typically falls into the category of $p \gg n$ problems ( big p, little n), where the number of genes or proteins, $p$, is considerably larger than the number of samples, $n$.
-With such high number of variables the identification of the relevant variables is complicated because variables will co-variate.
-When two variables are tightly correlated, discerning which is the lead and which is following using just numerical methods is near to impossible.
+With such high number of variables the identification of the relevant variables is hard because variables will co-variate.
+When many variables are tightly correlated, discovering which one is important using just numerical methods is very difficult.
+It is even more difficult when looking for causal relationships.
 
 -   More samples than variables
 
 This was the usual case when for instance, when from a cohort of patients the temperature is measured along the stage of a disease: two variables for each sample.
 If there are more than 2 patients, then the number of samples is greater than the number of variables studied.
-This is described in the literature as $n \gg p$.
-Nowadays this is less frequent on the bioscience world, and does not causes trouble analyzing it because the high number of samples allow to better estimate of the errors, allowing better statistical power.
+This is described in the literature as $n \gg p$ (or big n, little p).
+Nowadays this is less frequent on the bioscience world, and does not causes trouble analyzing it because the high number of samples allow to accurately estimate variables dispersion.
 
 Having just the enough amount of samples for the desired statistical power is not enough if the samples of different blocks do not match between them.
 
@@ -122,7 +125,9 @@ Having just the enough amount of samples for the desired statistical power is no
 
 Depending on the relationship between the samples of the different blocks of data, the questions answerable and the methods that work on them differ.
 
-If each sample has all the expected data we wanted to measure it is a complete case.
+A sample can have multiple or one data source.
+In a study if all the samples have all the data from multiple data sources it is a complete case.
+If some samples have data from some data sources but not from others the study is not a with a complete case.
 
 Sometimes because the sample is not enough, or there are some technical or organizational problems we might lose a source of data for a sample (which is known as an incomplete case).
 This results in a new source of variation that has to be dealt with, which complicates the conclusion one can draw from the studies of these kind of data.
@@ -131,43 +136,42 @@ Even when all the cases of a patient are complete the samples can come from seve
 
 There is no easy classification of this as each experiment might be designed differently.
 In general, experiments are designed to be as consistent as possible but in face of adverse events that become a variation of the design the analysis complicates.
-Often, imputation of some samples is done or the deletion, not using them of some, or if the differences are minor to use them as being from a different group.
-
+Either some data is imputed or some samples are omitted for the analysis, or if the differences are minor these samples are used as being from a different group.
 This can happen with samples taken at different timepoints as patients might not come to the visit with the doctor on time.
 
 ##### Time {.unnumbered}
 
-As mentioned above, time is one of the factors that sometimes cannot be controlled, despite having programmed visits every two weeks some patients might come early or later due to multiple reasons (holidays, other conflicting duties,...).
+As mentioned above, time is one of the factors that sometimes cannot be controlled, despite having programmed visits every two weeks some patients might come early or later due to multiple reasons (holidays, other conflicting duties, ...).
 
 Sometimes, precisely the objective of the study is to analyze the relationships at different time, or see how the relationships change with time.
-Simultaneously is very important to consider it because two variables can seem correlated if we don't take time into consideration.
-Also, to discover causality between two variables the cause must be before the consequence, which highlights the importance of time.
+To discover causality between two variables the cause must be before the consequence, which highlights the importance of time.
 Being aware of the time differences and time scales is crucial in most cases.
 
 On cell lines or other lab experiments conditions can be repeated even if they are at different time points.
-However with patients we can not obtain a sample at the same timepoint.
-This makes it harder to study time related change on patients.
+However, with patients we can not obtain a sample at the same timepoint.
+This makes it harder to study time-related change on patients.
 
-Lastly, it has been seen that time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNA-seq [@massoni-badosa2020; @zhu2017].
-Some features and genes are more affected by time than others.
+Lastly, time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNA-seq [@massoni-badosa2020; @zhu2017]. Some features and genes are more affected by time than others but as they are measured at the same time it might distort the data. Processing time is also very hard to keep track on practical settings and requires a highly coordinated effort [@ferreira2018].
 
 #### Relationship between variables
 
-As seen some variables influence other variables and affects the outcome in a complex way.
-With many variables present it is important to be aware of known relationships between variables.
-Even in a single dataset it is important to be aware of the relationships between variables.
-
-One the best example the correlation between some variables can be used to reduce the number of variables being analyzed.
-However, sometimes this is not desired or feasible as the correlation doesn't explain the direction of the causality of the interaction between the variables (if there is any).
+Once the data is collected, the next step is understand the relationship between the variables present.
+As seen, some variables influence other variables which affects the outcome in a complex ways.
+With many variables present in a dataset it is important to be aware of known relationships between variables.
+Even in a simple dataset, like a RNA-seq dataset, it is important to be aware of the relationships between variables.
 
 Since the lactose [operon](https://en.wikipedia.org/wiki/Operon) we know how some genes regulate each other.
 We don't know how other variables are related between them.
 For instance, how does the increase in expression of a gene affects the growth of a microorganism?
 Usually the relationships between variables are mediated by many factors or interactions.
 
+One of the best example of such interactions is when some variables correlate.
+Their correlation can be used to reduce the number of variables being analyzed by ignoring the relationships between them and using the most representative variable (less correlated and with more variation).
+This step is usually done by the dimension reduction methods...
+However, sometimes this is not desired or feasible as the correlation doesn't explain the direction of the causality of the interaction between the variables (if there is any).
+
 Network approaches relate the variables between them (such as [@koh_iomicspass_2019]).
-These approaches are fairly new and growing in popularity.
-Other methods ignore the relationships between them and use the most representative variables (less correlated or with more variation), this is usually done by the dimension reduction methods.
+These approaches are fairly new and growing in popularity partly because they can address the direction of the interaction.
 
 In partial correlations some or all of the other variables are considered on how much do they affect the others and this effect is reduced.
 This assumes a linear relationship and is computationally expensive when there are thousands of variables.
@@ -191,7 +195,7 @@ These method includes MetaPhlAn2, HUMAnN, LEfSe [@franzosaSpecieslevelFunctional
 
 Furthermore, some methods are designed to integrate specific types of datasets, (usually because they make some assumptions that are only met on that kind of data).
 For instance, HCG, 16S, RNA-seq and metabolomics do not share the same data distribution, and are different between them.
-Also even with the same data depending on the processing of the data they can have very different properties: OTUs (operational taxonomic unit) do not behave equally as ASV (amplicon sequence variants).
+Also even with the same data depending on the processing of the data they can have very different properties: OTUs (operational taxonomic unit) properties are not the same as ASV (amplicon sequence variants).
 
 #### Mathematical framework
 
@@ -201,10 +205,10 @@ Some of them have previously appeared:
 -   Networks
 
     Networks methods were mentioned because they use and find information about interaction of variables.
-    Multilayer networks, including the multiplex, Molti-C-DREAM, RWR-MH, RWR-M. Network embedding MultiVERSE are some of the methods using networks.
+    Multilayer networks, including the multiplex, Molti-C-DREAM[@didier2018], RWR-MH, RWR-M [@valdeolivas2019]. Network embedding MultiVERSE are some of the methods using networks [@pio-lopez2021].
 
-    Bayesian approaches are also quite frequent and methods use the Bayes theorem to see the relationships between variables.
-    Some methods that use these approaches are X, Y, Z.
+    Bayesian approaches are also quite frequent, these methods use the Bayes theorem to see the relationships between variables.
+    Some methods that use these approaches are [RIMBANET](http://research.mssm.edu/integrative-network-biology/RIMBANET/RIMBANET_overview.html) [@zhu2012], [BCC](https://github.com/ttriche/bayesCC) [@lock2013] and others like [@virtanen2012]
 
 -   Dimensional Reduction
 
@@ -213,14 +217,12 @@ Some of them have previously appeared:
     L1 regularization adds a penalty equal to the absolute value of the magnitude of coefficients which leads to some coefficients can become zero and the variable eliminated from the model.
     On the other hand, L2 regularization doesn't result in elimination of coefficients or sparse models and can only be used when there is multicollinearity.
 
-    Other methods use bayesian approaches
-
-    Momix, RGCCA,
+    Momix [@cantini_benchmarking_2020], RGCCA [@tenenhaus2017], mixOmics [@rohart2017], STATegRa [@gomez-cabrero2019], ...
 
 -   Active module identification
 
     Multiomic objective genetic algorithm (scores based in two metrics, node score and density of interactions score).
-    MOGAMUN
+    MOGAMUN [@novoa-del-toro2020]
 
 Usually depending on the mathematical framework used they return these methods return similar output.
 
@@ -247,11 +249,9 @@ Such methods include Regularized Generalized Canonical Correlation Analysis (RGC
 -   Mixed factors:
 
 The integration results in both previous factors, specific of each data and common to all the data.
-Such methods include Joint and Individual Variation Explained (JIVE), integrative Non-negative Matrix Factorization (intNMF).
+Such methods include Joint and Individual Variation Explained (JIVE), integrative Non-negative Matrix Factorization ([iNMF](https://github.com/yangzi4/iNMF)) [@yang2016].
 
-For active module identification the common output is XXXYYYZZZ.
-
-Given this output the researcher task is usually to understand and discuss the results with previous knowledge or independent sources of data.
+These methods are used to understand and discuss the results with previous knowledge or independent sources of data.
 
 ### Interpretation
 
@@ -272,16 +272,15 @@ Or by patient: how do interpret that in these patient variable A and B is X and 
 
 -   Globally:
 
-In a PCA for instance how do we interpret that some variables have the same loading?
+In a principal component analysis for instance how do we interpret that some variables have the same loading?
 What happens in a more difficult method like canonical correlation analysis?
 
 There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981]. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
+Which is used to compare the results of the integration with the dataset of interest and to compare different tools.
+These datasets are created with some relationships that the tools are expected to find.
 
-To help interpretation frequently synthetic datasets are used to compare the results of the integration with the dataset of interest and to compare different tools.
-This datasets are created with some relationships that the tools are expected to find.
-
-There exists several methods to create synthetic datasets like MOSim, metaSPARSim, CAMISIM, ballgown, polyester and even edgeR can be used.
-These methods are useful to compare different setup and methods but they can miss some subtle not previously reported relations.
+There exists several methods to create synthetic datasets like MOSim [@haberman2019], metaSPARSim [@patuzzi2019], CAMISIM [@fritz2019], ballgown [@fu2021], polyester [@frazee2021] and even edgeR [@mccarthy2012] can be used.
+These methods are useful to compare different setup and methods but they can miss some subtle not previously reported relations on real data.
 
 ### Conclusion
 
@@ -293,9 +292,7 @@ The differences between the many methods that exist do not make the interpretati
 
 The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool for a research [@cantini_benchmarking_2020].
 
-Some of these reviews are focused on a field: metabolomics (ref), genomics, microbiomics... or on a specific characteristic: ?.
-
-Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies [@de_souza_ibd_2017].
+Some of these reviews are focused on a field: metabolomics [@cavill2016], genomics [@mcgovern2015a], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies [@de_souza_ibd_2017; @tarazona2021a; @valles-colomer2016].
 
 ### Summary
 
@@ -315,12 +312,12 @@ Some differences between them is that on CD a granulome, that is a region with b
 
 To distinguish between the diseases, in addition to the inflamed location(s), mosaic zones (patches of inflamed and non-inflamed areas) are more characteristic of CD [@bassolasmolina2018].
 
-Sometimes blood analysis are also used, if there are some factors altered such as leucocits, a high globular sedimentation speed, increas of protein C reactive and anemia could indicate inflammatory bowel disease.
-Also, if there is an increase of calprotectine in fecal samples is indication of CD disease [@sands2015].
+Sometimes blood analysis are also used, if there are some factors altered such as leukocytes, a high globular sedimentation speed, increase of protein C reactive and anemia could indicate inflammatory bowel disease.
+Also, if there is an increase of calprotectin in fecal samples is indication of CD disease [@sands2015].
 
 <!-- End -->
 
-Around 3.5 million individuals have IBD in Europe and North America combined [@jairath2020]. IBD is more commonly found in industrialized and developed regions, suggesting that environmental factors might greatly influence IBD occurrence. In addition, the incidence of IBD is increasing in areas, such as Asia or Eastern Europe, where the number of cases was relatively low hitherto [@burisch2015]
+Around 3.5 million individuals have IBD in Europe and North America combined [@jairath2020]. IBD is more commonly found in industrialized and developed regions, suggesting that environmental factors might greatly influence IBD occurrence. In addition, the incidence of IBD is increasing in areas, such as Asia or Eastern Europe, where the number of cases was relatively low hitherto [@burisch2015].
 
 The disease has been used as a condition that prevents people to [apply to certain positions](https://civio.es/el-boe-nuestro-de-cada-dia/2019/02/13/las-enfermedades-que-vetan-el-acceso-a-ciertos-empleos-publicos/ "Link to a Civio.es about disease disqualifying for some public positions").
 The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome.
@@ -340,22 +337,18 @@ Little is known of the influence of the gastrointestinal microbiome in the expre
 
 ### Etiology and pathogenesis
 
-Several explanations has been proposed of the origin of the disease [?c
-itation needed].
-Some of them base on a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire [@corralizaDifferencesPeripheralTissue].
+Several explanations has been proposed of the origin of the disease [@zhang2014; @hugot2004] . Some of them base on a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire [@corralizaDifferencesPeripheralTissue].
 It is also unclear if Crohn's disease and the ulcerative colitis share the same origin considering their different symptoms.
 
-There is also evidence of some genetic component on the onset of the disease, specially if it is very early.
+There is also evidence of some genetic component on the onset of the disease, specially if it is very early [@mcgovern2015b].
 
 Although so far we do not know what starts the disease there are differences on the disease when appears at different age.
 There is a rough classification between very early, early or adult on-set disease.
-The main differences are [ask Isa?]
-.
 On very early on-set the genetic component is high.
 GWAS studies has linked the IBD disease to *NOD2* gene, but so far there isn't any known mechanism how this gene could start the disease.
 On early and adult disease the genetic component is lower and it is thought that the environmental factors are the main cause of the disease.
 
-Either case it is not known how it starts or is maintained and causes those characteristics relapses.
+Either case it is not known how it starts or it is sustained and causes those characteristics relapses.
 
 #### Genetics
 
@@ -371,7 +364,7 @@ However, there hasn't been a proposed mechanism for how does it work.
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
 Recently expression quantitative trait loci (eQTL) particularly showed this [@mcgovern2015].
-Usually they are on enchancer or promoters like e.g.
+Usually they are on enhancers or promoters like e.g.
 H3K27Ac or promoter e.g.
 H3K4me1 marks as found by ChIP-Seq (chromatin immunoprecipitation sequencing).
 
@@ -391,18 +384,18 @@ IBD has been characterized by a breakdown in the balance between beneficial and 
 
 Many studies show that patients with inflammatory bowel disease has less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
-$\alpha$-diversity is a mesure of the species present on a single sample and how much of each there is.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive) at the mucosal layer of IBD patients [@ott2004]. At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
+$\alpha$-diversity is a measure of the species present on a single sample and how much of each there is.
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004]. At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
 
 <!--Aida 2.3 p24-->
 
-In fact, it has been recently demonstrated that several unique microbial species can distinguish healthy controls from UC and CD patients [@sankarasubramanian2020a; @lopez-siles2014]
+In fact, it has been recently proposed that several unique microbial species can distinguish healthy controls from UC and CD patients [@sankarasubramanian2020a; @lopez-siles2014].
 
 ![The microbial composition and in healthy and IBD gut](images/tesis_AM_Figure2.png "Microbial composition and epithelial barrier status in healthy versus IBD gut.")
 
 <!--End-->
 
-One of the proposed mechanism is through the chemical compounds they generate.
+One of the proposed mechanism of interaction is through the chemical compounds they generate.
 Chemical compounds may interact with the cells and modulate the state of the intestine.
 One example of such molecular is butyrate which has been linked to microorganisms presents on healthy intestines and to induce a better healing of intestine cells [@ferrer-picón2020].
 
@@ -414,9 +407,9 @@ As explained on the introduction one of the possible causes of the inflammatory 
 Crohn's disease presents altered innate and adaptive immune responses.
 IBD is often characterized as an immune-mediated disease, if not outright autoimmune disease.
 
-A loss of tolerance to commensal bacteria has been suggested as the underlying mechanism.
-The mechanism involves many different cells lines and regions.
-For a better understanding it is important to know the organization of the intestinal organization.
+A loss of tolerance to commensal bacteria has been suggested as the underlying mechanism triggering the inflammation on the intestine.
+The immune response involves many different cells lines and regions.
+For a better understanding it is important to know the organization of the intestine and its cells.
 
 <!--Image from Ana tesis p29: -->
 
@@ -428,7 +421,7 @@ Later the intestinal epithelium is a single layer of cells organized into crypts
 These cells usually come from the basal side of the crypt and mature as they move towards the apical side.
 
 Both the adaptive and the innate immunity related cells are present on the intestine, right below the epithelium.
-On IBD due to antigen translocation into the lamina propria, the immune response leads the adaptative cells to generate immune response to harmless components of the intestinal microbiota.
+On IBD due to antigen translocation into the lamina propria, the immune response leads the adaptive cells to generate immune response to harmless components of the intestinal microbiota.
 This initial response would induce a local increase in the production of pro-inflammatory cytokines and mediators which would damage the epithelium.
 This damage is what would be later identified as inflammatory bowel disease.
 
@@ -441,9 +434,9 @@ However, due to its associated risk this therapy is only given when patients are
 <!--p26 Aida sec 2.4 -->
 
 Chronic inflammatory disorders and neoplasms have become the main cause of morbidity and mortality in the countries that follow a strategy of reducing the contact with anything dirty.
-This decreases the human exposure to microbes which might affect the proper maturation of the immune system so that it provides a more ineffective immune response or exhacerbated response towards "friendly" microbes [@strachan1989; @scudellari2017].
+This decreases the human exposure to microbes which might affect the proper maturation of the immune system so that it provides a more ineffective immune response or exacerbated response towards "friendly" microbes [@strachan1989; @scudellari2017].
 
-From other environmental factors reslated to IBD wuch as tobacco, diet, certain drugs and stress, Tobacco is the most influential environmental factor.
+From other environmental factors related to IBD such as tobacco, diet, certain drugs and stres; tobacco is the most influential environmental factor.
 Surprisingly, it has an opposite effect on UC and CD: in CD tobacco is a risk factor that increases the risk of relapse and/or surgical intervention.
 In UC, it has been observed that smoking cessation worsens the disease [@thomas1998].
 
