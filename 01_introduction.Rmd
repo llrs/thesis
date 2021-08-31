@@ -541,18 +541,14 @@ Other measured parameters include, weight, effective weight, calprotectin, Prote
 
 #### Drugs and treaments
 
-The ones given on the hospital more or less on the order of administration, although this varies between patients and time according to recurrent meetings doctors have and current recomendations:
-
-anti-TNF$\alpha$, vedolizumab, ustekinumab, risankizumab, tofacitinib, infliximab, adalimumab a 5-asa treatement, corticoesteroids, Azathiprine/Mercaptopurine 6MCP, Methotrexate MTX, Tacrolimus FK, Cyclosporin A CyA.
-
-All these drugs and procedures are available at the time of writing, and patients were taking one or more of those drugs as standard of care to contain the disease heal and have a good quality of life.
+Many drugs can given, although this varies between patients and time according to recurrent meetings doctors have and current recomendations: anti-TNF$\alpha$, vedolizumab, ustekinumab, risankizumab, tofacitinib, infliximab, adalimumab a 5-asa treatement, corticoesteroids, Azathiprine/Mercaptopurine 6MCP, Methotrexate MTX, Tacrolimus FK, Cyclosporin A CyA. All these drugs and procedures are available at the time of writing, and patients are taking one or more of those drugs as standard of care to have a good quality of life and heal.
 
 To reduce secondary effects of drugs or to find the right dose of the drugs often a reduction of dose is recommended.
 Dose reduction often results in losing the response to the drug.
 Thus, after an increase of the dose to the previous levels the patients not recover the initial response they had and doctors need to recommend other drugs or combinations of drugs.
 
 If the drugs fail to contain the inflammation and heal the epithelium doctors might recommend to perform a surgery to remove the damaged section.
-In some cases Hematopoietic Stem Cell Transplant (HSCT) is recommended.
+In some cases Hematopoietic Stem Cell Transplant (HSCT) is recommended which have shown to improve the life of the patients [@corralizab].
 
 This is a new procedure given only to the most extreme cases for which several publications have checked that it resets the immunological state of the patient.
 Currently it is only performed on the Hospital Clínic (Barcelona).
@@ -569,18 +565,6 @@ Current clinical care in some cases is enough to have a sustained clinical and e
 Several factors, such as becoming refractory to drugs, intermittent discourse of the disease, make the treatment complex.
 
 The lack of knowledge of what are the factors of the ethiology and causes of the disease make those treatments and drugs to be addressed to block further inflammation and damage, but cannot prevent it and often they do not stop it completely.
-
-#### Transcriptomics
-
-Most useful
-
-Healing, inflammation
-
-Response to treatemnts
-
-#### Microbiome
-
-Controls diversity vs IBD patients
 
 ## Integration on IBD
 
@@ -599,17 +583,13 @@ There are known marker gens of inflammation and many research focus on identifyi
 Recently single-cell technology has enabled to estimate cell populations of the samples with better degree of success than bulk RNA-sequencing.
 Single cell technologies are starting to be also for integration.
 
-One of the few methods published that show an interaction between genes and microorganisms on the inflammatory bowel disease is to expose the ex-vivo sample or cell lines with microbiomes or supernatant of at their culture [aida].
+One of the few methods published that show an interaction between genes and microorganisms on the inflammatory bowel disease is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
 
 ### Microbiome
-
-<!--Tesis Elena Ferrer-->
 
 Many of the integration analysis on inflammatory bowel are done between host transcriptome and the microbiome.
 These studies use datasets from IBD patients usually stratified by some inflammatory index or location of the disease.
 Most of them are based on correlation analysis between the microbiome and RNA-seq [@hasler_uncoupling_2016]. Conclusions of these integrations range from finding differences on the correlation depending on the disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang_integrated_2017].
-
-Generally microbiome integrations show some relationship between an organism and a condition [citation needed].
 
 ### Genetics
 
