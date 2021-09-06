@@ -1,0 +1,12 @@
+# Discussion
+
+WGCNA didn't work.
+
+adonis worked to identify which variables were important.
+
+MCIA works well as baseline.
+
+STATegRa not customizable the interaction between the datasets.
+
+RGCCA some improvements.
+
