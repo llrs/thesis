@@ -8,7 +8,7 @@ All samples were collected with approval from the Ethical Comitee and under expr
 
 ### HSCT dataset
 
-<!--COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005-->
+<!--COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
 
 Samples from the HSCT dataset included in this study were from a cohort of patients with severe refractory CD undergoing hematopoietic stem cell transplant.
 Patients were treated in the Department of Gastroenterology (Hospital Clínic de Barcelona --Spain--).
@@ -26,7 +26,9 @@ The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen
 
 Total RNA from mucosal samples (HSCT cohort) was isolated using the RNeasy kit (Qiagen, Hilde, Germany).
 RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4000 platform.
-Later, cutadapt (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the STAR aligner (2.5.2a) with Ensembl annotation (release GRCh38.10) [@dobin2013]. Read counts per gene were obtained with RSEM (version 1.2.31) [@li2011] as previously described [@corralizaDifferencesPeripheralTissue]. Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28) [@mccarthy2012].
+Later, cutadapt (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the STAR aligner (2.5.2a) with Ensembl annotation (release GRCh38.10) [@dobin2013].
+Read counts per gene were obtained with RSEM (version 1.2.31) [@li2011] as previously described [@corralizaDifferencesPeripheralTissue].
+Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28) [@mccarthy2012].
 
 #### Microbial DNA extraction from mucosal samples
 
@@ -43,16 +45,24 @@ Library preparation and sequencing were performed at the Technische Universität
 Briefly, volumes of 600μL DNA stabilization solution (STRATEC biomedical) and 400μL Phenol:choloform:isoamyl alcohol (25:24:1, Sigma-Aldrich) were added to the aliquots.
 Microbial cells were disrupted by mechanical lysis using FastPrep-24.: Heat treatment and centrifugation were conducted after adding a cooling adaptor.
 Supernatants were treated with RNase to eliminate RNA.
-Total DNA was purified using gDNA columns as described in detail previously [34].
-Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol [35] using forward and reverse primers 341F-785R [36].
+Total DNA was purified using gDNA columns as described in detail previously [@berry2011]. Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol [@klindworth2013] using forward and reverse primers 341F-785R [@edgar2013a].
 Purification of amplicons was performed by using the AMPure XP system (Beckmann).
 Next, sequencing was performed with pooled samples in paired-end modus (PE275) using an MiSeq system (Illumina, Inc.) according to the manufacturer's instructions and 25% (v/v) PhiX standard library.
 
 #### Microbial profiling
 
-Processing of raw-reads was performed by using the IMNGS (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the UPARSE approach [@edgar2013a] . Sequences were demultiplexed, trimmed to the first base with a quality score \<3 and then paired. Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error \>3 were excluded from the analysis. Trimming of the remaining reads was done by trimming 5 nucleotides from each end to avoid GC bias and non-random base composition. Operational taxonomic units (OTUs) were clustered at 97% sequence similarity. Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project. Later the data was normalized using the same method as for RNA-seq described above. The microbiome was visually inspected for batch effects in PCA; none were found. The resulting OTUs table was normalized using edgeR (Version 3.28) [@mccarthy2012].
+Processing of raw-reads was performed by using the IMNGS (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the UPARSE approach [@edgar2013a] .
+Sequences were demultiplexed, trimmed to the first base with a quality score \<3 and then paired.
+Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error \>3 were excluded from the analysis.
+Trimming of the remaining reads was done by trimming 5 nucleotides from each end to avoid GC bias and non-random base composition.
+Operational taxonomic units (OTUs) were clustered at 97% sequence similarity.
+Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project.
+Later the data was normalized using the same method as for RNA-seq described above.
+The microbiome was visually inspected for batch effects in PCA; none were found.
+The resulting OTUs table was normalized using edgeR (Version 3.28) [@mccarthy2012].
 
-Dada2 was another method used [@callahan2016] to create amplicon sequencing variants. Together with Qiime2 [@bolyen2019] it is an alternative to OTUs which allows to be able to compare results between studies and provides more resolution.
+Dada2 was another method used [@callahan2016] to create amplicon sequencing variants.
+Together with Qiime2 [@bolyen2019] it is an alternative to OTUs which allows to be able to compare results between studies and provides more resolution.
 
 <!--Finished the copied section-->
 
@@ -67,7 +77,7 @@ To test if some variables according to a statistic like fold change or value fgs
 
 GSVA is similar but instead of first computing the ordering values and then performing the test it first groups the variables and then they are tested [@hänzelmann2013].
 
-vegan package provides the adonis method used to test if microbiome data variation comes from known sources of variation [@oksanen2020].
+vegan package provides the adonis method used to test if microbiome data variation is due to other variables [@oksanen2020].
 
 clusterProfiler: genes enrichment for functionality on databases [@wu2021].
 
@@ -78,9 +88,11 @@ Computationally expensive: too many combinations.
 
 microbiome diversity was measured using vegan and phyloseq methods [@oksanen2020].
 
-WGCNA, co-expression with all the microbiome and RNAseq, not working due to different type of data [@langfelder2008].
+We looked to see if using some co-expression measure between the the microbiome and the RNAseq would help identify relationships.
+We used weighted gene co-expression network analysis as implemented on WGCNA, [@langfelder2008].
 
-MCIA, simple integration, two blocks [@meng2014].
+Multiple co-inertia (MCIA) analysis is a method to examine covariant gene expression patterns between two data sources.
+, simple integration, two blocks [@meng2014].
 
 globaltest for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
 
