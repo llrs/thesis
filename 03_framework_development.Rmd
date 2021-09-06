@@ -2,6 +2,10 @@
 
 ## Sample collection
 
+#### Ethical issues
+
+All samples were collected with approval from the Ethical Comitee and under express authorization of the patients.
+
 ### HSCT dataset
 
 <!--COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005-->
@@ -18,18 +22,13 @@ The protocol was approved by the Institutional Ethics Committee of the Hospital 
 At least one biopsy was collected and fresh-frozen at -80°C for microbial DNA extraction.
 The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen, Hilde, Germany) and stored at -80°C until total RNA extraction.
 
-## Transcriptome sequencing
+#### Transcriptome sequencing
 
 Total RNA from mucosal samples (HSCT cohort) was isolated using the RNeasy kit (Qiagen, Hilde, Germany).
 RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4000 platform.
-Later, cutadapt (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the STAR aligner (2.5.2a) with Ensembl annotation (release GRCh38.10) [@dobin2013].
-Read counts per gene were obtained with RSEM (version 1.2.31) [@li2011] as previously described [@corralizaDifferencesPeripheralTissue].
-Analysis was performed using R (version 3.6.1) and Bioconductor (Version 3.10) on Ubuntu 18.04.
-The host transcriptome was visually inspected for batch effects in PCA.
-Outliers and the top 10% genes using the coefficient of variation were removed (20593, with remaining 37685 genes).
-Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28) .
+Later, cutadapt (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the STAR aligner (2.5.2a) with Ensembl annotation (release GRCh38.10) [@dobin2013]. Read counts per gene were obtained with RSEM (version 1.2.31) [@li2011] as previously described [@corralizaDifferencesPeripheralTissue]. Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28) [@mccarthy2012].
 
-## Microbial DNA extraction from mucosal samples
+#### Microbial DNA extraction from mucosal samples
 
 Biopsies from the HSCT CD cohort were resuspended in 180 μl TET (TrisHCl 0.02M, EDTA 0.002M, Triton 1X) buffer and 20mg/ml lysozyme (Carl Roth, Quimivita, S.A.). Samples were incubated for 1h at 37°C and vortexed with 25 μl Proteinase K before incubating at 56°C for 3h.
 Buffer B3 (NucleoSpin Tissue Kit--Macherey-Nagel) was added followed by a heat treatment for 10 min at 70°C.
@@ -38,7 +37,7 @@ Two washing steps were performed before eluting DNA.
 Concentrations and purity were checked using NanoDrop One (Thermo Fisher Scientific).
 Samples were immediately used or placed at -20°C for long-term storage.
 
-## DNA sequencing
+#### DNA sequencing
 
 Library preparation and sequencing were performed at the Technische Universität München.
 Briefly, volumes of 600μL DNA stabilization solution (STRATEC biomedical) and 400μL Phenol:choloform:isoamyl alcohol (25:24:1, Sigma-Aldrich) were added to the aliquots.
@@ -49,17 +48,11 @@ Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) follow
 Purification of amplicons was performed by using the AMPure XP system (Beckmann).
 Next, sequencing was performed with pooled samples in paired-end modus (PE275) using an MiSeq system (Illumina, Inc.) according to the manufacturer's instructions and 25% (v/v) PhiX standard library.
 
-## Microbial profiling
+#### Microbial profiling
 
-Processing of raw-reads was performed by using the IMNGS (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the UPARSE approach [@edgar2013a] .
-Sequences were demultiplexed, trimmed to the first base with a quality score \<3 and then paired.
-Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error \>3 were excluded from the analysis.
-Trimming of the remaining reads was done by trimming 5 nucleotides from each end to avoid GC bias and non-random base composition.
-Operational taxonomic units (OTUs) were clustered at 97% sequence similarity.
-Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project.
-Later the data was normalized using the same method as for RNA-seq described above.
-The microbiome was visually inspected for batch effects in PCA; none were found.
-The resulting OTUs table was normalized using edgeR (Version 3.28).
+Processing of raw-reads was performed by using the IMNGS (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the UPARSE approach [@edgar2013a] . Sequences were demultiplexed, trimmed to the first base with a quality score \<3 and then paired. Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error \>3 were excluded from the analysis. Trimming of the remaining reads was done by trimming 5 nucleotides from each end to avoid GC bias and non-random base composition. Operational taxonomic units (OTUs) were clustered at 97% sequence similarity. Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project. Later the data was normalized using the same method as for RNA-seq described above. The microbiome was visually inspected for batch effects in PCA; none were found. The resulting OTUs table was normalized using edgeR (Version 3.28) [@mccarthy2012].
+
+Dada2 was another method used [@callahan2016] to create amplicon sequencing variants. Together with Qiime2 [@bolyen2019] it is an alternative to OTUs which allows to be able to compare results between studies and provides more resolution.
 
 <!--Finished the copied section-->
 
@@ -68,34 +61,39 @@ The resulting OTUs table was normalized using edgeR (Version 3.28).
 A false discovery rate (FDR) correction for multiple testing was performed when necessary.
 Nominal or FDR p. values \<0.05 were considered significant.
 
-Functional enrichment
+### Functional enrichment
 
-To test if some variables according to a statistic like fold change or value fgsea is a software used to see if groups of variables present a
+To test if some variables according to a statistic like fold change or value fgsea [@korotkevich2021] is a software used to see if groups of variables present in an ordered list present some skewed distribution.
 
-GSVA is similar but instead of first computing the ordering values and then performing the test it first groups the variables and then they are tested.
+GSVA is similar but instead of first computing the ordering values and then performing the test it first groups the variables and then they are tested [@hänzelmann2013].
 
-adonis method uses to test if microbiome data variation comes from known sources of variation.
+vegan package provides the adonis method used to test if microbiome data variation comes from known sources of variation [@oksanen2020].
 
-microbiome diversity is often measured in two distinct levels
+clusterProfiler: genes enrichment for functionality on databases [@wu2021].
+
+### Other methods used
 
 BaseSet use fuzzy set logic on the bootstrapped samples for each variable to find which are really involved.
 Computationally expensive: too many combinations.
 
-WGCNA, co-expression with all the microbiome and RNAseq, not working due to different type of data.
+microbiome diversity was measured using vegan and phyloseq methods [@oksanen2020].
 
-MCIA, simple integration, two blocks
+WGCNA, co-expression with all the microbiome and RNAseq, not working due to different type of data [@langfelder2008].
 
-clusterProfiler: genes enrichment for functionality on databases.
+MCIA, simple integration, two blocks [@meng2014].
 
-globaltest for testing complex hipothesis and help decide if the variables were influencing.
+globaltest for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
 
-STATegRa, not interaction between variables.
+STATegRa, is a framework for integrating datasets with two data types using parametric and non-parametric methods [@planell2021].
+However this method doesn't use the not interaction between variables.
 
-# Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis
+RGCCA has been the main method used which means that [@tenenhaus2017a].
 
-The canonical correlation is a method that using data from the same sample but from different datasets.
+## Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis
 
-Characteristics
+The canonical correlation is a method that usrd data from the same sample but from different datasets.
+
+### Characteristics
 
 Input Data type: numeric
 
@@ -110,6 +108,8 @@ Output:
 Specific factors Interpretation:
 
 Depending on the model and options used.
+
+### Description
 
 Over several years of progress [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015] on the field of canonical correlations it provides a robust method and there is an implementation [@R-RGCCA].
 
@@ -138,7 +138,7 @@ Some of these changes are to to be able to change the design between different d
 The idea behind this change is that if the first dimensions correctly fits the data the second dimension might need a different model of relationships.
 For instance, the first dimensions are dominated by two blocks of data while the second is dominated by another block of data.
 
-## Relationships' models
+### Relationships' models
 
 Most multi-omics and integration tools assume one block for each type of data.
 However, RGCCA uses linear relationships between blocks of data.
@@ -153,14 +153,14 @@ This allows to design a model with an expected relationships between these dimen
 However, in general on the dimension reduction methods, as well as in the generalized canonical correlation analysis, they can't infer causal relationships.
 Which can be found with a symmetric design matrix.
 
-### Designing models
+#### Designing models
 
 The model of the generalized canonical correlation is highly dependent of the blocks present.
 
 If one has preexisting theories about the data, a specific model can be used stating these known or hypothetical relationships.
 However, if new relationships are being explored or no prior beliefs on the data are held the models should be created with random links between blocks, and evaluate which model is better.
 
-### Evaluating models
+#### Evaluating models
 
 To evaluate a model RGCCA provides the average variance explained (AVE), inner and outer.
 Inner AVE is for how well do all the canonical dimensions correlate with the design of the experiment, so it a measure of how good the model is.
@@ -175,8 +175,6 @@ Which was compared by looking at the area under the curve for classifying the sa
 
 Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn's disease.
 In this article we didn't look in depth to the biological relevance of the microorganisms an genes found.
-
-## Conclusions
 
 The procedure of separating independent variables in their own block of data and later search the best model that fits the data provides a good strategy that should be consider for integration efforts.
 
