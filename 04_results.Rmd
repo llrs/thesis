@@ -5,3 +5,6 @@ Provide more information that can be later used by researchers on the wet lab.
 ## Comparing different dataset
 
 ## Shared selected variables
+
+
+BaseSet didn't work, it is computationally expensive to calculate the likelihood of 1500 variables, there are too many combinations.

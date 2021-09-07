@@ -10,3 +10,30 @@ STATegRa not customizable the interaction between the datasets.
 
 RGCCA some improvements.
 
+#### Designing models
+
+The model of the generalized canonical correlation is highly dependent of the blocks present.
+
+If one has preexisting theories about the data, a specific model can be used stating these known or hypothetical relationships.
+However, if new relationships are being explored or no prior beliefs on the data are held the models should be created with random links between blocks, and evaluate which model is better.
+
+#### Evaluating models
+
+To evaluate a model RGCCA provides the average variance explained (AVE), inner and outer.
+Inner AVE is for how well do all the canonical dimensions correlate with the design of the experiment, so it a measure of how good the model is.
+While outer AVE is a measure of how well do the variables of each block correlate with the canonical dimension, so it measures the agreement between the variables and the canonical dimensions.
+Depending on the goals of the research one or the other should be used.
+If we are more interested on the model of the relationships the inner AVE makes more sense.
+
+Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
+Another option is to use an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately.
+Of the multiple methods available we used [MCIA](https://bioconductor.org/packages/omicade4 "Omicade4") [@mengMultivariateApproachIntegration2014].
+Which was compared by looking at the area under the curve for classifying the samples according to their location.
+
+Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn's disease.
+In this article we didn't look in depth to the biological relevance of the microorganisms an genes found.
+
+The procedure of separating independent variables in their own block of data and later search the best model that fits the data provides a good strategy that should be consider for integration efforts.
+
+The procedural method of searching a model and testing them is implemented on [inteRmodel](https://llrs.github.io/inteRmodel/ "inteRmodel").
+But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling.

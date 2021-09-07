@@ -3,7 +3,7 @@ bookdown::gitbook:
   includes:
     before_body: wip.html
   dev: svglite
-  split_by: section
+  split_by: chapter
   citation_package: none
   pandoc_args: [ "--csl", "bmc_bioinformatics.csl" ]
   config:

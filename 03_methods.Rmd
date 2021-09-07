@@ -26,9 +26,7 @@ The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen
 
 Total RNA from mucosal samples (HSCT cohort) was isolated using the RNeasy kit (Qiagen, Hilde, Germany).
 RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4000 platform.
-Later, cutadapt (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the STAR aligner (2.5.2a) with Ensembl annotation (release GRCh38.10) [@dobin2013].
-Read counts per gene were obtained with RSEM (version 1.2.31) [@li2011] as previously described [@corralizaDifferencesPeripheralTissue].
-Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28) [@mccarthy2012].
+Later, cutadapt (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the STAR aligner (2.5.2a) with Ensembl annotation (release GRCh38.10) [@dobin2013]. Read counts per gene were obtained with RSEM (version 1.2.31) [@li2011] as previously described [@corralizaDifferencesPeripheralTissue]. Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28) [@mccarthy2012].
 
 #### Microbial DNA extraction from mucosal samples
 
@@ -51,146 +49,104 @@ Next, sequencing was performed with pooled samples in paired-end modus (PE275) u
 
 #### Microbial profiling
 
-Processing of raw-reads was performed by using the IMNGS (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the UPARSE approach [@edgar2013a] .
-Sequences were demultiplexed, trimmed to the first base with a quality score \<3 and then paired.
-Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error \>3 were excluded from the analysis.
-Trimming of the remaining reads was done by trimming 5 nucleotides from each end to avoid GC bias and non-random base composition.
-Operational taxonomic units (OTUs) were clustered at 97% sequence similarity.
-Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project.
-Later the data was normalized using the same method as for RNA-seq described above.
-The microbiome was visually inspected for batch effects in PCA; none were found.
-The resulting OTUs table was normalized using edgeR (Version 3.28) [@mccarthy2012].
+Processing of raw-reads was performed by using the IMNGS (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the UPARSE approach [@edgar2013a] . Sequences were demultiplexed, trimmed to the first base with a quality score \<3 and then paired. Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error \>3 were excluded from the analysis. Trimming of the remaining reads was done by trimming 5 nucleotides from each end to avoid GC bias and non-random base composition. Operational taxonomic units (OTUs) were clustered at 97% sequence similarity. Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project. Later the data was normalized using the same method as for RNA-seq described above. The microbiome was visually inspected for batch effects in PCA; none were found. The resulting OTUs table was normalized using edgeR (Version 3.28) [@mccarthy2012].
 
-Dada2 was another method used [@callahan2016] to create amplicon sequencing variants.
-Together with Qiime2 [@bolyen2019] it is an alternative to OTUs which allows to be able to compare results between studies and provides more resolution.
+Another method used to analyze microbiome data is dada2 [@callahan2016] which creates amplicon sequencing variants from the 16S sequencing data. Together with Qiime2 [@bolyen2019] it is an alternative to OTUs which allows to be able to compare results between studies and provides more resolution.
 
 <!--Finished the copied section-->
 
 ## Statistics
 
-A false discovery rate (FDR) correction for multiple testing was performed when necessary.
-Nominal or FDR p. values \<0.05 were considered significant.
+A false discovery rate (FDR) correction for multiple testing was performed when necessary following the method of Benjamini, Hochberg and Yekutieli.
+FDR values below 0.05 were considered significant.
+
+Besides correcting for multiple testing several methods were used on this thesis.
+Functional enrichment related methods stand out.
 
 ### Functional enrichment
 
-To test if some variables according to a statistic like fold change or value fgsea [@korotkevich2021] is a software used to see if groups of variables present in an ordered list present some skewed distribution.
+Functional enrichment methods are the name that receive some methods that aim to provide with more information about the variables besides their numerical value measured.
+They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.
 
-GSVA is similar but instead of first computing the ordering values and then performing the test it first groups the variables and then they are tested [@hänzelmann2013].
+To test if some variables show an unexpected importance according to a statistic like fold change or value fgsea [@korotkevich2021] methods was used.
+fgsea is a software used to see if groups of variables present in an ordered list present some skewed distribution.
+Pathways of genes were tested on the weight of different models.
 
-vegan package provides the adonis method used to test if microbiome data variation is due to other variables [@oksanen2020].
+GSVA is a method related to fgsea that summarize the variables' numerical value so that they can be later used by other methods [@hänzelmann2013].
+GSVA was used to estimate the expression of the pathways and try to find the relationships between the pathways and the microbiome at different taxonomic levels.
 
-clusterProfiler: genes enrichment for functionality on databases [@wu2021].
+vegan package provides the adonis method used to test if microbiome data variance is due to other variables [@oksanen2020].
+This allows to test if the variables are related to the variance of the data.
+This is particularly important on the microbiome data, which is highly variable.
+
+clusterProfiler: test genes enrichment for functionality based on information on pathway databases [@wu2021].
+It uses several methods like fisher test to check the enrichment of features of a given group on the list provided.
 
 ### Other methods used
 
-BaseSet use fuzzy set logic on the bootstrapped samples for each variable to find which are really involved.
-Computationally expensive: too many combinations.
+BaseSet is a package that use fuzzy set logic.
+It can be used to calculate the size of the sets given a probability of having each element on the sets.
+On the bootstrapped samples it was used to find which variables were really involved on the interaction and how likely were to be together.
 
-microbiome diversity was measured using vegan and phyloseq methods [@oksanen2020].
+Microbiome diversity was measured using vegan and phyloseq methods [@oksanen2020].
+Alpha $\alpha$-diversity is the % of a given microbiome at a taxonomic level or using the Simpson or Shannon diversity index.
+Beta diversity was calculated using the phyloseq package.
 
 We looked to see if using some co-expression measure between the the microbiome and the RNAseq would help identify relationships.
 We used weighted gene co-expression network analysis as implemented on WGCNA, [@langfelder2008].
 
-Multiple co-inertia (MCIA) analysis is a method to examine covariant gene expression patterns between two data sources.
-, simple integration, two blocks [@meng2014].
+Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two data sources [@meng2014].
+, simple integration, two blocks.It was used as a baseline method to find relationships between microorganisms and genes.
 
-globaltest for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
+globaltest is a package with methods for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
+It provides a general test statistic to test a hypothesis against a high dimensional dataset.
+It was used to test which variables, (sex, age, location, time since diagnostic) are important on the datasets.
 
 STATegRa, is a framework for integrating datasets with two data types using parametric and non-parametric methods [@planell2021].
-However this method doesn't use the not interaction between variables.
+It was used to explore the datasets and see what do they had in common.
 
-RGCCA has been the main method used which means that [@tenenhaus2017a].
+Regularized generalized canonical correlation analysis, RGCCA, has been the main method used [@tenenhaus2017a].
+It will be explained in detail on the next section.
 
 ## Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis
 
-The canonical correlation is a method that usrd data from the same sample but from different datasets.
-
-### Characteristics
-
-Input Data type: numeric
-
-More variables than samples: It is appropriate when the number of variables is higher than the number of samples.
-Need to be a complete case.
-Time is not considered as a specially variable
-
-Relationship between variables
-
-Output:
-
-Specific factors Interpretation:
-
-Depending on the model and options used.
+The canonical correlation is a method that uses data from the same sample but from different datasets.
 
 ### Description
 
 Over several years of progress [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015] on the field of canonical correlations it provides a robust method and there is an implementation [@R-RGCCA].
 
-The regularized generalized canonical correlation is a method that combines several datasets, using data from the same sample.
-It is a good choice when the number of variables is higher than samples.
+The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples ($n\gg p$).
+It needs to have a complete case with no missing values and time is not considered as a specially variable.
+Data should be from the same samples and it is not specific to a certain technology or method used to obtain the data.
+
+It uses a dimensional reduction approach to relate the different data sets between them and produce specific factors for each dataset.
+The interpretation of the RGCCA results are tricky and require expertise and familiarity with the technique used, but is highly dependent on the model and options used.
+
 There have been some improvements to generalize the method when $p \gg n$.
 Current practices include using a pre selected model of relations between blocks.
-However this model might not be accurate.
-To help find the fitting model for the data I created an R package.
-The package, which is named [inteRmodel](https://llrs.github.io/inteRmodel/) helps finding the right model and how fit it is for your data.
+However this model might not be accurate and several models might need to be fitted.
+To help find the fitting model for the data I created an R package, named [inteRmodel](https://llrs.github.io/inteRmodel/), which helps finding the right model and how fit it is for your data.
 
 This method applied to an existing dataset of an autologous haematopoietic stem cell transplantation [@corralizaDifferencesPeripheralTissue].
 From this dataset there is data about the human transcriptome and the 16S DNA present at biopsies from colonoscopy.
-For several patients we have samples at different time point and at different locations.
-This allows us to see both location and time differences.
-
-We looked to several models and searched for the model that fit better with the data.
-The first model just accounted the transcriptomics and the microbiome data, then in another family of models we added the information we know about those samples.
-In a further family of models we split the information we know about these samples into three different blocks grouping them according to how are they related between them.
-We fitted the best model for all the three family of models and we found that the most fitting model was from the family that had the data split on several.
-
-Additionally I introduced some changes to RGCCA package.
-The modified package can be found [here](https://github.com/llrs/RGCCA/).
-This version return the same results as the version on CRAN but provides also some code optimization for a lower computation time.
-Some of these changes are to to be able to change the design between different dimensions.
-The idea behind this change is that if the first dimensions correctly fits the data the second dimension might need a different model of relationships.
-For instance, the first dimensions are dominated by two blocks of data while the second is dominated by another block of data.
 
 ### Relationships' models
 
 Most multi-omics and integration tools assume one block for each type of data.
 However, RGCCA uses linear relationships between blocks of data.
-But doesn't say what constitutes a block of data.
+But there is no formal definition of what constitutes a block of data.
 Usually a block of data is just a source of data, such as an essay a survey or an experiment.
 We decided to split the block with data about the samples to separate independent variables from the same block.
-The hypothesis we made was that more independent blocks would fit better the data.
+The hypothesis we made was that more blocks with highly related variables but independent from the other blocks would fit better the data.
 
 Instead of a big metadata block we have a block for time related variables, another one for location and so on.
 This allows to design a model with an expected relationships between these dimensions and help make more interpretable the relationships.
 
-However, in general on the dimension reduction methods, as well as in the generalized canonical correlation analysis, they can't infer causal relationships.
-Which can be found with a symmetric design matrix.
+We looked to several models and searched for the model that fit better with the data.
+The first model just accounted the transcriptomics and the microbiome data, then in another family of models we added the information we know about those samples.
+In a further family of models we split the information we know about these samples into three different blocks grouping them according to how are they related between them.
+We fitted the best model for all the three family of models and we found that the most fitting model was from the family that had the data split on several blocks of independent variables.
 
-#### Designing models
-
-The model of the generalized canonical correlation is highly dependent of the blocks present.
-
-If one has preexisting theories about the data, a specific model can be used stating these known or hypothetical relationships.
-However, if new relationships are being explored or no prior beliefs on the data are held the models should be created with random links between blocks, and evaluate which model is better.
-
-#### Evaluating models
-
-To evaluate a model RGCCA provides the average variance explained (AVE), inner and outer.
-Inner AVE is for how well do all the canonical dimensions correlate with the design of the experiment, so it a measure of how good the model is.
-While outer AVE is a measure of how well do the variables of each block correlate with the canonical dimension, so it measures the agreement between the variables and the canonical dimensions.
-Depending on the goals of the research one or the other should be used.
-If we are more interested on the model of the relationships the inner AVE makes more sense.
-
-Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
-Another option is to use an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately.
-Of the multiple methods available we used [MCIA](https://bioconductor.org/packages/omicade4 "Omicade4") [@mengMultivariateApproachIntegration2014].
-Which was compared by looking at the area under the curve for classifying the samples according to their location.
-
-Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn's disease.
-In this article we didn't look in depth to the biological relevance of the microorganisms an genes found.
-
-The procedure of separating independent variables in their own block of data and later search the best model that fits the data provides a good strategy that should be consider for integration efforts.
-
-The procedural method of searching a model and testing them is implemented on [inteRmodel](https://llrs.github.io/inteRmodel/ "inteRmodel").
-But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling.
-
-This was published as a [preprint](https://www.medrxiv.org/content/10.1101/2020.04.16.20031492v1) and after peer review [published on Plus One](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367 "Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis") [@revilla2021].
+However, the dimension reduction methods, as well as, generalized canonical correlation analysis, can't identify causal relationships.
+Furthermore, there is no test to decide if a variable selected has some meaningful variable.
