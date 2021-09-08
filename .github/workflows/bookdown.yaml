@@ -30,8 +30,7 @@ jobs:
           restore-keys: bookdown-
 
       - name: Build site
-        shell: bash
-        run: _build.sh
+        shell: bash _build.sh
 
       - name: Deploy to GitHub pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
