@@ -26,6 +26,9 @@ jobs:
         shell: bash
         run: Rscript -e "install.packages('bookdown')"
 
+      - name: Setup Debug Session
+        uses: csexton/debugger-action@master
+
       - name: Build site
         shell: bash
         run: ./_build.sh
