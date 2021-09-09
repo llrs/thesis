@@ -22,7 +22,7 @@ jobs:
 
       - uses: r-lib/actions/setup-renv@v1
 
-      - name: Install bookdown:
+      - name: Install bookdown
         shell: bash
         run: RScript -e "install.packages('bookdown')"
 
