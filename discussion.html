@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>B Software | Data integration on inflammatory bowel disease</title>
+  <title>Chapter 5 Discussion | Data integration on inflammatory bowel disease</title>
   <meta name="description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="B Software | Data integration on inflammatory bowel disease" />
+  <meta property="og:title" content="Chapter 5 Discussion | Data integration on inflammatory bowel disease" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="llrs/thesis" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="B Software | Data integration on inflammatory bowel disease" />
+  <meta name="twitter:title" content="Chapter 5 Discussion | Data integration on inflammatory bowel disease" />
   <meta name="twitter:site" content="@Lluis_Revilla" />
   <meta name="twitter:description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="online-resources.html"/>
-
+<link rel="prev" href="biological-relevance-of-results.html"/>
+<link rel="next" href="conclusions.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -146,59 +146,45 @@
 <div class = "wip">
 This tesis is ongoing and still without hard date to finish it. Watch the <a href="https://github.com/llrs/thesis">GitHub repository</a> or wait for a release announcement on Twitter on <a href="https://twitter.com/Lluis_Rev">my profile</a>.
 </div>
-<div id="software" class="section level1">
-<h1><span class="header-section-number">B</span> Software</h1>
-<p>Along the years of this thesis several pieces of software have been generated as well as packages.
-Here they are listed for easier retrieval.
-They are listed on two ways, one with a brief explanation and another one ordered by what software piece is used on each analysis.</p>
-<div id="listed" class="section level2">
-<h2><span class="header-section-number">B.1</span> Listed</h2>
-<p>An improved/tested version of <a href="https://github.com/llrs/RGCCA">RGCCA</a>, some modifications on the internal functions to ease the maintenance as well as adding tests and sometimes improving the documentation.
-Also modified so that it is possible to provide a vector of models so that the model of the first dimension is not the same as the model on the second dimension (not sure if mathematically speaking makes sense but from a biological one I think it might be interesting to have it).</p>
-<p>Designed to be used with RGCCA I wrote the package <a href="https:github.com/llrs/inteRmodel">inteRmodel</a> to ease the bootstrapping and model selection.</p>
-<p>A package to design batches to avoid batch effect <a href="https://cran.r-project.org/package=experDesign">experDesign</a> and its website on <a href="https://github.com/llrs/experDesign">GitHub</a>.</p>
-<p>Explore the effects of the hyperparameters on RGCCA on the provided dataset of <a href="https://github.com/llrs/gliomaData">gliomaData</a> (Originally provided <a href="http://biodev.cea.fr/sgcca/">here</a>) there is this repository <a href="https://github.com/llrs/sgcca_hyperparameters">sgcca_hyperparameters</a>.</p>
-<p>We used a pouchitis cohort published in this <a href="https://dx.doi.org/10.1186/s13059-015-0637-x">article</a><span class="citation">[<a href="references.html#ref-morgan2015" role="doc-biblioref">128</a>]</span> that was used to compare how performs our method in other’s dataset.
-The code used can be found in <a href="https://github.com/llrs/pouchitis">this repository</a>.</p>
-<p>Some functions used to explore the TRIM dataset ended up in the <a href="https://github.com/llrs/integration-helper">integration</a> package.This include functions for correlation, network analysis, enrichment, normalization of metadata…</p>
-<p>I developed a package to analyze sets and fuzzy sets <a href="https://github.com/rOpenSci/BaseSet">BaseSet</a> (based on what I learned from a previous iteration of the <a href="https://github.com/llrs/GSEAdv" title="GSEAdv package">package</a>).
-This package was meant to be used with the probabilities that arise from bootstrapping the models.
-However due to the long times of calculation that it would require it was not used.</p>
-<p>To analyze the antiTNF cohort (also named BARCELONA) a <a href="https://github.com/llrs/Barcelona" title="Barcelona repository">different repository</a> was created to analyze the data using the previously developed packages.</p>
+<div id="discussion" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Discussion</h1>
+<p>WGCNA didn’t work.</p>
+<p>adonis worked to identify which variables were important.</p>
+<p>MCIA works well as baseline.</p>
+<p>STATegRa not customizable the interaction between the datasets.</p>
+<p>RGCCA some improvements.</p>
+<div id="designing-models" class="section level4">
+<h4><span class="header-section-number">5.0.0.1</span> Designing models</h4>
+<p>The model of the generalized canonical correlation is highly dependent of the blocks present.</p>
+<p>If one has preexisting theories about the data, a specific model can be used stating these known or hypothetical relationships.
+However, if new relationships are being explored or no prior beliefs on the data are held the models should be created with random links between blocks, and evaluate which model is better.</p>
 </div>
-<div id="by-publication" class="section level2">
-<h2><span class="header-section-number">B.2</span> By publication</h2>
-<p>All code of the analysis of the publications is available (in his messed state and complicated history) and a brief description as to why they were used:</p>
-<p><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367">Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a>:</p>
-<ul>
-<li><a href="https://github.com/llrs/TRIM">TRIM</a>: Mangle with the sample, dataset, explore several methods…</li>
-<li><a href="https://github.com/llrs/sgcca_hyperparameters">sgcca_hyperparameters</a>: Explore the effects of the hyperparameters on RGCCA on the provided dataset.</li>
-<li><a href="https://github.com/llrs/inteRmodel">inteRmodel</a>: Package for easy repeating the methodology developed on TRIM.</li>
-<li><a href="https://github.com/llrs/pouchitis">pouchitis</a>: Work with the pouchitis cohort used in this article.</li>
-<li><a href="https://github.com/llrs/integration-helper">integration</a>: Package with functions that I wrote or used on different parts of exploring the TRIM dataset ended up here.</li>
-</ul>
-<p>Paper 2:</p>
-<ul>
-<li><a href="https://github.com/llrs/Barcelona">Barcelona</a>: Mangle with the sample, dataset …</li>
-<li><a href="https://github.com/llrs/inteRmodel">inteRmodel</a>: To repeat the same procedure as in the first analysis. Further modifications were done to ease the pain to look for a model when millions of models are possible.</li>
-<li><a href="https://github.com/llrs/integration-helper">integration</a>: To not repeat myself for the same process.</li>
-</ul>
+<div id="evaluating-models" class="section level4">
+<h4><span class="header-section-number">5.0.0.2</span> Evaluating models</h4>
+<p>To evaluate a model RGCCA provides the average variance explained (AVE), inner and outer.
+Inner AVE is for how well do all the canonical dimensions correlate with the design of the experiment, so it a measure of how good the model is.
+While outer AVE is a measure of how well do the variables of each block correlate with the canonical dimension, so it measures the agreement between the variables and the canonical dimensions.
+Depending on the goals of the research one or the other should be used.
+If we are more interested on the model of the relationships the inner AVE makes more sense.</p>
+<p>Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
+Another option is to use an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately.
+Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4">MCIA</a> <span class="citation">[<a href="references.html#ref-mengMultivariateApproachIntegration2014" role="doc-biblioref">127</a>]</span>.
+Which was compared by looking at the area under the curve for classifying the samples according to their location.</p>
+<p>Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn’s disease.
+In this article we didn’t look in depth to the biological relevance of the microorganisms an genes found.</p>
+<p>The procedure of separating independent variables in their own block of data and later search the best model that fits the data provides a good strategy that should be consider for integration efforts.</p>
+<p>The procedural method of searching a model and testing them is implemented on <a href="https://llrs.github.io/inteRmodel/" title="inteRmodel">inteRmodel</a>.
+But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling.</p>
 
 </div>
 </div>
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="online-resources.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="biological-relevance-of-results.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -233,7 +219,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/llrs/thesis/edit/master/98_appendix.Rmd",
+"link": "https://github.com/llrs/thesis/edit/master/05_discussion.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -241,7 +227,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/llrs/thesis/blob/master/98_appendix.Rmd",
+"link": "https://github.com/llrs/thesis/blob/master/05_discussion.Rmd",
 "text": null
 },
 "download": ["Data integration on inflammatory bowel disease.pdf", "Data integration on inflammatory bowel disease.epub"],
