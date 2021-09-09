@@ -22,6 +22,14 @@ jobs:
 
       - uses: r-lib/actions/setup-renv@v1
 
+      - name: Install bookdown:
+        shell: bash
+        run: RScript -e "install.packages('bookdown')"
+
+      - name: Build site
+        shell: bash
+        run: ./_build.sh
+
       - name: Cache bookdown results
         uses: actions/cache@v2
         with:
@@ -29,9 +37,6 @@ jobs:
           key: bookdown-${{ hashFiles('**/*Rmd') }}
           restore-keys: bookdown-
 
-      - name: Build site
-        shell: bash
-        run: ./_build.sh
 
       - name: Deploy to GitHub pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
