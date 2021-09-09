@@ -82,16 +82,17 @@
 <li class="chapter" data-level="1.1.4" data-path="introduction.html"><a href="introduction.html#clinical-care"><i class="fa fa-check"></i><b>1.1.4</b> Clinical care</a></li>
 <li class="chapter" data-level="1.1.5" data-path="introduction.html"><a href="introduction.html#summary"><i class="fa fa-check"></i><b>1.1.5</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#integration"><i class="fa fa-check"></i><b>1.2</b> Integration</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#classification-of-integration-methods"><i class="fa fa-check"></i><b>1.2.1</b> Classification of integration method’s</a></li>
-<li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#interpretation"><i class="fa fa-check"></i><b>1.2.2</b> Interpretation</a></li>
-<li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#reviews-and-benchmarking"><i class="fa fa-check"></i><b>1.2.3</b> Reviews and benchmarking</a></li>
-<li class="chapter" data-level="1.2.4" data-path="introduction.html"><a href="introduction.html#summary-1"><i class="fa fa-check"></i><b>1.2.4</b> Summary</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#studies-and-integration-on-ibd"><i class="fa fa-check"></i><b>1.2</b> Studies and integration on IBD</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#transcriptome"><i class="fa fa-check"></i><b>1.2.1</b> Transcriptome</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#microbiome-1"><i class="fa fa-check"></i><b>1.2.2</b> Microbiome</a></li>
+<li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#genetics-1"><i class="fa fa-check"></i><b>1.2.3</b> Genetics</a></li>
+<li class="chapter" data-level="1.2.4" data-path="introduction.html"><a href="introduction.html#metabolome"><i class="fa fa-check"></i><b>1.2.4</b> Metabolome</a></li>
+<li class="chapter" data-level="1.2.5" data-path="introduction.html"><a href="introduction.html#summary-1"><i class="fa fa-check"></i><b>1.2.5</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#integration-on-ibd"><i class="fa fa-check"></i><b>1.3</b> Integration on IBD</a><ul>
-<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#microbiome-1"><i class="fa fa-check"></i><b>1.3.1</b> Microbiome</a></li>
-<li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#genetics-1"><i class="fa fa-check"></i><b>1.3.2</b> Genetics</a></li>
-<li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#metabolome"><i class="fa fa-check"></i><b>1.3.3</b> Metabolome</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#integration"><i class="fa fa-check"></i><b>1.3</b> Integration</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#classification-of-integration-methods"><i class="fa fa-check"></i><b>1.3.1</b> Classification of integration method’s</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#interpretation"><i class="fa fa-check"></i><b>1.3.2</b> Interpretation</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#reviews-and-benchmarking"><i class="fa fa-check"></i><b>1.3.3</b> Reviews and benchmarking</a></li>
 <li class="chapter" data-level="1.3.4" data-path="introduction.html"><a href="introduction.html#summary-2"><i class="fa fa-check"></i><b>1.3.4</b> Summary</a></li>
 </ul></li>
 </ul></li>
@@ -172,9 +173,9 @@ The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen
 <h4><span class="header-section-number">3.1.1.1</span> Transcriptome sequencing</h4>
 <p>Total RNA from mucosal samples (HSCT cohort) was isolated using the RNeasy kit (Qiagen, Hilde, Germany).
 RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4000 platform.
-Later, cutadapt (version 1.7.1) <span class="citation">[<a href="references.html#ref-martin2011" role="doc-biblioref">105</a>]</span> was used for quality filtering and the libraries were mapped against the human reference genome using the STAR aligner (2.5.2a) with Ensembl annotation (release GRCh38.10) <span class="citation">[<a href="references.html#ref-dobin2013" role="doc-biblioref">106</a>]</span>.
-Read counts per gene were obtained with RSEM (version 1.2.31) <span class="citation">[<a href="references.html#ref-li2011" role="doc-biblioref">107</a>]</span> as previously described <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">8</a>]</span>.
-Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28) <span class="citation">[<a href="references.html#ref-mccarthy2012" role="doc-biblioref">90</a>]</span>.</p>
+Later, cutadapt (version 1.7.1) <span class="citation">[<a href="references.html#ref-martin2011" role="doc-biblioref">108</a>]</span> was used for quality filtering and the libraries were mapped against the human reference genome using the STAR aligner (2.5.2a) with Ensembl annotation (release GRCh38.10) <span class="citation">[<a href="references.html#ref-dobin2013" role="doc-biblioref">109</a>]</span>.
+Read counts per gene were obtained with RSEM (version 1.2.31) <span class="citation">[<a href="references.html#ref-li2011" role="doc-biblioref">110</a>]</span> as previously described <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">8</a>]</span>.
+Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28) <span class="citation">[<a href="references.html#ref-mccarthy2012" role="doc-biblioref">102</a>]</span>.</p>
 </div>
 <div id="microbial-dna-extraction-from-mucosal-samples" class="section level4">
 <h4><span class="header-section-number">3.1.1.2</span> Microbial DNA extraction from mucosal samples</h4>
@@ -191,14 +192,14 @@ Samples were immediately used or placed at -20°C for long-term storage.</p>
 Briefly, volumes of 600μL DNA stabilization solution (STRATEC biomedical) and 400μL Phenol:choloform:isoamyl alcohol (25:24:1, Sigma-Aldrich) were added to the aliquots.
 Microbial cells were disrupted by mechanical lysis using FastPrep-24.: Heat treatment and centrifugation were conducted after adding a cooling adaptor.
 Supernatants were treated with RNase to eliminate RNA.
-Total DNA was purified using gDNA columns as described in detail previously <span class="citation">[<a href="references.html#ref-berry2011" role="doc-biblioref">108</a>]</span>.
-Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol <span class="citation">[<a href="references.html#ref-klindworth2013" role="doc-biblioref">109</a>]</span> using forward and reverse primers 341F-785R <span class="citation">[<a href="references.html#ref-edgar2013a" role="doc-biblioref">110</a>]</span>.
+Total DNA was purified using gDNA columns as described in detail previously <span class="citation">[<a href="references.html#ref-berry2011" role="doc-biblioref">111</a>]</span>.
+Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol <span class="citation">[<a href="references.html#ref-klindworth2013" role="doc-biblioref">112</a>]</span> using forward and reverse primers 341F-785R <span class="citation">[<a href="references.html#ref-edgar2013a" role="doc-biblioref">113</a>]</span>.
 Purification of amplicons was performed by using the AMPure XP system (Beckmann).
 Next, sequencing was performed with pooled samples in paired-end modus (PE275) using an MiSeq system (Illumina, Inc.) according to the manufacturer’s instructions and 25% (v/v) PhiX standard library.</p>
 </div>
 <div id="microbial-profiling" class="section level4">
 <h4><span class="header-section-number">3.1.1.4</span> Microbial profiling</h4>
-<p>Processing of raw-reads was performed by using the IMNGS (version 1.0 Build 2007) <span class="citation">[<a href="references.html#ref-lagkouvardos2016" role="doc-biblioref">111</a>]</span> pipeline based on the UPARSE approach <span class="citation">[<a href="references.html#ref-edgar2013a" role="doc-biblioref">110</a>]</span> .
+<p>Processing of raw-reads was performed by using the IMNGS (version 1.0 Build 2007) <span class="citation">[<a href="references.html#ref-lagkouvardos2016" role="doc-biblioref">114</a>]</span> pipeline based on the UPARSE approach <span class="citation">[<a href="references.html#ref-edgar2013a" role="doc-biblioref">113</a>]</span> .
 Sequences were demultiplexed, trimmed to the first base with a quality score &lt;3 and then paired.
 Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error &gt;3 were excluded from the analysis.
 Trimming of the remaining reads was done by trimming 5 nucleotides from each end to avoid GC bias and non-random base composition.
@@ -206,9 +207,9 @@ Operational taxonomic units (OTUs) were clustered at 97% sequence similarity.
 Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project.
 Later the data was normalized using the same method as for RNA-seq described above.
 The microbiome was visually inspected for batch effects in PCA; none were found.
-The resulting OTUs table was normalized using edgeR (Version 3.28) <span class="citation">[<a href="references.html#ref-mccarthy2012" role="doc-biblioref">90</a>]</span>.</p>
-<p>Another method used to analyze microbiome data is dada2 <span class="citation">[<a href="references.html#ref-callahan2016" role="doc-biblioref">112</a>]</span> which creates amplicon sequencing variants from the 16S sequencing data.
-Together with Qiime2 <span class="citation">[<a href="references.html#ref-bolyen2019" role="doc-biblioref">113</a>]</span> it is an alternative to OTUs which allows to be able to compare results between studies and provides more resolution.</p>
+The resulting OTUs table was normalized using edgeR (Version 3.28) <span class="citation">[<a href="references.html#ref-mccarthy2012" role="doc-biblioref">102</a>]</span>.</p>
+<p>Another method used to analyze microbiome data is dada2 <span class="citation">[<a href="references.html#ref-callahan2016" role="doc-biblioref">115</a>]</span> which creates amplicon sequencing variants from the 16S sequencing data.
+Together with Qiime2 <span class="citation">[<a href="references.html#ref-bolyen2019" role="doc-biblioref">116</a>]</span> it is an alternative to OTUs which allows to be able to compare results between studies and provides more resolution.</p>
 <!--Finished the copied section-->
 </div>
 </div>
@@ -223,15 +224,15 @@ Functional enrichment related methods stand out.</p>
 <h3><span class="header-section-number">3.2.1</span> Functional enrichment</h3>
 <p>Functional enrichment methods are the name that receive some methods that aim to provide with more information about the variables besides their numerical value measured.
 They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.</p>
-<p>To test if some variables show an unexpected importance according to a statistic like fold change or value fgsea <span class="citation">[<a href="references.html#ref-korotkevich2021" role="doc-biblioref">114</a>]</span> methods was used.
+<p>To test if some variables show an unexpected importance according to a statistic like fold change or value fgsea <span class="citation">[<a href="references.html#ref-korotkevich2021" role="doc-biblioref">117</a>]</span> methods was used.
 fgsea is a software used to see if groups of variables present in an ordered list present some skewed distribution.
 Pathways of genes were tested on the weight of different models.</p>
-<p>GSVA is a method related to fgsea that summarize the variables’ numerical value so that they can be later used by other methods <span class="citation">[<a href="references.html#ref-hänzelmann2013" role="doc-biblioref">115</a>]</span>.
+<p>GSVA is a method related to fgsea that summarize the variables’ numerical value so that they can be later used by other methods <span class="citation">[<a href="references.html#ref-hänzelmann2013" role="doc-biblioref">118</a>]</span>.
 GSVA was used to estimate the expression of the pathways and try to find the relationships between the pathways and the microbiome at different taxonomic levels.</p>
-<p>vegan package provides the adonis method used to test if microbiome data variance is due to other variables <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">116</a>]</span>.
+<p>vegan package provides the adonis method used to test if microbiome data variance is due to other variables <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">119</a>]</span>.
 This allows to test if the variables are related to the variance of the data.
 This is particularly important on the microbiome data, which is highly variable.</p>
-<p>clusterProfiler: test genes enrichment for functionality based on information on pathway databases <span class="citation">[<a href="references.html#ref-wu2021" role="doc-biblioref">117</a>]</span>.
+<p>clusterProfiler: test genes enrichment for functionality based on information on pathway databases <span class="citation">[<a href="references.html#ref-wu2021" role="doc-biblioref">120</a>]</span>.
 It uses several methods like fisher test to check the enrichment of features of a given group on the list provided.</p>
 </div>
 <div id="other-methods-used" class="section level3">
@@ -239,19 +240,19 @@ It uses several methods like fisher test to check the enrichment of features of 
 <p>BaseSet is a package that use fuzzy set logic.
 It can be used to calculate the size of the sets given a probability of having each element on the sets.
 On the bootstrapped samples it was used to find which variables were really involved on the interaction and how likely were to be together.</p>
-<p>Microbiome diversity was measured using vegan and phyloseq methods <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">116</a>]</span>.
+<p>Microbiome diversity was measured using vegan and phyloseq methods <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">119</a>]</span>.
 Alpha <span class="math inline">\(\alpha\)</span>-diversity is the % of a given microbiome at a taxonomic level or using the Simpson or Shannon diversity index.
 Beta diversity was calculated using the phyloseq package.</p>
 <p>We looked to see if using some co-expression measure between the the microbiome and the RNAseq would help identify relationships.
-We used weighted gene co-expression network analysis as implemented on WGCNA, <span class="citation">[<a href="references.html#ref-langfelder2008" role="doc-biblioref">118</a>]</span>.</p>
-<p>Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two data sources <span class="citation">[<a href="references.html#ref-meng2014" role="doc-biblioref">119</a>]</span>.
+We used weighted gene co-expression network analysis as implemented on WGCNA, <span class="citation">[<a href="references.html#ref-langfelder2008" role="doc-biblioref">121</a>]</span>.</p>
+<p>Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two data sources <span class="citation">[<a href="references.html#ref-meng2014" role="doc-biblioref">122</a>]</span>.
 , simple integration, two blocks.It was used as a baseline method to find relationships between microorganisms and genes.</p>
-<p>globaltest is a package with methods for testing complex hypothesis and help decide if the variables were influencing <span class="citation">[<a href="references.html#ref-goeman2006" role="doc-biblioref">120</a>]</span>.
+<p>globaltest is a package with methods for testing complex hypothesis and help decide if the variables were influencing <span class="citation">[<a href="references.html#ref-goeman2006" role="doc-biblioref">123</a>]</span>.
 It provides a general test statistic to test a hypothesis against a high dimensional dataset.
 It was used to test which variables, (sex, age, location, time since diagnostic) are important on the datasets.</p>
-<p>STATegRa, is a framework for integrating datasets with two data types using parametric and non-parametric methods <span class="citation">[<a href="references.html#ref-planell2021" role="doc-biblioref">121</a>]</span>.
+<p>STATegRa, is a framework for integrating datasets with two data types using parametric and non-parametric methods <span class="citation">[<a href="references.html#ref-planell2021" role="doc-biblioref">124</a>]</span>.
 It was used to explore the datasets and see what do they had in common.</p>
-<p>Regularized generalized canonical correlation analysis, RGCCA, has been the main method used <span class="citation">[<a href="references.html#ref-tenenhaus2017a" role="doc-biblioref">122</a>]</span>.
+<p>Regularized generalized canonical correlation analysis, RGCCA, has been the main method used <span class="citation">[<a href="references.html#ref-tenenhaus2017a" role="doc-biblioref">125</a>]</span>.
 It will be explained in detail on the next section.</p>
 </div>
 </div>
@@ -260,7 +261,7 @@ It will be explained in detail on the next section.</p>
 <p>The canonical correlation is a method that uses data from the same sample but from different datasets.</p>
 <div id="description" class="section level3">
 <h3><span class="header-section-number">3.3.1</span> Description</h3>
-<p>Over several years of progress <span class="citation">[<a href="references.html#ref-tenenhaus_regularized_2011" role="doc-biblioref">60</a>, <a href="references.html#ref-tenenhaus_variable_2014" role="doc-biblioref">61</a>, <a href="references.html#ref-tenenhaus_component-based_2008" role="doc-biblioref">123</a>–<a href="references.html#ref-tenenhaus_kernel_2015" role="doc-biblioref">126</a>]</span> on the field of canonical correlations it provides a robust method and there is an implementation <span class="citation">[<span class="citeproc-not-found" data-reference-id="R-RGCCA"><strong>???</strong></span>]</span>.</p>
+<p>Over several years of progress <span class="citation">[<a href="references.html#ref-tenenhaus_regularized_2011" role="doc-biblioref">72</a>, <a href="references.html#ref-tenenhaus_variable_2014" role="doc-biblioref">73</a>, <a href="references.html#ref-tenenhaus_component-based_2008" role="doc-biblioref">126</a>–<a href="references.html#ref-tenenhaus_kernel_2015" role="doc-biblioref">129</a>]</span> on the field of canonical correlations it provides a robust method and there is an implementation <span class="citation">[<span class="citeproc-not-found" data-reference-id="R-RGCCA"><strong>???</strong></span>]</span>.</p>
 <p>The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples (<span class="math inline">\(n\gg p\)</span>).
 It needs to have a complete case with no missing values and time is not considered as a specially variable.
 Data should be from the same samples and it is not specific to a certain technology or method used to obtain the data.</p>

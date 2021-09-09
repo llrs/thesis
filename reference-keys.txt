@@ -14,6 +14,12 @@ disease-course-1
 clinical-care
 drugs-and-treaments
 summary
+studies-and-integration-on-ibd
+transcriptome
+microbiome-1
+genetics-1
+metabolome
+summary-1
 integration
 classification-of-integration-methods
 data-type-numeric-vs-categorical
@@ -26,11 +32,6 @@ mathematical-framework
 output-results
 interpretation
 reviews-and-benchmarking
-summary-1
-integration-on-ibd
-microbiome-1
-genetics-1
-metabolome
 summary-2
 hypothesis-and-objectives
 hypothesis
