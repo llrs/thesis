@@ -32,9 +32,7 @@ Another indicator of CD disease is an increase of calprotectin in fecal samples 
 
 <!-- End -->
 
-Around 3.5 million individuals have IBD in Europe and North America combined [@jairath2020].
-IBD is more commonly found in industrialized and developed regions, suggesting that environmental factors might greatly influence IBD occurrence.
-In addition, the incidence of IBD is increasing in areas, such as Asia or Eastern Europe, where the number of cases was relatively low hitherto [@burisch2015].
+Around 3.5 million individuals have IBD in Europe and North America combined [@jairath2020]. IBD is more commonly found in industrialized and developed regions, suggesting that environmental factors might greatly influence IBD occurrence. In addition, the incidence of IBD is increasing in areas, such as Asia or Eastern Europe, where the number of cases was relatively low hitherto [@burisch2015].
 
 The disease has been used as a condition that prevents people to [apply to certain positions](https://civio.es/el-boe-nuestro-de-cada-dia/2019/02/13/las-enfermedades-que-vetan-el-acceso-a-ciertos-empleos-publicos/ "Link to a Civio.es about disease disqualifying for some public positions").
 The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome.
@@ -54,16 +52,13 @@ Little is known of the influence of the gastrointestinal microbiome in the expre
 
 ### Etiology and pathogenesis
 
-Several explanations has been proposed of the origin of the disease [@zhang2014; @hugot2004] .
-Some of them base on a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire [@corralizaDifferencesPeripheralTissue].
+Several explanations has been proposed of the origin of the disease [@zhang2014; @hugot2004] . Some of them base on a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire [@corralizaDifferencesPeripheralTissue].
 It is also unclear if Crohn's disease and the ulcerative colitis share the same origin considering their different symptoms.
 
 There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b].
 
 Although so far it is not known what starts the disease there are differences on the disease when appears at different age, which provides some clues on the mechanism(s) of disease.
-There is a classification between very early, early or adult on-set disease [@satsangi2006b].
-On very early on-set the genetic component is high (See [Clinical care] section).
-GWAS studies has linked the IBD disease to *NOD2* gene, but so far there isn't any known mechanism how this gene could start the disease [@horowitz2021].
+There is a classification between very early, early or adult on-set disease [@satsangi2006b]. On very early on-set the genetic component is high (See [Clinical care] section). GWAS studies has linked the IBD disease to *NOD2* gene, but so far there isn't any known mechanism how this gene could start the disease [@horowitz2021].
 On early and adult disease the genetic component is lower and it is thought that the environmental factors are the main cause of the disease.
 
 Either case it is not known how it starts or it is sustained and causes those characteristics relapses.
@@ -78,9 +73,7 @@ This has lead the studies looking for genetic factors on IBD both on general pop
 Genome wide association studies (GWAS) is one of the most common genetic studies, together with methylation studies.
 They help discover through linkage desequilibrium genetic variations linked to phenotypes.
 
-With GWAS several allels on protein coding loci have been found rising to around 300 genetic variants [@kumar2019].
-Particularly, one on the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018].
-The proposed mechanism has not been confirmed yet [@horowitz2021].
+With GWAS several allels on protein coding loci have been found rising to around 300 genetic variants [@kumar2019]. Particularly, one on the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018]. The proposed mechanism has not been confirmed yet [@horowitz2021].
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
 Recently expression quantitative trait loci (eQTL) particularly showed this [@mcgovern2015].
@@ -105,8 +98,7 @@ IBD has been characterized by a breakdown in the balance between beneficial and 
 Many studies show that patients with inflammatory bowel disease has less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
 $\alpha$-diversity is a measure of the species present on a single sample and how much of each taxonomic group is there.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004].
-At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004]. At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
 $\beta$-diversity compares the diversity between samples of the same study, which typically looks like a horse-shoe-like shape in the first two dimensions.
 
 <!--Aida 2.3 p24-->
@@ -150,8 +142,7 @@ These cells usually come from the basal side of the crypt and mature as they mov
 
 <!--From tesis Aida p20-->
 
-Immune response in the intestinal mucous is mainly excreted by the gut associated lymphoid tissue [@faria2012].
-Deregulation of the mucosal immune system has been associated with the pathogenesis of IBD [@silva2016a; @demattos2015].
+Immune response in the intestinal mucous is mainly excreted by the gut associated lymphoid tissue [@faria2012]. Deregulation of the mucosal immune system has been associated with the pathogenesis of IBD [@silva2016a; @demattos2015].
 Genetically predisposed patients when exposed to certain environmental factors activate immune responses against microbials or self-antigens which in turn, may impair the mucosal barrier of the intestinal mucosa, the first physical barrier on the mucosal surface.
 
 Both the adaptive and the innate immunity related cells are present on the intestine, right below the epithelium.
@@ -222,9 +213,7 @@ All these symptoms make it hard to provide a diagnosis by non-specialists and ca
 <!--Tesis Ana p21-->
 
 The detection of parasites or bacteria, such as *Clostridium difficile*, would admit an infectious disease.
-The detection of fecal calprotectin, is a good marker of endocopic activity with sensitivity above 70% and specificity above 80% generally [@guardiola2018].
-Usually the diagnosis is performed with a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn's disease.
-This inflammation could also present as an ulceration and rectal sparing [@corralizamárquez2019].
+The detection of fecal calprotectin, is a good marker of endocopic activity with sensitivity above 70% and specificity above 80% generally [@guardiola2018]. Usually the diagnosis is performed with a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn's disease. This inflammation could also present as an ulceration and rectal sparing [@corralizamárquez2019].
 Histological lesions also help to diagnose the patients .
 
 <!--End-->
@@ -252,8 +241,7 @@ The damage of the disease might not be apparent to patients and might be only se
 ### Ulcerative colitis physiology
 
 Around a third of the patients with ulcerative colitis suffer proctitis, followed by left colitis, when the affected area starts on the rectum and extends to the left colon, distal colitis, defined as disease limited to rectum and sigmoid colon, extensive colitis as involvement of at least the descending colon, and pancolitis, when the disease affects all the colon.
-The extension and severity of the disease does correlate with the clinical observation, where longer extension is a worse prognosis [@etchevers2009].
-Extensive colitis is also associated with extensive care [@etchevers2009].
+The extension and severity of the disease does correlate with the clinical observation, where longer extension is a worse prognosis [@etchevers2009]. Extensive colitis is also associated with extensive care [@etchevers2009].
 
 #### Clinical presentation
 
@@ -363,8 +351,7 @@ Notably this is probably the most common data available from IBD patients, proba
 
 Many of the integration analysis on inflammatory bowel are done between host transcriptome and the microbiome.
 These studies use datasets from IBD patients usually stratified by some inflammatory index or location of the disease.
-Most of them are based on correlation analysis between the microbiome and RNA-seq [@hasler_uncoupling_2016].
-Conclusions of these integrations range from finding differences on the correlation depending on the disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang_integrated_2017].
+Most of them are based on correlation analysis between the microbiome and RNA-seq [@hasler_uncoupling_2016]. Conclusions of these integrations range from finding differences on the correlation depending on the disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang_integrated_2017].
 
 ### Genetics
 
@@ -403,8 +390,7 @@ Some of these methods are specific for one application or data while others are 
 Lately, the increase of bigger datasets with more variables and often from the same samples has increased the focus of the research community on the methodologies available on several disciplines but mainly on the biological science.
 The explosion of data on the biological science has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time, if done with multiple sequencing tecnologies it is usually referred as multi-omics methods, which usually only integrate omic data.
 
-It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019].
-Part of these efforts uses the methods' strategies to classify them [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
+It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019]. Part of these efforts uses the methods' strategies to classify them [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
 Following this view I'll review the integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
 
 ### Classification of integration method's
@@ -527,9 +513,7 @@ On cell lines or other lab experiments conditions can be repeated even if they a
 However, with patients we can not obtain a sample at the same timepoint.
 This makes it harder to study time-related change on patients.
 
-Lastly, time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNA-seq [@massoni-badosa2020; @zhu2017].
-Some features and genes are more affected by time than others but as they are measured at the same time it might distort the data.
-Processing time is also very hard to keep track on practical settings and requires a highly coordinated effort [@ferreira2018].
+Lastly, time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNA-seq [@massoni-badosa2020; @zhu2017]. Some features and genes are more affected by time than others but as they are measured at the same time it might distort the data. Processing time is also very hard to keep track on practical settings and requires a highly coordinated effort [@ferreira2018].
 
 #### Relationship between variables
 
@@ -582,8 +566,7 @@ Some of them have previously appeared:
 -   Networks
 
     Networks methods were mentioned because they use and find information about interaction of variables.
-    Multilayer networks, including the multiplex, Molti-C-DREAM[@didier2018], RWR-MH, RWR-M [@valdeolivas2019].
-    Network embedding MultiVERSE are some of the methods using networks [@pio-lopez2021].
+    Multilayer networks, including the multiplex, Molti-C-DREAM[@didier2018], RWR-MH, RWR-M [@valdeolivas2019]. Network embedding MultiVERSE are some of the methods using networks [@pio-lopez2021].
 
     Bayesian approaches are also quite frequent, these methods use the Bayes theorem to see the relationships between variables.
     Some methods that use these approaches are [RIMBANET](http://research.mssm.edu/integrative-network-biology/RIMBANET/RIMBANET_overview.html) [@zhu2012], [BCC](https://github.com/ttriche/bayesCC) [@lock2013] and others like [@virtanen2012]
@@ -653,8 +636,7 @@ Or by patient: how do interpret that in these patient variable A and B is X and 
 In a principal component analysis for instance how do we interpret that some variables have the same loading?
 What happens in a more difficult method like canonical correlation analysis?
 
-There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981].
-Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
+There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981]. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
 Which is used to compare the results of the integration with the dataset of interest and to compare different tools.
 These datasets are created with some relationships that the tools are expected to find.
 
@@ -677,6 +659,64 @@ The differences between the many methods that exist do not make the interpretati
 Methods to integrate have many characteristics, depending on the objectives and data that available some methods might not be yet available.
 Regardless of the method used, interpretation and reporting is usually a main problem when using any of these methods.
 
-<!--Insert table of methods-->
+|             Method             |          Publication          |
+|:------------------------------:|:-----------------------------:|
+|              SCCA              |      [@parkhomenko2009]       |
+|              PCCA              |      [@waaijenborg2008]       |
+|              PMA               |         [@witten2009]         |
+|              sPLS              |         [@lêcao2009]          |
+|             gesca              |         [@hwang2009]          |
+|      Regularized dual CCA      |        [@soneson2010]         |
+|             RGCCA              | [@tenenhaus_regularized_2011] |
+|             SNMNMF             |         [@zhang2011]          |
+|              scca              |          [@lee2011]           |
+|             STATIS             |          [@abdi2012]          |
+|           joint NMF            |         [@zhang2012]          |
+|             sMBPLS             |           [@li2012]           |
+| Bayesian group factor analysis |       [@virtanen2012a]        |
+|            RIMBANET            |          [@zhu2012a]          |
+|           FactoMineR           |          [@abdi2013]          |
+|              JIVE              |         [@lock2013a]          |
+|             pandaR             |        [@schlauch2017]        |
+|            omicade4            |         [@meng2014a]          |
+|            STATegRa            |        [@planell2021a]        |
+|       Joint factor model       |          [@ray2014]           |
+|           GFAsparse            |         [@bunte2016]          |
+|           Sparse CCA           |          [@chen2013]          |
+|             CCAGFA             |        [@leppäaho2017]        |
+|              CMF               |         [@klami2014]          |
+|             MOGSA              |          [@meng2018]          |
+|              iNMF              |         [@yang2016b]          |
+|              BASS              |          [@zhao2015]          |
+|           imputeMFA            |        [@voillet2016]         |
+|             PLSCA              |         [@beaton2016]         |
+|            mixOmics            |         [@singh2019]          |
+|            mixedCCA            |          [@yoon2019]          |
+|             SLIDE              |       [@gaynanova2017a]       |
+|             fCCAC              |        [@madrigal2017]        |
+|             TSKCCA             |        [@yoshida2017]         |
+|             SMSMA              |       [@kawaguchi2017]        |
+|             AJIVE              |          [@feng2018]          |
+|              MOFA              |       [@argelaguet2020]       |
+|            PCA+CCA             |         [@brown2018]          |
+|              JACA              |         [@zhang2020]          |
+|              iPCA              |          [@tang2021]          |
+|              pCIA              |          [@min2019]           |
+|             sSCCA              |          [@safo2018]          |
+|             SWCCA              |          [@min2017]           |
+|            OmicsPLS            |       [@bouhaddani2018]       |
+|            SCCA-BC             |        [@pimentel2018]        |
+|          WON-PARAFAC           |          [@kim2019]           |
+|            BIDIFAC             |          [@lock2020]          |
+|              maui              |         [@ronen2019]          |
+|            SmCCNet             |          [@shi2019]           |
+|             msPLS              |         [@csala2020]          |
+|              MOTA              |          [@fan2020]           |
+|             D-CCA              |          [@shu2020]           |
+|             COMBI              |        [@hawinkel2020]        |
+|             DPCCA              |       [@gundersen2020]        |
+|            MEFISTO             |         [@velten2020]         |
+|           MultiPower           |        [@tarazona2020]        |
+|            mixedCCA            |         [@yoon2019a]          |
 
 <!--Check https://github.com/mikelove/awesome-multi-omics -->
