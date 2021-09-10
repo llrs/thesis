@@ -322,23 +322,26 @@ The lack of knowledge of what are the factors of the ethiology and causes of the
 
 Many studies have looked up to the origin of the disease.
 As seen, one of the hypothesis behind the maintenance of the inflammation involves the microbiome and the host epithelium.
-This has been studied using several data sources.
+This has been studied using several data sources, mostly from sequencing data.
+The technical methods used to obtain the data can differ between extracted from biopsied samples at colonoscopy or from surgical samples.
 
-Several studies have been carried out to discover links between microbiome and the inflammation, followed by those looking for some relationship between genetics and the disease and more recently the metabolome.
+To confirm findings usually RT-PCR, immunohistochemistry, histopathology, immunohistochemistry, or fluorescence in situ hybridization is performed.
+These techniques allow to visualize where are the cells expressing certain proteins or genes, thus helping with the analysis validation.
 
-Also the technical methods used can differ between extracted from stools or from biopsied samples at colonoscopy or from surgical samples.
-And how are they processed, both the sample from patients and the data obtained once processed.
+Furthermore several studies have been carried out to discover links between microbiome and the inflammation, followed by those looking for some relationship between genetics and the disease and more recently the metabolome.
+These studies, known as integration, multi-omic or interaction studies, usually use multiple sequencing assays as the bases of the analysis [@beck2021].
 
-Very rarely there is an experimental confirmation of the relationship between variables because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
+However, confirming the interactions of the variables of each assay is harder as the above mentioned techniques can't show these relationships.
+Very rarely there is an experimental confirmation of the relationships between variables of the different essays because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
 Some articles to find the relationships use correlation, like [@hasler_uncoupling_2016], there are others that use a combination of methods from correlations, partial correlations to integrative methods [@tang_integrated_2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations.
+
+One of the few methods published that shows an interaction between genes and microorganisms on the inflammatory bowel disease is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
 
 Most of the integrations refer some other source of data to the transcriptomics of the patient.
 The transcriptome of the patients has been extensively studied.
 There are known marker gens of inflammation and many research focus on identifying prognosis predictors, treatment response prediction based on gene expression.
-Recently single-cell technology has enabled to estimate cell populations of the samples with better degree of success than bulk RNA-sequencing.
-Single cell technologies are starting to be also for integration.
-
-One of the few methods published that show an interaction between genes and microorganisms on the inflammatory bowel disease is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
+Recently single-cell technology has enabled to estimate cell populations of the samples with better degree of success than bulk RNA-sequencing, which is helpful to understand the immune response and the population change of the cells.
+Single cell technologies are starting to be used for integration.
 
 ### Transcriptome
 
