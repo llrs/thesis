@@ -1,22 +1,26 @@
 # Materials and methods
 
+Some sections of these methods has been already published and copied or adapted to the thesis [@revilla2021].
+
 ## Sample collection
 
-#### Ethical issues
+#### Ethical considerations
 
 All samples were collected with approval from the Ethical Comitee and under express authorization of the patients.
+The minimum number of samples needed for the sutdy were collected.
+Data is pseudonymisated to prevent identification of the patients.
 
 ### HSCT dataset
 
 <!--COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
 
-Samples from the HSCT dataset included in this study were from a cohort of patients with severe refractory CD undergoing hematopoietic stem cell transplant.
+Samples from the HSCT dataset used in this thesis were from a cohort of patients with severe refractory CD undergoing hematopoietic stem cell transplant.
 Patients were treated in the Department of Gastroenterology (Hospital Clínic de Barcelona --Spain--).
 The protocol was approved by the Catalan Transplantation Organization and by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number 2012/7244).
 All patients provided written consent following extensive counselling.
 Colonic and ileal biopsies were obtained at several time points during ileo-colonoscopy.
 Patients were followed-up for 4 years and biopsies were collected every six or twelve months after HSCT.
-Samples were obtained when possible from both uninvolved and involved areas.
+Samples were obtained whenever possible from both uninvolved and involved areas.
 In addition, biopsies were taken from the ileum and colon regions of 19 non-IBD controls consisting of individuals with no history of IBD and who presented no significant pathological findings following endoscopic examination for colon cancer surveillance (Hospital Univesitari Mútua de Terrassa--Spain--).
 The protocol was approved by the Institutional Ethics Committee of the Hospital Univesitari Mútua de Terrassa (Study Number NA1651).
 At least one biopsy was collected and fresh-frozen at -80°C for microbial DNA extraction.
@@ -43,7 +47,8 @@ Samples were immediately used or placed at -20°C for long-term storage.
 
 Library preparation and sequencing were performed at the Technische Universität München.
 Briefly, volumes of 600μL DNA stabilization solution (STRATEC biomedical) and 400μL Phenol:choloform:isoamyl alcohol (25:24:1, Sigma-Aldrich) were added to the aliquots.
-Microbial cells were disrupted by mechanical lysis using FastPrep-24.: Heat treatment and centrifugation were conducted after adding a cooling adaptor.
+Microbial cells were disrupted by mechanical lysis using FastPrep-24.
+Heat treatment and centrifugation were conducted after adding a cooling adaptor.
 Supernatants were treated with RNase to eliminate RNA.
 Total DNA was purified using gDNA columns as described in detail previously [@berry2011].
 Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol [@klindworth2013] using forward and reverse primers 341F-785R [@edgar2013a].
@@ -87,46 +92,49 @@ Pathways of genes were tested on the weight of different models.
 GSVA is a method related to fgsea that summarize the variables' numerical value so that they can be later used by other methods [@hänzelmann2013].
 GSVA was used to estimate the expression of the pathways and try to find the relationships between the pathways and the microbiome at different taxonomic levels.
 
-vegan package provides the adonis method used to test if microbiome data variance is due to other variables [@oksanen2020].
-This allows to test if the variables are related to the variance of the data.
-This is particularly important on the microbiome data, which is highly variable.
-
 clusterProfiler: test genes enrichment for functionality based on information on pathway databases [@wu2021].
 It uses several methods like fisher test to check the enrichment of features of a given group on the list provided.
 
 ### Other methods used
 
-BaseSet is a package that use fuzzy set logic.
-It can be used to calculate the size of the sets given a probability of having each element on the sets.
-On the bootstrapped samples it was used to find which variables were really involved on the interaction and how likely were to be together.
-
-Microbiome diversity was measured using vegan and phyloseq methods [@oksanen2020].
-Alpha $\alpha$-diversity is the % of a given microbiome at a taxonomic level or using the Simpson or Shannon diversity index.
-Beta diversity was calculated using the phyloseq package.
-
-We looked to see if using some co-expression measure between the the microbiome and the RNAseq would help identify relationships.
-We used weighted gene co-expression network analysis as implemented on WGCNA, [@langfelder2008].
-
-Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two data sources [@meng2014].
-, simple integration, two blocks.It was used as a baseline method to find relationships between microorganisms and genes.
+vegan package provides the adonis method used to test if microbiome data variance is due to other variables [@oksanen2020].
+This allows to test if the variables are related to the variance of the data.
+This is particularly important on the microbiome data, which is highly variable.
+It was used to detect which variables were important to include in the models of the disease.
 
 globaltest is a package with methods for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
 It provides a general test statistic to test a hypothesis against a high dimensional dataset.
 It was used to test which variables, (sex, age, location, time since diagnostic) are important on the datasets.
 
+Microbiome diversity was measured using vegan and phyloseq methods [@oksanen2020].
+$\alpha$-diversity is a measure of how much a given microbiome at a taxonomic level is present on a sample.
+Several measures exists, on the thesis I used the effective Simpson or Shannon diversity index to compare diversity between samples and conditions.
+$\beta$-diversity was calculated using the phyloseq package for exploratory analysis.
+
+We looked to see if using some co-expression measure between the the microbiome and the RNAseq would help identify relationships.
+We used weighted gene co-expression network analysis as implemented on WGCNA [@langfelder2008].
+
+Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two data sources, simple integration, two blocks [@meng2014].
+It was used as a baseline method to find relationships between microorganisms and genes.
+
 STATegRa, is a framework for integrating datasets with two data types using parametric and non-parametric methods [@planell2021].
 It was used to explore the datasets and see what do they had in common.
+
+BaseSet is a package that implements fuzzy set logic for easy calculation of probability to belong to a group.
+It can be used to calculate the size of the sets given a probability of having each element on the sets.
+When evaluating a model using bootstrap, it was used to find which variables were really involved on the interaction and how likely were to be together.
 
 Regularized generalized canonical correlation analysis, RGCCA, has been the main method used [@tenenhaus2017a].
 It will be explained in detail on the next section.
 
-## Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis
+## Regularized generalized canonical correlation analysis
 
 The canonical correlation is a method that uses data from the same sample but from different datasets.
+The regularized generalized canonical correlation analysis is an extension to the canonical correlation analysis [@jordan1875; @hotelling1936] which includes a regularization step to select which are the variables more relevant.
 
 ### Description
 
-Over several years of progress [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015] on the field of canonical correlations it provides a robust method and there is an implementation [@R-RGCCA].
+Over several years of progress [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015] on the field of canonical correlations RGCCA is a robust method with a usable implementation [@R-RGCCA].
 
 The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples ($n\gg p$).
 It needs to have a complete case with no missing values and time is not considered as a specially variable.
