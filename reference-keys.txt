@@ -9,8 +9,6 @@ crohns-disease-physiology
 clinical-presentation
 disease-course
 ulcerative-colitis-physiology
-clinical-presentation-1
-disease-course-1
 clinical-care
 drugs-and-treaments
 summary
@@ -38,7 +36,7 @@ hypothesis
 objectives
 materials-and-methods
 sample-collection
-ethical-issues
+ethical-considerations
 hsct-dataset
 transcriptome-sequencing
 microbial-dna-extraction-from-mucosal-samples
@@ -47,7 +45,7 @@ microbial-profiling
 statistics
 functional-enrichment
 other-methods-used
-multi-omic-modelling-of-inflammatory-bowel-disease-with-regularized-canonical-correlation-analysis
+regularized-generalized-canonical-correlation-analysis
 description
 relationships-models
 biological-relevance-of-results

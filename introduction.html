@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2021-09-10" />
+<meta name="date" content="2021-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -108,7 +108,7 @@
 <li class="chapter" data-level="3.2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#functional-enrichment"><i class="fa fa-check"></i><b>3.2.1</b> Functional enrichment</a></li>
 <li class="chapter" data-level="3.2.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#other-methods-used"><i class="fa fa-check"></i><b>3.2.2</b> Other methods used</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#multi-omic-modelling-of-inflammatory-bowel-disease-with-regularized-canonical-correlation-analysis"><i class="fa fa-check"></i><b>3.3</b> Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a><ul>
+<li class="chapter" data-level="3.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#regularized-generalized-canonical-correlation-analysis"><i class="fa fa-check"></i><b>3.3</b> Regularized generalized canonical correlation analysis</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#description"><i class="fa fa-check"></i><b>3.3.1</b> Description</a></li>
 <li class="chapter" data-level="3.3.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#relationships-models"><i class="fa fa-check"></i><b>3.3.2</b> Relationships’ models</a></li>
 </ul></li>
@@ -171,7 +171,9 @@ Both of them have different risk factors, clinical, endoscopic an histological c
 <p>Sometimes blood analysis are also used, if there are some factors altered such as leukocytes, a high globular sedimentation speed, increase of protein C reactive and anemia could indicate inflammatory bowel disease.
 Another indicator of CD disease is an increase of calprotectin in fecal samples <span class="citation">[<a href="references.html#ref-sands2015" role="doc-biblioref">2</a>]</span>.</p>
 <!-- End -->
-<p>Around 3.5 million individuals have IBD in Europe and North America combined <span class="citation">[<a href="references.html#ref-jairath2020" role="doc-biblioref">3</a>]</span>. IBD is more commonly found in industrialized and developed regions, suggesting that environmental factors might greatly influence IBD occurrence. In addition, the incidence of IBD is increasing in areas, such as Asia or Eastern Europe, where the number of cases was relatively low hitherto <span class="citation">[<a href="references.html#ref-burisch2015" role="doc-biblioref">4</a>]</span>.</p>
+<p>Around 3.5 million individuals have IBD in Europe and North America combined <span class="citation">[<a href="references.html#ref-jairath2020" role="doc-biblioref">3</a>]</span>.
+IBD is more commonly found in industrialized and developed regions, suggesting that environmental factors might greatly influence IBD occurrence.
+In addition, the incidence of IBD is increasing in areas, such as Asia or Eastern Europe, where the number of cases was relatively low hitherto <span class="citation">[<a href="references.html#ref-burisch2015" role="doc-biblioref">4</a>]</span>.</p>
 <p>The disease has been used as a condition that prevents people to <a href="https://civio.es/el-boe-nuestro-de-cada-dia/2019/02/13/las-enfermedades-que-vetan-el-acceso-a-ciertos-empleos-publicos/" title="Link to a Civio.es about disease disqualifying for some public positions">apply to certain positions</a>.
 The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome.
 Several studies support the concept that IBD arise from an exacerbate immune response against commensal gut microorganisms.
@@ -185,11 +187,14 @@ Other variables that has been linked to IBD are genetic predisposition and envir
 Little is known of the influence of the gastrointestinal microbiome in the expression of the gastrointestinal tract.</p>
 <div id="etiology-and-pathogenesis" class="section level3">
 <h3><span class="header-section-number">1.1.1</span> Etiology and pathogenesis</h3>
-<p>Several explanations has been proposed of the origin of the disease <span class="citation">[<a href="references.html#ref-zhang2014" role="doc-biblioref">6</a>, <a href="references.html#ref-hugot2004" role="doc-biblioref">7</a>]</span> . Some of them base on a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">8</a>]</span>.
+<p>Several explanations has been proposed of the origin of the disease <span class="citation">[<a href="references.html#ref-zhang2014" role="doc-biblioref">6</a>, <a href="references.html#ref-hugot2004" role="doc-biblioref">7</a>]</span> .
+Some of them base on a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">8</a>]</span>.
 It is also unclear if Crohn’s disease and the ulcerative colitis share the same origin considering their different symptoms.</p>
 <p>There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) <span class="citation">[<a href="references.html#ref-mcgovern2015b" role="doc-biblioref">9</a>]</span>.</p>
 <p>Although so far it is not known what starts the disease there are differences on the disease when appears at different age, which provides some clues on the mechanism(s) of disease.
-There is a classification between very early, early or adult on-set disease <span class="citation">[<a href="references.html#ref-satsangi2006b" role="doc-biblioref">10</a>]</span>. On very early on-set the genetic component is high (See <a href="introduction.html#clinical-care">Clinical care</a> section). GWAS studies has linked the IBD disease to <em>NOD2</em> gene, but so far there isn’t any known mechanism how this gene could start the disease <span class="citation">[<a href="references.html#ref-horowitz2021" role="doc-biblioref">11</a>]</span>.
+There is a classification between very early, early or adult on-set disease <span class="citation">[<a href="references.html#ref-satsangi2006b" role="doc-biblioref">10</a>]</span>.
+On very early on-set the genetic component is high (See <a href="introduction.html#clinical-care">Clinical care</a> section).
+GWAS studies has linked the IBD disease to <em>NOD2</em> gene, but so far there isn’t any known mechanism how this gene could start the disease <span class="citation">[<a href="references.html#ref-horowitz2021" role="doc-biblioref">11</a>]</span>.
 On early and adult disease the genetic component is lower and it is thought that the environmental factors are the main cause of the disease.</p>
 <p>Either case it is not known how it starts or it is sustained and causes those characteristics relapses.
 On the following sections I’ll explore the role of several of the possible factors involved on the pahtogenesis, starting with the genetics.</p>
@@ -200,7 +205,9 @@ On some patients that the disease show up very early, diagnosed before the age o
 <p>This has lead the studies looking for genetic factors on IBD both on general population and on the early cases.
 Genome wide association studies (GWAS) is one of the most common genetic studies, together with methylation studies.
 They help discover through linkage desequilibrium genetic variations linked to phenotypes.</p>
-<p>With GWAS several allels on protein coding loci have been found rising to around 300 genetic variants <span class="citation">[<a href="references.html#ref-kumar2019" role="doc-biblioref">12</a>]</span>. Particularly, one on the <em>NOD2</em> gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn’s disease loci but show significant (P &lt; 0.005) protective effects in ulcerative colitis <span class="citation">[<a href="references.html#ref-jostins2012" role="doc-biblioref">13</a>, <a href="references.html#ref-momozawa2018" role="doc-biblioref">14</a>]</span>. The proposed mechanism has not been confirmed yet <span class="citation">[<a href="references.html#ref-horowitz2021" role="doc-biblioref">11</a>]</span>.</p>
+<p>With GWAS several allels on protein coding loci have been found rising to around 300 genetic variants <span class="citation">[<a href="references.html#ref-kumar2019" role="doc-biblioref">12</a>]</span>.
+Particularly, one on the <em>NOD2</em> gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn’s disease loci but show significant (P &lt; 0.005) protective effects in ulcerative colitis <span class="citation">[<a href="references.html#ref-jostins2012" role="doc-biblioref">13</a>, <a href="references.html#ref-momozawa2018" role="doc-biblioref">14</a>]</span>.
+The proposed mechanism has not been confirmed yet <span class="citation">[<a href="references.html#ref-horowitz2021" role="doc-biblioref">11</a>]</span>.</p>
 <p>Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
 Recently expression quantitative trait loci (eQTL) particularly showed this <span class="citation">[<a href="references.html#ref-mcgovern2015" role="doc-biblioref">15</a>]</span>.
 Usually they are on enhancers or promoters like e.g.
@@ -219,7 +226,8 @@ IBD has been characterized by a breakdown in the balance between beneficial and 
 <p>Many studies show that patients with inflammatory bowel disease has less biodiversity.
 Biodiversity is measured on <span class="math inline">\(\alpha\)</span> (alfa) and <span class="math inline">\(\beta\)</span> (beta) diversity.
 <span class="math inline">\(\alpha\)</span>-diversity is a measure of the species present on a single sample and how much of each taxonomic group is there.
-There are some reports of taxonomic changes and increase on <em>Enterobacteriaceae sp</em>, <em>Escherichia coli</em> (specially the invasive strain) at the mucosal layer of IBD patients <span class="citation">[<a href="references.html#ref-ott2004" role="doc-biblioref">19</a>]</span>. At the same time there is often a reduction on protective species like <em>Bifidobacterium</em>, <em>Lactobacillus</em> and <em>Faecalibacterium.</em> Specially the <em>Faecalibacterium prausnitzii</em> is one microorganism of interest <span class="citation">[<a href="references.html#ref-kostic2014" role="doc-biblioref">20</a>, <a href="references.html#ref-sender2016" role="doc-biblioref">21</a>]</span>.
+There are some reports of taxonomic changes and increase on <em>Enterobacteriaceae sp</em>, <em>Escherichia coli</em> (specially the invasive strain) at the mucosal layer of IBD patients <span class="citation">[<a href="references.html#ref-ott2004" role="doc-biblioref">19</a>]</span>.
+At the same time there is often a reduction on protective species like <em>Bifidobacterium</em>, <em>Lactobacillus</em> and <em>Faecalibacterium.</em> Specially the <em>Faecalibacterium prausnitzii</em> is one microorganism of interest <span class="citation">[<a href="references.html#ref-kostic2014" role="doc-biblioref">20</a>, <a href="references.html#ref-sender2016" role="doc-biblioref">21</a>]</span>.
 <span class="math inline">\(\beta\)</span>-diversity compares the diversity between samples of the same study, which typically looks like a horse-shoe-like shape in the first two dimensions.</p>
 <!--Aida 2.3 p24-->
 <p>In fact, it has been recently proposed that several unique microbial species can distinguish healthy controls from UC and CD patients <span class="citation">[<a href="references.html#ref-sankarasubramanian2020a" role="doc-biblioref">22</a>, <a href="references.html#ref-lopez-siles2014" role="doc-biblioref">23</a>]</span>.</p>
@@ -255,7 +263,8 @@ The mucus is organized in two layers: the inner layer, a firm mucus layer; and t
 Below, the intestinal epithelium is a single layer of cells organized into crypts and villi (and circular folds on the large intestine) that carries out a diverse array of functions besides digestion performed by specialized cell lineages.
 These cells usually come from the basal side of the crypt and mature as they move towards the apical side.</p>
 <!--From tesis Aida p20-->
-<p>Immune response in the intestinal mucous is mainly excreted by the gut associated lymphoid tissue <span class="citation">[<a href="references.html#ref-faria2012" role="doc-biblioref">26</a>]</span>. Deregulation of the mucosal immune system has been associated with the pathogenesis of IBD <span class="citation">[<a href="references.html#ref-silva2016a" role="doc-biblioref">27</a>, <a href="references.html#ref-demattos2015" role="doc-biblioref">28</a>]</span>.
+<p>Immune response in the intestinal mucous is mainly excreted by the gut associated lymphoid tissue <span class="citation">[<a href="references.html#ref-faria2012" role="doc-biblioref">26</a>]</span>.
+Deregulation of the mucosal immune system has been associated with the pathogenesis of IBD <span class="citation">[<a href="references.html#ref-silva2016a" role="doc-biblioref">27</a>, <a href="references.html#ref-demattos2015" role="doc-biblioref">28</a>]</span>.
 Genetically predisposed patients when exposed to certain environmental factors activate immune responses against microbials or self-antigens which in turn, may impair the mucosal barrier of the intestinal mucosa, the first physical barrier on the mucosal surface.</p>
 <p>Both the adaptive and the innate immunity related cells are present on the intestine, right below the epithelium.
 On IBD due to antigen translocation into the lamina propria, the immune response leads the adaptive cells to generate immune response to harmless components of the intestinal microbiota.
@@ -283,7 +292,7 @@ Treg cells differentiate after exposure to cytokines IL-10, IFN-<span class="mat
 Overall the presence of certain cytokines and the response to self-antigens are factors leads to an inflammation and damage that is related to the onset and establishment of IBD</p>
 <!--End tesis Aida/ more or less -->
 <p>On these kind of diseases autologous haematopoietic stem cell transplantation has shown some benefits on IBD <span class="citation">[<a href="references.html#ref-corraliza" role="doc-biblioref">32</a>]</span>.
-The benefit of HSCT in autoimmunity is thought to originate from the depletion of auto-reactive cells regardless of their specificity.
+The benefit of Hematopoietic Stem Cell Transplant (HSCT) in autoimmunity is thought to originate from the depletion of auto-reactive cells regardless of their specificity.
 However, due to its associated risk this therapy is only given when patients are refractory to all available therapeutic options.</p>
 </div>
 <div id="environmental" class="section level4">
@@ -311,7 +320,9 @@ Other co-occurring manifestations are arthritis, primary sclerosing cholangitis,
 All these symptoms make it hard to provide a diagnosis by non-specialists and can lead to delays on correct diagnosis of the disease as there isn’t a single gold standard test for its diagnosis.</p>
 <!--Tesis Ana p21-->
 <p>The detection of parasites or bacteria, such as <em>Clostridium difficile</em>, would admit an infectious disease.
-The detection of fecal calprotectin, is a good marker of endocopic activity with sensitivity above 70% and specificity above 80% generally <span class="citation">[<a href="references.html#ref-guardiola2018" role="doc-biblioref">39</a>]</span>. Usually the diagnosis is performed with a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn’s disease. This inflammation could also present as an ulceration and rectal sparing <span class="citation">[<a href="references.html#ref-corralizamárquez2019" role="doc-biblioref">40</a>]</span>.
+The detection of fecal calprotectin, is a good marker of endocopic activity with sensitivity above 70% and specificity above 80% generally <span class="citation">[<a href="references.html#ref-guardiola2018" role="doc-biblioref">39</a>]</span>.
+Usually the diagnosis is performed with a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn’s disease.
+This inflammation could also present as an ulceration and rectal sparing <span class="citation">[<a href="references.html#ref-corralizamárquez2019" role="doc-biblioref">40</a>]</span>.
 Histological lesions also help to diagnose the patients .</p>
 <!--End-->
 <p>To address this difficulty the Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behaviour.
@@ -334,16 +345,8 @@ Often the damage caused by the disease evolves to fibrostenotic stricture or pen
 <div id="ulcerative-colitis-physiology" class="section level3">
 <h3><span class="header-section-number">1.1.3</span> Ulcerative colitis physiology</h3>
 <p>Around a third of the patients with ulcerative colitis suffer proctitis, followed by left colitis, when the affected area starts on the rectum and extends to the left colon, distal colitis, defined as disease limited to rectum and sigmoid colon, extensive colitis as involvement of at least the descending colon, and pancolitis, when the disease affects all the colon.
-The extension and severity of the disease does correlate with the clinical observation, where longer extension is a worse prognosis <span class="citation">[<a href="references.html#ref-etchevers2009" role="doc-biblioref">44</a>]</span>. Extensive colitis is also associated with extensive care <span class="citation">[<a href="references.html#ref-etchevers2009" role="doc-biblioref">44</a>]</span>.</p>
-<div id="clinical-presentation-1" class="section level4">
-<h4><span class="header-section-number">1.1.3.1</span> Clinical presentation</h4>
-</div>
-<div id="disease-course-1" class="section level4">
-<h4><span class="header-section-number">1.1.3.2</span> Disease course</h4>
-<p>Starting age usually around 15-20?</p>
-<p>Some subset of early &lt; 17 and also very early subset &lt; 5 years.</p>
-<p>Rectum or descending colon</p>
-</div>
+The extension and severity of the disease correlates with the clinical observation, where longer extension is a worse prognosis <span class="citation">[<a href="references.html#ref-etchevers2009" role="doc-biblioref">44</a>]</span>.
+Extensive colitis is also associated with extensive care <span class="citation">[<a href="references.html#ref-etchevers2009" role="doc-biblioref">44</a>]</span>.</p>
 </div>
 <div id="clinical-care" class="section level3">
 <h3><span class="header-section-number">1.1.4</span> Clinical care</h3>
@@ -357,18 +360,14 @@ This often ends up in a pouchitis, inflammation that occurs in the lining of a p
 Which might extend to healthy areas.</p>
 <p>Dysplasia, an abnormal development of cells within tissues or organs, is often associated with chronic IBD patients, which is considered a precedence before colorectal cancer develops <span class="citation">[<a href="references.html#ref-mark-christensen2018" role="doc-biblioref">46</a>]</span>.</p>
 <p>Fistula, an abnormal connection between two body parts, is often found on the penetrating phenotype of IBD patients.</p>
-<p>Herpes and citomegalovirus virus.</p>
-<p>Imaging techniques</p>
 <p>Many scores have been proposed for several purposes, from quality of life to disease severity or patient status.
 Among the scores most used are the following:</p>
 <ul>
-<li><p>Mayo: A score designed to be simple to calculate at the bedside based on stool frequency, bleeding, mucosal apperance at endocopy and disease activity.
-<span class="citation">[<a href="references.html#ref-schroeder1987" role="doc-biblioref">47</a>]</span></p></li>
+<li><p>Mayo: A score designed to be simple to calculate at the bedside based on stool frequency, bleeding, mucosal apperance at endocopy and disease activity <span class="citation">[<a href="references.html#ref-schroeder1987" role="doc-biblioref">47</a>]</span>.</p></li>
 <li><p>SES-CD: simple endoscopic score for Crohn’s disease <span class="citation">[<a href="references.html#ref-daperno2004" role="doc-biblioref">48</a>]</span>.
 Score based on size of ulcers, ulcerate surface percentage, affected surface and presence of narrowings on the bowel.</p></li>
-<li><p>IBDQ: A 32 questionnaire used to assess the quality of life grouped into four categories: bowel, systemic, social and emotional.
-<span class="citation">[<a href="references.html#ref-irvine1999" role="doc-biblioref">49</a>]</span></p></li>
-<li><p>Montreal classification allows for early onset of disease to be categorized separately those with age of diagnosis at 16 years or younger, diagnosis at 17–40 years and &gt;40 years, respectively<span class="citation">[<a href="references.html#ref-satsangi2006" role="doc-biblioref">50</a>]</span>.</p></li>
+<li><p>IBDQ: A 32 questionnaire used to assess the quality of life grouped into four categories: bowel, systemic, social and emotional <span class="citation">[<a href="references.html#ref-irvine1999" role="doc-biblioref">49</a>]</span>.</p></li>
+<li><p>Montreal classification allows for early onset of disease to be categorized separately those with age of diagnosis at 16 years or younger, diagnosis at 17–40 years and &gt;40 years, respectively <span class="citation">[<a href="references.html#ref-satsangi2006" role="doc-biblioref">50</a>]</span>.</p></li>
 </ul>
 <p>Other measured parameters include, weight, effective weight, calprotectin, Proteinc C reactive (PCR), hemoglobine.</p>
 <div id="drugs-and-treaments" class="section level4">
@@ -378,7 +377,7 @@ Score based on size of ulcers, ulcerate surface percentage, affected surface and
 Dose reduction often results in losing the response to the drug.
 Thus, after an increase of the dose to the previous levels the patients not recover the initial response they had and doctors need to recommend other drugs or combinations of drugs.</p>
 <p>If the drugs fail to contain the inflammation and heal the epithelium doctors might recommend to perform a surgery to remove the damaged section.
-In some cases Hematopoietic Stem Cell Transplant (HSCT) is recommended which have shown to improve the life of the patients <span class="citation">[<a href="references.html#ref-corralizab" role="doc-biblioref">51</a>]</span>.</p>
+In some cases HSCT is recommended which have shown to improve the life of the patients <span class="citation">[<a href="references.html#ref-corralizab" role="doc-biblioref">51</a>]</span>.</p>
 <p>This is a new procedure given only to the most extreme cases for which several publications have checked that it resets the immunological state of the patient.
 Currently it is only performed on the Hospital Clínic (Barcelona).</p>
 <p>Last there are several proposal of fecal microbiota transplantation, which are not done on the Hospital Clínic yet.
@@ -423,7 +422,8 @@ The different inflammatory profile of the CD and the UC and the differences betw
 <h3><span class="header-section-number">1.2.2</span> Microbiome</h3>
 <p>Many of the integration analysis on inflammatory bowel are done between host transcriptome and the microbiome.
 These studies use datasets from IBD patients usually stratified by some inflammatory index or location of the disease.
-Most of them are based on correlation analysis between the microbiome and RNA-seq <span class="citation">[<a href="references.html#ref-hasler_uncoupling_2016" role="doc-biblioref">53</a>]</span>. Conclusions of these integrations range from finding differences on the correlation depending on the disease (<span class="citation">[<a href="references.html#ref-hasler_uncoupling_2016" role="doc-biblioref">53</a>]</span>) to finding relationships with inflammatory genes <span class="citation">[<a href="references.html#ref-tang_integrated_2017" role="doc-biblioref">54</a>]</span>.</p>
+Most of them are based on correlation analysis between the microbiome and RNA-seq <span class="citation">[<a href="references.html#ref-hasler_uncoupling_2016" role="doc-biblioref">53</a>]</span>.
+Conclusions of these integrations range from finding differences on the correlation depending on the disease (<span class="citation">[<a href="references.html#ref-hasler_uncoupling_2016" role="doc-biblioref">53</a>]</span>) to finding relationships with inflammatory genes <span class="citation">[<a href="references.html#ref-tang_integrated_2017" role="doc-biblioref">54</a>]</span>.</p>
 </div>
 <div id="genetics-1" class="section level3">
 <h3><span class="header-section-number">1.2.3</span> Genetics</h3>
@@ -459,7 +459,8 @@ Some of the early methods were initially used for surveying the agreement of dif
 Some of these methods are specific for one application or data while others are more general.
 Lately, the increase of bigger datasets with more variables and often from the same samples has increased the focus of the research community on the methodologies available on several disciplines but mainly on the biological science.
 The explosion of data on the biological science has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time, if done with multiple sequencing tecnologies it is usually referred as multi-omics methods, which usually only integrate omic data.</p>
-<p>It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them <span class="citation">[<a href="references.html#ref-wu_selective_2019" role="doc-biblioref">65</a>]</span>. Part of these efforts uses the methods’ strategies to classify them <span class="citation">[<a href="references.html#ref-cavill_transcriptomic_2016" role="doc-biblioref">66</a>, <a href="references.html#ref-chongComputationalApproachesIntegrative2017" role="doc-biblioref">67</a>]</span>.
+<p>It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them <span class="citation">[<a href="references.html#ref-wu_selective_2019" role="doc-biblioref">65</a>]</span>.
+Part of these efforts uses the methods’ strategies to classify them <span class="citation">[<a href="references.html#ref-cavill_transcriptomic_2016" role="doc-biblioref">66</a>, <a href="references.html#ref-chongComputationalApproachesIntegrative2017" role="doc-biblioref">67</a>]</span>.
 Following this view I’ll review the integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.</p>
 <div id="classification-of-integration-methods" class="section level3">
 <h3><span class="header-section-number">1.3.1</span> Classification of integration method’s</h3>
@@ -567,7 +568,9 @@ Being aware of the time differences and time scales is crucial in most cases.</p
 <p>On cell lines or other lab experiments conditions can be repeated even if they are at different time points.
 However, with patients we can not obtain a sample at the same timepoint.
 This makes it harder to study time-related change on patients.</p>
-<p>Lastly, time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNA-seq <span class="citation">[<a href="references.html#ref-massoni-badosa2020" role="doc-biblioref">69</a>, <a href="references.html#ref-zhu2017" role="doc-biblioref">70</a>]</span>. Some features and genes are more affected by time than others but as they are measured at the same time it might distort the data. Processing time is also very hard to keep track on practical settings and requires a highly coordinated effort <span class="citation">[<a href="references.html#ref-ferreira2018" role="doc-biblioref">71</a>]</span>.</p>
+<p>Lastly, time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNA-seq <span class="citation">[<a href="references.html#ref-massoni-badosa2020" role="doc-biblioref">69</a>, <a href="references.html#ref-zhu2017" role="doc-biblioref">70</a>]</span>.
+Some features and genes are more affected by time than others but as they are measured at the same time it might distort the data.
+Processing time is also very hard to keep track on practical settings and requires a highly coordinated effort <span class="citation">[<a href="references.html#ref-ferreira2018" role="doc-biblioref">71</a>]</span>.</p>
 </div>
 </div>
 <div id="relationship-between-variables" class="section level4">
@@ -615,7 +618,8 @@ Some of them have previously appeared:</p>
 <ul>
 <li><p>Networks</p>
 <p>Networks methods were mentioned because they use and find information about interaction of variables.
-Multilayer networks, including the multiplex, Molti-C-DREAM<span class="citation">[<a href="references.html#ref-didier2018" role="doc-biblioref">82</a>]</span>, RWR-MH, RWR-M <span class="citation">[<a href="references.html#ref-valdeolivas2019" role="doc-biblioref">83</a>]</span>. Network embedding MultiVERSE are some of the methods using networks <span class="citation">[<a href="references.html#ref-pio-lopez2021" role="doc-biblioref">84</a>]</span>.</p>
+Multilayer networks, including the multiplex, Molti-C-DREAM<span class="citation">[<a href="references.html#ref-didier2018" role="doc-biblioref">82</a>]</span>, RWR-MH, RWR-M <span class="citation">[<a href="references.html#ref-valdeolivas2019" role="doc-biblioref">83</a>]</span>.
+Network embedding MultiVERSE are some of the methods using networks <span class="citation">[<a href="references.html#ref-pio-lopez2021" role="doc-biblioref">84</a>]</span>.</p>
 <p>Bayesian approaches are also quite frequent, these methods use the Bayes theorem to see the relationships between variables.
 Some methods that use these approaches are <a href="http://research.mssm.edu/integrative-network-biology/RIMBANET/RIMBANET_overview.html">RIMBANET</a> <span class="citation">[<a href="references.html#ref-zhu2012" role="doc-biblioref">85</a>]</span>, <a href="https://github.com/ttriche/bayesCC">BCC</a> <span class="citation">[<a href="references.html#ref-lock2013" role="doc-biblioref">86</a>]</span> and others like <span class="citation">[<a href="references.html#ref-virtanen2012" role="doc-biblioref">87</a>]</span></p></li>
 <li><p>Dimensional Reduction</p>
@@ -673,7 +677,8 @@ Or by patient: how do interpret that in these patient variable A and B is X and 
 </ul>
 <p>In a principal component analysis for instance how do we interpret that some variables have the same loading?
 What happens in a more difficult method like canonical correlation analysis?</p>
-<p>There have been some articles about how to interpret those methods on real datasets <span class="citation">[<a href="references.html#ref-sherryConductingInterpretingCanonical1981" role="doc-biblioref">95</a>]</span>. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset <span class="citation">[<a href="references.html#ref-chung_multi-omics_2019" role="doc-biblioref">96</a>, <a href="references.html#ref-martinez-mira_mosim_2018" role="doc-biblioref">97</a>]</span>.
+<p>There have been some articles about how to interpret those methods on real datasets <span class="citation">[<a href="references.html#ref-sherryConductingInterpretingCanonical1981" role="doc-biblioref">95</a>]</span>.
+Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset <span class="citation">[<a href="references.html#ref-chung_multi-omics_2019" role="doc-biblioref">96</a>, <a href="references.html#ref-martinez-mira_mosim_2018" role="doc-biblioref">97</a>]</span>.
 Which is used to compare the results of the integration with the dataset of interest and to compare different tools.
 These datasets are created with some relationships that the tools are expected to find.</p>
 <p>There exists several methods to create synthetic datasets like MOSim <span class="citation">[<a href="references.html#ref-haberman2019" role="doc-biblioref">98</a>]</span>, metaSPARSim <span class="citation">[<a href="references.html#ref-patuzzi2019" role="doc-biblioref">99</a>]</span>, CAMISIM <span class="citation">[<a href="references.html#ref-fritz2019" role="doc-biblioref">100</a>]</span>, ballgown <span class="citation">[<a href="references.html#ref-fu2021" role="doc-biblioref">101</a>]</span>, polyester <span class="citation">[<a href="references.html#ref-frazee2021" role="doc-biblioref">102</a>]</span> and even edgeR <span class="citation">[<a href="references.html#ref-mccarthy2012" role="doc-biblioref">103</a>]</span> can be used.
