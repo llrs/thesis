@@ -1,6 +1,6 @@
 # Materials and methods
 
-Some sections of these methods has been already published and copied or adapted to the thesis [@revilla2021].
+Some sections of these methods has been already published and copied or adapted to the thesis from [@revilla2021].
 
 ## Sample collection
 
@@ -76,13 +76,14 @@ Together with Qiime2 [@bolyen2019] it is an alternative to OTUs which allows to 
 
 A false discovery rate (FDR) correction for multiple testing was performed when necessary following the method of Benjamini, Hochberg and Yekutieli.
 FDR values below 0.05 were considered significant.
+If not considered necessary the alpha level of 0.05 was used.
 
-Besides correcting for multiple testing several methods were used on this thesis.
-Functional enrichment related methods stand out.
+Besides correcting for multiple testing several methods were used on this thesis of different types.
+Functional enrichment related methods stand out from the other methods used.
 
 ### Functional enrichment
 
-Functional enrichment methods are the name that receive some methods that aim to provide with more information about the variables besides their numerical value measured.
+Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
 They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.
 
 To test if some variables show an unexpected importance according to a statistic like fold change or value fgsea [@korotkevich2021] methods was used.
