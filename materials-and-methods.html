@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2021-09-14" />
+<meta name="date" content="2021-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -149,7 +149,7 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 </div>
 <div id="materials-and-methods" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Materials and methods</h1>
-<p>Some sections of these methods has been already published and copied or adapted to the thesis from <span class="citation">[<a href="references.html#ref-revilla2021" role="doc-biblioref">165</a>]</span>.</p>
+<p>Some sections of these methods has been already published and copied or adapted to the thesis from <span class="citation">[<a href="references.html#ref-revilla2021" role="doc-biblioref">166</a>]</span>.</p>
 <div id="sample-collection" class="section level2">
 <h2><span class="header-section-number">3.1</span> Sample collection</h2>
 <div id="ethical-considerations" class="section level4">
@@ -176,9 +176,9 @@ The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen
 <h4><span class="header-section-number">3.1.1.1</span> Transcriptome sequencing</h4>
 <p>Total RNA from mucosal samples (HSCT cohort) was isolated using the RNeasy kit (Qiagen, Hilde, Germany).
 RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4000 platform.
-Later, cutadapt (version 1.7.1) <span class="citation">[<a href="references.html#ref-martin2011" role="doc-biblioref">166</a>]</span> was used for quality filtering and the libraries were mapped against the human reference genome using the STAR aligner (2.5.2a) with Ensembl annotation (release GRCh38.10) <span class="citation">[<a href="references.html#ref-dobin2013" role="doc-biblioref">167</a>]</span>.
-Read counts per gene were obtained with RSEM (version 1.2.31) <span class="citation">[<a href="references.html#ref-li2011" role="doc-biblioref">168</a>]</span> as previously described <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">8</a>]</span>.
-Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28) <span class="citation">[<a href="references.html#ref-mccarthy2012" role="doc-biblioref">103</a>]</span>.</p>
+Later, cutadapt (version 1.7.1) <span class="citation">[<a href="references.html#ref-martin2011" role="doc-biblioref">167</a>]</span> was used for quality filtering and the libraries were mapped against the human reference genome using the STAR aligner (2.5.2a) with Ensembl annotation (release GRCh38.10) <span class="citation">[<a href="references.html#ref-dobin2013" role="doc-biblioref">168</a>]</span>.
+Read counts per gene were obtained with RSEM (version 1.2.31) <span class="citation">[<a href="references.html#ref-li2011" role="doc-biblioref">169</a>]</span> as previously described <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">9</a>]</span>.
+Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28) <span class="citation">[<a href="references.html#ref-mccarthy2012" role="doc-biblioref">104</a>]</span>.</p>
 </div>
 <div id="microbial-dna-extraction-from-mucosal-samples" class="section level4">
 <h4><span class="header-section-number">3.1.1.2</span> Microbial DNA extraction from mucosal samples</h4>
@@ -196,14 +196,14 @@ Briefly, volumes of 600μL DNA stabilization solution (STRATEC biomedical) and 4
 Microbial cells were disrupted by mechanical lysis using FastPrep-24.
 Heat treatment and centrifugation were conducted after adding a cooling adaptor.
 Supernatants were treated with RNase to eliminate RNA.
-Total DNA was purified using gDNA columns as described in detail previously <span class="citation">[<a href="references.html#ref-berry2011" role="doc-biblioref">169</a>]</span>.
-Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol <span class="citation">[<a href="references.html#ref-klindworth2013" role="doc-biblioref">170</a>]</span> using forward and reverse primers 341F-785R <span class="citation">[<a href="references.html#ref-edgar2013a" role="doc-biblioref">171</a>]</span>.
+Total DNA was purified using gDNA columns as described in detail previously <span class="citation">[<a href="references.html#ref-berry2011" role="doc-biblioref">170</a>]</span>.
+Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol <span class="citation">[<a href="references.html#ref-klindworth2013" role="doc-biblioref">171</a>]</span> using forward and reverse primers 341F-785R <span class="citation">[<a href="references.html#ref-edgar2013a" role="doc-biblioref">172</a>]</span>.
 Purification of amplicons was performed by using the AMPure XP system (Beckmann).
 Next, sequencing was performed with pooled samples in paired-end modus (PE275) using an MiSeq system (Illumina, Inc.) according to the manufacturer’s instructions and 25% (v/v) PhiX standard library.</p>
 </div>
 <div id="microbial-profiling" class="section level4">
 <h4><span class="header-section-number">3.1.1.4</span> Microbial profiling</h4>
-<p>Processing of raw-reads was performed by using the IMNGS (version 1.0 Build 2007) <span class="citation">[<a href="references.html#ref-lagkouvardos2016" role="doc-biblioref">172</a>]</span> pipeline based on the UPARSE approach <span class="citation">[<a href="references.html#ref-edgar2013a" role="doc-biblioref">171</a>]</span> .
+<p>Processing of raw-reads was performed by using the IMNGS (version 1.0 Build 2007) <span class="citation">[<a href="references.html#ref-lagkouvardos2016" role="doc-biblioref">173</a>]</span> pipeline based on the UPARSE approach <span class="citation">[<a href="references.html#ref-edgar2013a" role="doc-biblioref">172</a>]</span> .
 Sequences were demultiplexed, trimmed to the first base with a quality score &lt;3 and then paired.
 Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error &gt;3 were excluded from the analysis.
 Trimming of the remaining reads was done by trimming 5 nucleotides from each end to avoid GC bias and non-random base composition.
@@ -211,9 +211,9 @@ Operational taxonomic units (OTUs) were clustered at 97% sequence similarity.
 Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project.
 Later the data was normalized using the same method as for RNA-seq described above.
 The microbiome was visually inspected for batch effects in PCA; none were found.
-The resulting OTUs table was normalized using edgeR (Version 3.28) <span class="citation">[<a href="references.html#ref-mccarthy2012" role="doc-biblioref">103</a>]</span>.</p>
-<p>Another method used to analyze microbiome data is dada2 <span class="citation">[<a href="references.html#ref-callahan2016" role="doc-biblioref">173</a>]</span> which creates amplicon sequencing variants from the 16S sequencing data.
-Together with Qiime2 <span class="citation">[<a href="references.html#ref-bolyen2019" role="doc-biblioref">174</a>]</span> it is an alternative to OTUs which allows to be able to compare results between studies and provides more resolution.</p>
+The resulting OTUs table was normalized using edgeR (Version 3.28) <span class="citation">[<a href="references.html#ref-mccarthy2012" role="doc-biblioref">104</a>]</span>.</p>
+<p>Another method used to analyze microbiome data is dada2 <span class="citation">[<a href="references.html#ref-callahan2016" role="doc-biblioref">174</a>]</span> which creates amplicon sequencing variants from the 16S sequencing data.
+Together with Qiime2 <span class="citation">[<a href="references.html#ref-bolyen2019" role="doc-biblioref">175</a>]</span> it is an alternative to OTUs which allows to be able to compare results between studies and provides more resolution.</p>
 <!--Finished the copied section-->
 </div>
 </div>
@@ -229,47 +229,47 @@ Functional enrichment related methods stand out from the other methods used.</p>
 <h3><span class="header-section-number">3.2.1</span> Functional enrichment</h3>
 <p>Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
 They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.</p>
-<p>To test if some variables show an unexpected importance according to a statistic like fold change or value fgsea <span class="citation">[<a href="references.html#ref-korotkevich2021" role="doc-biblioref">175</a>]</span> methods was used.
+<p>To test if some variables show an unexpected importance according to a statistic like fold change or value fgsea <span class="citation">[<a href="references.html#ref-korotkevich2021" role="doc-biblioref">176</a>]</span> methods was used.
 fgsea is a software used to see if groups of variables present in an ordered list present some skewed distribution.
 Pathways of genes were tested on the weight of different models.</p>
-<p>GSVA is a method related to fgsea that summarize the variables’ numerical value so that they can be later used by other methods <span class="citation">[<a href="references.html#ref-hänzelmann2013" role="doc-biblioref">176</a>]</span>.
+<p>GSVA is a method related to fgsea that summarize the variables’ numerical value so that they can be later used by other methods <span class="citation">[<a href="references.html#ref-hänzelmann2013" role="doc-biblioref">177</a>]</span>.
 GSVA was used to estimate the expression of the pathways and try to find the relationships between the pathways and the microbiome at different taxonomic levels.</p>
-<p>clusterProfiler: test genes enrichment for functionality based on information on pathway databases <span class="citation">[<a href="references.html#ref-wu2021" role="doc-biblioref">177</a>]</span>.
+<p>clusterProfiler: test genes enrichment for functionality based on information on pathway databases <span class="citation">[<a href="references.html#ref-wu2021" role="doc-biblioref">178</a>]</span>.
 It uses several methods like fisher test to check the enrichment of features of a given group on the list provided.</p>
 </div>
 <div id="other-methods-used" class="section level3">
 <h3><span class="header-section-number">3.2.2</span> Other methods used</h3>
-<p>vegan package provides the adonis method used to test if microbiome data variance is due to other variables <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">178</a>]</span>.
+<p>vegan package provides the adonis method used to test if microbiome data variance is due to other variables <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">179</a>]</span>.
 This allows to test if the variables are related to the variance of the data.
 This is particularly important on the microbiome data, which is highly variable.
 It was used to detect which variables were important to include in the models of the disease.</p>
-<p>globaltest is a package with methods for testing complex hypothesis and help decide if the variables were influencing <span class="citation">[<a href="references.html#ref-goeman2006" role="doc-biblioref">179</a>]</span>.
+<p>globaltest is a package with methods for testing complex hypothesis and help decide if the variables were influencing <span class="citation">[<a href="references.html#ref-goeman2006" role="doc-biblioref">180</a>]</span>.
 It provides a general test statistic to test a hypothesis against a high dimensional dataset.
 It was used to test which variables, (sex, age, location, time since diagnostic) are important on the datasets.</p>
-<p>Microbiome diversity was measured using vegan and phyloseq methods <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">178</a>]</span>.
+<p>Microbiome diversity was measured using vegan and phyloseq methods <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">179</a>]</span>.
 <span class="math inline">\(\alpha\)</span>-diversity is a measure of how much a given microbiome at a taxonomic level is present on a sample.
 Several measures exists, on the thesis I used the effective Simpson or Shannon diversity index to compare diversity between samples and conditions.
 <span class="math inline">\(\beta\)</span>-diversity was calculated using the phyloseq package for exploratory analysis.</p>
 <p>We looked to see if using some co-expression measure between the the microbiome and the RNAseq would help identify relationships.
-We used weighted gene co-expression network analysis as implemented on WGCNA <span class="citation">[<a href="references.html#ref-langfelder2008" role="doc-biblioref">180</a>]</span>.</p>
-<p>Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two data sources, simple integration, two blocks <span class="citation">[<a href="references.html#ref-meng2014" role="doc-biblioref">181</a>]</span>.
+We used weighted gene co-expression network analysis as implemented on WGCNA <span class="citation">[<a href="references.html#ref-langfelder2008" role="doc-biblioref">181</a>]</span>.</p>
+<p>Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two data sources, simple integration, two blocks <span class="citation">[<a href="references.html#ref-meng2014" role="doc-biblioref">182</a>]</span>.
 It was used as a baseline method to find relationships between microorganisms and genes.</p>
-<p>STATegRa, is a framework for integrating datasets with two data types using parametric and non-parametric methods <span class="citation">[<a href="references.html#ref-planell2021" role="doc-biblioref">182</a>]</span>.
+<p>STATegRa, is a framework for integrating datasets with two data types using parametric and non-parametric methods <span class="citation">[<a href="references.html#ref-planell2021" role="doc-biblioref">183</a>]</span>.
 It was used to explore the datasets and see what do they had in common.</p>
 <p>BaseSet is a package that implements fuzzy set logic for easy calculation of probability to belong to a group.
 It can be used to calculate the size of the sets given a probability of having each element on the sets.
 When evaluating a model using bootstrap, it was used to find which variables were really involved on the interaction and how likely were to be together.</p>
-<p>Regularized generalized canonical correlation analysis, RGCCA, has been the main method used <span class="citation">[<a href="references.html#ref-tenenhaus2017a" role="doc-biblioref">183</a>]</span>.
+<p>Regularized generalized canonical correlation analysis, RGCCA, has been the main method used <span class="citation">[<a href="references.html#ref-tenenhaus2017a" role="doc-biblioref">184</a>]</span>.
 It will be explained in detail on the next section.</p>
 </div>
 </div>
 <div id="regularized-generalized-canonical-correlation-analysis" class="section level2">
 <h2><span class="header-section-number">3.3</span> Regularized generalized canonical correlation analysis</h2>
 <p>The canonical correlation is a method that uses data from the same sample but from different datasets.
-The regularized generalized canonical correlation analysis is an extension to the canonical correlation analysis <span class="citation">[<a href="references.html#ref-jordan1875" role="doc-biblioref">184</a>, <a href="references.html#ref-hotelling1936" role="doc-biblioref">185</a>]</span> which includes a regularization step to select which are the variables more relevant.</p>
+The regularized generalized canonical correlation analysis is an extension to the canonical correlation analysis <span class="citation">[<a href="references.html#ref-jordan1875" role="doc-biblioref">185</a>, <a href="references.html#ref-hotelling1936" role="doc-biblioref">186</a>]</span> which includes a regularization step to select which are the variables more relevant.</p>
 <div id="description" class="section level3">
 <h3><span class="header-section-number">3.3.1</span> Description</h3>
-<p>Over several years of progress <span class="citation">[<a href="references.html#ref-tenenhaus_regularized_2011" role="doc-biblioref">73</a>, <a href="references.html#ref-tenenhaus_variable_2014" role="doc-biblioref">74</a>, <a href="references.html#ref-tenenhaus_component-based_2008" role="doc-biblioref">186</a>–<a href="references.html#ref-tenenhaus_kernel_2015" role="doc-biblioref">189</a>]</span> on the field of canonical correlations RGCCA is a robust method with a usable implementation <span class="citation">[<span class="citeproc-not-found" data-reference-id="R-RGCCA"><strong>???</strong></span>]</span>.</p>
+<p>Over several years of progress <span class="citation">[<a href="references.html#ref-tenenhaus_regularized_2011" role="doc-biblioref">74</a>, <a href="references.html#ref-tenenhaus_variable_2014" role="doc-biblioref">75</a>, <a href="references.html#ref-tenenhaus_component-based_2008" role="doc-biblioref">187</a>–<a href="references.html#ref-tenenhaus_kernel_2015" role="doc-biblioref">190</a>]</span> on the field of canonical correlations RGCCA is a robust method with a usable implementation <span class="citation">[<span class="citeproc-not-found" data-reference-id="R-RGCCA"><strong>???</strong></span>]</span>.</p>
 <p>The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples (<span class="math inline">\(n\gg p\)</span>).
 It needs to have a complete case with no missing values and time is not considered as a specially variable.
 Data should be from the same samples and it is not specific to a certain technology or method used to obtain the data.</p>
@@ -279,7 +279,7 @@ The interpretation of the RGCCA results are tricky and require expertise and fam
 Current practices include using a pre selected model of relations between blocks.
 However this model might not be accurate and several models might need to be fitted.
 To help find the fitting model for the data I created an R package, named <a href="https://llrs.github.io/inteRmodel/">inteRmodel</a>, which helps finding the right model and how fit it is for your data.</p>
-<p>This method applied to an existing dataset of an autologous haematopoietic stem cell transplantation <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">8</a>]</span>.
+<p>This method applied to an existing dataset of an autologous haematopoietic stem cell transplantation <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">9</a>]</span>.
 From this dataset there is data about the human transcriptome and the 16S DNA present at biopsies from colonoscopy.</p>
 </div>
 <div id="relationships-models" class="section level3">
