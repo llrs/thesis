@@ -49,6 +49,8 @@ However, it is still unclear the cause-effect relation between dysbiosis and IBD
 Partly due to the multiple variables already identified that might contribute to the disease progression; for instance, age, diet, usage of antibiotic, tobacco, and eventually socioeconomic status.
 Other variables that has been linked to IBD are genetic predisposition and environmental factors; for instance, bacterial or viral infection, diet, usage of antibiotic, and eventually the socioeconomic status (see [@human_microbiome_project_consortium_framework_2012]).
 
+[Check proteobacteria role on dysbiosis [@mukhopadhya2012] ]
+
 The relationship between host and microbiome has been proposed to play a fundamental role to maintain the disease.
 Little is known of the influence of the gastrointestinal microbiome in the expression of the gastrointestinal tract.
 
