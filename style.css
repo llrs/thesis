@@ -17,3 +17,14 @@
 .tab {
   tab-size: 4;
 }
+
+/*Align caption to the right and change color*/
+p.caption {
+  text-align: right;
+  color: darkgrey;
+  font-style: bold;
+}
+
+.figure {
+  position: center;
+}

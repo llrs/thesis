@@ -180,7 +180,7 @@ The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen
 <p>Total RNA from mucosal samples (HSCT cohort) was isolated using the RNeasy kit (Qiagen, Hilde, Germany).
 RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4000 platform.
 Later, cutadapt (version 1.7.1) <span class="citation">[<a href="references.html#ref-martin2011" role="doc-biblioref">167</a>]</span> was used for quality filtering and the libraries were mapped against the human reference genome using the STAR aligner (2.5.2a) with Ensembl annotation (release GRCh38.10) <span class="citation">[<a href="references.html#ref-dobin2013" role="doc-biblioref">168</a>]</span>.
-Read counts per gene were obtained with RSEM (version 1.2.31) <span class="citation">[<a href="references.html#ref-li2011" role="doc-biblioref">169</a>]</span> as previously described <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">9</a>]</span>.
+Read counts per gene were obtained with RSEM (version 1.2.31) <span class="citation">[<a href="references.html#ref-li2011" role="doc-biblioref">169</a>]</span> as previously described <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">7</a>]</span>.
 Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28) <span class="citation">[<a href="references.html#ref-mccarthy2012" role="doc-biblioref">104</a>]</span>.</p>
 </div>
 <div id="microbial-dna-extraction-from-mucosal-samples" class="section level4">
@@ -282,7 +282,7 @@ The interpretation of the RGCCA results are tricky and require expertise and fam
 Current practices include using a pre selected model of relations between blocks.
 However this model might not be accurate and several models might need to be fitted.
 To help find the fitting model for the data I created an R package, named <a href="https://llrs.github.io/inteRmodel/">inteRmodel</a>, which helps finding the right model and how fit it is for your data.</p>
-<p>This method applied to an existing dataset of an autologous haematopoietic stem cell transplantation <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">9</a>]</span>.
+<p>This method applied to an existing dataset of an autologous haematopoietic stem cell transplantation <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">7</a>]</span>.
 From this dataset there is data about the human transcriptome and the 16S DNA present at biopsies from colonoscopy.</p>
 </div>
 <div id="relationships-models" class="section level3">
