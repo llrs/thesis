@@ -7,8 +7,9 @@ UC is a recurrent, chronic and continuous inflammation of the colon and rectum w
 IBD etiology is unknown.
 However, once it has initiated the most prevalent hypothesis of its chronicity suggests an aberrant immunological response to antigens of the commensal microbiome.
 
-Treatments provided for the IBD are palliative.
-Those treatments include, noninflammatory drugs, suppressors and biologic.
+To diagnose the inflammatory bowel disease, factors such as leukocytes levels on blood, a high globular sedimentation speed, increase of protein C reactive and anemia could indicate inflammatory bowel disease.
+
+Treatments provided for the IBD include, noninflammatory drugs, suppressors and biologic.
 The therapeutic options can induce remission in some patients, however they often need continuous treatment to avoid recurrence.
 Nevertheless, many patients are refractory or intolerant to those therapies and need to undergo surgery.
 
@@ -19,24 +20,13 @@ The disease present unique characteristics that require the usage of integration
 Inflammatory bowel disease (IBD) includes the chronic diseases Crohn's disease (CD) and ulcerative colitis (UC) which are characterized by alternating periods of remission and clinical relapse that mainly affect the gastrointestinal tract.
 CD is a progressive relapsing disease that can affect all the gastrointestinal tract but shows mostly on both terminal ilium and colon with a discontinuous inflammation.
 The UC is a colonic relapsing disease characterized by a continuous inflammation of the colon.
-Both of them have different risk factors, clinical, endoscopic an histological characteristics.
-
-<!-- Check with Elena Basolas Tesis p18-->
-
-Some differences between them is that on CD a granulome, that is a region with big multinucleous cells, can appear on any intestinal layer, while on UC we observe a different damage consisting in many neutrophil in the crypt lumen.
-
-To distinguish between the diseases, in addition to the inflamed location(s), mosaic zones (patches of inflamed and non-inflamed areas) are more characteristic of CD [@bassolasmolina2018].
-
-Sometimes blood analysis are also used, if there are some factors altered such as leukocytes, a high globular sedimentation speed, increase of protein C reactive and anemia could indicate inflammatory bowel disease.
-Another indicator of CD disease is an increase of calprotectin in fecal samples [@sands2015].
-
-<!-- End -->
+Both of them have different risk factors, clinical, endoscopic an histological characteristics (see section [Crohn's disease physiology] and [Ulcerative colitis physiology].
 
 Around 3.5 million individuals have IBD in Europe and North America combined [@jairath2020].
 IBD is more commonly found in industrialized and developed regions, suggesting that environmental factors might greatly influence IBD occurrence.
 In addition, the incidence of IBD is increasing in areas, such as Asia or Eastern Europe, where the number of cases was relatively low hitherto [@burisch2015].
+On some of these countries, having the disease prevents people to [apply to certain positions](https://civio.es/el-boe-nuestro-de-cada-dia/2019/02/13/las-enfermedades-que-vetan-el-acceso-a-ciertos-empleos-publicos/ "Link to a Civio.es about disease disqualifying for some public positions").
 
-The disease has been used as a condition that prevents people to [apply to certain positions](https://civio.es/el-boe-nuestro-de-cada-dia/2019/02/13/las-enfermedades-que-vetan-el-acceso-a-ciertos-empleos-publicos/ "Link to a Civio.es about disease disqualifying for some public positions").
 The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome.
 Several studies support the concept that IBD arise from an exacerbate immune response against commensal gut microorganisms.
 Nonetheless, the disease could result from an imbalanced microbial composition leading to generalized or localized dysbiosis[^introduction-1].
@@ -46,27 +36,19 @@ Nonetheless, the disease could result from an imbalanced microbial composition l
 The role of the gut microbiome in IBD is an active ongoing field of research.
 Several authors are currently studying the alterations reported in IBD of the intestinal microbiome.
 However, it is still unclear the cause-effect relation between dysbiosis and IBD.
-Partly due to the multiple variables already identified that might contribute to the disease progression; for instance, age, diet, usage of antibiotic, tobacco, and eventually socioeconomic status.
-Other variables that has been linked to IBD are genetic predisposition and environmental factors; for instance, bacterial or viral infection, diet, usage of antibiotic, and eventually the socioeconomic status (see [@human_microbiome_project_consortium_framework_2012]).
-
-[Check proteobacteria role on dysbiosis [@mukhopadhya2012] ]
+Partly due to the multiple variables already identified that have been linked to IBD; for instance, age, diet, usage of antibiotic, tobacco, and eventually socioeconomic status (see [@human_microbiome_project_consortium_framework_2012]).
 
 The relationship between host and microbiome has been proposed to play a fundamental role to maintain the disease.
-Little is known of the influence of the gastrointestinal microbiome in the expression of the gastrointestinal tract.
+For instance, some Proteobacteria which have adherent and invasive properties might exploit host defenses and drive proinflammatory change, altering the intestinal microbiota in favor of dysbiosis [@mukhopadhya2012].
 
 ### Etiology and pathogenesis
 
-Several explanations has been proposed of the origin of the disease [@zhang2014; @hugot2004] .
-Some of them base on a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire [@corralizaDifferencesPeripheralTissue].
+Several explanations have been proposed as the origin of the disease [@zhang2014; @hugot2004].
+Some of them are based on a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire [@corralizaDifferencesPeripheralTissue].
 It is also unclear if Crohn's disease and the ulcerative colitis share the same origin considering their different symptoms.
 
-There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b].
-
-Although so far it is not known what starts the disease there are differences on the disease when appears at different age, which provides some clues on the mechanism(s) of disease.
-There is a classification between very early, early or adult on-set disease [@satsangi2006b].
-On very early on-set the genetic component is high (See [Clinical care] section).
-GWAS studies has linked the IBD disease to *NOD2* gene, but so far there isn't any known mechanism how this gene could start the disease [@horowitz2021].
-On early and adult disease the genetic component is lower and it is thought that the environmental factors are the main cause of the disease.
+There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b; @satsangi2006c]. Although so far it is not known what triggers the disease at different age, which provides some clues on the mechanism(s) of disease. There is a classification between very early, early or adult on-set disease [@satsangi2006c]. On very early on-set the genetic component is high (See [Clinical care] section). Genome-wide association studies (GWAS) have linked the IBD disease to *NOD2* gene, but so far there isn't any known mechanism how this gene could start the disease [@horowitz2021].
+On early and adult disease the genetic component is lower than on very early on set and it is thought that the environmental factors are the main cause of the disease at those ages.
 
 Either case it is not known how it starts or it is sustained and causes those characteristics relapses.
 On the following sections I'll explore the role of several of the possible factors involved on the pahtogenesis, starting with the genetics.
@@ -76,26 +58,23 @@ On the following sections I'll explore the role of several of the possible facto
 The inflammatory bowel disease is not an heritable disease but it has some genetic influence that predisposes people to have it.
 On some patients that the disease show up very early, diagnosed before the age of 2 or just early following the Montreal classification (See [Clinical care] section), the genetic component is higher.
 
-This has lead the studies looking for genetic factors on IBD both on general population and on the early cases.
-Genome wide association studies (GWAS) is one of the most common genetic studies, together with methylation studies.
-They help discover through linkage desequilibrium genetic variations linked to phenotypes.
+This has lead to look for genetic factors on IBD both on general population and on the early cases.
+Genome wide association studies (GWAS) is one of the most common genetic studies performed, together with methylation studies.
+They help discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.
 
-With GWAS several allels on protein coding loci have been found rising to around 300 genetic variants [@kumar2019].
-Particularly, one on the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018].
-The proposed mechanism has not been confirmed yet [@horowitz2021].
+With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019]. Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P-value \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018]. The mechanism of how this gene protects from ulcerative colitis has not been confirmed yet [@horowitz2021].
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
-Recently expression quantitative trait loci (eQTL) particularly showed this [@mcgovern2015].
-Usually they are on enhancers or promoters like e.g.
+Recently expression quantitative trait loci (eQTL) particularly showed [@mcgovern2015] that locis are on enhancers or promoters like e.g.
 H3K27Ac or promoter e.g.
-H3K4me1 marks as found by ChIP-Seq (chromatin immunoprecipitation sequencing).
+H3K4me1 marks as found by chromatin immunoprecipitation sequencing (ChIP-Seq).
 
 #### Microbiome
 
 <!--Aida 2.3 p24-->
 
 The human intestinal is a large reservoir of microorganisms (bacteria, fungi, viruses, and unicellular eukaryotes) that coexist within the gastrointestinal tract.
-This microbiome community exerts different functions in the human body influencing the nutrient metabolism, immune system maturation and suppression of harmful microorganisms' growth [@khanna2014].
+This microbiome community exerts different functions in the human body influencing the nutrients metabolism, immune system maturation and suppression of harmful microorganisms' growth [@khanna2014].
 
 The role of the gut microbiota is key in the IBD pathogenesis.
 IBD has been characterized by a breakdown in the balance between beneficial and harmful bacteria that are present in the human gut compared to healthy individuals [@swidsinski2002; @tamboli2004].
@@ -104,18 +83,17 @@ IBD has been characterized by a breakdown in the balance between beneficial and 
 
 <!--Elenea tesis -->
 
-Many studies show that patients with inflammatory bowel disease has less biodiversity.
+Many studies show that patients with inflammatory bowel disease have less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
 $\alpha$-diversity is a measure of the species present on a single sample and how much of each taxonomic group is there.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004].
-At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
-$\beta$-diversity compares the diversity between samples of the same study, which typically looks like a horse-shoe-like shape in the first two dimensions.
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004]. At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
+$\beta$-diversity compares the diversity between samples, which typically looks like a horse-shoe-like shape when reducing the distances to their first two dimensions via principal component analysis.
 
 <!--Aida 2.3 p24-->
 
 In fact, it has been recently proposed that several unique microbial species can distinguish healthy controls from UC and CD patients [@sankarasubramanian2020a; @lopez-siles2014].
 
-![The microbial composition and in healthy and IBD gut](images/tesis_AM_Figure2.png "Microbial composition and epithelial barrier status in healthy versus IBD gut.")
+![The microbial composition in a healthy and inflammed bowel disease gut.](images/tesis_AM_Figure2.png "Microbial composition and epithelial barrier status in healthy versus IBD gut.")
 
 <!--End-->
 
@@ -123,14 +101,13 @@ One of the proposed mechanism of interaction is through the chemical compounds t
 Chemical compounds may interact with the cells and modulate the state of the intestine.
 One example of such molecular is butyrate which has been linked to microorganisms presents on healthy intestines and to induce a better healing of intestine cells [@ferrer-picón2020].
 
-On IBD patients adherent invasive Escherichia coli has been associated with IBD.
-adherent invasive strains are mainly found in ileal and colonic samples of CD patients and their presence in UC is less clear.
-These adherent invasive cells enter into the epithelium cells and live on their cytosol.
+As previously mentioned, adherent invasive *Escherichia coli*, a proteobacteria specie, has been associated with IBD patients.
+Adherent invasive strains are mainly found in ileal and colonic samples of CD patients and their presence in UC is less clear.
+These adherent invasive cells enter trhough the epithelium of the more permable cells and live on their cytosol.
 
 <!-- End-->
 
-In addition, there has been some observations that mild IBD patients response to treatments that modify their gut microbiota.
-Some of these treatments are: fecal microbiota transplantation, probiotics and postbiotics.
+In addition, there has been some observations that mild IBD patients response to treatments that modify their gut microbiota, such as: fecal microbiota transplantation, probiotics and postbiotics.
 
 #### Immune response
 
@@ -138,8 +115,7 @@ As explained previously the immune system might be one of the reasons of the inf
 IBD is often characterized as an immune-mediated disease, if not outright autoimmune disease.
 
 A loss of tolerance to commensal bacteria has been suggested as the underlying mechanism triggering the inflammation on the intestine.
-The immune response involves many different cells lines and regions.
-For a better understanding it is important to know the organization of the intestine and its cells.
+The immune response involves many different cells lines and regions, which are important to know how they organize for a better understanding of the disease.
 
 <!--Image from Ana tesis p29: -->
 
@@ -147,7 +123,7 @@ For a better understanding it is important to know the organization of the intes
 
 From the luminal side of intestine, the first layer is the mucosa.
 The mucus is organized in two layers: the inner layer, a firm mucus layer; and the outer, loose mucus layer [@okumura2017].
-Below, the intestinal epithelium is a single layer of cells organized into crypts and villi (and circular folds on the large intestine) that carries out a diverse array of functions besides digestion performed by specialized cell lineages.
+Below the intestinal epithelium there is a single layer of cells organized into crypts and villi (and circular folds on the large intestine) that carries out a diverse array of functions besides digestion performed by specialized cell lineages.
 These cells usually come from the basal side of the crypt and mature as they move towards the apical side.
 
 <!--From tesis Aida p20-->
@@ -177,18 +153,18 @@ From those, macrophages and dendritic cells are antigen presenting cells too and
 Usually CD patients express higher amounts of TLR than healthy individuals, which might trigger a stronger immune response.
 This response is driven by CD4^+^ T cells proliferation in secondary lymphoid tissues to T helpers in the presence of the antigens and cytokines nearby.
 
-T helpers (Th) differentiate depending of the cytokines at which they are exposed.
+T helpers (T~h~) differentiate depending of the cytokines at which they are exposed.
 Th type 1 are driven by exposure to IL-12 secreted primarily by dentritic cells.
-Th2 are dtriven by cytokines secreted by macrophages.
-The imbalance between Th1 and Th2-promoting cytokines determines the intensity and duration of the inflammatory response in experimental colitis [@neurath1996].
+T~h~2 are dtriven by cytokines secreted by macrophages.
+The imbalance between T~h~1 and T~h~2-promoting cytokines determines the intensity and duration of the inflammatory response in experimental colitis [@neurath1996].
 
-Th17-promoting cytokines are less well characterized in human.
-Treg cells differentiate after exposure to cytokines IL-10, IFN-$\gamma$ and TGF-$\beta$.
+T~h~17-promoting cytokines are less well characterized in human.
+T~reg~ cells differentiate after exposure to cytokines IL-10, IFN-$\gamma$ and TGF-$\beta$.
 Overall the presence of certain cytokines and the response to self-antigens are factors leads to an inflammation and damage that is related to the onset and establishment of IBD
 
 <!--End tesis Aida/ more or less -->
 
-On these kind of diseases autologous haematopoietic stem cell transplantation has shown some benefits on IBD [@corraliza].
+On these kind of diseases autologous hematopoietic stem cell transplantation has shown some benefits on IBD [@corraliza].
 The benefit of Hematopoietic Stem Cell Transplant (HSCT) in autoimmunity is thought to originate from the depletion of auto-reactive cells regardless of their specificity.
 However, due to its associated risk this therapy is only given when patients are refractory to all available therapeutic options.
 
@@ -199,16 +175,26 @@ However, due to its associated risk this therapy is only given when patients are
 Chronic inflammatory disorders and neoplasms have become the main cause of morbidity and mortality in the countries that follow a strategy of reducing the contact with anything dirty.
 This decreases the human exposure to microbes which might affect the proper maturation of the immune system so that it provides a more ineffective immune response or exacerbated response towards "friendly" microbes [@strachan1989; @scudellari2017].
 
-From other environmental factors related to IBD such as tobacco, diet, certain drugs and stres; tobacco is the most influential environmental factor.
+From other environmental factors related to IBD such as tobacco, diet, certain drugs and stress; tobacco is the most influential environmental factor.
 Surprisingly, it has an opposite effect on UC and CD: in CD tobacco is a risk factor that increases the risk of relapse and/or surgical intervention.
 In UC, it has been observed that smoking cessation worsens the disease [@thomas1998].
 
-Pharmacological treatments such as oral contraceptives, nonsteroidal anti-inflammatory drugs are also related to develop or relapse the disease [@cornish2008; @kaufmann1987].
+Pharmacological treatments such as oral contraceptives, non steroidal anti-inflammatory drugs are also related to develop or relapse the disease [@cornish2008; @kaufmann1987].
 
 The psychological welfare of people also plays an important role in the disease progression, stress, anxiety and depression might be important in relapse and deterioration of the disease [@bitton2008].
 Other environmental factors have been linked to IBD but without enough evidence to support a causative effect in the development of the disease.
 
 <!--End-->
+
+<!-- Check with Elena Basolas Tesis p18-->
+
+Perhaps the environment factors influence the samples disease etiology towards Crohn's disease or ulcerative colitis as there are some differences between them.
+On CD a granulome, that is a region with big multinucleous cells, can appear on any intestinal layer, while on UC we observe a different damage consisting in many neutrophil in the crypt lumen.
+
+To distinguish between the diseases, in addition to the inflamed location(s), mosaic zones (patches of inflamed and non-inflamed areas) are more characteristic of CD [@bassolasmolina2018].
+Another indicator of CD is an increase of calprotectin in fecal samples [@sands2015].
+
+<!-- End -->
 
 ### Crohn's disease physiology
 
