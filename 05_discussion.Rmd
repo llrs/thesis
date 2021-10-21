@@ -27,7 +27,7 @@ If we are more interested on the model of the relationships the inner AVE makes 
 
 Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
 Another option is to use an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately.
-Of the multiple methods available we used [MCIA](https://bioconductor.org/packages/omicade4 "Omicade4") [@mengMultivariateApproachIntegration2014].
+Of the multiple methods available we used [MCIA](https://bioconductor.org/packages/omicade4 "Omicade4 package") [@mengMultivariateApproachIntegration2014].
 Which was compared by looking at the area under the curve for classifying the samples according to their location.
 
 Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn's disease.
@@ -37,3 +37,9 @@ The procedure of separating independent variables in their own block of data and
 
 The procedural method of searching a model and testing them is implemented on [inteRmodel](https://llrs.github.io/inteRmodel/ "inteRmodel").
 But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling.
+
+## Relevance for other research
+
+It is hard to provide more information that can be later used by researchers on the wet lab.
+
+There is a disconnect between the computational side and the experimental side, driven by the difficulty to think an experiment to test the new information that multi-omic experiments provide. 

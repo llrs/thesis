@@ -6,8 +6,8 @@ Some sections of these methods has been already published and copied or adapted 
 
 #### Ethical considerations
 
-All samples were collected with approval from the Ethical Comitee and under express authorization of the patients.
-The minimum number of samples needed for the sutdy were collected.
+All samples were collected with approval from the Ethical Committee and under express authorization of the patients.
+The minimum number of samples needed for the study were collected.
 Data is pseudonymisated to prevent identification of the patients.
 
 ### HSCT dataset
