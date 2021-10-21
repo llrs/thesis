@@ -48,12 +48,14 @@ other-methods-used
 regularized-generalized-canonical-correlation-analysis
 description
 relationships-models
+results
 biological-relevance-of-results
 comparing-different-dataset
 shared-selected-variables
 discussion
 designing-models
 evaluating-models
+relevance-for-other-research
 conclusions
 acknowledgements
 online-resources
