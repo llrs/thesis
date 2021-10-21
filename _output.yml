@@ -22,7 +22,7 @@ bookdown::gitbook:
         href: https://github.com/llrs/thesis/
       facebook: no
       twitter:
-        href: https://twitter.com/intent/tweet?text=Nice%20read%20of%20%40Lluis_Rev%20thesis
+        href: https://twitter.com/intent/tweet?text=Nice%20read%20of%20%40Lluis_Revilla%20thesis
 bookdown::pdf_book:
   keep_tex: no
   dev: "cairo_pdf"
