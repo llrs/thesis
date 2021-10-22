@@ -9,7 +9,7 @@ crohns-disease-physiology
 clinical-presentation
 disease-course
 ulcerative-colitis-physiology
-clinical-care
+clinical-care-UC
 drugs-and-treaments
 summary
 studies-and-integration-on-ibd
