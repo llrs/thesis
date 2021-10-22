@@ -47,7 +47,11 @@ Several explanations have been proposed as the origin of the disease [@zhang2014
 Some of them are based on a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire [@corralizaDifferencesPeripheralTissue].
 It is also unclear if Crohn's disease and the ulcerative colitis share the same origin considering their different symptoms.
 
-There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b; @satsangi2006c]. Although so far it is not known what triggers the disease at different age, which provides some clues on the mechanism(s) of disease. There is a classification between very early, early or adult on-set disease [@satsangi2006c]. On very early on-set the genetic component is high (See [Clinical care] section). Genome-wide association studies (GWAS) have linked the IBD disease to *NOD2* gene, but so far there isn't any known mechanism how this gene could start the disease [@horowitz2021].
+There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b; @satsangi2006c].
+Although so far it is not known what triggers the disease at different age, which provides some clues on the mechanism(s) of disease.
+There is a classification between very early, early or adult on-set disease [@satsangi2006c].
+On very early on-set the genetic component is high (See [Clinical care] section).
+Genome-wide association studies (GWAS) have linked the IBD disease to *NOD2* gene, but so far there isn't any known mechanism how this gene could start the disease [@horowitz2021].
 On early and adult disease the genetic component is lower than on very early on set and it is thought that the environmental factors are the main cause of the disease at those ages.
 
 Either case it is not known how it starts or it is sustained and causes those characteristics relapses.
@@ -62,7 +66,9 @@ This has lead to look for genetic factors on IBD both on general population and 
 Genome wide association studies (GWAS) is one of the most common genetic studies performed, together with methylation studies.
 They help discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.
 
-With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019]. Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P-value \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018]. The mechanism of how this gene protects from ulcerative colitis has not been confirmed yet [@horowitz2021].
+With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019].
+Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P-value \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018].
+The mechanism of how this gene protects from ulcerative colitis has not been confirmed yet [@horowitz2021].
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
 Recently expression quantitative trait loci (eQTL) particularly showed [@mcgovern2015] that locis are on enhancers or promoters like e.g.
@@ -86,7 +92,8 @@ IBD has been characterized by a breakdown in the balance between beneficial and 
 Many studies show that patients with inflammatory bowel disease have less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
 $\alpha$-diversity is a measure of the species present on a single sample and how much of each taxonomic group is there.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004]. At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004].
+At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
 $\beta$-diversity compares the diversity between samples, which typically looks like a horse-shoe-like shape when reducing the distances to their first two dimensions via principal component analysis.
 
 <!--Aida 2.3 p24-->
@@ -199,63 +206,69 @@ Another indicator of CD is an increase of calprotectin in fecal samples [@sands2
 ### Crohn's disease physiology
 
 As previously introduced, Crohn's disease is a chronic inflammatory disorder characterized by alternating periods of remission and clinical relapse it is frequently associated with extraintestinal manifestation and/or concomitant immuno-mediated diseases.
-Inflammation on the gastrointestinal tract is transmural and can affect from the mouth to the anus, but mainly it manifests on the ileum and colon.
+Inflammation on the gastrointestinal tract is transmural and can affect from the mouth to the anus, but mainly it manifests on the ileum and colon [@demattos2015a].
 
 #### Clinical presentation
 
 The disease itself manifest an heterogeneous symptoms that can involve, diarrhea, weight loss, abdominal pain, fever, anorexia, malaise.
-Other co-occurring manifestations are arthritis, primary sclerosing cholangitis, skin disorders venous or arterial thromboembolism and/or pulmonary involvement.
-All these symptoms make it hard to provide a diagnosis by non-specialists and can lead to delays on correct diagnosis of the disease as there isn't a single gold standard test for its diagnosis.
+Other less frequent co-occurring manifestations are arthritis, primary sclerosing cholangitis, skin disorders venous or arterial thromboembolism and/or pulmonary involvement [@baumgart2012] .
+These symptoms make it hard to correctly diagnose the disease by non-specialists, in addition there isn't a non invasive easy procedure to diagnose it.
+All these can lead to delays on correct diagnosis of the disease.
 
 <!--Tesis Ana p21-->
 
-The detection of parasites or bacteria, such as *Clostridium difficile*, would admit an infectious disease.
-The detection of fecal calprotectin, is a good marker of endocopic activity with sensitivity above 70% and specificity above 80% generally [@guardiola2018].
-Usually the diagnosis is performed with a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn's disease.
-This inflammation could also present as an ulceration and rectal sparing [@corralizamárquez2019].
-Histological lesions also help to diagnose the patients .
+The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with CD although they could be just an infection.
+The detection of fecal calprotectin, is generally a good marker of endocopic activity with sensitivity above 70% and specificity above 80% [@guardiola2018].
+
+Usually the best diagnosis method is to perform a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn's disease.
+This inflammation could also present ulceration and rectal sparing and histological lesions which also help to diagnose the patients [@corralizamárquez2019].
 
 <!--End-->
 
-To address this difficulty the Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behaviour.
-This classification assumes that the location of Crohn's disease remains stable over time after diagnosis but behavioral phenotypes change with most patients progressing from an inflammatory phenotype to a stricturing or penetrating one [@satsangi2006a].
+To address this difficulty the Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behaviour (See [below](#clinical-care-UC)).
+This classification assumes that the location of Crohn's disease remains stable over time after diagnosis but behavioral phenotypes change.
+Most patients progress from an inflammatory phenotype to a stricturing or penetrating one [@satsangi2006a].
 
 <!--Add Figure 2 from ACM thesis?-->
 
 <!---->
 
-There is to some extent a disassociated between patient's (clinic) well-being report and the colonoscopy observation.
-Often patients report feeling better but their gut is as inflamed as previously.
+To some extent, there is a disassociated between patient's well-being report and the colonoscopy observation.
+Often patients report feeling better but their gut is as inflamed as previously [@bhattacharya2016a].
 This has lead to several scores and thresholds used on research and treatment of the patients.
 
 #### Disease course
 
 In the early stages of the disease the relapsing and remitting course is more frequent.
 Often relapses are accompanied by clinical symptoms, and very few have prolonged clinical remission [@peyrin-biroulet2010].
-When there is clinical remission, as mentioned above there can still remain some other lesions and sublinical inflammation often persists.
-Often the damage caused by the disease evolves to fibrostenotic stricture or penetrating lesions (fistula and abscess).
+When there is clinical remission, there can still remain some other lesions and often sublinical inflammation persists.
+Frequently the damage caused by the disease evolves to fibrostenotic stricture or penetrating lesions (fistula and abscess).
 
-The damage of the disease might not be apparent to patients and might be only seen seeral years later than the first detection [@bhattacharya2016].
+The damage of the disease might not be apparent to patients and might be only seen several years later than the first detection [@bhattacharya2016].
+Mucosal healing is a first step towards the healing of deeper layers of the inflamed bowel wall on the Crohn's disease.
 
 ### Ulcerative colitis physiology
 
-Around a third of the patients with ulcerative colitis suffer proctitis, followed by left colitis, when the affected area starts on the rectum and extends to the left colon, distal colitis, defined as disease limited to rectum and sigmoid colon, extensive colitis as involvement of at least the descending colon, and pancolitis, when the disease affects all the colon.
-The extension and severity of the disease correlates with the clinical observation, where longer extension is a worse prognosis [@etchevers2009].
-Extensive colitis is also associated with extensive care [@etchevers2009].
+The phenotype of the ulcerative colitis is defined by the extension of the inflammation.
+Around a third of the patients with ulcerative colitis suffer proctitis, the inflammation of the final segment of the colon.
+The next more common manifestation of the disease is the distal colitis when the rectum to the sigmoid colon are affected.
+Left colitis, where the affected area starts on the rectum and extends to the left colon is also common.
+Next most common phenotype is the extensive colitis were there is involvement of at least the descending colon.
+The last common phenotype is the pancolitis, when the disease affects all the colon.
+The extension and severity of the disease correlates with the clinical observation, where the longer the extension of the colitis is, the worse the prognosis is [@etchevers2009].
 
-### Clinical care
+#### Clinical care {#clinical-care-UC}
 
-The goal of treatment is not limited to clinical remission, clinical remission is the when the symptoms of IBD have lessened to the point that they're mostly absent, gone, or barely noticeable, but rather to mucosal healing, which means the reconstitution of the structure and function of the intestinal epithelial barrier.
-Mucosal healing is a first step towards the healing of deeper layers of the inflamed bowel wall on the Crohn's disease.
+The goal of the clinical care is to recover and reach a healthy life.
+As a first step, the symptoms of IBD have to lessen to the point that they're mostly absent, gone, or barely noticeable, this is known as clinical remission.
+However, this is not enough as the mucosa might be still inflammed and thus the reconstitution of the structure and function of the intestinal epithelial barrier not complete.
+Other lesions, might aid to the progression to other phenotypes such as fibrostenotic stricture or penetrating lesions increasing the structural bowel damage or primary sclerosing cholangitis [@boonstra2012].
 
-Clinical remission is not enough to avoid relapse and the bowel may not be free of lesions, evolving to other phenotypes such as fibrostenotic stricture or penetrating lesions increasing the structural bowel damage.
+To prevent and avoid further damage several procedure are followed:
 
-Colectomy, a surgical procedure to remove part or all of your colon, is a surgery procedure done when there is colorectal cancer or the damage on the colon has been too big.
-That sometimes IBD patients have to endure.
-
-Patients that undergo a colectomy need to have their bowel reconnected with a procedure called ileoanal anastomosis (J-pouch) surgery.
-This often ends up in a pouchitis, inflammation that occurs in the lining of a pouch created during surgery to treat ulcerative colitis or certain other diseases [@schieffer2016].
-Which might extend to healthy areas.
+When there is colorectal cancer or the damage on the colon has been too big a surgical procedure to remove part or all of the colon must be done.\
+Patients that undergo a colectomy need to have their bowel reconnected with a procedure called ileoanal anastomosis (also know as J-pouch by the sape it takes) surgery.
+This pouch often ends up inflammating starting onn the lining of the pouch created during surgery and extending from there [@schieffer2016].
 
 Dysplasia, an abnormal development of cells within tissues or organs, is often associated with chronic IBD patients, which is considered a precedence before colorectal cancer develops [@mark-christensen2018].
 
