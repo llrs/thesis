@@ -50,7 +50,7 @@ It is also unclear if Crohn's disease and the ulcerative colitis share the same 
 There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b; @satsangi2006c].
 Although so far it is not known what triggers the disease at different age, which provides some clues on the mechanism(s) of disease.
 There is a classification between very early, early or adult on-set disease [@satsangi2006c].
-On very early on-set the genetic component is high (See [Clinical care] section).
+On very early on-set the genetic component is high (See [Clinical care](#clinical-care-UC) section).
 Genome-wide association studies (GWAS) have linked the IBD disease to *NOD2* gene, but so far there isn't any known mechanism how this gene could start the disease [@horowitz2021].
 On early and adult disease the genetic component is lower than on very early on set and it is thought that the environmental factors are the main cause of the disease at those ages.
 
@@ -60,7 +60,7 @@ On the following sections I'll explore the role of several of the possible facto
 #### Genetics
 
 The inflammatory bowel disease is not an heritable disease but it has some genetic influence that predisposes people to have it.
-On some patients that the disease show up very early, diagnosed before the age of 2 or just early following the Montreal classification (See [Clinical care] section), the genetic component is higher.
+On some patients that the disease show up very early, diagnosed before the age of 2 or just early following the Montreal classification (See [Clinical care](#clinical-care-UC) section), the genetic component is higher.
 
 This has lead to look for genetic factors on IBD both on general population and on the early cases.
 Genome wide association studies (GWAS) is one of the most common genetic studies performed, together with methylation studies.
