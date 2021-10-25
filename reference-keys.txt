@@ -20,7 +20,7 @@ metabolome
 summary-1
 integration
 classification-of-integration-methods
-data-type-numeric-vs-categorical
+data-type-numeric-or-categorical
 objective
 relationship-between-variables-and-samples
 relationship-between-samples
