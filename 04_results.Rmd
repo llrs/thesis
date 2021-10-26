@@ -1,13 +1,9 @@
 # Results
 
-
-
 # Biological relevance of results
-
 
 ## Comparing different dataset
 
 ## Shared selected variables
 
-
-BaseSet didn't work, it is computationally expensive to calculate the likelihood of 1500 variables, there are too many combinations.
+BaseSet didn't work, it is computationally expensive to calculate the likelihood of 1500 variables, there are too many combinations and the numeric precision of said calculations must be considered carefully.
