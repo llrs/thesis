@@ -77,7 +77,7 @@ H3K4me1 marks as found by chromatin immunoprecipitation sequencing (ChIP-Seq).
 
 #### Microbiome
 
-<!--Aida 2.3 p24-->
+<!--# Aida 2.3 p24-->
 
 The human intestinal is a large reservoir of microorganisms (bacteria, fungi, viruses, and unicellular eukaryotes) that coexist within the gastrointestinal tract.
 This microbiome community exerts different functions in the human body influencing the nutrients metabolism, immune system maturation and suppression of harmful microorganisms' growth [@khanna2014].
@@ -85,9 +85,9 @@ This microbiome community exerts different functions in the human body influenci
 The role of the gut microbiota is key in the IBD pathogenesis.
 IBD has been characterized by a breakdown in the balance between beneficial and harmful bacteria that are present in the human gut compared to healthy individuals [@swidsinski2002; @tamboli2004].
 
-<!--End-->
+<!--# End-->
 
-<!--Elenea tesis -->
+<!--# Elenea tesis -->
 
 Many studies show that patients with inflammatory bowel disease have less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
@@ -96,13 +96,13 @@ There are some reports of taxonomic changes and increase on *Enterobacteriaceae 
 At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
 $\beta$-diversity compares the diversity between samples, which typically looks like a horse-shoe-like shape when reducing the distances to their first two dimensions via principal component analysis.
 
-<!--Aida 2.3 p24-->
+<!--# Aida 2.3 p24-->
 
 In fact, it has been recently proposed that several unique microbial species can distinguish healthy controls from UC and CD patients [@sankarasubramanian2020a; @lopez-siles2014].
 
 ![The microbial composition in a healthy and inflammed bowel disease gut.](images/tesis_AM_Figure2.png "Microbial composition and epithelial barrier status in healthy versus IBD gut.")
 
-<!--End-->
+<!--# End-->
 
 One of the proposed mechanism of interaction is through the chemical compounds they generate.
 Chemical compounds may interact with the cells and modulate the state of the intestine.
@@ -112,7 +112,7 @@ As previously mentioned, adherent invasive *Escherichia coli*, a proteobacteria 
 Adherent invasive strains are mainly found in ileal and colonic samples of CD patients and their presence in UC is less clear.
 These adherent invasive cells enter trhough the epithelium of the more permable cells and live on their cytosol.
 
-<!-- End-->
+<!--# End-->
 
 In addition, there has been some observations that mild IBD patients response to treatments that modify their gut microbiota, such as: fecal microbiota transplantation, probiotics and postbiotics.
 
@@ -124,7 +124,7 @@ IBD is often characterized as an immune-mediated disease, if not outright autoim
 A loss of tolerance to commensal bacteria has been suggested as the underlying mechanism triggering the inflammation on the intestine.
 The immune response involves many different cells lines and regions, which are important to know how they organize for a better understanding of the disease.
 
-<!--Image from Ana tesis p29: -->
+<!--# Image from Ana tesis p29: -->
 
 ![The intestinal epithelial barrier.](images/tesis_AC_FigureX.png "The intestinal epithelial barrier")
 
@@ -133,7 +133,7 @@ The mucus is organized in two layers: the inner layer, a firm mucus layer; and t
 Below the intestinal epithelium there is a single layer of cells organized into crypts and villi (and circular folds on the large intestine) that carries out a diverse array of functions besides digestion performed by specialized cell lineages.
 These cells usually come from the basal side of the crypt and mature as they move towards the apical side.
 
-<!--From tesis Aida p20-->
+<!--# From tesis Aida p20-->
 
 Immune response in the intestinal mucous is mainly excreted by the gut associated lymphoid tissue [@faria2012].
 Deregulation of the mucosal immune system has been associated with the pathogenesis of IBD [@silva2016a; @demattos2015].
@@ -169,7 +169,7 @@ T~h~17-promoting cytokines are less well characterized in human.
 T~reg~ cells differentiate after exposure to cytokines IL-10, IFN-$\gamma$ and TGF-$\beta$.
 Overall the presence of certain cytokines and the response to self-antigens are factors leads to an inflammation and damage that is related to the onset and establishment of IBD
 
-<!--End tesis Aida/ more or less -->
+<!--# End tesis Aida/ more or less -->
 
 On these kind of diseases autologous hematopoietic stem cell transplantation has shown some benefits on IBD [@corraliza].
 The benefit of Hematopoietic Stem Cell Transplant (HSCT) in autoimmunity is thought to originate from the depletion of auto-reactive cells regardless of their specificity.
@@ -177,7 +177,7 @@ However, due to its associated risk this therapy is only given when patients are
 
 #### Environmental
 
-<!--p26 Aida sec 2.4 -->
+<!--# p26 Aida sec 2.4 -->
 
 Chronic inflammatory disorders and neoplasms have become the main cause of morbidity and mortality in the countries that follow a strategy of reducing the contact with anything dirty.
 This decreases the human exposure to microbes which might affect the proper maturation of the immune system so that it provides a more ineffective immune response or exacerbated response towards "friendly" microbes [@strachan1989; @scudellari2017].
@@ -191,17 +191,17 @@ Pharmacological treatments such as oral contraceptives, non steroidal anti-infla
 The psychological welfare of people also plays an important role in the disease progression, stress, anxiety and depression might be important in relapse and deterioration of the disease [@bitton2008].
 Other environmental factors have been linked to IBD but without enough evidence to support a causative effect in the development of the disease.
 
-<!--End-->
+<!--# End-->
 
-<!-- Check with Elena Basolas Tesis p18-->
+<!--# Check with Elena Basolas Tesis p18-->
 
 Perhaps the environment factors influence the samples disease etiology towards Crohn's disease or ulcerative colitis as there are some differences between them.
-On CD a granulome, that is a region with big multinucleous cells, can appear on any intestinal layer, while on UC we observe a different damage consisting in many neutrophil in the crypt lumen.
+On CD a granulome, that is a region with big multinucleous cells, can appear on any intestinal layer, while on UC the damage is different: it consists in many neutrophil in the crypt lumen.
 
 To distinguish between the diseases, in addition to the inflamed location(s), mosaic zones (patches of inflamed and non-inflamed areas) are more characteristic of CD [@bassolasmolina2018].
 Another indicator of CD is an increase of calprotectin in fecal samples [@sands2015].
 
-<!-- End -->
+<!--# End -->
 
 ### Crohn's disease physiology
 
@@ -215,7 +215,7 @@ Other less frequent co-occurring manifestations are arthritis, primary sclerosin
 These symptoms make it hard to correctly diagnose the disease by non-specialists, in addition there isn't a non invasive easy procedure to diagnose it.
 All these can lead to delays on correct diagnosis of the disease.
 
-<!--Tesis Ana p21-->
+<!--# Tesis Ana p21-->
 
 The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with CD although they could be just an infection.
 The detection of fecal calprotectin, is generally a good marker of endocopic activity with sensitivity above 70% and specificity above 80% [@guardiola2018].
@@ -223,15 +223,15 @@ The detection of fecal calprotectin, is generally a good marker of endocopic act
 Usually the best diagnosis method is to perform a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn's disease.
 This inflammation could also present ulceration and rectal sparing and histological lesions which also help to diagnose the patients [@corralizamárquez2019].
 
-<!--End-->
+<!--# End-->
 
 To address this difficulty the Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behaviour (See [below](#clinical-care-UC)).
 This classification assumes that the location of Crohn's disease remains stable over time after diagnosis but behavioral phenotypes change.
 Most patients progress from an inflammatory phenotype to a stricturing or penetrating one [@satsangi2006a].
 
-<!--Add Figure 2 from ACM thesis?-->
+<!--# Add Figure 2 from ACM thesis?-->
 
-<!---->
+<!--# -->
 
 To some extent, there is a disassociated between patient's well-being report and the colonoscopy observation.
 Often patients report feeling better but their gut is as inflamed as previously [@bhattacharya2016a].
@@ -283,7 +283,7 @@ Among the scores most used are the following:
 
 -   IBDQ: A 32 questionnaire used to assess the quality of life grouped into four categories: bowel, systemic, social and emotional [@irvine1999].
 
--   Montreal classification allows for early onset of disease to be categorized separately those with age of diagnosis at 16 years or younger, diagnosis at 17--40 years and \>40 years, respectively [@satsangi2006].
+-   Montreal classification allows for early onset of disease to be categorized separately those with age of diagnosis at 16 years or younger, diagnosis at 17--40 years and >40 years, respectively [@satsangi2006].
 
 Other measured parameters include, weight, effective weight, calprotectin, Proteinc C reactive (PCR), hemoglobine.
 
@@ -413,7 +413,7 @@ Often the number of variables created is one less than the number of factors tha
 This transformation allows to use the categorical values in methods though for numeric variables.
 
 If the method only accepts categorical data but you want to provide numeric values usually those values are categorized.
-For example if a variable is (0.123, 0.25, 0.56, 0.78) one could make to categorical values like ("\<0.5", "\<0.5", "\>0.5", "\>0.5").
+For example if a variable is (0.123, 0.25, 0.56, 0.78) one could make to categorical values like ("\<0.5", "\<0.5", ">0.5", ">0.5").
 The number of categories to use and how is the numeric value split depends on case by case.
 
 #### Objective
@@ -462,7 +462,7 @@ Formally the objective of methods might be defined as a function to be optimized
 
 #### Relationship between variables and samples
 
-Depending on the amount of variables and in which samples they have been measures we can classify two types of integration.
+Depending on the amount of variables and in which samples have been measured studies can be classiffied in two types of integration.
 Traditionally for each sample few variables are measured, for instance on a biopsy with RT-PCR only a few genes are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample.
 This has lead to the following situation:
 
@@ -493,7 +493,7 @@ A sample can have multiple or one data source.
 In a study if all the samples have all the data from multiple data sources it is a complete case.
 If some samples have data from some data sources but not from others the study is not a with a complete case.
 
-Sometimes because the sample is not enough, or there are some technical or organizational problems we might lose a source of data for a sample (which is known as an incomplete case).
+Sometimes because the sample is not enough, or there are some technical or organizational problems a source of data for a sample (which is known as an incomplete case) might be lost.
 This results in a new source of variation that has to be dealt with, which complicates the conclusion one can draw from the studies of these kind of data.
 
 Even when all the cases of a patient are complete the samples can come from several sites of the same individual or with different combinations of variables, which makes is relevant to understand the relationships between the different samples.
@@ -512,7 +512,7 @@ To discover causality between two variables the cause must be before the consequ
 Being aware of the time differences and time scales is crucial in most cases.
 
 On cell lines or other lab experiments conditions can be repeated even if they are at different time points.
-However, with patients we can not obtain a sample at the same timepoint.
+However, with patients there aren't biological replicates like with cell-lines.
 This makes it harder to study time-related change on patients.
 
 Lastly, time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNA-seq [@massoni-badosa2020; @zhu2017].
@@ -526,8 +526,8 @@ As seen, some variables influence other variables which affects the outcome in a
 With many variables present in a dataset it is important to be aware of known relationships between variables.
 Even in a simple dataset, like a RNA-seq dataset, it is important to be aware of the relationships between variables.
 
-Since the lactose [operon](https://en.wikipedia.org/wiki/Operon) we know how some genes regulate each other.
-We don't know how other variables are related between them.
+Since the discovery of the lactose [operon](https://en.wikipedia.org/wiki/Operon) it is known how some genes regulate each other.
+It is no know how other variables are related between them.
 For instance, how does the increase in expression of a gene affects the growth of a microorganism?
 Usually the relationships between variables are mediated by many factors or interactions.
 
@@ -638,7 +638,7 @@ Or by patient: how do interpret that in these patient variable A and B is X and 
 
 -   Globally:
 
-In a principal component analysis for instance how do we interpret that some variables have the same loading?
+In a principal component analysis for instance how is interpreted that some variables have the same loading?
 What happens in a more difficult method like canonical correlation analysis?
 
 There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981].
@@ -728,4 +728,4 @@ See Table 1 for a list of existing methods[^introduction-2].
 |           MultiPower           |        [@tarazona2020]        |
 |            mixedCCA            |         [@yoon2019a]          |
 
-<!--Check https://github.com/mikelove/awesome-multi-omics -->
+<!--# Check https://github.com/mikelove/awesome-multi-omics -->

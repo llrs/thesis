@@ -2,7 +2,7 @@
 
 ## Hypothesis
 
-We hypothesize that the presence of certain microorganisms are related to the patient well being.
+I hypothesize that the presence of certain microorganisms are related to the patient well being.
 Furthermore, the expression state of the epithelium and the amount of bacterial presence can identify if patients are suffering an inflammatory bowel disease.
 Finally, I believe that the environmental factors interact with the inflammatory bowel disease and are responsible of the big variability on the inflammatory bowel disease discourse.
 
