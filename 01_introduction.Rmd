@@ -297,6 +297,12 @@ However, dose reduction often results in diminished response to the drug.
 Thus, the patients do not recover the initial response they had later on if the dose is raised to the previous levels.
 This is builds up also on patients being refractory to the drugs and treatments given [@raine2021].
 
+One of the most relevant advances in the treatment of IBD has been the introduction of anti-TNF antibodies, but this therapy is associated to significant medical costs.
+Reports indicated that in recent years the cost of this therapy is the main driver of IBD health care, which represents a shift from previous drivers that included mainly hospitalizations and surgeries.
+Furthermore, response rates to anti-TNF therapy are in the range of 60%, and remission rates are 30%.
+Therefore, predictors of response would result in high benefits for the patients and significant savings for public health care systems.
+Despite the high efficacy of anti-TNF drugs, loss of response occurs in 30-50% of patients, and development of anti-drug antibodies is the main reason for loss of response.
+
 If the drugs fail to contain the inflammation and heal the epithelium doctors might recommend to perform a surgery to remove the damaged section.
 In some cases HSCT is recommended which have shown to improve the life of the patients [@corralizab].
 This is a new procedure given only to the most extreme cases for which several publications have checked that it resets the immunological state of the patient.
