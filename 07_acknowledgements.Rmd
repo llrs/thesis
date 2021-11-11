@@ -9,11 +9,12 @@ Nuria, Elena, Helena, Aida.
 
 Metges: Julià, Helena...
 
+Ana, Alba, Isa, Marisol, Maica...
+
 Azu
 
 Familia
 
-Twitter \#rStats and other people on Bioconductor (support.bioconductor.org) Biostars, Bioinformatics.stackechange, Stack Overflow and Stack Exchange. 
-
+Twitter \#rStats and other people on Bioconductor (support.bioconductor.org) Biostars, [Bioinformatics SE](https://bioinformatics.stackexchange.com/) 
 
 <!--# Helena, Elena, Nuria, Carolina-->
