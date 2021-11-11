@@ -1,18 +1,16 @@
 # Materials and methods
 
-Some sections of these methods has been already published and copied or adapted to the thesis from [@revilla2021].
+Some sections of this chapter has been adapted to the thesis from "Multi-Omic Modelling of Inflammatory Bowel Disease with Regularized Canonical Correlation Analysis" [@revilla2021] or other publications of the research group.
 
-## Sample collection
+This chapter explains the methods used to collect and analyze data from the multiple cohorts analyzed.
+The actual code used can be found on the links of the [apendix](#software "Link to the software appendix").
+Samples for the different cohorts were collected similarly here is a brief description of the different datasets.
 
-#### Ethical considerations
-
-All samples were collected with approval from the Ethical Committee and under express authorization of the patients.
-The minimum number of samples needed for the study were collected.
-Data is pseudonymisated to prevent identification of the patients.
+## Datasets
 
 ### HSCT dataset
 
-<!--# COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
+<!--COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
 
 Samples from the HSCT dataset used in this thesis were from a cohort of patients with severe refractory CD undergoing hematopoietic stem cell transplant.
 Patients were treated in the Department of Gastroenterology (Hospital Clínic de Barcelona --Spain--).
@@ -26,15 +24,104 @@ The protocol was approved by the Institutional Ethics Committee of the Hospital 
 At least one biopsy was collected and fresh-frozen at -80°C for microbial DNA extraction.
 The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen, Hilde, Germany) and stored at -80°C until total RNA extraction.
 
-#### Transcriptome sequencing
+<!--# TODO table of patients and samples -->
 
-Total RNA from mucosal samples (HSCT cohort) was isolated using the RNeasy kit (Qiagen, Hilde, Germany).
+### BARCELONA dataset
+
+<!--# Adapted from the ethical committee submission-->
+
+All patients with an established diagnosis of inflammatory bowel disease, including Crohn's disease, ulcerative colitis, IBD unclassified, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 48 weeks a biopsy from an ileocolonoscopy.
+Patients that were referred to the Hospital Clínic de Barcelona IBD unit, who had already started treatment with a biologic agent in another center, were also included adapting to the corresponding time-schedule of their treatment.
+In all patients, starting anti-TNF treatment will be decided before the protocol entry decision according to medical clinical practice.
+The protocol was approved by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number 2012/7956).
+
+<!--# TODO table of patients and samples -->
+
+### Howell's dataset
+
+This dataset was downloaded after the publication of an article "DNA Methylation and Transcription Patterns in Intestinal Epithelial Cells From Pediatric Patients With Inflammatory Bowel Diseases Differentiate Disease Subtypes and Associate With Outcome" [@howell2018].
+
+From their dataset I used data from 77 samples that had both RNAseq and 16S data collected.
+There are 10 non-IBD samples, 11 with Crohn's disease and 11 with ulcerative colitis which have the following characteristics:
+
+<!--# TODO table of patients and samples -->
+
+### Hernández' dataset
+
+This dataset was obtained after a collaboration "Integrative
+analysis of colonic biopsies from inflammatory bowel disease patients
+identifies an interaction between microbial bile-acid inducible gene
+abundance and human Angiopoietin-like 4 gene expression" [@hernández-rocha2021a].
+
+<!--# TODO table of patients and samples -->
+
+## Processing samples
+
+The main source of data of this thesis have been obtained by sequencing biopsies, cirurgical pieces or fecal samples following this procedures:
+
+### Transcriptome sequencing
+
+Total RNA from mucosal samples (HSCT cohort) was isolated using the RNAeasy kit (Qiagen, Hilde, Germany).
 RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4000 platform.
-Later, cutadapt (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the STAR aligner (2.5.2a) with Ensembl annotation (release GRCh38.10) [@dobin2013]. 
-Read counts per gene were obtained with RSEM (version 1.2.31) [@li2011] as previously described [@corralizaDifferencesPeripheralTissue]. 
+Later, [cutadapt](https://github.com/marcelm/cutadapt "cutadapt repository") (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the [STAR aligner](https://github.com/alexdobin/STAR "STAR repository") (2.5.2a) with Ensembl annotation (release GRCh38.10) [@dobin2013].
+
+<details>
+
+<summary>
+
+Code used with STAR
+
+</summary>
+
+    STAR \
+        --outSAMtype BAM SortedByCoordinate \
+        --outFilterIntronMotifs RemoveNoncanonical \
+        --outSAMattributes All \
+        --outReadsUnmapped Fastx \
+        --outSAMstrandField intronMotif \
+        --outFilterScoreMinOverLread 0.5 \
+        --outFilterMatchNminOverLread 0.5 \
+        --outFilterType BySJout \
+        --alignSJoverhangMin 8 \
+        --alignSJDBoverhangMin 1 \
+        --outFilterMismatchNmax 999 \
+        --outFilterMismatchNoverLmax 0.04 \
+        --genomeDir "$genome/STAR" \
+        --limitBAMsortRAM 10000000000 \
+        --runMode alignReads \
+        --genomeLoad NoSharedMemory \
+        --quantMode TranscriptomeSAM \
+        --outFileNamePrefix $output \
+        --runThreadN "$threads" \
+        --readFilesCommand zcat \
+        --readFilesIn "$file1" "$file2"
+
+</details>
+
+Read counts per gene were obtained with [RSEM](https://github.com/deweylab/RSEM "RSEM repository") (version 1.2.31) [@li2011] as previously described [@corralizaDifferencesPeripheralTissue].
+
+<details>
+
+<summary>
+
+Code used with RSEM
+
+</summary>
+
+    rsem-calculate-expression \
+        --quiet \
+        --paired-end \
+        -p "$threads"  \
+        --estimate-rspd \
+        --append-names \
+        --no-bam-output \
+        --bam "$rseminp" "$genome/RSEM/RSEM" "$rsem"
+
+</details>
+
 Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28) [@mccarthy2012].
 
-#### Microbial DNA extraction from mucosal samples
+### Microbial DNA extraction from mucosal samples
 
 Biopsies from the HSCT CD cohort were resuspended in 180 μl TET (TrisHCl 0.02M, EDTA 0.002M, Triton 1X) buffer and 20mg/ml lysozyme (Carl Roth, Quimivita, S.A.). Samples were incubated for 1h at 37°C and vortexed with 25 μl Proteinase K before incubating at 56°C for 3h.
 Buffer B3 (NucleoSpin Tissue Kit--Macherey-Nagel) was added followed by a heat treatment for 10 min at 70°C.
@@ -43,30 +130,33 @@ Two washing steps were performed before eluting DNA.
 Concentrations and purity were checked using NanoDrop One (Thermo Fisher Scientific).
 Samples were immediately used or placed at -20°C for long-term storage.
 
-#### DNA sequencing
+### DNA sequencing
 
 Library preparation and sequencing were performed at the Technische Universität München.
 Briefly, volumes of 600μL DNA stabilization solution (STRATEC biomedical) and 400μL Phenol:choloform:isoamyl alcohol (25:24:1, Sigma-Aldrich) were added to the aliquots.
 Microbial cells were disrupted by mechanical lysis using FastPrep-24.
 Heat treatment and centrifugation were conducted after adding a cooling adaptor.
 Supernatants were treated with RNase to eliminate RNA.
-Total DNA was purified using gDNA columns as described in detail previously [@berry2011]. Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol [@klindworth2013] using forward and reverse primers 341F-785R [@edgar2013a].
+Total DNA was purified using gDNA columns as described in detail previously [@berry2011].
+Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol [@klindworth2013] using forward and reverse primers 341F-785R [@edgar2013a].
 Purification of amplicons was performed by using the AMPure XP system (Beckmann).
 Next, sequencing was performed with pooled samples in paired-end modus (PE275) using an MiSeq system (Illumina, Inc.) according to the manufacturer's instructions and 25% (v/v) PhiX standard library.
 
-#### Microbial profiling
+### Microbial profiling
 
-Processing of raw-reads was performed by using the IMNGS (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the UPARSE approach [@edgar2013a]. 
-Sequences were demultiplexed, trimmed to the first base with a quality score \<3 and then paired. Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error \>3 were excluded from the analysis. Trimming of the remaining reads was done by trimming 5 nucleotides from each end to avoid GC bias and non-random base composition. 
-Operational taxonomic units (OTUs) were clustered at 97% sequence similarity. 
-Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project. 
-Later the data was normalized using the same method as for RNA-seq described above. The microbiome was visually inspected for batch effects in PCA; none were found. 
+For the HSCT dataset the processing of raw-reads was performed by using the [IMNGS](https://www.imngs.org/ "IMNGS website") (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the [UPARSE](https://www.drive5.com/uparse/ "UPARSE website") approach [@edgar2013a].
+Sequences were demultiplexed, trimmed to the first base with a quality score \<3 and then paired.
+Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error \>3 were excluded from the analysis.
+Trimming of the remaining reads was done by trimming 5 nucleotides from each end to avoid GC bias and non-random base composition.
+Operational taxonomic units (OTUs) were clustered at 97% sequence similarity.
+Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project.
+Later the data was normalized using the same method as for RNA-seq described above.
+The microbiome was visually inspected for batch effects in PCA; none were found.
 The resulting OTUs table was normalized using edgeR (Version 3.28) [@mccarthy2012].
 
-Another method used to analyze microbiome data is dada2 [@callahan2016] which creates amplicon sequencing variants from the 16S sequencing data. 
+For all the other datasets dada2 [@callahan2016] was used to analyze microbiome data.
+It creates amplicon sequencing variants from the 16S sequencing data, without merging similar sequences at any threshold.
 Together with Qiime2 [@bolyen2019] it is an alternative to OTUs which allows to be able to compare results between studies and provides more resolution.
-
-<!--# Finished the copied section-->
 
 ## Statistics
 
