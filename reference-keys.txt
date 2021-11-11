@@ -35,9 +35,12 @@ hypothesis-and-objectives
 hypothesis
 objectives
 materials-and-methods
-sample-collection
-ethical-considerations
+datasets
 hsct-dataset
+barcelona-dataset
+howells-dataset
+hernández-dataset
+processing-samples
 transcriptome-sequencing
 microbial-dna-extraction-from-mucosal-samples
 dna-sequencing
