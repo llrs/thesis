@@ -10,7 +10,7 @@ However, once it has initiated the most prevalent hypothesis of its chronicity s
 To diagnose the inflammatory bowel disease, factors such as leukocytes levels on blood, a high globular sedimentation speed, increase of protein C reactive and anemia could indicate inflammatory bowel disease.
 
 Treatments provided for the IBD include, noninflammatory drugs, suppressors and biologic.
-The therapeutic options can induce remission in some patients, however they often need continuous treatment to avoid recurrence.
+The therapeutic options can induce remission in some patients, but they often need continuous treatment to avoid recurrence.
 Nevertheless, many patients are refractory or intolerant to those therapies and need to undergo surgery.
 
 The disease present unique characteristics that require the usage of integration methods in order to find the specific relationship of the microbiome and the intestine on the disease.
