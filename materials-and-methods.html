@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2021-11-11" />
+<meta name="date" content="2021-11-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -101,10 +101,13 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>3</b> Materials and methods</a><ul>
 <li class="chapter" data-level="3.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#datasets"><i class="fa fa-check"></i><b>3.1</b> Datasets</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#hsct-dataset"><i class="fa fa-check"></i><b>3.1.1</b> HSCT dataset</a></li>
-<li class="chapter" data-level="3.1.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#barcelona-dataset"><i class="fa fa-check"></i><b>3.1.2</b> BARCELONA dataset</a></li>
-<li class="chapter" data-level="3.1.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#howells-dataset"><i class="fa fa-check"></i><b>3.1.3</b> Howell’s dataset</a></li>
-<li class="chapter" data-level="3.1.4" data-path="materials-and-methods.html"><a href="materials-and-methods.html#hernández-dataset"><i class="fa fa-check"></i><b>3.1.4</b> Hernández’ dataset</a></li>
+<li class="chapter" data-level="3.1.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#glioma-dataset"><i class="fa fa-check"></i><b>3.1.1</b> Glioma dataset</a></li>
+<li class="chapter" data-level="3.1.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#cduc-dataset"><i class="fa fa-check"></i><b>3.1.2</b> CD/UC dataset</a></li>
+<li class="chapter" data-level="3.1.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#pouchitis-dataset"><i class="fa fa-check"></i><b>3.1.3</b> Pouchitis dataset</a></li>
+<li class="chapter" data-level="3.1.4" data-path="materials-and-methods.html"><a href="materials-and-methods.html#hsct-dataset"><i class="fa fa-check"></i><b>3.1.4</b> HSCT dataset</a></li>
+<li class="chapter" data-level="3.1.5" data-path="materials-and-methods.html"><a href="materials-and-methods.html#barcelona-dataset"><i class="fa fa-check"></i><b>3.1.5</b> BARCELONA dataset</a></li>
+<li class="chapter" data-level="3.1.6" data-path="materials-and-methods.html"><a href="materials-and-methods.html#howells-dataset"><i class="fa fa-check"></i><b>3.1.6</b> Howell’s dataset</a></li>
+<li class="chapter" data-level="3.1.7" data-path="materials-and-methods.html"><a href="materials-and-methods.html#hernández-dataset"><i class="fa fa-check"></i><b>3.1.7</b> Hernández’ dataset</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#processing-samples"><i class="fa fa-check"></i><b>3.2</b> Processing samples</a><ul>
 <li class="chapter" data-level="3.2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#transcriptome-sequencing"><i class="fa fa-check"></i><b>3.2.1</b> Transcriptome sequencing</a></li>
@@ -166,9 +169,27 @@ The actual code used can be found on the links of the <a href="software.html#sof
 Samples for the different cohorts were collected similarly here is a brief description of the different datasets.</p>
 <div id="datasets" class="section level2">
 <h2><span class="header-section-number">3.1</span> Datasets</h2>
+<div id="glioma-dataset" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Glioma dataset</h3>
+<p>The glioma dataset came from diffuse intrinsic pontine glioma patients that included the host transcriptome analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F, patients copy number variation processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using Mutation Surveyor software.
+In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor <span class="citation">[<a href="references.html#ref-morgan2015a" role="doc-biblioref">174</a>]</span>.</p>
+</div>
+<div id="cduc-dataset" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> CD/UC dataset</h3>
+<p>An IBD-related dataset was obtained from Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler.
+It included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy controls <span class="citation">[<a href="references.html#ref-häsler2017" role="doc-biblioref">175</a>]</span>.
+The provided data included location, gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.</p>
+</div>
+<div id="pouchitis-dataset" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> Pouchitis dataset</h3>
+<p>A previously published dataset from a pouchitis study was also analyzed <span class="citation">[<a href="references.html#ref-lagkouvardos2015" role="doc-biblioref">176</a>]</span>.
+A total of 255 samples from 203 patients were used containing data for both host transcriptome and microbiome.
+This dataset included identifiers for the patients, whether the sample was from the pre-pouch ileum or from the pouch, the sex, the outcome of the procedure and an inflammatory severity score ISCORE.
+The pouch ileum might be inflamed or not.</p>
+</div>
 <div id="hsct-dataset" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> HSCT dataset</h3>
-<!--COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
+<h3><span class="header-section-number">3.1.4</span> HSCT dataset</h3>
+<!--# COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
 <p>Samples from the HSCT dataset used in this thesis were from a cohort of patients with severe refractory CD undergoing hematopoietic stem cell transplant.
 Patients were treated in the Department of Gastroenterology (Hospital Clínic de Barcelona –Spain–).
 The protocol was approved by the Catalan Transplantation Organization and by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number 2012/7244).
@@ -181,9 +202,47 @@ The protocol was approved by the Institutional Ethics Committee of the Hospital 
 At least one biopsy was collected and fresh-frozen at -80°C for microbial DNA extraction.
 The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen, Hilde, Germany) and stored at -80°C until total RNA extraction.</p>
 <!--# TODO table of patients and samples -->
+<table>
+<thead>
+<tr class="header">
+<th>Characteristic</th>
+<th>HSCT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Samples (non-disease/diseased)</td>
+<td>51/107</td>
+</tr>
+<tr class="even">
+<td>Sex (female/male)</td>
+<td>22/15</td>
+</tr>
+<tr class="odd">
+<td>Location (ileum/colon/unknown)</td>
+<td>48/108/2</td>
+</tr>
+<tr class="even">
+<td>SES-CD local: mean (min-max)</td>
+<td>2.15 (0-12)</td>
+</tr>
+<tr class="odd">
+<td>CDAI: mean (min-max)</td>
+<td>120 (0-450</td>
+</tr>
+<tr class="even">
+<td>Age at diagnostic</td>
+<td>7/11/0</td>
+</tr>
+<tr class="odd">
+<td>Years of disease: mean (min-max)</td>
+<td>14 (8-28)</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="barcelona-dataset" class="section level3">
-<h3><span class="header-section-number">3.1.2</span> BARCELONA dataset</h3>
+<h3><span class="header-section-number">3.1.5</span> BARCELONA dataset</h3>
 <!--# Adapted from the ethical committee submission-->
 <p>All patients with an established diagnosis of inflammatory bowel disease, including Crohn’s disease, ulcerative colitis, IBD unclassified, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 48 weeks a biopsy from an ileocolonoscopy.
 Patients that were referred to the Hospital Clínic de Barcelona IBD unit, who had already started treatment with a biologic agent in another center, were also included adapting to the corresponding time-schedule of their treatment.
@@ -192,18 +251,15 @@ The protocol was approved by the Institutional Ethics Committee of the Hospital 
 <!--# TODO table of patients and samples -->
 </div>
 <div id="howells-dataset" class="section level3">
-<h3><span class="header-section-number">3.1.3</span> Howell’s dataset</h3>
-<p>This dataset was downloaded after the publication of an article “DNA Methylation and Transcription Patterns in Intestinal Epithelial Cells From Pediatric Patients With Inflammatory Bowel Diseases Differentiate Disease Subtypes and Associate With Outcome” <span class="citation">[<a href="references.html#ref-howell2018" role="doc-biblioref">174</a>]</span>.</p>
+<h3><span class="header-section-number">3.1.6</span> Howell’s dataset</h3>
+<p>This dataset was downloaded after the publication of an article “DNA Methylation and Transcription Patterns in Intestinal Epithelial Cells From Pediatric Patients With Inflammatory Bowel Diseases Differentiate Disease Subtypes and Associate With Outcome” <span class="citation">[<a href="references.html#ref-howell2018" role="doc-biblioref">177</a>]</span>.</p>
 <p>From their dataset I used data from 77 samples that had both RNAseq and 16S data collected.
 There are 10 non-IBD samples, 11 with Crohn’s disease and 11 with ulcerative colitis which have the following characteristics:</p>
 <!--# TODO table of patients and samples -->
 </div>
 <div id="hernández-dataset" class="section level3">
-<h3><span class="header-section-number">3.1.4</span> Hernández’ dataset</h3>
-<p>This dataset was obtained after a collaboration “Integrative
-analysis of colonic biopsies from inflammatory bowel disease patients
-identifies an interaction between microbial bile-acid inducible gene
-abundance and human Angiopoietin-like 4 gene expression” <span class="citation">[<a href="references.html#ref-hernández-rocha2021a" role="doc-biblioref">175</a>]</span>.</p>
+<h3><span class="header-section-number">3.1.7</span> Hernández’ dataset</h3>
+<p>This dataset was obtained after a collaboration “Integrative analysis of colonic biopsies from inflammatory bowel disease patients identifies an interaction between microbial bile-acid inducible gene abundance and human Angiopoietin-like 4 gene expression” <span class="citation">[<a href="references.html#ref-hernández-rocha2021a" role="doc-biblioref">178</a>]</span>.</p>
 <!--# TODO table of patients and samples -->
 </div>
 </div>
@@ -214,7 +270,7 @@ abundance and human Angiopoietin-like 4 gene expression” <span class="citation
 <h3><span class="header-section-number">3.2.1</span> Transcriptome sequencing</h3>
 <p>Total RNA from mucosal samples (HSCT cohort) was isolated using the RNAeasy kit (Qiagen, Hilde, Germany).
 RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4000 platform.
-Later, <a href="https://github.com/marcelm/cutadapt" title="cutadapt repository">cutadapt</a> (version 1.7.1) <span class="citation">[<a href="references.html#ref-martin2011" role="doc-biblioref">176</a>]</span> was used for quality filtering and the libraries were mapped against the human reference genome using the <a href="https://github.com/alexdobin/STAR" title="STAR repository">STAR aligner</a> (2.5.2a) with Ensembl annotation (release GRCh38.10) <span class="citation">[<a href="references.html#ref-dobin2013" role="doc-biblioref">177</a>]</span>.</p>
+Later, <a href="https://github.com/marcelm/cutadapt" title="cutadapt repository">cutadapt</a> (version 1.7.1) <span class="citation">[<a href="references.html#ref-martin2011" role="doc-biblioref">179</a>]</span> was used for quality filtering and the libraries were mapped against the human reference genome using the <a href="https://github.com/alexdobin/STAR" title="STAR repository">STAR aligner</a> (2.5.2a) with Ensembl annotation (release GRCh38.10) <span class="citation">[<a href="references.html#ref-dobin2013" role="doc-biblioref">180</a>]</span>.</p>
 <details>
 <p><summary></p>
 <p>Code used with STAR</p>
@@ -242,7 +298,7 @@ Later, <a href="https://github.com/marcelm/cutadapt" title="cutadapt repository"
     --readFilesCommand zcat \
     --readFilesIn &quot;$file1&quot; &quot;$file2&quot;</code></pre>
 </details>
-<p>Read counts per gene were obtained with <a href="https://github.com/deweylab/RSEM" title="RSEM repository">RSEM</a> (version 1.2.31) <span class="citation">[<a href="references.html#ref-li2011" role="doc-biblioref">178</a>]</span> as previously described <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">7</a>]</span>.</p>
+<p>Read counts per gene were obtained with <a href="https://github.com/deweylab/RSEM" title="RSEM repository">RSEM</a> (version 1.2.31) <span class="citation">[<a href="references.html#ref-li2011" role="doc-biblioref">181</a>]</span> as previously described <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">7</a>]</span>.</p>
 <details>
 <p><summary></p>
 <p>Code used with RSEM</p>
@@ -274,14 +330,14 @@ Briefly, volumes of 600μL DNA stabilization solution (STRATEC biomedical) and 4
 Microbial cells were disrupted by mechanical lysis using FastPrep-24.
 Heat treatment and centrifugation were conducted after adding a cooling adaptor.
 Supernatants were treated with RNase to eliminate RNA.
-Total DNA was purified using gDNA columns as described in detail previously <span class="citation">[<a href="references.html#ref-berry2011" role="doc-biblioref">179</a>]</span>.
-Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol <span class="citation">[<a href="references.html#ref-klindworth2013" role="doc-biblioref">180</a>]</span> using forward and reverse primers 341F-785R <span class="citation">[<a href="references.html#ref-edgar2013a" role="doc-biblioref">181</a>]</span>.
+Total DNA was purified using gDNA columns as described in detail previously <span class="citation">[<a href="references.html#ref-berry2011" role="doc-biblioref">182</a>]</span>.
+Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol <span class="citation">[<a href="references.html#ref-klindworth2013" role="doc-biblioref">183</a>]</span> using forward and reverse primers 341F-785R <span class="citation">[<a href="references.html#ref-edgar2013a" role="doc-biblioref">184</a>]</span>.
 Purification of amplicons was performed by using the AMPure XP system (Beckmann).
 Next, sequencing was performed with pooled samples in paired-end modus (PE275) using an MiSeq system (Illumina, Inc.) according to the manufacturer’s instructions and 25% (v/v) PhiX standard library.</p>
 </div>
 <div id="microbial-profiling" class="section level3">
 <h3><span class="header-section-number">3.2.4</span> Microbial profiling</h3>
-<p>For the HSCT dataset the processing of raw-reads was performed by using the <a href="https://www.imngs.org/" title="IMNGS website">IMNGS</a> (version 1.0 Build 2007) <span class="citation">[<a href="references.html#ref-lagkouvardos2016" role="doc-biblioref">182</a>]</span> pipeline based on the <a href="https://www.drive5.com/uparse/" title="UPARSE website">UPARSE</a> approach <span class="citation">[<a href="references.html#ref-edgar2013a" role="doc-biblioref">181</a>]</span>.
+<p>For the HSCT dataset the processing of raw-reads was performed by using the <a href="https://www.imngs.org/" title="IMNGS website">IMNGS</a> (version 1.0 Build 2007) <span class="citation">[<a href="references.html#ref-lagkouvardos2016" role="doc-biblioref">185</a>]</span> pipeline based on the <a href="https://www.drive5.com/uparse/" title="UPARSE website">UPARSE</a> approach <span class="citation">[<a href="references.html#ref-edgar2013a" role="doc-biblioref">184</a>]</span>.
 Sequences were demultiplexed, trimmed to the first base with a quality score &lt;3 and then paired.
 Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error &gt;3 were excluded from the analysis.
 Trimming of the remaining reads was done by trimming 5 nucleotides from each end to avoid GC bias and non-random base composition.
@@ -290,9 +346,9 @@ Taxonomy assignment was performed at 80% confidence level using the RDP classifi
 Later the data was normalized using the same method as for RNA-seq described above.
 The microbiome was visually inspected for batch effects in PCA; none were found.
 The resulting OTUs table was normalized using edgeR (Version 3.28) <span class="citation">[<a href="references.html#ref-mccarthy2012" role="doc-biblioref">112</a>]</span>.</p>
-<p>For all the other datasets dada2 <span class="citation">[<a href="references.html#ref-callahan2016" role="doc-biblioref">183</a>]</span> was used to analyze microbiome data.
+<p>For all the other datasets dada2 <span class="citation">[<a href="references.html#ref-callahan2016" role="doc-biblioref">186</a>]</span> was used to analyze microbiome data.
 It creates amplicon sequencing variants from the 16S sequencing data, without merging similar sequences at any threshold.
-Together with Qiime2 <span class="citation">[<a href="references.html#ref-bolyen2019" role="doc-biblioref">184</a>]</span> it is an alternative to OTUs which allows to be able to compare results between studies and provides more resolution.</p>
+Together with Qiime2 <span class="citation">[<a href="references.html#ref-bolyen2019" role="doc-biblioref">187</a>]</span> it is an alternative to OTUs which allows to be able to compare results between studies and provides more resolution.</p>
 </div>
 </div>
 <div id="statistics" class="section level2">
@@ -306,55 +362,60 @@ Functional enrichment related methods stand out from the other methods used.</p>
 <h3><span class="header-section-number">3.3.1</span> Functional enrichment</h3>
 <p>Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
 They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.</p>
-<p>To test if some variables show an unexpected importance according to a statistic like fold change or value fgsea <span class="citation">[<a href="references.html#ref-korotkevich2021" role="doc-biblioref">185</a>]</span> methods was used.
+<p>To test if some variables show an unexpected importance according to a statistic like fold change or value fgsea <span class="citation">[<a href="references.html#ref-korotkevich2021" role="doc-biblioref">188</a>]</span> methods was used.
 fgsea is a software used to see if groups of variables present in an ordered list present some skewed distribution.
 Pathways of genes were tested on the weight of different models.</p>
-<p>GSVA is a method related to fgsea that summarize the variables’ numerical value so that they can be later used by other methods <span class="citation">[<a href="references.html#ref-hänzelmann2013" role="doc-biblioref">186</a>]</span>.
+<p>GSVA is a method related to fgsea that summarize the variables’ numerical value so that they can be later used by other methods <span class="citation">[<a href="references.html#ref-hänzelmann2013" role="doc-biblioref">189</a>]</span>.
 GSVA was used to estimate the expression of the pathways and try to find the relationships between the pathways and the microbiome at different taxonomic levels.</p>
-<p>clusterProfiler: test genes enrichment for functionality based on information on pathway databases <span class="citation">[<a href="references.html#ref-wu2021" role="doc-biblioref">187</a>]</span>.
+<p>clusterProfiler: test genes enrichment for functionality based on information on pathway databases <span class="citation">[<a href="references.html#ref-wu2021" role="doc-biblioref">190</a>]</span>.
 It uses several methods like fisher test to check the enrichment of features of a given group on the list provided.</p>
 </div>
 <div id="other-methods-used" class="section level3">
 <h3><span class="header-section-number">3.3.2</span> Other methods used</h3>
-<p>vegan package provides the adonis method used to test if microbiome data variance is due to other variables <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">188</a>]</span>.
+<p>vegan package provides the adonis method used to test if microbiome data variance is due to other variables <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">191</a>]</span>.
 This allows to test if the variables are related to the variance of the data.
 This is particularly important on the microbiome data, which is highly variable.
 It was used to detect which variables were important to include in the models of the disease.</p>
-<p>globaltest is a package with methods for testing complex hypothesis and help decide if the variables were influencing <span class="citation">[<a href="references.html#ref-goeman2006" role="doc-biblioref">189</a>]</span>.
+<p>globaltest is a package with methods for testing complex hypothesis and help decide if the variables were influencing <span class="citation">[<a href="references.html#ref-goeman2006" role="doc-biblioref">192</a>]</span>.
 It provides a general test statistic to test a hypothesis against a high dimensional dataset.
 It was used to test which variables, (sex, age, location, time since diagnostic) are important on the datasets.</p>
-<p>Microbiome diversity was measured using vegan and phyloseq methods <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">188</a>]</span>.
+<p>Microbiome diversity was measured using vegan and phyloseq methods <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">191</a>]</span>.
 <span class="math inline">\(\alpha\)</span>-diversity is a measure of how much a given microbiome at a taxonomic level is present on a sample.
 Several measures exists, on the thesis I used the effective Simpson or Shannon diversity index to compare diversity between samples and conditions.
 <span class="math inline">\(\beta\)</span>-diversity was calculated using the phyloseq package for exploratory analysis.</p>
 <p>We looked to see if using some co-expression measure between the the microbiome and the RNAseq would help identify relationships.
-We used weighted gene co-expression network analysis as implemented on WGCNA <span class="citation">[<a href="references.html#ref-langfelder2008" role="doc-biblioref">190</a>]</span>.</p>
-<p>Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two data sources, simple integration, two blocks <span class="citation">[<a href="references.html#ref-meng2014" role="doc-biblioref">191</a>]</span>.
+We used weighted gene co-expression network analysis as implemented on WGCNA <span class="citation">[<a href="references.html#ref-langfelder2008" role="doc-biblioref">193</a>]</span>.</p>
+<p>Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two data sources, simple integration, two blocks <span class="citation">[<a href="references.html#ref-meng2014" role="doc-biblioref">194</a>]</span>.
 It was used as a baseline method to find relationships between microorganisms and genes.</p>
-<p>STATegRa, is a framework for integrating datasets with two data types using parametric and non-parametric methods <span class="citation">[<a href="references.html#ref-planell2021" role="doc-biblioref">192</a>]</span>.
+<p>STATegRa, is a framework for integrating datasets with two data types using parametric and non-parametric methods <span class="citation">[<a href="references.html#ref-planell2021" role="doc-biblioref">195</a>]</span>.
 It was used to explore the datasets and see what do they had in common.</p>
-<p>BaseSet is a package that implements fuzzy set logic for easy calculation of probability to belong to a group.
+<p>BaseSet is a package that I implements fuzzy set logic for easy calculation of probability to belong to a group.
 It can be used to calculate the size of the sets given a probability of having each element on the sets.
 When evaluating a model using bootstrap, it was used to find which variables were really involved on the interaction and how likely were to be together.</p>
-<p>Regularized generalized canonical correlation analysis, RGCCA, has been the main method used <span class="citation">[<a href="references.html#ref-tenenhaus2017a" role="doc-biblioref">193</a>]</span>.
+<!--# TODO: Cite BaseSet!! -->
+<p>experDesign is a package that I implemented to help designing an experiment before sequencing the samples.
+It also helps to quantify if a given experiment has batch effect due to the batches used to measure the values.
+On the thesis it was used to avoid batch effect on the sequencing of the BARCELONA dataset.</p>
+<!--# TODO: Cite experDesign!! -->
+<p>Regularized generalized canonical correlation analysis, RGCCA, has been the main method used <span class="citation">[<a href="references.html#ref-tenenhaus2017a" role="doc-biblioref">196</a>]</span>.
 It will be explained in detail on the next section.</p>
 </div>
 </div>
 <div id="regularized-generalized-canonical-correlation-analysis" class="section level2">
 <h2><span class="header-section-number">3.4</span> Regularized generalized canonical correlation analysis</h2>
 <p>The canonical correlation is a method that uses data from the same sample but from different datasets.
-The regularized generalized canonical correlation analysis is an extension to the canonical correlation analysis <span class="citation">[<a href="references.html#ref-jordan1875" role="doc-biblioref">194</a>, <a href="references.html#ref-hotelling1936" role="doc-biblioref">195</a>]</span> which includes a regularization step to select which are the variables more relevant.</p>
+The regularized generalized canonical correlation analysis is an extension to the canonical correlation analysis <span class="citation">[<a href="references.html#ref-jordan1875" role="doc-biblioref">197</a>, <a href="references.html#ref-hotelling1936" role="doc-biblioref">198</a>]</span> which includes a regularization step to select which are the variables more relevant.</p>
 <div id="description" class="section level3">
 <h3><span class="header-section-number">3.4.1</span> Description</h3>
-<p>Over several years of progress <span class="citation">[<a href="references.html#ref-tenenhaus_regularized_2011" role="doc-biblioref">82</a>, <a href="references.html#ref-tenenhaus_variable_2014" role="doc-biblioref">83</a>, <a href="references.html#ref-tenenhaus_component-based_2008" role="doc-biblioref">196</a>–<a href="references.html#ref-tenenhaus_kernel_2015" role="doc-biblioref">199</a>]</span> on the field of canonical correlations RGCCA is a robust method with a usable implementation <span class="citation">[<span class="citeproc-not-found" data-reference-id="R-RGCCA"><strong>???</strong></span>]</span>.</p>
-<p>The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples (<span class="math inline">\(n\gg p\)</span>).
+<p>Over several years of progress <span class="citation">[<a href="references.html#ref-tenenhaus_regularized_2011" role="doc-biblioref">82</a>, <a href="references.html#ref-tenenhaus_variable_2014" role="doc-biblioref">83</a>, <a href="references.html#ref-tenenhaus_component-based_2008" role="doc-biblioref">199</a>–<a href="references.html#ref-tenenhaus_kernel_2015" role="doc-biblioref">202</a>]</span> on the field of canonical correlations RGCCA is a robust method with a usable implementation <span class="citation">[<span class="citeproc-not-found" data-reference-id="R-RGCCA"><strong>???</strong></span>]</span>.</p>
+<p>The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples ( <span class="math inline">\(p \gg n\)</span>).
 It needs to have a complete case with no missing values and time is not considered as a specially variable.
 Data should be from the same samples and it is not specific to a certain technology or method used to obtain the data.</p>
 <p>It uses a dimensional reduction approach to relate the different data sets between them and produce specific factors for each dataset.
 The interpretation of the RGCCA results are tricky and require expertise and familiarity with the technique used, but is highly dependent on the model and options used.</p>
 <p>There have been some improvements to generalize the method when <span class="math inline">\(p \gg n\)</span>.
 Current practices include using a pre selected model of relations between blocks.
-However this model might not be accurate and several models might need to be fitted.
+However, this model might not be accurate and several models might need to be fitted.
 To help find the fitting model for the data I created an R package, named <a href="https://llrs.github.io/inteRmodel/">inteRmodel</a>, which helps finding the right model and how fit it is for your data.</p>
 <p>This method applied to an existing dataset of an autologous haematopoietic stem cell transplantation <span class="citation">[<a href="references.html#ref-corralizaDifferencesPeripheralTissue" role="doc-biblioref">7</a>]</span>.
 From this dataset there is data about the human transcriptome and the 16S DNA present at biopsies from colonoscopy.</p>

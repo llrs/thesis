@@ -36,6 +36,9 @@ hypothesis
 objectives
 materials-and-methods
 datasets
+glioma-dataset
+cduc-dataset
+pouchitis-dataset
 hsct-dataset
 barcelona-dataset
 howells-dataset
