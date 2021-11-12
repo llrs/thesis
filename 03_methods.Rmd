@@ -8,9 +8,27 @@ Samples for the different cohorts were collected similarly here is a brief descr
 
 ## Datasets
 
+### Glioma dataset
+
+The glioma dataset came from diffuse intrinsic pontine glioma patients that included the host transcriptome analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F, patients copy number variation processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using Mutation Surveyor software.
+In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor [@morgan2015a].
+
+### CD/UC dataset
+
+An IBD-related dataset was obtained from Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler.
+It included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy controls [@häsler2017].
+The provided data included location, gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.
+
+### Pouchitis dataset
+
+A previously published dataset from a pouchitis study was also analyzed [@lagkouvardos2015].
+A total of 255 samples from 203 patients were used containing data for both host transcriptome and microbiome.
+This dataset included identifiers for the patients, whether the sample was from the pre-pouch ileum or from the pouch, the sex, the outcome of the procedure and an inflammatory severity score ISCORE.
+The pouch ileum might be inflamed or not.
+
 ### HSCT dataset
 
-<!--COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
+<!--# COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
 
 Samples from the HSCT dataset used in this thesis were from a cohort of patients with severe refractory CD undergoing hematopoietic stem cell transplant.
 Patients were treated in the Department of Gastroenterology (Hospital Clínic de Barcelona --Spain--).
@@ -25,6 +43,16 @@ At least one biopsy was collected and fresh-frozen at -80°C for microbial DNA e
 The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen, Hilde, Germany) and stored at -80°C until total RNA extraction.
 
 <!--# TODO table of patients and samples -->
+
+| Characteristic                   | HSCT        |
+|----------------------------------|-------------|
+| Samples (non-disease/diseased)   | 51/107      |
+| Sex (female/male)                | 22/15       |
+| Location (ileum/colon/unknown)   | 48/108/2    |
+| SES-CD local: mean (min-max)     | 2.15 (0-12) |
+| CDAI: mean (min-max)             | 120 (0-450  |
+| Age at diagnostic                | 7/11/0      |
+| Years of disease: mean (min-max) | 14 (8-28)   |
 
 ### BARCELONA dataset
 
@@ -48,10 +76,7 @@ There are 10 non-IBD samples, 11 with Crohn's disease and 11 with ulcerative col
 
 ### Hernández' dataset
 
-This dataset was obtained after a collaboration "Integrative
-analysis of colonic biopsies from inflammatory bowel disease patients
-identifies an interaction between microbial bile-acid inducible gene
-abundance and human Angiopoietin-like 4 gene expression" [@hernández-rocha2021a].
+This dataset was obtained after a collaboration "Integrative analysis of colonic biopsies from inflammatory bowel disease patients identifies an interaction between microbial bile-acid inducible gene abundance and human Angiopoietin-like 4 gene expression" [@hernández-rocha2021a].
 
 <!--# TODO table of patients and samples -->
 
@@ -207,9 +232,17 @@ It was used as a baseline method to find relationships between microorganisms an
 STATegRa, is a framework for integrating datasets with two data types using parametric and non-parametric methods [@planell2021].
 It was used to explore the datasets and see what do they had in common.
 
-BaseSet is a package that implements fuzzy set logic for easy calculation of probability to belong to a group.
+BaseSet is a package that I implements fuzzy set logic for easy calculation of probability to belong to a group.
 It can be used to calculate the size of the sets given a probability of having each element on the sets.
 When evaluating a model using bootstrap, it was used to find which variables were really involved on the interaction and how likely were to be together.
+
+<!--# TODO: Cite BaseSet!! -->
+
+experDesign is a package that I implemented to help designing an experiment before sequencing the samples.
+It also helps to quantify if a given experiment has batch effect due to the batches used to measure the values.
+On the thesis it was used to avoid batch effect on the sequencing of the BARCELONA dataset.
+
+<!--# TODO: Cite experDesign!! -->
 
 Regularized generalized canonical correlation analysis, RGCCA, has been the main method used [@tenenhaus2017a].
 It will be explained in detail on the next section.
@@ -223,7 +256,7 @@ The regularized generalized canonical correlation analysis is an extension to th
 
 Over several years of progress [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015] on the field of canonical correlations RGCCA is a robust method with a usable implementation [@R-RGCCA].
 
-The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples ($n\gg p$).
+The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples ( $p \gg n$).
 It needs to have a complete case with no missing values and time is not considered as a specially variable.
 Data should be from the same samples and it is not specific to a certain technology or method used to obtain the data.
 
@@ -232,7 +265,7 @@ The interpretation of the RGCCA results are tricky and require expertise and fam
 
 There have been some improvements to generalize the method when $p \gg n$.
 Current practices include using a pre selected model of relations between blocks.
-However this model might not be accurate and several models might need to be fitted.
+However, this model might not be accurate and several models might need to be fitted.
 To help find the fitting model for the data I created an R package, named [inteRmodel](https://llrs.github.io/inteRmodel/), which helps finding the right model and how fit it is for your data.
 
 This method applied to an existing dataset of an autologous haematopoietic stem cell transplantation [@corralizaDifferencesPeripheralTissue].
