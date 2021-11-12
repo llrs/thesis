@@ -7,6 +7,7 @@ knitr::write_bib(c('bookdown', 'knitr', 'rmarkdown', 'htmlwidgets',  'DT',
 ```
 
 ::: {#refs}
+
 :::
 
 # (APPENDIX) Appendix {.unnumbered}
@@ -42,7 +43,7 @@ Some functions used to explore the TRIM dataset ended up in the [integration](ht
 
 I developed a package to analyze sets and fuzzy sets [BaseSet](https://github.com/rOpenSci/BaseSet) (based on what I learned from a previous iteration of the [package](https://github.com/llrs/GSEAdv "GSEAdv package")).
 This package was meant to be used with the probabilities that arise from bootstrapping the models.
-However due to the long times of calculation that it would require it was not used.
+However, due to the long times of calculation that it would require it was not used.
 
 To analyze the antiTNF cohort (also named BARCELONA) a [different repository](https://github.com/llrs/Barcelona "Barcelona repository") was created to analyze the data using the previously developed packages.
 
@@ -58,8 +59,7 @@ All code of the analysis of the publications is available (in his messed state a
 -   [pouchitis](https://github.com/llrs/pouchitis): Work with the pouchitis cohort used in this article.
 -   [integration](https://github.com/llrs/integration-helper): Package with functions that I wrote or used on different parts of exploring the TRIM dataset ended up here.
 
-Paper 2:
 
--   [Barcelona](https://github.com/llrs/Barcelona): Mangle with the sample, dataset ...
--   [inteRmodel](https://github.com/llrs/inteRmodel): To repeat the same procedure as in the first analysis. Further modifications were done to ease the pain to look for a model when millions of models are possible.
--   [integration](https://github.com/llrs/integration-helper): To not repeat myself for the same process.
+experDesign:
+
+-  [experDesign](https://github.com/llrs/experDesign): Help design experiments in batches, [available on CRAN too](https://cran.r-project.org/package=experDesign).
