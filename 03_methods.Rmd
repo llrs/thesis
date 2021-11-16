@@ -44,26 +44,40 @@ The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen
 
 <!--# TODO table of patients and samples -->
 
-| Characteristic                   | HSCT        |
-|----------------------------------|-------------|
-| Samples (non-disease/diseased)   | 51/107      |
-| Sex (female/male)                | 22/15       |
-| Location (ileum/colon/unknown)   | 48/108/2    |
-| SES-CD local: mean (min-max)     | 2.15 (0-12) |
-| CDAI: mean (min-max)             | 120 (0-450  |
-| Age at diagnostic                | 7/11/0      |
-| Years of disease: mean (min-max) | 14 (8-28)   |
+| Characteristic                          | HSCT        |
+|-----------------------------------------|-------------|
+| Sex (female/male)                       | 22/15       |
+| Age at diagnostic (\<17/\<40/>40 years) | 7/11/0      |
+| Years of disease: mean (min-max)        | 14 (8-28)   |
+| Age: mean (min-max)                     | 44 (23-70)  |
+| Samples (non-disease/CD)                | 51/107      |
+| Location (ileum/colon/unknown)          | 48/108/2    |
+| SES-CD local: mean (min-max)            | 2.15 (0-12) |
+| CDAI: mean (min-max)                    | 120 (0-450  |
 
 ### BARCELONA dataset
 
 <!--# Adapted from the ethical committee submission-->
 
-All patients with an established diagnosis of inflammatory bowel disease, including Crohn's disease, ulcerative colitis, IBD unclassified, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 48 weeks a biopsy from an ileocolonoscopy.
+All patients with an established diagnosis of inflammatory bowel disease, including Crohn's disease, ulcerative colitis, IBD unclassified, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 46 weeks a biopsy from an ileocolonoscopy.
 Patients that were referred to the Hospital Clínic de Barcelona IBD unit, who had already started treatment with a biologic agent in another center, were also included adapting to the corresponding time-schedule of their treatment.
 In all patients, starting anti-TNF treatment will be decided before the protocol entry decision according to medical clinical practice.
 The protocol was approved by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number 2012/7956).
 
 <!--# TODO table of patients and samples -->
+
+| Characteristic                          | BARCELONA  |
+|-----------------------------------------|------------|
+| Individuals                             | 62         |
+| Status (CD/UC/Controls)                 | 33/21/8    |
+| Sex (female/male)                       | 29/33      |
+| Age at diagnostic (\<17/\<40/>40 years) | 2/44/8     |
+| Years of disease: mean (min-max)        | 7.6 (0-32) |
+| Age: mean (min-max)                     | 41 (18-68) |
+| Time (0/14/46 weeks)                    | 41/40/32   |
+| Sample segment (ileum/colon)            | 39/87      |
+
+: adf
 
 ### Howell's dataset
 
@@ -74,11 +88,34 @@ There are 10 non-IBD samples, 11 with Crohn's disease and 11 with ulcerative col
 
 <!--# TODO table of patients and samples -->
 
+| Characteristic                                  | Howell's  |
+|-------------------------------------------------|-----------|
+| Disease (CD/UC/controls)                        | 10/11/11  |
+| Age at diagnostic (\<17/\<40/>40 years)         | 32/0/0    |
+| Age: mean (min-max)                             | 12 (6-15) |
+| Sex (female/male)                               | 10/22     |
+| Segment (ileum/colon)                           | 31/46     |
+| Clinical history (inflammation/no inflammation) | 24/53     |
+
+: adf
+
 ### Hernández' dataset
 
 This dataset was obtained after a collaboration "Integrative analysis of colonic biopsies from inflammatory bowel disease patients identifies an interaction between microbial bile-acid inducible gene abundance and human Angiopoietin-like 4 gene expression" [@hernández-rocha2021a].
 
 <!--# TODO table of patients and samples -->
+
+| Characteristic                          | Hernández |
+|-----------------------------------------|-----------|
+| Disease (CD/UC/controls)                |           |
+| Age at diagnostic (\<17/\<40/>40 years) |           |
+| Age: mean (min-max)                     |           |
+| Sex (female/male)                       |           |
+| Segment (ileum/colon)                   |           |
+|                                         |           |
+|                                         |           |
+
+: asdf
 
 ## Processing samples
 
