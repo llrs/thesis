@@ -291,7 +291,7 @@ The regularized generalized canonical correlation analysis is an extension to th
 
 ### Description
 
-Over several years of progress [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015] on the field of canonical correlations RGCCA is a robust method with a usable implementation [@R-RGCCA].
+Over several years of progress [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020] on the field of canonical correlations RGCCA is a robust method with a usable implementation [@R-RGCCA].
 
 The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples ( $p \gg n$).
 It needs to have a complete case with no missing values and time is not considered as a specially variable.
