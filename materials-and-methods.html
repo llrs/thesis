@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2021-11-12" />
+<meta name="date" content="2021-11-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -211,32 +211,36 @@ The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen
 </thead>
 <tbody>
 <tr class="odd">
-<td>Samples (non-disease/diseased)</td>
-<td>51/107</td>
-</tr>
-<tr class="even">
 <td>Sex (female/male)</td>
 <td>22/15</td>
 </tr>
-<tr class="odd">
-<td>Location (ileum/colon/unknown)</td>
-<td>48/108/2</td>
-</tr>
 <tr class="even">
-<td>SES-CD local: mean (min-max)</td>
-<td>2.15 (0-12)</td>
-</tr>
-<tr class="odd">
-<td>CDAI: mean (min-max)</td>
-<td>120 (0-450</td>
-</tr>
-<tr class="even">
-<td>Age at diagnostic</td>
+<td>Age at diagnostic (&lt;17/&lt;40/&gt;40 years)</td>
 <td>7/11/0</td>
 </tr>
 <tr class="odd">
 <td>Years of disease: mean (min-max)</td>
 <td>14 (8-28)</td>
+</tr>
+<tr class="even">
+<td>Age: mean (min-max)</td>
+<td>44 (23-70)</td>
+</tr>
+<tr class="odd">
+<td>Samples (non-disease/CD)</td>
+<td>51/107</td>
+</tr>
+<tr class="even">
+<td>Location (ileum/colon/unknown)</td>
+<td>48/108/2</td>
+</tr>
+<tr class="odd">
+<td>SES-CD local: mean (min-max)</td>
+<td>2.15 (0-12)</td>
+</tr>
+<tr class="even">
+<td>CDAI: mean (min-max)</td>
+<td>120 (0-450</td>
 </tr>
 </tbody>
 </table>
@@ -244,11 +248,54 @@ The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen
 <div id="barcelona-dataset" class="section level3">
 <h3><span class="header-section-number">3.1.5</span> BARCELONA dataset</h3>
 <!--# Adapted from the ethical committee submission-->
-<p>All patients with an established diagnosis of inflammatory bowel disease, including Crohn’s disease, ulcerative colitis, IBD unclassified, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 48 weeks a biopsy from an ileocolonoscopy.
+<p>All patients with an established diagnosis of inflammatory bowel disease, including Crohn’s disease, ulcerative colitis, IBD unclassified, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 46 weeks a biopsy from an ileocolonoscopy.
 Patients that were referred to the Hospital Clínic de Barcelona IBD unit, who had already started treatment with a biologic agent in another center, were also included adapting to the corresponding time-schedule of their treatment.
 In all patients, starting anti-TNF treatment will be decided before the protocol entry decision according to medical clinical practice.
 The protocol was approved by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number 2012/7956).</p>
 <!--# TODO table of patients and samples -->
+<table>
+<caption>adf</caption>
+<thead>
+<tr class="header">
+<th>Characteristic</th>
+<th>BARCELONA</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Individuals</td>
+<td>62</td>
+</tr>
+<tr class="even">
+<td>Status (CD/UC/Controls)</td>
+<td>33/21/8</td>
+</tr>
+<tr class="odd">
+<td>Sex (female/male)</td>
+<td>29/33</td>
+</tr>
+<tr class="even">
+<td>Age at diagnostic (&lt;17/&lt;40/&gt;40 years)</td>
+<td>2/44/8</td>
+</tr>
+<tr class="odd">
+<td>Years of disease: mean (min-max)</td>
+<td>7.6 (0-32)</td>
+</tr>
+<tr class="even">
+<td>Age: mean (min-max)</td>
+<td>41 (18-68)</td>
+</tr>
+<tr class="odd">
+<td>Time (0/14/46 weeks)</td>
+<td>41/40/32</td>
+</tr>
+<tr class="even">
+<td>Sample segment (ileum/colon)</td>
+<td>39/87</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="howells-dataset" class="section level3">
 <h3><span class="header-section-number">3.1.6</span> Howell’s dataset</h3>
@@ -256,11 +303,85 @@ The protocol was approved by the Institutional Ethics Committee of the Hospital 
 <p>From their dataset I used data from 77 samples that had both RNAseq and 16S data collected.
 There are 10 non-IBD samples, 11 with Crohn’s disease and 11 with ulcerative colitis which have the following characteristics:</p>
 <!--# TODO table of patients and samples -->
+<table>
+<caption>adf</caption>
+<thead>
+<tr class="header">
+<th>Characteristic</th>
+<th>Howell’s</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Disease (CD/UC/controls)</td>
+<td>10/11/11</td>
+</tr>
+<tr class="even">
+<td>Age at diagnostic (&lt;17/&lt;40/&gt;40 years)</td>
+<td>32/0/0</td>
+</tr>
+<tr class="odd">
+<td>Age: mean (min-max)</td>
+<td>12 (6-15)</td>
+</tr>
+<tr class="even">
+<td>Sex (female/male)</td>
+<td>10/22</td>
+</tr>
+<tr class="odd">
+<td>Segment (ileum/colon)</td>
+<td>31/46</td>
+</tr>
+<tr class="even">
+<td>Clinical history (inflammation/no inflammation)</td>
+<td>24/53</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="hernández-dataset" class="section level3">
 <h3><span class="header-section-number">3.1.7</span> Hernández’ dataset</h3>
 <p>This dataset was obtained after a collaboration “Integrative analysis of colonic biopsies from inflammatory bowel disease patients identifies an interaction between microbial bile-acid inducible gene abundance and human Angiopoietin-like 4 gene expression” <span class="citation">[<a href="references.html#ref-hernández-rocha2021a" role="doc-biblioref">178</a>]</span>.</p>
 <!--# TODO table of patients and samples -->
+<table>
+<caption>asdf</caption>
+<thead>
+<tr class="header">
+<th>Characteristic</th>
+<th>Hernández</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Disease (CD/UC/controls)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Age at diagnostic (&lt;17/&lt;40/&gt;40 years)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Age: mean (min-max)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Sex (female/male)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Segment (ileum/colon)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="processing-samples" class="section level2">
