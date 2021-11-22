@@ -233,16 +233,20 @@ Functional enrichment related methods stand out from the other methods used.
 
 Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
 They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.
+Most of them are based on an over representation analysis, where a group of elements is tested whether they are present on other group.
+Usually it is performed with the fisher test or the hypergeometric test or the proportion test.
 
-To test if some variables show an unexpected importance according to a statistic like fold change or value [fgsea](https://bioconductor.org/packages/fgsea) [@korotkevich2021] methods was used.
-fgsea is a software used to see if groups of variables present in an ordered list present some skewed distribution.
-Pathways of genes were tested on the weight of different models.
+There are other methods that to test if some variables shows an unexpected importance according to a statistic like fold change or value gene set enrichment analysis was developed [@subramanian2005] .
+These methods check if a group of variables present in an ordered list is present in some skewed distribution and compare it against a random group of similar size or with the Kolmogorov--Smirnov test.
 
-[GSVA](https://bioconductor.org/packages/GSVA) is a method related to [fgsea](https://bioconductor.org/packages/fgsea) that summarize the variables' numerical value so that they can be later used by other methods [@hänzelmann2013].
-GSVA was used to estimate the expression of the pathways and try to find the relationships between the pathways and the microbiome at different taxonomic levels.
-
-[clusterProfiler](https://bioconductor.org/packages/clusterProfiler): test genes enrichment for functionality based on information on pathway databases [@wu2021].
+[clusterProfiler](https://bioconductor.org/packages/clusterProfiler): test genes enrichment for functionality based on information on pathway databases [@wu2021] using the over representative analysis approach.
 It uses several methods like fisher test to check the enrichment of features of a given group on the list provided.
+
+For testing gene set enrichment analysis I used [fgsea](https://bioconductor.org/packages/fgsea) [@korotkevich2021] implementation for its speed and integration with other methods used on this thesis.
+Pathways of genes from the REACTOME database were tested on the weight of different models.
+
+[GSVA](https://bioconductor.org/packages/GSVA) is a method that summarize the variables' numerical value so that they can be later used by other methods [@hänzelmann2013].
+GSVA was used to estimate the expression of the pathways and try to find the relationships between the pathways and the microbiome at different taxonomic levels.
 
 ### Other methods used
 
@@ -303,6 +307,16 @@ Data should be from the same samples and it is not specific to a certain technol
 
 It uses a dimensional reduction approach to relate the different data sets between them and produce specific factors for each dataset.
 The interpretation of the RGCCA results is complex and require expertise and familiarity with the technique used and is highly dependent on the model and options used.
+
+To perform the dimensional reduction it follows these procedure:
+
+$$
+\underset{a_1,a_2, \ldots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g(\mathrm{cov}(X_j a_j, X_k a_k)) \mathrm{~~s.t.~~} \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
+$$
+
+Being $X_j$ the values for sample $j$, the weights of the variables of said sample are represented by $a$.
+While $g$ is a function that can take the form of $x$, also known as Horst method, $\Vert x \Vert$ known as centroid method, $x^2$ known as factorial method, or any user-supplied function.
+The smaller the $s_j$, the larger the degree of sparsity for $a_j$.
 
 To model what might be the relationships between the datasets current practices include using a pre-selected model of relations between blocks.
 However, this model might not be accurate and several models might need to be fitted.
