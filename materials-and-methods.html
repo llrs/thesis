@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2021-11-22" />
+<meta name="date" content="2021-11-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -173,12 +173,58 @@ Samples for the different cohorts were collected similarly here is a brief descr
 <h3><span class="header-section-number">3.1.1</span> Glioma dataset</h3>
 <p>The glioma dataset came from diffuse intrinsic pontine glioma patients that included the host transcriptome analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F, patients copy number variation processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using Mutation Surveyor software.
 In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor <span class="citation">[<a href="references.html#ref-morgan2015a" role="doc-biblioref">174</a>]</span>.</p>
+<table>
+<caption>Table with the glioma’s dataset characteristics</caption>
+<thead>
+<tr class="header">
+<th>Characteristics</th>
+<th>glioma</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Samples</td>
+<td>53</td>
+</tr>
+<tr class="even">
+<td>Sex (female/male)</td>
+<td>28/25</td>
+</tr>
+<tr class="odd">
+<td>Location (corticoid, dipg, midl)</td>
+<td>20/22/10</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="cduc-dataset" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> CD/UC dataset</h3>
 <p>An IBD-related dataset was obtained from Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler.
 It included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy controls <span class="citation">[<a href="references.html#ref-häsler2017" role="doc-biblioref">175</a>]</span>.
 The provided data included location, gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.</p>
+<table>
+<caption>Table with CD/UC characteristics</caption>
+<thead>
+<tr class="header">
+<th>Characteristics</th>
+<th>CD/UC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Controls/Disease</td>
+<td>33/26</td>
+</tr>
+<tr class="even">
+<td>Sex</td>
+<td>42/17</td>
+</tr>
+<tr class="odd">
+<td>Location (ileum/colon)</td>
+<td>30/29</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="pouchitis-dataset" class="section level3">
 <h3><span class="header-section-number">3.1.3</span> Pouchitis dataset</h3>
@@ -546,7 +592,7 @@ The interpretation of the RGCCA results is complex and require expertise and fam
 \]</span></p>
 <p>Being <span class="math inline">\(X_j\)</span> the values for sample <span class="math inline">\(j\)</span>, the weights of the variables of said sample are represented by <span class="math inline">\(a\)</span>.
 While <span class="math inline">\(g\)</span> is a function that can take the form of <span class="math inline">\(x\)</span>, also known as Horst method, <span class="math inline">\(\Vert x \Vert\)</span> known as centroid method, <span class="math inline">\(x^2\)</span> known as factorial method, or any user-supplied function.
-The smaller the <span class="math inline">\(s_j\)</span>, the larger the degree of sparsity for <span class="math inline">\(a_j\)</span>.</p>
+The smaller the <span class="math inline">\(s_j\)</span>, the larger the degree of sparsity for <span class="math inline">\(a_j\)</span>, usually <span class="math inline">\(s_j\)</span> is calculated using <span class="math display">\[@schäfer2005\]</span> approach unless they include metadata for which 1 is then used.</p>
 <p>To model what might be the relationships between the datasets current practices include using a pre-selected model of relations between blocks.
 However, this model might not be accurate and several models might need to be fitted.
 To help find the fitting model for the data I created an R package, named <a href="https://llrs.github.io/inteRmodel/">inteRmodel</a>, which helps finding the right model and how fit it is for your data via a bootstrapping procedure.</p>
