@@ -332,7 +332,7 @@ $$
 
 Being $X_j$ the values for sample $j$, the weights of the variables of said sample are represented by $a$.
 While $g$ is a function that can take the form of $x$, also known as Horst method, $\Vert x \Vert$ known as centroid method, $x^2$ known as factorial method, or any user-supplied function.
-The smaller the $s_j$, the larger the degree of sparsity for $a_j$.
+The smaller the $s_j$, the larger the degree of sparsity for $a_j$, usually $s_j$ is calculated using \[@schäfer2005\] approach unless they include metadata for which 1 is then used.
 
 To model what might be the relationships between the datasets current practices include using a pre-selected model of relations between blocks.
 However, this model might not be accurate and several models might need to be fitted.
