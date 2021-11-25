@@ -13,11 +13,27 @@ Samples for the different cohorts were collected similarly here is a brief descr
 The glioma dataset came from diffuse intrinsic pontine glioma patients that included the host transcriptome analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F, patients copy number variation processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using Mutation Surveyor software.
 In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor [@morgan2015a].
 
+| Characteristics                  | glioma   |
+|----------------------------------|----------|
+| Samples                          | 53       |
+| Sex (female/male)                | 28/25    |
+| Location (corticoid, dipg, midl) | 20/22/10 |
+
+: Table with the glioma's dataset characteristics
+
 ### CD/UC dataset
 
 An IBD-related dataset was obtained from Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler.
 It included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy controls [@häsler2017].
 The provided data included location, gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.
+
+| Characteristics        | CD/UC |
+|------------------------|-------|
+| Controls/Disease       | 33/26 |
+| Sex                    | 42/17 |
+| Location (ileum/colon) | 30/29 |
+
+: Table with CD/UC characteristics
 
 ### Pouchitis dataset
 
