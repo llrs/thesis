@@ -553,10 +553,13 @@ It was used to test which variables, (sex, age, location, time since diagnostic)
 <span class="math inline">\(\alpha\)</span>-diversity is a measure of how much a given microbiome at a taxonomic level is present on a sample.
 Several measures exists, on the thesis I used the effective Simpson or Shannon diversity index to compare diversity between samples and conditions.
 <span class="math inline">\(\beta\)</span>-diversity was calculated using the phyloseq package for exploratory analysis.</p>
+<p>The <span class="math inline">\(\alpha\)</span>-diversity index used can be calculated as follow:<span class="math inline">\(Shannon = -\sum_{i=1}^N p_i \ln p_i\)</span> and <span class="math inline">\(Simpson = \dfrac{1}{\sum_{i=1}^N p_i^2}\)</span> .</p>
+<p>The effective Shannon and Simpson diversity index is the inverse of these formulas.</p>
 <p>We looked to see if using some co-expression measure between the the microbiome and the RNAseq would help identify relationships.
 We used weighted gene co-expression network analysis as implemented on <a href="https://cran.r-project.org/package=WGCNA">WGCNA</a> <span class="citation">[<a href="references.html#ref-langfelder2008" role="doc-biblioref">194</a>]</span>.</p>
 <p>Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two data sources, simple integration, two blocks <span class="citation">[<a href="references.html#ref-meng2014" role="doc-biblioref">195</a>]</span>.
-It was used as a baseline method to find relationships between microorganisms and genes from the package <a href="https://bioconductor.org/packages/omicade4">omicade4</a>.</p>
+It is available via the <a href="https://bioconductor.org/packages/omicade4">omicade</a> package on Bioconductor.
+It was used as a baseline method to find relationships between microorganisms and genes.</p>
 <p><a href="https://bioconductor.org/packages/STATegRa">STATegRa</a>, is a framework for integrating datasets with two data types using parametric and non-parametric methods <span class="citation">[<a href="references.html#ref-planell2021" role="doc-biblioref">196</a>]</span>.
 It was used to explore the datasets and see what do they had in common.</p>
 <p><a href="https://cran.r-project.org/package=BaseSet">BaseSet</a> is a package that I implements fuzzy set logic for easy calculation of probability to belong to a group.
@@ -592,10 +595,10 @@ The interpretation of the RGCCA results is complex and require expertise and fam
 \]</span></p>
 <p>Being <span class="math inline">\(X_j\)</span> the values for sample <span class="math inline">\(j\)</span>, the weights of the variables of said sample are represented by <span class="math inline">\(a\)</span>.
 While <span class="math inline">\(g\)</span> is a function that can take the form of <span class="math inline">\(x\)</span>, also known as Horst method, <span class="math inline">\(\Vert x \Vert\)</span> known as centroid method, <span class="math inline">\(x^2\)</span> known as factorial method, or any user-supplied function.
-The smaller the <span class="math inline">\(s_j\)</span>, the larger the degree of sparsity for <span class="math inline">\(a_j\)</span>, usually <span class="math inline">\(s_j\)</span> is calculated using <span class="math display">\[@schäfer2005\]</span> approach unless they include metadata for which 1 is then used.</p>
+The smaller the <span class="math inline">\(s_j\)</span>, the larger the degree of sparsity for <span class="math inline">\(a_j\)</span>, usually <span class="math inline">\(s_j\)</span> is calculated using Schäfer’s method approach <span class="math display">\[@schäfer2005\]</span> unless they include metadata for which 1 is then used.</p>
 <p>To model what might be the relationships between the datasets current practices include using a pre-selected model of relations between blocks.
 However, this model might not be accurate and several models might need to be fitted.
-To help find the fitting model for the data I created an R package, named <a href="https://llrs.github.io/inteRmodel/">inteRmodel</a>, which helps finding the right model and how fit it is for your data via a bootstrapping procedure.</p>
+To help find the fitting model for the data I created an R package, <a href="https://llrs.github.io/inteRmodel/">inteRmodel</a>, which helps finding the right model and how fit it is for your data via a bootstrapping procedure.</p>
 <p>This method was applied to the previously described datasets to find the relationship between microorganisms and the disease.</p>
 </div>
 <div id="relationships-models" class="section level3">
