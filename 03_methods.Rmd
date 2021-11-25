@@ -280,11 +280,16 @@ $\alpha$-diversity is a measure of how much a given microbiome at a taxonomic le
 Several measures exists, on the thesis I used the effective Simpson or Shannon diversity index to compare diversity between samples and conditions.
 $\beta$-diversity was calculated using the phyloseq package for exploratory analysis.
 
+The $\alpha$-diversity index used can be calculated as follow:$Shannon = -\sum_{i=1}^N p_i \ln p_i$ and $Simpson = \dfrac{1}{\sum_{i=1}^N p_i^2}$ .
+
+The effective Shannon and Simpson diversity index is the inverse of these formulas.
+
 We looked to see if using some co-expression measure between the the microbiome and the RNAseq would help identify relationships.
 We used weighted gene co-expression network analysis as implemented on [WGCNA](https://cran.r-project.org/package=WGCNA) [@langfelder2008].
 
 Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two data sources, simple integration, two blocks [@meng2014].
-It was used as a baseline method to find relationships between microorganisms and genes from the package [omicade4](https://bioconductor.org/packages/omicade4).
+It is available via the [omicade](https://bioconductor.org/packages/omicade4) package on Bioconductor.
+It was used as a baseline method to find relationships between microorganisms and genes.
 
 [STATegRa](https://bioconductor.org/packages/STATegRa), is a framework for integrating datasets with two data types using parametric and non-parametric methods [@planell2021].
 It was used to explore the datasets and see what do they had in common.
@@ -332,11 +337,11 @@ $$
 
 Being $X_j$ the values for sample $j$, the weights of the variables of said sample are represented by $a$.
 While $g$ is a function that can take the form of $x$, also known as Horst method, $\Vert x \Vert$ known as centroid method, $x^2$ known as factorial method, or any user-supplied function.
-The smaller the $s_j$, the larger the degree of sparsity for $a_j$, usually $s_j$ is calculated using \[@schäfer2005\] approach unless they include metadata for which 1 is then used.
+The smaller the $s_j$, the larger the degree of sparsity for $a_j$, usually $s_j$ is calculated using Schäfer's method approach \[@schäfer2005\] unless they include metadata for which 1 is then used.
 
 To model what might be the relationships between the datasets current practices include using a pre-selected model of relations between blocks.
 However, this model might not be accurate and several models might need to be fitted.
-To help find the fitting model for the data I created an R package, named [inteRmodel](https://llrs.github.io/inteRmodel/), which helps finding the right model and how fit it is for your data via a bootstrapping procedure.
+To help find the fitting model for the data I created an R package, [inteRmodel](https://llrs.github.io/inteRmodel/), which helps finding the right model and how fit it is for your data via a bootstrapping procedure.
 
 This method was applied to the previously described datasets to find the relationship between microorganisms and the disease.
 
