@@ -560,7 +560,7 @@ These methods include Regularized Generalized Canonical Correlation Analysis (RG
 -   Data from different samples:
 
 These methods do not need data from the same sample.
-They draw their conclusions generalizing from the the data available.
+They draw their conclusions generalizing from the data available.
 Some of them handle missing data, while others do use the data at face value.
 These method includes MetaPhlAn2, HUMAnN, LEfSe [@franzosaSpecieslevelFunctionalProfiling2018; @truongMetaPhlAn2EnhancedMetagenomic2015; @segataMetagenomicBiomarkerDiscovery2011].
 
