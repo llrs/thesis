@@ -311,11 +311,9 @@ It was used to explore the datasets and see what do they had in common.
 It can be used to calculate the size of the sets given a probability of having each element on the sets.
 When evaluating a model using bootstrap, it was used to find which variables were really involved on the interaction and how likely were to be together.
 
-[experDesign](https://cran.r-project.org/package=experDesign) is a package that I implemented to help designing an experiment before sequencing the samples.
+[experDesign](https://cran.r-project.org/package=experDesign) is a package that I implemented to help designing an experiment before sequencing the samples [@revillasancho2021].
 It also helps to quantify if a given experiment has batch effect due to the batches used to measure the values.
 It was used to avoid batch effect on the sequencing of the BARCELONA dataset.
-
-<!--# TODO: Cite experDesign!! -->
 
 Regularized generalized canonical correlation analysis, [RGCCA](https://cran.r-project.org/package=RGCCA), has been the main method used on this thesis [@tenenhaus2017a].
 It will be explained in detail on the next section.
@@ -333,8 +331,10 @@ The regularized generalized canonical correlation analysis is an extension to th
 Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020] RGCCA is a robust method with a fast and usable implementation [@R-RGCCA].
 
 The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples ( $p \gg n$).
-It needs to have a complete case with no missing values (at the time of writing this thesis there is a new development version that replaces any missing value by a 0) and time is not considered as a special variable.
+It needs to have a complete case with no missing values (at the time of writing this thesis there is a new development version not released on CRAN[^methods-1] yet that replaces any missing value by a 0) and time is not considered as a special variable.
 Data should be from the same samples and it is not specific to a certain technology or method used to obtain the data.
+
+[^methods-1]: CRAN is The Comprehensive R Archive Network available at <https://cran.r-project.org/>
 
 It uses a dimensional reduction approach to relate the different data sets between them and produce specific factors for each dataset.
 The interpretation of the RGCCA results is complex and require expertise and familiarity with the technique used and is highly dependent on the model and options used.
@@ -347,11 +347,16 @@ $$
 
 Being $X_j$ the values for sample $j$, the weights of the variables of said sample are represented by $a$.
 While $g$ is a function that can take the form of $x$, also known as Horst method, $\Vert x \Vert$ known as centroid method, $x^2$ known as factorial method, or any user-supplied function.
-The smaller the $s_j$, the larger the degree of sparsity for $a_j$.The values of $s_j$ were estimated using \[@schäfer2005\] when the block was from 16S data or RNaseq, otherwise 1 was used.
+The smaller the $s_j$, the larger the degree of sparsity for $a_j$.
+As $s_j$ is closer to 0, more features are selected as it looks to optimize covariance, while if it is closer to 1 less features are selected and it resembles the correlation.
+The values of $s_j$ were estimated using [@schäfer2005] when the block was from 16S data or RNaseq, otherwise 1 was used.
+
+To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE): it returns an AVE score for each block, an AVE score which measures how each variable correlates with their block component, an AVE score of the inner model, which measures how each dimension accounts for the variance.
+The higher the score is to 1 the better does it work.
 
 To model what might be the relationships between the datasets current practices include using a pre-selected model of relations between blocks.
 However, this model might not be accurate and several models might need to be fitted.
-To help find the fitting model for the data I created an R package, named [inteRmodel](https://llrs.github.io/inteRmodel/), which helps finding the right model and how fit it is for your data via a bootstrapping procedure.
+To help find the fitting model for the data I created an R package, named [inteRmodel](https://llrs.github.io/inteRmodel/), which helps finding the right model and measure how fit it is for your data via a bootstrapping procedure and the provided AVE scores.
 
 This method was applied to the previously described datasets to find the relationship between microorganisms and the disease.
 

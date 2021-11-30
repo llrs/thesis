@@ -10,6 +10,15 @@ STATegRa not customizable the interaction between the datasets.
 
 RGCCA some improvements.
 
+Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing.
+[@zhang2019]
+
+How to move the transition from bench to hospital \[@collij2021\].
+
+<!--# From @collij2021 add references/adapt-->
+
+New technologies like "organ-on-chip" or more specifically "gut-on-chip" will be of great help in identifying causality by introducing the gut microbiota in this system and then study the interaction of the gut microbiota and the intestinal epithelium.
+
 #### Designing models
 
 The model of the generalized canonical correlation is highly dependent of the blocks present.
@@ -42,4 +51,4 @@ But the most important thing is to consider which variables are independent of w
 
 It is hard to provide more information that can be later used by researchers on the wet lab.
 
-There is a disconnect between the computational side and the experimental side, driven by the difficulty to think an experiment to test the new information that multi-omic experiments provide. 
+There is a disconnect between the computational side and the experimental side, driven by the difficulty to think an experiment to test the new information that multi-omic experiments provide.
