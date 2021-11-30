@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2021-11-26" />
+<meta name="date" content="2021-11-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -591,25 +591,24 @@ It was used to explore the datasets and see what do they had in common.</p>
 <p><a href="https://cran.r-project.org/package=BaseSet">BaseSet</a> is a package that I implements fuzzy set logic for easy calculation of probability to belong to a group.
 It can be used to calculate the size of the sets given a probability of having each element on the sets.
 When evaluating a model using bootstrap, it was used to find which variables were really involved on the interaction and how likely were to be together.</p>
-<p><a href="https://cran.r-project.org/package=experDesign">experDesign</a> is a package that I implemented to help designing an experiment before sequencing the samples.
+<p><a href="https://cran.r-project.org/package=experDesign">experDesign</a> is a package that I implemented to help designing an experiment before sequencing the samples <span class="citation">[<a href="references.html#ref-revillasancho2021" role="doc-biblioref">198</a>]</span>.
 It also helps to quantify if a given experiment has batch effect due to the batches used to measure the values.
 It was used to avoid batch effect on the sequencing of the BARCELONA dataset.</p>
-<!--# TODO: Cite experDesign!! -->
-<p>Regularized generalized canonical correlation analysis, <a href="https://cran.r-project.org/package=RGCCA">RGCCA</a>, has been the main method used on this thesis <span class="citation">[<a href="references.html#ref-tenenhaus2017a" role="doc-biblioref">198</a>]</span>.
+<p>Regularized generalized canonical correlation analysis, <a href="https://cran.r-project.org/package=RGCCA">RGCCA</a>, has been the main method used on this thesis <span class="citation">[<a href="references.html#ref-tenenhaus2017a" role="doc-biblioref">199</a>]</span>.
 It will be explained in detail on the next section.</p>
-<p>To estimate if the selected features (genes or microorganism) by RGCCA have some biological meaningful contribution I measured if they can classify features using the <a href="https://cran.r-project.org/package=pROC">pROC</a> package, such as, which gastrointestinal segment are each sample from, or which type of disease does each patient have <span class="citation">[<a href="references.html#ref-robin2011" role="doc-biblioref">199</a>]</span>.
+<p>To estimate if the selected features (genes or microorganism) by RGCCA have some biological meaningful contribution I measured if they can classify features using the <a href="https://cran.r-project.org/package=pROC">pROC</a> package, such as, which gastrointestinal segment are each sample from, or which type of disease does each patient have <span class="citation">[<a href="references.html#ref-robin2011" role="doc-biblioref">200</a>]</span>.
 The area under the curve (AUC) of specificity and sensitivity measurements, also known as receiver operating characteristic ROC, was compared between several values accounting for different genes and microorganisms.</p>
 </div>
 </div>
 <div id="regularized-generalized-canonical-correlation-analysis" class="section level2">
 <h2><span class="header-section-number">3.4</span> Regularized generalized canonical correlation analysis</h2>
 <p>The canonical correlation is a method that uses data from the same sample but from different datasets.
-The regularized generalized canonical correlation analysis is an extension to the canonical correlation analysis <span class="citation">[<a href="references.html#ref-jordan1875" role="doc-biblioref">200</a>, <a href="references.html#ref-hotelling1936" role="doc-biblioref">201</a>]</span> which includes a regularization step to select which are the variables more relevant.</p>
+The regularized generalized canonical correlation analysis is an extension to the canonical correlation analysis <span class="citation">[<a href="references.html#ref-jordan1875" role="doc-biblioref">201</a>, <a href="references.html#ref-hotelling1936" role="doc-biblioref">202</a>]</span> which includes a regularization step to select which are the variables more relevant.</p>
 <div id="description" class="section level3">
 <h3><span class="header-section-number">3.4.1</span> Description</h3>
-<p>Over several years of progress on the field of canonical correlations <span class="citation">[<a href="references.html#ref-tenenhaus_regularized_2011" role="doc-biblioref">82</a>, <a href="references.html#ref-tenenhaus_variable_2014" role="doc-biblioref">83</a>, <a href="references.html#ref-tenenhaus_component-based_2008" role="doc-biblioref">202</a>–<a href="references.html#ref-gloaguen2020" role="doc-biblioref">206</a>]</span> RGCCA is a robust method with a fast and usable implementation <span class="citation">[<span class="citeproc-not-found" data-reference-id="R-RGCCA"><strong>???</strong></span>]</span>.</p>
+<p>Over several years of progress on the field of canonical correlations <span class="citation">[<a href="references.html#ref-tenenhaus_regularized_2011" role="doc-biblioref">82</a>, <a href="references.html#ref-tenenhaus_variable_2014" role="doc-biblioref">83</a>, <a href="references.html#ref-tenenhaus_component-based_2008" role="doc-biblioref">203</a>–<a href="references.html#ref-gloaguen2020" role="doc-biblioref">207</a>]</span> RGCCA is a robust method with a fast and usable implementation <span class="citation">[<span class="citeproc-not-found" data-reference-id="R-RGCCA"><strong>???</strong></span>]</span>.</p>
 <p>The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples ( <span class="math inline">\(p \gg n\)</span>).
-It needs to have a complete case with no missing values (at the time of writing this thesis there is a new development version that replaces any missing value by a 0) and time is not considered as a special variable.
+It needs to have a complete case with no missing values (at the time of writing this thesis there is a new development version not released on CRAN<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> yet that replaces any missing value by a 0) and time is not considered as a special variable.
 Data should be from the same samples and it is not specific to a certain technology or method used to obtain the data.</p>
 <p>It uses a dimensional reduction approach to relate the different data sets between them and produce specific factors for each dataset.
 The interpretation of the RGCCA results is complex and require expertise and familiarity with the technique used and is highly dependent on the model and options used.</p>
@@ -619,10 +618,14 @@ The interpretation of the RGCCA results is complex and require expertise and fam
 \]</span></p>
 <p>Being <span class="math inline">\(X_j\)</span> the values for sample <span class="math inline">\(j\)</span>, the weights of the variables of said sample are represented by <span class="math inline">\(a\)</span>.
 While <span class="math inline">\(g\)</span> is a function that can take the form of <span class="math inline">\(x\)</span>, also known as Horst method, <span class="math inline">\(\Vert x \Vert\)</span> known as centroid method, <span class="math inline">\(x^2\)</span> known as factorial method, or any user-supplied function.
-The smaller the <span class="math inline">\(s_j\)</span>, the larger the degree of sparsity for <span class="math inline">\(a_j\)</span>.The values of <span class="math inline">\(s_j\)</span> were estimated using <span class="math display">\[@schäfer2005\]</span> when the block was from 16S data or RNaseq, otherwise 1 was used.</p>
+The smaller the <span class="math inline">\(s_j\)</span>, the larger the degree of sparsity for <span class="math inline">\(a_j\)</span>.
+As <span class="math inline">\(s_j\)</span> is closer to 0, more features are selected as it looks to optimize covariance, while if it is closer to 1 less features are selected and it resembles the correlation.
+The values of <span class="math inline">\(s_j\)</span> were estimated using <span class="citation">[<a href="references.html#ref-schäfer2005" role="doc-biblioref">208</a>]</span> when the block was from 16S data or RNaseq, otherwise 1 was used.</p>
+<p>To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE): it returns an AVE score for each block, an AVE score which measures how each variable correlates with their block component, an AVE score of the inner model, which measures how each dimension accounts for the variance.
+The higher the score is to 1 the better does it work.</p>
 <p>To model what might be the relationships between the datasets current practices include using a pre-selected model of relations between blocks.
 However, this model might not be accurate and several models might need to be fitted.
-To help find the fitting model for the data I created an R package, named <a href="https://llrs.github.io/inteRmodel/">inteRmodel</a>, which helps finding the right model and how fit it is for your data via a bootstrapping procedure.</p>
+To help find the fitting model for the data I created an R package, named <a href="https://llrs.github.io/inteRmodel/">inteRmodel</a>, which helps finding the right model and measure how fit it is for your data via a bootstrapping procedure and the provided AVE scores.</p>
 <p>This method was applied to the previously described datasets to find the relationship between microorganisms and the disease.</p>
 </div>
 <div id="relationships-models" class="section level3">
@@ -644,6 +647,12 @@ Furthermore, there is no test to decide if a variable selected has some meaningf
 
 </div>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>CRAN is The Comprehensive R Archive Network available at <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a><a href="materials-and-methods.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

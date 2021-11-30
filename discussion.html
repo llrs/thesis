@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2021-11-26" />
+<meta name="date" content="2021-11-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -168,6 +168,11 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <p>MCIA works well as baseline.</p>
 <p>STATegRa not customizable the interaction between the datasets.</p>
 <p>RGCCA some improvements.</p>
+<p>Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing.
+<span class="citation">[<a href="references.html#ref-zhang2019" role="doc-biblioref">209</a>]</span></p>
+<p>How to move the transition from bench to hospital <span class="math display">\[@collij2021\]</span>.</p>
+<!--# From @collij2021 add references/adapt-->
+<p>New technologies like “organ-on-chip” or more specifically “gut-on-chip” will be of great help in identifying causality by introducing the gut microbiota in this system and then study the interaction of the gut microbiota and the intestinal epithelium.</p>
 <div id="designing-models" class="section level4">
 <h4><span class="header-section-number">6.0.0.1</span> Designing models</h4>
 <p>The model of the generalized canonical correlation is highly dependent of the blocks present.</p>
@@ -183,7 +188,7 @@ Depending on the goals of the research one or the other should be used.
 If we are more interested on the model of the relationships the inner AVE makes more sense.</p>
 <p>Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
 Another option is to use an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately.
-Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4 package">MCIA</a> <span class="citation">[<a href="references.html#ref-mengMultivariateApproachIntegration2014" role="doc-biblioref">207</a>]</span>.
+Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4 package">MCIA</a> <span class="citation">[<a href="references.html#ref-mengMultivariateApproachIntegration2014" role="doc-biblioref">210</a>]</span>.
 Which was compared by looking at the area under the curve for classifying the samples according to their location.</p>
 <p>Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn’s disease.
 In this article we didn’t look in depth to the biological relevance of the microorganisms an genes found.</p>
