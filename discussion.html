@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2021-11-30" />
+<meta name="date" content="2021-12-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="biological-relevance-of-results.html"/>
-<link rel="next" href="conclusions.html"/>
+<link rel="next" href="conclusion.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -130,10 +130,13 @@
 <li class="chapter" data-level="5.2" data-path="biological-relevance-of-results.html"><a href="biological-relevance-of-results.html#shared-selected-variables"><i class="fa fa-check"></i><b>5.2</b> Shared selected variables</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>6</b> Discussion</a><ul>
+<li class="chapter" data-level="6.0.1" data-path="discussion.html"><a href="discussion.html#other"><i class="fa fa-check"></i><b>6.0.1</b> Other</a></li>
 <li class="chapter" data-level="6.1" data-path="discussion.html"><a href="discussion.html#relevance-for-other-research"><i class="fa fa-check"></i><b>6.1</b> Relevance for other research</a></li>
+<li class="chapter" data-level="6.2" data-path="discussion.html"><a href="discussion.html#implications-of-research"><i class="fa fa-check"></i><b>6.2</b> Implications of research</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>7</b> Conclusions</a></li>
-<li class="chapter" data-level="8" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i><b>8</b> Acknowledgements</a></li>
+<li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a></li>
+<li class="chapter" data-level="8" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>8</b> Conclusions</a></li>
+<li class="chapter" data-level="9" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i><b>9</b> Acknowledgements</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="online-resources.html"><a href="online-resources.html"><i class="fa fa-check"></i><b>A</b> Online resources</a></li>
@@ -163,14 +166,23 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 </div>
 <div id="discussion" class="section level1">
 <h1><span class="header-section-number">Chapter 6</span> Discussion</h1>
+<p>In this chapter we will summarise the main findings in relation to the broad research community and other work as well as the impact of the results to improve further research in the future or be used on clinical environments.</p>
+<p>If we had to summarise all the work in one sentence we would say that…</p>
+<p>Many work focus on finding some genes or bacteria to answer a question they have in mind.
+On the thesis the focus was more on finding a good representation of the disease that allowed me to identify genes and bacteria that were relevant to our questions.</p>
+<p>There are many methods for integration developed, each with their shortcomings and strengths.
+There are frequent new tools and methods released, and the most up to date list of tools is a <a href="https://github.com/mikelove/awesome-multi-omics" title="Awesome multi-omics list">collaborative list</a>.</p>
+<p>With the increase of tools there have been more pressure on comparing different tools.
+There have been already some articles comparing the different tools, which the previous mentioned list also has.
+There are reviews of different tools on the same datasets <span class="citation">[<a href="references.html#ref-cantini2020" role="doc-biblioref">211</a>]</span>, some are more theoretical, others are focused on a field.</p>
 <p>WGCNA didn’t work.</p>
 <p>adonis worked to identify which variables were important.</p>
 <p>MCIA works well as baseline.</p>
 <p>STATegRa not customizable the interaction between the datasets.</p>
 <p>RGCCA some improvements.</p>
 <p>Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing.
-<span class="citation">[<a href="references.html#ref-zhang2019" role="doc-biblioref">209</a>]</span></p>
-<p>How to move the transition from bench to hospital <span class="math display">\[@collij2021\]</span>.</p>
+<span class="citation">[<a href="references.html#ref-zhang2019" role="doc-biblioref">212</a>]</span></p>
+<p>How to move the transition from bench to hospital <span class="citation">[<a href="references.html#ref-collij2021" role="doc-biblioref">213</a>]</span>.</p>
 <!--# From @collij2021 add references/adapt-->
 <p>New technologies like “organ-on-chip” or more specifically “gut-on-chip” will be of great help in identifying causality by introducing the gut microbiota in this system and then study the interaction of the gut microbiota and the intestinal epithelium.</p>
 <div id="designing-models" class="section level4">
@@ -188,7 +200,7 @@ Depending on the goals of the research one or the other should be used.
 If we are more interested on the model of the relationships the inner AVE makes more sense.</p>
 <p>Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
 Another option is to use an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately.
-Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4 package">MCIA</a> <span class="citation">[<a href="references.html#ref-mengMultivariateApproachIntegration2014" role="doc-biblioref">210</a>]</span>.
+Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4 package">MCIA</a> <span class="citation">[<a href="references.html#ref-mengMultivariateApproachIntegration2014" role="doc-biblioref">214</a>]</span>.
 Which was compared by looking at the area under the curve for classifying the samples according to their location.</p>
 <p>Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn’s disease.
 In this article we didn’t look in depth to the biological relevance of the microorganisms an genes found.</p>
@@ -196,11 +208,27 @@ In this article we didn’t look in depth to the biological relevance of the mic
 <p>The procedural method of searching a model and testing them is implemented on <a href="https://llrs.github.io/inteRmodel/" title="inteRmodel">inteRmodel</a>.
 But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling.</p>
 </div>
+<div id="other" class="section level3">
+<h3><span class="header-section-number">6.0.1</span> Other</h3>
+<p>Quality of RNAseq analysis and 16S sequencing is important.
+Avoid contamination, same primers and read lengths (if using Illumina machines).</p>
+<p>Some batch effects are avoidable due to the experDesign package.
+This might help to improve the quality of the datasets and to expand previously sequenced datasets.</p>
+</div>
 <div id="relevance-for-other-research" class="section level2">
 <h2><span class="header-section-number">6.1</span> Relevance for other research</h2>
 <p>It is hard to provide more information that can be later used by researchers on the wet lab.</p>
 <p>There is a disconnect between the computational side and the experimental side, driven by the difficulty to think an experiment to test the new information that multi-omic experiments provide.</p>
-
+<p>Many combinations possible that are hard to explore, further research on how to reduce the space of possible combinations of bacteria or evaluate which combinations are more important might be useful on the future.
+As this might help focus on the most promising bacteria.</p>
+</div>
+<div id="implications-of-research" class="section level2">
+<h2><span class="header-section-number">6.2</span> Implications of research</h2>
+<p>Translational research?
+How to apply this results ?</p>
+<p>Sequence just the ASV on patients to classify them on disease might be an option that would require further clinical validation.</p>
+<p>Selecting which genes are related to the microorganisms is will require also further validation (for which I didn’t have the creativity to think of).</p>
+<p>The several environmental factors highly affect the disease, so analysis or comparisons without taking into account them might provide misleading or false results.</p>
 </div>
 </div>
             </section>
@@ -209,7 +237,7 @@ But the most important thing is to consider which variables are independent of w
         </div>
       </div>
 <a href="biological-relevance-of-results.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="conclusions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="conclusion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

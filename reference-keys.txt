@@ -61,7 +61,10 @@ shared-selected-variables
 discussion
 designing-models
 evaluating-models
+other
 relevance-for-other-research
+implications-of-research
+conclusion
 conclusions
 acknowledgements
 online-resources
