@@ -1,10 +1,11 @@
 # Materials and methods
 
-Some sections of this chapter has been adapted to the thesis from "Multi-Omic Modelling of Inflammatory Bowel Disease with Regularized Canonical Correlation Analysis" [@revilla2021] or other publications of the research group.
+Some sections of this chapter has been adapted from "Multi-Omic Modelling of Inflammatory Bowel Disease with Regularized Canonical Correlation Analysis" [@revilla2021] or other publications of the research group.
 
 This chapter explains the methods used to collect and analyze data from the multiple cohorts analyzed.
-The actual code used can be found on the links of the [apendix](#software "Link to the software appendix").
-Samples for the different cohorts collected on the Hospital Clinic were collected similarly, differences are described below together with a brief description of the different datasets.
+The actual code used can be found on the links of the [appendix](#software "Link to the software appendix").
+Samples for the different cohorts collected on the Hospital Clínic were collected similarly, differences are described below together with a brief description of the main characteristics of the different datasets.
+The processing protocol followed for those dataset that were not generated at Hosptial Clínic can be found on their respective reference.
 
 ## Datasets
 
@@ -222,17 +223,15 @@ Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) follow
 Purification of amplicons was performed by using the AMPure XP system (Beckmann).
 Next, sequencing was performed with pooled samples in paired-end modus (PE275) using an MiSeq system (Illumina, Inc.) according to the manufacturer's instructions and 25% (v/v) PhiX standard library.
 
-On the BARCELONA dataset the data was processed using 16S-V3V4 primers
+<!--# Macrogen: 341f/785r not used/contaminated --->
 
-(Macrogen: 341f/785r) pair 341f/806r on a MiSeq Nano sequencing bcl2fastq (v1.8.4).
+On the BARCELONA dataset the data was processed using 16S-V3V4 primers pair 341f/806r on a MiSeq Nano sequencing bcl2fastq (v1.8.4).
+The sequence of the primers used was:
 
-341f: 5'-CCTACGGGAGGCAGCAG-3'
-
-515f: 5'-GTGCCAGCMGCCGCGGTAA (test amplification michigan)
-
+341f: 5'-CCTACGGGAGGCAGCAG-3'\
 806r: 5'-GGACTACHVHHHTWTCTAAT-3'
 
-806r: 5'-GGACTACHVGGGTWTCTAAT-3' (test amplification michigan)
+<!--# Michigan not used diversity weird on controls vs disease samples-->
 
 ### Microbial profiling
 
@@ -248,11 +247,13 @@ The resulting OTUs table was normalized using edgeR (Version 3.28) [@mccarthy201
 
 For all the other datasets [dada2](https://bioconductor.org/packages/dada2) [@callahan2016] was used to analyze microbiome data.
 It creates amplicon sequencing variants from the 16S sequencing data, without merging similar sequences at any threshold.
-Together with Qiime2 [@bolyen2019] it is an alternative to OTUs which allows to be able to compare results between studies and provides more resolution.
+Together with Qiime2 [@bolyen2019] it is an alternative to OTUs which allows to be able to compare results between studies because it doesn't summarize together any sequence and provides more resolution to differences on the fragment amplified.
 
 ## Statistics
 
-A false discovery rate (FDR) correction for multiple testing was performed when necessary following the method of Benjamini, Hochberg and Yekutieli.
+Comparisons between different conditions of samples of the datasets were done following the limma-voom method \[@ritchie2015; @law2014\] after being transformed via the edgeR package \[@mccarthy2012\] following the workflow described on [@law2018].
+
+A false discovery rate (FDR) correction for multiple testing was performed when necessary following the method of Benjamini and Hochberg [@yoavbenjamini].
 FDR values below 0.05 were considered significant.
 If there weren't multiple comparisons the alpha level of 0.05 was used to determine if a test was significant.
 

@@ -1,5 +1,19 @@
 # Discussion
 
+In this chapter we will summarise the main findings in relation to the broad research community and other work as well as the impact of the results to improve further research in the future or be used on clinical environments.
+
+If we had to summarise all the work in one sentence we would say that...
+
+Many work focus on finding some genes or bacteria to answer a question they have in mind.
+On the thesis the focus was more on finding a good representation of the disease that allowed me to identify genes and bacteria that were relevant to our questions.
+
+There are many methods for integration developed, each with their shortcomings and strengths.
+There are frequent new tools and methods released, and the most up to date list of tools is a [collaborative list](https://github.com/mikelove/awesome-multi-omics "Awesome multi-omics list").
+
+With the increase of tools there have been more pressure on comparing different tools.
+There have been already some articles comparing the different tools, which the previous mentioned list also has.
+There are reviews of different tools on the same datasets [@cantini2020], some are more theoretical, others are focused on a field.
+
 WGCNA didn't work.
 
 adonis worked to identify which variables were important.
@@ -13,7 +27,7 @@ RGCCA some improvements.
 Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing.
 [@zhang2019]
 
-How to move the transition from bench to hospital \[@collij2021\].
+How to move the transition from bench to hospital [@collij2021].
 
 <!--# From @collij2021 add references/adapt-->
 
@@ -47,8 +61,36 @@ The procedure of separating independent variables in their own block of data and
 The procedural method of searching a model and testing them is implemented on [inteRmodel](https://llrs.github.io/inteRmodel/ "inteRmodel").
 But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling.
 
+### Other 
+
+Quality of RNAseq analysis and 16S sequencing is important.
+Avoid contamination, same primers and read lengths (if using Illumina machines).
+
+Some batch effects are avoidable due to the experDesign package.
+This might help to improve the quality of the datasets and to expand previously sequenced datasets.
+
 ## Relevance for other research
 
 It is hard to provide more information that can be later used by researchers on the wet lab.
 
 There is a disconnect between the computational side and the experimental side, driven by the difficulty to think an experiment to test the new information that multi-omic experiments provide.
+
+Many combinations possible that are hard to explore, further research on how to reduce the space of possible combinations of bacteria or evaluate which combinations are more important might be useful on the future.
+As this might help focus on the most promising bacteria.
+
+## Implications of research
+
+Translational research?
+How to apply this results ?
+
+Sequence just the ASV on patients to classify them on disease might be an option that would require further clinical validation.
+
+Selecting which genes are related to the microorganisms is will require also further validation (for which I didn't have the creativity to think of).
+
+The several environmental factors highly affect the disease, so analysis or comparisons without taking into account them might provide misleading or false results.
+
+# Conclusion
+
+Microbiome under some dataset can classify the patients according to their disease.
+Doing so reliable might take some time.
+It is hard to make it generalizable.
