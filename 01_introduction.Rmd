@@ -283,7 +283,7 @@ Among the scores most used are the following:
 
 -   IBDQ: A 32 questionnaire used to assess the quality of life grouped into four categories: bowel, systemic, social and emotional [@irvine1999].
 
--   Montreal classification allows for early onset of disease to be categorized separately those with age of diagnosis at 16 years or younger, diagnosis at 17--40 years and >40 years, respectively [@satsangi2006].
+-   Montreal classification allows for early onset of disease to be categorized separately those with age of diagnosis at 16 years or younger, diagnosis at 17--40 years and \>40 years, respectively [@satsangi2006].
 
 Other measured parameters include, weight, effective weight, calprotectin, Proteinc C reactive (PCR), hemoglobine.
 

@@ -1,11 +1,10 @@
 # Acknowledgements
 
-
 Juanjo
 
 Pau + grup
 
-Nuria, Elena, Helena, Aida. 
+Nuria, Elena, Helena, Aida.
 
 Metges: Julià, Helena...
 
@@ -15,8 +14,8 @@ Azu
 
 Familia
 
-Twitter \#rStats and other people on Bioconductor (support.bioconductor.org) Biostars, [Bioinformatics SE](https://bioinformatics.stackexchange.com/) 
+Twitter #rStats and other people on Bioconductor (support.bioconductor.org) Biostars, [Bioinformatics SE](https://bioinformatics.stackexchange.com/)
 
 <!--# Helena, Elena, Nuria, Carolina-->
 
-Dr. Häsler for kindly providing metadata from their cohort and Dr. Cristian Hernández for thier collaboration and selfless sharing the samples of their cohort. 
+Dr. Häsler for kindly providing metadata from their cohort and Dr. Cristian Hernández for thier collaboration and selfless sharing the samples of their cohort.
