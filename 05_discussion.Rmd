@@ -33,6 +33,8 @@ How to move the transition from bench to hospital [@collij2021].
 
 New technologies like "organ-on-chip" or more specifically "gut-on-chip" will be of great help in identifying causality by introducing the gut microbiota in this system and then study the interaction of the gut microbiota and the intestinal epithelium.
 
+BaseSet didn't work out, too many combinations and problem with numeric precision of multiplying \> 1000 float numbers.
+
 #### Designing models
 
 The model of the generalized canonical correlation is highly dependent of the blocks present.
@@ -61,7 +63,7 @@ The procedure of separating independent variables in their own block of data and
 The procedural method of searching a model and testing them is implemented on [inteRmodel](https://llrs.github.io/inteRmodel/ "inteRmodel").
 But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling.
 
-### Other 
+### Other
 
 Quality of RNAseq analysis and 16S sequencing is important.
 Avoid contamination, same primers and read lengths (if using Illumina machines).
