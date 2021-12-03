@@ -247,7 +247,7 @@ The resulting OTUs table was normalized using edgeR (Version 3.28) [@mccarthy201
 
 For all the other datasets [dada2](https://bioconductor.org/packages/dada2) [@callahan2016] was used to analyze microbiome data.
 It creates amplicon sequencing variants from the 16S sequencing data, without merging similar sequences at any threshold.
-Together with Qiime2 [@bolyen2019] it is an alternative to OTUs which allows to be able to compare results between studies because it doesn't summarize together any sequence and provides more resolution to differences on the fragment amplified.
+It is an alternative to OTUs which allows to be able to compare results between studies because it doesn't summarize together any sequence and provides more resolution to differences on the fragment amplified.
 
 ## Statistics
 
@@ -258,65 +258,65 @@ FDR values below 0.05 were considered significant.
 If there weren't multiple comparisons the alpha level of 0.05 was used to determine if a test was significant.
 
 Besides correcting for multiple testing several methods were used on this thesis of different types.
-Functional enrichment related methods stand out from the other methods used.
+Functional enrichment related tests/methods stand out from the other methods used.
 
 ### Functional enrichment
 
 Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
 They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.
-Most of them are based on an over representation analysis, where a group of elements is tested whether they are present on other group.
-Usually it is performed with the fisher test or the hypergeometric test or the proportion test.
+Most of them are based on an over representation analysis (ORA), where a group of elements is tested whether they are present on other group.
+This can be done with [clusterProfiler](https://bioconductor.org/packages/clusterProfiler) which tests genes enrichment for functionality based on information on pathway databases [@wu2021].
+It uses several methods like fisher test to check the enrichment of features of a given group on the (background) list provided.
+The test is usually the fisher test or the hypergeometric test or the proportion test.
 
 <!--# cfr from Maria Vila thesis-->
 
 There are other methods that to test if some variables shows an unexpected importance according to a statistic like fold change or value gene set enrichment analysis was developed [@subramanian2005] .
-Gene Set Enrichment Analysis (GSEA) is a computational method originally developed to determine whether an a priori defined set of genes shows statistically significant and concordant differences between two biological states.
+Gene set enrichment analysis (GSEA) is a computational method originally developed to determine whether a priori defined set of genes shows statistically significant and concordant differences between two biological states.
 These methods check if a group of variables present in an ordered list is present in some skewed distribution and compare it against a random group of similar size or with the Kolmogorov--Smirnov test.
-
-[clusterProfiler](https://bioconductor.org/packages/clusterProfiler): test genes enrichment for functionality based on information on pathway databases [@wu2021] using the over representative analysis approach.
-It uses several methods like fisher test to check the enrichment of features of a given group on the list provided.
 
 For testing gene set enrichment analysis I used [fgsea](https://bioconductor.org/packages/fgsea) [@korotkevich2021] implementation for its speed and integration with other methods used on this thesis.
 Pathways of genes from the REACTOME database were tested on the weight of different models [@fabregat2016].
 
-[GSVA](https://bioconductor.org/packages/GSVA) is a method that summarize the variables' numerical value changing the space of $variable\text{ x }sample$ to $group\text{ x }sample$ [@hänzelmann2013].
+To estimate the expression of the pathways and compare their expression levels between conditions gene set variation analsyis as implemented on [GSVA](https://bioconductor.org/packages/GSVA) was used [@hänzelmann2013].
+It is a method that summarize the variables' numerical value changing the space of $variable\text{ x }sample$ to $group\text{ x }sample$ .
 This enables other methods to use this new space instead of the original variables.
-GSVA was used to estimate the expression of the pathways (again from the REACTOME database) and try to find the relationships between the pathways and the microbiome at different taxonomic levels.
+GSVA was used (again from the REACTOME database) and try to find the relationships between the pathways and the microbiome at different taxonomic levels.
 
 ### Other methods used
 
-[vegan](https://cran.r-project.org/package=vegan) package provides the adonis method used to test if microbiome data variance is due to other variables [@oksanen2020].
+The adonis method, provided by the [vegan](https://cran.r-project.org/package=vegan) package, was used to test if microbiome data variance is due to other variables [@oksanen2020].
 This allows to test if the variables are related to the variance of the data.
 This is particularly important on the microbiome data, which is highly variable.
 It was used to detect which variables were important to include in the models of the disease.
 
-[globaltest](https://bioconductor.org/packages/globaltest) is a package with methods for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
+I tested which variables, (sex, age, location, time since diagnostic) are important on the datasets with [globaltest](https://bioconductor.org/packages/globaltest).
+It is a package with methods for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
 It provides a general test statistic to test a hypothesis against a high dimensional dataset.
-It was used to test which variables, (sex, age, location, time since diagnostic) are important on the datasets.
 
 Microbiome diversity was measured using vegan and [phyloseq](https://bioconductor.org/packages/phyloseq) methods [@oksanen2020].
 $\alpha$-diversity is a measure of how much a given microbiome at a taxonomic level is present on a sample.
 Several measures exists, on the thesis I used the effective Simpson or Shannon diversity index to compare diversity between samples and conditions.
 $\beta$-diversity was calculated using the phyloseq package for exploratory analysis.
 
-We looked to see if using some co-expression measure between the microbiome and the RNAseq would help identify relationships.
+We wanted to see if using some co-expression measure between the microbiome and the RNAseq would help identify relationships.
 We used weighted gene co-expression network analysis as implemented on [WGCNA](https://cran.r-project.org/package=WGCNA) [@langfelder2008].
 
-Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two data sources, simple integration, two blocks [@meng2014].
-It was used as a baseline method to find relationships between microorganisms and genes from the package [omicade4](https://bioconductor.org/packages/omicade4).
+To find relationships between microorganisms and genes multiple co-inertia analysis, also known as MCIA, was used.
+It is a method to examine covariant gene expression patterns between two blocks \[@meng2014\] provided by the package [omicade4](https://bioconductor.org/packages/omicade4).
+It was used as a baseline method to compare the RGCCA integration.
 
-[STATegRa](https://bioconductor.org/packages/STATegRa), is a framework for integrating datasets with two data types using parametric and non-parametric methods [@planell2021].
-It was used to explore the datasets and see what do they had in common.
+To explore how much do different blocks of a dataset have in common [STATegRa](https://bioconductor.org/packages/STATegRa) was used [@planell2021].
+It is a framework for integrating datasets with two data types using parametric and non-parametric methods.
 
-[BaseSet](https://cran.r-project.org/package=BaseSet) is a package that I implements fuzzy set logic for easy calculation of probability to belong to a group.
+When evaluating a model using bootstrap, [BaseSet](https://cran.r-project.org/package=BaseSet) was developed and used to find which variables were really involved on the interaction and how likely were to be together.
+It is a package that uses fuzzy set logic for easy calculation of probability to belong to a group.
 It can be used to calculate the size of the sets given a probability of having each element on the sets.
-When evaluating a model using bootstrap, it was used to find which variables were really involved on the interaction and how likely were to be together.
 
-[experDesign](https://cran.r-project.org/package=experDesign) is a package that I implemented to help designing an experiment before sequencing the samples [@revillasancho2021].
-It also helps to quantify if a given experiment has batch effect due to the batches used to measure the values.
-It was used to avoid batch effect on the sequencing of the BARCELONA dataset.
+To avoid batch effect on the sequencing of the BARCELONA dataset [experDesign](https://cran.r-project.org/package=experDesign) was developed and used [@revillasancho2021].
+It helps to quantify if a given experiment has batch effect due to the batches used to measure the values.
 
-Regularized generalized canonical correlation analysis, [RGCCA](https://cran.r-project.org/package=RGCCA), has been the main method used on this thesis [@tenenhaus2017a].
+The main method used on this thesis has been regularized generalized canonical correlation analysis (RGCCA) as implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017a].
 It will be explained in detail on the next section.
 
 To estimate if the selected features (genes or microorganism) by RGCCA have some biological meaningful contribution I measured if they can classify features using the [pROC](https://cran.r-project.org/package=pROC) package, such as, which gastrointestinal segment are each sample from, or which type of disease does each patient have [@robin2011].
@@ -380,4 +380,4 @@ For each family of models we tested all possible models to find the best model o
 However, the dimension reduction methods, as well as, generalized canonical correlation analysis, can't identify causal relationships.
 Furthermore, there is no test to decide if a variable selected has some meaningful biological value.
 
-Models were further validated using a bootstrap approach to measure thier accuracy and likelihood on the data available.
+Models were further validated using a bootstrap approach to measure their accuracy and likelihood on the data available.
