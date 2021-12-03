@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2021-12-01" />
+<meta name="date" content="2021-12-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -545,73 +545,74 @@ The microbiome was visually inspected for batch effects in PCA; none were found.
 The resulting OTUs table was normalized using edgeR (Version 3.28) <span class="citation">[<a href="references.html#ref-mccarthy2012" role="doc-biblioref">112</a>]</span>.</p>
 <p>For all the other datasets <a href="https://bioconductor.org/packages/dada2">dada2</a> <span class="citation">[<a href="references.html#ref-callahan2016" role="doc-biblioref">186</a>]</span> was used to analyze microbiome data.
 It creates amplicon sequencing variants from the 16S sequencing data, without merging similar sequences at any threshold.
-Together with Qiime2 <span class="citation">[<a href="references.html#ref-bolyen2019" role="doc-biblioref">187</a>]</span> it is an alternative to OTUs which allows to be able to compare results between studies because it doesn’t summarize together any sequence and provides more resolution to differences on the fragment amplified.</p>
+It is an alternative to OTUs which allows to be able to compare results between studies because it doesn’t summarize together any sequence and provides more resolution to differences on the fragment amplified.</p>
 </div>
 </div>
 <div id="statistics" class="section level2">
 <h2><span class="header-section-number">3.3</span> Statistics</h2>
-<p>Comparisons between different conditions of samples of the datasets were done following the limma-voom method <span class="math display">\[@ritchie2015; @law2014\]</span> after being transformed via the edgeR package <span class="math display">\[@mccarthy2012\]</span> following the workflow described on <span class="citation">[<a href="references.html#ref-law2018" role="doc-biblioref">188</a>]</span>.</p>
-<p>A false discovery rate (FDR) correction for multiple testing was performed when necessary following the method of Benjamini and Hochberg <span class="citation">[<a href="references.html#ref-yoavbenjamini" role="doc-biblioref">189</a>]</span>.
+<p>Comparisons between different conditions of samples of the datasets were done following the limma-voom method <span class="math display">\[@ritchie2015; @law2014\]</span> after being transformed via the edgeR package <span class="math display">\[@mccarthy2012\]</span> following the workflow described on <span class="citation">[<a href="references.html#ref-law2018" role="doc-biblioref">187</a>]</span>.</p>
+<p>A false discovery rate (FDR) correction for multiple testing was performed when necessary following the method of Benjamini and Hochberg <span class="citation">[<a href="references.html#ref-yoavbenjamini" role="doc-biblioref">188</a>]</span>.
 FDR values below 0.05 were considered significant.
 If there weren’t multiple comparisons the alpha level of 0.05 was used to determine if a test was significant.</p>
 <p>Besides correcting for multiple testing several methods were used on this thesis of different types.
-Functional enrichment related methods stand out from the other methods used.</p>
+Functional enrichment related tests/methods stand out from the other methods used.</p>
 <div id="functional-enrichment" class="section level3">
 <h3><span class="header-section-number">3.3.1</span> Functional enrichment</h3>
 <p>Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
 They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.
-Most of them are based on an over representation analysis, where a group of elements is tested whether they are present on other group.
-Usually it is performed with the fisher test or the hypergeometric test or the proportion test.</p>
+Most of them are based on an over representation analysis (ORA), where a group of elements is tested whether they are present on other group.
+This can be done with <a href="https://bioconductor.org/packages/clusterProfiler">clusterProfiler</a> which tests genes enrichment for functionality based on information on pathway databases <span class="citation">[<a href="references.html#ref-wu2021" role="doc-biblioref">189</a>]</span>.
+It uses several methods like fisher test to check the enrichment of features of a given group on the (background) list provided.
+The test is usually the fisher test or the hypergeometric test or the proportion test.</p>
 <!--# cfr from Maria Vila thesis-->
 <p>There are other methods that to test if some variables shows an unexpected importance according to a statistic like fold change or value gene set enrichment analysis was developed <span class="citation">[<a href="references.html#ref-subramanian2005" role="doc-biblioref">190</a>]</span> .
-Gene Set Enrichment Analysis (GSEA) is a computational method originally developed to determine whether an a priori defined set of genes shows statistically significant and concordant differences between two biological states.
+Gene set enrichment analysis (GSEA) is a computational method originally developed to determine whether a priori defined set of genes shows statistically significant and concordant differences between two biological states.
 These methods check if a group of variables present in an ordered list is present in some skewed distribution and compare it against a random group of similar size or with the Kolmogorov–Smirnov test.</p>
-<p><a href="https://bioconductor.org/packages/clusterProfiler">clusterProfiler</a>: test genes enrichment for functionality based on information on pathway databases <span class="citation">[<a href="references.html#ref-wu2021" role="doc-biblioref">191</a>]</span> using the over representative analysis approach.
-It uses several methods like fisher test to check the enrichment of features of a given group on the list provided.</p>
-<p>For testing gene set enrichment analysis I used <a href="https://bioconductor.org/packages/fgsea">fgsea</a> <span class="citation">[<a href="references.html#ref-korotkevich2021" role="doc-biblioref">192</a>]</span> implementation for its speed and integration with other methods used on this thesis.
-Pathways of genes from the REACTOME database were tested on the weight of different models <span class="citation">[<a href="references.html#ref-fabregat2016" role="doc-biblioref">193</a>]</span>.</p>
-<p><a href="https://bioconductor.org/packages/GSVA">GSVA</a> is a method that summarize the variables’ numerical value changing the space of <span class="math inline">\(variable\text{ x }sample\)</span> to <span class="math inline">\(group\text{ x }sample\)</span> <span class="citation">[<a href="references.html#ref-hänzelmann2013" role="doc-biblioref">194</a>]</span>.
+<p>For testing gene set enrichment analysis I used <a href="https://bioconductor.org/packages/fgsea">fgsea</a> <span class="citation">[<a href="references.html#ref-korotkevich2021" role="doc-biblioref">191</a>]</span> implementation for its speed and integration with other methods used on this thesis.
+Pathways of genes from the REACTOME database were tested on the weight of different models <span class="citation">[<a href="references.html#ref-fabregat2016" role="doc-biblioref">192</a>]</span>.</p>
+<p>To estimate the expression of the pathways and compare their expression levels between conditions gene set variation analsyis as implemented on <a href="https://bioconductor.org/packages/GSVA">GSVA</a> was used <span class="citation">[<a href="references.html#ref-hänzelmann2013" role="doc-biblioref">193</a>]</span>.
+It is a method that summarize the variables’ numerical value changing the space of <span class="math inline">\(variable\text{ x }sample\)</span> to <span class="math inline">\(group\text{ x }sample\)</span> .
 This enables other methods to use this new space instead of the original variables.
-GSVA was used to estimate the expression of the pathways (again from the REACTOME database) and try to find the relationships between the pathways and the microbiome at different taxonomic levels.</p>
+GSVA was used (again from the REACTOME database) and try to find the relationships between the pathways and the microbiome at different taxonomic levels.</p>
 </div>
 <div id="other-methods-used" class="section level3">
 <h3><span class="header-section-number">3.3.2</span> Other methods used</h3>
-<p><a href="https://cran.r-project.org/package=vegan">vegan</a> package provides the adonis method used to test if microbiome data variance is due to other variables <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">195</a>]</span>.
+<p>The adonis method, provided by the <a href="https://cran.r-project.org/package=vegan">vegan</a> package, was used to test if microbiome data variance is due to other variables <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">194</a>]</span>.
 This allows to test if the variables are related to the variance of the data.
 This is particularly important on the microbiome data, which is highly variable.
 It was used to detect which variables were important to include in the models of the disease.</p>
-<p><a href="https://bioconductor.org/packages/globaltest">globaltest</a> is a package with methods for testing complex hypothesis and help decide if the variables were influencing <span class="citation">[<a href="references.html#ref-goeman2006" role="doc-biblioref">196</a>]</span>.
-It provides a general test statistic to test a hypothesis against a high dimensional dataset.
-It was used to test which variables, (sex, age, location, time since diagnostic) are important on the datasets.</p>
-<p>Microbiome diversity was measured using vegan and <a href="https://bioconductor.org/packages/phyloseq">phyloseq</a> methods <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">195</a>]</span>.
+<p>I tested which variables, (sex, age, location, time since diagnostic) are important on the datasets with <a href="https://bioconductor.org/packages/globaltest">globaltest</a>.
+It is a package with methods for testing complex hypothesis and help decide if the variables were influencing <span class="citation">[<a href="references.html#ref-goeman2006" role="doc-biblioref">195</a>]</span>.
+It provides a general test statistic to test a hypothesis against a high dimensional dataset.</p>
+<p>Microbiome diversity was measured using vegan and <a href="https://bioconductor.org/packages/phyloseq">phyloseq</a> methods <span class="citation">[<a href="references.html#ref-oksanen2020" role="doc-biblioref">194</a>]</span>.
 <span class="math inline">\(\alpha\)</span>-diversity is a measure of how much a given microbiome at a taxonomic level is present on a sample.
 Several measures exists, on the thesis I used the effective Simpson or Shannon diversity index to compare diversity between samples and conditions.
 <span class="math inline">\(\beta\)</span>-diversity was calculated using the phyloseq package for exploratory analysis.</p>
-<p>We looked to see if using some co-expression measure between the microbiome and the RNAseq would help identify relationships.
-We used weighted gene co-expression network analysis as implemented on <a href="https://cran.r-project.org/package=WGCNA">WGCNA</a> <span class="citation">[<a href="references.html#ref-langfelder2008" role="doc-biblioref">197</a>]</span>.</p>
-<p>Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two data sources, simple integration, two blocks <span class="citation">[<a href="references.html#ref-meng2014" role="doc-biblioref">198</a>]</span>.
-It was used as a baseline method to find relationships between microorganisms and genes from the package <a href="https://bioconductor.org/packages/omicade4">omicade4</a>.</p>
-<p><a href="https://bioconductor.org/packages/STATegRa">STATegRa</a>, is a framework for integrating datasets with two data types using parametric and non-parametric methods <span class="citation">[<a href="references.html#ref-planell2021" role="doc-biblioref">199</a>]</span>.
-It was used to explore the datasets and see what do they had in common.</p>
-<p><a href="https://cran.r-project.org/package=BaseSet">BaseSet</a> is a package that I implements fuzzy set logic for easy calculation of probability to belong to a group.
-It can be used to calculate the size of the sets given a probability of having each element on the sets.
-When evaluating a model using bootstrap, it was used to find which variables were really involved on the interaction and how likely were to be together.</p>
-<p><a href="https://cran.r-project.org/package=experDesign">experDesign</a> is a package that I implemented to help designing an experiment before sequencing the samples <span class="citation">[<a href="references.html#ref-revillasancho2021" role="doc-biblioref">200</a>]</span>.
-It also helps to quantify if a given experiment has batch effect due to the batches used to measure the values.
-It was used to avoid batch effect on the sequencing of the BARCELONA dataset.</p>
-<p>Regularized generalized canonical correlation analysis, <a href="https://cran.r-project.org/package=RGCCA">RGCCA</a>, has been the main method used on this thesis <span class="citation">[<a href="references.html#ref-tenenhaus2017a" role="doc-biblioref">201</a>]</span>.
+<p>We wanted to see if using some co-expression measure between the microbiome and the RNAseq would help identify relationships.
+We used weighted gene co-expression network analysis as implemented on <a href="https://cran.r-project.org/package=WGCNA">WGCNA</a> <span class="citation">[<a href="references.html#ref-langfelder2008" role="doc-biblioref">196</a>]</span>.</p>
+<p>To find relationships between microorganisms and genes multiple co-inertia analysis, also known as MCIA, was used.
+It is a method to examine covariant gene expression patterns between two blocks <span class="math display">\[@meng2014\]</span> provided by the package <a href="https://bioconductor.org/packages/omicade4">omicade4</a>.
+It was used as a baseline method to compare the RGCCA integration.</p>
+<p>To explore how much do different blocks of a dataset have in common <a href="https://bioconductor.org/packages/STATegRa">STATegRa</a> was used <span class="citation">[<a href="references.html#ref-planell2021" role="doc-biblioref">197</a>]</span>.
+It is a framework for integrating datasets with two data types using parametric and non-parametric methods.</p>
+<p>When evaluating a model using bootstrap, <a href="https://cran.r-project.org/package=BaseSet">BaseSet</a> was developed and used to find which variables were really involved on the interaction and how likely were to be together.
+It is a package that uses fuzzy set logic for easy calculation of probability to belong to a group.
+It can be used to calculate the size of the sets given a probability of having each element on the sets.</p>
+<p>To avoid batch effect on the sequencing of the BARCELONA dataset <a href="https://cran.r-project.org/package=experDesign">experDesign</a> was developed and used <span class="citation">[<a href="references.html#ref-revillasancho2021" role="doc-biblioref">198</a>]</span>.
+It helps to quantify if a given experiment has batch effect due to the batches used to measure the values.</p>
+<p>The main method used on this thesis has been regularized generalized canonical correlation analysis (RGCCA) as implemented on the homonymous package <a href="https://cran.r-project.org/package=RGCCA">RGCCA</a> <span class="citation">[<a href="references.html#ref-tenenhaus2017a" role="doc-biblioref">199</a>]</span>.
 It will be explained in detail on the next section.</p>
-<p>To estimate if the selected features (genes or microorganism) by RGCCA have some biological meaningful contribution I measured if they can classify features using the <a href="https://cran.r-project.org/package=pROC">pROC</a> package, such as, which gastrointestinal segment are each sample from, or which type of disease does each patient have <span class="citation">[<a href="references.html#ref-robin2011" role="doc-biblioref">202</a>]</span>.
+<p>To estimate if the selected features (genes or microorganism) by RGCCA have some biological meaningful contribution I measured if they can classify features using the <a href="https://cran.r-project.org/package=pROC">pROC</a> package, such as, which gastrointestinal segment are each sample from, or which type of disease does each patient have <span class="citation">[<a href="references.html#ref-robin2011" role="doc-biblioref">200</a>]</span>.
 The area under the curve (AUC) of specificity and sensitivity measurements, also known as receiver operating characteristic ROC, was compared between several values accounting for different genes and microorganisms.</p>
 </div>
 </div>
 <div id="regularized-generalized-canonical-correlation-analysis" class="section level2">
 <h2><span class="header-section-number">3.4</span> Regularized generalized canonical correlation analysis</h2>
 <p>The canonical correlation is a method that uses data from the same sample but from different datasets.
-The regularized generalized canonical correlation analysis is an extension to the canonical correlation analysis <span class="citation">[<a href="references.html#ref-jordan1875" role="doc-biblioref">203</a>, <a href="references.html#ref-hotelling1936" role="doc-biblioref">204</a>]</span> which includes a regularization step to select which are the variables more relevant.</p>
+The regularized generalized canonical correlation analysis is an extension to the canonical correlation analysis <span class="citation">[<a href="references.html#ref-jordan1875" role="doc-biblioref">201</a>, <a href="references.html#ref-hotelling1936" role="doc-biblioref">202</a>]</span> which includes a regularization step to select which are the variables more relevant.</p>
 <div id="description" class="section level3">
 <h3><span class="header-section-number">3.4.1</span> Description</h3>
-<p>Over several years of progress on the field of canonical correlations <span class="citation">[<a href="references.html#ref-tenenhaus_regularized_2011" role="doc-biblioref">82</a>, <a href="references.html#ref-tenenhaus_variable_2014" role="doc-biblioref">83</a>, <a href="references.html#ref-tenenhaus_component-based_2008" role="doc-biblioref">205</a>–<a href="references.html#ref-gloaguen2020" role="doc-biblioref">209</a>]</span> RGCCA is a robust method with a fast and usable implementation <span class="citation">[<span class="citeproc-not-found" data-reference-id="R-RGCCA"><strong>???</strong></span>]</span>.</p>
+<p>Over several years of progress on the field of canonical correlations <span class="citation">[<a href="references.html#ref-tenenhaus_regularized_2011" role="doc-biblioref">82</a>, <a href="references.html#ref-tenenhaus_variable_2014" role="doc-biblioref">83</a>, <a href="references.html#ref-tenenhaus_component-based_2008" role="doc-biblioref">203</a>–<a href="references.html#ref-gloaguen2020" role="doc-biblioref">207</a>]</span> RGCCA is a robust method with a fast and usable implementation <span class="citation">[<span class="citeproc-not-found" data-reference-id="R-RGCCA"><strong>???</strong></span>]</span>.</p>
 <p>The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples ( <span class="math inline">\(p \gg n\)</span>).
 It needs to have a complete case with no missing values (at the time of writing this thesis there is a new development version not released on CRAN<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> yet that replaces any missing value by a 0) and time is not considered as a special variable.
 Data should be from the same samples and it is not specific to a certain technology or method used to obtain the data.</p>
@@ -625,7 +626,7 @@ The interpretation of the RGCCA results is complex and require expertise and fam
 While <span class="math inline">\(g\)</span> is a function that can take the form of <span class="math inline">\(x\)</span>, also known as Horst method, <span class="math inline">\(\Vert x \Vert\)</span> known as centroid method, <span class="math inline">\(x^2\)</span> known as factorial method, or any user-supplied function.
 The smaller the <span class="math inline">\(s_j\)</span>, the larger the degree of sparsity for <span class="math inline">\(a_j\)</span>.
 As <span class="math inline">\(s_j\)</span> is closer to 0, more features are selected as it looks to optimize covariance, while if it is closer to 1 less features are selected and it resembles the correlation.
-The values of <span class="math inline">\(s_j\)</span> were estimated using <span class="citation">[<a href="references.html#ref-schäfer2005" role="doc-biblioref">210</a>]</span> when the block was from 16S data or RNaseq, otherwise 1 was used.</p>
+The values of <span class="math inline">\(s_j\)</span> were estimated using <span class="citation">[<a href="references.html#ref-schäfer2005" role="doc-biblioref">208</a>]</span> when the block was from 16S data or RNaseq, otherwise 1 was used.</p>
 <p>To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE): it returns an AVE score for each block, an AVE score which measures how each variable correlates with their block component, an AVE score of the inner model, which measures how each dimension accounts for the variance.
 The higher the score is to 1 the better does it work.</p>
 <p>To model what might be the relationships between the datasets current practices include using a pre-selected model of relations between blocks.
@@ -648,7 +649,7 @@ These models are from the family 2.</p>
 <p>For each family of models we tested all possible models to find the best model on each datasets.
 However, the dimension reduction methods, as well as, generalized canonical correlation analysis, can’t identify causal relationships.
 Furthermore, there is no test to decide if a variable selected has some meaningful biological value.</p>
-<p>Models were further validated using a bootstrap approach to measure thier accuracy and likelihood on the data available.</p>
+<p>Models were further validated using a bootstrap approach to measure their accuracy and likelihood on the data available.</p>
 
 </div>
 </div>
