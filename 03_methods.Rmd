@@ -87,7 +87,7 @@ The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen
 All patients with an established diagnosis of inflammatory bowel disease, including Crohn's disease, ulcerative colitis, IBD unclassified, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 46 weeks a biopsy from an ileocolonoscopy.
 Patients that were referred to the Hospital Clínic de Barcelona IBD unit, who had already started treatment with a biologic agent in another center, were also included adapting to the corresponding time-schedule of their treatment.
 In all patients, starting anti-TNF treatment will be decided before the protocol entry decision according to medical clinical practice.
-The protocol was approved by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7956).
+The protocol was approved by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7845 and HCB/2012/7956).
 
 | Characteristic                          | BARCELONA  |
 |-----------------------------------------|------------|
@@ -231,14 +231,12 @@ The sequence of the primers used was:
 341f: 5'-CCTACGGGAGGCAGCAG-3'\
 806r: 5'-GGACTACHVHHHTWTCTAAT-3'
 
-<!--# Michigan not used diversity weird on controls vs disease samples-->
-
 ### Microbial profiling
 
 For the HSCT dataset the processing of raw-reads was performed by using the [IMNGS](https://www.imngs.org/ "IMNGS website") (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the [UPARSE](https://www.drive5.com/uparse/ "UPARSE website") approach [@edgar2013a].
 Sequences were demultiplexed, trimmed to the first base with a quality score \<3 and then paired.
 Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error \>3 were excluded from the analysis.
-Trimming of the remaining reads was done by trimming 5 nucleotides from each end to avoid GC bias and non-random base composition.
+The 5 nucleotides from each end of the remaining reads were trimmed to avoid GC bias and non-random base composition .
 Operational taxonomic units (OTUs) were clustered at 97% sequence similarity.
 Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project.
 Later the data was normalized using the same method as for RNA-seq described above.
@@ -251,13 +249,13 @@ It is an alternative to OTUs which allows to be able to compare results between 
 
 ## Statistics
 
-Comparisons between different conditions of samples of the datasets were done following the limma-voom method \[@ritchie2015; @law2014\] after being transformed via the edgeR package \[@mccarthy2012\] following the workflow described on [@law2018].
+Comparisons between different conditions of samples of the datasets were calculated following the limma-voom method [@ritchie2015; @law2014] after being transformed via the edgeR package [@mccarthy2012] following the workflow described on [@law2018].
 
 A false discovery rate (FDR) correction for multiple testing was performed when necessary following the method of Benjamini and Hochberg [@yoavbenjamini].
-FDR values below 0.05 were considered significant.
+FDR values below an alpha level 0.05 were considered significant.
 If there weren't multiple comparisons the alpha level of 0.05 was used to determine if a test was significant.
 
-Besides correcting for multiple testing several methods were used on this thesis of different types.
+Besides correcting for multiple testing, several different methods were used on this thesis which will be described below.
 Functional enrichment related tests/methods stand out from the other methods used.
 
 ### Functional enrichment
@@ -266,8 +264,8 @@ Functional enrichment methods are those methods that aim to provide with more in
 They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.
 Most of them are based on an over representation analysis (ORA), where a group of elements is tested whether they are present on other group.
 This can be done with [clusterProfiler](https://bioconductor.org/packages/clusterProfiler) which tests genes enrichment for functionality based on information on pathway databases [@wu2021].
-It uses several methods like fisher test to check the enrichment of features of a given group on the (background) list provided.
-The test is usually the fisher test or the hypergeometric test or the proportion test.
+It checks the enrichment of features of a given group on the (background) list provided.
+The test used is usually the fisher test, the hypergeometric test or the proportion test.
 
 <!--# cfr from Maria Vila thesis-->
 
@@ -276,7 +274,7 @@ Gene set enrichment analysis (GSEA) is a computational method originally develop
 These methods check if a group of variables present in an ordered list is present in some skewed distribution and compare it against a random group of similar size or with the Kolmogorov--Smirnov test.
 
 For testing gene set enrichment analysis I used [fgsea](https://bioconductor.org/packages/fgsea) [@korotkevich2021] implementation for its speed and integration with other methods used on this thesis.
-Pathways of genes from the REACTOME database were tested on the weight of different models [@fabregat2016].
+Pathways of genes from the REACTOME database were tested on the weight of different models or on the comparisons performed [@fabregat2016].
 
 To estimate the expression of the pathways and compare their expression levels between conditions gene set variation analsyis as implemented on [GSVA](https://bioconductor.org/packages/GSVA) was used [@hänzelmann2013].
 It is a method that summarize the variables' numerical value changing the space of $variable\text{ x }sample$ to $group\text{ x }sample$ .
@@ -350,7 +348,7 @@ Being $X_j$ the values for sample $j$, the weights of the variables of said samp
 While $g$ is a function that can take the form of $x$, also known as Horst method, $\Vert x \Vert$ known as centroid method, $x^2$ known as factorial method, or any user-supplied function.
 The smaller the $s_j$, the larger the degree of sparsity for $a_j$.
 As $s_j$ is closer to 0, more features are selected as it looks to optimize covariance, while if it is closer to 1 less features are selected and it resembles the correlation.
-The values of $s_j$ were estimated using [@schäfer2005] when the block was from 16S data or RNaseq, otherwise 1 was used.
+The values of $s_j$ were estimated using [@schäfer2005] when the block was from 16S data or RNaseq, otherwise 1 was used and always using the centroid method
 
 To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE): it returns an AVE score for each block, an AVE score which measures how each variable correlates with their block component, an AVE score of the inner model, which measures how each dimension accounts for the variance.
 The higher the score is to 1 the better does it work.

@@ -41,6 +41,10 @@ Partly due to the multiple variables already identified that have been linked to
 The relationship between host and microbiome has been proposed to play a fundamental role to maintain the disease.
 For instance, some Proteobacteria which have adherent and invasive properties might exploit host defenses and drive proinflammatory change, altering the intestinal microbiota in favor of dysbiosis [@mukhopadhya2012].
 
+The epithelium is often damaged and might present ulcers or other inflammation symptoms.
+A segment of the gastrointestinal tract might recover if the patient receives treatment or due the natural cycles of the disease.
+But once a segment is affected by the disease it can be considered as involved, as some damage remains even if the tissues is no longer inflammed.
+
 ### Etiology and pathogenesis
 
 Several explanations have been proposed as the origin of the disease [@zhang2014; @hugot2004].
@@ -205,7 +209,7 @@ Another indicator of CD is an increase of calprotectin in fecal samples [@sands2
 
 ### Crohn's disease physiology
 
-As previously introduced, Crohn's disease is a chronic inflammatory disorder characterized by alternating periods of remission and clinical relapse it is frequently associated with extraintestinal manifestation and/or concomitant immuno-mediated diseases.
+As previously introduced, Crohn's disease is a chronic inflammatory disorder characterized by a discontinuous inflammation of the gastrointestinal tract and it is frequently associated with extraintestinal manifestation and/or concomitant immuno-mediated diseases.
 Inflammation on the gastrointestinal tract is transmural and can affect from the mouth to the anus, but mainly it manifests on the ileum and colon [@demattos2015a].
 
 #### Clinical presentation
