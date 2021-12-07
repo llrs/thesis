@@ -1,6 +1,19 @@
 # Results
 
+experDesign worked well and no batch effect were created when sequencing samples.
+Unfortunately, a problem with the 16S of the cohort rendered that useless.
+
+RGCCA with inteRmodel method identify better models than other methods (MCIA).
+
+Model 2.2 is best on cohort X, Y, Z.
+
 # Biological relevance of results
+
+Transciptome is related to localizaion of the samples.
+
+Microbiome is more related to the disease and other variables of the patients.
+
+Time is an important variable when modelling the disease, if multiple timepoints are taken they should be taken into account to identify the state of the disease for each patient.
 
 ## Comparing different dataset
 
