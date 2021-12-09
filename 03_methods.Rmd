@@ -22,21 +22,21 @@ In addition, this dataset contained information on age, localization of the tumo
 
 : Table about Morgan's dataset
 
-### CD/UC dataset
+### Häsler's dataset
 
 An IBD-related dataset was obtained from Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler.
 It included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy controls [@häsler2017].
 The provided data included location, gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.
 
-| Characteristic                 | Häsler |
-|--------------------------------|--------|
-| Samples (non-disease/diseased) | 33/26  |
-| Sex (female/male)              | 42/17  |
-| Location (ileum/colon)         | 30/29  |
+| Characteristic                 | Häsler's |
+|--------------------------------|----------|
+| Samples (non-disease/diseased) | 33/26    |
+| Sex (female/male)              | 42/17    |
+| Location (ileum/colon)         | 30/29    |
 
 : Table of Häsler's dataset
 
-### Pouchitis dataset
+### Lagkouvardos' dataset
 
 A previously published dataset from a pouchitis study was also analyzed [@lagkouvardos2015].
 A total of 255 samples from 203 patients were used containing data for both host transcriptome and microbiome.
