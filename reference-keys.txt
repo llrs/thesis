@@ -37,8 +37,8 @@ objectives
 materials-and-methods
 datasets
 glioma-dataset
-cduc-dataset
-pouchitis-dataset
+häslers-dataset
+lagkouvardos-dataset
 hsct-dataset
 barcelona-dataset
 howells-dataset
