@@ -7,7 +7,6 @@ knitr::write_bib(c('bookdown', 'knitr', 'rmarkdown', 'htmlwidgets',  'DT',
 ```
 
 ::: {#refs}
-
 :::
 
 # (APPENDIX) Appendix {.unnumbered}
@@ -57,9 +56,9 @@ All code of the analysis of the publications is available (in his messed state a
 -   [sgcca_hyperparameters](https://github.com/llrs/sgcca_hyperparameters): Explore the effects of the hyperparameters on RGCCA on the provided dataset.
 -   [inteRmodel](https://github.com/llrs/inteRmodel): Package for easy repeating the methodology developed on TRIM.
 -   [pouchitis](https://github.com/llrs/pouchitis): Work with the pouchitis cohort used in this article.
+-   [uncoupling](https://github.com/llrs/Uncoupling): Work with the UC/CD dataset used in this article.
 -   [integration](https://github.com/llrs/integration-helper): Package with functions that I wrote or used on different parts of exploring the TRIM dataset ended up here.
-
 
 experDesign:
 
--  [experDesign](https://github.com/llrs/experDesign): Help design experiments in batches, [available on CRAN too](https://cran.r-project.org/package=experDesign).
+-   [experDesign](https://github.com/llrs/experDesign): Help design experiments in batches, [available on CRAN too](https://cran.r-project.org/package=experDesign).
