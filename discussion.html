@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2021-12-09" />
+<meta name="date" content="2021-12-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -103,7 +103,7 @@
 <li class="chapter" data-level="3.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#datasets"><i class="fa fa-check"></i><b>3.1</b> Datasets</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#glioma-dataset"><i class="fa fa-check"></i><b>3.1.1</b> Glioma dataset</a></li>
 <li class="chapter" data-level="3.1.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#häslers-dataset"><i class="fa fa-check"></i><b>3.1.2</b> Häsler’s dataset</a></li>
-<li class="chapter" data-level="3.1.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#lagkouvardos-dataset"><i class="fa fa-check"></i><b>3.1.3</b> Lagkouvardos’ dataset</a></li>
+<li class="chapter" data-level="3.1.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#morgans-dataset"><i class="fa fa-check"></i><b>3.1.3</b> Morgan’s dataset</a></li>
 <li class="chapter" data-level="3.1.4" data-path="materials-and-methods.html"><a href="materials-and-methods.html#hsct-dataset"><i class="fa fa-check"></i><b>3.1.4</b> HSCT dataset</a></li>
 <li class="chapter" data-level="3.1.5" data-path="materials-and-methods.html"><a href="materials-and-methods.html#barcelona-dataset"><i class="fa fa-check"></i><b>3.1.5</b> BARCELONA dataset</a></li>
 <li class="chapter" data-level="3.1.6" data-path="materials-and-methods.html"><a href="materials-and-methods.html#howells-dataset"><i class="fa fa-check"></i><b>3.1.6</b> Howell’s dataset</a></li>
@@ -174,15 +174,15 @@ On the thesis the focus was more on finding a good representation of the disease
 There are frequent new tools and methods released, and the most up to date list of tools is a <a href="https://github.com/mikelove/awesome-multi-omics" title="Awesome multi-omics list">collaborative list</a>.</p>
 <p>With the increase of tools there have been more pressure on comparing different tools.
 There have been already some articles comparing the different tools, which the previous mentioned list also has.
-There are reviews of different tools on the same datasets <span class="citation">[<a href="references.html#ref-cantini2020" role="doc-biblioref">211</a>]</span>, some are more theoretical, others are focused on a field.</p>
+There are reviews of different tools on the same datasets <span class="citation">[<a href="references.html#ref-cantini2020" role="doc-biblioref">212</a>]</span>, some are more theoretical, others are focused on a field.</p>
 <p>WGCNA didn’t work.</p>
 <p>adonis worked to identify which variables were important.</p>
 <p>MCIA works well as baseline.</p>
 <p>STATegRa not customizable the interaction between the datasets.</p>
 <p>RGCCA some improvements.</p>
 <p>Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing.
-<span class="citation">[<a href="references.html#ref-zhang2019" role="doc-biblioref">212</a>]</span></p>
-<p>How to move the transition from bench to hospital <span class="citation">[<a href="references.html#ref-collij2021" role="doc-biblioref">213</a>]</span>.</p>
+<span class="citation">[<a href="references.html#ref-zhang2019" role="doc-biblioref">213</a>]</span></p>
+<p>How to move the transition from bench to hospital <span class="citation">[<a href="references.html#ref-collij2021" role="doc-biblioref">214</a>]</span>.</p>
 <!--# From @collij2021 add references/adapt-->
 <p>New technologies like “organ-on-chip” or more specifically “gut-on-chip” will be of great help in identifying causality by introducing the gut microbiota in this system and then study the interaction of the gut microbiota and the intestinal epithelium.</p>
 <p>BaseSet didn’t work out, too many combinations and problem with numeric precision of multiplying &gt; 1000 float numbers.</p>
@@ -201,7 +201,7 @@ Depending on the goals of the research one or the other should be used.
 If we are more interested on the model of the relationships the inner AVE makes more sense.</p>
 <p>Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
 Another option is to use an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately.
-Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4 package">MCIA</a> <span class="citation">[<a href="references.html#ref-mengMultivariateApproachIntegration2014" role="doc-biblioref">214</a>]</span>.
+Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4 package">MCIA</a> <span class="citation">[<a href="references.html#ref-mengMultivariateApproachIntegration2014" role="doc-biblioref">215</a>]</span>.
 Which was compared by looking at the area under the curve for classifying the samples according to their location.</p>
 <p>Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn’s disease.
 In this article we didn’t look in depth to the biological relevance of the microorganisms an genes found.</p>
