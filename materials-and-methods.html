@@ -625,7 +625,8 @@ The interpretation of the RGCCA results is complex and require expertise and fam
 While <span class="math inline">\(g\)</span> is a function that can take the form of <span class="math inline">\(x\)</span>, also known as Horst method, <span class="math inline">\(\Vert x \Vert\)</span> known as centroid method, <span class="math inline">\(x^2\)</span> known as factorial method, or any user-supplied function.
 The smaller the <span class="math inline">\(s_j\)</span>, the larger the degree of sparsity for <span class="math inline">\(a_j\)</span>.
 As <span class="math inline">\(s_j\)</span> is closer to 0, more features are selected as it looks to optimize covariance, while if it is closer to 1 less features are selected and it resembles the correlation.
-The values of <span class="math inline">\(s_j\)</span> were estimated using <span class="citation">[<a href="references.html#ref-schäfer2005" role="doc-biblioref">211</a>]</span> when the block was from 16S data or RNaseq, otherwise 1 was used and always using the centroid method</p>
+The values of <span class="math inline">\(s_j\)</span> were estimated using <span class="citation">[<a href="references.html#ref-schäfer2005" role="doc-biblioref">211</a>]</span> when the block was from 16S data or RNaseq, otherwise 1 was used and always using the centroid method.</p>
+<!--# TODO: regularization going on here? -->
 <p>To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE): it returns an AVE score for each block, an AVE score which measures how each variable correlates with their block component, an AVE score of the inner model, which measures how each dimension accounts for the variance.
 The higher the score is to 1 the better does it work.</p>
 <p>To model what might be the relationships between the datasets current practices include using a pre-selected model of relations between blocks.
