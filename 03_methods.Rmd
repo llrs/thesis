@@ -348,7 +348,9 @@ Being $X_j$ the values for sample $j$, the weights of the variables of said samp
 While $g$ is a function that can take the form of $x$, also known as Horst method, $\Vert x \Vert$ known as centroid method, $x^2$ known as factorial method, or any user-supplied function.
 The smaller the $s_j$, the larger the degree of sparsity for $a_j$.
 As $s_j$ is closer to 0, more features are selected as it looks to optimize covariance, while if it is closer to 1 less features are selected and it resembles the correlation.
-The values of $s_j$ were estimated using [@schäfer2005] when the block was from 16S data or RNaseq, otherwise 1 was used and always using the centroid method
+The values of $s_j$ were estimated using [@schäfer2005] when the block was from 16S data or RNaseq, otherwise 1 was used and always using the centroid method.
+
+<!--# TODO: regularization going on here? -->
 
 To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE): it returns an AVE score for each block, an AVE score which measures how each variable correlates with their block component, an AVE score of the inner model, which measures how each dimension accounts for the variance.
 The higher the score is to 1 the better does it work.
