@@ -36,20 +36,20 @@ The provided data included location, gender, location, age, and the status (infl
 
 : Table of Häsler's dataset
 
-### Lagkouvardos' dataset
+### Morgan's dataset
 
-A previously published dataset from a pouchitis study was also analyzed [@lagkouvardos2015].
+A previously published dataset from a pouchitis study was also analyzed [@morgan2015b].
 A total of 255 samples from 203 patients were used containing data for both host transcriptome and microbiome.
 This dataset included identifiers for the patients, whether the sample was from the pre-pouch ileum (PPI) or from the pouch, the sex, the outcome of the procedure and an inflammatory severity score ISCORE.
 The pouch ileum might be inflamed or not.
 
-| Characteristic                | Lagkouvardos' |
-|-------------------------------|---------------|
-| Samples                       | 255           |
-| Sex individuals (female/male) | 101/102       |
-| Location (Pouch/PPI)          | 59/196        |
+| Characteristic                | Morgan's |
+|-------------------------------|----------|
+| Samples                       | 255      |
+| Sex individuals (female/male) | 101/102  |
+| Location (Pouch/PPI)          | 59/196   |
 
-: Table of Lagkouvardos' dataset
+: Table of Morgan's dataset
 
 ### HSCT dataset
 
