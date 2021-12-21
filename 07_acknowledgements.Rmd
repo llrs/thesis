@@ -18,4 +18,4 @@ Twitter #rStats and other people on Bioconductor (support.bioconductor.org) Bios
 
 <!--# Helena, Elena, Nuria, Carolina-->
 
-Dr. Häsler for kindly providing metadata from their cohort and Dr. Cristian Hernández for thier collaboration and selfless sharing the samples of their cohort.
+Dr. Häsler for kindly providing metadata from their cohort and Dr. Cristian Hernández for their collaboration and selfless sharing the samples of their cohort.
