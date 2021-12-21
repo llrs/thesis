@@ -64,10 +64,9 @@ evaluating-models
 other
 relevance-for-other-research
 implications-of-research
-conclusion
 conclusions
 acknowledgements
 online-resources
 software
 listed
-by-publication
+by-project
