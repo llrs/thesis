@@ -90,9 +90,3 @@ Sequence just the ASV on patients to classify them on disease might be an option
 Selecting which genes are related to the microorganisms is will require also further validation (for which I didn't have the creativity to think of).
 
 The several environmental factors highly affect the disease, so analysis or comparisons without taking into account them might provide misleading or false results.
-
-# Conclusion
-
-Microbiome under some dataset can classify the patients according to their disease.
-Doing so reliable might take some time.
-It is hard to make it generalizable.

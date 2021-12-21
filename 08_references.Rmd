@@ -1,0 +1,10 @@
+# References {.unnumbered}
+
+```{r include=FALSE}
+knitr::write_bib(c('bookdown', 'knitr', 'rmarkdown', 'htmlwidgets',  'DT',
+  'miniUI', 'servr', 'citr', "RGCCA"
+), 'packages.bib')
+```
+
+::: {#refs}
+:::

@@ -1,30 +1,19 @@
-# References {.unnumbered}
-
-```{r include=FALSE}
-knitr::write_bib(c('bookdown', 'knitr', 'rmarkdown', 'htmlwidgets',  'DT',
-  'miniUI', 'servr', 'citr', "RGCCA"
-), 'packages.bib')
-```
-
-::: {#refs}
-:::
-
 # (APPENDIX) Appendix {.unnumbered}
 
-# Online resources
+## Online resources
 
 Some links that I found useful on the thesis and could be useful if you are interested on the multi-omics field.
 
 -   [Awesome multi-omics](https://github.com/mikelove/awesome-multi-omics): An online repository of references to multi-omics methods.
 -   [Bookdown](https://github.com/rstudio/bookdown/): The book about how to write this type of books.
 
-# Software
+## Software
 
 Along the years of this thesis several pieces of software have been generated as well as packages.
 Here they are listed for easier retrieval.
 They are listed on two ways, one with a brief explanation and another one ordered by what software piece is used on each analysis.
 
-## Listed
+### Listed
 
 An improved/tested version of [RGCCA](https://github.com/llrs/RGCCA), some modifications on the internal functions to ease the maintenance as well as adding tests and sometimes improving the documentation.
 Also modified so that it is possible to provide a vector of models so that the model of the first dimension is not the same as the model on the second dimension (not sure if mathematically speaking makes sense but from a biological one I think it might be interesting to have it).
@@ -46,19 +35,23 @@ However, due to the long times of calculation that it would require it was not u
 
 To analyze the antiTNF cohort (also named BARCELONA) a [different repository](https://github.com/llrs/Barcelona "Barcelona repository") was created to analyze the data using the previously developed packages.
 
-## By publication
+### By project
 
 All code of the analysis of the publications is available (in his messed state and complicated history) and a brief description as to why they were used:
 
 [Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367):
 
--   [TRIM](https://github.com/llrs/TRIM): Mangle with the sample, dataset, explore several methods...
--   [sgcca_hyperparameters](https://github.com/llrs/sgcca_hyperparameters): Explore the effects of the hyperparameters on RGCCA on the provided dataset.
--   [inteRmodel](https://github.com/llrs/inteRmodel): Package for easy repeating the methodology developed on TRIM.
--   [pouchitis](https://github.com/llrs/pouchitis): Work with the pouchitis cohort used in this article.
--   [uncoupling](https://github.com/llrs/Uncoupling): Work with the UC/CD dataset used in this article.
--   [integration](https://github.com/llrs/integration-helper): Package with functions that I wrote or used on different parts of exploring the TRIM dataset ended up here.
+-   [TRIM](https://github.com/llrs/TRIM "HSCT dataset exploration code on github"): Mangle with the sample, dataset, explore several methods...
+-   [sgcca_hyperparameters](https://github.com/llrs/sgcca_hyperparameters "RGCCA exploration code on github"): Explore the effects of the hyperparameters on RGCCA on the provided dataset.
+-   [inteRmodel](https://github.com/llrs/inteRmodel "Integration package on github" ): Package for easy repeating the methodology developed on TRIM.
+-   [pouchitis](https://github.com/llrs/pouchitis "Pouchitis code on github"): Work with the pouchitis cohort used in this article.
+-   [uncoupling](https://github.com/llrs/Uncoupling "Uncoupling code on github"): Work with the UC/CD dataset used in this article.
+-   [integration](https://github.com/llrs/integration-helper "Integration package on github"): Package with functions that I wrote or used on different parts of exploring the TRIM dataset ended up here.
+
+BaseSet:
+
+-   [BaseSet](https://cran.r-project.org/package=BaseSet "BaseSet landing page on CRAN"): Fuzzy logic implementation, available on [rOpenSci too](https://github.com/ropensci/BaseSet "BaseSet git repository")
 
 experDesign:
 
--   [experDesign](https://github.com/llrs/experDesign): Help design experiments in batches, [available on CRAN too](https://cran.r-project.org/package=experDesign).
+-   [experDesign](https://github.com/llrs/experDesign "Git repository"): Help design experiments in batches, [available on CRAN too](https://cran.r-project.org/package=experDesign "experDesign landing page on CRAN").

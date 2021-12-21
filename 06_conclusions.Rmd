@@ -1,2 +1,6 @@
 # Conclusions
 
+Microbiome under some dataset can classify the patients according to their disease.
+Doing so reliable might take some time.
+It is hard to make it generalizable.
+
