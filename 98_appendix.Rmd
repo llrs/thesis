@@ -1,4 +1,4 @@
-# (APPENDIX) Appendix {.unnumbered}
+# Appendix {.unnumbered}
 
 ## Online resources
 
@@ -6,6 +6,9 @@ Some links that I found useful on the thesis and could be useful if you are inte
 
 -   [Awesome multi-omics](https://github.com/mikelove/awesome-multi-omics): An online repository of references to multi-omics methods.
 -   [Bookdown](https://github.com/rstudio/bookdown/): The book about how to write this type of books.
+-   [Bioconductor](https://bioconducto.org "Bioconductor"): The project about bioinformatics on R mostly related to sequencing technologies.
+-   [CRAN](https://cran.r-project.org "CRAN"): The main archive of R extensions/packages for R.
+-   [GitHub](https://github.com "GitHub"): Company which allows to freely host remote [git](https://git-scm.com/ "git") repositories of many projects, including some used or developed on this thesis.
 
 ## Software
 
@@ -43,7 +46,7 @@ All code of the analysis of the publications is available (in his messed state a
 
 -   [TRIM](https://github.com/llrs/TRIM "HSCT dataset exploration code on github"): Mangle with the sample, dataset, explore several methods...
 -   [sgcca_hyperparameters](https://github.com/llrs/sgcca_hyperparameters "RGCCA exploration code on github"): Explore the effects of the hyperparameters on RGCCA on the provided dataset.
--   [inteRmodel](https://github.com/llrs/inteRmodel "Integration package on github" ): Package for easy repeating the methodology developed on TRIM.
+-   [inteRmodel](https://github.com/llrs/inteRmodel "Integration package on github"): Package for easy repeating the methodology developed on TRIM.
 -   [pouchitis](https://github.com/llrs/pouchitis "Pouchitis code on github"): Work with the pouchitis cohort used in this article.
 -   [uncoupling](https://github.com/llrs/Uncoupling "Uncoupling code on github"): Work with the UC/CD dataset used in this article.
 -   [integration](https://github.com/llrs/integration-helper "Integration package on github"): Package with functions that I wrote or used on different parts of exploring the TRIM dataset ended up here.
