@@ -29,13 +29,22 @@ bookdown::pdf_book:
   latex_engine: lualatex # pdflatex #
   citation_package: default # pandoc-citeproc
   template: null
-  toc_depth: 3
-  toc_unnumbered: yes
+  toc: yes
+  toc_collapse: false
   toc_appendix: yes
+  toc_unnumbered: yes
+  toc_depth: 3
+  lof: yes
   quote_footer: ["\\VA{", "}{}"]
   pandoc_args: [ "--csl", "bmc_bioinformatics.csl", "--top-level-division", "chapter"]
 bookdown::epub_book: default
 bookdown::word_document2:
   pandoc_args: [ "--csl", "bmc_bioinformatics.csl", "--top-level-division", "chapter"]
   fig_caption: true
+  toc: yes
+  toc_collapse: false
+  toc_appendix: yes
+  toc_unnumbered: yes
+  toc_depth: 3
+  lof: yes
   output_dir: draft_phd
