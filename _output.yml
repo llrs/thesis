@@ -23,6 +23,7 @@ bookdown::gitbook:
       facebook: no
       twitter:
         href: https://twitter.com/intent/tweet?text=Nice%20read%20of%20%40Lluis_Revilla%20thesis
+bookdown::epub_book: default
 bookdown::pdf_book:
   base_format: bookdown::pdf_document2
   keep_tex: no
@@ -35,8 +36,6 @@ bookdown::pdf_book:
   toc_appendix: yes
   toc_unnumbered: yes
   toc_depth: 3
-  quote_footer: ["\\VA{", "}{}"]
-bookdown::epub_book: default
 bookdown::word_document2:
   fig_caption: true
   link-citations: yes
