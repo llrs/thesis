@@ -2,16 +2,22 @@
 title: "Data integration on inflammatory bowel disease"
 author: "Lluís Revilla Sancho"
 date: "`r Sys.Date()`"
-description: |
-    Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship.
 documentclass: book
-github-repo: llrs/thesis
-link-citations: yes
+knit: "bookdown::render_book"
 site: bookdown::bookdown_site
+# csl: bmc_bioinformatics.csl
+cover-image: images/R_logo_science.png
+link-citations: true
+split_by: chapter
+twitter-handle: Lluis_Revilla
+colorlinks: yes
+lot: yes
+lof: yes
 bibliography:
 - references.bib
 - packages.bib
-twitter-handle: Lluis_Revilla
+description: |
+  Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship.
 ---
 
 # Preface {.unnumbered}
@@ -32,12 +38,18 @@ The thesis is under the [doctoral programme in biomedicine](http://www.ub.edu/do
 My thesis directors' were [Juanjo Lozano](https://orcid.org/0000-0001-7613-3908 "Juanjo's ORCID") and [Azucena Sala](https://orcid.org/0000-0003-4572-2907 "Azu's ORCID"), my boss, who helped as bioinformatician and disease expert respectively.
 They provided advice and guidance on how to analyse the data and where to focus on the different experiments/analysis. 
 
+This thesis is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by-sa/4.0/ "License summary link").
+
 # Abstract {.unnumbered}
 
-Introduction. IBD is complex.
-Simple methods are not robust.
-Compared methods, our robust and consistent.
-Biological relevance, difficult.
-Chips or further tests.
+**Introduction** IBD is complex.
+
+**Methods**:Simple methods are not robust.
+
+**Results** Compared methods, our robust and consistent.
+
+**Discussion** Biological relevance, difficult.
+
+**Conclusion** Chips or further tests.
 
 

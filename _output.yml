@@ -3,14 +3,14 @@ bookdown::gitbook:
   includes:
     before_body: wip.html
   dev: svglite
-  split_by: chapter
   citation_package: none
-  pandoc_args: [ "--csl", "bmc_bioinformatics.csl" ]
+  link-citations: yes
   config:
-    toc_float: true
     toc:
       collapse: false
+      toc_float: true
       toc_appendix: yes
+      toc_depth: 3
       scroll_highlight: yes
       before: |
         <li><strong><a href="./">Data integration on IBD</a></strong></li>
@@ -24,23 +24,23 @@ bookdown::gitbook:
       twitter:
         href: https://twitter.com/intent/tweet?text=Nice%20read%20of%20%40Lluis_Revilla%20thesis
 bookdown::pdf_book:
+  base_format: bookdown::pdf_document2
   keep_tex: no
   dev: "cairo_pdf"
   latex_engine: lualatex # pdflatex #
+  link-citations: yes
   citation_package: default # pandoc-citeproc
   template: null
   toc: yes
-  toc_collapse: false
   toc_appendix: yes
   toc_unnumbered: yes
   toc_depth: 3
-  lof: yes
   quote_footer: ["\\VA{", "}{}"]
-  pandoc_args: [ "--csl", "bmc_bioinformatics.csl", "--top-level-division", "chapter"]
-bookdown::epub_book: default
+bookdown::epub_book:
+  link-citations: yes
 bookdown::word_document2:
-  pandoc_args: [ "--csl", "bmc_bioinformatics.csl", "--top-level-division", "chapter"]
   fig_caption: true
+  link-citations: yes
   toc: yes
   toc_collapse: false
   toc_appendix: yes
