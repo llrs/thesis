@@ -36,8 +36,7 @@ bookdown::pdf_book:
   toc_unnumbered: yes
   toc_depth: 3
   quote_footer: ["\\VA{", "}{}"]
-bookdown::epub_book:
-  link-citations: yes
+bookdown::epub_book: default
 bookdown::word_document2:
   fig_caption: true
   link-citations: yes
