@@ -1,17 +1,18 @@
 # Materials and methods
 
-Some sections of this chapter has been adapted from "Multi-Omic Modelling of Inflammatory Bowel Disease with Regularized Canonical Correlation Analysis" [@revilla2021] or other publications of the research group.
-
 This chapter explains the methods used to collect and analyze data from the multiple cohorts analyzed.
 The actual code used can be found on the links of the [appendix](#software "Link to the software appendix").
-Samples for the different cohorts collected on the Hospital Clínic were collected similarly, differences are described below together with a brief description of the main characteristics of the different datasets.
-The processing protocol followed for those dataset that were not generated at Hosptial Clínic can be found on their respective reference.
+
+Some sections of this chapter has been adapted from "Multi-Omic Modelling of Inflammatory Bowel Disease with Regularized Canonical Correlation Analysis" [@revilla2021] or other publications of the research group.
+
+Samples of the different cohorts collected on the Hospital Clínic were collected similarly, differences are described below together with a brief description of the main characteristics of the different datasets.
+The processing protocol followed for those dataset that were not generated at Hosptial Clínic can be found on their respective reference and briefly summarized here.
 
 ## Datasets
 
 ### Glioma dataset
 
-The glioma dataset came from diffuse intrinsic pontine glioma patients that included the host transcriptome analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F, patients copy number variation processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using Mutation Surveyor software.
+The glioma dataset came from diffuse intrinsic pontine glioma patients that included the host transcriptome analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F, patients copy number variation was processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using [Mutation Surveyor software](https://www.softgenetics.com/mutationSurveyor.php "Website of the software").
 In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor [@morgan2015a].
 
 | Characteristic            | Morgan's |
@@ -24,7 +25,7 @@ In addition, this dataset contained information on age, localization of the tumo
 
 ### Häsler's dataset
 
-An IBD-related dataset was obtained from Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler.
+An IBD-related dataset was obtained by Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler.
 It included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy controls [@häsler2017].
 The provided data included location, gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.
 
@@ -38,9 +39,9 @@ The provided data included location, gender, location, age, and the status (infl
 
 ### Morgan's dataset
 
-A previously published dataset from a pouchitis study was also analyzed [@morgan2015b].
-A total of 255 samples from 203 patients were used containing data for both host transcriptome and microbiome.
-This dataset included identifiers for the patients, whether the sample was from the pre-pouch ileum (PPI) or from the pouch, the sex, the outcome of the procedure and an inflammatory severity score ISCORE.
+A previously published dataset from a pouchitis study was analyzed [@morgan2015b].
+The dataset has a total of 255 samples from 203 patients, containing data for both host transcriptome and intestinal microbiome.
+This dataset included anonymous identifiers for the patients, whether the sample was from the pre-pouch ileum (PPI) or from the pouch, the sex, the outcome of the procedure and an inflammatory severity score ISCORE.
 The pouch ileum might be inflamed or not.
 
 | Characteristic                | Morgan's |
@@ -58,12 +59,13 @@ The pouch ileum might be inflamed or not.
 Samples from the HSCT dataset used in this thesis were from a cohort of patients with severe refractory CD undergoing hematopoietic stem cell transplant.
 Patients were treated in the Department of Gastroenterology (Hospital Clínic de Barcelona --Spain--).
 The protocol was approved by the Catalan Transplantation Organization and by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7244).
-All patients provided written consent following extensive counselling.
-Colonic and ileal biopsies were obtained at several time points during ileo-colonoscopy.
-Patients were followed-up for 4 years and biopsies were collected every six or twelve months after HSCT.
+All patients provided written consent following extensive counselling about being included on the study and using their data on publications.
+
+Colonic and ileal biopsies were obtained at several time points during ileo-colonoscopy, at inclusion and every six or twelve months after HSCT until 4 years after the start of the treatment.
 Samples were obtained whenever possible from both uninvolved and involved areas.
 In addition, biopsies were taken from the ileum and colon regions of 19 non-IBD controls consisting of individuals with no history of IBD and who presented no significant pathological findings following endoscopic examination for colon cancer surveillance (Hospital Univesitari Mútua de Terrassa--Spain--).
 The protocol was approved by the Institutional Ethics Committee of the Hospital Univesitari Mútua de Terrassa (Study Number NA1651).
+
 At least one biopsy was collected and fresh-frozen at -80°C for microbial DNA extraction.
 The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen, Hilde, Germany) and stored at -80°C until total RNA extraction.
 
@@ -85,9 +87,12 @@ The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen
 <!--# Adapted from the ethical committee submission-->
 
 All patients with an established diagnosis of inflammatory bowel disease, including Crohn's disease, ulcerative colitis, IBD unclassified, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 46 weeks a biopsy from an ileocolonoscopy.
+The protocol was approved by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7845 and HCB/2012/7956).
+
 Patients that were referred to the Hospital Clínic de Barcelona IBD unit, who had already started treatment with a biologic agent in another center, were also included adapting to the corresponding time-schedule of their treatment.
 In all patients, starting anti-TNF treatment will be decided before the protocol entry decision according to medical clinical practice.
-The protocol was approved by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7845 and HCB/2012/7956).
+
+Anonymized identification of the patients, disease, sex age at diagnostic, age at the moment of the sample taking, time since the start of the treatment and sample segment was collected.
 
 | Characteristic                          | BARCELONA  |
 |-----------------------------------------|------------|
@@ -107,7 +112,8 @@ The protocol was approved by the Institutional Ethics Committee of the Hospital 
 This dataset was downloaded after the publication of an article "DNA Methylation and Transcription Patterns in Intestinal Epithelial Cells From Pediatric Patients With Inflammatory Bowel Diseases Differentiate Disease Subtypes and Associate With Outcome" [@howell2018].
 
 From their dataset I used data from 77 samples that had both RNAseq and 16S data collected.
-There are 10 non-IBD samples, 11 with Crohn's disease and 11 with ulcerative colitis which have the following characteristics:
+There are 10 non-IBD samples, 11 with Crohn's disease and 11 with ulcerative colitis.
+Data has the following characteristics: disease, age at diagnostic, age at the moment of the study, sex, segment, and clinical history which have the following characteristics:
 
 | Characteristic                                  | Howell's  |
 |-------------------------------------------------|-----------|
@@ -144,7 +150,7 @@ This dataset was obtained after a collaboration "Integrative analysis of colonic
 
 Total RNA from mucosal samples (HSCT cohort) was isolated using the RNAeasy kit (Qiagen, Hilde, Germany).
 RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4000 platform.
-Later, [cutadapt](https://github.com/marcelm/cutadapt "cutadapt repository") (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the [STAR aligner](https://github.com/alexdobin/STAR "STAR repository") (2.5.2a) with Ensembl annotation (release GRCh38.10) [@dobin2013].
+Later, those samples with good enough quality as recommended by [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ "FastQC website") afterwards [cutadapt](https://github.com/marcelm/cutadapt "cutadapt repository") (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the [STAR aligner](https://github.com/alexdobin/STAR "STAR repository") (2.5.2a) with Ensembl annotation (release GRCh38.p10) [@dobin2013].
 
 <details>
 
@@ -200,9 +206,7 @@ Code used with RSEM
 
 </details>
 
-Data was normalized using the trimmed mean of M-values and log transformed into counts per millions using edgeR (version 3.28 or superior) [@mccarthy2012].
-
-### Microbial DNA extraction from mucosal samples
+### Microbial DNA sequencing
 
 Biopsies from the HSCT CD cohort were resuspended in 180 μl TET (TrisHCl 0.02M, EDTA 0.002M, Triton 1X) buffer and 20mg/ml lysozyme (Carl Roth, Quimivita, S.A.). Samples were incubated for 1h at 37°C and vortexed with 25 μl Proteinase K before incubating at 56°C for 3h.
 Buffer B3 (NucleoSpin Tissue Kit--Macherey-Nagel) was added followed by a heat treatment for 10 min at 70°C.
@@ -211,7 +215,7 @@ Two washing steps were performed before eluting DNA.
 Concentrations and purity were checked using NanoDrop One (Thermo Fisher Scientific).
 Samples were immediately used or placed at -20°C for long-term storage.
 
-### DNA sequencing
+#### DNA sequencing
 
 Library preparation and sequencing were performed at the Technische Universität München.
 Briefly, volumes of 600μL DNA stabilization solution (STRATEC biomedical) and 400μL Phenol:choloform:isoamyl alcohol (25:24:1, Sigma-Aldrich) were added to the aliquots.
@@ -231,17 +235,17 @@ The sequence of the primers used was:
 341f: 5'-CCTACGGGAGGCAGCAG-3'\
 806r: 5'-GGACTACHVHHHTWTCTAAT-3'
 
-### Microbial profiling
+#### Microbial profiling
 
 For the HSCT dataset the processing of raw-reads was performed by using the [IMNGS](https://www.imngs.org/ "IMNGS website") (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the [UPARSE](https://www.drive5.com/uparse/ "UPARSE website") approach [@edgar2013a].
 Sequences were demultiplexed, trimmed to the first base with a quality score \<3 and then paired.
 Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error \>3 were excluded from the analysis.
-The 5 nucleotides from each end of the remaining reads were trimmed to avoid GC bias and non-random base composition .
+The 5 nucleotides from each end of the remaining reads were trimmed to avoid GC bias and non-random base composition.
 Operational taxonomic units (OTUs) were clustered at 97% sequence similarity.
 Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project.
 Later the data was normalized using the same method as for RNA-seq described above.
 The microbiome was visually inspected for batch effects in PCA; none were found.
-The resulting OTUs table was normalized using edgeR (Version 3.28) [@mccarthy2012].
+The resulting OTUs table was normalized using edgeR (Version 3.28 or later) [@mccarthy2012].
 
 For all the other datasets [dada2](https://bioconductor.org/packages/dada2) [@callahan2016] was used to analyze microbiome data.
 It creates amplicon sequencing variants from the 16S sequencing data, without merging similar sequences at any threshold.
@@ -249,13 +253,13 @@ It is an alternative to OTUs which allows to be able to compare results between 
 
 ## Statistics
 
-Comparisons between different conditions of samples of the datasets were calculated following the limma-voom method [@ritchie2015; @law2014] after being transformed via the edgeR package [@mccarthy2012] following the workflow described on [@law2018].
+Differential expression analysis was performed with the following the limma-trend method \[@ritchie2015; @law2014\] and edgeR \[@mccarthy2012\] (Bioconductor version 3.10 or superior) packages, normalized using the trimmed mean of M-values and log-2 transformed into counts per millions following the workflow described on \[@law2018\] using voom which in addition performs a count normalization.
+The samples were adjusted for inter-patient differences specifying block argument for patient variable.
 
-A false discovery rate (FDR) correction for multiple testing was performed when necessary following the method of Benjamini and Hochberg [@yoavbenjamini].
-FDR values below an alpha level 0.05 were considered significant.
-If there weren't multiple comparisons the alpha level of 0.05 was used to determine if a test was significant.
+To correct for multiple testing, the false discovery rate was estimated using the method of Benjamini and Hochberg [@yoavbenjamini].
+A gene was considered differentially expressed when it was significant at 5% FDR special attention was given to those genes that showed a fold-change higher than \|1.5\|.
 
-Besides correcting for multiple testing, several different methods were used on this thesis which will be described below.
+Besides differential expression tests and correction for multiple testing, several different methods were used on this thesis which will be described below.
 Functional enrichment related tests/methods stand out from the other methods used.
 
 ### Functional enrichment
@@ -265,7 +269,59 @@ They can be very different in nature but they all use the numeric values of the 
 Most of them are based on an over representation analysis (ORA), where a group of elements is tested whether they are present on other group.
 This can be done with [clusterProfiler](https://bioconductor.org/packages/clusterProfiler) which tests genes enrichment for functionality based on information on pathway databases [@wu2021].
 It checks the enrichment of features of a given group on the (background) list provided.
-The test used is usually the fisher test, the hypergeometric test or the proportion test.
+The test used is usually the fisher test, the hypergeometric test, the proportion test.
+I describe the hypergeometric test and the wilcoxon test below.
+
+#### Hypergeometric test
+
+The hypergeometric distribution describes the probability of $k$ successes (when the object drawn has a specified feature) in $n$ draws[^methods-1], from a finite population of size $N$ that contains exactly $K$ objects with that feature, wherein each draw is either a success or a failure.
+
+[^methods-1]: without replacement
+
+Applied on this context $N$ is the number of genes being used and $n$ the number of genes on a pathway.
+So it can be used to compare the genes found on it ($k$) compared to the expected $K$ numbers of the distribution using the following equation:
+
+$$
+p_X(k) = \Pr(X = k) 
+= \frac{\binom{K}{k} \binom{N - K}{n-k}}{\binom{N}{n}}
+$$
+
+#### Wilcoxon test
+
+The Wilcoxon Rank Sum test called Mann-Whitney test on two sample data is the non-parametric version of the T-test when the interest is to test if both medians (M) are equal or not.
+
+$$
+\begin{equation} 
+\begin{cases} 
+  H_0 : M_x = M_y \\
+  H_1: M_x \neq M_y
+\end{cases}
+\end{equation} 
+$$
+
+Being the same samples $X = X_1 , …, X_m , Y = Y_1 , …, Y_n$ and if we want to test if $M_X = M_Y$ (M =median), we sort all the data and $j$ is the rank.
+
+$$
+T_X = \sum_{j=1}^{m+n}jI_j
+$$
+
+where
+
+$$
+I_j = \begin{cases}
+1 & \text{if observation with rank j comes from X} \\
+0 & \text{if observation with rank j comes from Y} \\
+\end{cases}
+$$
+
+The exact distribution of $T_x$ is tabulated for each value of $m$ and $n$.
+Furthermore, the asymptotic distribution of $T_X$ is normal with parameters:
+
+$$
+E(T_X) = \dfrac{m(m+n+1)}{2}, V(T_X)=\dfrac{mn(m+n+1)}{12}
+$$
+
+This test or similar are used by clusterProfiler as implemented in the function `wilcox.test` from the stats package in R.
 
 <!--# cfr from Maria Vila thesis-->
 
@@ -298,21 +354,73 @@ Several measures exists, on the thesis I used the effective Simpson or Shannon d
 $\beta$-diversity was calculated using the phyloseq package for exploratory analysis.
 
 We wanted to see if using some co-expression measure between the microbiome and the RNAseq would help identify relationships.
-We used weighted gene co-expression network analysis as implemented on [WGCNA](https://cran.r-project.org/package=WGCNA) [@langfelder2008].
+We used weighted gene co-expression network analysis as implemented on [WGCNA](https://cran.r-project.org/package=WGCNA) \[@langfelder2008\] and also correlations.
+The spearman rank correlation coefficient is
+
+Being $(X_1 , Y_1 ),\dots, (X_n , Y_n)$, assign a rank where $(R_1 , S_1 ), \dots , (R_n , S_n )$ for n being all the variables which:
+
+$$
+R_s(X,Y) = \dfrac{\sum_{i=1}^n (R_i - \bar{R}) (S_i - \bar{S} )}{\sqrt{\sum_{i=1}^n (R_i - \bar{R})^2}\sqrt{\sum_{i=1}^n (S_i - \bar{S})^2}}
+$$
+
+where $\bar{R}=\dfrac{1}{n}\sum_{i=1}^n R_i$ conversely to S: $\bar{S}=\dfrac{1}{n}\sum_{i=1}^n S_i$.
+The distribution of the Spearman correlation coefficient is symmetric around 0 and can be approximated to a normal distribution as $\sqrt{n-1}R_{s(X,Y)} \sim N(0,1)$ which can be used to calculate the p-value of a given estimation.
+
+#### MCIA
 
 To find relationships between microorganisms and genes multiple co-inertia analysis, also known as MCIA, was used.
 It is a method to examine covariant gene expression patterns between two blocks [@meng2014] provided by the package [omicade4](https://bioconductor.org/packages/omicade4).
+MCIA maximizes the following formula:
+
+$$
+\sum_{k=1}^K w_k{cov}^2 (X_kQ_ku_k, v)
+$$
+
+where $K$ is the total number of matrices, $X_k$ the transformed matrices and $Q_k$ is a square matrix with $r_{ij}$ in diagonal elements indicating the hyperspace of features metrics, $u_k$ are auxiliary axes, $v$ the reference structure and w the weights of the matrices.
+This can be used to obtain a dimension of $P_k^d=u_k^d(u_k^dQ_k{u_k^d}^T)^{-1}u_k^dQ_k$ given that for each dimension the residuals are obtained following $X_k^{d-1}=X_1^d-X_1^dP_1^{d-1}$ where $d$ are the dimensions needed.
+
 It was used as a baseline method to compare the RGCCA integration.
+
+#### STATegRa
 
 To explore how much do different blocks of a dataset have in common [STATegRa](https://bioconductor.org/packages/STATegRa) was used [@planell2021].
 It is a framework for integrating datasets with two data types using parametric and non-parametric methods.
+
+#### BaseSet
 
 When evaluating a model using bootstrap, [BaseSet](https://cran.r-project.org/package=BaseSet) was developed and used to find which variables were really involved on the interaction and how likely were to be together.
 It is a package that uses fuzzy set logic for easy calculation of probability to belong to a group.
 It can be used to calculate the size of the sets given a probability of having each element on the sets.
 
+#### experDesign
+
 To avoid batch effect on the sequencing of the BARCELONA dataset [experDesign](https://cran.r-project.org/package=experDesign) was developed and used [@revillasancho2021].
 It helps to quantify if a given experiment has batch effect due to the batches used to measure the values.
+
+On pseudocode the core of the program can be defined as:
+
+> for each index:
+>
+> for each batch
+>
+> pick size(batch) samples
+>
+> if samples are in another batch
+>
+> pick other samples
+>
+> for each batch
+>
+> calculate some summary statistics
+>
+> compare with the summary statistics of all the samples
+>
+> keep the index with less differences between the index and all the samples
+
+It can take into account spatial distribution provide which technical replicates[^methods-2] are best given the number of samples that fit on a batch.
+
+[^methods-2]: Thecnical replicates are samples that are measured multiple times to ensure the accuracy of the measurement.
+    In contrast biological replicates are sample with the same conditions but different individuals or process before the measurement.
 
 The main method used on this thesis has been regularized generalized canonical correlation analysis (RGCCA) as implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017a].
 It will be explained in detail on the next section.
@@ -330,10 +438,10 @@ The regularized generalized canonical correlation analysis is an extension to th
 Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020] RGCCA is a robust method with a fast and usable implementation [@R-RGCCA].
 
 The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples ( $p \gg n$).
-It needs to have a complete case with no missing values (at the time of writing this thesis there is a new development version not released on CRAN[^methods-1] yet that replaces any missing value by a 0) and time is not considered as a special variable.
+It needs to have a complete case with no missing values (at the time of writing this thesis there is a new development version not released on CRAN[^methods-3] yet that replaces any missing value by a 0) and time is not considered as a special variable.
 Data should be from the same samples and it is not specific to a certain technology or method used to obtain the data.
 
-[^methods-1]: CRAN is The Comprehensive R Archive Network available at <https://cran.r-project.org/>
+[^methods-3]: CRAN is The Comprehensive R Archive Network available at <https://cran.r-project.org/>
 
 It uses a dimensional reduction approach to relate the different data sets between them and produce specific factors for each dataset.
 The interpretation of the RGCCA results is complex and require expertise and familiarity with the technique used and is highly dependent on the model and options used.
