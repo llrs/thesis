@@ -150,7 +150,7 @@ This dataset was obtained after a collaboration "Integrative analysis of colonic
 
 Total RNA from mucosal samples (HSCT cohort) was isolated using the RNAeasy kit (Qiagen, Hilde, Germany).
 RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4000 platform.
-Later, those samples with good enough quality as recommended by [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ "FastQC website") afterwards [cutadapt](https://github.com/marcelm/cutadapt "cutadapt repository") (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the [STAR aligner](https://github.com/alexdobin/STAR "STAR repository") (2.5.2a) with Ensembl annotation (release GRCh38.p10) [@dobin2013].
+Later, those samples with good enough quality as recommended by [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ "FastQC website") afterwards [cutadapt](https://github.com/marcelm/cutadapt "cutadapt repository") (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the [STAR aligner](https://github.com/alexdobin/STAR "STAR repository") (2.5.2a) with Ensembl annotation ([release 26 of GENCODE](https://www.gencodegenes.org/human/release_26.html "GENCODE release 26"), GRCh38.p10 or superior) [@dobin2013].
 
 <details>
 
@@ -262,30 +262,6 @@ A gene was considered differentially expressed when it was significant at 5% FDR
 Besides differential expression tests and correction for multiple testing, several different methods were used on this thesis which will be described below.
 Functional enrichment related tests/methods stand out from the other methods used.
 
-### Functional enrichment
-
-Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
-They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.
-Most of them are based on an over representation analysis (ORA), where a group of elements is tested whether they are present on other group.
-This can be done with [clusterProfiler](https://bioconductor.org/packages/clusterProfiler) which tests genes enrichment for functionality based on information on pathway databases [@wu2021].
-It checks the enrichment of features of a given group on the (background) list provided.
-The test used is usually the fisher test, the hypergeometric test, the proportion test.
-I describe the hypergeometric test and the wilcoxon test below.
-
-#### Hypergeometric test
-
-The hypergeometric distribution describes the probability of $k$ successes (when the object drawn has a specified feature) in $n$ draws[^methods-1], from a finite population of size $N$ that contains exactly $K$ objects with that feature, wherein each draw is either a success or a failure.
-
-[^methods-1]: without replacement
-
-Applied on this context $N$ is the number of genes being used and $n$ the number of genes on a pathway.
-So it can be used to compare the genes found on it ($k$) compared to the expected $K$ numbers of the distribution using the following equation:
-
-$$
-p_X(k) = \Pr(X = k) 
-= \frac{\binom{K}{k} \binom{N - K}{n-k}}{\binom{N}{n}}
-$$
-
 #### Wilcoxon test
 
 The Wilcoxon Rank Sum test called Mann-Whitney test on two sample data is the non-parametric version of the T-test when the interest is to test if both medians (M) are equal or not.
@@ -321,40 +297,158 @@ $$
 E(T_X) = \dfrac{m(m+n+1)}{2}, V(T_X)=\dfrac{mn(m+n+1)}{12}
 $$
 
-This test or similar are used by clusterProfiler as implemented in the function `wilcox.test` from the stats package in R.
+This test is implemented in the function `wilcox.test` from the stats package in R.
+
+### Functional enrichment
+
+Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
+They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.
+Most of them are based on an over representation analysis (ORA), where a group of elements is tested whether they are present on other group.
+This can be done with [clusterProfiler](https://bioconductor.org/packages/clusterProfiler) which tests genes enrichment for functionality based on information on pathway databases [@wu2021].
+It checks the enrichment of features of a given group on the (background) list provided.
+
+$$
+\begin{cases}
+H_0 & : & P_{subset} \leq  P_{overall} \\
+H_1 & : & P_{subset} > P_{overall}
+\end{cases}
+$$
+
+The test used is usually the fisher test, the hypergeometric test, the proportion test.
+I describe the hypergeometric test and the wilcoxon test below.
+
+#### Hypergeometric test
+
+The hypergeometric distribution describes the probability of $k$ successes (when the object drawn has a specified feature) in $n$ draws[^methods-1], from a finite population of size $N$ that contains exactly $K$ objects with that feature, wherein each draw is either a success or a failure.
+
+[^methods-1]: without replacement
+
+Applied on this context $N$ is the number of genes being used and $n$ the number of genes on a pathway.
+So it can be used to compare the genes found on it ($k$) compared to the expected $K$ numbers of the distribution using the following equation:
+
+$$
+p_X(k) = \Pr(X = k) 
+= \frac{\binom{K}{k} \binom{N - K}{n-k}}{\binom{N}{n}}
+$$
+
+#### Proportion test
+
+The overrepresentation of a given group of elements can be also tested with the proportion test, which is sometimes also used on clusterProfiler.
+The proportion test uses the $\chi^2$ distribution to test if the observed frequency ($O_i$) is close to the expected frequency ($E_i$):
+
+$$
+\chi^2 = \sum_{i =1}^n \dfrac{(O_i - E_i)^2}{E_i}\simeq\chi_{n-p}^2
+$$
+
+As this is usually done on a 2x2 contingency table it is equivalent to the Z-test of proportion.
+Sometimes, the expected frequency is so low that a correction must be done to the estimation:
+
+$$
+\chi_{Yates}^2=\sum_{i =1}^n \dfrac{(|O_i - E_i|-0.5)^2}{E_i}
+$$
+
+This increases the $p$-value as it raises the Chi-square statistic.
 
 <!--# cfr from Maria Vila thesis-->
 
+#### Gene Set Enrichment Analysis
+
 There are other methods that to test if some variables shows an unexpected importance according to a statistic like fold change or value gene set enrichment analysis was developed [@subramanian2005] .
 Gene set enrichment analysis (GSEA) is a computational method originally developed to determine whether a priori defined set of genes shows statistically significant and concordant differences between two biological states.
-These methods check if a group of variables present in an ordered list is present in some skewed distribution and compare it against a random group of similar size or with the Kolmogorov--Smirnov test.
+These methods check if a group of variables present in an ordered list is present in some skewed distribution and compare it against a random group of similar size.
+
+$rank(g_j)=r_j$ where each $g$ is a gene.
+$p$ is a
+
+$$
+P_{hit}(S, i)=\sum_{g_j \in S, j \leq i}\dfrac{|r_j|^p}{N_R}\text{, where } N_R = \sum_{g_j \in S}|r_j|^p \\
+P_{miss}(S, i) = \sum_{g_j \not \in S, j \leq i}\dfrac{1}{N - N_H}
+$$
+
+The usual value used is the enrichment score (ES) defined as: $ES=max(|P_{hit}(S, i)-P_{miss}(S, i)|)$ to accurately calculate the run, a high number of permutations are required.
+However, when more than one pathway ($S$) is evaluated those values must be normalized by dividing it by the mean of all the ES.
+When power $p$ is 0 it is equivalent to the standard Kolmogorov--Smirnov statistic, though it is usually set to 1.
 
 For testing gene set enrichment analysis I used [fgsea](https://bioconductor.org/packages/fgsea) [@korotkevich2021] implementation for its speed and integration with other methods used on this thesis.
 Pathways of genes from the REACTOME database were tested on the weight of different models or on the comparisons performed [@fabregat2016].
 
-To estimate the expression of the pathways and compare their expression levels between conditions gene set variation analsyis as implemented on [GSVA](https://bioconductor.org/packages/GSVA) was used [@hänzelmann2013].
+#### GSVA
+
+To estimate the expression of the pathways and compare their expression levels between conditions gene set variation analysis as implemented on [GSVA](https://bioconductor.org/packages/GSVA) was used [@hänzelmann2013].
 It is a method that summarize the variables' numerical value changing the space of $variable\text{ x }sample$ to $group\text{ x }sample$ .
 This enables other methods to use this new space instead of the original variables.
 GSVA was used (again from the REACTOME database) and try to find the relationships between the pathways and the microbiome at different taxonomic levels.
 
+This is done via an estimation and a comparison with a discrete Poisson kernel: $i$ indicates the gene till $k$ and samples are indicated by $j$ till $n$.
+
+$$
+z_{ij}=\hat{F_r}(x_{ij}) = \frac{1}{n}\sum_{k=1}^n\sum_{y=0}^{x_{ij}}\dfrac{e^{-(x_{ik}+r)}(x_{ik} + r)^y }{y!}
+$$
+
+where $r = 0.5$ is used in order to set the mode of the Poisson kernel at each $x_{ik}$, that is, similar to a gene expression for a given sample.
+
+Later this is converted to ranks $z_{(i)j}$ for each sample and normalized: $r_{ij}=|\frac{p}{2}-z_{(i)j}|$ to make the distribution of ranks symmetric around zero to later compare with a normal distribution using a Kolmogorov-Smirnov-like random walk statistic:
+
+$$
+v_{jk}(l)=\dfrac{\sum_{i=1}^l|r_{ij}|^{\tau}I(g_{(i)}\in \gamma_k)}{\sum_{i=1}^p|r_{ij}|^{\tau}I(g_{(i)}\in \gamma_k)}-\dfrac{\sum_{i=1}^lI(g_{(i)}\not \in\gamma_k)}{p-|\gamma_k|}
+$$
+
+Here tau $\tau$ describes the weight of the tail in the random walk (default is set to 1).
+$\gamma_k$ is the k-th gene set and $I(g_{(i)}\in \gamma_k)$ is the indicator function whether the gene ranked i-th belongs to the gene set $\gamma_k$ .
+$|\gamma_k|$ indicates the ordination of the gene set, the number of genes of the gene set and $p$ the number of genes in the data set.
+
+This difference is later converted to enrichment score for each gene set for each sample similar to GSEA, either a difference of hits and misses or the maximum deviation from zero of the random walk (which is used as it allows to detect gene sets that have genes with different expression patterns).
+
 ### Other methods used
 
-The adonis method, provided by the [vegan](https://cran.r-project.org/package=vegan) package, was used to test if microbiome data variance is due to other variables [@oksanen2020].
-This allows to test if the variables are related to the variance of the data.
+#### adonis
+
+The PERMANOVA method [@anderson2001;@warton2012], provided by the [vegan](https://cran.r-project.org/package=vegan) package on the `adonis` function, was used to test if microbiome data variance is due to other variables when using distances metrics.
+It uses the residual sum of squares such as:
+
+$$
+
+SS_W = \frac{1}{n} \sum_{i=1}^{N-1}\sum_{j=i+1}^N d_{ij}^2\epsilon_{ij}
+$$
+
+Which when using euclidian distances ($d$) it is equivalent to MANOVA.
+Here $\epsilon_{ij}$ takes the value of 1 if the observation $i$ and the observation $j$ are in the same group, otherwise it takes the value of zero.
+This can be later used to test which variance is bigger, inter-groups or intra-groups by using the following formula:
+
+$$
+F = \dfrac{SS_A/(\alpha -1)}{SS_W/(N-\alpha)}
+$$
+
+Where $SS_A$ is the among group sum of squares, representing the intra-group variance.
+$N$ is the number of samples and $\alpha$ the number of different groups.
+
+This allows to test if the variables are related to the variance of the data as it can be compared with the $F$ statistic after a high number of permutations.
 This is particularly important on the microbiome data, which is highly variable.
 It was used to detect which variables were important to include in the models of the disease.
+
+#### globaltest
 
 I tested which variables, (sex, age, location, time since diagnostic) are important on the datasets with [globaltest](https://bioconductor.org/packages/globaltest).
 It is a package with methods for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
 It provides a general test statistic to test a hypothesis against a high dimensional dataset.
+
+$$
+S = \sum_{i=1}^p x_i^{'} x_i g(t_i^2)
+$$
+
+The global test performs a test statistic on the tranformed t-test, where if $p$, the number of variables, is large the test is more powerful on average over all possible sparse alternatives of general functions $g$.
+
+#### Diversity indices
 
 Microbiome diversity was measured using vegan and [phyloseq](https://bioconductor.org/packages/phyloseq) methods [@oksanen2020].
 $\alpha$-diversity is a measure of how much a given microbiome at a taxonomic level is present on a sample.
 Several measures exists, on the thesis I used the effective Simpson or Shannon diversity index to compare diversity between samples and conditions.
 $\beta$-diversity was calculated using the phyloseq package for exploratory analysis.
 
+#### WGCNA
+
 We wanted to see if using some co-expression measure between the microbiome and the RNAseq would help identify relationships.
-We used weighted gene co-expression network analysis as implemented on [WGCNA](https://cran.r-project.org/package=WGCNA) \[@langfelder2008\] and also correlations.
+We used weighted gene co-expression network analysis as implemented on [WGCNA](https://cran.r-project.org/package=WGCNA) [@langfelder2008] and also correlations.
 The spearman rank correlation coefficient is
 
 Being $(X_1 , Y_1 ),\dots, (X_n , Y_n)$, assign a rank where $(R_1 , S_1 ), \dots , (R_n , S_n )$ for n being all the variables which:
@@ -390,43 +484,60 @@ It is a framework for integrating datasets with two data types using parametric 
 
 When evaluating a model using bootstrap, [BaseSet](https://cran.r-project.org/package=BaseSet) was developed and used to find which variables were really involved on the interaction and how likely were to be together.
 It is a package that uses fuzzy set logic for easy calculation of probability to belong to a group.
-It can be used to calculate the size of the sets given a probability of having each element on the sets.
+
+A set $S$ is a group of elements for which each element $e$ has an $\alpha$ membership to that set.
+$\alpha$ is usually limited between 0 and 1: $\alpha \in [0, 1]$ .
+A given element $e$ can belong to more than one set.
+Assimilating the membership function to probability we can calculate the probability of a given element $e$ to belong to a set $S$ and not any other set: $P(e \in S|e\not \in S^c)$.
+Which applied to the data and case at hand is the probability that a given variable is associated with a given outcome and not with any other outcome.
+
+The membership function was derived from the bootstraps used for each model on the thousand iterations of the integrative method applied to give an estimation of how probable is a given gene and bacteria to be selected as relevant for the model.
+With the probabilities of the bootstraps it was used to calculate (via `set_size`) the genes and bacteria that are specific of the model that allows to separate the transcriptome by its location and the microbiome by the disease status.
 
 #### experDesign
 
-To avoid batch effect on the sequencing of the BARCELONA dataset [experDesign](https://cran.r-project.org/package=experDesign) was developed and used [@revillasancho2021].
-It helps to quantify if a given experiment has batch effect due to the batches used to measure the values.
+[experDesign](https://cran.r-project.org/package=experDesign) was developed [@revillasancho2021] to prevent and quantify if a given experiment has batch effect due to the batches used to measure the values or other known variable.
+It might help to detect a bad design of the experiment.
 
-On pseudocode the core of the program can be defined as:
+On pseudo code the core of the program can be described as:
 
-> for each index:
->
-> for each batch
->
-> pick size(batch) samples
->
-> if samples are in another batch
->
-> pick other samples
->
-> for each batch
->
-> calculate some summary statistics
->
-> compare with the summary statistics of all the samples
->
-> keep the index with less differences between the index and all the samples
+``` {#pseudocode-experDesign}
+for each index:
+
+    for each batch
+
+        pick size(batch) samples
+
+        if samples are in another batch
+
+            pick other samples
+
+    for each batch
+
+        calculate some summary statistics
+
+        compare with the summary statistics of all the samples
+
+keep the index with less differences between the index and all the samples
+```
 
 It can take into account spatial distribution provide which technical replicates[^methods-2] are best given the number of samples that fit on a batch.
 
 [^methods-2]: Thecnical replicates are samples that are measured multiple times to ensure the accuracy of the measurement.
     In contrast biological replicates are sample with the same conditions but different individuals or process before the measurement.
 
+experDesign was used avoid batch effect on the sequencing of the BARCELONA dataset and evaluate them after it was sequenced.
+
+#### ROC- AUC
+
+To estimate if the selected features (genes or microorganism) by the integration methods have some biological meaningful contribution I measured if they can classify features, such as, which gastrointestinal segment is each sample from, or which type of disease does each patient have.
+
+To compare between different models using the receiver operating characteristic (ROC) curve and the area under the curve (AUC) of said curve was calculated with the [pROC](https://cran.r-project.org/package=pROC) package [@robin2011].
+
+#### RGCCA
+
 The main method used on this thesis has been regularized generalized canonical correlation analysis (RGCCA) as implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017a].
 It will be explained in detail on the next section.
-
-To estimate if the selected features (genes or microorganism) by RGCCA have some biological meaningful contribution I measured if they can classify features using the [pROC](https://cran.r-project.org/package=pROC) package, such as, which gastrointestinal segment are each sample from, or which type of disease does each patient have [@robin2011].
-The area under the curve (AUC) of specificity and sensitivity measurements, also known as receiver operating characteristic ROC, was compared between several values accounting for different genes and microorganisms.
 
 ## Regularized generalized canonical correlation analysis
 
