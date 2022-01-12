@@ -253,7 +253,7 @@ It is an alternative to OTUs which allows to be able to compare results between 
 
 ## Statistics
 
-Differential expression analysis was performed with the following the limma-trend method \[@ritchie2015; @law2014\] and edgeR \[@mccarthy2012\] (Bioconductor version 3.10 or superior) packages, normalized using the trimmed mean of M-values and log-2 transformed into counts per millions following the workflow described on \[@law2018\] using voom which in addition performs a count normalization.
+Differential expression analysis was performed with the following the limma-trend method [@ritchie2015; @law2014] and edgeR [@mccarthy2012] (Bioconductor version 3.10 or superior) packages, normalized using the trimmed mean of M-values and log-2 transformed into counts per millions following the workflow described on [@law2018] using voom which in addition performs a count normalization.
 The samples were adjusted for inter-patient differences specifying block argument for patient variable.
 
 To correct for multiple testing, the false discovery rate was estimated using the method of Benjamini and Hochberg [@yoavbenjamini].
@@ -403,12 +403,11 @@ This difference is later converted to enrichment score for each gene set for eac
 
 #### adonis
 
-The PERMANOVA method [@anderson2001;@warton2012], provided by the [vegan](https://cran.r-project.org/package=vegan) package on the `adonis` function, was used to test if microbiome data variance is due to other variables when using distances metrics.
+The PERMANOVA method [@anderson2001; @warton2012], provided by the [vegan](https://cran.r-project.org/package=vegan) package on the `adonis` function, was used to test if microbiome data variance is due to other variables when using distances metrics.
 It uses the residual sum of squares such as:
 
 $$
-
-SS_W = \frac{1}{n} \sum_{i=1}^{N-1}\sum_{j=i+1}^N d_{ij}^2\epsilon_{ij}
+SS_W = \frac{1}{n} \sum_{i=1}^{N-1}\sum_{j=i+1}^N d_{ij}^2\epsilon{ij} 
 $$
 
 Which when using euclidian distances ($d$) it is equivalent to MANOVA.
@@ -533,23 +532,33 @@ experDesign was used avoid batch effect on the sequencing of the BARCELONA datas
 To estimate if the selected features (genes or microorganism) by the integration methods have some biological meaningful contribution I measured if they can classify features, such as, which gastrointestinal segment is each sample from, or which type of disease does each patient have.
 
 To compare between different models using the receiver operating characteristic (ROC) curve and the area under the curve (AUC) of said curve was calculated with the [pROC](https://cran.r-project.org/package=pROC) package [@robin2011].
+It is based on the following formulas, where $FP$ is false positive, $N$ is a negative, $P$ is positive, $TP$ is true positive and $FN$ is false negative:
+
+$$
+FPR = \frac{FP}{N}=\dfrac{FP}{FP+TN} \\
+TPR = \frac{TP}{P}=\dfrac{FP}{FP+FN} 
+$$
+
+The ROC curve is that where the true positive rate (TPR) or sensitivity, recall or hit rate is represented against the false positive rate (FPR) on the x axis.
+The area under this curve is a measure of how good such classifications performs overall.
+The higher it is to 1 the better as it classifies incorrectly less samples and accurately classify them.
 
 #### RGCCA
 
-The main method used on this thesis has been regularized generalized canonical correlation analysis (RGCCA) as implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017a].
-It will be explained in detail on the next section.
+The main method used on this thesis has been regularized generalized canonical correlation analysis (RGCCA) a method derived from the canonical correlation.
+Which is a method that uses data from the same sample but from different datasets.
+Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) \[@tenenhaus2017a\] which was used on this thesis.
+The method and implementation will be explained in detail on the next section.
 
 ## Regularized generalized canonical correlation analysis
 
-The canonical correlation is a method that uses data from the same sample but from different datasets.
-The regularized generalized canonical correlation analysis is an extension to the canonical correlation analysis [@jordan1875; @hotelling1936] which includes a regularization step to select which are the variables more relevant.
+The regularized generalized canonical correlation analysis is an extension to the canonical correlation analysis [@jordan1875; @hotelling1936] which is an old method to find agreement between two, or more, scorers (as it was first introduced on the literature).
 
-### Description
+Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020] RGCCA emerged with a regularization step and an extension to more than two scorers.
+As previously methods did not have the hability to integrate more than 2 sources of data as does RGCCA [@R-RGCCA].
 
-Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020] RGCCA is a robust method with a fast and usable implementation [@R-RGCCA].
-
-The required data is a numeric matrix, as big as you want, as it is designed for datasets with more variables than samples ( $p \gg n$).
-It needs to have a complete case with no missing values (at the time of writing this thesis there is a new development version not released on CRAN[^methods-3] yet that replaces any missing value by a 0) and time is not considered as a special variable.
+The required data are numeric matrix, as big as you want, as it is designed for datasets with more variables than samples ( $p \gg n$).
+It needs to have a complete case with no missing values (at the time of writing this thesis there is a [new development version](https://github.com/rgcca-factory/RGCCA/tree/CRAN "RGCCA repository on github") not released on CRAN[^methods-3] yet that replaces any missing value by a 0) and time is not considered as a special variable.
 Data should be from the same samples and it is not specific to a certain technology or method used to obtain the data.
 
 [^methods-3]: CRAN is The Comprehensive R Archive Network available at <https://cran.r-project.org/>
@@ -557,7 +566,8 @@ Data should be from the same samples and it is not specific to a certain technol
 It uses a dimensional reduction approach to relate the different data sets between them and produce specific factors for each dataset.
 The interpretation of the RGCCA results is complex and require expertise and familiarity with the technique used and is highly dependent on the model and options used.
 
-To perform the dimensional reduction using the sparse method it looks to maximize this function:
+The authors realized that there is a special problem due to sparsity on biological data which could be handled using first another normalization to improve the stability and success of the canonical correlation methodology.
+To perform the dimensional reduction using the sparse method , the method consist on maximizing this function:
 
 $$
 \underset{a_1,a_2, \ldots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g(\mathrm{cov}(X_j a_j, X_k a_k)) \mathrm{~~s.t.~~} \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
@@ -567,9 +577,23 @@ Being $X_j$ the values for sample $j$, the weights of the variables of said samp
 While $g$ is a function that can take the form of $x$, also known as Horst method, $\Vert x \Vert$ known as centroid method, $x^2$ known as factorial method, or any user-supplied function.
 The smaller the $s_j$, the larger the degree of sparsity for $a_j$.
 As $s_j$ is closer to 0, more features are selected as it looks to optimize covariance, while if it is closer to 1 less features are selected and it resembles the correlation.
-The values of $s_j$ were estimated using [@schäfer2005] when the block was from 16S data or RNaseq, otherwise 1 was used and always using the centroid method.
+The values of $s_j$ were estimated using [@schäfer2005] when the block was from 16S data or RNaseq, otherwise 1 was used.
+The shrinkage is defined as:
 
-<!--# TODO: regularization going on here? -->
+$$
+\widehat{\lambda}^{\star} = \dfrac{\sum_{i\neq j}\widehat{Var}(r_{ij})}{\sum_{i \neq j}r_{ij}^2}
+$$
+
+Where the $r_{ij}$ are the correlation coefficients of the matrix between variables $i$ and $j$ .
+Where the variance is defined as:
+
+$\widehat{Var}(S_{ij}) = \dfrac{n^2}{{(n-1)}²}\widehat{Var}({w}_{ij})=\dfrac{n}{{(n-1)}^3}\sum_{k=1}^n(w_{kij}-\overline{w}_{ij})^2$
+
+And its components are: $w_{kij}=(x_{ki}-\overline{x}_i)(x_{kj}-\overline{x}_j)$ and $\overline{w}_{ij}=\frac{1}{n}\sum_{k=1}^nw_{kij}$ representing $x_{ij}$ the values of a sample $j$ on a variable $i$.
+
+There are different $g$ functions that could be used but the centroid method was chosen to detect both positive and negative relationships without more computational costs.
+
+<!--# TODO: regularization going on ¿here? -->
 
 To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE): it returns an AVE score for each block, an AVE score which measures how each variable correlates with their block component, an AVE score of the inner model, which measures how each dimension accounts for the variance.
 The higher the score is to 1 the better does it work.
