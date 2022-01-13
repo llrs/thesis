@@ -262,43 +262,6 @@ A gene was considered differentially expressed when it was significant at 5% FDR
 Besides differential expression tests and correction for multiple testing, several different methods were used on this thesis which will be described below.
 Functional enrichment related tests/methods stand out from the other methods used.
 
-#### Wilcoxon test
-
-The Wilcoxon Rank Sum test called Mann-Whitney test on two sample data is the non-parametric version of the T-test when the interest is to test if both medians (M) are equal or not.
-
-$$
-\begin{equation} 
-\begin{cases} 
-  H_0 : M_x = M_y \\
-  H_1: M_x \neq M_y
-\end{cases}
-\end{equation} 
-$$
-
-Being the same samples $X = X_1 , …, X_m , Y = Y_1 , …, Y_n$ and if we want to test if $M_X = M_Y$ (M =median), we sort all the data and $j$ is the rank.
-
-$$
-T_X = \sum_{j=1}^{m+n}jI_j
-$$
-
-where
-
-$$
-I_j = \begin{cases}
-1 & \text{if observation with rank j comes from X} \\
-0 & \text{if observation with rank j comes from Y} \\
-\end{cases}
-$$
-
-The exact distribution of $T_x$ is tabulated for each value of $m$ and $n$.
-Furthermore, the asymptotic distribution of $T_X$ is normal with parameters:
-
-$$
-E(T_X) = \dfrac{m(m+n+1)}{2}, V(T_X)=\dfrac{mn(m+n+1)}{12}
-$$
-
-This test is implemented in the function `wilcox.test` from the stats package in R.
-
 ### Functional enrichment
 
 Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
@@ -349,24 +312,23 @@ $$
 
 This increases the $p$-value as it raises the Chi-square statistic.
 
-<!--# cfr from Maria Vila thesis-->
-
 #### Gene Set Enrichment Analysis
 
 There are other methods that to test if some variables shows an unexpected importance according to a statistic like fold change or value gene set enrichment analysis was developed [@subramanian2005] .
 Gene set enrichment analysis (GSEA) is a computational method originally developed to determine whether a priori defined set of genes shows statistically significant and concordant differences between two biological states.
 These methods check if a group of variables present in an ordered list is present in some skewed distribution and compare it against a random group of similar size.
 
-$rank(g_j)=r_j$ where each $g$ is a gene.
-$p$ is a
+This method consist on first calculating the rank of genes:$rank(g_j)=r_j$ where each $g$ is a gene.
+Then later calculate the following functions:
 
 $$
 P_{hit}(S, i)=\sum_{g_j \in S, j \leq i}\dfrac{|r_j|^p}{N_R}\text{, where } N_R = \sum_{g_j \in S}|r_j|^p \\
 P_{miss}(S, i) = \sum_{g_j \not \in S, j \leq i}\dfrac{1}{N - N_H}
 $$
 
-The usual value used is the enrichment score (ES) defined as: $ES=max(|P_{hit}(S, i)-P_{miss}(S, i)|)$ to accurately calculate the run, a high number of permutations are required.
-However, when more than one pathway ($S$) is evaluated those values must be normalized by dividing it by the mean of all the ES.
+With these values the enrichment score (ES) defined as: $ES=max(|P_{hit}(S, i)-P_{miss}(S, i)|)$ is calculated from the walk.
+A high number of permutations are required for an accurate score of the enrichment score.
+However, when more than one pathway ($S$) is evaluated in order to compare between the enrichment scores, they must be normalized by dividing it by the mean of all the ES.
 When power $p$ is 0 it is equivalent to the standard Kolmogorov--Smirnov statistic, though it is usually set to 1.
 
 For testing gene set enrichment analysis I used [fgsea](https://bioconductor.org/packages/fgsea) [@korotkevich2021] implementation for its speed and integration with other methods used on this thesis.
@@ -547,7 +509,7 @@ The higher it is to 1 the better as it classifies incorrectly less samples and a
 
 The main method used on this thesis has been regularized generalized canonical correlation analysis (RGCCA) a method derived from the canonical correlation.
 Which is a method that uses data from the same sample but from different datasets.
-Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) \[@tenenhaus2017a\] which was used on this thesis.
+Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017a] which was used on this thesis.
 The method and implementation will be explained in detail on the next section.
 
 ## Regularized generalized canonical correlation analysis
@@ -592,8 +554,6 @@ $\widehat{Var}(S_{ij}) = \dfrac{n^2}{{(n-1)}²}\widehat{Var}({w}_{ij})=\dfrac{n}
 And its components are: $w_{kij}=(x_{ki}-\overline{x}_i)(x_{kj}-\overline{x}_j)$ and $\overline{w}_{ij}=\frac{1}{n}\sum_{k=1}^nw_{kij}$ representing $x_{ij}$ the values of a sample $j$ on a variable $i$.
 
 There are different $g$ functions that could be used but the centroid method was chosen to detect both positive and negative relationships without more computational costs.
-
-<!--# TODO: regularization going on ¿here? -->
 
 To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE): it returns an AVE score for each block, an AVE score which measures how each variable correlates with their block component, an AVE score of the inner model, which measures how each dimension accounts for the variance.
 The higher the score is to 1 the better does it work.
