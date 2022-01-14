@@ -519,6 +519,8 @@ The regularized generalized canonical correlation analysis is an extension to th
 Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020] RGCCA emerged with a regularization step and an extension to more than two scorers.
 As previously methods did not have the hability to integrate more than 2 sources of data as does RGCCA [@R-RGCCA].
 
+### Description
+
 The required data are numeric matrix, as big as you want, as it is designed for datasets with more variables than samples ( $p \gg n$).
 It needs to have a complete case with no missing values (at the time of writing this thesis there is a [new development version](https://github.com/rgcca-factory/RGCCA/tree/CRAN "RGCCA repository on github") not released on CRAN[^methods-3] yet that replaces any missing value by a 0) and time is not considered as a special variable.
 Data should be from the same samples and it is not specific to a certain technology or method used to obtain the data.
@@ -555,21 +557,27 @@ And its components are: $w_{kij}=(x_{ki}-\overline{x}_i)(x_{kj}-\overline{x}_j)$
 
 There are different $g$ functions that could be used but the centroid method was chosen to detect both positive and negative relationships without more computational costs.
 
+### Results
+
+RGCCA as other dimensional reduction techniques provides specific weights for each variable on each dimension and a sample score on each dimension, together with quality scores.
+
 To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE): it returns an AVE score for each block, an AVE score which measures how each variable correlates with their block component, an AVE score of the inner model, which measures how each dimension accounts for the variance.
 The higher the score is to 1 the better does it work.
+However, that mathematically works better doesn't mean that it have more biological meaning or that it provides more insights on the biology.
+
+### Models
+
+There is no formal definition of what constitutes a block of data on multi-omics tools.
+Most multi-omics and integration tools assume one block for each type of data, such as an essay a survey or an experiment.
+We decided to split the block with data about the samples to separate independent variables from the same block.
+The hypothesis we made was that more blocks with highly related variables but independent from the other blocks would fit better the data and thus help to identify causal or dependent variables.
 
 To model what might be the relationships between the datasets current practices include using a pre-selected model of relations between blocks.
 However, this model might not be accurate and several models might need to be fitted.
 To help find the fitting model for the data I created an R package, named [inteRmodel](https://llrs.github.io/inteRmodel/), which helps finding the right model and measure how fit it is for your data via a bootstrapping procedure and the provided AVE scores.
 
 This method was applied to the previously described datasets to find the relationship between microorganisms and the disease.
-
-### Relationships' models
-
-There is no formal definition of what constitutes a block of data on multi-omics tools.
-Most multi-omics and integration tools assume one block for each type of data, such as an essay a survey or an experiment.
-We decided to split the block with data about the samples to separate independent variables from the same block.
-The hypothesis we made was that more blocks with highly related variables but independent from the other blocks would fit better the data and thus help to identify causal or dependent variables.
+Following this method:
 
 To provide a ground truth, a model with only the relationships between the two experimental obtained data is analyzed, on what it is called the model 0.
 The next model analyzed consists on the relationships between the two experimental blocks and them with the metadata of the samples, that is model 1.
