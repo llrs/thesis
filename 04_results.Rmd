@@ -1,22 +1,121 @@
 # Results
 
-experDesign worked well and no batch effect were created when sequencing samples.
-Unfortunately, a problem with the 16S of the cohort rendered that useless.
+## Packages
 
-RGCCA with inteRmodel method identify better models than other methods (MCIA).
+### experDesign
 
-Model 2.2 is best on cohort X, Y, Z.
+`experDesign` package built in R was released for the first time on CRAN on 2020-09-08 after nearly a year after the initial release made on [github](https://github.com/llrs/experDesign).
 
-## Biological relevance of results
+The package uses functional programming to create and modify objects and the features used.
+The package didn't need a new class created to work and bases its performance on the large body of work made by the R core team.
+It simply adds the needed information on the columns of the introduced `data.frame` or returns an appropriate vector.
 
-Transciptome is related to localizaion of the samples.
+`experDesign` functions are divided into several categories:
 
-Microbiome is more related to the disease and other variables of the patients.
+-   Helper functions to aid on deciding how many batches are or how many samples per batch.
+    There are some also that report how good a given distribution of the samples felt for a given dataset.
 
-Time is an important variable when modelling the disease, if multiple timepoints are taken they should be taken into account to identify the state of the disease for each patient.
+-   Functions generating indexes.
 
-### Comparing different dataset
+-   Functions distributing the samples on indexes
 
-### Shared selected variables
+Regarding time related variables `experDesign` will use them as factors, while issuing a warning to the user.
 
-BaseSet didn't work, it is computationally expensive to calculate the likelihood of 1500 variables, there are too many combinations and the numeric precision of said calculations must be considered carefully.
+Since its development it has been used on a couple of batch designs, one for organoids bulk RNA-seq and another one for biopsies bulk RNA-seq from the BARCELONA cohort.
+
+On both cases it worked well and no batch effect were created when sequencing samples.
+However on the organoids dataset, the change on the method of producing them introduced a batch effect that made it impposible to compare samples before and after that change.
+
+```{r experDesign, include=FALSE}
+library("dlstats")
+library("dplyr")
+cran_stats("experDesign") |> 
+  group_by(month = format(end, "%Y/%m")) |> 
+  summarise(d = sum(downloads)) |> 
+  ungroup() |> 
+  pull(d) |> 
+  median()
+```
+
+Since its release on CRAN it has had a median of \~400 downloads each month from RStudio package manager, so the total number of downloads is higher.
+
+### BaseSet
+
+`BaseSet` package, built in R, was released for the first time on CRAN on 2020-11-11 after nearly two years after the initial work started on [github](https://github.com/llrs/BaseSet).
+
+The package uses both functional programming and object oriented program to create and modify the TidySet S4 object defined[^results-1].
+Mixing it with S3 generic functions it provides a powerful interface compatible with the tidyverse principles, a [group of packages](https://www.tidyverse.org/) following the same design.
+The package provides a new class to handle fuzzy sets and the associate information.
+
+[^results-1]: S4 is one of the object programming paradigms on R.
+    For a more complete overview and differences see [Advanced R](https://adv-r.hadley.nz/oo.html "2nd edition") [@wickham2019].
+
+`BaseSet` methods are divided into several categories:
+
+-   [General functions](https://docs.ropensci.org/BaseSet/reference/index.html#general) to create sets of the TidySet class or convert from it to a list or about the package.
+
+-   [Set operations](https://docs.ropensci.org/BaseSet/reference/index.html#set-operations) like adjacency cartesian product, cardinality, complement, incidence, independence, intersection, union, subtract, power set or size.
+
+-   [Functions to work with TidySets](https://docs.ropensci.org/BaseSet/reference/index.html#set-operations) to add relationships, sets, elements or some complimentary data about them.
+    Remove the same or simply move around data or calculate the number of elements, relations and sets.
+
+-   [Functions to read](https://docs.ropensci.org/BaseSet/reference/index.html#reading-files) files from formats where sets are usually stored in the bioinformatician world: GAF, GMT and OBO formats
+
+-   Last, some [utility functions](https://docs.ropensci.org/BaseSet/reference/index.html#utiles) to set name conventions, use set_symbols and some other auxiliary functions
+
+The package had a long development process with initial iterations basing on GSEABase package which was later abandoned to include also some uncertainty on the relationship of a gene with a given gene set.
+
+The package also participated on an exploration on part of the Bioconductor community (project to develop, support, and disseminate free open source software that facilitates rigorous and reproducible analysis of data from current and emerging biological assay) for more modern and faster handling of sets.
+There were three different packages created as part of this process, `BaseSet`, `BiocSet` published [on Bioconductor](https://bioconductor.org/packages/BiocSet/) and `unisets`, available [on github](https://github.com/kevinrue/unisets).
+The different approaches were presented at a birds of feather on BioC2019.
+
+The package passed the review on the rOpenSci organization ([See review](https://github.com/ropensci/software-review/issues/359 "Review on Github")) and now is part of the packages hosted there too.
+
+```{r BaseSet, include=FALSE}
+library("dlstats")
+library("dplyr")
+cran_stats("BaseSet") |> 
+  group_by(month = format(end, "%Y/%m")) |> 
+  summarise(d = sum(downloads)) |> 
+  ungroup() |> 
+  pull(d) |> 
+  median()
+```
+
+Since its release on CRAN it has had a median of \~400 downloads each month from RStudio package manager, so the total number of downloads is higher.
+
+## inteRmodels
+
+The package was build once the method used to find accurate models using RGCCA was established.
+
+The package consists of functions that can be grouped in three categories:
+
+-   To look for models and evaluate them.
+    There are functions to search for a model given some rules, that check them using leave-one-out methodology.
+
+-   Reporting: To make better reports by improving handling of names or simplifying the objects or how to calculate scores.
+
+-   Building: To easier build correct models on RGCCA, simplifying the process to create a symmetric matrix.
+
+It is only available on github, so the number of downloads and usage is unknown but since its release a user has contacted to keep it up to date with development versions of RGCCA.
+Which now it is compatible with the next release of [RGCCA being prepared](https://github.com/rgcca-factory/RGCCA/tree/CRAN)[^results-2].
+
+[^results-2]: I also contributed with some comments and feedback to the package to make it easier to read the source and check the inputs and improve the documentation so that it is coherent with the code and previous results of the functions.
+
+## Analysis
+
+On the following sections the main results of analyzing each dataset are presented.
+
+### Häsler's dataset
+
+### Morgan's dataset
+
+### HSCT dataset
+
+### BARCELONA dataset
+
+### Howell's dataset
+
+### Hernández' dataset
+
+### Barcelona's cohort
