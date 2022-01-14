@@ -1,5 +1,17 @@
 # Discussion
 
+Transciptome is related to localizaion of the samples.
+
+Microbiome is more related to the disease and other variables of the patients.
+
+Time is an important variable when modelling the disease, if multiple timepoints are taken they should be taken into account to identify the state of the disease for each patient.
+
+Comparing different dataset
+
+Shared selected variables
+
+BaseSet didn't work, it is computationally expensive to calculate the likelihood of 1500 variables, there are too many combinations and the numeric precision of said calculations must be considered carefully.
+
 In this chapter we will summarise the main findings in relation to the broad research community and other work as well as the impact of the results to improve further research in the future or be used on clinical environments.
 
 If we had to summarise all the work in one sentence we would say that...
