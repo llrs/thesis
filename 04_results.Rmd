@@ -108,14 +108,39 @@ On the following sections the main results of analyzing each dataset are present
 
 ### Häsler's dataset
 
-### Morgan's dataset
+On this dataset the different parameters and capabilities of RGCCA were tested.
+
+Different methods, centroid, factorial or X were tested.
+
+The effect of the sparsity value was measured by the number of variables selected.
+
+The look for a good model from the data itself was also tested.
+
+Exploratory analysis with the superblock model was done.
 
 ### HSCT dataset
 
+We developed and used the inteRmodel procedure on this dataset
+
+Model with better explanation of known biology and relationships was the model 2.2
+
+### Morgan's dataset
+
+We tested if results of inteRmodel were consistent on this dataset.
+
+Again the model 2.2 was the best according to the AVE score.
+
 ### BARCELONA dataset
+
+This dataset was processed but the results are not trustable as the microbiome diversity falls off the accepted values.
 
 ### Howell's dataset
 
+This dataset was processed to confirm the results on the previous datasets.
+
+Model 1.2 was the best according to the AVE score but perform worse when attempting to recreate known biological differences via classifying samples.
+Model 2.2 was selected.
+
 ### Hernández' dataset
 
-### Barcelona's cohort
+This dataset was processed to confirm the resuls on the previous datasets.
