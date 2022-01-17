@@ -47,3 +47,13 @@ bookdown::word_document2:
   toc_depth: 3
   lof: yes
   output_dir: draft_phd
+bookdown::odt_document2:
+  fig_caption: true
+  link-citations: yes
+  toc: yes
+  toc_collapse: false
+  toc_appendix: yes
+  toc_unnumbered: yes
+  toc_depth: 3
+  lof: yes
+  output_dir: draft_phd
