@@ -70,8 +70,7 @@ This has lead to look for genetic factors on IBD both on general population and 
 Genome wide association studies (GWAS) is one of the most common genetic studies performed, together with methylation studies.
 They help discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.
 
-With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019].
-Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P-value \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018].
+With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019\]. Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P-value \< 0.005) protective effects in ulcerative colitis \[@jostins2012; @momozawa2018].
 The mechanism of how this gene protects from ulcerative colitis has not been confirmed yet [@horowitz2021].
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
@@ -96,15 +95,14 @@ IBD has been characterized by a breakdown in the balance between beneficial and 
 Many studies show that patients with inflammatory bowel disease have less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
 $\alpha$-diversity is a measure of the species present on a single sample and how much of each taxonomic group is there.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004].
-At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004\]. At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest \[@kostic2014; @sender2016].
 $\beta$-diversity compares the diversity between samples, which typically looks like a horse-shoe-like shape when reducing the distances to their first two dimensions via principal component analysis.
 
 <!--# Aida 2.3 p24-->
 
 In fact, it has been recently proposed that several unique microbial species can distinguish healthy controls from UC and CD patients [@sankarasubramanian2020a; @lopez-siles2014].
 
-![The microbial composition in a healthy and inflammed bowel disease gut.](images/tesis_AM_Figure2.png "Microbial composition and epithelial barrier status in healthy versus IBD gut.")
+![(#fig:composition) The microbial composition in a healthy and inflammed bowel disease gut.](images/tesis_AM_Figure2.png "Microbial composition and epithelial barrier status in healthy versus IBD gut.")
 
 <!--# End-->
 
@@ -130,17 +128,16 @@ The immune response involves many different cells lines and regions, which are i
 
 <!--# Image from Ana tesis p29: -->
 
-![The intestinal epithelial barrier.](images/tesis_AC_FigureX.png "The intestinal epithelial barrier")
+![(#fig:barrier) The intestinal epithelial barrier.](images/tesis_AC_FigureX.png "The intestinal epithelial barrier")
 
-From the luminal side of intestine, the first layer is the mucosa.
+From the luminal side of intestine, the first layer is the mucosa (See \@ref(fig:barrier) or \@ref(fig:composition)).
 The mucus is organized in two layers: the inner layer, a firm mucus layer; and the outer, loose mucus layer [@okumura2017].
 Below the intestinal epithelium there is a single layer of cells organized into crypts and villi (and circular folds on the large intestine) that carries out a diverse array of functions besides digestion performed by specialized cell lineages.
 These cells usually come from the basal side of the crypt and mature as they move towards the apical side.
 
 <!--# From tesis Aida p20-->
 
-Immune response in the intestinal mucous is mainly excreted by the gut associated lymphoid tissue [@faria2012].
-Deregulation of the mucosal immune system has been associated with the pathogenesis of IBD [@silva2016a; @demattos2015].
+Immune response in the intestinal mucous is mainly excreted by the gut associated lymphoid tissue [@faria2012\]. Deregulation of the mucosal immune system has been associated with the pathogenesis of IBD \[@silva2016a; @demattos2015].
 Genetically predisposed patients when exposed to certain environmental factors activate immune responses against microbials or self-antigens which in turn, may impair the mucosal barrier of the intestinal mucosa, the first physical barrier on the mucosal surface.
 
 Both the adaptive and the innate immunity related cells are present on the intestine, right below the epithelium.
@@ -157,7 +154,7 @@ Detecting signals of any foreign particle can also trigger the immune system.
 On the intestine this starts with the identification of these signals by intestinal epithelal cells have pattern recognition receptors.
 There are two main pattern recognition receptors: toll-like receptors (TLR), which are present on the surface, and nucleotide-binding oligomerization domain-like receptors (NOD-like receptors), present on the cytoplasm of the cells.
 These receptors upon recognition of pathogen associated molecular patterns (PAMPs) start an amplifying signaling producing chemokines and cytokines which activates the transcription and translation of pro-inflammatory mediators to ensure an effective immune response.
-Initially the innate response is triggered but the cells also increase the antigen presentation to T cells and thus activate the immune adaptive response.
+Initially the innate response is triggered but the cells also increase the antigen presentation to T cells and thus activate the immune adaptive response [@mayorgas2021a].
 
 Other cell types, such as monocytes, macrophages and dendritic cells also present the pattern recognition receptors.
 From those, macrophages and dendritic cells are antigen presenting cells too and secrete several cytokines to activate other immune cells.
@@ -176,7 +173,7 @@ Overall the presence of certain cytokines and the response to self-antigens are 
 <!--# End tesis Aida/ more or less -->
 
 On these kind of diseases autologous hematopoietic stem cell transplantation has shown some benefits on IBD [@corraliza].
-The benefit of Hematopoietic Stem Cell Transplant (HSCT) in autoimmunity is thought to originate from the depletion of auto-reactive cells regardless of their specificity.
+The benefit of hematopoietic stem cell transplant (HSCT) in autoimmunity is thought to originate from the depletion of auto-reactive cells regardless of their specificity.
 However, due to its associated risk this therapy is only given when patients are refractory to all available therapeutic options.
 
 #### Environmental
@@ -200,7 +197,7 @@ Other environmental factors have been linked to IBD but without enough evidence 
 <!--# Check with Elena Basolas Tesis p18-->
 
 Perhaps the environment factors influence the samples disease etiology towards Crohn's disease or ulcerative colitis as there are some differences between them.
-On CD a granulome, that is a region with big multinucleous cells, can appear on any intestinal layer, while on UC the damage is different: it consists in many neutrophil in the crypt lumen.
+On CD a granulome, that is a region with big multinucleous cells, can appear on any intestinal layer, while on UC the damage is different: it consists in many neutrophil in the crypt lumen [@bassolasmolina2018a].
 
 To distinguish between the diseases, in addition to the inflamed location(s), mosaic zones (patches of inflamed and non-inflamed areas) are more characteristic of CD [@bassolasmolina2018].
 Another indicator of CD is an increase of calprotectin in fecal samples [@sands2015].
@@ -209,8 +206,9 @@ Another indicator of CD is an increase of calprotectin in fecal samples [@sands2
 
 ### Crohn's disease physiology
 
-As previously introduced, Crohn's disease is a chronic inflammatory disorder characterized by a discontinuous inflammation of the gastrointestinal tract and it is frequently associated with extraintestinal manifestation and/or concomitant immuno-mediated diseases.
+As previously introduced, Crohn's disease is a chronic inflammatory disorder characterized by a discontinuous inflammation of the gastrointestinal tract.
 Inflammation on the gastrointestinal tract is transmural and can affect from the mouth to the anus, but mainly it manifests on the ileum and colon [@demattos2015a].
+It is frequently associated with extraintestinal manifestation and/or concomitant immuno-mediated diseases.
 
 #### Clinical presentation
 
@@ -221,7 +219,7 @@ All these can lead to delays on correct diagnosis of the disease.
 
 <!--# Tesis Ana p21-->
 
-The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with CD although they could be just an infection.
+The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with CD [@khanna2017].
 The detection of fecal calprotectin, is generally a good marker of endocopic activity with sensitivity above 70% and specificity above 80% [@guardiola2018].
 
 Usually the best diagnosis method is to perform a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn's disease.
@@ -235,8 +233,6 @@ Most patients progress from an inflammatory phenotype to a stricturing or penetr
 
 <!--# Add Figure 2 from ACM thesis?-->
 
-<!--# -->
-
 To some extent, there is a disassociated between patient's well-being report and the colonoscopy observation.
 Often patients report feeling better but their gut is as inflamed as previously [@bhattacharya2016a].
 This has lead to several scores and thresholds used on research and treatment of the patients.
@@ -244,7 +240,7 @@ This has lead to several scores and thresholds used on research and treatment of
 #### Disease course
 
 In the early stages of the disease the relapsing and remitting course is more frequent.
-Often relapses are accompanied by clinical symptoms, and very few have prolonged clinical remission [@peyrin-biroulet2010].
+Often relapses are accompanied by clinical symptoms, and very few have prolonged clinical remission (without treatment) [@peyrin-biroulet2010].
 When there is clinical remission, there can still remain some other lesions and often sublinical inflammation persists.
 Frequently the damage caused by the disease evolves to fibrostenotic stricture or penetrating lesions (fistula and abscess).
 
@@ -258,8 +254,8 @@ Around a third of the patients with ulcerative colitis suffer proctitis, the inf
 The next more common manifestation of the disease is the distal colitis when the rectum to the sigmoid colon are affected.
 Left colitis, where the affected area starts on the rectum and extends to the left colon is also common.
 Next most common phenotype is the extensive colitis were there is involvement of at least the descending colon.
-The last common phenotype is the pancolitis, when the disease affects all the colon.
-The extension and severity of the disease correlates with the clinical observation, where the longer the extension of the colitis is, the worse the prognosis is [@etchevers2009].
+The least common phenotype is the pancolitis, when the disease affects all the colon.
+The extension and severity of the disease correlates: the longer the extension of the colitis is, the worse the prognosis is [@etchevers2009].
 
 #### Clinical care {#clinical-care-UC}
 
@@ -333,14 +329,14 @@ This has been studied using several data sources, mostly from sequencing data.
 The technical methods used to obtain the data of the inflamed tissue differ between extracted from biopsied samples at colonoscopy or from surgical samples.
 
 Those samples are usually used later on to diagnose or for research purpose.
-To obtain research-quality data it usually imply using techniques such as immunohistochemistry, histopathology, immunohistochemistry, fluorescence in situ hybridization and RT-PCR.
+To obtain research-quality data it usually imply using techniques such as immunohistochemistry, histopathology, immunohistochemistry, fluorescence in situ hybridization and polymerase chain reaction.
 These techniques allow to measure or visualize where are the cells expressing certain proteins or genes, thus helping with the analysis validation.
 
 Furthermore several studies have been carried out to discover links between microbiome and the inflammation, followed by those looking for some relationship between genetics and the disease and more recently the metabolome.
 These studies, known as integration, multi-omic or interaction studies, usually use multiple sequencing assays as the bases of the analysis [@beck2021].
 
-However, confirming causal interactions of the variables of each assay is difficult.
-To find relationships some articles use correlation, like [@hasler_uncoupling_2016], there are others that use a combination of methods from correlations, partial correlations to integrative methods [@tang_integrated_2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations.
+However, confirming causal interactions of the variables of each essay is difficult.
+To find relationships some articles use correlation, like [@hasler_uncoupling_2016\], there are others that use a combination of methods from correlations, partial correlations to integrative methods \[@tang_integrated_2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations.
 
 Very rarely there is an experimental confirmation of the relationships between variables of the different essays because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
 One of the few methods published that shows an interaction between genes and microorganisms on the inflammatory bowel disease is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
@@ -369,14 +365,14 @@ Most studies on genetics and IBD are genome-wide association studies [@kumar2019
 No clear mechanism has been proved despite clear and significant findings, probably because inflammatory bowel disease relapses and remits with time.
 
 When using genetic data to integrate it with transcriptomics it is usually to understand how a genetic variant is affecting a gene expression.
-This has lead to expression quantitative trait loci
+This has lead to expression quantitative trait loci (eQTL).
 
 ### Metabolome
 
-More recently an increased interest on metabolome has raised, given that microorganisms interact with the host also via their products and metabolites.
+More recently there have been an increased interest on metabolome, given that microorganisms interact with the host also via their products and metabolites.
 Some studies have integrated the metabolome with the RNAseq and state of the epithelium [@ahmed2016; @gallagher2021].
 
-There is evidence some of these metabolome products, such as small chemicals regulate the epithelium cells and their interaction with the microbiome and outer agents [@ferrer-picón2020b; @mayorgas2021].
+There is evidence some of these metabolomic products, such as small chemicals regulate the epithelium cells and their interaction with the microbiome and outer agents [@ferrer-picón2020b; @mayorgas2021].
 
 ### Summary
 
@@ -392,30 +388,31 @@ Data integration is informally widely used with varying definitions, according t
 
 > "the process of combining two or more things into one" --- [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/integration)
 
-Other words that are used are integrati(-on, -ve), if specific to data from sequencing technologies multi-omics, pluri-omics.
+Other words used are integrati(-on, -ve), and if specific to data from sequencing technologies multi-omics, pluri-omics.
 Here integration will be used as it is the more general one and not restricted to omics or sequencing technologies.
+
 Since the beginning of the integration methods there have been many methods proposed [@krassowski2020].
 Some of the early methods were initially used for surveying the agreement of different evaluating systems, others were developed for agricultural sciences [@hotelling_relations_1936] or food industry [@biancolillo].
-Some of these methods are specific for one application or data while others are more general.
+Some of these methods are specific for one application or data while others are more generally applicable.
 Lately, the increase of bigger datasets with more variables and often from the same samples has increased the focus of the research community on the methodologies available on several disciplines but mainly on the biological science.
 The explosion of data on the biological science has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time, if done with multiple sequencing tecnologies it is usually referred as multi-omics methods, which usually only integrate omic data.
 
-It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019].
-Part of these efforts uses the methods' strategies to classify them [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
+It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019\]. Part of these efforts uses the methods' strategies to classify them \[@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
 Following this view I'll review the integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
 
 ### Classification of integration method's
 
-Here I outline how to classify integration methods in the bioscience field, mainly using omics datasets, with relationships (and references) to concrete methodology and in occasions to articles using them.
+Integration methods have very different properties that allow them to be classified and compared.
+I classified them in the bioscience field, which means that they are meant to be used with omics datasets, with references to concrete methodology and in occasionaly to articles using them.
 
 #### Data type: numeric or categorical
 
 The most important distinction in integration methods is what kind of data are combined.
 In general data can be divided between categorical and numeric variables, which are usually found in several fields.
 Sometimes doctors want to understand the relationship between a phenotype they observe and the underlying mechanism.
-Usually this involves looking how the metabolites, the gene expression, the methylation, the number of variants a gene has, and other numeric variables are related to the observed (categorical) phenotype (like pain).
+Usually this involves looking how the metabolites, the gene expression, the methylation, the number of variants a gene has, and other numeric variables are related to the observed phenotype (like pain).
 
-Depending on what does a method aim for it handles both data types or just one, often they are used differently.
+Depending on what does a method aim for it handles both data types or just one, but often they are used differently.
 The most common way to handle different type of data is converting the categorical values to a mock or dummy variable.
 For each categorical factor there is a new variable whose value is 1 if that sample had this factor and 0 otherwise.
 For instance, if the categorical variable has three values (A, B, C) it would be converted to A (1, 0, 0) B (0, 1, 0) and C (0, 0, 1).
@@ -426,22 +423,32 @@ If the method only accepts categorical data but you want to provide numeric valu
 For example if a variable is (0.123, 0.25, 0.56, 0.78) one could make to categorical values like ("\<0.5", "\<0.5", ">0.5", ">0.5").
 The number of categories to use and how is the numeric value split depends on case by case.
 
+Very rarely methods allow to use both of them as they are.
+If they allow so, it is usually for classification purposes.
+
 #### Objective
 
 The objective of the method is one of its most important defining properties.
 Data integration can be classified according to their objective and the (biological) question they try to answer.
-Most of the times one (or all) of the following results are expected from integration methods:
+Most of the times one (or several) of the following results are expected from integration methods:
+
+-   Classification of the patients or samples
+
+    As seen one of the purposes of the integration might be to use multiple sources of data to accurately describe how do samples or patients fit on a predefined possibles states.
+    This might be to accurately describe if a patient has one or other related disease of a possible subset of diseases given their condition.\
+
+<!-- -->
 
 -   An overview of the role of each individual block in a biological system
 
-Sometimes the question is which omic method is the best one to describe the disease.
-This could prevent to do expensive tests that can be estimated by other cheaper or easier techniques that are enough sensitive and specific for the task.
-Some examples of this is the search of markers on blood to identify if there are cancer cells on tissues.
+Sometimes the question is which omic method is the best describing the disease.
+This could prevent peforming expensive tests that can be estimated by other cheaper or easier technique that has enough predictive power or is enough sensitive and specific for the task.\
+An example of this is the search of markers on blood to identify if there are cancer cells on tissues.
 
 -   A better understanding of the relationships between the 'omics types
 
 Several methods are used to understand better how the different data sets interact.
-When the relationship between omics is known further focused methods are used to understand the mechanistic relationship between them.
+When a potentially relationship between omics is disvoered then other focused methods are used to understand the mechanistic relationship between them.\
 For instance, checking that in a particular case or condition is present on a given relationship, and that this relationships follows our model or not.
 
 -   Finding a molecular signature.
@@ -449,24 +456,24 @@ For instance, checking that in a particular case or condition is present on a gi
 A signature is usually a group of features that describe/are representative of a cell line, a process or a stage.
 Identifying a subset of the variables from the omics that are related is often a desired goal because it reduces the amount of variables allowing to perform experiments on the bench on just those that might be important.
 In other fields, such as machine learning, selecting the important variables is known as [feature selection](https://en.wikipedia.org/wiki/Feature_selection "Wikipedia page of feature selection").
-There are several methods that are used to do this.
+There are several methods that are used to do this.\
+An example of this is when performing eQTL, where a locus is related to the expression change of genes, so finding the right positions that induce a specific expression level is a very common task.
 
 -   A predictive model
 
-Predictive models usually require a very good understanding of the current or past relationships, as well as, a good feature selection procedure.
-Often to make a prediction the model is first evaluated on a previously known data according to this features.
-If a good model of previous data exists it might be used to predict future events.
-Sometimes, models are only build to predict events without being able to accurately describe the mechanism, why they work.
-This kind of models might improve treatments, diagnosis and prognosis prediction.
+Predictive models usually require a very good understanding of the current and/or past relationships, as well as, a good feature selection procedure.
+If a good model on previous data exists it might be used to predict future events.
+Sometimes, models are only build to predict events without being able to accurately describe the mechanism, why they work.\
+This kind of methods are used improve treatments, diagnosis and prognosis prediction.
 
 -   Impute values
 
 Some methods aim to accurately guess which values have one block given some other information.
-Missing values can happen for a variety of reasons from practical ones, like a sample not available, to technical ones, such as laboratory method failing.
+Missing values can happen for a variety of reasons from practical ones, like a sample not being available, to technical ones, such as laboratory method failing.
 However, this is often a intermediate step to other goals.
 
 To complete these goals it is important to have enough statistical power to determine the significance of tests performed (if any) and to understand how complete are the data sources used on the integration [@tarazona2021].
-Having more statistical powers helps identifying the relationships one seeks when using this methods.
+Having more statistical power helps identifying the relationships one seeks when using this methods.
 
 Formally the objective of methods might be defined as a function to be optimized or a procedure to be followed until certain conditions are meet between the variables received as input.
 
@@ -566,7 +573,7 @@ These methods include Regularized Generalized Canonical Correlation Analysis (RG
 These methods do not need data from the same sample.
 They draw their conclusions generalizing from the data available.
 Some of them handle missing data, while others do use the data at face value.
-These method includes MetaPhlAn2, HUMAnN, LEfSe [@franzosaSpecieslevelFunctionalProfiling2018; @truongMetaPhlAn2EnhancedMetagenomic2015; @segataMetagenomicBiomarkerDiscovery2011].
+These method includes MetaPhlAn2 [@franzosaSpecieslevelFunctionalProfiling2018], HUMAnN,[@truongMetaPhlAn2EnhancedMetagenomic2015], LEfSe [@segataMetagenomicBiomarkerDiscovery2011].
 
 Furthermore, some methods are designed to integrate specific types of datasets, (usually because they make some assumptions that are only met on that kind of data).
 For instance, HCG, 16S, RNA-seq and metabolomics do not share the same data distribution, and are different between them.
@@ -590,15 +597,15 @@ Some of them have previously appeared:
 
     These methods focus on finding just a few variables and summarizing them using some function that has some properties.
     The selection of variables is usually done with L1 or Lasso Regression regularization technique or L2 also known as Ridge Regression.
-    L1 regularization adds a penalty equal to the absolute value of the magnitude of coefficients which leads to some coefficients can become zero and the variable eliminated from the model.
-    On the other hand, L2 regularization doesn't result in elimination of coefficients or sparse models and can only be used when there is multicollinearity.
+    L1-regularization adds a penalty equal to the absolute value of the magnitude of coefficients which might leads to some coefficients becoming zero and the variable eliminated from the model.
+    On the other hand, L2-regularization does not result in elimination of coefficients or sparse models and can only be used when there is multicollinearity as it works well to avoid over-fitting.
 
-    Momix [@cantini_benchmarking_2020], RGCCA [@tenenhaus2017], mixOmics [@rohart2017], STATegRa [@gomez-cabrero2019], ...
+    Several methods use this approach: Momix [@cantini_benchmarking_2020], RGCCA [@tenenhaus2017], mixOmics [@rohart2017], STATegRa [@gomez-cabrero2019], ...
 
 -   Active module identification
 
-    Multiomic objective genetic algorithm (scores based in two metrics, node score and density of interactions score).
-    MOGAMUN [@novoa-del-toro2020]
+    Multiomic objective genetic algorithm (scores based in two metrics; node score and density of interactions score).
+    An example of a method using this approach is MOGAMUN [@novoa-del-toro2020]
 
 Usually depending on the mathematical framework used they return these methods return similar output.
 
@@ -606,9 +613,7 @@ Usually depending on the mathematical framework used they return these methods r
 
 According to the output the integration methods can be classified in several groups:
 
-For the network methods the following output is usually returned:
-
-Connection between the variables/nodes, a measure of how strong is the connection (or simply if there is a connection or if there isn't one).
+For the network methods the following output is usually returned: Connections between the variables/nodes, a measure of how strong is the connection (or simply if there is a connection or if there isn't one).
 
 For those from dimensional reduction methods there are three: Shared factor across the data, specific factors for each data or mixed factors.
 
@@ -651,30 +656,29 @@ Or by patient: how do interpret that in these patient variable A and B is X and 
 In a principal component analysis for instance how is interpreted that some variables have the same loading?
 What happens in a more difficult method like canonical correlation analysis?
 
-There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981].
-Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
+There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981\]. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset \[@chung_multi-omics_2019; @martinez-mira_mosim_2018].
 Which is used to compare the results of the integration with the dataset of interest and to compare different tools.
 These datasets are created with some relationships that the tools are expected to find.
 
 There exists several methods to create synthetic datasets like MOSim [@haberman2019], metaSPARSim [@patuzzi2019], CAMISIM [@fritz2019], ballgown [@fu2021], polyester [@frazee2021] and even edgeR [@mccarthy2012] can be used.
 These methods are useful to compare different setup and methods but they can miss some subtle not previously reported relations on real data.
 
-### Reviews and benchmarking
+### Reviews
 
 The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool for a research [@cantini_benchmarking_2020].
 
-Some of these reviews are focused on a specific type of data integration: metabolomics [@cavill2016], genomics [@mcgovern2015a], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies [@de_souza_ibd_2017; @tarazona2021a; @valles-colomer2016].
-On this regard there are several efforts to integrate data on IBD.
+Some of these reviews are focused on a specific type of data integration: metabolomics [@cavill2016\], genomics \[@mcgovern2015a\], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies \[@de_souza_ibd_2017; @tarazona2021a; @valles-colomer2016].
+On this regard there are several efforts to integrate data on IBD but no comprehensive review to date is known to the author.
 
-### Summary
+### Summary {#methods-integration}
 
-The field of integration is large and complex, with high interest in the recent days, specially in the psychology and omics field.
-As a method they are quite complex and diverse which hasn't stopped the growing interest on them to help answer complex questions.
-The differences between the many methods that exist do not make the interpretation of the results easier
+The field of integration is large and complex, with high interest over the last few years, specially in the psychology and omics field.
+As a methodology they are quite complex and diverse but there is a growing interest on them to help answer complex questions without using other complex tools like deep neuronal networks or other machine learning approches (despite not being incompatible).
 
 Methods to integrate have many characteristics, depending on the objectives and data that available.
-Regardless of the method used, interpretation and reporting is usually a main problem when using any of these methods.
-See Table 1 for a list of existing methods[^introduction-2].
+Regardless of the method used, interpretation and reporting is usually a main problem when using any of these methods as there are less people familiar with it.
+
+See table below for a list of existing methods[^introduction-2]:
 
 [^introduction-2]: Consulted on 2021/11/10 from <https://github.com/mikelove/awesome-multi-omics>
 
@@ -737,5 +741,7 @@ See Table 1 for a list of existing methods[^introduction-2].
 |            MEFISTO             |         [@velten2020]         |
 |           MultiPower           |        [@tarazona2020]        |
 |            mixedCCA            |         [@yoon2019a]          |
+
+: Integration methods available and their references.
 
 <!--# Check https://github.com/mikelove/awesome-multi-omics -->
