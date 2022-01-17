@@ -1,6 +1,9 @@
 # Discussion
 
-Transciptome is related to localizaion of the samples.
+Häsler data data were obtained using the same sequencing techniques from endoscopic biopsies as our dataset HSCT and Barcelona and it is of the same disease/field.
+The confirmation that it works on it it helped to continue forward.
+
+Transciptome is related to localization of the samples.
 
 Microbiome is more related to the disease and other variables of the patients.
 
