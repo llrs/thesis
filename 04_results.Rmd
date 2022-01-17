@@ -142,8 +142,7 @@ We can clearly see that they do not classify the samples according to the locati
 <!--# TODO: Show plot of the superblock result -->
 
 Adding one block containing the age of the patient and the severity of the tumor to the model, decreased the inner AVE.
-The best model with these blocks, according to the inner AVE, was that in which the interactions (1) within the host transcriptome, (2) between the host transcriptome
-and the localization, (3) between the host transcriptome and(4) the CGH and between the CGH and the other variables were 1, 1, 1/3 and 1/3, respectively.
+The best model with these blocks, according to the inner AVE, was that in which the interactions (1) within the host transcriptome, (2) between the host transcriptome and the localization, (3) between the host transcriptome and(4) the CGH and between the CGH and the other variables were 1, 1, 1/3 and 1/3, respectively.
 The first components of each model can be seen in the figure:
 
 <!--# TODO: Add figure 1C of paper -->
@@ -161,8 +160,7 @@ In contrast to the puget's dataset, the model with the highest inner AVE was mod
 Model 2.2 has a relationship of 0.1 between microbiome and the host transcriptome and of 1 between the location and the host transcriptome.
 The microbiome block is also related by a factor of 0.1 with the demographic block and of 1 with the time block.
 Lastly, the time and the demographic block are related by a factor of a 0.1.
-In either case the family 1 and family 2 models can correctly separate by sample location
-(colon or ileum) but not by disease type or inflammation status.
+In either case the family 1 and family 2 models can correctly separate by sample location (colon or ileum) but not by disease type or inflammation status.
 
 <!--# TODO: add figure 2 of the article -->
 
