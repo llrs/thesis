@@ -10,18 +10,19 @@ The processing protocol followed for those dataset that were not generated at Ho
 
 ## Datasets
 
-### Glioma dataset
+### Puget's dataset
 
-The glioma dataset came from diffuse intrinsic pontine glioma patients that included the host transcriptome analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F, patients copy number variation was processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using [Mutation Surveyor software](https://www.softgenetics.com/mutationSurveyor.php "Website of the software").
-In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor [@morgan2015a].
+The glioma dataset is the data provided as an example by the authors of RGCCA from a previous pulication [@puget2012].
+The data came from diffuse intrinsic pontine glioma patients that included the host transcriptome analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F, patients copy number variation was processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using [Mutation Surveyor software](https://www.softgenetics.com/mutationSurveyor.php "Website of the software").
+In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor [@puget2012].
 
-| Characteristic            | Morgan's |
+| Characteristic            | Puget's  |
 |---------------------------|----------|
 | Samples                   | 53       |
 | Sex (female/male)         | 28/25    |
 | Location (cort/dipg/midl) | 20/22/11 |
 
-: Table about Morgan's dataset
+: Table about Puget's dataset
 
 ### Häsler's dataset
 
@@ -366,7 +367,7 @@ This difference is later converted to enrichment score for each gene set for eac
 
 ### Other methods used
 
-#### adonis
+#### PERMANOVA
 
 The PERMANOVA method [@anderson2001; @warton2012], provided by the [vegan](https://cran.r-project.org/package=vegan) package on the `adonis` function, was used to test if microbiome data variance is due to other variables when using distances metrics.
 It uses the residual sum of squares such as:
@@ -390,9 +391,11 @@ This allows to test if the variables are related to the variance of the data as 
 This is particularly important on the microbiome data, which is highly variable.
 It was used to detect which variables were important to include in the models of the disease.
 
+Variables were tested together in an interaction model and also each one individually alone with the blocks of data.
+
 #### globaltest
 
-I tested which variables, (sex, age, location, time since diagnostic) are important on the datasets with [globaltest](https://bioconductor.org/packages/globaltest).
+I tested which variables, (sex, age, location, time since diagnostic, treatment) are important on the datasets with [globaltest](https://bioconductor.org/packages/globaltest).
 It is a package with methods for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
 It provides a general test statistic to test a hypothesis against a high dimensional dataset.
 
@@ -401,6 +404,8 @@ S = \sum_{i=1}^p x_i^{'} x_i g(t_i^2)
 $$
 
 The global test performs a test statistic on the tranformed t-test, where if $p$, the number of variables, is large the test is more powerful on average over all possible sparse alternatives of general functions $g$.
+
+It was performed with variables individually and also with interactions between the different variables.
 
 #### Diversity indices
 
@@ -563,6 +568,10 @@ And its components are: $w_{kij}=(x_{ki}-\overline{x}_i)(x_{kj}-\overline{x}_j)$
 
 There are different $g$ functions that could be used but the centroid method was chosen to detect both positive and negative relationships without more computational costs.
 
+Categorical data was encoded as binary (dummy) variables for each factor except one to keep degrees of freedom, where 0 indicates not present and 1 indicates present omitting one level.
+Each block, regardless if it had continuous numeric variables or dummy variables was standardized to zero mean and unit variance.
+Later, it was divided by the square root of the number of variables of the block for an unbiased estimation.
+
 ### Results
 
 RGCCA as other dimensional reduction techniques provides specific weights for each variable on each dimension and a sample score on each dimension, together with quality scores.
@@ -593,8 +602,6 @@ Later instead of a big metadata block, following our theory we split this metada
 This allows to design a model with an expected relationships between these dimensions and help make more interpretable the relationships.
 These models are from the family 2.
 
-For each family of models we tested all possible models to find the best model on each datasets.
-However, the dimension reduction methods, as well as, generalized canonical correlation analysis, can't identify causal relationships.
-Furthermore, there is no test to decide if a variable selected has some meaningful biological value.
+For each family of models we tested all possible models with weights between 0 and 1 (by 0.1 intervals) to find the best model on each datasets according to the AVE score.
 
-Models were further validated using a bootstrap approach to measure their accuracy and likelihood on the data available.
+The final models were further validated using a bootstrap approach to measure their accuracy and likelihood on the data available.
