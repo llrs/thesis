@@ -7,8 +7,8 @@ github-repo: "llrs/thesis"
 url: 'https\://thesis.llrs.dev'
 language:
   label:
-    fig: "Figure "
-    tab: "Table "
+    fig: !expr function(i) paste("Figure ", i)
+    tab: !expr function(i) paste("Table ", i)
   ui:
     edit: "Edit"
     view: "View"
