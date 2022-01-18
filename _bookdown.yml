@@ -1,10 +1,8 @@
-book_filename: "Data integration on inflammatory bowel disease"
 # output_dir: "docs" ## Needs to have its own url per https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch
 edit: https://github.com/llrs/thesis/edit/master/%s
 view: https://github.com/llrs/thesis/blob/master/%s
-new_session: yes
-github-repo: "llrs/thesis"
-url: 'https\://thesis.llrs.dev'
+# new_session: yes # No need for K-M strategy: https://bookdown.org/yihui/bookdown/new-session.html
+# book_filename: "thesis" # No need for this option if no K-M strategy is followed
 language:
   label:
     fig: !expr function(i) paste("Figure ", i)
