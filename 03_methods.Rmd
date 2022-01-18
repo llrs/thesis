@@ -10,7 +10,7 @@ The processing protocol followed for those dataset that were not generated at Ho
 
 ## Datasets
 
-### Puget's dataset
+### Puget's dataset {#methods-puget}
 
 The glioma dataset is the data provided as an example by the authors of RGCCA from a previous pulication [@puget2012].
 The data came from diffuse intrinsic pontine glioma patients that included the host transcriptome analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F, patients copy number variation was processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using [Mutation Surveyor software](https://www.softgenetics.com/mutationSurveyor.php "Website of the software").
@@ -24,7 +24,7 @@ In addition, this dataset contained information on age, localization of the tumo
 
 : Table about Puget's dataset
 
-### Häsler's dataset
+### Häsler's dataset {#methods-hasler}
 
 An IBD-related dataset was obtained by Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler.
 It included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy controls [@häsler2017].
@@ -38,7 +38,7 @@ The provided data included location, gender, location, age, and the status (infl
 
 : Table of Häsler's dataset
 
-### Morgan's dataset
+### Morgan's dataset {#methods-morgan}
 
 A previously published dataset from a pouchitis study was analyzed [@morgan2015b].
 The dataset has a total of 255 samples from 203 patients, containing data for both host transcriptome and intestinal microbiome.
@@ -53,7 +53,7 @@ The pouch ileum might be inflamed or not.
 
 : Table of Morgan's dataset
 
-### HSCT dataset
+### HSCT dataset {#methods-hsct}
 
 <!--# COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
 
@@ -83,7 +83,7 @@ The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen
 
 : Table of HSCT dataset.
 
-### BARCELONA dataset
+### BARCELONA dataset {#methods-barcelona}
 
 <!--# Adapted from the ethical committee submission-->
 
@@ -108,7 +108,7 @@ Anonymized identification of the patients, disease, sex age at diagnostic, age a
 
 : Table of samples included from the BARCELONA dataset.
 
-### Howell's dataset
+### Howell's dataset {#methods-howell}
 
 This dataset was downloaded after the publication of an article "DNA Methylation and Transcription Patterns in Intestinal Epithelial Cells From Pediatric Patients With Inflammatory Bowel Diseases Differentiate Disease Subtypes and Associate With Outcome" [@howell2018].
 
@@ -127,7 +127,7 @@ Data has the following characteristics: disease, age at diagnostic, age at the m
 
 : Table of samples included from Howell's dataset.
 
-### Hernández' dataset
+### Hernández' dataset {#methods-hernandez}
 
 This dataset was obtained after a collaboration "Integrative analysis of colonic biopsies from inflammatory bowel disease patients identifies an interaction between microbial bile-acid inducible gene abundance and human Angiopoietin-like 4 gene expression" [@hernández-rocha2021a].
 
