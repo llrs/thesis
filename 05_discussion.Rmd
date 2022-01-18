@@ -82,7 +82,7 @@ But the most important thing is to consider which variables are independent of w
 
 Quality of RNAseq analysis and 16S sequencing is important.
 Avoid contamination, same primers and read lengths (if using Illumina machines).
-Comparing 16S taxa ASV or OTUs is hard and selectying the right tool to compare them is important \[@nearing2022\] .
+Comparing 16S taxa ASV or OTUs is hard and selectying the right tool to compare them is important [@nearing2022].
 
 Some batch effects are avoidable due to the experDesign package.
 This might help to improve the quality of the datasets and to expand previously sequenced datasets.
