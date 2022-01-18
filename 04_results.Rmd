@@ -108,7 +108,7 @@ Together with a copy of the RGCCA packages with more tests has enabled to identi
 
 On the following sections the main results of analyzing each dataset are presented.
 
-### Puget's dataset
+### Puget's dataset {#results-puget}
 
 On this dataset the different parameters and capabilities of RGCCA were tested.
 
@@ -150,7 +150,7 @@ The first components of each model can be seen in the figure:
 We can observe on the figure, the strong dependency between gene expression and location since the first model while the weaker relationship with the CGH assay [@puget2012].
 On the other hand, the major difference is the dispersion on the CGH component on each model.
 
-### Häsler's dataset
+### Häsler's dataset {#results-hasler}
 
 In this dataset, the parameter tau behaved slightly differently than with the previous dataset but the value from the Schäfer's method for tau was close to the best value.
 
@@ -174,7 +174,7 @@ The AUC of classifying the transcriptome in colon or ileum segments was compared
 
 <!--# TODO: Include diversity index values -->
 
-### HSCT dataset
+### HSCT dataset {#results-hsct}
 
 The adonis analysis was performed on this dataset to estimate which were the variables that are more relevant.
 From the many variables the location, sex, patient id and others were found to be related to the variability of the microbiome or the transcriptome on this dataset.
@@ -197,18 +197,18 @@ Splitting by location of the sample and disease provided the highest differences
 
 <!--# TODO: explain why WGCNA didn't work out -->
 
-Weighted gene co-expression network analysis did not provide relevant links between bacterias and transcriptome as it failed to find an acceptable scale free degree.
+Weighted gene co-expression network analysis did not provide relevant links between bacteria and transcriptome as it failed to find an acceptable scale free degree.
 
 <!--# TODO: explain why STATegRa didn't work out -->
 
-When using STATegRa it didn't show
+STATegRa didn't show a value of.
 
 The models with the highest inner AVE of the family 1 and the family 2 models were similar to those on the Häsler dataset.
 The weights of these models can be observed here:
 
 <!--# TODO: Show tables of the models -->
 
-The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see [Fig 3](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone-0246367-g003) and [S2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002) data of [@revilla2021]).
+The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see Figure and [S2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002) data of [@revilla2021]).
 Overall, we see that the relationships in the model affected the distribution of samples on the components of both the host transcriptome and the microbiome.
 
 <!--# TODO Add figure about the components on our own dataset -->
@@ -234,7 +234,7 @@ The AUC of classifying the transcriptome in colon or ileum segments was compared
 With the bootstrapped models we used BaseSet to estimate the probability that each variable to be relevant for the association with a disease.
 However, due to big amount of small probabilities when using the BaseSet package to calculcate which variables are more relevant it couldn't provide a good estimation on time.
 
-### Morgan's dataset
+### Morgan's dataset {#results-morgan}
 
 We tested if results of inteRmodel were consistent on this dataset.
 
@@ -246,13 +246,15 @@ We tested if results of inteRmodel were consistent on this dataset.
 
 <!--# TODO: AUC comparison of RGCCA and MCIA -->
 
-### BARCELONA dataset
+### BARCELONA dataset {#results-barcelona}
 
 This dataset was processed but the results are not trustable as the microbiome diversity falls off the accepted values.
 
 Diversity plots
 
-### Howell's dataset
+<!--# TODO: Add plots of diversity -->
+
+### Howell's dataset {#results-howell}
 
 This dataset was processed to confirm the results on the previous datasets.
 
@@ -265,6 +267,6 @@ Model 2.2 was selected.
 
 <!--# TODO: show MCIA plots -->
 
-### Hernández' dataset
+### Hernández' dataset {#results-hernandez}
 
-This dataset was processed to confirm the resuls on the previous datasets.
+This dataset was processed to confirm the results on the previous datasets.
