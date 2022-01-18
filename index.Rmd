@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 documentclass: book
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
-# csl: bmc_bioinformatics.csl
+csl: bmc_bioinformatics.csl
 cover-image: images/R_logo_science.png
 link-citations: true
 split_by: chapter
