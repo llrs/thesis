@@ -29,11 +29,11 @@ However on the organoids dataset, the change on the method of producing them int
 ```{r experDesign, include=FALSE}
 library("dlstats")
 library("dplyr")
-cran_stats("experDesign") |> 
-  group_by(month = format(end, "%Y/%m")) |> 
-  summarise(d = sum(downloads)) |> 
-  ungroup() |> 
-  pull(d) |> 
+cran_stats("experDesign") %>% 
+  group_by(month = format(end, "%Y/%m")) %>% 
+  summarise(d = sum(downloads)) %>% 
+  ungroup() %>% 
+  pull(d) %>% 
   median()
 ```
 
@@ -74,11 +74,11 @@ The package passed the review on the rOpenSci organization ([See review](https:/
 ```{r BaseSet, include=FALSE}
 library("dlstats")
 library("dplyr")
-cran_stats("BaseSet") |> 
-  group_by(month = format(end, "%Y/%m")) |> 
-  summarise(d = sum(downloads)) |> 
-  ungroup() |> 
-  pull(d) |> 
+cran_stats("BaseSet") %>%  
+  group_by(month = format(end, "%Y/%m")) %>% 
+  summarise(d = sum(downloads)) %>% 
+  ungroup() %>% 
+  pull(d) %>% 
   median()
 ```
 
