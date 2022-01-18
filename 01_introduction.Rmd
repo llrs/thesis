@@ -51,7 +51,9 @@ Several explanations have been proposed as the origin of the disease [@zhang2014
 Some of them are based on a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire [@corralizaDifferencesPeripheralTissue].
 It is also unclear if Crohn's disease and the ulcerative colitis share the same origin considering their different symptoms.
 
-There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b; @satsangi2006c\]. Although so far it is not known what triggers the disease at different age, which provides some clues on the mechanism(s) of disease. There is a classification between very early, early or adult on-set disease \[@satsangi2006c\]. On very early on-set the genetic component is high (See \@ref(clinical-care-UC)). Genome-wide association studies (GWAS) have linked the IBD disease to *NOD2* gene, but so far there isn't any known mechanism how this gene could start the disease \[@horowitz2021].
+There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b; @satsangi2006c]. 
+Although so far it is not known what triggers the disease at different age, which provides some clues on the mechanism(s) of disease. There is a classification between very early, early or adult on-set disease [@satsangi2006c]. 
+On very early on-set the genetic component is high (See \@ref(clinical-care-UC)). Genome-wide association studies (GWAS) have linked the IBD disease to *NOD2* gene, but so far there isn't any known mechanism how this gene could start the disease [@horowitz2021].
 On early and adult disease the genetic component is lower than on very early on set and it is thought that the environmental factors are the main cause of the disease at those ages.
 
 Either case it is not known how it starts or it is sustained and causes those characteristics relapses.
@@ -66,7 +68,7 @@ This has lead to look for genetic factors on IBD both on general population and 
 Genome wide association studies (GWAS) is one of the most common genetic studies performed, together with methylation studies.
 They help discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.
 
-With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019\]. Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P-value \< 0.005) protective effects in ulcerative colitis \[@jostins2012; @momozawa2018].
+With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019]. Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P-value \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018].
 The mechanism of how this gene protects from ulcerative colitis has not been confirmed yet [@horowitz2021].
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
@@ -91,7 +93,7 @@ IBD has been characterized by a breakdown in the balance between beneficial and 
 Many studies show that patients with inflammatory bowel disease have less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
 $\alpha$-diversity is a measure of the species present on a single sample and how much of each taxonomic group is there.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004\]. At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest \[@kostic2014; @sender2016].
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004]. At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
 $\beta$-diversity compares the diversity between samples, which typically looks like a horse-shoe-like shape when reducing the distances to their first two dimensions via principal component analysis.
 
 <!--# Aida 2.3 p24-->
@@ -133,7 +135,8 @@ These cells usually come from the basal side of the crypt and mature as they mov
 
 <!--# From tesis Aida p20-->
 
-Immune response in the intestinal mucous is mainly excreted by the gut associated lymphoid tissue [@faria2012\]. Deregulation of the mucosal immune system has been associated with the pathogenesis of IBD \[@silva2016a; @demattos2015].
+Immune response in the intestinal mucous is mainly excreted by the gut associated lymphoid tissue [@faria2012].
+Deregulation of the mucosal immune system has been associated with the pathogenesis of IBD [@silva2016a; @demattos2015].
 Genetically predisposed patients when exposed to certain environmental factors activate immune responses against microbials or self-antigens which in turn, may impair the mucosal barrier of the intestinal mucosa, the first physical barrier on the mucosal surface.
 
 Both the adaptive and the innate immunity related cells are present on the intestine, right below the epithelium.
@@ -339,12 +342,12 @@ Furthermore several studies have been carried out to discover links between micr
 These studies, known as integration, multi-omic or interaction studies, usually use multiple sequencing assays as the bases of the analysis [@beck2021].
 
 However, confirming causal interactions of the variables of each essay is difficult.
-To find relationships some articles use correlation, like [@hasler_uncoupling_2016\], there are others that use a combination of methods from correlations, partial correlations to integrative methods \[@tang_integrated_2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations.
+To find relationships some articles use correlation, like [@hasler_uncoupling_2016], there are others that use a combination of methods from correlations, partial correlations to integrative methods [@tang_integrated_2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations.
 
 Very rarely there is an experimental confirmation of the relationships between variables of the different essays because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
 One of the few methods published that shows an interaction between genes and microorganisms on the inflammatory bowel disease is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
 
-### Data origin
+### Data origin {#data-origin}
 
 According to the data used, we can classify the studies:
 
@@ -404,7 +407,7 @@ Some of these methods are specific for one application or data while others are 
 Lately, the increase of bigger datasets with more variables and often from the same samples has increased the focus of the research community on the methodologies available on several disciplines but mainly on the biological science.
 The explosion of data on the biological science has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time, if done with multiple sequencing tecnologies it is usually referred as multi-omics methods, which usually only integrate omic data.
 
-It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019\]. Part of these efforts uses the methods' strategies to classify them \[@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
+It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019]. Part of these efforts uses the methods' strategies to classify them [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
 Following this view I'll review the integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
 
 ### Classification of integration method's
@@ -599,7 +602,7 @@ Some of them have previously appeared:
     Network embedding MultiVERSE are some of the methods using networks [@pio-lopez2021].
 
     Bayesian approaches are also quite frequent, these methods use the Bayes theorem to see the relationships between variables.
-    Some methods that use these approaches are [RIMBANET](http://research.mssm.edu/integrative-network-biology/RIMBANET/RIMBANET_overview.html) [@zhu2012], [BCC](https://github.com/ttriche/bayesCC) [@lock2013] and others like \[@virtanen2012\].
+    Some methods that use these approaches are [RIMBANET](http://research.mssm.edu/integrative-network-biology/RIMBANET/RIMBANET_overview.html) [@zhu2012], [BCC](https://github.com/ttriche/bayesCC) [@lock2013] and others like [@virtanen2012].
 
 -   Dimensional Reduction
 
@@ -664,7 +667,7 @@ Or by patient: how do interpret that in these patient variable A and B is X and 
 In a principal component analysis for instance how is interpreted that some variables have the same loading?
 What happens in a more difficult method like canonical correlation analysis?
 
-There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981\]. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset \[@chung_multi-omics_2019; @martinez-mira_mosim_2018].
+There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981]. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
 Which is used to compare the results of the integration with the dataset of interest and to compare different tools.
 These datasets are created with some relationships that the tools are expected to find.
 
@@ -675,7 +678,7 @@ These methods are useful to compare different setup and methods but they can mis
 
 The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool for a research [@cantini_benchmarking_2020].
 
-Some of these reviews are focused on a specific type of data integration: metabolomics [@cavill2016\], genomics \[@mcgovern2015a\], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies \[@de_souza_ibd_2017; @tarazona2021a; @valles-colomer2016].
+Some of these reviews are focused on a specific type of data integration: metabolomics [@cavill2016], genomics [@mcgovern2015a], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies [@de_souza_ibd_2017; @tarazona2021a; @valles-colomer2016].
 On this regard there are several efforts to integrate data on IBD but no comprehensive review to date is known to the author.
 
 ### Summary {#methods-integration}
