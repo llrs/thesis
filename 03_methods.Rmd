@@ -448,6 +448,32 @@ It was used as a baseline method to compare the RGCCA integration.
 
 To explore how much do different blocks of a dataset have in common [STATegRa](https://bioconductor.org/packages/STATegRa) was used [@planell2021].
 It is a framework for integrating datasets with two data types using parametric and non-parametric methods.
+The methods used are omics component analysis based on singular value decomposition (SVD) of the data matrix.
+There are three different methods provided to this end: *DISCO-SCA*, *JIVE* and *O2PLS*.
+
+On DISCO-SCA it uses:
+
+$$
+X_k = TP_k ^ T + E_k
+$$
+
+with $T$ the $I \times R$ matrix of components scores that is shared between all blocks and $P_k$ the $J_k \times R$ matrix of components loadings for block $k$.
+
+Let $X_1,X_2, \dots X_i$ be blocks of data and $X=[X_1,X_2, \dots X_i]$ represent the joint data, then the JIVE decomposition is defined as: 
+
+$$X_i=J_i+A_i+\epsilon_i \text{, }i = 1,2, \dots$$
+
+where $J=[J_1,J_2, \dots J_i]$ is the $p \times n$ matrix of rank $r<rank(X)$ representing the joint structure, $A_i$ is the $p_i\times n$ matrix of rank $r_i < rank(X_i)$ representing the individual structure of $X_i$ and $\epsilon_i$ are $p_i \times n$ error matrices of independent entries.
+
+Finally, the O2PLS approach uses multiple linear regression to estimate the pure constituent profiles and divides the systematic part into two, one common to both blocks and one not. The O2PLS model can be written as a factor analysis where some factors are common between both blocks.
+
+$$
+\text{X model: } X = TW ^ T + T_{Y-ortho} P ^ T_{Y-ortho} + E \\ 
+\text{Y model: } Y = UC ^ T + U_{X-ortho} P ^ T_{X-ortho} + F \\ 
+\text{Inner relation: } U = T + H
+$$
+
+Were each model is build similarly by adding the subtraction of the projected values of the other component  keeping the relationship between them as stated on the third line.
 
 #### BaseSet
 
