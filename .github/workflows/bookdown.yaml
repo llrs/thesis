@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         shell: bash
-        run: Rscript -e "install.packages('bookdown', 'dlstats', 'tidyverse')"
+        run: Rscript -e "install.packages(c('bookdown', 'dlstats', 'tidyverse'))"
 
       # - name: Setup Debug Session
       #   uses: csexton/debugger-action@v1
