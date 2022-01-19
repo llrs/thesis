@@ -21,5 +21,3 @@ Identify microorganisms and genes related to the inflammatory bowel disease.
     -   Related to both
 
 -   Effect of the genes and microorganisms related to the inflammatory bowel disease.
-
-    -   Identify causal relationships between genes and microorganisms.
