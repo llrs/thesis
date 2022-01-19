@@ -5,6 +5,8 @@ date: "`r Sys.Date()`"
 documentclass: book
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
+github-repo: "llrs/thesis"
+url: 'https\://thesis.llrs.dev'
 csl: bmc_bioinformatics.csl
 cover-image: images/R_logo_science.png
 link-citations: true
@@ -43,12 +45,16 @@ They provided advice and guidance on how to analyse the data and where to focus 
 
 # Abstract {.unnumbered}
 
-**Introduction** IBD is complex.
+**Introduction**: Inflammatory bowel disease is a complex disease with several factors that affect each other. 
+The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine. 
+Finding those relationships will help to advance treatments, diagnosis or prevent it. 
 
-**Methods**:Simple methods are not robust.
+**Methods**: To identify these relationships we based our analysis on intestinal bacterial 16S data and human transcriptome from biopsies. 
+We used canonical correlation analysis to find models that are coherent with previous knowledge on the biologiy of the disease and provide insights on the relationships between bacteria and genes. 
 
-**Results** Compared methods, our robust and consistent.
+**Results**: We compared our own methods with previously published methods, mainly MCIA, to assess the advantages and disadvantages of the different proposed relationships. 
+Furthermore, the classification of samples was used to find which methods provide are more accurate. 
 
-**Discussion** Biological relevance, difficult.
+**Discussion**: Biological relevance, difficult.
 
-**Conclusion** Chips or further tests.
+**Conclusion**: Chips or further tests.

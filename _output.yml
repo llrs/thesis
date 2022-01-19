@@ -15,8 +15,6 @@ bookdown::gitbook:
       before: |
         <li><strong><a href="./">Data integration on IBD</a></strong></li>
     download: [pdf, epub]
-    view: https://github.com/llrs/thesis/blob/master/%s
-    edit: https://github.com/llrs/thesis/edit/master/%s
     sharing:
       github:
         href: https://github.com/llrs/thesis/
