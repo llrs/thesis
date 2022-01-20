@@ -24,35 +24,6 @@ In addition, this dataset contained information on age, localization of the tumo
 
 : Table about Puget's dataset
 
-### Häsler's dataset {#methods-hasler}
-
-An IBD-related dataset was obtained by Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler.
-It included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy controls [@häsler2017].
-The provided data included location, gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.
-
-| Characteristic                 | Häsler's |
-|--------------------------------|----------|
-| Samples (non-disease/diseased) | 33/26    |
-| Sex (female/male)              | 42/17    |
-| Location (ileum/colon)         | 30/29    |
-
-: Table of Häsler's dataset
-
-### Morgan's dataset {#methods-morgan}
-
-A previously published dataset from a pouchitis study was analyzed [@morgan2015b].
-The dataset has a total of 255 samples from 203 patients, containing data for both host transcriptome and intestinal microbiome.
-This dataset included anonymous identifiers for the patients, whether the sample was from the pre-pouch ileum (PPI) or from the pouch, the sex, the outcome of the procedure and an inflammatory severity score ISCORE.
-The pouch ileum might be inflamed or not.
-
-| Characteristic                | Morgan's |
-|-------------------------------|----------|
-| Samples                       | 255      |
-| Sex individuals (female/male) | 101/102  |
-| Location (Pouch/PPI)          | 59/196   |
-
-: Table of Morgan's dataset
-
 ### HSCT dataset {#methods-hsct}
 
 <!--# COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
@@ -82,6 +53,36 @@ The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen
 | CDAI: mean (min-max)                    | 120 (0-450  |
 
 : Table of HSCT dataset.
+
+
+### Häsler's dataset {#methods-hasler}
+
+An IBD-related dataset was obtained by Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler.
+It included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy controls [@häsler2017].
+The provided data included location, gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.
+
+| Characteristic                 | Häsler's |
+|--------------------------------|----------|
+| Samples (non-disease/diseased) | 33/26    |
+| Sex (female/male)              | 42/17    |
+| Location (ileum/colon)         | 30/29    |
+
+: Table of Häsler's dataset
+
+### Morgan's dataset {#methods-morgan}
+
+A previously published dataset from a pouchitis study was analyzed [@morgan2015b].
+The dataset has a total of 255 samples from 203 patients, containing data for both host transcriptome and intestinal microbiome.
+This dataset included anonymous identifiers for the patients, whether the sample was from the pre-pouch ileum (PPI) or from the pouch, the sex, the outcome of the procedure and an inflammatory severity score ISCORE.
+The pouch ileum might be inflamed or not.
+
+| Characteristic                | Morgan's |
+|-------------------------------|----------|
+| Samples                       | 255      |
+| Sex individuals (female/male) | 101/102  |
+| Location (Pouch/PPI)          | 59/196   |
+
+: Table of Morgan's dataset
 
 ### BARCELONA dataset {#methods-barcelona}
 
