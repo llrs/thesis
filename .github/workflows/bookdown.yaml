@@ -21,6 +21,9 @@ jobs:
           use-public-rspm: true
 
       - uses: r-lib/actions/setup-renv@v2
+      - name: Install system dependencies
+        shell: bash
+        run: sudo apt-get install libcurl4-openssl-dev
 
       - name: Install dependencies
         shell: bash
