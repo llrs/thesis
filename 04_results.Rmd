@@ -114,15 +114,25 @@ On this dataset the different parameters and capabilities of RGCCA were tested.
 
 Different methods, centroid, factorial or horst were tested.
 
-<!--# TODO: show plots and numbers -->
 
-The effect of the sparsity value was measured by the number of variables selected and its effect on the AVE scores.
 
-<!--# TODO Show numbers or plot -->
+The effect of the sparsity value was measured by its effect on the AVE scores.
 
-Exploratory analysis with the superblock model was done.
-It was used to look for a good model from the data itself.
+![(fig:tau2AVE) Effect of tau on the inner AVE](images/pugets_tau_to_AVE.png)
+
+Exploratory analysis with the superblock model was done. 
+The first two components of the suprblock didn't help to explain the biology or classify the tumors:
+
+![(fig:superblock) First components of the superblock](images/pugets_superblock.png)
+
+
+The same data was used to look for a good model from the data itself including a model with a superblock.
 Also different models without the superblock were explored.
+
+![(fig:pugets-models) Different models tried with the same data showing the first components of the CGH data and the transcriptome. ](images/pugets_models.png)
+
+Showing the components of the CGH and the transcriptomics of the superblock show better classification than that of the superblcok.
+However the other models show a better classification of the samples with much simpler models.
 
 <!--# Slightly modified from the article!! -->
 
@@ -145,10 +155,86 @@ Adding one block containing the age of the patient and the severity of the tumor
 The best model with these blocks, according to the inner AVE, was that in which the interactions (1) within the host transcriptome, (2) between the host transcriptome and the localization, (3) between the host transcriptome and(4) the CGH and between the CGH and the other variables were 1, 1, 1/3 and 1/3, respectively.
 The first components of each model can be seen in the figure:
 
-<!--# TODO: Add figure 1C of paper -->
+![(fig:pugets-models-bis) Different models tried with the same data showing the first components of the CGH data and the transcriptome. ](images/pugets_models.png)
 
 We can observe on the figure, the strong dependency between gene expression and location since the first model while the weaker relationship with the CGH assay [@puget2012].
 On the other hand, the major difference is the dispersion on the CGH component on each model.
+
+The effect of the superblock and weights on different models to the inner AVE.
+![(fig:pugets-weights) Effect of superblock and weights on the inner AVE](images/pugets-weights.png)
+
+
+### HSCT dataset {#results-hsct}
+
+The adonis analysis was performed on this dataset to estimate which were the variables that are more relevant.
+From the many variables the location, sex, patient id and others were found to be related to the variability of the microbiome or the transcriptome on this dataset.
+
+<!--# From gourmiting 2 2018-03-13 -->
+
+With the permanova analysis we found that 80% and 90% of the variance of normalized RNA-seq data and microbiome data respectively is explained by the variables of location, time point in the treatment, patient id, sex and treatment.
+On the transcriptome the most important factor is location which is more than 50% of the variance, while on the microbiome data the most important factor is the patient id.
+
+<!-- # Image with the results for a table and to explain main factors of interaction-->
+![](images/hsct-adonis.png)
+
+<!--# global test from the comments on TRIM/intestinal_16S_RNAseq_metadb/variance.R -->
+
+With globaltest the results were similar.
+The resulting p-value was well below the 0,05 threshold defined for RNA-seq data on the models including the segment of the sample, sex and treatment.
+![](images/hsct-globaltest.png)
+On the microbiome data the results were similar but the p-value was considerably higher but still below the threshold.
+
+<!--# TODO: Include diversity index values -->
+![](images/hsct-ASV-diversity.png)
+
+Diversity indices of the samples were explored and compared for several subsets.
+Splitting by location of the sample and disease provided the highest differences and the diversity index along time did not change much.
+
+<!--# TODO: explain why WGCNA didn't work out -->
+
+Weighted gene co-expression network analysis did not provide relevant links between bacteria and transcriptome as it failed to find an acceptable scale free degree.
+
+<!--# TODO: explain why STATegRa didn't work out -->
+
+STATegRa didn't show a value of, the assumption that there is a shared common factor without influence of other categorical variables was too much. In addition, the model is fixed, so it didn't allow to find new or other relationships that are not one to one. 
+
+With RGCCA we could select different models and use all the data available without much assumptions. 
+The models with the highest inner AVE of the family 1 and the family 2 models were similar to those on the Häsler dataset.
+The weights of these models can be observed here:
+
+<!--# TODO: Show tables of the models -->
+
+The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see Figure and [S2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002) data of [@revilla2021]).
+Overall, we see that the relationships in the model affected the distribution of samples on the components of both the host transcriptome and the microbiome.
+
+<!--# TODO Add figure about the components on our own dataset -->
+
+The different models selected different variables, some of which are shared between models.
+The most similar models are those that have split the metadata into 3 blocks, followed by those that have the metadata in a single block.
+
+In order to analyze the accuracy of the models, one thousand bootstraps were used to integrate the data from the HSCT CD dataset.
+Each model had its own dispersion on the same bootstrapped samples that can be find here:
+
+<!--# TODO: Add plot of bootstraps -->
+![](images/hsct-bootstrap-characteristics.png)
+
+This lead to a dispersion on the score of the model.
+The lower the dispersion, the more robust the model was to different conditions than in the initial testing.
+
+![](images/hsct-bootstrap.png)
+
+MCIA was applied as a baseline of the integration.
+
+<!--# TODO: Include plot with the result -->
+![](images/paper1_MCIA.png)
+
+The AUC of classifying the transcriptome in colon or ileum segments was compared between the two methods.
+
+<!--# TODO: Add plot of the comparison of AUC -->
+![](images/paper1_MCIA.png)
+
+With the bootstrapped models we used BaseSet to estimate the probability that each variable to be relevant for the association with a disease.
+However, due to big amount of small probabilities when using the BaseSet package to calculcate which variables are more relevant it couldn't provide a good estimation on time.
 
 ### Häsler's dataset {#results-hasler}
 
@@ -174,66 +260,6 @@ The AUC of classifying the transcriptome in colon or ileum segments was compared
 
 <!--# TODO: Include diversity index values -->
 
-### HSCT dataset {#results-hsct}
-
-The adonis analysis was performed on this dataset to estimate which were the variables that are more relevant.
-From the many variables the location, sex, patient id and others were found to be related to the variability of the microbiome or the transcriptome on this dataset.
-
-<!--# From gourmiting 2 2018-03-13 -->
-
-With the permanova analysis we found that 80% and 90% of the variance of normalized RNA-seq data and microbiome data respectively is explained by the variables of location, time point in the treatment, patient id, sex and treatment.
-On the transcriptome the most important factor is location which is more than 50% of the variance, while on the microbiome data the most important factor is the patient id.
-
-<!--# global test from the comments on TRIM/intestinal_16S_RNAseq_metadb/variance.R -->
-
-With globaltest the results were similar.
-The resulting p-value was well below the 0,05 threshold defined for RNA-seq data on the models including the segment of the sample, sex and treatment.
-On the microbiome data the results were similar but the p-value was considerably higher but still below the threshold.
-
-<!--# TODO: Include diversity index values -->
-
-Diversity indices of the samples were explored and compared for several subsets.
-Splitting by location of the sample and disease provided the highest differences and the diversity index along time did not change much.
-
-<!--# TODO: explain why WGCNA didn't work out -->
-
-Weighted gene co-expression network analysis did not provide relevant links between bacteria and transcriptome as it failed to find an acceptable scale free degree.
-
-<!--# TODO: explain why STATegRa didn't work out -->
-
-STATegRa didn't show a value of.
-
-The models with the highest inner AVE of the family 1 and the family 2 models were similar to those on the Häsler dataset.
-The weights of these models can be observed here:
-
-<!--# TODO: Show tables of the models -->
-
-The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see Figure and [S2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002) data of [@revilla2021]).
-Overall, we see that the relationships in the model affected the distribution of samples on the components of both the host transcriptome and the microbiome.
-
-<!--# TODO Add figure about the components on our own dataset -->
-
-The different models selected different variables, some of which are shared between models.
-The most similar models are those that have split the metadata into 3 blocks, followed by those that have the metadata in a single block.
-
-In order to analyze the accuracy of the models, one thousand bootstraps were used to integrate the data from the HSCT CD dataset.
-Each model had its own dispersion on the same bootstrapped samples
-
-<!--# TODO: Add plot of bootstraps -->
-
-The lower the dispersion, the more robust the model was to different conditions than in the initial testing.
-
-MCIA was applied as a baseline of the integration.
-
-<!--# TODO: Include plot with the result -->
-
-The AUC of classifying the transcriptome in colon or ileum segments was compared between the two methods.
-
-<!--# TODO: Add plot of the comparison of AUC -->
-
-With the bootstrapped models we used BaseSet to estimate the probability that each variable to be relevant for the association with a disease.
-However, due to big amount of small probabilities when using the BaseSet package to calculcate which variables are more relevant it couldn't provide a good estimation on time.
-
 ### Morgan's dataset {#results-morgan}
 
 We tested if results of inteRmodel were consistent on this dataset.
@@ -242,7 +268,11 @@ We tested if results of inteRmodel were consistent on this dataset.
 
 <!--# TODO: Table of models -->
 
+![(fig:morgans-models) First component of the transcriptone and microbiome of the Morgan's dataset.](images/morgans_models.png)
+
 <!--# TODO: MCIA plot-->
+
+![(fig:morgans-bootstrap) Inner and outer AVE scores of the bootstrapped models.](images/morgans_bootstrap.png)
 
 <!--# TODO: AUC comparison of RGCCA and MCIA -->
 
