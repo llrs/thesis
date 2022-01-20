@@ -91,6 +91,8 @@ This might help to improve the quality of the datasets and to expand previously 
 
 It is hard to provide more information that can be later used by researchers on the wet lab.
 
+Paper about using transcriptomics to infer inflammation without colonoscopy \[@ungar2022\]
+
 There is a disconnect between the computational side and the experimental side, driven by the difficulty to think an experiment to test the new information that multi-omic experiments provide.
 
 Many combinations possible that are hard to explore, further research on how to reduce the space of possible combinations of bacteria or evaluate which combinations are more important might be useful on the future.
