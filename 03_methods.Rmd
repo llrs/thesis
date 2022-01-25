@@ -469,9 +469,12 @@ where $J=[J_1,J_2, \dots J_i]$ is the $p \times n$ matrix of rank $r<rank(X)$ re
 Finally, the O2PLS approach uses multiple linear regression to estimate the pure constituent profiles and divides the systematic part into two, one common to both blocks and one not. The O2PLS model can be written as a factor analysis where some factors are common between both blocks.
 
 $$
-\text{X model: } X = TW ^ T + T_{Y-ortho} P ^ T_{Y-ortho} + E \\ 
-\text{Y model: } Y = UC ^ T + U_{X-ortho} P ^ T_{X-ortho} + F \\ 
-\text{Inner relation: } U = T + H
+\begin{equation} 
+ \(\text{X model: } X = TW ^ T + T_{Y-ortho} P ^ T_{Y-ortho} + E) \\ 
+ \(\text{Y model: } Y = UC ^ T + U_{X-ortho} P ^ T_{X-ortho} + F) \\
+ \(\text{Inner relation: } U = T + H)
+(\#eq:STATegRA-o2pls)
+\end{equation} 
 $$
 
 Were each model is build similarly by adding the subtraction of the projected values of the other component  keeping the relationship between them as stated on the third line.
