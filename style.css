@@ -20,7 +20,7 @@
 
 /*Align caption to the right and change color*/
 p.caption {
-  text-align: right;
+  text-align: center;
   color: darkgrey;
   font-style: bold;
 }

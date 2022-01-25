@@ -4,9 +4,6 @@ view: https://github.com/llrs/thesis/blob/master/%s
 # new_session: yes # No need for K-M strategy: https://bookdown.org/yihui/bookdown/new-session.html
 # book_filename: "thesis" # No need for this option if no K-M strategy is followed
 language:
-  label:
-    fig: !expr function(i) paste("Figure ", i)
-    tab: !expr function(i) paste("Table ", i)
   ui:
     edit: "Edit"
     view: "View"
