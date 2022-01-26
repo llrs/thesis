@@ -246,38 +246,40 @@ In this dataset, the parameter tau behaved slightly differently than with the pr
 
 <!--# TODO: Show how different/what happened with tau -->
 
-In contrast to the puget's dataset, the model with the highest inner AVE was model 1.2 .
+In contrast to the HSCT's dataset, the model with the highest inner AVE was model 1.2 (inner AVE value of ) but model 2.2 was close to it (inner AVE of ).
 Model 2.2 has a relationship of 0.1 between microbiome and the host transcriptome and of 1 between the location and the host transcriptome.
 The microbiome block is also related by a factor of 0.1 with the demographic block and of 1 with the time block.
 Lastly, the time and the demographic block are related by a factor of a 0.1.
-In either case the family 1 and family 2 models can correctly separate by sample location (colon or ileum) but not by disease type or inflammation status.
-
-<!--# TODO: add figure 2 of the article -->
+In either case the family 1 and family 2 models can correctly separate by sample location (colon or ileum) but not by disease type or inflammation status as can be seen below.
 
 ![(#fig:hasler-models) Models on the Häsler's dataset](images/hasler-models.png)
 
-The model 2.2 clearly separated ileum and sigma segments on the transcriptome component as expected.
-Not a single models separates the different type of samples, and there is no observable cluster of IBD samples and the other samples.
+There is no observable cluster of IBD samples and the other samples, showing that on this dataset the differences of the microbiome between the different type of samples are less stark.
 
-MCIA was applied as a baseline of the integration.
+MCIA was applied as a baseline of the integration and compared to the different models to know which one separates best colon and ileum samples.
 
 ![ROC curve of the different datasets with the models from RGCCA and the result with MCIA](images/paper1_MCIA.png){alt="ROC curve of the different datasets with the models from RGCCA and the result with MCIA"}
 
-The AUC of classifying the transcriptome in colon or ileum segments was compared between the two methods.
+MCIA results was high but not as high as the model 2.2.
 
 ### Morgan's dataset {#results-morgan}
 
 We tested if results of inteRmodel were consistent on this dataset.
-
-<!--# TODO: RGCCA plots of models -->
+The different models weren't able to separate the samples neither by location or sex.
 
 <!--# TODO: Table of models -->
 
 ![(#fig:morgans-models) First component of the transcriptone and microbiome of the Morgan's dataset.](images/morgans_models.png)
 
+Nevertheless we compared the classification with the MCIA algorithm and still resulted that model 2.2 provide a better classification than MCIA.
+
+When exploring the bootstraps of the data we found that model 1.2 is highly variable:
+
 <!--# TODO: MCIA plot-->
 
 ![(#fig:morgans-bootstrap) Inner and outer AVE scores of the bootstrapped models.](images/morgans_bootstrap.png)
+
+In addition the model 2.2 usually has a lower inner AVE compared to model 1.2.
 
 <!--# TODO: AUC comparison of RGCCA and MCIA -->
 
