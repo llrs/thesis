@@ -26,7 +26,7 @@ Since its development it has been used on a couple of batch designs, one for org
 On both cases it worked well and no batch effect were created when sequencing samples.
 However on the organoids dataset, the change on the method of producing them introduced a batch effect that made it impposible to compare samples before and after that change.
 
-```{r experDesign, include=FALSE}
+```{r experDesign, include=FALSE, eval=FALSE}
 library("dlstats")
 library("dplyr")
 cran_stats("experDesign") %>% 
@@ -71,7 +71,7 @@ The different approaches were presented at a birds of feather on BioC2019.
 
 The package passed the review on the rOpenSci organization ([See review](https://github.com/ropensci/software-review/issues/359 "Review on Github")) and now is part of the packages hosted there too.
 
-```{r BaseSet, include=FALSE}
+```{r BaseSet, include=FALSE, eval = FALSE}
 library("dlstats")
 library("dplyr")
 cran_stats("BaseSet") %>%  
@@ -123,7 +123,7 @@ The effect of the sparsity value was measured by its effect on the inner AVE sco
 ![(#fig:tau2AVE) Effect of tau on the inner AVE. The suggested tau value is the column between the regular grid.](images/pugets_tau_to_AVE.png)
 
 Exploratory analysis with the superblock model was done.
-The first two components of the suprblock didn't help to explain the biology or classify the tumors:
+The first two components of the superblock didn't help to explain the biology or classify the tumors:
 
 ![(#fig:superblock) First components of the superblock](images/pugets_superblock.png)
 
@@ -132,7 +132,7 @@ This allowed to visually inspect if each model's components helped to classify t
 
 ![(#fig:pugets-models) Different models tried with the same data showing the first components of the CGH data and the transcriptome.](images/pugets_models.png)
 
-Showing the components of the CGH and the transcriptomics of the superblock show better classification than that of the superblcok.
+Showing the components of the CGH and the transcriptomics of the superblock show better classification than that of the superblock.
 However the other models show a better classification of the samples with much simpler models.
 
 <!--# Slightly modified from the article!! -->
@@ -168,10 +168,10 @@ From the many variables the location, sex, patient id and others were found to b
 
 <!--# From gourmiting 2 2018-03-13 -->
 
-With the permanova analysis we found that 80% and 90% of the variance of normalized RNA-seq data and microbiome data respectively is explained by the variables of location, disease, sex, and the interaction between disease and sex.
-On the transcriptome the most important factor is location which is more than 50% of the variance, while on the microbiome data the most important factor is the patient id.
+With the permanova analysis we found that more of the 50% of the variance of normalized RNA-seq data and microbiome data respectively is explained by the variables of location, disease, sex, and the interaction between disease and sex.
+On the transcriptome the most important factor is location which is more than 15% of the variance, while on the microbiome data the most important factor is the patient id followed by location of the sample.
 
-<!-- # Image with the results for a table and to explain main factors of interaction-->
+<!-- # Data on TRIM/intestinal_16S_RNAseq_metadb/models.RData and on TRIM/intestinal_16S_RNAseq_metadb/variance.R-->
 
 ![](images/hsct-adonis.png)
 
@@ -179,7 +179,10 @@ On the transcriptome the most important factor is location which is more than 50
 
 With globaltest the results were similar.
 The resulting p-value was well below the 0,05 threshold defined for RNA-seq data on the models including the segment of the sample, sex and treatment.
-![](images/hsct-globaltest.png) On the microbiome data the results were similar but the p-value was considerably higher but still below the threshold.
+
+![](images/hsct-globaltest.png)
+
+On the microbiome data the results were similar but the p-value was considerably higher but still below the threshold.
 
 <!--# TODO: Include diversity index values -->
 
@@ -219,16 +222,16 @@ Each bootstrap had its own dispersion on the variables according to the samples 
 Evaluating the same model on each bootstrap lead to a dispersion on the inner AVE of the model.
 The lower the dispersion, the more robust the model was to different conditions than in the initial testing.
 
-![The point with the black circle is the AVE of the original data. The dispresion is shown by the elipses](images/hsct-bootstrap.png)
+![The point with the black circle is the AVE of the original data. The dispersion is shown by the ellipses](images/hsct-bootstrap.png)
 
 With the bootstrapped models we used BaseSet to estimate the probability that each variable to be relevant for the association with a disease.
-However, due to big amount of small probabilities when using the BaseSet package to calculcate which variables are more relevant it couldn't provide a good estimation on time.
+However, due to big amount of small probabilities when using the BaseSet package to calculate which variables are more relevant it couldn't provide a good estimation on time.
 
 MCIA was applied as a baseline of the integration, the first two components were represented similarly to those of the blocks when using RGCCA.
 
 <!--# TODO: Include plot with the result -->
 
-![MCIA first two syntetic variables on the IBD related cohorts.](images/paper1_MCIA.png)
+![MCIA first two synthetic variables on the IBD related cohorts.](images/paper1_MCIA.png)
 
 The AUC of classifying the transcriptome in colon or ileum segments was compared between the two methods.
 
@@ -267,9 +270,7 @@ MCIA results was high but not as high as the model 2.2.
 We tested if results of inteRmodel were consistent on this dataset.
 The different models weren't able to separate the samples neither by location or sex.
 
-<!--# TODO: Table of models -->
-
-![(#fig:morgans-models) First component of the transcriptone and microbiome of the Morgan's dataset.](images/morgans_models.png)
+![(#fig:morgans-models) First component of the transcriptome and microbiome of the Morgan's dataset.](images/morgans_models.png)
 
 Nevertheless we compared the classification with the MCIA algorithm and still resulted that model 2.2 provide a better classification than MCIA.
 
@@ -298,12 +299,30 @@ This dataset was processed to confirm the results on the previous datasets.
 Model 1.2 was the best according to the AVE score but perform worse when attempting to recreate known biological differences via classifying samples.
 Model 2.2 was selected.
 
-<!--# TODO: show models -->
+![(#fig:howells-models) The three main models on the Howells dataset. Colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease.](images/howells_models.png)
 
-<!--# TODO: show bootstraps -->
+Model 1.2 has a 0.1 relationship between the ASV and the transcriptome and 1 between transcriptome and metadata.
+While model 2.2 has a relationship of 1 between location and transcriptome and demographics and ASV but only of 0.1 between demographics and location.
+
+![(#fig:howells_bootstrap) Bootstrap of the different models.](images/howells_models_bootstrap.png)
 
 <!--# TODO: show MCIA plots -->
+
+On this dataset we also focused on the most important ASV according to the model 2.2 that were present in more than 2 samples that in total were present in the whole dataset.
+These ASV were summarized to a single value and then used to calculate the AUC, which was 0.85.
+The dot product of the ASV and genes were also calculated and used to find out which ASV are related to which genes.
+
+<!--# TODO continue/fix this -->
 
 ### Hernández' dataset {#results-hernandez}
 
 This dataset was processed to confirm the results on the previous datasets.
+
+The models are.
+Model 1.2 is, model 2.2.
+
+<!--# TODO models -->
+
+<!--# TODO: Bootstrap -->
+
+<!--# TODO MCIA -->
