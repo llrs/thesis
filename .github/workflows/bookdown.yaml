@@ -28,7 +28,7 @@ jobs:
         with:
           path: |
             /home/runner/work/_temp/Library
-          key: ${{ runner.os }}-1
+          key: packages-${{ runner.os }}-1
 
   web:
     needs: bookdown
@@ -39,7 +39,8 @@ jobs:
       - name: Reload cache
         uses: actions/cache@v2
         with:
-          restore-keys: ${{ runner.os }}-1
+          key: packages-${{ runner.os }}-1
+          restore-keys: packages-${{ runner.os }}-1
 
       - name: Build site
         shell: bash
@@ -65,7 +66,8 @@ jobs:
       - name: Reload cache
         uses: actions/cache@v2
         with:
-          restore-keys: ${{ runner.os }}-1
+          key: packages-${{ runner.os }}-1
+          restore-keys: packages-${{ runner.os }}-1
 
       - name: Build epub
         shell: bash
@@ -91,7 +93,8 @@ jobs:
       - name: Reload cache
         uses: actions/cache@v2
         with:
-          restore-keys: ${{ runner.os }}-1
+          key: packages-${{ runner.os }}-1
+          restore-keys: packages-${{ runner.os }}-1
 
       - name: Build pdf
         shell: bash
