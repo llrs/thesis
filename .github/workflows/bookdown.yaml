@@ -20,7 +20,8 @@ jobs:
         with:
           use-public-rspm: true
 
-      - uses: r-lib/actions/setup-renv@v2
+      - name: Install bookdown
+        run: Rscript -e "install.packages('bookdown')"
 
       # - name: Setup Debug Session
       #   uses: csexton/debugger-action@v1
@@ -55,7 +56,9 @@ jobs:
         with:
           use-public-rspm: true
 
-      - uses: r-lib/actions/setup-renv@v2
+
+      - name: Install bookdown
+        run: Rscript -e "install.packages('bookdown')"
 
       # - name: Setup Debug Session
       #   uses: csexton/debugger-action@v1
@@ -90,8 +93,8 @@ jobs:
         with:
           use-public-rspm: true
 
-      - uses: r-lib/actions/setup-renv@v2
-
+      - name: Install bookdown
+        run: Rscript -e "install.packages('bookdown')"
       # - name: Setup Debug Session
       #   uses: csexton/debugger-action@v1
 
