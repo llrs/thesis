@@ -38,7 +38,8 @@ jobs:
       #   uses: csexton/debugger-action@v1
       - name: Reload cache
         uses: actions/cache@v2
-        restore-keys: ${{ runner.os }}-1
+        with:
+          restore-keys: ${{ runner.os }}-1
 
       - name: Build site
         shell: bash
@@ -63,7 +64,8 @@ jobs:
     steps:
       - name: Reload cache
         uses: actions/cache@v2
-        restore-keys: ${{ runner.os }}-1
+        with:
+          restore-keys: ${{ runner.os }}-1
 
       - name: Build epub
         shell: bash
@@ -88,7 +90,8 @@ jobs:
     steps:
       - name: Reload cache
         uses: actions/cache@v2
-        restore-keys: ${{ runner.os }}-1
+        with:
+          restore-keys: ${{ runner.os }}-1
 
       - name: Build pdf
         shell: bash
