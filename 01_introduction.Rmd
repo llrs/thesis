@@ -191,13 +191,13 @@ To distinguish between the diseases, in addition to the inflamed location(s), mo
 
 <!--# End -->
 
-### CD physiology {#CD}
+### Physiology {#CD}
+
+#### CD 
 
 As previously introduced, CD is a chronic inflammatory disorder characterized by a discontinuous inflammation of the gastrointestinal tract.
 Inflammation on the gastrointestinal tract is transmural and can affect from the mouth to the anus, but mainly it manifests on the ileum and colon [@demattos2015a].
 It is frequently associated with extraintestinal manifestation and/or concomitant immuno-mediated diseases.
-
-#### Clinical presentation
 
 The disease itself manifest an heterogeneous symptoms that can involve, diarrhea, weight loss, abdominal pain, fever, anorexia and malaise.
 Other less frequent co-occurring manifestations are arthritis, primary sclerosing cholangitis, skin disorders venous or arterial thromboembolism and/or pulmonary involvement [@baumgart2012] .
@@ -227,7 +227,7 @@ To some extent, there is a disassociation between clinical symptomes and the end
 Often patients report feeling better despite lack of muscular healing [@bhattacharya2016a].
 To overcome this disassociation and be able to compare the well-being of patients several scores and thresholds are used on research and by physicians that will be described later.
 
-#### Disease course
+<!--# Disease course -->
 
 In the early stages of the disease the relapsing and remitting course is more frequent.
 Often relapses are accompanied by clinical symptoms, and few have prolonged clinical remission (without treatment) [@peyrin-biroulet2010].
@@ -242,7 +242,7 @@ Stricturing is a narrowing of a part of the intestine often because of scar tiss
 Penetrating is when the epithelium has some holes or tubes.
 If these tubes result in an abnormal connection between two body parts it is a fistula, it might also result in an abcess, a collections of pus, often developed in the abdomen, pelvis, or around the anal area.
 
-### UC physiology {#UC}
+#### UC {#UC}
 
 As previously introduced, UC is a chronic inflammatory disorder characterized by a continuous inflammation of the colon.
 Depending on the inflamed segments of the intestine it is classified in several phenotypes.
@@ -252,8 +252,6 @@ If the segments from rectum to the sigmoid colon are affected is a distal coliti
 If the inflammation continues to the descending colon it is then an extensive colitis until it affects the whole colon when it becomes a pancolitis.
 The extension of UC is inversely related to the frequency.
 However, the extension and severity of the disease correlates: the prognosis is worse the more extended it is [@etchevers2009].
-
-#### Clinical care {#clinical-care-UC}
 
 The goal of the clinical care is to recover and reach a healthy life.
 As a first step, the symptoms of IBD have to lessen to the point that they are mostly absent, gone, or barely noticeable, this is known as clinical remission.
@@ -277,7 +275,7 @@ Among the scores most used are the following:
 
 Other measured parameters include, weight, effective weight, fecal calprotectin, C reactive protein (CRP) and hemoglobine.
 
-#### Drugs and treaments
+### Treament
 
 Patients might require many drugs to treat UC.
 Although this varies between patients according to their physicians' prescription and recommendations, here is a short list of drugs or treatments targeting a particular pathway: anti-TNF$\alpha$, vedolizumab, ustekinumab, risankizumab, tofacitinib, infliximab, adalimumab a 5-asa treatement, corticoesteroids, Azathiprine/Mercaptopurine 6MCP, Methotrexate MTX, Tacrolimus FK, Cyclosporin A CyA. Patients are taking one or more of these drugs as standard of care.
