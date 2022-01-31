@@ -26,11 +26,9 @@ microbiome
 immune-response
 environmental
 CD
-clinical-presentation
-disease-course
+cd
 UC
-clinical-care-UC
-drugs-and-treaments
+treament
 summary-ibd
 integration-studies-on-ibd
 data-origin
