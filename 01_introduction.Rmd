@@ -1,31 +1,28 @@
 # Introduction
 
-The [inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) (IBD) involves [Crohn's disease](https://en.wikipedia.org/wiki/Crohn%27s_disease)(CD) and [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis)(UC).
-It generally affects the terminal ileum and the colon but it can affect any segment of the gastrointestinal tract.
+[Inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) (IBD) involves [Crohn's disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD) and [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (UC).
+It generally affects the terminal ileum and the colon but it can involve any segment of the gastrointestinal tract.
 UC is a recurrent, chronic and continuous inflammation of the colon and rectum while the CD is not a continuous inflammation and affects the whole gastrointestinal tract causing transmural inflammation.
 
 IBD etiology is unknown.
 However, once it has initiated the most prevalent hypothesis of its chronicity suggests an aberrant immunological response to antigens of the commensal microbiome.
 
-To diagnose the inflammatory bowel disease, factors such as leukocytes levels on blood, a high globular sedimentation speed, increase of protein C reactive and anemia could indicate inflammatory bowel disease.
+To diagnose the IBD doctors use endoscopy and/or magnetic resonance imaging and histologies.
 
-Treatments provided for the IBD include, noninflammatory drugs, suppressors and biologic.
+Treatments provided for the IBD include, noninflammatory drugs, suppressors and biologics, i.e, anti TNF- anti-IL2, 23, anti-$\alpha4\beta7$.
 The therapeutic options can induce remission in some patients, but they often need continuous treatment to avoid recurrence.
-Nevertheless, many patients are refractory or intolerant to those therapies and need to undergo surgery.
-
-The disease present unique characteristics that require the usage of integration methods in order to find the specific relationship of the microbiome and the intestine on the disease.
+Nevertheless, many patients \[ref:needed\] are refractory or intolerant to those therapies and need to undergo surgery.
 
 ## Inflammatory bowel disease {#IBD}
 
-Inflammatory bowel disease (IBD) includes the chronic diseases Crohn's disease (CD) and ulcerative colitis (UC) which are characterized by alternating periods of remission and clinical relapse that mainly affect the gastrointestinal tract.
-CD is a progressive relapsing disease that can affect all the gastrointestinal tract but shows mostly on both terminal ilium and colon with a discontinuous inflammation.
-The UC is a colonic relapsing disease characterized by a continuous inflammation of the colon.
-Both of them have different risk factors, clinical, endoscopic an histological characteristics (see \@ref(CD) and \@ref(UC) ).
+IBD includes the CD and UC which are characterized by alternating periods of remission and clinical relapse that mainly affect the gastrointestinal tract.
+CD is a progressive relapsing disease that can affect all the gastrointestinal tract but shows mostly on both terminal ileum and colon with a discontinuous inflammation.
+UC is a colonic relapsing disease characterized by continuous inflammation of the colon.
+Both of them have different risk factors, clinical, endoscopic an histological characteristics (see sections \@ref(CD) and \@ref(UC) ).
 
 Around 3.5 million individuals have IBD in Europe and North America combined [@jairath2020].
 IBD is more commonly found in industrialized and developed regions, suggesting that environmental factors might greatly influence IBD occurrence.
 In addition, the incidence of IBD is increasing in areas, such as Asia or Eastern Europe, where the number of cases was relatively low hitherto [@burisch2015].
-On some of these countries, having IBD prevents people to [apply to certain positions](https://civio.es/el-boe-nuestro-de-cada-dia/2019/02/13/las-enfermedades-que-vetan-el-acceso-a-ciertos-empleos-publicos/ "Link to a Civio.es about disease disqualifying for some public positions").
 
 The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome.
 Several studies support the concept that IBD arise from an exacerbate immune response against commensal gut microorganisms.
@@ -36,10 +33,10 @@ Nonetheless, the disease could result from an imbalanced microbial composition l
 The role of the gut microbiome in IBD is an active ongoing field of research.
 Several authors are currently studying the alterations reported in IBD of the intestinal microbiome.
 However, it is still unclear the cause-effect relation between dysbiosis and IBD.
-Partly due to the multiple variables already identified that have been linked to IBD; for instance, age, diet, usage of antibiotic, tobacco, and eventually socioeconomic status (see [@human_microbiome_project_consortium_framework_2012]).
+Partly due to the multiple variables already identified that have been linked to IBD; for instance, age, diet, usage of antibiotic, tobacco, and socioeconomic status [@human_microbiome_project_consortium_framework_2012].
 
-The relationship between host and microbiome has been proposed to play a fundamental role to maintain the disease.
-For instance, some *Proteobacteria sp.* which have adherent and invasive properties might exploit host defenses and drive proinflammatory change, altering the intestinal microbiota in favor of dysbiosis [@mukhopadhya2012].
+The relationship between host and microbiome has been proposed to play a fundamental role in maintaining disease.
+For instance, some *Proteobacteria* species which have adherent and invasive properties might exploit host defenses and promote a proinflammatory environment, altering the intestinal microbiota in favor of dysbiosis [@mukhopadhya2012].
 
 The epithelium is often damaged and might present ulcers or other inflammation symptoms.
 A segment of the gastrointestinal tract might recover if the patient receives treatment or due the natural cycles of the disease.
@@ -47,29 +44,25 @@ But once a segment is affected by the disease it can be considered as involved, 
 
 ### Etiology and pathogenesis
 
-Several explanations have been proposed as the origin of the disease [@zhang2014; @hugot2004].
-Some of them are based on a relationship between the immune system and the microbiome and different experiments provide partial evidence to this, such as restarting the B-cell repertoire [@corralizaDifferencesPeripheralTissue].
-It is also unclear if Crohn's disease and the ulcerative colitis share the same origin considering their different symptoms.
+Several mechanisms have been proposed to drive IBD pathogenesis [@zhang2014; @hugot2004\]. Some of them are based on a relationship between the immune system and the microbiome \[@silva2016a; @demattos2015].
+It is also unclear if CD and the UC share the same origin considering their different symptoms.
 
-There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b; @satsangi2006c]. 
-Although so far it is not known what triggers the disease at different age, which provides some clues on the mechanism(s) of disease. There is a classification between very early, early or adult on-set disease [@satsangi2006c]. 
-On very early on-set the genetic component is high (See \@ref(clinical-care-UC)). Genome-wide association studies (GWAS) have linked the IBD disease to *NOD2* gene, but so far there isn't any known mechanism how this gene could start the disease [@horowitz2021].
-On early and adult disease the genetic component is lower than on very early on set and it is thought that the environmental factors are the main cause of the disease at those ages.
+There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b; @satsangi2006c\]. Disease can be classified based on age at onset as very early, early or adult on-set disease \[@satsangi2006c].
+Genome-wide association studies (GWAS) have linked IBD to over 100 genetic loci, including a *NOD2* gene, but so far there is not any known mechanism how polymorfism on this genes are driving the disease [@horowitz2021].
+On early pedriatic and adult disease the genetic component is lower than on very early on set and it is thought that the environmental factors are the main cause of the disease at those ages.
 
-Either case it is not known how it starts or it is sustained and causes those characteristics relapses.
 On the following sections I'll explore the role of several of the possible factors involved on the pahtogenesis, starting with the genetics.
 
 #### Genetics
 
-The inflammatory bowel disease is not an heritable disease but it has some genetic influence that predisposes people to have it.
-On some patients that the disease show up very early, diagnosed before the age of 2 or just early following the Montreal classification (See \@ref(clinical-care-UC) section), the genetic component is higher.
+IBD is not an heritable disease, except for very early onset IBD, but it has some genetic influence that predisposes people to have it.
 
 This has lead to look for genetic factors on IBD both on general population and on the early cases.
-Genome wide association studies (GWAS) is one of the most common genetic studies performed, together with methylation studies.
-They help discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.
+Genome wide association studies (GWAS) are one of the most common genetic studies performed, together with methylation studies.
+To discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.
 
-With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019]. Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for Crohn's disease loci but show significant (P-value \< 0.005) protective effects in ulcerative colitis [@jostins2012; @momozawa2018].
-The mechanism of how this gene protects from ulcerative colitis has not been confirmed yet [@horowitz2021].
+With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019\]. Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in UC \[@jostins2012; @momozawa2018].
+The mechanism of how this gene protects from UC has not been confirmed yet [@horowitz2021].
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
 Recently expression quantitative trait loci (eQTL) particularly showed [@mcgovern2015] that locis are on enhancers or promoters like e.g.
@@ -80,68 +73,64 @@ H3K4me1 marks as found by chromatin immunoprecipitation sequencing ([ChIP-Seq](h
 
 <!--# Aida 2.3 p24-->
 
-The human intestinal is a large reservoir of microorganisms (bacteria, fungi, viruses, and unicellular eukaryotes) that coexist within the gastrointestinal tract.
-This microbiome community exerts different functions in the human body influencing the nutrients metabolism, immune system maturation and suppression of harmful microorganisms' growth [@khanna2014].
+The human intestine is a large reservoir of co-existing microorganisms (bacteria, fungi, viruses, and unicellular eukaryotes) .
+This microbiome community exerts different functions in the human body influencing nutrients' metabolism, the maturation of the immune system while suppressing the growth of harmful microorganisms' [@khanna2014].
 
-The role of the gut microbiota is key in the IBD pathogenesis.
+The role of the gut microbiota has been proposed to play a role in the IBD pathogenesis.
 IBD has been characterized by a breakdown in the balance between beneficial and harmful bacteria that are present in the human gut compared to healthy individuals [@swidsinski2002; @tamboli2004].
 
 <!--# End-->
 
-<!--# Elenea tesis -->
+<!--# Elena tesis p18-->
 
-Many studies show that patients with inflammatory bowel disease have less biodiversity.
+Indeed, many studies show that patients with IBD have less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
-$\alpha$-diversity is a measure of the species present on a single sample and how much of each taxonomic group is there.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004]. At the same time there is often a reduction on protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium.* Specially the *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
-$\beta$-diversity compares the diversity between samples, which typically looks like a horse-shoe-like shape when reducing the distances to their first two dimensions via principal component analysis.
+$\alpha$-diversity is a measure of the species present on a single sample and its abundance while $\beta$-diversity compares the diversity between samples.
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004\]. At the same time there is often a reduction of protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium* which might be able to protect individuals from mucosal inflammation via several mechanism such as a downregulation of proinflammatory cytokines or the stimulation of IL-10 and antiinflammatory cytokines \[@ott2004\]*.* Specially *Faecalibacterium prausnitzii* is one microorganism of interest \[@kostic2014; @sender2016].
 
 <!--# Aida 2.3 p24-->
 
 In fact, it has been recently proposed that several unique microbial species can distinguish healthy controls from UC and CD patients [@sankarasubramanian2020a; @lopez-siles2014].
 
-![(#fig:composition) The microbial composition in a healthy and inflammed bowel disease gut.](images/tesis_AM_Figure2.png "Microbial composition and epithelial barrier status in healthy versus IBD gut.")
+![(#fig:composition) The microbial composition in a healthy and IBD gut.](images/tesis_AM_Figure2.png "Microbial composition and epithelial barrier status in healthy versus IBD gut.")
 
-<!--# End-->
+<!--# Aida p25-->
 
-One of the proposed mechanism of interaction is through the chemical compounds they generate.
-Chemical compounds may interact with the cells and modulate the state of the intestine.
-One example of such molecular is butyrate which has been linked to microorganisms presents on healthy intestines and to induce a better healing of intestine cells [@ferrer-picón2020].
+One of the proposed mechanism of crosstalk between bacteria and host is through bacterial metabolites.
+They interact with the cells and modulate the state of the intestine.
+One example of such metabolite is butyrate which has been linked to microorganisms presents on healthy intestines and shown to interact with intestine cells and help regulate some genes [@ferrer-picón2020].
 
-As previously mentioned, adherent invasive *Escherichia coli*, a proteobacteria specie, has been associated with IBD patients.
+As previously mentioned, adherent invasive *Escherichia coli*, a proteobacteria specie, has been associated with IBD [@darfeuille-michaud1998].
 Adherent invasive strains are mainly found in ileal and colonic samples of CD patients and their presence in UC is less clear.
 These adherent invasive cells enter through the epithelium of the more permeable cells and live on their cytosol.
 
 <!--# End-->
 
-In addition, there has been some observations that mild IBD patients response to treatments that modify their gut microbiota, such as: fecal microbiota transplantation, probiotics and postbiotics.
+In addition, there has been some observations that IBD patients response to treatments that modify their gut microbiota, such as: fecal microbiota transplantation, probiotics and postbiotics \[ref:needed\].
 
 #### Immune response
 
-As explained previously the immune system might be one of the reasons of the inflammatory bowel disease starts.
-IBD is often characterized as an immune-mediated disease, if not outright autoimmune disease.
+As explained previously the immune system plays a role in IBD pathogenesis and pathophysiology.
 
-A loss of tolerance to commensal bacteria has been suggested as the underlying mechanism triggering the inflammation on the intestine.
+Loss of tolerance to commensal bacteria has been suggested as the underlying mechanism triggering the inflammation on the intestine.
 The immune response involves many different cells lines and regions, which are important to know how they organize for a better understanding of the disease.
 
 <!--# Image from Ana tesis p29: -->
 
 ![(#fig:barrier) The intestinal epithelial barrier.](images/tesis_AC_FigureX.png "The intestinal epithelial barrier")
 
-From the luminal side of intestine, the first layer is the mucosa (See \@ref(fig:barrier) or \@ref(fig:composition)).
-The mucus is organized in two layers: the inner layer, a firm mucus layer; and the outer, loose mucus layer [@okumura2017].
-Below the intestinal epithelium there is a single layer of cells organized into crypts and villi (and circular folds on the large intestine) that carries out a diverse array of functions besides digestion performed by specialized cell lineages.
-These cells usually come from the basal side of the crypt and mature as they move towards the apical side.
+From the luminal side of the intestine, the first layer is the mucosa (See sections \@ref(fig:barrier) or \@ref(fig:composition)).
+In the colon the mucus is organized in two layers: the inner layer, a firm mucus layer; and the outer, loose mucus layer [@okumura2017].
+The intestinal epithelium is a single layer of cells organized into crypts and villi (and circular folds on the large intestine) that carries out a diverse array of functions besides digestion performed by specialized cell lineages.
 
-<!--# From tesis Aida p20-->
+<!--# From tesis Aida p20 Immune Response-->
 
 Immune response in the intestinal mucous is mainly excreted by the gut associated lymphoid tissue [@faria2012].
-Deregulation of the mucosal immune system has been associated with the pathogenesis of IBD [@silva2016a; @demattos2015].
 Genetically predisposed patients when exposed to certain environmental factors activate immune responses against microbials or self-antigens which in turn, may impair the mucosal barrier of the intestinal mucosa, the first physical barrier on the mucosal surface.
 
-Both the adaptive and the innate immunity related cells are present on the intestine, right below the epithelium.
+Both the adaptive and the innate immune cells are present in the intestine, right below the epithelium.
 On IBD due to antigen translocation into the lamina propria, the immune response leads the adaptive cells to generate immune response to harmless components of the intestinal microbiota.
-This initial response would induce a local increase in the production of pro-inflammatory cytokines and mediators which would damage the mucosa.
+This initial response induces a local increase in the production of pro-inflammatory cytokines and mediators which damages the mucosa.
 Therefore, the loss of integrity on this barrier enables the intestinal luminal bacteria to access the intestinal epithelium and to interact with the immune system underneath it more directly [@hisamatsu2013].
 
 The intestinal epithelium is the next line of defense against bacterial invasion.
@@ -179,8 +168,8 @@ However, due to its associated risk this therapy is only given when patients are
 
 <!--# p26 Aida sec 2.4 -->
 
-Chronic inflammatory disorders and neoplasms have become the main cause of morbidity and mortality in the countries that follow a strategy of reducing the contact with anything dirty.
-This decreases the human exposure to microbes which might affect the proper maturation of the immune system so that it provides a more ineffective immune response or exacerbated response towards "friendly" microbes [@strachan1989; @scudellari2017].
+Chronic inflammatory disorders and neoplasms have become the main cause of morbidity and mortality in the countries with high standards of personal cleanliness.
+A decrease in human exposure to microbes or hygene which might affect the proper maturation of the immune system so that it provides less immune response or exacerbated response towards "friendly" microbes [@strachan1989; @scudellari2017].
 
 From other environmental factors related to IBD such as tobacco, diet, certain drugs and stress; tobacco is the most influential environmental factor.
 Surprisingly, it has an opposite effect on UC and CD: in CD tobacco is a risk factor that increases the risk of relapse and/or surgical intervention.
@@ -195,137 +184,130 @@ Other environmental factors have been linked to IBD but without enough evidence 
 
 <!--# Check with Elena Basolas Tesis p18-->
 
-Perhaps the environment factors influence the samples disease etiology towards Crohn's disease or ulcerative colitis as there are some differences between them.
+Perhaps the environment factors influence the samples disease etiology towards CD or UC as there are some differences between them.
 On CD a granulome, that is a region with big multinucleous cells, can appear on any intestinal layer, while on UC the damage is different: it consists in many neutrophil in the crypt lumen [@bassolasmolina2018a].
 
 To distinguish between the diseases, in addition to the inflamed location(s), mosaic zones (patches of inflamed and non-inflamed areas) are more characteristic of CD [@bassolasmolina2018].
-Another indicator of CD is an increase of calprotectin in fecal samples [@sands2015].
 
 <!--# End -->
 
-### Crohn's disease physiology {#CD}
+### CD physiology {#CD}
 
-As previously introduced, Crohn's disease is a chronic inflammatory disorder characterized by a discontinuous inflammation of the gastrointestinal tract.
+As previously introduced, CD is a chronic inflammatory disorder characterized by a discontinuous inflammation of the gastrointestinal tract.
 Inflammation on the gastrointestinal tract is transmural and can affect from the mouth to the anus, but mainly it manifests on the ileum and colon [@demattos2015a].
 It is frequently associated with extraintestinal manifestation and/or concomitant immuno-mediated diseases.
 
 #### Clinical presentation
 
-The disease itself manifest an heterogeneous symptoms that can involve, diarrhea, weight loss, abdominal pain, fever, anorexia, malaise.
+The disease itself manifest an heterogeneous symptoms that can involve, diarrhea, weight loss, abdominal pain, fever, anorexia and malaise.
 Other less frequent co-occurring manifestations are arthritis, primary sclerosing cholangitis, skin disorders venous or arterial thromboembolism and/or pulmonary involvement [@baumgart2012] .
-These symptoms make it hard to correctly diagnose the disease by non-specialists, in addition there isn't a non invasive easy procedure to diagnose it.
+These symptoms make it hard to correctly diagnose the disease by non-specialists, in addition there is not a non invasive easy procedure to diagnose it.
 All these can lead to delays on correct diagnosis of the disease.
 
 <!--# Tesis Ana p21-->
 
-The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with CD [@khanna2017].
-The detection of fecal calprotectin, is generally a good marker of endocopic activity with sensitivity above 70% and specificity above 80% [@guardiola2018].
-
-Usually the best diagnosis method is to perform a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is Crohn's disease.
-This inflammation could also present ulceration and rectal sparing and histological lesions which also help to diagnose the patients [@corralizamárquez2019].
+The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with CD [@khanna2017\]. The detection of fecal calprotectin, is generally a good marker of endocopic activity with sensitivity above 70% and specificity above 80% \[@guardiola2018; @sands2015].
 
 <!--# End-->
 
-To address this difficulty the Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behaviour .
-This classification assumes that the location of Crohn's disease remains stable over time after diagnosis but behavioral phenotypes change.
+Usually the best diagnosis method is to perform a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is CD.
+This inflammation could also present ulceration with rectal sparing and histological lesions which also help to diagnose the patients [@corralizamárquez2019].
+
+The Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behaviour .
+This classification assumes that the location of CD remains stable over time after diagnosis but behavioral phenotypes change.
 Other scores consider area affected:
 
 -   Montreal classification allows for early onset of disease to be categorized separately those with age of diagnosis at 16 years or younger, diagnosis at 17--40 years and \>40 years, respectively [@satsangi2006].
--   SES-CD: simple endoscopic score for Crohn's disease [@daperno2004]. Score based on size of ulcers, ulcerate surface percentage, affected surface and presence of narrowing on the bowel.
--   CDAI: Crohn's Disease Activity Index takes into account weight, ideal body weight, sex, and events on the last week such as liquid stools, abdominal pain, general well-being and if anti-diarrhea drug usage, as well as knowing if there are fistulas, fever, and other complications [@best1976]
+-   SES-CD: simple endoscopic score for CD [@daperno2004]. Score based on size of ulcers, ulcerate surface percentage, affected surface and presence of narrowing on the bowel.
+-   CDAI: CD Activity Index takes into account weight, ideal body weight, sex, and events on the last week such as liquid stools, abdominal pain, general well-being and if anti-diarrhea drug usage, as well as knowing if there are fistulas, fever, and other complications [@best1976]
 
 <!--# Add Figure 2 from ACM thesis?-->
 
-To some extent, there is a disassociated between patient's well-being report and the colonoscopy observation.
-Often patients report feeling better but their gut is as inflamed as previously [@bhattacharya2016a].
-This has lead to several scores and thresholds used on research and treatment of the patients.
+To some extent, there is a disassociation between clinical symptomes and the endoscopy finding.
+Often patients report feeling better despite lack of muscular healing [@bhattacharya2016a].
+To overcome this disassociation and be able to compare the well-being of patients several scores and thresholds are used on research and by physicians that will be described later.
 
 #### Disease course
 
 In the early stages of the disease the relapsing and remitting course is more frequent.
-Often relapses are accompanied by clinical symptoms, and very few have prolonged clinical remission (without treatment) [@peyrin-biroulet2010].
+Often relapses are accompanied by clinical symptoms, and few have prolonged clinical remission (without treatment) [@peyrin-biroulet2010].
 When there is clinical remission, there can still remain some other lesions and often sublinical inflammation persists.
 Frequently the damage caused by the disease evolves to fibrostenotic stricture or penetrating lesions (fistula and abscess).
 
-The damage of the disease might not be apparent to patients and might be only seen several years later than the first detection [@bhattacharya2016].
-Mucosal healing is a first step towards the healing of deeper layers of the inflamed bowel wall on the Crohn's disease.
+Damage of the disease might not be apparent to patients and might be only seen several years later than the first detection [@bhattacharya2016].
+Mucosal healing is a first step towards the healing of deeper layers of the inflamed bowel wall on the CD.
 
-Most patients progress from an inflammatory phenotype to a stricturing or penetrating one [@satsangi2006a].
-Stricturing is a narrowing of part of the intestine often because of scar tissue in its wall.
-Penetrating is when the damage is on inner and outer lining.
-It can be a fistula, an abnormal connection between two body parts or an abcess (a collections of pus, often develop in the abdomen, pelvis, or around the anal area).
+Patients might progress from an inflammatory phenotype to a stricturing or penetrating one [@satsangi2006a].
+Stricturing is a narrowing of a part of the intestine often because of scar tissue and fibrosis in its wall.
+Penetrating is when the epithelium has some holes or tubes.
+If these tubes result in an abnormal connection between two body parts it is a fistula, it might also result in an abcess, a collections of pus, often developed in the abdomen, pelvis, or around the anal area.
 
-### Ulcerative colitis physiology {#UC}
+### UC physiology {#UC}
 
-As previously introduced, ulcerative colitis is a chronic inflammatory disorder characterized by a continuous inflammation of the gastrointestinal tract.
-Depending on the inflammaed segments of the intestine it is classified in several phenotypes.
+As previously introduced, UC is a chronic inflammatory disorder characterized by a continuous inflammation of the colon.
+Depending on the inflamed segments of the intestine it is classified in several phenotypes.
 
-Around a third of the patients with ulcerative colitis suffer proctitis, the inflammation of the final segment of the colon.
+Around a third of the patients with UC suffer proctitis, the inflammation of the rectum.
 If the segments from rectum to the sigmoid colon are affected is a distal colitis, if it affects the left colon then it becomes a left colitis.
 If the inflammation continues to the descending colon it is then an extensive colitis until it affects the whole colon when it becomes a pancolitis.
-As the disease progress through the intestine, the less common it is.
-However, the extension and severity of the disease correlates: the prognosis is worse the longer is the affected areas [@etchevers2009].
+The extension of UC is inversely related to the frequency.
+However, the extension and severity of the disease correlates: the prognosis is worse the more extended it is [@etchevers2009].
 
 #### Clinical care {#clinical-care-UC}
 
 The goal of the clinical care is to recover and reach a healthy life.
-As a first step, the symptoms of IBD have to lessen to the point that they're mostly absent, gone, or barely noticeable, this is known as clinical remission.
-However, this is not enough as the mucosa might be still inflammed and thus the reconstitution of the structure and function of the intestinal epithelial barrier not complete.
+As a first step, the symptoms of IBD have to lessen to the point that they are mostly absent, gone, or barely noticeable, this is known as clinical remission.
+However, this is not enough as the mucosa might be still inflamed and thus the reconstitution of the structure and function of the intestinal mucosa is not complete.
 Other lesions, might aid to the progression to other phenotypes such as fibrostenotic stricture or penetrating lesions increasing the structural bowel damage or primary sclerosing cholangitis [@boonstra2012].
 
-To prevent and avoid further damage several procedure are followed:
+To prevent and avoid further damage several procedures are followed:
 
-When there is colorectal cancer or the damage on the colon has been too big a surgical procedure to remove part or all of the colon must be done.\
-Patients that undergo a colectomy need to have their bowel reconnected with a procedure called ileoanal anastomosis (also know as J-pouch by the sape it takes) surgery.
-This pouch often ends up inflammating starting onn the lining of the pouch created during surgery and extending from there [@schieffer2016].
-
-UC patients often present dysplasia, an abnormal development of cells within tissues or organs which is considered a precedence before colorectal cancer growth [@mark-christensen2018].
-Another common characteristic associated with UC are fistulas.
+When there is dysplasia, an abnormal development of cells within tissues or organs (which is considered a precedence before colorectal cancer growth [@mark-christensen2018]), or the damage on the colon has been too big a surgical procedure to remove part or all of the colon must be done.\
+Patients that undergo a colectomy need to have their bowel reconnected with a procedure called ileoanal anastomosis (also know as J-pouch by the shape it takes) surgery.
+Often the lining of the pouch created during surgery becomes inflamed on what is known as pouchitis [@schieffer2016].
 
 Many scores have been proposed for several purposes, from quality of life to disease severity or patient status.
 Among the scores most used are the following:
 
--   Mayo: A score designed to be simple to calculate at the bedside based on stool frequency, bleeding, mucosal apperance at endocopy and disease activity [@schroeder1987].
+-   Mayo: A score designed to be simple to calculate based on stool frequency, bleeding, mucosal appearance at endoscopy and physicians assessment [@schroeder1987].
 
 -   IBDQ: A 32 questionnaire used to assess the quality of life grouped into four categories: bowel, systemic, social and emotional [@irvine1999].
 
 -   UCEDIS: An endoscopic score based on vascular pattern, internal bleeding and erosions and ulcers [@travis2012].
 
-Other measured parameters include, weight, effective weight, calprotectin, Proteinc C reactive (PCR), hemoglobine.
+Other measured parameters include, weight, effective weight, fecal calprotectin, C reactive protein (CRP) and hemoglobine.
 
 #### Drugs and treaments
 
 Patients might require many drugs to treat UC.
-Although this varies between patients and time according to recurrent meetings doctors have and current recommendations, here is a short list of drugs or treatments targeting a particular pathway: anti-TNF$\alpha$, vedolizumab, ustekinumab, risankizumab, tofacitinib, infliximab, adalimumab a 5-asa treatement, corticoesteroids, Azathiprine/Mercaptopurine 6MCP, Methotrexate MTX, Tacrolimus FK, Cyclosporin A CyA. Patients are taking one or more of these drugs as standard of care.
+Although this varies between patients according to their physicians' prescription and recommendations, here is a short list of drugs or treatments targeting a particular pathway: anti-TNF$\alpha$, vedolizumab, ustekinumab, risankizumab, tofacitinib, infliximab, adalimumab a 5-asa treatement, corticoesteroids, Azathiprine/Mercaptopurine 6MCP, Methotrexate MTX, Tacrolimus FK, Cyclosporin A CyA. Patients are taking one or more of these drugs as standard of care.
 
 To reduce secondary effects of drugs or to find the right dose of the drugs often a reduction of dose is recommended.
 However, dose reduction often results in diminished response to the drug.
 Thus, the patients do not recover the initial response they had later on if the dose is raised to the previous levels.
-This is builds up also on patients being refractory to the drugs and treatments given [@raine2021].
+This builds up also on patients being refractory to the drugs and treatments given [@raine2021].
 
 One of the most relevant advances in the treatment of IBD has been the introduction of anti-TNF antibodies, but this therapy is associated to significant medical costs.
 Reports indicated that in recent years the cost of this therapy is the main driver of IBD health care, which represents a shift from previous drivers that included mainly hospitalizations and surgeries.
 Furthermore, response rates to anti-TNF therapy are in the range of 60%, and remission rates are 30%.
-Therefore, predictors of response would result in high benefits for the patients and significant savings for public health care systems.
+Therefore, predictors of response would result in high benefits for patients and significant savings for public health care systems.
 Despite the high efficacy of anti-TNF drugs, loss of response occurs in 30-50% of patients, and development of anti-drug antibodies is the main reason for loss of response.
 
-If the drugs fail to contain the inflammation and heal the epithelium doctors might recommend to perform a surgery to remove the damaged section.
+If the drugs fail to contain the inflammation and heal the mucosa doctors might recommend to perform a surgery to remove the damaged section.
 In some cases HSCT is recommended which have shown to improve the life of the patients [@corralizab].
 This is a new procedure given only to the most extreme cases for which several publications have checked that it resets the immunological state of the patient.
-Currently it is only performed on the Hospital Clínic (Barcelona).
 
-Last there are several proposal of fecal microbiota transplantation, which are not done on the Hospital Clínic yet.
 But are proposed to reset or change the intestinal microbiome of the patients to help them on the disease.
 This has been doing experimentally on mice and mouse for some time and some experiments on patients resulted have been performed already.
 
 ### Summary {#summary-ibd}
 
-Inflammatory bowel disease is a complex disease that impacts the health of many people for long time and with lasting impact on their quality of life.
+IBD is a complex disease that impacts the health of many people for long time and with lasting impact on their quality of life.
 
 Current clinical care in some cases is enough to have a sustained clinical and endoscopic remission but most often is not enough and relapse is expected.
-Several factors, such as becoming refractory to drugs, intermittent discourse of the disease, make the treatment complex.
+Several factors, such as becoming refractory to drugs, intermittent course of the disease and lack of validated predictors of disease course or response to therapy make the treatment complex.
 
-The lack of knowledge of what are the factors cause of the disease make those treatments and drugs to be addressed to block further inflammation and damage, but cannot prevent it and often they do not stop it completely.
+Lack of knowledge of what are the factors cause of the disease make those treatments and drugs to be addressed to block further inflammation and damage, but cannot prevent it and often they do not stop it completely.
 
 ## Integration studies on IBD
 
@@ -342,10 +324,10 @@ Furthermore several studies have been carried out to discover links between micr
 These studies, known as integration, multi-omic or interaction studies, usually use multiple sequencing assays as the bases of the analysis [@beck2021].
 
 However, confirming causal interactions of the variables of each essay is difficult.
-To find relationships some articles use correlation, like [@hasler_uncoupling_2016], there are others that use a combination of methods from correlations, partial correlations to integrative methods [@tang_integrated_2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations.
+To find relationships some articles use correlation, like [@hasler_uncoupling_2016\], there are others that use a combination of methods from correlations, partial correlations to integrative methods \[@tang_integrated_2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations.
 
 Very rarely there is an experimental confirmation of the relationships between variables of the different essays because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
-One of the few methods published that shows an interaction between genes and microorganisms on the inflammatory bowel disease is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
+One of the few methods published that shows an interaction between genes and microorganisms on the IBD is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
 
 ### Data origin {#data-origin}
 
@@ -370,9 +352,9 @@ Conclusions of these integrations range from finding differences on the correlat
 
 #### Genetics
 
-Genetics is the next most common data source used to integrate data on the inflammatory bowel disease.
+Genetics is the next most common data source used to integrate data on the IBD.
 Most studies on genetics and IBD are genome-wide association studies [@kumar2019; @knights2013; @huWholeExomeSequencing2021].
-No clear mechanism has been proved despite clear and significant findings, probably because inflammatory bowel disease relapses and remits with time.
+No clear mechanism has been proved despite clear and significant findings, probably because IBD relapses and remits with time.
 
 When using genetic data to integrate it with transcriptomics it is usually to understand how a genetic variant is affecting a gene expression.
 This has lead to expression quantitative trait loci (eQTL).
@@ -386,7 +368,7 @@ There is evidence some of these metabolomic products, such as small chemicals re
 
 ### Summary {#summary-studies}
 
-Multiple methods and multiple studies have been used to learn more about the interaction between different data and understand the inflammatory bowel disease.
+Multiple methods and multiple studies have been used to learn more about the interaction between different data and understand the IBD.
 The task is challenging and with many different aspects one could use.
 
 There are many studies focused on understanding different aspects of the disease: the relation between location and severity, relapse, remission, treatments, origin.
@@ -407,7 +389,7 @@ Some of these methods are specific for one application or data while others are 
 Lately, the increase of bigger datasets with more variables and often from the same samples has increased the focus of the research community on the methodologies available on several disciplines but mainly on the biological science.
 The explosion of data on the biological science has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time, if done with multiple sequencing tecnologies it is usually referred as multi-omics methods, which usually only integrate omic data.
 
-It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019]. Part of these efforts uses the methods' strategies to classify them [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
+It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019\]. Part of these efforts uses the methods' strategies to classify them \[@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
 Following this view I'll review the integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
 
 ### Classification of integration method's
@@ -539,7 +521,7 @@ To discover causality between two variables the cause must be before the consequ
 Being aware of the time differences and time scales is crucial in most cases.
 
 On cell lines or other lab experiments conditions can be repeated even if they are at different time points.
-However, with patients there aren't biological replicates like with cell-lines.
+However, with patients there are not biological replicates like with cell-lines.
 This makes it harder to study time-related change on patients.
 
 Lastly, time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNA-seq [@massoni-badosa2020; @zhu2017].
@@ -560,7 +542,7 @@ Usually the relationships between variables are mediated by many factors or inte
 
 One of the best example of such interactions is when some variables correlate.
 Their correlation can be used to reduce the number of variables being analyzed by ignoring the relationships between them and using the most representative variable (less correlated and with more variation).
-This step is usually done by the dimension reduction methods... However, sometimes this is not desired or feasible as the correlation doesn't explain the direction of the causality of the interaction between the variables (if there is any).
+This step is usually done by the dimension reduction methods... However, sometimes this is not desired or feasible as the correlation does not explain the direction of the causality of the interaction between the variables (if there is any).
 
 Network approaches relate the variables between them (such as [@koh_iomicspass_2019]).
 These approaches are fairly new and growing in popularity partly because they can address the direction of the interaction.
@@ -624,7 +606,7 @@ Usually depending on the mathematical framework used they return these methods r
 
 According to the output the integration methods can be classified in several groups:
 
-For the network methods the following output is usually returned: Connections between the variables/nodes, a measure of how strong is the connection (or simply if there is a connection or if there isn't one).
+For the network methods the following output is usually returned: Connections between the variables/nodes, a measure of how strong is the connection (or simply if there is a connection or if there is not one).
 
 For those from dimensional reduction methods there are three: Shared factor across the data, specific factors for each data or mixed factors.
 
@@ -667,7 +649,7 @@ Or by patient: how do interpret that in these patient variable A and B is X and 
 In a principal component analysis for instance how is interpreted that some variables have the same loading?
 What happens in a more difficult method like canonical correlation analysis?
 
-There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981]. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
+There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981\]. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset \[@chung_multi-omics_2019; @martinez-mira_mosim_2018].
 Which is used to compare the results of the integration with the dataset of interest and to compare different tools.
 These datasets are created with some relationships that the tools are expected to find.
 
@@ -678,7 +660,7 @@ These methods are useful to compare different setup and methods but they can mis
 
 The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool for a research [@cantini_benchmarking_2020].
 
-Some of these reviews are focused on a specific type of data integration: metabolomics [@cavill2016], genomics [@mcgovern2015a], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies [@de_souza_ibd_2017; @tarazona2021a; @valles-colomer2016].
+Some of these reviews are focused on a specific type of data integration: metabolomics [@cavill2016\], genomics \[@mcgovern2015a\], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies \[@de_souza_ibd_2017; @tarazona2021a; @valles-colomer2016].
 On this regard there are several efforts to integrate data on IBD but no comprehensive review to date is known to the author.
 
 ### Summary {#methods-integration}
