@@ -133,7 +133,7 @@ On IBD due to antigen translocation into the lamina propria, the immune response
 This initial response induces a local increase in the production of pro-inflammatory cytokines and mediators which damages the mucosa.
 Therefore, the loss of integrity on this barrier enables the intestinal luminal bacteria to access the intestinal epithelium and to interact with the immune system underneath it more directly [@hisamatsu2013].
 
-The intestinal epithelium is the next line of defense against bacterial invasion.
+The intestinal epithelium is another line of defense against bacterial invasion.
 Intestinal epithelial cells play a key role in controlling the integrity of the physical barrier to the intestinal microorganisms [@hisamatsu2013] not only physically but also secreting antimicrobial peptides and defensins, both of which are altered in IBD patients [@michielan2015].
 The intestinal epithelium also plays a key role on the intake and diffusion of metabolites from the intestinal lumen to the lamina propia.
 
