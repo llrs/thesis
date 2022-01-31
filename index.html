@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Data integration on inflammatory bowel disease</title>
+  <meta name="description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with IBD and some controls to discover key differences on this relationship." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Data integration on inflammatory bowel disease" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://thesis.llrs.dev" />
+  <meta property="og:image" content="https://thesis.llrs.dev/images/R_logo_science.png" />
+  <meta property="og:description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with IBD and some controls to discover key differences on this relationship." />
+  <meta name="github-repo" content="llrs/thesis" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data integration on inflammatory bowel disease" />
+  <meta name="twitter:site" content="@Lluis_Revilla" />
+  <meta name="twitter:description" content="Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with IBD and some controls to discover key differences on this relationship." />
+  <meta name="twitter:image" content="https://thesis.llrs.dev/images/R_logo_science.png" />
+
+<meta name="author" content="Lluís Revilla Sancho" />
+
+
+<meta name="date" content="2022-01-31" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="abstract.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><strong><a href="./">Data integration on IBD</a></strong></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="abstract.html"><a href="abstract.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#IBD"><i class="fa fa-check"></i><b>1.1</b> Inflammatory bowel disease</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#etiology-and-pathogenesis"><i class="fa fa-check"></i><b>1.1.1</b> Etiology and pathogenesis</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introduction.html"><a href="introduction.html#CD"><i class="fa fa-check"></i><b>1.1.2</b> Physiology</a></li>
+<li class="chapter" data-level="1.1.3" data-path="introduction.html"><a href="introduction.html#treament"><i class="fa fa-check"></i><b>1.1.3</b> Treament</a></li>
+<li class="chapter" data-level="1.1.4" data-path="introduction.html"><a href="introduction.html#summary-ibd"><i class="fa fa-check"></i><b>1.1.4</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#integration-studies-on-ibd"><i class="fa fa-check"></i><b>1.2</b> Integration studies on IBD</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#data-origin"><i class="fa fa-check"></i><b>1.2.1</b> Data origin</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#summary-studies"><i class="fa fa-check"></i><b>1.2.2</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#integration"><i class="fa fa-check"></i><b>1.3</b> Integration</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#classification-of-integration-methods"><i class="fa fa-check"></i><b>1.3.1</b> Classification of integration method’s</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#interpretation"><i class="fa fa-check"></i><b>1.3.2</b> Interpretation</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#reviews"><i class="fa fa-check"></i><b>1.3.3</b> Reviews</a></li>
+<li class="chapter" data-level="1.3.4" data-path="introduction.html"><a href="introduction.html#methods-integration"><i class="fa fa-check"></i><b>1.3.4</b> Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="hypothesis-and-objectives.html"><a href="hypothesis-and-objectives.html"><i class="fa fa-check"></i><b>2</b> Hypothesis and objectives</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="hypothesis-and-objectives.html"><a href="hypothesis-and-objectives.html#hypothesis"><i class="fa fa-check"></i><b>2.1</b> Hypothesis</a></li>
+<li class="chapter" data-level="2.2" data-path="hypothesis-and-objectives.html"><a href="hypothesis-and-objectives.html#objectives"><i class="fa fa-check"></i><b>2.2</b> Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>3</b> Materials and methods</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#datasets"><i class="fa fa-check"></i><b>3.1</b> Datasets</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#methods-puget"><i class="fa fa-check"></i><b>3.1.1</b> Puget’s dataset</a></li>
+<li class="chapter" data-level="3.1.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#methods-hsct"><i class="fa fa-check"></i><b>3.1.2</b> HSCT dataset</a></li>
+<li class="chapter" data-level="3.1.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#methods-hasler"><i class="fa fa-check"></i><b>3.1.3</b> Häsler’s dataset</a></li>
+<li class="chapter" data-level="3.1.4" data-path="materials-and-methods.html"><a href="materials-and-methods.html#methods-morgan"><i class="fa fa-check"></i><b>3.1.4</b> Morgan’s dataset</a></li>
+<li class="chapter" data-level="3.1.5" data-path="materials-and-methods.html"><a href="materials-and-methods.html#methods-barcelona"><i class="fa fa-check"></i><b>3.1.5</b> BARCELONA dataset</a></li>
+<li class="chapter" data-level="3.1.6" data-path="materials-and-methods.html"><a href="materials-and-methods.html#methods-howell"><i class="fa fa-check"></i><b>3.1.6</b> Howell’s dataset</a></li>
+<li class="chapter" data-level="3.1.7" data-path="materials-and-methods.html"><a href="materials-and-methods.html#methods-hernandez"><i class="fa fa-check"></i><b>3.1.7</b> Hernández’ dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#processing-samples"><i class="fa fa-check"></i><b>3.2</b> Processing samples</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#transcriptome-sequencing"><i class="fa fa-check"></i><b>3.2.1</b> Transcriptome sequencing</a></li>
+<li class="chapter" data-level="3.2.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#microbial-dna-sequencing"><i class="fa fa-check"></i><b>3.2.2</b> Microbial DNA sequencing</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#statistics"><i class="fa fa-check"></i><b>3.3</b> Statistics</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#functional-enrichment"><i class="fa fa-check"></i><b>3.3.1</b> Functional enrichment</a></li>
+<li class="chapter" data-level="3.3.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#other-methods-used"><i class="fa fa-check"></i><b>3.3.2</b> Other methods used</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="materials-and-methods.html"><a href="materials-and-methods.html#regularized-generalized-canonical-correlation-analysis"><i class="fa fa-check"></i><b>3.4</b> Regularized generalized canonical correlation analysis</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#description"><i class="fa fa-check"></i><b>3.4.1</b> Description</a></li>
+<li class="chapter" data-level="3.4.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#results"><i class="fa fa-check"></i><b>3.4.2</b> Results</a></li>
+<li class="chapter" data-level="3.4.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#models"><i class="fa fa-check"></i><b>3.4.3</b> Models</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="results-1.html"><a href="results-1.html"><i class="fa fa-check"></i><b>4</b> Results</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="results-1.html"><a href="results-1.html#packages"><i class="fa fa-check"></i><b>4.1</b> Packages</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="results-1.html"><a href="results-1.html#experdesign-1"><i class="fa fa-check"></i><b>4.1.1</b> experDesign</a></li>
+<li class="chapter" data-level="4.1.2" data-path="results-1.html"><a href="results-1.html#baseset-1"><i class="fa fa-check"></i><b>4.1.2</b> BaseSet</a></li>
+<li class="chapter" data-level="4.1.3" data-path="results-1.html"><a href="results-1.html#intermodels"><i class="fa fa-check"></i><b>4.1.3</b> inteRmodels</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="results-1.html"><a href="results-1.html#analysis"><i class="fa fa-check"></i><b>4.2</b> Analysis</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="results-1.html"><a href="results-1.html#results-puget"><i class="fa fa-check"></i><b>4.2.1</b> Puget’s dataset</a></li>
+<li class="chapter" data-level="4.2.2" data-path="results-1.html"><a href="results-1.html#results-hsct"><i class="fa fa-check"></i><b>4.2.2</b> HSCT dataset</a></li>
+<li class="chapter" data-level="4.2.3" data-path="results-1.html"><a href="results-1.html#results-hasler"><i class="fa fa-check"></i><b>4.2.3</b> Häsler’s dataset</a></li>
+<li class="chapter" data-level="4.2.4" data-path="results-1.html"><a href="results-1.html#results-morgan"><i class="fa fa-check"></i><b>4.2.4</b> Morgan’s dataset</a></li>
+<li class="chapter" data-level="4.2.5" data-path="results-1.html"><a href="results-1.html#results-barcelona"><i class="fa fa-check"></i><b>4.2.5</b> BARCELONA dataset</a></li>
+<li class="chapter" data-level="4.2.6" data-path="results-1.html"><a href="results-1.html#results-howell"><i class="fa fa-check"></i><b>4.2.6</b> Howell’s dataset</a></li>
+<li class="chapter" data-level="4.2.7" data-path="results-1.html"><a href="results-1.html#results-hernandez"><i class="fa fa-check"></i><b>4.2.7</b> Hernández’ dataset</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>5</b> Discussion</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="discussion.html"><a href="discussion.html#other"><i class="fa fa-check"></i><b>5.0.1</b> Other</a></li>
+<li class="chapter" data-level="5.1" data-path="discussion.html"><a href="discussion.html#relevance-for-other-research"><i class="fa fa-check"></i><b>5.1</b> Relevance for other research</a></li>
+<li class="chapter" data-level="5.2" data-path="discussion.html"><a href="discussion.html#implications-of-research"><i class="fa fa-check"></i><b>5.2</b> Implications of research</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>6</b> Conclusions</a></li>
+<li class="chapter" data-level="7" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i><b>7</b> Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Appendix</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="appendix.html"><a href="appendix.html#online-resources"><i class="fa fa-check"></i><b>7.1</b> Online resources</a></li>
+<li class="chapter" data-level="7.2" data-path="appendix.html"><a href="appendix.html#software"><i class="fa fa-check"></i><b>7.2</b> Software</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="appendix.html"><a href="appendix.html#listed"><i class="fa fa-check"></i><b>7.2.1</b> Listed</a></li>
+<li class="chapter" data-level="7.2.2" data-path="appendix.html"><a href="appendix.html#by-project"><i class="fa fa-check"></i><b>7.2.2</b> By project</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data integration on inflammatory bowel disease</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div class = "wip">
+This tesis is ongoing and still without hard date to finish it. Watch the <a href="https://github.com/llrs/thesis">GitHub repository</a> or wait for a release announcement on Twitter on <a href="https://twitter.com/Lluis_Revilla">my profile</a>.
+</div>
+<div id="header">
+<h1 class="title">Data integration on inflammatory bowel disease</h1>
+<p class="author"><em>Lluís Revilla Sancho</em></p>
+<p class="date"><em>2022-01-31</em></p>
+</div>
+<div id="preface" class="section level1 unnumbered">
+<h1>Preface</h1>
+<p><img src="images/ub_logo.png" title="University where I defend the thesis" width="160" alt="UB logo" /> <img src="images/idibaps_logo.png" title="Research center" width="160" alt="IDIBAPS logo" /> <img src="images/logo_ciber.png" title="Hiring institution" width="160" height="38" alt="CIBER logo" /></p>
+<p>The main topic of the thesis is <a href="https://en.wikipedia.org/wiki/Data_integration" title="Wikipedia page of integration">data integration</a> applied in the <a href="https://en.wikipedia.org/wiki/Inflammatory_bowel_disease">inflammatory bowel disease (IBD)</a> research.
+This disease is complex, for instance it is not know if the cause behind Crohn’s disease and ulcerative colitis is the same.
+There are hypothesis pointing that the <a href="https://en.wikipedia.org/wiki/Microbiota">microbiome</a> is a major factor in the disease, which together with an aberrant immune response is the dominant theory.
+In order to find robust relationships between the mcirobiome and the immune system it is important to consider all the relevant variables that influence a disease.
+On this thesis I seek these relationships using data from different sequencing technologies and the observed or reported phenotype of the patients.</p>
+<p>The thesis was carried out on the <a href="http://www.idibaps.org/" title="IDIBAPS website">Institut d’Investigacions Biomèdiques August Pi i Sunyer (IDIBAPS)</a> research institute and funded by <a href="https://www.ciberehd.org/" title="CIBER website">Centro de Investigación Biomédica en Red (CIBER)</a>.
+The thesis was done on <a href="https://www.ibd-bcn.org/" title="Group&#39;s website">the IBD unit</a> which is a translational team of biologist, microbiologists, veterinaries, bioinformaticians, doctors and nurses (at <a href="https://www.clinicbarcelona.org/en" title="Hospital Clínic">Hospital Clínic</a>) in a multidisciplinary team.
+The leading doctor of the unit was <a href="https://orcid.org/0000-0002-4971-6902" title="Julià website">Julian Panés</a> whose interest on the disease lead to receiving a grant that made possible this thesis.</p>
+<p>The thesis is under the <a href="http://www.ub.edu/doctorat_biomedicina/eng/index.htm" title="Doctoral program&#39;s website">doctoral programme in biomedicine</a> of the <a href="https://www.ub.edu/web/portal/en/" title="UB website">University of Barcelona (UB)</a>.
+My thesis directors’ were <a href="https://orcid.org/0000-0001-7613-3908" title="Juanjo&#39;s ORCID">Juanjo Lozano</a> and <a href="https://orcid.org/0000-0003-4572-2907" title="Azu&#39;s ORCID">Azucena Sala</a>, my boss, who helped as bioinformatician and disease expert respectively.
+They provided advice and guidance on how to analyse the data and where to focus on the different experiments/analysis.</p>
+<p><a href="https://thesis.llrs.dev">This thesis</a> is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" title="License summary link">Creative Commons Attribution 4.0 International License (CC-BY)</a>.
+<img src="images/by.png" title="CC-BY image of creative commons" alt="“CC-BY image”" /></p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="abstract.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": {
+"href": "https://github.com/llrs/thesis/"
+},
+"facebook": false,
+"twitter": {
+"href": "https://twitter.com/intent/tweet?text=Nice%20read%20of%20%40Lluis_Revilla%20thesis"
+},
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/llrs/thesis/edit/master/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/llrs/thesis/blob/master/index.Rmd",
+"text": "View"
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": false,
+"toc_float": true,
+"toc_appendix": true,
+"toc_depth": 3,
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
