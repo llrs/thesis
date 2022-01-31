@@ -13,7 +13,7 @@ Comparing different dataset
 
 Shared selected variables
 
-BaseSet didn't work, it is computationally expensive to calculate the likelihood of 1500 variables, there are too many combinations and the numeric precision of said calculations must be considered carefully.
+BaseSet did not work, it is computationally expensive to calculate the likelihood of 1500 variables, there are too many combinations and the numeric precision of said calculations must be considered carefully.
 
 In this chapter we will summarise the main findings in relation to the broad research community and other work as well as the impact of the results to improve further research in the future or be used on clinical environments.
 
@@ -29,7 +29,7 @@ With the increase of tools there have been more pressure on comparing different 
 There have been already some articles comparing the different tools, which the previous mentioned list also has.
 There are reviews of different tools on the same datasets [@cantini2020], some are more theoretical, others are focused on a field.
 
-WGCNA didn't work.
+WGCNA did not work.
 
 adonis worked to identify which variables were important.
 
@@ -48,7 +48,7 @@ How to move the transition from bench to hospital [@collij2021].
 
 New technologies like "organ-on-chip" or more specifically "gut-on-chip" will be of great help in identifying causality by introducing the gut microbiota in this system and then study the interaction of the gut microbiota and the intestinal epithelium.
 
-BaseSet didn't work out, too many combinations and problem with numeric precision of multiplying \> 1000 float numbers.
+BaseSet did not work out, too many combinations and problem with numeric precision of multiplying \> 1000 float numbers.
 
 #### Designing models
 
@@ -71,7 +71,7 @@ Of the multiple methods available we used [MCIA](https://bioconductor.org/packag
 Which was compared by looking at the area under the curve for classifying the samples according to their location.
 
 Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn's disease.
-In this article we didn't look in depth to the biological relevance of the microorganisms an genes found.
+In this article we did not look in depth to the biological relevance of the microorganisms an genes found.
 
 The procedure of separating independent variables in their own block of data and later search the best model that fits the data provides a good strategy that should be consider for integration efforts.
 
@@ -105,6 +105,6 @@ How to apply this results ?
 
 Sequence just the ASV on patients to classify them on disease might be an option that would require further clinical validation.
 
-Selecting which genes are related to the microorganisms is will require also further validation (for which I didn't have the creativity to think of).
+Selecting which genes are related to the microorganisms is will require also further validation (for which I did not have the creativity to think of).
 
 The several environmental factors highly affect the disease, so analysis or comparisons without taking into account them might provide misleading or false results.

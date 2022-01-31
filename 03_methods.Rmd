@@ -3,7 +3,7 @@
 This chapter explains the methods used to collect and analyze data from the multiple cohorts analyzed.
 The actual code used can be found on the links of the [appendix](#software "Link to the software appendix").
 
-Some sections of this chapter has been adapted from "Multi-Omic Modelling of Inflammatory Bowel Disease with Regularized Canonical Correlation Analysis" [@revilla2021] or other publications of the research group.
+Some sections of this chapter has been adapted from "Multi-Omic Modelling of IBD with Regularized Canonical Correlation Analysis" [@revilla2021] or other publications of the research group.
 
 Samples of the different cohorts collected on the Hospital Clínic were collected similarly, differences are described below together with a brief description of the main characteristics of the different datasets.
 The processing protocol followed for those dataset that were not generated at Hosptial Clínic can be found on their respective reference and briefly summarized here.
@@ -88,7 +88,7 @@ The pouch ileum might be inflamed or not.
 
 <!--# Adapted from the ethical committee submission-->
 
-All patients with an established diagnosis of inflammatory bowel disease, including Crohn's disease, ulcerative colitis, IBD unclassified, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 46 weeks a biopsy from an ileocolonoscopy.
+All patients with an established diagnosis of IBD, including Crohn's disease, ulcerative colitis, IBD unclassified, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 46 weeks a biopsy from an ileocolonoscopy.
 The protocol was approved by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7845 and HCB/2012/7956).
 
 Patients that were referred to the Hospital Clínic de Barcelona IBD unit, who had already started treatment with a biologic agent in another center, were also included adapting to the corresponding time-schedule of their treatment.
@@ -111,7 +111,7 @@ Anonymized identification of the patients, disease, sex age at diagnostic, age a
 
 ### Howell's dataset {#methods-howell}
 
-This dataset was downloaded after the publication of an article "DNA Methylation and Transcription Patterns in Intestinal Epithelial Cells From Pediatric Patients With Inflammatory Bowel Diseases Differentiate Disease Subtypes and Associate With Outcome" [@howell2018].
+This dataset was downloaded after the publication of an article "DNA Methylation and Transcription Patterns in Intestinal Epithelial Cells From Pediatric Patients With IBDs Differentiate Disease Subtypes and Associate With Outcome" [@howell2018].
 
 From their dataset I used data from 77 samples that had both RNAseq and 16S data collected.
 There are 10 non-IBD samples, 11 with Crohn's disease and 11 with ulcerative colitis.
@@ -130,7 +130,7 @@ Data has the following characteristics: disease, age at diagnostic, age at the m
 
 ### Hernández' dataset {#methods-hernandez}
 
-This dataset was obtained after a collaboration "Integrative analysis of colonic biopsies from inflammatory bowel disease patients identifies an interaction between microbial bile-acid inducible gene abundance and human Angiopoietin-like 4 gene expression" [@hernández-rocha2021a].
+This dataset was obtained after a collaboration "Integrative analysis of colonic biopsies from IBD patients identifies an interaction between microbial bile-acid inducible gene abundance and human Angiopoietin-like 4 gene expression" [@hernández-rocha2021a].
 
 <!--# TODO table of patients and samples -->
 
@@ -251,7 +251,7 @@ The resulting OTUs table was normalized using edgeR (Version 3.28 or later) [@mc
 
 For all the other datasets [dada2](https://bioconductor.org/packages/dada2) [@callahan2016] was used to analyze microbiome data.
 It creates amplicon sequencing variants from the 16S sequencing data, without merging similar sequences at any threshold.
-It is an alternative to OTUs which allows to be able to compare results between studies because it doesn't summarize together any sequence and provides more resolution to differences on the fragment amplified.
+It is an alternative to OTUs which allows to be able to compare results between studies because it does not summarize together any sequence and provides more resolution to differences on the fragment amplified.
 
 ## Statistics
 
@@ -608,7 +608,7 @@ RGCCA as other dimensional reduction techniques provides specific weights for ea
 
 To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE): it returns an AVE score for each block, an AVE score which measures how each variable correlates with their block component, an AVE score of the inner model, which measures how each dimension accounts for the variance.
 The higher the score is to 1 the better does it work.
-However, that mathematically works better doesn't mean that it have more biological meaning or that it provides more insights on the biology.
+However, that mathematically works better does not mean that it have more biological meaning or that it provides more insights on the biology.
 
 ### Models
 

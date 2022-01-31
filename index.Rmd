@@ -19,7 +19,7 @@ bibliography:
 - references.bib
 - packages.bib
 description: |
-  Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with inflammatory bowel disease and some controls to discover key differences on this relationship.
+  Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with IBD and some controls to discover key differences on this relationship.
 ---
 
 # Preface {.unnumbered}
@@ -33,7 +33,7 @@ In order to find robust relationships between the mcirobiome and the immune syst
 On this thesis I seek these relationships using data from different sequencing technologies and the observed or reported phenotype of the patients.
 
 The thesis was carried out on the [Institut d'Investigacions Biomèdiques August Pi i Sunyer (IDIBAPS)](http://www.idibaps.org/ "IDIBAPS website") research institute and funded by [Centro de Investigación Biomédica en Red (CIBER)](https://www.ciberehd.org/ "CIBER website").
-The thesis was done on [the inflammatory bowel disease unit](https://www.ibd-bcn.org/ "Group's website") which is a translational team of biologist, microbiologists, veterinaries, bioinformaticians, doctors and nurses (at [Hospital Clínic](https://www.clinicbarcelona.org/en "Hospital Clínic")) in a multidisciplinary team.
+The thesis was done on [the IBD unit](https://www.ibd-bcn.org/ "Group's website") which is a translational team of biologist, microbiologists, veterinaries, bioinformaticians, doctors and nurses (at [Hospital Clínic](https://www.clinicbarcelona.org/en "Hospital Clínic")) in a multidisciplinary team.
 The leading doctor of the unit was [Julian Panés](https://orcid.org/0000-0002-4971-6902 "Julià website") whose interest on the disease lead to receiving a grant that made possible this thesis.
 
 The thesis is under the [doctoral programme in biomedicine](http://www.ub.edu/doctorat_biomedicina/eng/index.htm "Doctoral program's website") of the [University of Barcelona (UB)](https://www.ub.edu/web/portal/en/ "UB website").

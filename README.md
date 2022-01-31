@@ -17,6 +17,5 @@ repository.
 **Feedback**: Inputs are welcome, either as
   [issues](https://github.com/llrs/thesis/issues/) or message in  [twitter](https://twitter.com/Lluis_Revilla).
 
-**License**: I don't know how I will be licensing everything, probably with
-  creative commons... if you want to use parts, please get in touch.
+**License**: CC-BY 4
 
