@@ -7,7 +7,7 @@
 `experDesign` package built in R was released for the first time on CRAN on 2020-09-08 after nearly a year after the initial release made on [github](https://github.com/llrs/experDesign).
 
 The package uses functional programming to create and modify objects and the features used.
-The package didn't need a new class created to work and bases its performance on the large body of work made by the R core team.
+The package did not need a new class created to work and bases its performance on the large body of work made by the R core team.
 It simply adds the needed information on the columns of the introduced `data.frame` or returns an appropriate vector.
 
 `experDesign` functions are divided into several categories:
@@ -123,7 +123,7 @@ The effect of the sparsity value was measured by its effect on the inner AVE sco
 ![(#fig:puget-tau2AVE) Effect of tau on the inner AVE. The suggested tau value is the column between the regular grid.](images/pugets_tau_to_AVE.png)
 
 Exploratory analysis with the superblock model was done.
-The first two components of the superblock didn't help to explain the biology or classify the tumors:
+The first two components of the superblock did not help to explain the biology or classify the tumors:
 
 ![(#fig:puget-superblock) First components of the superblock](images/pugets_superblock.png)
 
@@ -198,8 +198,8 @@ Weighted gene co-expression network analysis did not provide relevant links betw
 
 <!--# TODO: explain why STATegRa didn't work out -->
 
-STATegRa didn't show a value of, the assumption that there is a shared common factor without influence of other categorical variables was too much.
-In addition, the model is fixed, so it didn't allow to find new or other relationships that are not one to one.
+STATegRa did not show a value of, the assumption that there is a shared common factor without influence of other categorical variables was too much.
+In addition, the model is fixed, so it did not allow to find new or other relationships that are not one to one.
 
 With RGCCA we could select different models and use all the data available without much assumptions.
 The models with the highest inner AVE of the family 1 and the family 2 models were similar to those on the Häsler dataset.
@@ -226,7 +226,7 @@ The lower the dispersion, the more robust the model was to different conditions 
 ![(#fig:hsct-bootstrap) The point with the black circle is the AVE of the original data. The dispersion is shown by the ellipses](images/hsct-bootstrap.png)
 
 With the bootstrapped models we used BaseSet to estimate the probability that each variable to be relevant for the association with a disease.
-However, due to big amount of small probabilities when using the BaseSet package to calculate which variables are more relevant it couldn't provide a good estimation on time.
+However, due to big amount of small probabilities when using the BaseSet package to calculate which variables are more relevant it could not provide a good estimation on time.
 
 MCIA was applied as a baseline of the integration, the first two components were represented similarly to those of the blocks when using RGCCA.
 
@@ -269,7 +269,7 @@ MCIA results was high but not as high as the model 2.2.
 ### Morgan's dataset {#results-morgan}
 
 We tested if results of inteRmodel were consistent on this dataset.
-The different models weren't able to separate the samples neither by location or sex.
+The different models were not able to separate the samples neither by location or sex.
 
 ![(#fig:morgan-models) First component of the transcriptome and microbiome of the Morgan's dataset.](images/morgans_models.png)
 
