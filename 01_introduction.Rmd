@@ -106,7 +106,11 @@ These adherent invasive cells enter through the epithelium of the more permeable
 
 <!--# End-->
 
-In addition, there has been some observations that IBD patients response to treatments that modify their gut microbiota, such as: fecal microbiota transplantation, probiotics and postbiotics \[ref:needed\].
+<!--# Aida p50/56 -->
+
+The metabolic cocktail composed of soluble factors secreted by life probiotic bacteria, living microorganisms which, when administered in adequate amounts, confer health benefits on the host [@tsilingiri2012; @vanderpool2008; @isaacs2008; @plaza-diaz2019; @morelli2012] or any bacterial-released molecule capable of providing health benefits through a direct or indirect mechanism, has been collectively known as postbiotics since 2012 [@tsilingiri2012].
+
+<!--# End-->
 
 #### Immune response
 
@@ -151,7 +155,7 @@ This response is driven by CD4^+^ T cells proliferation in secondary lymphoid ti
 
 T helpers (T~h~) differentiate depending of the cytokines at which they are exposed.
 Th type 1 are driven by exposure to IL-12 secreted primarily by dentritic cells.
-T~h~2 are dtriven by cytokines secreted by macrophages.
+T~h~2 are driven by cytokines secreted by macrophages.
 The imbalance between T~h~1 and T~h~2-promoting cytokines determines the intensity and duration of the inflammatory response in experimental colitis [@neurath1996].
 
 T~h~17-promoting cytokines are less well characterized in human.
@@ -201,7 +205,7 @@ The detection of parasites or bacteria, such as *Clostridium difficile*, have be
 
 <!--# End-->
 
-Usually the best diagnosis method is to perform a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is CD.
+Usually the best diagnosis method is to perform a colonoscopy, whether there is inflammation on the gastrointestinal tract on discontinuous regions then is CD.
 This inflammation could also present ulceration with rectal sparing and histological lesions which also help to diagnose the patients [@corralizamárquez2019].
 
 <!--# Check with Elena Basolas Tesis p18-->
@@ -211,7 +215,7 @@ In addition to the inflamed location(s), mosaic zones (patches of inflamed and n
 
 <!--# End -->
 
-The Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behaviour.
+The Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behavior.
 This classification assumes that the location of CD remains stable over time after diagnosis but behavioral phenotypes change.
 Other scores consider area affected:
 
@@ -229,7 +233,7 @@ To overcome this disassociation and be able to compare the well-being of patient
 
 In the early stages of the disease the relapsing and remitting course is more frequent.
 Often relapses are accompanied by clinical symptoms, and few have prolonged clinical remission (without treatment) [@peyrin-biroulet2010].
-When there is clinical remission, there can still remain some other lesions and often sublinical inflammation persists.
+When there is clinical remission, there can still remain some other lesions and often subclinical inflammation persists.
 Frequently the damage caused by the disease evolves to fibrostenotic stricture or penetrating lesions (fistula and abscess).
 
 Damage of the disease might not be apparent to patients and might be only seen several years later than the first detection [@bhattacharya2016].
@@ -272,9 +276,9 @@ Among the scores most used are the following:
 
 -   IBDQ: A 32 questionnaire used to assess the quality of life grouped into four categories: bowel, systemic, social and emotional [@irvine1999].
 
--   UCEDIS: An endoscopic score based on vascular pattern, internal bleeding and erosions and ulcers [@travis2012].
+-   UCEDIS: An endoscopic score based on vascular pattern, internal bleeding and erosion and ulcers [@travis2012].
 
-Other measured parameters include, weight, effective weight, fecal calprotectin, C reactive protein (CRP) and hemoglobine.
+Other measured parameters include, weight, effective weight, fecal calprotectin, C reactive protein and hemoglobine.
 
 <!--# Drugs and treaments -->
 
@@ -284,7 +288,6 @@ Other measured parameters include, weight, effective weight, fecal calprotectin,
 
 Current treatment attempt to induce and keep the remission of patients and reduce secondary effects of the disease instead of revert the pathogenic mechanisms.
 As standard of care corticosteroids, aminosalicylates and immunosuppressor and some other drugs like antibiotics or metronidazol are util in some cases.
-When these drugs are not effective surgery resection might be needed.
 
 Acid 5-aminosalicylic (5-ASA or mesalazina, pentasa) can be given in a topic way (either liquid, enemas, or suppository) or in oral form (pills or dilutions).
 In CU it helps in the clinic remission but it does not always mean that there is remission (is twice much likely than placebo to reach remission) [@travis2006].
@@ -292,20 +295,24 @@ On CD the effects are not so stark and generally it does not produce changes on 
 
 Antibiotics, such as metronidazol and ciprofloxacina, are effective to deal with secondary effects of IBD such as abscess and bacterian overgrowth in CD [@feller2010; @prantera2009], but they do not seem effective on UC [@prantera2009].
 
-Corticosteroids can be taken orally, such as prednisolona, prednisona and Budesonide, intravenal, hidrocortisona, metilprednisolona, or via enemas and suppositories.
+Corticosteroids can be taken orally, such as prednisolona, prednisona and Budesonide; intravenous, hidrocortisona, metilprednisolona; or via enemas and suppositories.
 Budesonide is not absorved well and has a limited biodistribution but it has good therapeutic benefits with a reduced systemic toxicity in IBD [@rezaie2015; @peyrin-biroulet2010\]. These drugs work very well as antiinflammatory for mild or severe IBD but do not work well as maintenance drug \[@lichtenstein2009; @ouellette2001].
 
-Tiopurines (azatiopurina, mercatiopurina) are immunosuppressants drugs that deactivate key process of limphocytes T that might trigger the inflammation.
+Thiopurines (Azathioprine, mercaptopurina) are immunosuppressants drugs that deactivate key process of limphocytes T that might trigger the inflammation.
 As a side effect they are toxic due to their interaction with nucleic acids [@warner2018].
 on CD they are useful to induce and keep remission [@chande2015], while on UC they are used to keep the remission [@gisbert2009].
 
 In the last two decades the IBD treatment has moved from aminosalicylates, corticosteroids and immunomodulators to anti-TNF$\alpha$.
-Anti-TNF$\alpha$ drugs has changed the IBD treatment as it reduced the hospitalization associated and risk of surgery as well as induce a better mucosal healing and quality of life for patients [@peyrin-biroulet2011].
+Anti-TNF$\alpha$ drugs has changed the IBD treatment as it reduced the hospitalization associated with previous treatments, reducing medical costs and risk of surgery as well as induce a better mucosal healing and quality of life for patients [@peyrin-biroulet2011].
 However, 20-30% of patients have no response to this treatments and another 30-40% lose response in a year [@billioud2011].
 
 <!--# Pause to give names of drugs used on other targets previously mentioned -->
 
 Recently a new wave of drugs has been developed targeting different molecules such as vedolizumab, targeting anti-integrin$\alpha 4 \beta 7$, ustekinumab, targeting both IL-12 and IL-23, risankizumab an anti IL-23, tofacitinib an inhibitor of JAKs, infliximab an anti-TNF$\alpha$.
+
+Patients might become refractory to drug.
+Thus, drugs do not have the same effect as previously and the dose might need to be increased with the risk of more secondary effects [@raine2021].
+Surgery resection might be needed on these patients.
 
 <!--# Back to Elena -->
 
@@ -317,23 +324,11 @@ Usually the surgery is limited to removing the inflamed segment but occasionally
 
 <!--# End -->
 
-To reduce secondary effects of drugs or to find the right dose of the drugs often a reduction of dose is recommended.
-However, dose reduction often results in diminished response to the drug.
-Thus, the patients do not recover the initial response they had later on if the dose is raised to the previous levels.
-This builds up also on patients being refractory to the drugs and treatments given [@raine2021].
-
-One of the most relevant advances in the treatment of IBD has been the introduction of anti-TNF antibodies, but this therapy is associated to significant medical costs.
-Reports indicated that in recent years the cost of this therapy is the main driver of IBD health care, which represents a shift from previous drivers that included mainly hospitalizations and surgeries.
-Furthermore, response rates to anti-TNF therapy are in the range of 60%, and remission rates are 30%.
-Therefore, predictors of response would result in high benefits for patients and significant savings for public health care systems.
-Despite the high efficacy of anti-TNF drugs, loss of response occurs in 30-50% of patients, and development of anti-drug antibodies is the main reason for loss of response.
-
-If the drugs fail to contain the inflammation and heal the mucosa doctors might recommend to perform a surgery to remove the damaged section.
+If the drugs fail to contain the inflammation and heal the mucosa doctors might recommend a different procedure.
 In some cases HSCT is recommended which have shown to improve the life of the patients [@corralizab].
-This is a new procedure given only to the most extreme cases for which several publications have checked that it resets the immunological state of the patient.
+This is a new procedure given only to the most extreme cases to reset the immunological state of the patient.
 
-But are proposed to reset or change the intestinal microbiome of the patients to help them on the disease.
-This has been doing experimentally on mice and mouse for some time and some experiments on patients resulted have been performed already.
+To reset or hugely modify the microbiota fecal microbiota transplantation between different people is currently being explored \[@weingarden2017\].
 
 ### Summary {#summary-ibd}
 
