@@ -80,9 +80,7 @@ jobs:
         with:
           branch: gh-pages
           folder: _book
-          clean-exclude: |
-            _book
-            *.html
+          clean: false
   bookdown-pdf:
     runs-on: ubuntu-latest
     env:
@@ -118,6 +116,4 @@ jobs:
         with:
           branch: gh-pages
           folder: _book
-          clean-exclude: |
-            _book
-            *.html
+          clean: false
