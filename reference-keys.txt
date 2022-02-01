@@ -26,9 +26,8 @@ microbiome
 immune-response
 environmental
 CD
-cd
 UC
-treament
+treatment
 summary-ibd
 integration-studies-on-ibd
 data-origin
