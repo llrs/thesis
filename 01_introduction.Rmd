@@ -9,7 +9,7 @@ However, once it has initiated the most prevalent hypothesis of its chronicity s
 
 To diagnose the IBD doctors use endoscopy and/or magnetic resonance imaging and histologies.
 
-Treatments provided for the IBD include, noninflammatory drugs, suppressors and biologics, i.e, anti TNF- anti-IL2, 23, anti-$\alpha4\beta7$.
+Treatments provided for the IBD include, noninflammatory drugs, suppressors and biologics, i.e, anti TNF- anti-IL2, 23, anti-integrin $\alpha4\beta7$.
 The therapeutic options can induce remission in some patients, but they often need continuous treatment to avoid recurrence.
 Nevertheless, many patients \[ref:needed\] are refractory or intolerant to those therapies and need to undergo surgery.
 
@@ -44,10 +44,10 @@ But once a segment is affected by the disease it can be considered as involved, 
 
 ### Etiology and pathogenesis
 
-Several mechanisms have been proposed to drive IBD pathogenesis [@zhang2014; @hugot2004\]. Some of them are based on a relationship between the immune system and the microbiome \[@silva2016a; @demattos2015].
+Several mechanisms have been proposed to drive IBD pathogenesis \[@zhang2014; @hugot2004\]. Some of them are based on a relationship between the immune system and the microbiome \[@silva2016a; @demattos2015\].
 It is also unclear if CD and the UC share the same origin considering their different symptoms.
 
-There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b; @satsangi2006c\]. Disease can be classified based on age at onset as very early, early or adult on-set disease \[@satsangi2006c].
+There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) \[@mcgovern2015b; @satsangi2006c\]. Disease can be classified based on age at onset as very early, early or adult on-set disease \[@satsangi2006c\].
 Genome-wide association studies (GWAS) have linked IBD to over 100 genetic loci, including a *NOD2* gene, but so far there is not any known mechanism how polymorfism on this genes are driving the disease [@horowitz2021].
 On early pedriatic and adult disease the genetic component is lower than on very early on set and it is thought that the environmental factors are the main cause of the disease at those ages.
 
@@ -61,7 +61,7 @@ This has lead to look for genetic factors on IBD both on general population and 
 Genome wide association studies (GWAS) are one of the most common genetic studies performed, together with methylation studies.
 To discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.
 
-With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019\]. Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in UC \[@jostins2012; @momozawa2018].
+With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants \[@kumar2019\]. Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in UC \[@jostins2012; @momozawa2018\].
 The mechanism of how this gene protects from UC has not been confirmed yet [@horowitz2021].
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
@@ -86,7 +86,7 @@ IBD has been characterized by a breakdown in the balance between beneficial and 
 Indeed, many studies show that patients with IBD have less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
 $\alpha$-diversity is a measure of the species present on a single sample and its abundance while $\beta$-diversity compares the diversity between samples.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004\]. At the same time there is often a reduction of protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium* which might be able to protect individuals from mucosal inflammation via several mechanism such as a downregulation of proinflammatory cytokines or the stimulation of IL-10 and antiinflammatory cytokines \[@ott2004\]*.* Specially *Faecalibacterium prausnitzii* is one microorganism of interest \[@kostic2014; @sender2016].
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients \[@ott2004\]. At the same time there is often a reduction of protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium* which might be able to protect individuals from mucosal inflammation via several mechanism such as a downregulation of proinflammatory cytokines or the stimulation of IL-10 and antiinflammatory cytokines \[@ott2004\]*.* Specially *Faecalibacterium prausnitzii* is one microorganism of interest \[@kostic2014; @sender2016\].
 
 <!--# Aida 2.3 p24-->
 
@@ -123,7 +123,7 @@ From the luminal side of the intestine, the first layer is the mucosa (See secti
 In the colon the mucus is organized in two layers: the inner layer, a firm mucus layer; and the outer, loose mucus layer [@okumura2017].
 The intestinal epithelium is a single layer of cells organized into crypts and villi (and circular folds on the large intestine) that carries out a diverse array of functions besides digestion performed by specialized cell lineages.
 
-<!--# From tesis Aida p20 Immune Response-->
+<!--# From tesis Aida p20 Immune Response -->
 
 Immune response in the intestinal mucous is mainly excreted by the gut associated lymphoid tissue [@faria2012].
 Genetically predisposed patients when exposed to certain environmental factors activate immune responses against microbials or self-antigens which in turn, may impair the mucosal barrier of the intestinal mucosa, the first physical barrier on the mucosal surface.
@@ -139,7 +139,7 @@ The intestinal epithelium also plays a key role on the intake and diffusion of m
 
 Damaging or increasing the permeability of the intestinal epithelium results on a response from the immune system.
 Detecting signals of any foreign particle can also trigger the immune system.
-On the intestine this starts with the identification of these signals by intestinal epithelal cells have pattern recognition receptors.
+On the intestine this starts with the identification of these signals by intestinal epithelial cells have pattern recognition receptors.
 There are two main pattern recognition receptors: toll-like receptors (TLR), which are present on the surface, and nucleotide-binding oligomerization domain-like receptors (NOD-like receptors), present on the cytoplasm of the cells.
 These receptors upon recognition of pathogen associated molecular patterns (PAMPs) start an amplifying signaling producing chemokines and cytokines which activates the transcription and translation of pro-inflammatory mediators to ensure an effective immune response.
 Initially the innate response is triggered but the cells also increase the antigen presentation to T cells and thus activate the immune adaptive response [@mayorgas2021a].
@@ -182,22 +182,13 @@ Other environmental factors have been linked to IBD but without enough evidence 
 
 <!--# End-->
 
-<!--# Check with Elena Basolas Tesis p18-->
-
-Perhaps the environment factors influence the samples disease etiology towards CD or UC as there are some differences between them.
-On CD a granulome, that is a region with big multinucleous cells, can appear on any intestinal layer, while on UC the damage is different: it consists in many neutrophil in the crypt lumen [@bassolasmolina2018a].
-
-To distinguish between the diseases, in addition to the inflamed location(s), mosaic zones (patches of inflamed and non-inflamed areas) are more characteristic of CD [@bassolasmolina2018].
-
-<!--# End -->
-
-### Physiology {#CD}
-
-#### CD 
+### CD physiology {#CD}
 
 As previously introduced, CD is a chronic inflammatory disorder characterized by a discontinuous inflammation of the gastrointestinal tract.
 Inflammation on the gastrointestinal tract is transmural and can affect from the mouth to the anus, but mainly it manifests on the ileum and colon [@demattos2015a].
-It is frequently associated with extraintestinal manifestation and/or concomitant immuno-mediated diseases.
+It is frequently associated with extraintestinal manifestation and/or concomitant immune-mediated diseases.
+
+<!--# Clinical presentation -->
 
 The disease itself manifest an heterogeneous symptoms that can involve, diarrhea, weight loss, abdominal pain, fever, anorexia and malaise.
 Other less frequent co-occurring manifestations are arthritis, primary sclerosing cholangitis, skin disorders venous or arterial thromboembolism and/or pulmonary involvement [@baumgart2012] .
@@ -206,14 +197,21 @@ All these can lead to delays on correct diagnosis of the disease.
 
 <!--# Tesis Ana p21-->
 
-The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with CD [@khanna2017\]. The detection of fecal calprotectin, is generally a good marker of endocopic activity with sensitivity above 70% and specificity above 80% \[@guardiola2018; @sands2015].
+The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with CD [@khanna2017\]. The detection of fecal calprotectin, is generally a good marker of endoscopic activity with sensitivity above 70% and specificity above 80% \[@guardiola2018; @sands2015].
 
 <!--# End-->
 
 Usually the best diagnosis method is to perform a colonoscopy, whether there is inflammation on the gastroinestinal tract on discontinuous regions then is CD.
 This inflammation could also present ulceration with rectal sparing and histological lesions which also help to diagnose the patients [@corralizamárquez2019].
 
-The Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behaviour .
+<!--# Check with Elena Basolas Tesis p18-->
+
+Usually on CD a granulome, that is a region with big multinucleous cells, can appear on any intestinal layer.
+In addition to the inflamed location(s), mosaic zones (patches of inflamed and non-inflamed areas) are more characteristic of CD [@bassolasmolina2018].
+
+<!--# End -->
+
+The Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behaviour.
 This classification assumes that the location of CD remains stable over time after diagnosis but behavioral phenotypes change.
 Other scores consider area affected:
 
@@ -223,7 +221,7 @@ Other scores consider area affected:
 
 <!--# Add Figure 2 from ACM thesis?-->
 
-To some extent, there is a disassociation between clinical symptomes and the endoscopy finding.
+To some extent, there is a disassociation between clinical symptoms and the endoscopy finding.
 Often patients report feeling better despite lack of muscular healing [@bhattacharya2016a].
 To overcome this disassociation and be able to compare the well-being of patients several scores and thresholds are used on research and by physicians that will be described later.
 
@@ -242,7 +240,7 @@ Stricturing is a narrowing of a part of the intestine often because of scar tiss
 Penetrating is when the epithelium has some holes or tubes.
 If these tubes result in an abnormal connection between two body parts it is a fistula, it might also result in an abcess, a collections of pus, often developed in the abdomen, pelvis, or around the anal area.
 
-#### UC {#UC}
+### UC physiology {#UC}
 
 As previously introduced, UC is a chronic inflammatory disorder characterized by a continuous inflammation of the colon.
 Depending on the inflamed segments of the intestine it is classified in several phenotypes.
@@ -252,11 +250,14 @@ If the segments from rectum to the sigmoid colon are affected is a distal coliti
 If the inflammation continues to the descending colon it is then an extensive colitis until it affects the whole colon when it becomes a pancolitis.
 The extension of UC is inversely related to the frequency.
 However, the extension and severity of the disease correlates: the prognosis is worse the more extended it is [@etchevers2009].
+In addition, the damage usually consists in many neutrophil in the lumen crypt \[@bassolasmolina2018a\].
 
-The goal of the clinical care is to recover and reach a healthy life.
+<!--# Clinical care -->
+
+The goal of the clinical care is to recover.
 As a first step, the symptoms of IBD have to lessen to the point that they are mostly absent, gone, or barely noticeable, this is known as clinical remission.
 However, this is not enough as the mucosa might be still inflamed and thus the reconstitution of the structure and function of the intestinal mucosa is not complete.
-Other lesions, might aid to the progression to other phenotypes such as fibrostenotic stricture or penetrating lesions increasing the structural bowel damage or primary sclerosing cholangitis [@boonstra2012].
+Other lesions, might aid to the progression to other phenotypes such as fibrostenotic stricture or penetrating lesions or primary sclerosing cholangitis [@boonstra2012].
 
 To prevent and avoid further damage several procedures are followed:
 
@@ -275,10 +276,46 @@ Among the scores most used are the following:
 
 Other measured parameters include, weight, effective weight, fecal calprotectin, C reactive protein (CRP) and hemoglobine.
 
-### Treament
+<!--# Drugs and treaments -->
 
-Patients might require many drugs to treat UC.
-Although this varies between patients according to their physicians' prescription and recommendations, here is a short list of drugs or treatments targeting a particular pathway: anti-TNF$\alpha$, vedolizumab, ustekinumab, risankizumab, tofacitinib, infliximab, adalimumab a 5-asa treatement, corticoesteroids, Azathiprine/Mercaptopurine 6MCP, Methotrexate MTX, Tacrolimus FK, Cyclosporin A CyA. Patients are taking one or more of these drugs as standard of care.
+### Treatment
+
+<!--# Tesis Elena 4.Treatment, p25/37 -->
+
+Current treatment attempt to induce and keep the remission of patients and reduce secondary effects of the disease instead of revert the pathogenic mechanisms.
+As standard of care corticosteroids, aminosalicylates and immunosuppressor and some other drugs like antibiotics or metronidazol are util in some cases.
+When these drugs are not effective surgery resection might be needed.
+
+Acid 5-aminosalicylic (5-ASA or mesalazina, pentasa) can be given in a topic way (either liquid, enemas, or suppository) or in oral form (pills or dilutions).
+In CU it helps in the clinic remission but it does not always mean that there is remission (is twice much likely than placebo to reach remission) [@travis2006].
+On CD the effects are not so stark and generally it does not produce changes on the disease [@akobeng2016].
+
+Antibiotics, such as metronidazol and ciprofloxacina, are effective to deal with secondary effects of IBD such as abscess and bacterian overgrowth in CD [@feller2010; @prantera2009], but they do not seem effective on UC [@prantera2009].
+
+Corticosteroids can be taken orally, such as prednisolona, prednisona and Budesonide, intravenal, hidrocortisona, metilprednisolona, or via enemas and suppositories.
+Budesonide is not absorved well and has a limited biodistribution but it has good therapeutic benefits with a reduced systemic toxicity in IBD [@rezaie2015; @peyrin-biroulet2010\]. These drugs work very well as antiinflammatory for mild or severe IBD but do not work well as maintenance drug \[@lichtenstein2009; @ouellette2001].
+
+Tiopurines (azatiopurina, mercatiopurina) are immunosuppressants drugs that deactivate key process of limphocytes T that might trigger the inflammation.
+As a side effect they are toxic due to their interaction with nucleic acids [@warner2018].
+on CD they are useful to induce and keep remission [@chande2015], while on UC they are used to keep the remission [@gisbert2009].
+
+In the last two decades the IBD treatment has moved from aminosalicylates, corticosteroids and immunomodulators to anti-TNF$\alpha$.
+Anti-TNF$\alpha$ drugs has changed the IBD treatment as it reduced the hospitalization associated and risk of surgery as well as induce a better mucosal healing and quality of life for patients [@peyrin-biroulet2011].
+However, 20-30% of patients have no response to this treatments and another 30-40% lose response in a year [@billioud2011].
+
+<!--# Pause to give names of drugs used on other targets previously mentioned -->
+
+Recently a new wave of drugs has been developed targeting different molecules such as vedolizumab, targeting anti-integrin$\alpha 4 \beta 7$, ustekinumab, targeting both IL-12 and IL-23, risankizumab an anti IL-23, tofacitinib an inhibitor of JAKs, infliximab an anti-TNF$\alpha$.
+
+<!--# Back to Elena -->
+
+Close to 35% of patients with UC will need to have a surgery resection, either due to complications or because the inflammation can not be controlled.
+Surgery usually removes the inflamed segment of the colon.
+The most common procedure used is a colectomy (whole colon removal), with ileostomy [@hwang2008].
+CD patients usually require surgery associated to complications like stenosis, abscess, and fistulas ) between 70% and 90% at some point of their lives [@gardiner2007].
+Usually the surgery is limited to removing the inflamed segment but occasionally an ileostomy is required [@lewis2010].
+
+<!--# End -->
 
 To reduce secondary effects of drugs or to find the right dose of the drugs often a reduction of dose is recommended.
 However, dose reduction often results in diminished response to the drug.
