@@ -44,8 +44,7 @@ But once a segment is affected by the disease it can be considered as involved, 
 
 ### Etiology and pathogenesis
 
-Several mechanisms have been proposed to drive IBD pathogenesis [@zhang2014; @hugot2004].
-Some of them are based on a relationship between the immune system and the microbiome [@silva2016a; @demattos2015].
+Several mechanisms have been proposed to drive IBD pathogenesis [@zhang2014; @hugot2004]. Some of them are based on a relationship between the immune system and the microbiome [@silva2016a; @demattos2015].
 It is also unclear if CD and the UC share the same origin considering their different symptoms.
 
 There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b; @satsangi2006c].
@@ -63,8 +62,7 @@ This has lead to look for genetic factors on IBD both on general population and 
 Genome wide association studies (GWAS) are one of the most common genetic studies performed, together with methylation studies.
 To discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.
 
-With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019].
-Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in UC [@jostins2012; @momozawa2018].
+With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019]. Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in UC [@jostins2012; @momozawa2018].
 The mechanism of how this gene protects from UC has not been confirmed yet [@horowitz2021].
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
@@ -89,8 +87,7 @@ IBD has been characterized by a breakdown in the balance between beneficial and 
 Indeed, many studies show that patients with IBD have less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
 $\alpha$-diversity is a measure of the species present on a single sample and its abundance while $\beta$-diversity compares the diversity between samples.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004].
-At the same time there is often a reduction of protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium* which might be able to protect individuals from mucosal inflammation via several mechanism such as a downregulation of proinflammatory cytokines or the stimulation of IL-10 and antiinflammatory cytokines [@ott2004]*.* Specially *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004]. At the same time there is often a reduction of protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium* which might be able to protect individuals from mucosal inflammation via several mechanism such as a downregulation of proinflammatory cytokines or the stimulation of IL-10 and antiinflammatory cytokines [@ott2004]*.* Specially *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
 
 <!--# Aida 2.3 p24-->
 
@@ -223,7 +220,7 @@ The Montreal classification aims to classify patients according to their age of 
 This classification assumes that the location of CD remains stable over time after diagnosis but behavioral phenotypes change.
 Other scores consider area affected:
 
--   Montreal classification allows for early onset of disease to be categorized separately those with age of diagnosis at 16 years or younger, diagnosis at 17--40 years and \>40 years, respectively [@satsangi2006].
+-   Montreal classification allows for early onset of disease to be categorized separately those with age of diagnosis at 16 years or younger, diagnosis at 17--40 years and >40 years, respectively [@satsangi2006].
 -   SES-CD: simple endoscopic score for CD [@daperno2004]. Score based on size of ulcers, ulcerate surface percentage, affected surface and presence of narrowing on the bowel.
 -   CDAI: CD Activity Index takes into account weight, ideal body weight, sex, and events on the last week such as liquid stools, abdominal pain, general well-being and if anti-diarrhea drug usage, as well as knowing if there are fistulas, fever, and other complications [@best1976]
 
@@ -435,7 +432,7 @@ I classified them in the bioscience field, which means that they are meant to be
 
 The most important distinction in integration methods is what kind of data are combined.
 In general data can be divided between categorical and numeric variables, which are usually found in several fields.
-Sometimes doctors want to understand the relationship between a phenotype they observe and the underlying mechanism.
+Sometimes scientist want to understand the relationship between a phenotype they observe and the underlying mechanism.
 Usually this involves looking how the metabolites, the gene expression, the methylation, the number of variants a gene has, and other numeric variables are related to the observed phenotype (like pain).
 
 Depending on what does a method aim for it handles both data types or just one, but often they are used differently.
@@ -452,6 +449,8 @@ The number of categories to use and how is the numeric value split depends on ca
 Very rarely methods allow to use both of them as they are.
 If they allow so, it is usually for classification purposes.
 
+<!-- # Add a figure with examples of kind of data and a reference -->
+
 #### Objective
 
 The objective of the method is one of its most important defining properties.
@@ -461,42 +460,40 @@ Most of the times one (or several) of the following results are expected from in
 -   Classification of the patients or samples
 
     As seen one of the purposes of the integration might be to use multiple sources of data to accurately describe how do samples or patients fit on a predefined possibles states.
-    This might be to accurately describe if a patient has one or other related disease of a possible subset of diseases given their condition.\
-
-<!-- -->
+    This might be to accurately describe if a patient has one or other related disease of a possible subset of diseases given their condition [ref:needed].
 
 -   An overview of the role of each individual block in a biological system
 
-Sometimes the question is which omic method is the best describing the disease.
-This could prevent peforming expensive tests that can be estimated by other cheaper or easier technique that has enough predictive power or is enough sensitive and specific for the task.\
-An example of this is the search of markers on blood to identify if there are cancer cells on tissues.
+    Sometimes the question is which omic method is the best describing the disease.
+    This could prevent peforming expensive tests that can be estimated by other cheaper or easier technique that has enough predictive power or is enough sensitive and specific for the task.\
+    An example of this is the search of markers on blood to identify if there are cancer cells on tissues [ref:needed].
 
 -   A better understanding of the relationships between the 'omics types
 
-Several methods are used to understand better how the different data sets interact.
-When a potentially relationship between omics is disvoered then other focused methods are used to understand the mechanistic relationship between them.\
-For instance, checking that in a particular case or condition is present on a given relationship, and that this relationships follows our model or not.
+    Several methods are used to understand better how the different data sets interact.
+    When a potentially relationship between omics is disvoered then other focused methods are used to understand the mechanistic relationship between them.\
+    For instance, checking that in a particular case or condition is present on a given relationship, and that this relationships follows our model or not [ref:needed].
 
 -   Finding a molecular signature.
 
-A signature is usually a group of features that describe/are representative of a cell line, a process or a stage.
-Identifying a subset of the variables from the omics that are related is often a desired goal because it reduces the amount of variables allowing to perform experiments on the bench on just those that might be important.
-In other fields, such as machine learning, selecting the important variables is known as [feature selection](https://en.wikipedia.org/wiki/Feature_selection "Wikipedia page of feature selection").
-There are several methods that are used to do this.\
-An example of this is when performing eQTL, where a locus is related to the expression change of genes, so finding the right positions that induce a specific expression level is a very common task.
+    A signature is usually a group of features that describe/are representative of a cell line, a process or a stage.
+    Identifying a subset of the variables from the omics that are related is often a desired goal because it reduces the amount of variables allowing to perform experiments on the bench on just those that might be important.
+    In other fields, such as machine learning, selecting the important variables is known as [feature selection](https://en.wikipedia.org/wiki/Feature_selection "Wikipedia page of feature selection").
+    There are several methods that are used to do this [ref:needed].\
+    An example of this is when performing eQTL, where a locus is related to the expression change of genes, so finding the right positions that induce a specific expression level is a very common task [ref:needed].
 
 -   A predictive model
 
-Predictive models usually require a very good understanding of the current and/or past relationships, as well as, a good feature selection procedure.
-If a good model on previous data exists it might be used to predict future events.
-Sometimes, models are only build to predict events without being able to accurately describe the mechanism, why they work.\
-This kind of methods are used improve treatments, diagnosis and prognosis prediction.
+    Predictive models usually require a very good understanding of the current and/or past relationships, as well as, a good feature selection procedure.
+    If a good model on previous data exists it might be used to predict future events.
+    Sometimes, models are only build to predict events without being able to accurately describe the mechanism, why they work.\
+    This kind of methods are used improve treatments, diagnosis and prognosis prediction [ref:needed].
 
 -   Impute values
 
-Some methods aim to accurately guess which values have one block given some other information.
-Missing values can happen for a variety of reasons from practical ones, like a sample not being available, to technical ones, such as laboratory method failing.
-However, this is often a intermediate step to other goals.
+    Some methods aim to accurately guess which values have one block given some other information.
+    Missing values can happen for a variety of reasons from practical ones, like a sample not being available, to technical ones, such as laboratory method failing [ref:needed].
+    However, this is often a intermediate step to other goals.
 
 To complete these goals it is important to have enough statistical power to determine the significance of tests performed (if any) and to understand how complete are the data sources used on the integration [@tarazona2021].
 Having more statistical power helps identifying the relationships one seeks when using this methods.
@@ -569,8 +566,8 @@ As seen, some variables influence other variables which affects the outcome in a
 With many variables present in a dataset it is important to be aware of known relationships between variables.
 Even in a simple dataset, like a RNA-seq dataset, it is important to be aware of the relationships between variables.
 
-Since the discovery of the lactose [operon](https://en.wikipedia.org/wiki/Operon) it is known how some genes regulate each other.
-It is no know how other variables are related between them.
+Since the discovery of the lactose [operon](https://en.wikipedia.org/wiki/Operon) it is known how some genes regulate each other [@jacob1961].
+It is not know how other variables are related between them.
 For instance, how does the increase in expression of a gene affects the growth of a microorganism?
 Usually the relationships between variables are mediated by many factors or interactions.
 
@@ -581,7 +578,7 @@ This step is usually done by the dimension reduction methods... However, sometim
 Network approaches relate the variables between them (such as [@koh_iomicspass_2019]).
 These approaches are fairly new and growing in popularity partly because they can address the direction of the interaction.
 
-In partial correlations some or all of the other variables are considered on how much do they affect the others and this effect is reduced.
+In partial correlations some or all of the other variables are considered on how much do they affect the others and this effect is reduced [@yule1907].
 This assumes a linear relationship and is computationally expensive when there are thousands of variables.
 
 #### Input data
@@ -617,7 +614,8 @@ Some of them have previously appeared:
     Multilayer networks, including the multiplex, Molti-C-DREAM[@didier2018], RWR-MH, RWR-M [@valdeolivas2019].
     Network embedding MultiVERSE are some of the methods using networks [@pio-lopez2021].
 
-    Bayesian approaches are also quite frequent, these methods use the Bayes theorem to see the relationships between variables.
+    Bayesian approaches are also quite frequent, these methods use the Bayes' theorem to see the relationships between variables.
+    The Bayes' theorem explains that the conditional probability of a variable is related to the prior knowledge of conditions that might be related to the event [@bayes1763].
     Some methods that use these approaches are [RIMBANET](http://research.mssm.edu/integrative-network-biology/RIMBANET/RIMBANET_overview.html) [@zhu2012], [BCC](https://github.com/ttriche/bayesCC) [@lock2013] and others like [@virtanen2012].
 
 -   Dimensional Reduction
@@ -627,7 +625,7 @@ Some of them have previously appeared:
     L1-regularization adds a penalty equal to the absolute value of the magnitude of coefficients which might leads to some coefficients becoming zero and the variable eliminated from the model.
     On the other hand, L2-regularization does not result in elimination of coefficients or sparse models and can only be used when there is multicollinearity as it works well to avoid over-fitting.
 
-    Several methods use this approach: Momix [@cantini_benchmarking_2020], RGCCA [@tenenhaus2017], mixOmics [@rohart2017], STATegRa [@gomez-cabrero2019], ...
+    Several tools use this approach: Momix [@cantini_benchmarking_2020], RGCCA [@tenenhaus2017], mixOmics [@rohart2017], STATegRa [@gomez-cabrero2019], ...
 
 -   Active module identification
 
