@@ -81,7 +81,7 @@ mcia
 stategra
 baseset
 experdesign
-roc--auc
+ROC
 rgcca
 regularized-generalized-canonical-correlation-analysis
 description
