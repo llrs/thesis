@@ -9,6 +9,8 @@ However, once it has initiated the most prevalent hypothesis of its chronicity s
 
 To diagnose the IBD doctors use endoscopy and/or magnetic resonance imaging and histologies.
 
+<!-- # TODO add references on ref:needed -->
+
 Treatments provided for the IBD include, noninflammatory drugs, suppressors and biologics, i.e, anti TNF- anti-IL2, 23, anti-integrin $\alpha4\beta7$.
 The therapeutic options can induce remission in some patients, but they often need continuous treatment to avoid recurrence.
 Nevertheless, many patients \[ref:needed\] are refractory or intolerant to those therapies and need to undergo surgery.

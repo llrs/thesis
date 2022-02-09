@@ -267,6 +267,8 @@ It is an alternative to OTUs which allows to be able to compare results between 
 
 ## Statistics
 
+<!-- # TODO cite articles using these methods -->
+
 Differential expression analysis was performed with the following the limma-trend method [@ritchie2015; @law2014] and edgeR [@mccarthy2012] (Bioconductor version 3.10 or superior) packages, normalized using the trimmed mean of M-values and log-2 transformed into counts per millions following the workflow described on [@law2018] using voom which in addition performs a count normalization.
 The samples were adjusted for inter-patient differences specifying block argument for patient variable.
 
@@ -379,6 +381,8 @@ $|\gamma_k|$ indicates the ordination of the gene set, the number of genes of th
 This difference is later converted to enrichment score for each gene set for each sample, similar to GSEA. This score can be calculated as a difference of hits and misses or the maximum deviation from zero of the random walk (which allows to detect gene sets that have genes with different opposing expression patterns).
 
 ### Other methods used
+
+<!-- # TODO Organize better this section -->
 
 #### PERMANOVA
 
@@ -561,7 +565,11 @@ Canonical correlation is a method that uses data about the same unit but from di
 Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017a] which was used on this thesis.
 The method and implementation will be explained in detail on the next section.
 
+<!-- # TODO add flowchart from analysis process like http://mixomics.org/mixdiablo/ {1 and 2} -->
+
 ## Regularized generalized canonical correlation analysis
+
+<!-- # TODO Extend explanation introducing dot product -> PCA -> CCA -> RGCCA from a review or something-->
 
 The regularized generalized canonical correlation analysis is an extension to the canonical correlation analysis [@jordan1875; @hotelling1936] which is an old method to find agreement between two, or more, scorers (as it was first introduced on the literature) or sources.
 
