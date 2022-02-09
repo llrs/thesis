@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-02-07" />
+<meta name="date" content="2022-02-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -237,7 +237,7 @@ However on the organoids dataset, the change on the method of producing them int
 <div id="baseset-1" class="section level3" number="4.1.2">
 <h3><span class="header-section-number">4.1.2</span> BaseSet</h3>
 <p><code>BaseSet</code> package, built in R, was released for the first time on CRAN on 2020-11-11 after nearly two years after the initial work started on <a href="https://github.com/llrs/BaseSet">github</a>.</p>
-<p>The package uses both functional programming and object oriented program to create and modify the TidySet S4 object defined<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>.
+<p>The package uses both functional programming and object oriented program to create and modify the TidySet S4 object defined<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>.
 Mixing it with S3 generic functions it provides a powerful interface compatible with the tidyverse principles, a <a href="https://www.tidyverse.org/">group of packages</a> following the same design.
 The package provides a new class to handle fuzzy sets and the associate information.</p>
 <p><code>BaseSet</code> methods are divided into several categories:</p>
@@ -268,7 +268,7 @@ There are functions to search for a model given some rules, that check them usin
 <li><p>Building: To easier build correct models on RGCCA, simplifying the process to create a symmetric matrix.</p></li>
 </ul>
 <p>Currently it is only available on github, so the number of downloads and usage is unknown but since its release a user has contacted to keep it up to date with development versions of RGCCA.
-Which now it is compatible with the next release of <a href="https://github.com/rgcca-factory/RGCCA/tree/CRAN">RGCCA being prepared</a><a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>.
+Which now it is compatible with the next release of <a href="https://github.com/rgcca-factory/RGCCA/tree/CRAN">RGCCA being prepared</a><a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>.
 Together with a copy of the RGCCA packages with more tests has enabled to identify changes on the RGCCA package that could affect users.</p>
 </div>
 </div>
@@ -281,7 +281,7 @@ Together with a copy of the RGCCA packages with more tests has enabled to identi
 <p>The three different methods, centroid, factorial or horst were tested and compared.
 The main result of this comparison was that the differences of the selection of the variables mattered more than the number of variables selected with each method.
 The models were tested with different weights on all three schemes: horst, centroid and factorial.
-The horst and the centroid scheme were similar while the factorial resulted in the most different AVE values (see <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s001">S1 Data</a> of <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">244</a>]</span>).
+The horst and the centroid scheme were similar while the factorial resulted in the most different AVE values (see <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s001">S1 Data</a> of <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">200</a>]</span>).
 The centroid scheme was selected because it takes into account all the relationship regardless of the canonical correlation sign between the blocks and it is similarity to horst scheme.</p>
 <p>The effect of the sparsity value was measured by its effect on the inner AVE scores and the combination of the different values for each block.</p>
 <div class="figure"><span style="display:block;" id="fig:puget-tau2AVE"></span>
@@ -308,7 +308,7 @@ According to the inner AVE, the best model was the one in which the weights (1) 
 <p>When we added a superblock to the data, there was a slight increase of 0.01 on the inner AVE of the model.
 The model with the superblock that explained most of the variance was that in which the weights of the interaction within (1) the host transcriptome, (2) between the superblock and the CGH, (3) between the host transcriptome and the localization, and (4) between CGH and the host transcriptome were 1, 1, 1 and 1/3, respectively.
 To see if the superblock could classify the sample by location, we plotted the first two components of the superblock.</p>
-<p>We can clearly see that they do not classify the samples according to the location of the tumor, which is known to affect the tumor phenotype <span class="citation">[<a href="#ref-puget2012" role="doc-biblioref">202</a>]</span>.</p>
+<p>We can clearly see that they do not classify the samples according to the location of the tumor, which is known to affect the tumor phenotype <span class="citation">[<a href="#ref-puget2012" role="doc-biblioref">156</a>]</span>.</p>
 <!--# TODO: Show plot of the superblock result -->
 <p>Adding one block containing the age of the patient and the severity of the tumor to the model, decreased the inner AVE.
 The best model with these blocks, according to the inner AVE, was that in which the interactions (1) within the host transcriptome, (2) between the host transcriptome and the localization, (3) between the host transcriptome and(4) the CGH and between the CGH and the other variables were 1, 1, 1/3 and 1/3, respectively.
@@ -317,7 +317,7 @@ The first components of each model can be seen in the figure:</p>
 <img src="images/pugets_models.png" alt="" />
 <p class="caption">Figure 4.4:  Different models tried with the same data showing the first components of the CGH data and the transcriptome.</p>
 </div>
-<p>We can observe on the figure, the strong dependency between gene expression and location since the first model while the weaker relationship with the CGH assay <span class="citation">[<a href="#ref-puget2012" role="doc-biblioref">202</a>]</span>.
+<p>We can observe on the figure, the strong dependency between gene expression and location since the first model while the weaker relationship with the CGH assay <span class="citation">[<a href="#ref-puget2012" role="doc-biblioref">156</a>]</span>.
 On the other hand, the major difference is the dispersion on the CGH component on each model.</p>
 <p>The effect of the superblock and weights on different models to the inner AVE.
 There are significant differences between having the superblock and not having it.</p>
@@ -356,7 +356,7 @@ In addition, the model is fixed, so it didn’t allow to find new or other relat
 The models with the highest inner AVE of the family 1 and the family 2 models were similar to those on the Häsler dataset.
 The weights of these models can be observed here:</p>
 <!--# TODO: Show tables of the models -->
-<p>The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see Figure and <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002">S2</a> data of <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">244</a>]</span>).
+<p>The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see Figure and <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002">S2</a> data of <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">200</a>]</span>).
 Overall, we see that the relationships in the model affected the distribution of samples on the components of both the host transcriptome and the microbiome.</p>
 <!--# TODO Add figure about the components on our own dataset -->
 <p>The different models selected different variables, some of which are shared between models.
@@ -476,21 +476,21 @@ Model 1.2 is, model 2.2.</p>
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body">
 <div id="ref-puget2012" class="csl-entry">
-202. Puget S, Philippe C, Bax DA, Job B, Varlet P, Junier M-P, et al. <a href="https://doi.org/10.1371/journal.pone.0030313">Mesenchymal Transition and PDGFRA Amplification/Mutation Are Key Distinct Oncogenic Events in Pediatric Diffuse Intrinsic Pontine Gliomas</a>. PLOS ONE. 2012;7:e30313.
+156. Puget S, Philippe C, Bax DA, Job B, Varlet P, Junier M-P, et al. <a href="https://doi.org/10.1371/journal.pone.0030313">Mesenchymal Transition and PDGFRA Amplification/Mutation Are Key Distinct Oncogenic Events in Pediatric Diffuse Intrinsic Pontine Gliomas</a>. PLOS ONE. 2012;7:e30313.
 </div>
 <div id="ref-wickham2019" class="csl-entry">
-243. Wickham H. <a href="https://adv-r.hadley.nz/index.html">Advanced r</a>. Second Edition. Boca Raton: Chapman &amp; Hall; 2019.
+199. Wickham H. <a href="https://adv-r.hadley.nz/index.html">Advanced r</a>. Second Edition. Boca Raton: Chapman &amp; Hall; 2019.
 </div>
 <div id="ref-revilla2021" class="csl-entry">
-244. Revilla L, Mayorgas A, Corraliza AM, Masamunt MC, Metwaly A, Haller D, et al. <a href="https://doi.org/10.1371/journal.pone.0246367">Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a>. PLOS ONE. 2021;16:e0246367.
+200. Revilla L, Mayorgas A, Corraliza AM, Masamunt MC, Metwaly A, Haller D, et al. <a href="https://doi.org/10.1371/journal.pone.0246367">Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a>. PLOS ONE. 2021;16:e0246367.
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="6">
-<li id="fn6"><p>S4 is one of the object programming paradigms on R.
-For a more complete overview and differences see <a href="https://adv-r.hadley.nz/oo.html" title="2nd edition">Advanced R</a> <span class="citation">[<a href="#ref-wickham2019" role="doc-biblioref">243</a>]</span>.<a href="results-1.html#fnref6" class="footnote-back">↩︎</a></p></li>
-<li id="fn7"><p>I also contributed with some comments and feedback to the package to make it easier to read the source and check the inputs and improve the documentation so that it is coherent with the code and previous results of the functions.<a href="results-1.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<ol start="5">
+<li id="fn5"><p>S4 is one of the object programming paradigms on R.
+For a more complete overview and differences see <a href="https://adv-r.hadley.nz/oo.html" title="2nd edition">Advanced R</a> <span class="citation">[<a href="#ref-wickham2019" role="doc-biblioref">199</a>]</span>.<a href="results-1.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>I also contributed with some comments and feedback to the package to make it easier to read the source and check the inputs and improve the documentation so that it is coherent with the code and previous results of the functions.<a href="results-1.html#fnref6" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
