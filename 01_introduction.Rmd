@@ -489,12 +489,12 @@ Most of the times one (or several) of the following results are expected from in
     Predictive models usually require a very good understanding of the current and/or past relationships, as well as, a good feature selection procedure.
     If a good model on previous data exists it might be used to predict future events.
     Sometimes, models are only build to predict events without being able to accurately describe the mechanism, why they work.\
-    This kind of methods are used improve treatments, diagnosis and prognosis prediction \[ref:needed\].
+    This kind of methods are used improve treatments, diagnosis and prognosis prediction \[@wheeler2014\].
 
 -   Impute values
 
     Some methods aim to accurately guess which values have one block given some other information.
-    Missing values can happen for a variety of reasons from practical ones, like a sample not being available, to technical ones, such as laboratory method failing \[ref:needed\].
+    Missing values can happen for a variety of reasons from practical ones, like a sample not being available, to technical ones, such as laboratory method failing [@yin2019a].
     However, this is often a intermediate step to other goals.
 
 To complete these goals it is important to have enough statistical power to determine the significance of tests performed (if any) and to understand how complete are the data sources used on the integration [@tarazona2021].
