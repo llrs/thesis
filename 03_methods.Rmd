@@ -120,7 +120,7 @@ Anonymized identification of the patients, disease, sex age at diagnostic, age a
 ### Howell's dataset {#methods-howell}
 
 This dataset was downloaded after the publication of an article "DNA Methylation and Transcription Patterns in Intestinal Epithelial Cells From Pediatric Patients With IBDs Differentiate Disease Subtypes and Associate With Outcome" [@howell2018].
-A cohort of 66 treatment-naïve children at diagnosis of their IBD, along with 30 age- and sex-matched non-inflammatory control children, were recruited by the Paediatric Gastroenterology team at Addenbrooke’s Hospital (England).
+A cohort of 66 treatment-naïve children at diagnosis of their IBD, along with 30 age- and sex-matched non-inflammatory control children, were recruited by the Paediatric Gastroenterology team at Addenbrooke's Hospital (England).
 
 From their dataset I used data from 77 samples that had both RNAseq and 16S data collected.
 There are 10 non-IBD samples, 11 with Crohn's disease and 11 with ulcerative colitis.
@@ -247,7 +247,7 @@ The sequence of the primers used was:
 341f: 5'-CCTACGGGAGGCAGCAG-3'\
 806r: 5'-GGACTACHVHHHTWTCTAAT-3'
 
-The result of MiSeq Nano were processed with bcl2fastq (v1.8.4). 
+The result of MiSeq Nano were processed with bcl2fastq (v1.8.4).
 
 #### Microbial profiling
 
@@ -378,7 +378,8 @@ Here $\tau$ describes the weight of the tail in the random walk (default is set 
 $\gamma_k$ is the k-th gene set and $I(g_{(i)}\in \gamma_k)$ is the indicator function whether the gene ranked i-th belongs to the gene set $\gamma_k$ .
 $|\gamma_k|$ indicates the ordination of the gene set, the number of genes of the gene set and $p$ the number of genes in the data set.
 
-This difference is later converted to enrichment score for each gene set for each sample, similar to GSEA. This score can be calculated as a difference of hits and misses or the maximum deviation from zero of the random walk (which allows to detect gene sets that have genes with different opposing expression patterns).
+This difference is later converted to enrichment score for each gene set for each sample, similar to GSEA.
+This score can be calculated as a difference of hits and misses or the maximum deviation from zero of the random walk (which allows to detect gene sets that have genes with different opposing expression patterns).
 
 ### Other methods used
 
@@ -497,7 +498,7 @@ Were each model is build similarly by adding the subtraction of the projected va
 [BaseSet](https://cran.r-project.org/package=BaseSet) was developed and used to find which variables are really involved on the interaction and how likely were to be together more robustly.
 It is a package that uses fuzzy set logic to calculate the probability to belong to a group, in this case, those genes and bacteria selected by the model that interact with the other.
 
-Under the standard fuzzy set logic a set $S$ is a group of elements for which each element $e$ has an $\alpha$ membership to that set.
+Under the standard fuzzy set logic a set $S$ is a group of elements for which each element $e$ has an $\alpha$ membership to that set [@filzmoser2004; @dubois1993].
 $\alpha$ is usually limited between 0 and 1: $\alpha \in [0, 1]$ .
 A given element $e$ can belong to more than one set.
 Assimilating the membership function to probability we can calculate the probability of a given element $e$ to belong to a set $S$ and not any other set: $P(e \in S|e\not \in S^c)$.
@@ -533,7 +534,7 @@ for each index:
 keep the index with less differences between the index and all the samples
 ```
 
-Summary statistics taken into account are the median, the variance, the range, the number of missing values, and the entropy of the categorical variables. 
+Summary statistics taken into account are the median, the variance, the range, the number of missing values, and the entropy of the categorical variables.
 It can take into account spatial distribution provide which technical replicates[^methods-2] are best given the number of samples that fit on a batch.
 
 [^methods-2]: Technical replicates are samples that are measured multiple times to ensure the accuracy of the measurement.
@@ -583,8 +584,6 @@ However, for each sample it needs to have a complete case with no missing values
 It uses a dimensional reduction approach to relate the different blocks of data between them and produce specific factors for each dataset.
 
 [^methods-3]: CRAN is The Comprehensive R Archive Network available at <https://cran.r-project.org/>
-
-
 
 The authors realized that there is a special problem due to sparsity on biological data which could be handled using first another normalization to improve the stability and success of the canonical correlation methodology.
 The method to perform the dimensional reduction using the sparse method consists on maximizing this function:
@@ -639,11 +638,11 @@ However, this model might not be an accurate representation of the relations bet
 To help find the fitting model for the data I created an R package, named [inteRmodel](https://llrs.github.io/inteRmodel/), which helps finding the right model and measure how fit it is for your data via a bootstrapping procedure and the provided AVE scores.
 
 This method was applied to the previously described datasets to find the relationship between microorganisms and the disease.
-Following this method; to provide a ground truth, a model with only the relationships between the two experimental obtained data is analyzed, on what it is called the model 0.  
-The next models analyzed consists on the relationships between the two experimental blocks and them with all the metadata of the samples, these are models of family 1 denoted by 1.Y, where Y change as different relationships between the three blocks change. 
+Following this method; to provide a ground truth, a model with only the relationships between the two experimental obtained data is analyzed, on what it is called the model 0.\
+The next models analyzed consists on the relationships between the two experimental blocks and them with all the metadata of the samples, these are models of family 1 denoted by 1.Y, where Y change as different relationships between the three blocks change.
 Later instead of a big metadata block, following our theory we split this metadata block on several ones, we have a block for time related variables, another one for location and the other about the people on the study.
 This allows to design a model with an expected relationships between these dimensions and help make more interpretable the relationships.
-These models are from the family 2 denoted by the name 2.Y, where 2 denotes the family of the model and Y change as different relationships between the three blocks change. 
+These models are from the family 2 denoted by the name 2.Y, where 2 denotes the family of the model and Y change as different relationships between the three blocks change.
 
 For each family of models we tested all possible models with weights between 0 and 1 by 0.1 intervals to find the best model on each datasets according to the AVE score.
 
