@@ -7,6 +7,7 @@ fig:puget-models
 fig:puget-models-bis
 fig:puget-weights
 fig:hsct-diversity
+fig:hsct-models
 fig:hsct-bootstrap-quality
 fig:hsct-bootstrap
 fig:hsct-mcia
