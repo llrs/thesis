@@ -192,7 +192,7 @@ On the microbiome data the results were similar but the p-value was considerably
 Diversity indices of the samples were explored and compared for several subsets.
 Splitting by location of the sample and disease provided the highest differences and the diversity index along time did not change much.
 
-<!--# TODO: explain why WGCNA didn't work out -->
+<!--# TODO: explain why WGCNA didn't work out: there are some troubles with scales, n not enough for a diversity of samples (or this is for discussion)?-->
 
 Weighted gene co-expression network analysis did not provide relevant links between bacteria and transcriptome as it failed to find an acceptable scale free degree.
 
@@ -203,6 +203,9 @@ In addition, the model is fixed, so it didn't allow to find new or other relatio
 
 With RGCCA we could select different models and use all the data available without much assumptions.
 The models with the highest inner AVE of the family 1 and the family 2 models were similar to those on the Häsler dataset.
+
+![(#fig:hsct-models) On the x-axis the transcriptome, on the Y axis the Microbiome. Each square represents a different model of the HSCT dataset. On panel A colored by disease status, on panel B colored by sample location.](images/hsct-models.png)
+
 The weights of these models can be observed here:
 
 <!--# TODO: Show tables of the models -->
