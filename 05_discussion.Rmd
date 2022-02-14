@@ -87,6 +87,10 @@ Comparing 16S taxa ASV or OTUs is hard and selectying the right tool to compare 
 Some batch effects are avoidable due to the experDesign package.
 This might help to improve the quality of the datasets and to expand previously sequenced datasets.
 
+\[@jiang2019\] A paper about multi-omics and microbiome...
+
+\[@krassowski2020a\] advice and recommendations on software engineering and reproducibility practices to share a comprehensive awareness with new researchers in multi-omics for end-to-end workflow.
+
 ## Relevance for other research
 
 It is hard to provide more information that can be later used by researchers on the wet lab.
