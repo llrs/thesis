@@ -7,8 +7,8 @@
 `experDesign` package built in R was released for the first time on CRAN on 2020-09-08 after nearly a year after the initial release made on [github](https://github.com/llrs/experDesign).
 
 The package uses functional programming to create and modify objects and the features used.
-The package didn't need a new class created to work and bases its performance on the large body of work made by the R core team.
-It simply adds the needed information on the columns of the introduced `data.frame` or returns an appropriate vector.
+The package bases its performance on the large body of work made by the R core team.
+It adds the information to the introduced `data.frame` or returns an vector with the appropriate information.
 
 `experDesign` functions are divided into several categories:
 
@@ -21,10 +21,10 @@ It simply adds the needed information on the columns of the introduced `data.fra
 
 Regarding time related variables `experDesign` will use them as factors, while issuing a warning to the user.
 
-Since its development it has been used on a couple of batch designs, one for organoids bulk RNA-seq and another one for biopsies bulk RNA-seq from the BARCELONA cohort.
+Since its development it has been used on a couple of RNA sequencing experiments that required a batch design, one of organoids bulk RNA-seq and another one of biopsies bulk RNA-seq from the BARCELONA cohort.
 
-On both cases it worked well and no batch effect were created when sequencing samples.
-However on the organoids dataset, the change on the method of producing them introduced a batch effect that made it impposible to compare samples before and after that change.
+On both cases it worked well and no batch effect was created when sequencing the samples.
+However on the organoids dataset, a change on the matrigel used to produce them introduced a batch effect that made it impossible to compare samples before and after that change (there weren't any shared sample before and after the change of matrigel).
 
 ```{r experDesign, include=FALSE, eval=FALSE}
 library("dlstats")
@@ -37,11 +37,12 @@ cran_stats("experDesign") %>%
   median()
 ```
 
-Since its release on CRAN it has had a median of \~400 downloads each month from RStudio package manager, so the total number of downloads is higher as not all the installations are from RStudio's mirror.
+Since its release on CRAN it has had a median of \~400 downloads each month from RStudio repository mirror.
+Showing the interest the community have on solutions like this.
 
 ### BaseSet
 
-`BaseSet` package, built in R, was released for the first time on CRAN on 2020-11-11 after nearly two years after the initial work started on [github](https://github.com/llrs/BaseSet).
+`BaseSet` package, built in R, was released for the first time on CRAN on 2020-11-11, nearly two years after the initial work started on [github](https://github.com/llrs/BaseSet).
 
 The package uses both functional programming and object oriented program to create and modify the TidySet S4 object defined[^results-1].
 Mixing it with S3 generic functions it provides a powerful interface compatible with the tidyverse principles, a [group of packages](https://www.tidyverse.org/) following the same design.
@@ -59,17 +60,17 @@ The package provides a new class to handle fuzzy sets and the associate informat
 -   [Functions to work with TidySets](https://docs.ropensci.org/BaseSet/reference/index.html#set-operations) to add relationships, sets, elements or some complimentary data about them.
     Remove the same or simply move around data or calculate the number of elements, relations and sets.
 
--   [Functions to read](https://docs.ropensci.org/BaseSet/reference/index.html#reading-files) files from formats where sets are usually stored in the bioinformatician world: GAF, GMT and OBO formats
+-   [Functions to read](https://docs.ropensci.org/BaseSet/reference/index.html#reading-files) files from formats where sets are usually stored in the bioinformatician field: GAF, GMT and OBO formats
 
--   Last, some [utility functions](https://docs.ropensci.org/BaseSet/reference/index.html#utiles) to set name conventions, use set_symbols and some other auxiliary functions
+-   Last, some [utility functions](https://docs.ropensci.org/BaseSet/reference/index.html#utiles) to use set name conventions and some other auxiliary functions
 
 The package had a long development process with initial iterations basing on GSEABase package which was later abandoned to include also some uncertainty on the relationship of a gene with a given gene set.
 
 The package also participated on an exploration on part of the Bioconductor community (project to develop, support, and disseminate free open source software that facilitates rigorous and reproducible analysis of data from current and emerging biological assay) for more modern and faster handling of sets.
 There were three different packages created as part of this process, `BaseSet`, `BiocSet` published [on Bioconductor](https://bioconductor.org/packages/BiocSet/) and `unisets`, available [on github](https://github.com/kevinrue/unisets).
-The different approaches were presented at a birds of feather on BioC2019.
+The three different approaches were presented at a birds of feather on BioC2019.
 
-The package passed the review on the rOpenSci organization ([See review](https://github.com/ropensci/software-review/issues/359 "Review on Github")) and now is part of the packages hosted there too.
+The package passed the review on the rOpenSci organization ([See review](https://github.com/ropensci/software-review/issues/359 "Review on Github")) and is now part of the packages hosted there too.
 
 ```{r BaseSet, include=FALSE, eval = FALSE}
 library("dlstats")
@@ -98,7 +99,7 @@ The package consists of functions that can be grouped in three categories:
 
 -   Building: To easier build correct models on RGCCA, simplifying the process to create a symmetric matrix.
 
-Currently it is only available on github, so the number of downloads and usage is unknown but since its release a user has contacted to keep it up to date with development versions of RGCCA.
+Currently it is only [available on github](https:intermodel.llrs.dev), so the number of downloads and usage is unknown but since its release a user has contacted to keep it up to date with development versions of RGCCA.
 Which now it is compatible with the next release of [RGCCA being prepared](https://github.com/rgcca-factory/RGCCA/tree/CRAN)[^results-2].
 Together with a copy of the RGCCA packages with more tests has enabled to identify changes on the RGCCA package that could affect users.
 
