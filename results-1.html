@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-02-10" />
+<meta name="date" content="2022-02-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -219,8 +219,8 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <h3><span class="header-section-number">4.1.1</span> experDesign</h3>
 <p><code>experDesign</code> package built in R was released for the first time on CRAN on 2020-09-08 after nearly a year after the initial release made on <a href="https://github.com/llrs/experDesign">github</a>.</p>
 <p>The package uses functional programming to create and modify objects and the features used.
-The package didn’t need a new class created to work and bases its performance on the large body of work made by the R core team.
-It simply adds the needed information on the columns of the introduced <code>data.frame</code> or returns an appropriate vector.</p>
+The package bases its performance on the large body of work made by the R core team.
+It adds the information to the introduced <code>data.frame</code> or returns an vector with the appropriate information.</p>
 <p><code>experDesign</code> functions are divided into several categories:</p>
 <ul>
 <li><p>Helper functions to aid on deciding how many batches are or how many samples per batch.
@@ -229,14 +229,15 @@ There are some also that report how good a given distribution of the samples fel
 <li><p>Functions distributing the samples on indexes</p></li>
 </ul>
 <p>Regarding time related variables <code>experDesign</code> will use them as factors, while issuing a warning to the user.</p>
-<p>Since its development it has been used on a couple of batch designs, one for organoids bulk RNA-seq and another one for biopsies bulk RNA-seq from the BARCELONA cohort.</p>
-<p>On both cases it worked well and no batch effect were created when sequencing samples.
-However on the organoids dataset, the change on the method of producing them introduced a batch effect that made it impposible to compare samples before and after that change.</p>
-<p>Since its release on CRAN it has had a median of ~400 downloads each month from RStudio package manager, so the total number of downloads is higher as not all the installations are from RStudio’s mirror.</p>
+<p>Since its development it has been used on a couple of RNA sequencing experiments that required a batch design, one of organoids bulk RNA-seq and another one of biopsies bulk RNA-seq from the BARCELONA cohort.</p>
+<p>On both cases it worked well and no batch effect was created when sequencing the samples.
+However on the organoids dataset, a change on the matrigel used to produce them introduced a batch effect that made it impossible to compare samples before and after that change (there weren’t any shared sample before and after the change of matrigel).</p>
+<p>Since its release on CRAN it has had a median of ~400 downloads each month from RStudio repository mirror.
+Showing the interest the community have on solutions like this.</p>
 </div>
 <div id="baseset-1" class="section level3" number="4.1.2">
 <h3><span class="header-section-number">4.1.2</span> BaseSet</h3>
-<p><code>BaseSet</code> package, built in R, was released for the first time on CRAN on 2020-11-11 after nearly two years after the initial work started on <a href="https://github.com/llrs/BaseSet">github</a>.</p>
+<p><code>BaseSet</code> package, built in R, was released for the first time on CRAN on 2020-11-11, nearly two years after the initial work started on <a href="https://github.com/llrs/BaseSet">github</a>.</p>
 <p>The package uses both functional programming and object oriented program to create and modify the TidySet S4 object defined<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>.
 Mixing it with S3 generic functions it provides a powerful interface compatible with the tidyverse principles, a <a href="https://www.tidyverse.org/">group of packages</a> following the same design.
 The package provides a new class to handle fuzzy sets and the associate information.</p>
@@ -246,14 +247,14 @@ The package provides a new class to handle fuzzy sets and the associate informat
 <li><p><a href="https://docs.ropensci.org/BaseSet/reference/index.html#set-operations">Set operations</a> like adjacency cartesian product, cardinality, complement, incidence, independence, intersection, union, subtract, power set or size.</p></li>
 <li><p><a href="https://docs.ropensci.org/BaseSet/reference/index.html#set-operations">Functions to work with TidySets</a> to add relationships, sets, elements or some complimentary data about them.
 Remove the same or simply move around data or calculate the number of elements, relations and sets.</p></li>
-<li><p><a href="https://docs.ropensci.org/BaseSet/reference/index.html#reading-files">Functions to read</a> files from formats where sets are usually stored in the bioinformatician world: GAF, GMT and OBO formats</p></li>
-<li><p>Last, some <a href="https://docs.ropensci.org/BaseSet/reference/index.html#utiles">utility functions</a> to set name conventions, use set_symbols and some other auxiliary functions</p></li>
+<li><p><a href="https://docs.ropensci.org/BaseSet/reference/index.html#reading-files">Functions to read</a> files from formats where sets are usually stored in the bioinformatician field: GAF, GMT and OBO formats</p></li>
+<li><p>Last, some <a href="https://docs.ropensci.org/BaseSet/reference/index.html#utiles">utility functions</a> to use set name conventions and some other auxiliary functions</p></li>
 </ul>
 <p>The package had a long development process with initial iterations basing on GSEABase package which was later abandoned to include also some uncertainty on the relationship of a gene with a given gene set.</p>
 <p>The package also participated on an exploration on part of the Bioconductor community (project to develop, support, and disseminate free open source software that facilitates rigorous and reproducible analysis of data from current and emerging biological assay) for more modern and faster handling of sets.
 There were three different packages created as part of this process, <code>BaseSet</code>, <code>BiocSet</code> published <a href="https://bioconductor.org/packages/BiocSet/">on Bioconductor</a> and <code>unisets</code>, available <a href="https://github.com/kevinrue/unisets">on github</a>.
-The different approaches were presented at a birds of feather on BioC2019.</p>
-<p>The package passed the review on the rOpenSci organization (<a href="https://github.com/ropensci/software-review/issues/359" title="Review on Github">See review</a>) and now is part of the packages hosted there too.</p>
+The three different approaches were presented at a birds of feather on BioC2019.</p>
+<p>The package passed the review on the rOpenSci organization (<a href="https://github.com/ropensci/software-review/issues/359" title="Review on Github">See review</a>) and is now part of the packages hosted there too.</p>
 <p>Since its release on CRAN it has had a median of ~400 downloads each month from RStudio package manager, so the total number of downloads is higher.</p>
 </div>
 <div id="intermodels" class="section level3" number="4.1.3">
@@ -267,7 +268,7 @@ There are functions to search for a model given some rules, that check them usin
 <li><p>Reporting: To make better reports by improving handling of names or simplifying the objects or how to calculate scores.</p></li>
 <li><p>Building: To easier build correct models on RGCCA, simplifying the process to create a symmetric matrix.</p></li>
 </ul>
-<p>Currently it is only available on github, so the number of downloads and usage is unknown but since its release a user has contacted to keep it up to date with development versions of RGCCA.
+<p>Currently it is only <a href="https:intermodel.llrs.dev">available on github</a>, so the number of downloads and usage is unknown but since its release a user has contacted to keep it up to date with development versions of RGCCA.
 Which now it is compatible with the next release of <a href="https://github.com/rgcca-factory/RGCCA/tree/CRAN">RGCCA being prepared</a><a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>.
 Together with a copy of the RGCCA packages with more tests has enabled to identify changes on the RGCCA package that could affect users.</p>
 </div>
