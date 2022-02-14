@@ -265,185 +265,9 @@ For all the other datasets [dada2](https://bioconductor.org/packages/dada2) [@ca
 It creates amplicon sequencing variants from the 16S sequencing data, without merging similar sequences at any threshold.
 It is an alternative to OTUs which allows to be able to compare results between studies because it does not summarize together any sequence and provides more resolution to differences on the fragment amplified.
 
-## Statistics
+## Integration methods
 
-<!-- # TODO cite articles using these methods -->
-
-Differential expression analysis was performed with the following the limma-trend method [@ritchie2015; @law2014] and edgeR [@mccarthy2012] (Bioconductor version 3.10 or superior) packages, normalized using the trimmed mean of M-values and log-2 transformed into counts per millions following the workflow described on [@law2018] using voom which in addition performs a count normalization.
-The samples were adjusted for inter-patient differences specifying block argument for patient variable.
-
-To correct for multiple testing, the false discovery rate was estimated using the method of Benjamini and Hochberg [@yoavbenjamini].
-A gene was considered differentially expressed when it was significant at 5% FDR special attention was given to those genes that showed a fold-change higher than \|1.5\|.
-
-Besides differential expression tests and correction for multiple testing, several different methods were used on this thesis which will be described below.
-
-### Functional enrichment
-
-Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
-They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.
-Most of them are based on an over representation analysis, where a group of elements is tested whether they are present on other group.
-This can be done with [clusterProfiler](https://bioconductor.org/packages/clusterProfiler) which tests genes enrichment for functionality based on information on pathway databases [@wu2021].
-It checks the enrichment of features of a given group on the (background) list provided.
-
-$$
-\begin{cases}
-H_0 & : & P_{subset} \leq  P_{overall} \\
-H_1 & : & P_{subset} > P_{overall}
-\end{cases}
-$$
-
-The test used is usually the fisher test, the hypergeometric test, the proportion test.
-I describe the hypergeometric test and the proportion test below.
-
-#### Hypergeometric test
-
-The hypergeometric distribution describes the probability of $k$ successes (when the object drawn has a specified feature) in $n$ draws[^methods-1], from a finite population of size $N$ that contains exactly $K$ objects with that feature, wherein each draw is either a success or a failure.
-
-[^methods-1]: without replacement
-
-Applied on this context $N$ is the number of genes being used and $n$ the number of genes on a pathway.
-So it can be used to compare the genes found on it ($k$) compared to the expected $K$ numbers of the distribution using the following equation:
-
-$$
-P_X(k) = P(X = k) 
-= \frac{\binom{K}{k} \binom{N - K}{n-k}}{\binom{N}{n}}
-$$
-
-#### Proportion test
-
-The overrepresentation of a given group of elements can be also tested with the proportion test, which is sometimes also used on clusterProfiler.
-The proportion test uses the $\chi^2$ distribution to test if the observed frequency ($O_i$) is close to the expected frequency ($E_i$):
-
-$$
-\chi^2 = \sum_{i =1}^n \dfrac{(O_i - E_i)^2}{E_i} \simeq \chi_{n-p}^2
-$$
-
-As this is usually done on a 2x2 contingency table it is equivalent to the Z-test of proportion.
-Sometimes, the expected frequency is so low that a correction must be done to the estimation:
-
-$$
-\chi_{Yates}^2 = \sum_{i =1}^n \dfrac{(|O_i - E_i|-0.5)^2}{E_i}
-$$
-
-This increases the $p$-value as it raises the Chi-square statistic.
-
-#### Gene Set Enrichment Analysis
-
-There are other methods that to test if some variables shows an unexpected importance according to a statistic like fold change or value gene set enrichment analysis was developed [@subramanian2005] .
-Gene set enrichment analysis (GSEA) is a computational method originally developed to determine whether a priori defined set of genes shows statistically significant and concordant differences between two biological states.
-These methods check if a group of variables present in an ordered list is present in some skewed distribution and compare it against a random group of similar size.
-
-This method consist on first calculating the rank of genes $rank(g_j)=r_j$ where each $g$ is a gene.
-Then later calculate the following functions:
-
-$$
-P_{hit}(S, i)=\sum_{g_j \in S, j \leq i}\dfrac{|r_j|^p}{N_R} \text{, where } N_R = \sum_{g_j \in S}|r_j|^p
-$$
-
-$$
-P_{miss}(S, i) = \sum_{g_j \not \in S, j \leq i}\dfrac{1}{N - N_H}
-$$
-
-With these values the enrichment score (ES) defined as: $ES=max(|P_{hit}(S, i)-P_{miss}(S, i)|)$ is calculated from the walk.
-At least 1000 permutations are usually used but a high number of permutations are required for an accurate score of the enrichment score.
-However, when more than one pathway ($S$) is evaluated in order to compare between the enrichment scores between them, they must be normalized by dividing the scores by the mean of all the ES.
-When power $p$ is 0 it is equivalent to the standard Kolmogorov--Smirnov statistic, though it is usually set to 1.
-
-For testing gene set enrichment analysis I used [fgsea](https://bioconductor.org/packages/fgsea) [@korotkevich2021] implementation for its speed and integration with other methods used on this thesis.
-Pathways of genes from the REACTOME database were tested on the weight of different models or on the comparisons performed [@fabregat2016].
-
-#### GSVA
-
-To estimate the expression of the pathways and compare their expression levels between conditions gene set variation analysis as implemented on [GSVA](https://bioconductor.org/packages/GSVA) was used [@hänzelmann2013].
-It is a method that summarize the variables' numerical value changing the space of $variable\text{ x }sample$ to $group\text{ x }sample$ .
-This enables other methods to use this new space instead of the original variables.
-GSVA was used (again from the REACTOME database) and try to find the relationships between the pathways and the microbiome at different taxonomic levels.
-
-This is done via an estimation and a comparison with a discrete Poisson kernel: $i$ indicates the gene till $k$ and samples are indicated by $j$ till $n$.
-
-$$
-z_{ij}=\hat{F_r}(x_{ij}) = \frac{1}{n}\sum_{k=1}^n\sum_{y=0}^{x_{ij}}\dfrac{e^{-(x_{ik}+r)}(x_{ik} + r)^y }{y!}
-$$
-
-where $r = 0.5$ is used in order to set the mode of the Poisson kernel at each $x_{ik}$, that is, similar to a gene expression for a given sample.
-
-Later this is converted to ranks $z_{(i)j}$ for each sample and normalized: $r_{ij}=|\frac{p}{2}-z_{(i)j}|$ to make the distribution of ranks symmetric around zero to later compare with a normal distribution using a Kolmogorov-Smirnov-like random walk statistic:
-
-$$
-v_{jk}(l)=\dfrac{\sum_{i=1}^l|r_{ij}|^{\tau}I(g_{(i)}\in \gamma_k)}{\sum_{i=1}^p|r_{ij}|^{\tau}I(g_{(i)} \in \gamma_k)}
-- \dfrac{\sum_{i=1}^lI(g_{(i)} \not \in\gamma_k)}{p-|\gamma_k|}
-$$
-
-Here $\tau$ describes the weight of the tail in the random walk (default is set to 1).
-$\gamma_k$ is the k-th gene set and $I(g_{(i)}\in \gamma_k)$ is the indicator function whether the gene ranked i-th belongs to the gene set $\gamma_k$ .
-$|\gamma_k|$ indicates the ordination of the gene set, the number of genes of the gene set and $p$ the number of genes in the data set.
-
-This difference is later converted to enrichment score for each gene set for each sample, similar to GSEA.
-This score can be calculated as a difference of hits and misses or the maximum deviation from zero of the random walk (which allows to detect gene sets that have genes with different opposing expression patterns).
-
-### Other methods used
-
-<!-- # TODO Organize better this section -->
-
-#### PERMANOVA
-
-The PERMANOVA method [@anderson2001; @warton2012], provided by the [vegan](https://cran.r-project.org/package=vegan) package on the `adonis` function, was used to test if microbiome data variance is due to other variables when using distances metrics.
-It uses the residual sum of squares such as:
-
-$$
-SS_W = \frac{1}{n} \sum_{i=1}^{N-1}\sum_{j=i+1}^N d_{ij}^2\epsilon{ij} 
-$$
-
-When using euclidian distances ($d$) it is equivalent to MANOVA.
-Here $\epsilon_{ij}$ takes the value of 1 if the observation $i$ and the observation $j$ are in the same group, otherwise it takes the value of zero.
-This can be later used to test which variance is bigger, inter-groups or intra-groups by using the following formula:
-
-$$
-F = \dfrac{SS_A/(\alpha -1)}{SS_W/(N-\alpha)}
-$$
-
-Where $SS_A$ is the among group sum of squares, representing the intra-group variance.
-$N$ is the number of samples and $\alpha$ the number of different groups.
-
-This allows to test if the variables are related to the variance of the data as it can be compared with the $F$ statistic after a high number of permutations.
-
-#### globaltest
-
-It is a methods for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
-I tested which variables, (sex, age, location, time since diagnostic, treatment) are important on the datasets with [globaltest](https://bioconductor.org/packages/globaltest) (Version 5.40 or later).
-It provides a general statistic to test hypothesis against a high dimensional dataset.
-
-$$
-S = \sum_{i=1}^p x_i^{'} x_i g(t_i^2)
-$$
-
-The global test performs a test statistic on the transformed t-test, where if $p$, the number of variables, is large the test is more powerful on average over all possible sparse alternatives of general functions $g$.
-
-It was performed with variables individually and also with interactions between the different variables.
-
-#### Diversity indices
-
-Microbiome diversity was measured using vegan and [phyloseq](https://bioconductor.org/packages/phyloseq) methods [@oksanen2020].
-$\alpha$-diversity is a measure of how much a given microbiome at a taxonomic level is present on a sample.
-Several measures exists, on the thesis I used the effective Simpson or Shannon diversity index to compare diversity between samples and conditions.
-$\beta$-diversity was calculated using the phyloseq package for exploratory analysis.
-
-#### WGCNA
-
-To look for relationships between the microbiome and the RNAseq we used weighted gene co-expression network analysis.
-We used weighted gene co-expression network analysis as implemented on [WGCNA](https://cran.r-project.org/package=WGCNA) [@langfelder2008] and also correlations.
-The Spearman rank correlation coefficient is
-
-Being $(X_1 , Y_1 ),\dots, (X_n , Y_n)$, assign a rank where $(R_1 , S_1 ), \dots , (R_n , S_n )$ for n being all the variables which:
-
-$$
-R_s(X,Y) = \dfrac{\sum_{i=1}^n (R_i - \bar{R}) (S_i - \bar{S} )}{\sqrt{\sum_{i=1}^n (R_i - \bar{R})^2}\sqrt{\sum_{i=1}^n (S_i - \bar{S})^2}}
-$$
-
-where $\bar{R}=\dfrac{1}{n}\sum_{i=1}^n R_i$ conversely to S: $\bar{S}=\dfrac{1}{n}\sum_{i=1}^n S_i$.
-The distribution of the Spearman correlation coefficient is symmetric around 0 and can be approximated to a normal distribution as $\sqrt{n-1}R_{s(X,Y)} \sim N(0,1)$ which can be used to calculate the p-value of a given estimation.
-
-#### MCIA
+### MCIA
 
 Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two blocks [@meng2014].
 It is implemented on the package [omicade4](https://bioconductor.org/packages/omicade4).
@@ -458,7 +282,7 @@ This can be used to obtain a dimension of $P_k^d=u_k^d(u_k^d Q_k {u_k^d}^T)^{-1}
 
 It was used as a baseline method to compare the RGCCA integration.
 
-#### STATegRa
+### STATegRa
 
 To explore how much do different blocks of a dataset have in common [STATegRa](https://bioconductor.org/packages/STATegRa) was used [@planell2021].
 It is a framework for integrating datasets with two data types using parametric and non-parametric methods.
@@ -493,7 +317,303 @@ $$
 
 Were each model is build similarly by adding the subtraction of the projected values of the other component keeping the relationship between them as stated on the third line.
 
-#### BaseSet
+### RGCCA
+
+The main method used on this thesis has been regularized generalized canonical correlation analysis (RGCCA) a method derived from the canonical correlation.
+Canonical correlation is a method that uses data about the same unit but from different origins to find how much the different sources agree.
+Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017a] which was used on this thesis.
+The method and implementation will be explained in detail on the next section.
+
+![Workflow of the analysis process](images/workflow%20integration.png)
+
+## Regularized generalized canonical correlation analysis
+
+To better understand the regularized canonical correlation analysis first an understanding of the principal component analysis is required.
+Later a brief description of the canonical correlation method will be used to finally explain the regularized generalized canonical correlation.
+
+Principal component analysis defines a new orthogonal coordinate system that optimally describes variance in a single dataset with decreasing variance.
+It does so by decomposing the numerical matrix into the eigenvalues and eigenvectors.
+Its results include new variables (the eigenvectors) and a vector of loadings or weight indicating the importance of the original variables for these new variables.
+Typically data is normalized and standardized to avoid that a variable with higher variance dominates the results.
+
+The canonical correlation analysis [@jordan1875; @hotelling1936] is a method to find agreement between two, or more, scorers (as it was first introduced on the literature) or sources.
+It extends the PCA to a two sources of data and continues to provide the same output new variables and weights of the existing variables indicating their importance.
+
+Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020] regularized generalized canonical correlation analysis (RGCCA) emerged with a generalization from canonical correlations extending the procedure to more than two sources of data \[@R-RGCCA\] and being made more flexible generalizing from other proposed methods.
+
+### Description
+
+RGCCA works with numeric matrices, as big as you want, as it is designed for datasets with more variables than samples ( $p \gg n$).
+However, for each sample it needs to have a complete case with no missing values (at the time of writing this thesis there is a [new development version](https://github.com/rgcca-factory/RGCCA/tree/CRAN "RGCCA repository on github") not released on CRAN[^methods-1] yet that replaces any missing value by a 0) and time is not considered as a special variable.
+It uses a dimensional reduction approach to relate the different blocks of data between them and produce specific factors for each dataset.
+
+[^methods-1]: CRAN is The Comprehensive R Archive Network available at <https://cran.r-project.org/>
+
+$$
+\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk} g( \mathrm{cov}(X_j a_j, X_k a_k)) \mathrm{~~s.t.~~} (1-\tau_j)var(X_j a_j)+\tau_j \Vert a_j \Vert^2 = 1, j=1,\ldots,J
+$$
+
+Being $X_j$ the values from sample $j$, the weights of the variables of said sample are represented by $a$.
+While $g$ is a function that can take the form of $x$, also known as Horst method, $|x|$ known as centroid method, $x^2$ known as factorial method, or any user-supplied function.
+$C$ is a symmetric matrix describing the network between blocks.
+
+The authors realized that there is a special problem due to sparsity on biological data which could be handled using first another normalization to improve the stability and success of the canonical correlation methodology.
+The method to perform the dimensional reduction using the sparse method consists on maximizing the same equation but with a different constraint: Specifically, RGCCA with all $\tau_j = 1$ equal to 1 is combined with an L1-penalty
+that gives rise to SGCCA
+
+$$
+\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g( \mathrm{cov}(X_j a_j, X_k a_k)) \mathrm{~~s.t.~~} \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
+$$
+
+The $s_j$ controls the sparsity estimated of the data, the smaller, the larger is the degree of sparsity of $X_j$.
+As $s_j$ is closer to 0, more features are selected as it looks to optimize covariance, while if it is closer to 1 less features are selected and it resembles the correlation.
+The values of $s_j$ were estimated using Schäfer method [@schäfer2005] when the block was from 16S data or RNAseq, otherwise 1 was used.
+The shrinkage parameter is defined as:
+
+$$
+\widehat{\lambda}^{\star} = \dfrac{\sum_{i\neq j}\widehat{Var}(r_{ij})}{\sum_{i \neq j}r_{ij}^2}
+$$
+
+Where the $r_{ij}$ are the correlation coefficients of the matrix between variables $i$ and $j$ .
+Where the variance is defined as:
+
+$$
+\widehat{Var}(S_{ij}) = \dfrac{n^2}{{(n-1)}²} \widehat{Var}({w}_{ij}) = \dfrac{n}{{(n-1)}^3} \sum_{k=1}^n ( w_{kij} - \overline{w_{ij}})^2
+$$
+
+And its components are: $w_{kij}=(x_{ki}-\overline{x}_i)(x_{kj}-\overline{x}_j)$ and $\overline{w}_{ij}=\frac{1}{n}\sum_{k=1}^nw_{kij}$ representing $x_{ij}$ the values of a sample $j$ on a variable $i$.
+
+As previously explained, there are different $g$ functions that could be used but the centroid method was chosen to detect both positive and negative relationships without more computational costs.
+
+Categorical data was encoded as binary (dummy) variables for each factor except one to keep degrees of freedom, where 0 indicates not present and 1 indicates present omitting one level.
+Each block, regardless if it had continuous numeric variables or dummy variables was standardized to zero mean and unit variance.
+Later, it was divided by the square root of the number of variables of the block for an unbiased estimation.
+
+### Output
+
+RGCCA as other dimensional reduction techniques provides specific weights for each variable on each dimension and a sample score on each dimension, together with quality scores.
+
+To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE): it returns an AVE score for each block, an AVE score which measures how each variable correlates with their block component, an AVE score of the inner model, which measures how each dimension accounts for the variance.
+The higher the score is to 1 the better does it work.
+However, that mathematically works better does not mean that it have more biological meaning or that it provides more insights on the biology.
+
+It can also generate results as other related methods based on the maximization of a function of correlations: SUMCOR (sum of correlations method) [@horst1961], SSQCOR (sum of squared correlations method) [@kettenring1971], SABSCOR (sum of absolute values of the correlations method) [@vandegeer1984].
+Others are based on the maximization of a function of covariances: SUMCOV (sum of covariances method), SSQCOV (sum of squared covariances method), SABSCOV (sum of absolute values of the covariances method).
+The following table summarized the equivalent parameters needed on RGCCA to work like these methods:
+
+| Method  | Scheme    | Normalization      | Shrinkage |
+|---------|-----------|--------------------|-----------|
+| SUMCOR  | Horst     | $Var(X_j a_j) = 1$ | 0         |
+| SSQCOR  | Factorial | $Var(X_j a_j) = 1$ | 0         |
+| SABSCOR | Centroid  | $Var(X_j a_j) = 1$ | 0         |
+| SUMCOV  | Horst     | $||a_j||=1$        | 1         |
+| SSQCOV  | Factorial | $||a_j||=1$        | 1         |
+| SABSCOV | Centroid  | $||a_j||=1$        | 1         |
+
+: (tab)Equivalences of RGCCA for multi-block data analysis to other methods
+
+Other methods related are partial least squares (PLS) regression, which maximizes covariance with data variation of 1 and shrinkage of 1, canonical correlation analysis equivalent to data variation equal to 1 and shrinkage of 0, and redundancy analysis which one block weights normalized value is 1 and the other its the variance that is equal to 1.
+
+### Models
+
+There is no formal definition of what constitutes a block of data on multi-omics tools.
+Most multi-omics and integration tools assume one block for each type of data, such as an essay a survey or an experiment.
+We decided to split the block with data about the samples to separate independent variables from the same block.
+The hypothesis we made was that more blocks with highly related variables but independent from the other blocks would fit better the data and thus help to identify causal or dependent variables.
+
+To model what might be the relationships within datasets current practices include using a pre-selected model of relations between blocks.
+However, this model might not be an accurate representation of the relations between blocks and several models might need to be fitted.
+To help find the fitting model for the data I created an R package, named [inteRmodel](https://llrs.github.io/inteRmodel/), which helps finding the right model and measure how fit it is for your data via a bootstrapping procedure and the provided AVE scores.
+
+This method was applied to the previously described datasets to find the relationship between microorganisms and the disease.
+Following this method; to provide a ground truth, a model with only the relationships between the two experimental obtained data is analyzed, on what it is called the model 0.\
+The next models analyzed consists on the relationships between the two experimental blocks and them with all the metadata of the samples, these are models of family 1 denoted by 1.Y, where Y changes as different relationships between the three blocks change.
+Later instead of a big metadata block, following our theory we split this metadata block on several ones, we have a block for time related variables, another one for location and the other about the people on the study.
+This allows to design a model with an expected relationships between these dimensions and help make more interpretable the relationships.
+These models are from the family 2 denoted by the name 2.Y, where 2 denotes the family of the model and Y change as different relationships between the three blocks change.
+
+For each family of models we tested all possible models with weights between 0 and 1 by 0.1 intervals to find the best model on each datasets according to the AVE score.
+
+The final models were further validated using a bootstrap approach to measure their accuracy and likelihood on the data available.
+
+## Statistics
+
+Differential expression analysis was performed with the following the limma-trend method [@ritchie2015; @law2014] and edgeR [@mccarthy2012] (Bioconductor version 3.10 or superior) packages, normalized using the trimmed mean of M-values and log-2 transformed into counts per millions following the workflow described on [@law2018] using voom which in addition performs a count normalization.
+The samples were adjusted for inter-patient differences specifying block argument for patient variable.
+
+To correct for multiple testing, the false discovery rate was estimated using the method of Benjamini and Hochberg [@yoavbenjamini].
+A gene was considered differentially expressed when it was significant at 5% FDR special attention was given to those genes that showed a fold-change higher than \|1.5\|.
+
+Besides differential expression tests and correction for multiple testing, several different methods were used on this thesis which will be described below.
+
+## Functional enrichment methods
+
+Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
+They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.
+Most of them are based on an over representation analysis, where a group of elements is tested whether they are present on other group.
+This can be done with [clusterProfiler](https://bioconductor.org/packages/clusterProfiler) which tests genes enrichment for functionality based on information on pathway databases \[@wu2021\] and used on several publications [@richter2021].
+It checks the enrichment of features of a given group on the (background) list provided.
+
+$$
+\begin{cases}
+H_0 & : & P_{subset} \leq  P_{overall} \\
+H_1 & : & P_{subset} > P_{overall}
+\end{cases}
+$$
+
+The test used is usually the fisher test, the hypergeometric test, the proportion test.
+I describe the hypergeometric test and the proportion test below.
+
+### Hypergeometric test
+
+The hypergeometric distribution describes the probability of $k$ successes (when the object drawn has a specified feature) in $n$ draws[^methods-2], from a finite population of size $N$ that contains exactly $K$ objects with that feature, wherein each draw is either a success or a failure.
+
+[^methods-2]: without replacement
+
+Applied on this context $N$ is the number of genes being used and $n$ the number of genes on a pathway.
+So it can be used to compare the genes found on it ($k$) compared to the expected $K$ numbers of the distribution using the following equation:
+
+$$
+P_X(k) = P(X = k) 
+= \frac{\binom{K}{k} \binom{N - K}{n-k}}{\binom{N}{n}}
+$$
+
+### Proportion test
+
+The overrepresentation of a given group of elements can be also tested with the proportion test, which is sometimes also used on clusterProfiler.
+The proportion test uses the $\chi^2$ distribution to test if the observed frequency ($O_i$) is close to the expected frequency ($E_i$):
+
+$$
+\chi^2 = \sum_{i =1}^n \dfrac{(O_i - E_i)^2}{E_i} \simeq \chi_{n-p}^2
+$$
+
+As this is usually done on a 2x2 contingency table it is equivalent to the Z-test of proportion.
+Sometimes, the expected frequency is so low that a correction must be done to the estimation:
+
+$$
+\chi_{Yates}^2 = \sum_{i =1}^n \dfrac{(|O_i - E_i|-0.5)^2}{E_i}
+$$
+
+This increases the $p$-value as it raises the Chi-square statistic.
+
+### Gene Set Enrichment Analysis
+
+There are other methods that to test if some variables shows an unexpected importance according to a statistic like fold change or value gene set enrichment analysis was developed [@subramanian2005] .
+Gene set enrichment analysis (GSEA) is a computational method originally developed to determine whether a priori defined set of genes shows statistically significant and concordant differences between two biological states.
+This methods check if a group of variables present in an ordered list is present in some skewed distribution and compare it against a random group of similar size.
+It has been widely used since its original publication including on IBD \[@protiva2016\].
+
+This method consist on first calculating the rank of genes $rank(g_j)=r_j$ where each $g$ is a gene.
+Then later calculate the following functions:
+
+$$
+P_{hit}(S, i)=\sum_{g_j \in S, j \leq i}\dfrac{|r_j|^p}{N_R} \text{, where } N_R = \sum_{g_j \in S}|r_j|^p
+$$
+
+$$
+P_{miss}(S, i) = \sum_{g_j \not \in S, j \leq i}\dfrac{1}{N - N_H}
+$$
+
+With these values the enrichment score (ES) defined as: $ES=max(|P_{hit}(S, i)-P_{miss}(S, i)|)$ is calculated from the walk.
+At least 1000 permutations are usually used but a high number of permutations are required for an accurate score of the enrichment score.
+However, when more than one pathway ($S$) is evaluated in order to compare between the enrichment scores between them, they must be normalized by dividing the scores by the mean of all the ES.
+When power $p$ is 0 it is equivalent to the standard Kolmogorov--Smirnov statistic, though it is usually set to 1.
+
+For testing gene set enrichment analysis I used [fgsea](https://bioconductor.org/packages/fgsea) [@korotkevich2021] implementation for its speed and integration with other methods used on this thesis.
+Pathways of genes from the REACTOME database were tested on the weight of different models or on the comparisons performed [@fabregat2016].
+
+### GSVA
+
+To estimate the expression of the pathways and compare their expression levels between conditions gene set variation analysis as implemented on [GSVA](https://bioconductor.org/packages/GSVA) was used [@hänzelmann2013].
+It is a method that summarize the variables' numerical value changing the space of $variable\text{ x }sample$ to $group\text{ x }sample$ .
+This enables other methods to use this new space instead of the original variables, which provides a successful way to look into data [@escudero-hernández2021].
+GSVA was used (again from the REACTOME database) to find the relationships between the pathways and the microbiome at different taxonomic levels.
+
+This is done via an estimation and a comparison with a discrete Poisson kernel: $i$ indicates the gene till $k$ and samples are indicated by $j$ till $n$.
+
+$$
+z_{ij}=\hat{F_r}(x_{ij}) = \frac{1}{n}\sum_{k=1}^n\sum_{y=0}^{x_{ij}}\dfrac{e^{-(x_{ik}+r)}(x_{ik} + r)^y }{y!}
+$$
+
+where $r = 0.5$ is used in order to set the mode of the Poisson kernel at each $x_{ik}$, that is, similar to a gene expression for a given sample.
+
+Later this is converted to ranks $z_{(i)j}$ for each sample and normalized: $r_{ij}=|\frac{p}{2}-z_{(i)j}|$ to make the distribution of ranks symmetric around zero to later compare with a normal distribution using a Kolmogorov-Smirnov-like random walk statistic:
+
+$$
+v_{jk}(l)=\dfrac{\sum_{i=1}^l|r_{ij}|^{\tau}I(g_{(i)}\in \gamma_k)}{\sum_{i=1}^p|r_{ij}|^{\tau}I(g_{(i)} \in \gamma_k)}
+- \dfrac{\sum_{i=1}^lI(g_{(i)} \not \in\gamma_k)}{p-|\gamma_k|}
+$$
+
+Here $\tau$ describes the weight of the tail in the random walk (default is set to 1).
+$\gamma_k$ is the k-th gene set and $I(g_{(i)}\in \gamma_k)$ is the indicator function whether the gene ranked i-th belongs to the gene set $\gamma_k$ .
+$|\gamma_k|$ indicates the ordination of the gene set, the number of genes of the gene set and $p$ the number of genes in the data set.
+
+This difference is later converted to enrichment score for each gene set for each sample, similar to GSEA.
+This score can be calculated as a difference of hits and misses or the maximum deviation from zero of the random walk (which allows to detect gene sets that have genes with different opposing expression patterns).
+
+## Variance and diversity methods
+
+### PERMANOVA
+
+The PERMANOVA method [@anderson2001; @warton2012], provided by the [vegan](https://cran.r-project.org/package=vegan) package on the `adonis` function, was used to test if microbiome data variance is due to other variables when using distances metrics.
+It uses the residual sum of squares such as:
+
+$$
+SS_W = \frac{1}{n} \sum_{i=1}^{N-1}\sum_{j=i+1}^N d_{ij}^2\epsilon{ij} 
+$$
+
+When using euclidian distances ($d$) it is equivalent to MANOVA.
+Here $\epsilon_{ij}$ takes the value of 1 if the observation $i$ and the observation $j$ are in the same group, otherwise it takes the value of zero.
+This can be later used to test which variance is bigger, inter-groups or intra-groups by using the following formula:
+
+$$
+F = \dfrac{SS_A/(\alpha -1)}{SS_W/(N-\alpha)}
+$$
+
+Where $SS_A$ is the among group sum of squares, representing the intra-group variance.
+$N$ is the number of samples and $\alpha$ the number of different groups.
+
+This allows to test if the variables are related to the variance of the data as it can be compared with the $F$ statistic after a high number of permutations.
+
+### globaltest
+
+It is a methods for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
+I tested which variables, (sex, age, location, time since diagnostic, treatment) are important on the datasets with [globaltest](https://bioconductor.org/packages/globaltest) (Version 5.40 or later).
+It provides a general statistic to test hypothesis against a high dimensional dataset.
+
+$$
+S = \sum_{i=1}^p x_i^{'} x_i g(t_i^2)
+$$
+
+The global test performs a test statistic on the transformed t-test, where if $p$, the number of variables, is large the test is more powerful on average over all possible sparse alternatives of general functions $g$.
+
+It was performed with variables individually and also with interactions between the different variables.
+
+### Diversity indices
+
+Microbiome diversity was measured using vegan and [phyloseq](https://bioconductor.org/packages/phyloseq) methods [@oksanen2020].
+$\alpha$-diversity is a measure of how much a given microbiome at a taxonomic level is present on a sample.
+Several measures exists, on the thesis I used the effective Simpson or Shannon diversity index to compare diversity between samples and conditions.
+$\beta$-diversity was calculated using the phyloseq package for exploratory analysis.
+
+## Other methods
+
+### WGCNA
+
+To look for relationships between the microbiome and the RNAseq we used weighted gene co-expression network analysis.
+We used weighted gene co-expression network analysis as implemented on [WGCNA](https://cran.r-project.org/package=WGCNA) [@langfelder2008] and also correlations.
+The Spearman rank correlation coefficient is
+
+Being $(X_1 , Y_1 ),\dots, (X_n , Y_n)$, assign a rank where $(R_1 , S_1 ), \dots , (R_n , S_n )$ for n being all the variables which:
+
+$$
+R_s(X,Y) = \dfrac{\sum_{i=1}^n (R_i - \bar{R}) (S_i - \bar{S} )}{\sqrt{\sum_{i=1}^n (R_i - \bar{R})^2}\sqrt{\sum_{i=1}^n (S_i - \bar{S})^2}}
+$$
+
+where $\bar{R}=\dfrac{1}{n}\sum_{i=1}^n R_i$ conversely to S: $\bar{S}=\dfrac{1}{n}\sum_{i=1}^n S_i$.
+The distribution of the Spearman correlation coefficient is symmetric around 0 and can be approximated to a normal distribution as $\sqrt{n-1}R_{s(X,Y)} \sim N(0,1)$ which can be used to calculate the p-value of a given estimation.
+
+### BaseSet
 
 [BaseSet](https://cran.r-project.org/package=BaseSet) was developed and used to find which variables are really involved on the interaction and how likely were to be together more robustly.
 It is a package that uses fuzzy set logic to calculate the probability to belong to a group, in this case, those genes and bacteria selected by the model that interact with the other.
@@ -507,7 +627,7 @@ Which applied to the data and the case at hand, it is the probability that a giv
 The membership function was derived from the bootstraps used for each model on the thousand iterations of the integrative method applied to give an estimation of how probable is a given gene and bacteria to be selected as relevant for the model.
 With the probabilities of the bootstraps it was used to calculate (via `set_size`) the genes and bacteria that are specific of the model that allows to separate the transcriptome by its location and the microbiome by the disease status.
 
-#### experDesign
+### experDesign
 
 [experDesign](https://cran.r-project.org/package=experDesign) was developed [@revillasancho2021] to prevent and quantify if a given experiment has batch effect due to the batches used to measure the values or other known variable.
 It might help to detect a bad design of the experiment.
@@ -535,12 +655,12 @@ keep the index with less differences between the index and all the samples
 ```
 
 Summary statistics taken into account are the median, the variance, the range, the number of missing values, and the entropy of the categorical variables.
-It can take into account spatial distribution provide which technical replicates[^methods-2] are best given the number of samples that fit on a batch.
+It can take into account spatial distribution provide which technical replicates[^methods-3] are best given the number of samples that fit on a batch.
 
-[^methods-2]: Technical replicates are samples that are measured multiple times to ensure the accuracy of the measurement.
+[^methods-3]: Technical replicates are samples that are measured multiple times to ensure the accuracy of the measurement.
     In contrast biological replicates are sample with the same conditions but different individuals or process before the measurement.
 
-#### ROC- AUC {#ROC}
+### ROC- AUC {#ROC}
 
 To estimate if the selected features (genes or microorganism) by the integration methods have some biological meaningful contribution I measured if they can classify features, such as, which gastrointestinal segment is each sample from, or which type of disease does each patient have.
 
@@ -559,91 +679,4 @@ The ROC curve is that where the true positive rate (TPR) or sensitivity, recall 
 The area under this curve is a measure of how good such classifications performs overall, being 0.5 as good as a random selection.
 The higher it is to 1 the better as it classifies incorrectly less samples and accurately classify them.
 
-#### RGCCA
-
-The main method used on this thesis has been regularized generalized canonical correlation analysis (RGCCA) a method derived from the canonical correlation.
-Canonical correlation is a method that uses data about the same unit but from different origins to find how much the different sources agree.
-Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017a] which was used on this thesis.
-The method and implementation will be explained in detail on the next section.
-
-<!-- # TODO add flowchart from analysis process like http://mixomics.org/mixdiablo/ {1 and 2} -->
-
-## Regularized generalized canonical correlation analysis
-
-<!-- # TODO Extend explanation introducing dot product -> PCA -> CCA -> RGCCA from a review or something-->
-
-The regularized generalized canonical correlation analysis is an extension to the canonical correlation analysis [@jordan1875; @hotelling1936] which is an old method to find agreement between two, or more, scorers (as it was first introduced on the literature) or sources.
-
-Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020] RGCCA emerged with a regularization step and an extension to more than two scorers.
-Previously canonical correlation methods did not have the ability to integrate more than 2 sources of data as does RGCCA [@R-RGCCA].
-
-### Description
-
-RGCCA works with numeric matrices, as big as you want, as it is designed for datasets with more variables than samples ( $p \gg n$).
-However, for each sample it needs to have a complete case with no missing values (at the time of writing this thesis there is a [new development version](https://github.com/rgcca-factory/RGCCA/tree/CRAN "RGCCA repository on github") not released on CRAN[^methods-3] yet that replaces any missing value by a 0) and time is not considered as a special variable.
-It uses a dimensional reduction approach to relate the different blocks of data between them and produce specific factors for each dataset.
-
-[^methods-3]: CRAN is The Comprehensive R Archive Network available at <https://cran.r-project.org/>
-
-The authors realized that there is a special problem due to sparsity on biological data which could be handled using first another normalization to improve the stability and success of the canonical correlation methodology.
-The method to perform the dimensional reduction using the sparse method consists on maximizing this function:
-
-$$
-\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g( \mathrm{cov}(X_j a_j, X_k a_k)) \mathrm{~~s.t.~~} \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
-$$
-
-Being $X_j$ the values from sample $j$, the weights of the variables of said sample are represented by $a$.
-While $g$ is a function that can take the form of $x$, also known as Horst method, $\Vert x \Vert$ known as centroid method, $x^2$ known as factorial method, or any user-supplied function.
-The $s_j$ controls the sparsity estimated of the data, the smaller, the larger is the degree of sparsity of $X_j$.
-As $s_j$ is closer to 0, more features are selected as it looks to optimize covariance, while if it is closer to 1 less features are selected and it resembles the correlation.
-The values of $s_j$ were estimated using Schäfer method [@schäfer2005] when the block was from 16S data or RNaseq, otherwise 1 was used.
-The shrinkage parameter is defined as:
-
-$$
-\widehat{\lambda}^{\star} = \dfrac{\sum_{i\neq j}\widehat{Var}(r_{ij})}{\sum_{i \neq j}r_{ij}^2}
-$$
-
-Where the $r_{ij}$ are the correlation coefficients of the matrix between variables $i$ and $j$ .
-Where the variance is defined as:
-
-$$
-\widehat{Var}(S_{ij}) = \dfrac{n^2}{{(n-1)}²} \widehat{Var}({w}_{ij}) = \dfrac{n}{{(n-1)}^3} \sum_{k=1}^n ( w_{kij} - \overline{w_{ij}})^2
-$$
-
-And its components are: $w_{kij}=(x_{ki}-\overline{x}_i)(x_{kj}-\overline{x}_j)$ and $\overline{w}_{ij}=\frac{1}{n}\sum_{k=1}^nw_{kij}$ representing $x_{ij}$ the values of a sample $j$ on a variable $i$.
-
-There are different $g$ functions that could be used but the centroid method was chosen to detect both positive and negative relationships without more computational costs.
-
-Categorical data was encoded as binary (dummy) variables for each factor except one to keep degrees of freedom, where 0 indicates not present and 1 indicates present omitting one level.
-Each block, regardless if it had continuous numeric variables or dummy variables was standardized to zero mean and unit variance.
-Later, it was divided by the square root of the number of variables of the block for an unbiased estimation.
-
-### Results
-
-RGCCA as other dimensional reduction techniques provides specific weights for each variable on each dimension and a sample score on each dimension, together with quality scores.
-
-To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE): it returns an AVE score for each block, an AVE score which measures how each variable correlates with their block component, an AVE score of the inner model, which measures how each dimension accounts for the variance.
-The higher the score is to 1 the better does it work.
-However, that mathematically works better does not mean that it have more biological meaning or that it provides more insights on the biology.
-
-### Models
-
-There is no formal definition of what constitutes a block of data on multi-omics tools.
-Most multi-omics and integration tools assume one block for each type of data, such as an essay a survey or an experiment.
-We decided to split the block with data about the samples to separate independent variables from the same block.
-The hypothesis we made was that more blocks with highly related variables but independent from the other blocks would fit better the data and thus help to identify causal or dependent variables.
-
-To model what might be the relationships within datasets current practices include using a pre-selected model of relations between blocks.
-However, this model might not be an accurate representation of the relations between blocks and several models might need to be fitted.
-To help find the fitting model for the data I created an R package, named [inteRmodel](https://llrs.github.io/inteRmodel/), which helps finding the right model and measure how fit it is for your data via a bootstrapping procedure and the provided AVE scores.
-
-This method was applied to the previously described datasets to find the relationship between microorganisms and the disease.
-Following this method; to provide a ground truth, a model with only the relationships between the two experimental obtained data is analyzed, on what it is called the model 0.\
-The next models analyzed consists on the relationships between the two experimental blocks and them with all the metadata of the samples, these are models of family 1 denoted by 1.Y, where Y change as different relationships between the three blocks change.
-Later instead of a big metadata block, following our theory we split this metadata block on several ones, we have a block for time related variables, another one for location and the other about the people on the study.
-This allows to design a model with an expected relationships between these dimensions and help make more interpretable the relationships.
-These models are from the family 2 denoted by the name 2.Y, where 2 denotes the family of the model and Y change as different relationships between the three blocks change.
-
-For each family of models we tested all possible models with weights between 0 and 1 by 0.1 intervals to find the best model on each datasets according to the AVE score.
-
-The final models were further validated using a bootstrap approach to measure their accuracy and likelihood on the data available.
+## 
