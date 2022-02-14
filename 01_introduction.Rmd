@@ -7,9 +7,9 @@ UC is a recurrent, chronic and continuous inflammation of the colon and rectum w
 IBD etiology is unknown.
 However, once it has initiated the most prevalent hypothesis of its chronicity suggests an aberrant immunological response to antigens of the commensal microbiome.
 
-To diagnose the IBD doctors use endoscopy and/or magnetic resonance imaging and histologies.
+To diagnose IBD doctors use endoscopy and/or magnetic resonance imaging and histologies.
 
-Treatments provided for the IBD include, noninflammatory drugs, suppressors and biologics, i.e, anti TNF- anti-IL2, 23, anti-integrin $\alpha4\beta7$.
+Treatments provided for IBD include, noninflammatory drugs, suppressors and biologics, i.e, anti TNF- anti-IL2, 23, anti-integrin $\alpha4\beta7$.
 The therapeutic options can induce remission in some patients, but they often need continuous treatment to avoid recurrence.
 Nevertheless, many patients are refractory or intolerant to those therapies and need to undergo surgery or other strategies like dietetic and psychological support [@raine2021a] .
 
@@ -77,7 +77,7 @@ H3K4me1 marks as found by chromatin immunoprecipitation sequencing ([ChIP-Seq](h
 The human intestine is a large reservoir of co-existing microorganisms (bacteria, fungi, viruses, and unicellular eukaryotes) .
 This microbiome community exerts different functions in the human body influencing nutrients' metabolism, the maturation of the immune system while suppressing the growth of harmful microorganisms' [@khanna2014].
 
-The role of the gut microbiota has been proposed to play a role in the IBD pathogenesis.
+The role of the gut microbiota has been proposed to play a role in IBD pathogenesis.
 IBD has been characterized by a breakdown in the balance between beneficial and harmful bacteria that are present in the human gut compared to healthy individuals [@swidsinski2002; @tamboli2004].
 
 <!--# End-->
@@ -303,8 +303,8 @@ Thiopurines (Azathioprine, mercaptopurina) are immunosuppressants drugs that dea
 As a side effect they are toxic due to their interaction with nucleic acids [@warner2018].
 on CD they are useful to induce and keep remission [@chande2015], while on UC they are used to keep the remission [@gisbert2009].
 
-In the last two decades the IBD treatment has moved from aminosalicylates, corticosteroids and immunomodulators to anti-TNF$\alpha$.
-Anti-TNF$\alpha$ drugs has changed the IBD treatment as it reduced the hospitalization associated with previous treatments, reducing medical costs and risk of surgery as well as induce a better mucosal healing and quality of life for patients [@peyrin-biroulet2011].
+In the last two decades IBD treatment has moved from aminosalicylates, corticosteroids and immunomodulators to anti-TNF$\alpha$.
+Anti-TNF$\alpha$ drugs has changed IBD treatment as it reduced the hospitalization associated with previous treatments, reducing medical costs and risk of surgery as well as induce a better mucosal healing and quality of life for patients [@peyrin-biroulet2011].
 However, 20-30% of patients have no response to this treatments and another 30-40% lose response in a year [@billioud2011].
 
 <!--# Pause to give names of drugs used on other targets previously mentioned -->
@@ -355,70 +355,61 @@ Furthermore several studies have been carried out to discover links between micr
 These studies, known as integration, multi-omic or interaction studies, usually use multiple sequencing assays as the bases of the analysis [@beck2021].
 
 However, confirming causal interactions of the variables of each essay is difficult.
-To find relationships some articles use correlation, like [@hasler_uncoupling_2016], there are others that use a combination of methods from correlations, partial correlations to integrative methods [@tang_integrated_2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations.
+To find relationships some articles use correlation [@hasler_uncoupling_2016], there are others that use a combination of methods from correlations, partial correlations to integrative methods [@tang_integrated_2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations [ref:needed howell2018].
 
-Very rarely there is an experimental confirmation of the relationships between variables of the different essays because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
-One of the few methods published that shows an interaction between genes and microorganisms on the IBD is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
+Very rarely there is an experimental confirmation of the relationships between variables of the different assays because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
+One of the few methods published that shows an interaction between genes and microorganisms on IBD is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
 
-### Data origin {#data-origin}
+### Type of data used for integration analysis {#data-origin}
 
 According to the data used, we can classify the studies:
 
 #### Transcriptome
 
 Most of the integrations refer some other source of data to the transcriptomics of the patient.
-The transcriptome of the patients has been extensively studied since the existence of microarrays.
-There are known marker gens of inflammation and many research focus on identifying prognosis predictors, treatment response prediction based on gene expression [@planell2013; @leal2015].
-Recently single-cell technology has enabled to estimate cell populations of the samples with better degree of success than bulk RNA-sequencing, which is helpful to understand the immune response and the population change of the cells.
+The transcriptome of patients derived samples has been extensively studied since the existence of microarrays.
+There are known marker gens of inflammation and many research focus on identifying prognosis predictors and treatment response prediction based on gene expression [@planell2013; @leal2015].
+Recently single-cell technology has enabled to estimate cell populations of the samples with better degree of success than bulk RNA-sequencing.
 Single cell technologies are starting to be used for integration.
-
-Notably this is probably the most common data available from IBD patients, probably due to existing commercial solutions to gather this data and the experience with this kind of protocols.
 
 #### Microbiome
 
-Many of the integration analysis on inflammatory bowel are done between host transcriptome and the microbiome.
-These studies use datasets from IBD patients usually stratified by some inflammatory index or location of the disease.
+Many of the integration analysis on IBD are done between host transcriptome and the microbiome.
+These studies use datasets from IBD patients usually stratified by disease activity or severity of inflammation or location of the disease.
 Most of them are based on correlation analysis between the microbiome and RNA-seq [@hasler_uncoupling_2016].
-Conclusions of these integrations range from finding differences on the correlation depending on the disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang_integrated_2017].
+Conclusions of these integrations range from finding differences on the correlation depending on the type of disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang_integrated_2017].
 
 #### Genetics
 
-Genetics is the next most common data source used to integrate data on the IBD.
+Genetics is the next most common data source used to integrate data on IBD.
 Most studies on genetics and IBD are genome-wide association studies [@kumar2019; @knights2013; @huWholeExomeSequencing2021].
 No clear mechanism has been proved despite clear and significant findings, probably because IBD relapses and remits with time.
 
 When using genetic data to integrate it with transcriptomics it is usually to understand how a genetic variant is affecting a gene expression.
-This has lead to expression quantitative trait loci (eQTL).
+This has lead to expression quantitative trait loci (eQTL) [ref:needed].
 
 #### Metabolome
 
-More recently there have been an increased interest on metabolome, given that microorganisms interact with the host also via their products and metabolites.
+More recently there have been an increased interest on the study of the metabolic stat of IBD patients, given that microorganisms interact with the host also via their products and metabolites.
+There is evidence some of these metabolomic products come from the microbiome [@ferrer-picón2020b; @mayorgas2021].
 Some studies have integrated the metabolome with the RNAseq and state of the epithelium [@ahmed2016; @gallagher2021].
-
-There is evidence some of these metabolomic products, such as small chemicals regulate the epithelium cells and their interaction with the microbiome and outer agents [@ferrer-picón2020b; @mayorgas2021].
-
-### Summary {#summary-studies}
-
-Multiple methods and multiple studies have been used to learn more about the interaction between different data and understand the IBD.
-The task is challenging and with many different aspects one could use.
-
-There are many studies focused on understanding different aspects of the disease: the relation between location and severity, relapse, remission, treatments, origin.
-The integration of data might help to improve the medicine and reveal links in difficult diseases like IBD.
 
 ## Integration
 
-Data integration is informally widely used with varying definitions, according to the dictionary integration is defined as:
+The term "data integration" is widely used with varying meanings. 
+According to the dictionary integration is defined as:
 
 > "the process of combining two or more things into one" --- [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/integration)
 
-Other words used are integrati(-on, -ve), and if specific to data from sequencing technologies multi-omics, pluri-omics.
+Other words used are integration, and if specific to data from sequencing technologies multi-omics or pluri-omics.
 Here integration will be used as it is the more general one and not restricted to omics or sequencing technologies.
 
 Since the beginning of the integration methods there have been many methods proposed [@krassowski2020].
-Some of the early methods were initially used for surveying the agreement of different evaluating systems, others were developed for agricultural sciences [@hotelling_relations_1936] or food industry [@biancolillo].
-Some of these methods are specific for one application or data while others are more generally applicable.
-Lately, the increase of bigger datasets with more variables and often from the same samples has increased the focus of the research community on the methodologies available on several disciplines but mainly on the biological science.
-The explosion of data on the biological science has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time, if done with multiple sequencing tecnologies it is usually referred as multi-omics methods, which usually only integrate omic data.
+Some of the early methods were initially used for surveying the agreement of different evaluating systems [ref:needed], others were developed for agricultural sciences [@hotelling_relations_1936] or food industry [@biancolillo].
+Some of these methods are specific for one application or data type while others are more generally applicable.
+Lately, the access to bigger datasets with more variables and often from the same samples has increased the focus of the research community on the methodologies available on several disciplines but mainly on biological sciences.
+The explosion of data on the biological science has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time.
+If done with multiple sequencing tecnologies it is usually referred as multi-omics methods, which usually only integrate omic data.
 
 It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019]. Part of these efforts uses the methods' strategies to classify them [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
 Following this view I'll review the integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
