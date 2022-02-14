@@ -36,7 +36,6 @@ transcriptome
 microbiome-1
 genetics-1
 metabolome
-summary-studies
 integration
 classification-of-integration-methods
 data-type-numeric-or-categorical
