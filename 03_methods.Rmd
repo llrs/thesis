@@ -339,7 +339,7 @@ Typically data is normalized and standardized to avoid that a variable with high
 The canonical correlation analysis [@jordan1875; @hotelling1936] is a method to find agreement between two, or more, scorers (as it was first introduced on the literature) or sources.
 It extends the PCA to a two sources of data and continues to provide the same output new variables and weights of the existing variables indicating their importance.
 
-Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020] regularized generalized canonical correlation analysis (RGCCA) emerged with a generalization from canonical correlations extending the procedure to more than two sources of data \[@R-RGCCA\] and being made more flexible generalizing from other proposed methods.
+Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020] regularized generalized canonical correlation analysis (RGCCA) emerged with a generalization from canonical correlations extending the procedure to more than two sources of data [@R-RGCCA] and being made more flexible generalizing from other proposed methods.
 
 ### Description
 
@@ -358,8 +358,7 @@ While $g$ is a function that can take the form of $x$, also known as Horst metho
 $C$ is a symmetric matrix describing the network between blocks.
 
 The authors realized that there is a special problem due to sparsity on biological data which could be handled using first another normalization to improve the stability and success of the canonical correlation methodology.
-The method to perform the dimensional reduction using the sparse method consists on maximizing the same equation but with a different constraint: Specifically, RGCCA with all $\tau_j = 1$ equal to 1 is combined with an L1-penalty
-that gives rise to SGCCA
+The method to perform the dimensional reduction using the sparse method consists on maximizing the same equation but with a different constraint: Specifically, RGCCA with all $\tau_j = 1$ equal to 1 is combined with an L1-penalty that gives rise to SGCCA
 
 $$
 \underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g( \mathrm{cov}(X_j a_j, X_k a_k)) \mathrm{~~s.t.~~} \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
@@ -451,7 +450,7 @@ Besides differential expression tests and correction for multiple testing, sever
 Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
 They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.
 Most of them are based on an over representation analysis, where a group of elements is tested whether they are present on other group.
-This can be done with [clusterProfiler](https://bioconductor.org/packages/clusterProfiler) which tests genes enrichment for functionality based on information on pathway databases \[@wu2021\] and used on several publications [@richter2021].
+This can be done with [clusterProfiler](https://bioconductor.org/packages/clusterProfiler) which tests genes enrichment for functionality based on information on pathway databases [@wu2021] and used on several publications [@richter2021].
 It checks the enrichment of features of a given group on the (background) list provided.
 
 $$
@@ -501,7 +500,7 @@ This increases the $p$-value as it raises the Chi-square statistic.
 There are other methods that to test if some variables shows an unexpected importance according to a statistic like fold change or value gene set enrichment analysis was developed [@subramanian2005] .
 Gene set enrichment analysis (GSEA) is a computational method originally developed to determine whether a priori defined set of genes shows statistically significant and concordant differences between two biological states.
 This methods check if a group of variables present in an ordered list is present in some skewed distribution and compare it against a random group of similar size.
-It has been widely used since its original publication including on IBD \[@protiva2016\].
+It has been widely used since its original publication including on IBD [@protiva2016].
 
 This method consist on first calculating the rank of genes $rank(g_j)=r_j$ where each $g$ is a gene.
 Then later calculate the following functions:
@@ -678,5 +677,3 @@ $$
 The ROC curve is that where the true positive rate (TPR) or sensitivity, recall or hit rate is represented against the false positive rate (FPR) on the x axis.
 The area under this curve is a measure of how good such classifications performs overall, being 0.5 as good as a random selection.
 The higher it is to 1 the better as it classifies incorrectly less samples and accurately classify them.
-
-## 
