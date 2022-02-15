@@ -1,6 +1,5 @@
 fig:composition
 fig:barrier
-eq:STATegRA-o2pls
 fig:puget-tau2AVE
 fig:puget-superblock
 fig:puget-models
@@ -89,7 +88,6 @@ wgcna
 baseset
 experdesign
 ROC
-section
 results
 packages
 experdesign-1
