@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-02-14" />
+<meta name="date" content="2022-02-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -174,7 +174,6 @@ div.csl-indent {
 <li class="chapter" data-level="3.8.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#experdesign"><i class="fa fa-check"></i><b>3.8.3</b> experDesign</a></li>
 <li class="chapter" data-level="3.8.4" data-path="materials-and-methods.html"><a href="materials-and-methods.html#ROC"><i class="fa fa-check"></i><b>3.8.4</b> ROC- AUC</a></li>
 </ul></li>
-<li class="chapter" data-level="3.9" data-path="materials-and-methods.html"><a href="materials-and-methods.html#section"><i class="fa fa-check"></i><b>3.9</b> </a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a>
 <ul>
@@ -251,15 +250,15 @@ On the thesis the focus was more on finding a good representation of the disease
 There are frequent new tools and methods released, and the most up to date list of tools is a <a href="https://github.com/mikelove/awesome-multi-omics" title="Awesome multi-omics list">collaborative list</a>.</p>
 <p>With the increase of tools there have been more pressure on comparing different tools.
 There have been already some articles comparing the different tools, which the previous mentioned list also has.
-There are reviews of different tools on the same datasets <span class="citation">[<a href="#ref-cantini2020" role="doc-biblioref">207</a>]</span>, some are more theoretical, others are focused on a field.</p>
+There are reviews of different tools on the same datasets <span class="citation">[<a href="#ref-cantini2020" role="doc-biblioref">209</a>]</span>, some are more theoretical, others are focused on a field.</p>
 <p>WGCNA did not work.</p>
 <p>adonis worked to identify which variables were important.</p>
 <p>MCIA works well as baseline.</p>
 <p>STATegRa not customizable the interaction between the datasets.</p>
 <p>RGCCA some improvements.</p>
 <p>Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing.
-<span class="citation">[<a href="#ref-zhang2019" role="doc-biblioref">208</a>]</span></p>
-<p>How to move the transition from bench to hospital <span class="citation">[<a href="#ref-collij2021" role="doc-biblioref">209</a>]</span>.</p>
+<span class="citation">[<a href="#ref-zhang2019" role="doc-biblioref">210</a>]</span></p>
+<p>How to move the transition from bench to hospital <span class="citation">[<a href="#ref-collij2021" role="doc-biblioref">211</a>]</span>.</p>
 <!--# From @collij2021 add references/adapt-->
 <p>New technologies like “organ-on-chip” or more specifically “gut-on-chip” will be of great help in identifying causality by introducing the gut microbiota in this system and then study the interaction of the gut microbiota and the intestinal epithelium.</p>
 <p>BaseSet did not work out, too many combinations and problem with numeric precision of multiplying &gt; 1000 float numbers.</p>
@@ -278,7 +277,7 @@ Depending on the goals of the research one or the other should be used.
 If we are more interested on the model of the relationships the inner AVE makes more sense.</p>
 <p>Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
 Another option is to use an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately.
-Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4 package">MCIA</a> <span class="citation">[<a href="#ref-mengMultivariateApproachIntegration2014" role="doc-biblioref">210</a>]</span>.
+Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4 package">MCIA</a> <span class="citation">[<a href="#ref-mengMultivariateApproachIntegration2014" role="doc-biblioref">212</a>]</span>.
 Which was compared by looking at the area under the curve for classifying the samples according to their location.</p>
 <p>Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn’s disease.
 In this article we did not look in depth to the biological relevance of the microorganisms an genes found.</p>
@@ -290,7 +289,7 @@ But the most important thing is to consider which variables are independent of w
 <h3><span class="header-section-number">5.0.1</span> Other</h3>
 <p>Quality of RNAseq analysis and 16S sequencing is important.
 Avoid contamination, same primers and read lengths (if using Illumina machines).
-Comparing 16S taxa ASV or OTUs is hard and selectying the right tool to compare them is important <span class="citation">[<a href="#ref-nearing2022" role="doc-biblioref">211</a>]</span>.</p>
+Comparing 16S taxa ASV or OTUs is hard and selectying the right tool to compare them is important <span class="citation">[<a href="#ref-nearing2022" role="doc-biblioref">213</a>]</span>.</p>
 <p>Some batch effects are avoidable due to the experDesign package.
 This might help to improve the quality of the datasets and to expand previously sequenced datasets.</p>
 <p><span class="math display">\[@jiang2019\]</span> A paper about multi-omics and microbiome…</p>
@@ -299,7 +298,7 @@ This might help to improve the quality of the datasets and to expand previously 
 <div id="relevance-for-other-research" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Relevance for other research</h2>
 <p>It is hard to provide more information that can be later used by researchers on the wet lab.</p>
-<p>Paper about using transcriptomics to infer inflammation without colonoscopy <span class="citation">[<a href="#ref-ungar2022" role="doc-biblioref">212</a>]</span></p>
+<p>Paper about using transcriptomics to infer inflammation without colonoscopy <span class="citation">[<a href="#ref-ungar2022" role="doc-biblioref">214</a>]</span></p>
 <p>There is a disconnect between the computational side and the experimental side, driven by the difficulty to think an experiment to test the new information that multi-omic experiments provide.</p>
 <p>Many combinations possible that are hard to explore, further research on how to reduce the space of possible combinations of bacteria or evaluate which combinations are more important might be useful on the future.
 As this might help focus on the most promising bacteria.</p>
@@ -317,22 +316,22 @@ How to apply this results ?</p>
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body">
 <div id="ref-cantini2020" class="csl-entry">
-207. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. <a href="https://doi.org/10.1101/2020.01.14.905760">Benchmarking joint multi-omics dimensionality reduction approaches for cancer study</a>. bioRxiv. 2020;2020.01.14.905760.
+209. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. <a href="https://doi.org/10.1101/2020.01.14.905760">Benchmarking joint multi-omics dimensionality reduction approaches for cancer study</a>. bioRxiv. 2020;2020.01.14.905760.
 </div>
 <div id="ref-zhang2019" class="csl-entry">
-208. Zhang X, Li L, Butcher J, Stintzi A, Figeys D. <a href="https://doi.org/10.1186/s40168-019-0767-6">Advancing functional and translational microbiome research using meta-omics approaches</a>. Microbiome. 2019;7:154.
+210. Zhang X, Li L, Butcher J, Stintzi A, Figeys D. <a href="https://doi.org/10.1186/s40168-019-0767-6">Advancing functional and translational microbiome research using meta-omics approaches</a>. Microbiome. 2019;7:154.
 </div>
 <div id="ref-collij2021" class="csl-entry">
-209. Collij V, Klaassen MAY, Weersma RK, Vila AV. <a href="https://doi.org/10.1007/s00439-020-02218-3">Gut microbiota in inflammatory bowel diseases: moving from basic science to clinical applications</a>. Human Genetics. 2021;140:703–8.
+211. Collij V, Klaassen MAY, Weersma RK, Vila AV. <a href="https://doi.org/10.1007/s00439-020-02218-3">Gut microbiota in inflammatory bowel diseases: moving from basic science to clinical applications</a>. Human Genetics. 2021;140:703–8.
 </div>
 <div id="ref-mengMultivariateApproachIntegration2014" class="csl-entry">
-210. Meng C, Kuster B, Culhane AC, Gholami AM. <a href="https://doi.org/10.1186/1471-2105-15-162">A multivariate approach to the integration of multi-omics datasets</a>. BMC Bioinformatics. 2014;15:162.
+212. Meng C, Kuster B, Culhane AC, Gholami AM. <a href="https://doi.org/10.1186/1471-2105-15-162">A multivariate approach to the integration of multi-omics datasets</a>. BMC Bioinformatics. 2014;15:162.
 </div>
 <div id="ref-nearing2022" class="csl-entry">
-211. Nearing JT, Douglas GM, Hayes MG, MacDonald J, Desai DK, Allward N, et al. <a href="https://doi.org/10.1038/s41467-022-28034-z">Microbiome differential abundance methods produce different results across 38 datasets</a>. Nature Communications. 2022;13:342.
+213. Nearing JT, Douglas GM, Hayes MG, MacDonald J, Desai DK, Allward N, et al. <a href="https://doi.org/10.1038/s41467-022-28034-z">Microbiome differential abundance methods produce different results across 38 datasets</a>. Nature Communications. 2022;13:342.
 </div>
 <div id="ref-ungar2022" class="csl-entry">
-212. Ungar B, Yavzori M, Fudim E, Picard O, Kopylov U, Eliakim R, et al. Host transcriptome signatures in human faecal-washes predict histological remission in patients with IBD. Gut. 2022. <a href="https://doi.org/10.1136/gutjnl-2021-325516">https://doi.org/10.1136/gutjnl-2021-325516</a>.
+214. Ungar B, Yavzori M, Fudim E, Picard O, Kopylov U, Eliakim R, et al. Host transcriptome signatures in human faecal-washes predict histological remission in patients with IBD. Gut. 2022. <a href="https://doi.org/10.1136/gutjnl-2021-325516">https://doi.org/10.1136/gutjnl-2021-325516</a>.
 </div>
 </div>
             </section>
