@@ -16,7 +16,8 @@ The actual code used can be found on the links provided on the [appendix](#softw
 ### Puget's dataset {#methods-puget}
 
 The glioma dataset is the data provided as an example of biological data by the authors of RGCCA from a previous publication [@puget2012].
-The data came from diffuse intrinsic pontine glioma patients whose transcriptome was analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F. The copy number variation of the patients was processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using [Mutation Surveyor software](https://www.softgenetics.com/mutationSurveyor.php "Website of the software").
+The data came from diffuse intrinsic pontine glioma patients whose transcriptome was analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F.
+The copy number variation of the patients was processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using [Mutation Surveyor software](https://www.softgenetics.com/mutationSurveyor.php "Website of the software").
 In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor [@puget2012].
 
 | Characteristic            | Puget's  |
@@ -312,7 +313,7 @@ The O2PLS model can be written as a factor analysis where some factors are commo
 
 $$
 \text{X model: } X = TW ^ T + T_{\text{Y-ortho}} P ^ T_{\text{Y-ortho}} + E
-$$
+$$ 
 $$
 \text{Y model: } Y = UC ^ T + U_{\text{X-ortho}} P ^ T_{\text{X-ortho}} + F
 $$
@@ -351,10 +352,8 @@ $$
 \rho = \underset{a, b}{\mathrm{argmax}} (\mathrm{cor}(a^T X, b^T Y))
 $$
 
-
-Being $a$ and $b$ random variables that given $X$ and $Y$, the two data sources, maximize the correlation between $a^T X$ and $b^T Y$, the first canonical variables, the new variables. 
-$a$ and $b$ are the weights. 
-
+Being $a$ and $b$ random variables that given $X$ and $Y$, the two data sources, maximize the correlation between $a^T X$ and $b^T Y$, the first canonical variables, the new variables.
+$a$ and $b$ are the weights.
 
 Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020] regularized generalized canonical correlation analysis (RGCCA) emerged with a generalization from canonical correlations extending the procedure to more than two sources of data [@R-RGCCA] and being made more flexible generalizing from other proposed methods.
 
@@ -391,7 +390,7 @@ $$
 And its components are: $w_{kij}=(x_{ki}-\overline{x}_i)(x_{kj}-\overline{x}_j)$ and $\overline{w}_{ij}=\frac{1}{n}\sum_{k=1}^nw_{kij}$ representing $x_{ij}$ the values of a sample $j$ on a variable $i$.
 
 The authors realized that there is a special problem due to sparsity on biological data which could be handled using first another normalization to improve the stability and success of the canonical correlation methodology.
-The method to perform the dimensional reduction using the sparse method consists on maximizing the same equation but with a different constraint: Specifically, RGCCA with all $\tau_j = 1$,  combined with an L1-penalty that gives rise to SGCCA:
+The method to perform the dimensional reduction using the sparse method consists on maximizing the same equation but with a different constraint: Specifically, RGCCA with all $\tau_j = 1$, combined with an L1-penalty that gives rise to SGCCA:
 
 $$
 \underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g( \mathrm{cov}(X_j a_j, X_k a_k)) \mathrm{~~s.t.~~} \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
@@ -422,20 +421,20 @@ It can also generate results as other related methods based on the maximization 
 Others are based on the maximization of a function of covariances: SUMCOV (sum of covariances method), SSQCOV (sum of squared covariances method), SABSCOV (sum of absolute values of the covariances method).
 The following table summarized the equivalent parameters needed on RGCCA to work like these methods:
 
-| Method  | Scheme    | Normalization      | Shrinkage |
-|---------|-----------|--------------------|-----------|
-| SUMCOR  | Horst     | $Var(X_j a_j) = 1$ | 0         |
-| SSQCOR  | Factorial | $Var(X_j a_j) = 1$ | 0         |
-| SABSCOR | Centroid  | $Var(X_j a_j) = 1$ | 0         |
-| SUMCOV  | Horst     | $\Vert a_j \Vert = 1$        | 1         |
-| SSQCOV  | Factorial | $\Vert a_j \Vert = 1$        | 1         |
-| SABSCOV | Centroid  | $\Vert a_j \Vert = 1$        | 1         |
+| Method  | Scheme    | Normalization         | Shrinkage |
+|---------|-----------|-----------------------|-----------|
+| SUMCOR  | Horst     | $Var(X_j a_j) = 1$    | 0         |
+| SSQCOR  | Factorial | $Var(X_j a_j) = 1$    | 0         |
+| SABSCOR | Centroid  | $Var(X_j a_j) = 1$    | 0         |
+| SUMCOV  | Horst     | $\Vert a_j \Vert = 1$ | 1         |
+| SSQCOV  | Factorial | $\Vert a_j \Vert = 1$ | 1         |
+| SABSCOV | Centroid  | $\Vert a_j \Vert = 1$ | 1         |
 
 : (tab)Equivalences of RGCCA for multi-block data analysis to other methods
 
-There are other methods that can be done with RGCCA. 
+There are other methods that can be done with RGCCA.
 Canonical correlation analysis would be equivalent to data variance equal to 1 and shrinkage of 0.
-Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1. 
+Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1.
 Redundancy analysis could be performed with one block weights' normalized value is 1 and the variance of the other equal to 1.
 
 ### Models
@@ -470,7 +469,6 @@ The samples were adjusted for inter-patient differences blocking for patient.
 
 To correct for multiple testing, the false discovery rate was estimated using the method of Benjamini and Hochberg [@yoavbenjamini].
 A gene was considered differentially expressed when it was significant at 5% FDR special attention was given to those genes that showed a fold-change higher than |1.5|.
-
 
 ## Functional enrichment methods
 
@@ -623,18 +621,19 @@ $\alpha$-diversity is a measure of how much a given microbiome at a taxonomic le
 Several measures exists, on the thesis I used the effective Simpson or Shannon diversity index to compare diversity between samples and conditions.
 $\beta$-diversity was calculated using the phyloseq package for exploratory analysis.
 
-The effective Simpson (also known as inverse Simpson) is: 
+The effective Simpson (also known as inverse Simpson) is:
 
 $$
 D_2 = \dfrac{1}{\sum_{1=1}^Sp_i^2}
 $$
 
-The effective Shannon diversity is :
+The effective Shannon diversity is: 
+
 $$
 D = \dfrac{1}{-\sum_{i =1}^S p_i \log_e{p_i}}
 $$
 
-Where $p_i$ is the proportion of species $i$ and $S$ is the number of species. 
+Where $p_i$ is the proportion of species $i$ and $S$ is the number of species.
 
 ## Other methods
 
