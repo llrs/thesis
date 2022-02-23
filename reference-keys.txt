@@ -36,7 +36,7 @@ microbiome-1
 genetics-1
 metabolome
 integration
-classification-of-integration-methods
+classification-of-integration-method
 data-type-numeric-or-categorical
 objective
 relationship-between-variables-and-samples
