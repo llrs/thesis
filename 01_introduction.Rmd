@@ -44,7 +44,8 @@ But once a segment is affected by the disease it can be considered as involved, 
 
 ### Etiology and pathogenesis
 
-Several mechanisms have been proposed to drive IBD pathogenesis [@zhang2014; @hugot2004]. Some of them are based on a relationship between the immune system and the microbiome [@silva2016a; @demattos2015].
+Several mechanisms have been proposed to drive IBD pathogenesis [@zhang2014; @hugot2004].
+Some of them are based on a relationship between the immune system and the microbiome [@silva2016a; @demattos2015].
 It is also unclear if CD and the UC share the same origin considering their different symptoms.
 
 There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b; @satsangi2006c].
@@ -62,7 +63,8 @@ This has lead to look for genetic factors on IBD both on general population and 
 Genome wide association studies (GWAS) are one of the most common genetic studies performed, together with methylation studies.
 To discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.
 
-With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019]. Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in UC [@jostins2012; @momozawa2018].
+With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019].
+Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in UC [@jostins2012; @momozawa2018].
 The mechanism of how this gene protects from UC has not been confirmed yet [@horowitz2021].
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
@@ -87,7 +89,9 @@ IBD has been characterized by a breakdown in the balance between beneficial and 
 Indeed, many studies show that patients with IBD have less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
 $\alpha$-diversity is a measure of the species present on a single sample and its abundance while $\beta$-diversity compares the diversity between samples.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004]. At the same time there is often a reduction of protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium* which might be able to protect individuals from mucosal inflammation via several mechanism such as a downregulation of proinflammatory cytokines or the stimulation of IL-10 and antiinflammatory cytokines [@ott2004]. Specially *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004].
+At the same time there is often a reduction of protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium* which might be able to protect individuals from mucosal inflammation via several mechanism such as a downregulation of proinflammatory cytokines or the stimulation of IL-10 and antiinflammatory cytokines [@ott2004].
+Specially *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
 
 <!--# Aida 2.3 p24-->
 
@@ -202,7 +206,8 @@ All these can lead to delays on correct diagnosis of the disease.
 
 <!--# Tesis Ana p21-->
 
-The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with CD [@khanna2017]. The detection of fecal calprotectin, is generally a good marker of endoscopic activity with sensitivity above 70% and specificity above 80% [@guardiola2018; @sands2015].
+The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with CD [@khanna2017].
+The detection of fecal calprotectin, is generally a good marker of endoscopic activity with sensitivity above 70% and specificity above 80% [@guardiola2018; @sands2015].
 
 <!--# End-->
 
@@ -297,7 +302,8 @@ On CD the effects are not so stark and generally it does not produce changes on 
 Antibiotics, such as metronidazol and ciprofloxacina, are effective to deal with secondary effects of IBD such as abscess and bacterian overgrowth in CD [@feller2010; @prantera2009], but they do not seem effective on UC [@prantera2009].
 
 Corticosteroids can be taken orally, such as prednisolona, prednisona and Budesonide; intravenous, hidrocortisona, metilprednisolona; or via enemas and suppositories.
-Budesonide is not absorved well and has a limited biodistribution but it has good therapeutic benefits with a reduced systemic toxicity in IBD [@rezaie2015; @peyrin-biroulet2010]. These drugs work very well as antiinflammatory for mild or severe IBD but do not work well as maintenance drug [@lichtenstein2009; @ouellette2001].
+Budesonide is not absorved well and has a limited biodistribution but it has good therapeutic benefits with a reduced systemic toxicity in IBD [@rezaie2015; @peyrin-biroulet2010].
+These drugs work very well as antiinflammatory for mild or severe IBD but do not work well as maintenance drug [@lichtenstein2009; @ouellette2001].
 
 Thiopurines (Azathioprine, mercaptopurina) are immunosuppressants drugs that deactivate key process of limphocytes T that might trigger the inflammation.
 As a side effect they are toxic due to their interaction with nucleic acids [@warner2018].
@@ -369,7 +375,7 @@ According to the data used, we can classify the studies:
 Most of the integrations refer some other source of data to the transcriptomics of the patient.
 The transcriptome of patients derived samples has been extensively studied since the existence of microarrays.
 There are known marker gens of inflammation and many research focus on identifying prognosis predictors and treatment response prediction based on gene expression [@planell2013; @leal2015].
-Recently single-cell technology has enabled to estimate cell populations of the samples with better degree of success than bulk RNA-sequencing.
+Recently single-cell RNA-seq technology has enabled to estimate cell populations of the samples with better degree of success than bulk RNA-sequencing.
 Single cell technologies are starting to be used for integration.
 
 #### Microbiome
@@ -382,11 +388,11 @@ Conclusions of these integrations range from finding differences on the correlat
 #### Genetics
 
 Genetics is the next most common data source used to integrate data on IBD.
-Most studies on genetics and IBD are genome-wide association studies [@kumar2019; @knights2013; @huWholeExomeSequencing2021].
-No clear mechanism has been proved despite clear and significant findings, probably because IBD relapses and remits with time.
+Most studies on genetics and IBD are genome-wide association studies.
+The genetic component is specially important on IBD that starts on children [@kumar2019; @knights2013; @huWholeExomeSequencing2021].
 
 When using genetic data to integrate it with transcriptomics it is usually to understand how a genetic variant is affecting a gene expression.
-This has lead to expression quantitative trait loci (eQTL) [ref:needed].
+This has lead to the identification of expression quantitative trait loci (eQTL) [@repnik2016; @hu2021; @jung2020; @dai2019].
 
 #### Metabolome
 
@@ -396,103 +402,103 @@ Some studies have integrated the metabolome with the RNAseq and state of the epi
 
 ## Integration
 
-The term "data integration" is widely used with varying meanings. 
+The term "data integration" is widely used with varying meanings.
 According to the dictionary integration is defined as:
 
 > "the process of combining two or more things into one" --- [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/integration)
 
-Other words used are integration, and if specific to data from sequencing technologies multi-omics or pluri-omics.
+Other words used are integration, and if specific to data from sequencing technologies, multi-omics or pluri-omics.
 Here integration will be used as it is the more general one and not restricted to omics or sequencing technologies.
 
 Since the beginning of the integration methods there have been many methods proposed [@krassowski2020].
 Some of the early methods were initially used for surveying the agreement of different evaluating systems [ref:needed], others were developed for agricultural sciences [@hotelling_relations_1936] or food industry [@biancolillo].
 Some of these methods are specific for one application or data type while others are more generally applicable.
 Lately, the access to bigger datasets with more variables and often from the same samples has increased the focus of the research community on the methodologies available on several disciplines but mainly on biological sciences.
-The explosion of data on the biological science has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time.
-If done with multiple sequencing tecnologies it is usually referred as multi-omics methods, which usually only integrate omic data.
+The explosion of data on biological sciences has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time.
+If done with multiple sequencing technologies it is usually referred as multi-omics methods, which usually only uses omic data.
 
-It has been observed the importance of classification, review and comparison of the tools available, as well as, benchmarking these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019]. Part of these efforts uses the methods' strategies to classify them [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
-Following this view I'll review the integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
+It is crucial to classify, review and compare tools available, as well as, to benchmark these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019].
+Part of these efforts use the methods' strategies to classify them [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
+Following this view I will review the available integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
 
-### Classification of integration method's
+### Classification of integration method
 
 Integration methods have very different properties that allow them to be classified and compared.
-I classified them in the bioscience field, which means that they are meant to be used with omics datasets, with references to concrete methodology and in occasionaly to articles using them.
+Here I classify those meant to be used with omics datasets, with references to concrete methodology and in occasionaly to articles using them.
 
 #### Data type: numeric or categorical
 
 The most important distinction in integration methods is what kind of data are combined.
 In general data can be divided between categorical and numeric variables, which are usually found in several fields.
-Sometimes scientist want to understand the relationship between a phenotype they observe and the underlying mechanism.
-Usually this involves looking how the metabolites, the gene expression, the methylation, the number of variants a gene has, and other numeric variables are related to the observed phenotype (like pain).
+Sometimes clinicians want to understand the relationship between a phenotype they observe and the underlying mechanism.
+Usually this involves looking how metabolites, gene expression, methylation, number of variants a gene has, and other numeric variables are related to the observed phenotype (i.e. pain).
 
-Depending on what does a method aim for it handles both data types or just one, but often they are used differently.
-The most common way to handle different type of data is converting the categorical values to a mock or dummy variable.
+Depending on the method's aim it handles numeric and categorical data types or just one.
+Often they are used differently.
+The most common way to handle different types of data is converting the categorical values to a mock or dummy variable.
 For each categorical factor there is a new variable whose value is 1 if that sample had this factor and 0 otherwise.
 For instance, if the categorical variable has three values (A, B, C) it would be converted to A (1, 0, 0) B (0, 1, 0) and C (0, 0, 1).
 Often the number of variables created is one less than the number of factors that existed, on this example only A and B would be kept.
-This transformation allows to use the categorical values in methods though for numeric variables.
+This transformation allows to use categorical values as numeric variables.
 
 If the method only accepts categorical data but you want to provide numeric values usually those values are categorized.
-For example if a variable is (0.123, 0.25, 0.56, 0.78) one could make to categorical values like ("\<0.5", "\<0.5", ">0.5", ">0.5").
-The number of categories to use and how is the numeric value split depends on case by case.
+For example if a variable is (0.123, 0.25, 0.56, 0.78) one could make to categorical values like ("\<0.5", "\<0.5", "\>0.5", "\>0.5").
+The number of categories to use and how the numeric value splits depends on each case.
 
-Very rarely methods allow to use both of them as they are.
-If they allow so, it is usually for classification purposes.
+Very rarely methods allow to use both data types as they are.
+If they allow so, it is usually for classification purposes only.
 
 <!-- # Add a figure with examples of kind of data and a reference -->
 
 #### Objective
 
-The objective of the method is one of its most important defining properties.
-Data integration can be classified according to their objective and the (biological) question they try to answer.
-In general all of them aim to provide a better understanding of the relationships between the 'omics types. 
+The objective of any method is one of its most important defining properties.
+Data integration can be classified according to the (biological) question they try to answer.
+In general all of them aim to provide a better understanding of the relationships between the 'omics types.
 Often a single method is not enough and several methods are used on the same dataset.
 This is specially relevant when a potentially relationship between omics is discovered.
-For instance, checking that in a particular case or condition is present on a given relationship, which might require experimental confirmation.
-    
+For instance, checking that in a particular case or condition a given relationship is present, might require experimental confirmation.
+
 Most of the times one (or several) of the following results are expected from integration methods:
 
 -   Classification of the patients or samples
 
-    As seen one of the purposes of the integration might be to use multiple sources of data to accurately describe how do samples or patients fit on a predefined possibles states.
-    This might be to accurately describe whether a patient has one or other related disease of a possible subset of diseases given their condition [@rohart2016].
+One of the purposes of integration might be to use multiple sources of data to accurately describe how do samples or patients fit on a predefined possibles states.
+The objective here might be to accurately describe whether a patient has one or other related disease of a possible subset of diseases or phenotype [@rohart2016].
 
 -   An overview of the role of each individual block in a biological system
 
-    Sometimes the question is which omic method is the best describing the disease.
-    This could prevent peforming expensive tests that can be estimated by other cheaper or easier technique that has enough predictive power or is enough sensitive and specific for the task.
-    An example of this is the search of markers on blood to identify links between different cell populations [@tang2017a; @ibrahim2017].
+Sometimes the question is which omic method is the best describing a disease.
+This knowledge could prevent performing expensive tests and replace them by more affordable or easier technique that has enough predictive power or is sensitive enough and specific for the task.
+An example of this is the search of markers on blood to identify links between different cell populations [@tang2017a; @ibrahim2017].
 
 -   Finding a molecular signature.
 
-    A signature is usually a group of features that describe/are representative of a cell line, a process or a stage.
-    Identifying a subset of the variables from the omics that are related is often a desired goal because it reduces the amount of variables allowing to perform experiments on the bench on just those that might be important.
-    In other fields, such as machine learning, selecting the important variables is known as [feature selection](https://en.wikipedia.org/wiki/Feature_selection "Wikipedia page of feature selection").
-    There are several methods that are used to do this [@cavill2016a].
-    An example of this is when performing eQTL, where a locus is related to the expression change of genes, so finding the right positions that induce a specific expression level is a very common task [@repnik2016; @hu2021; @jung2020; @dai2019].
+A signature is usually a group of features that describe/are representative of a cell type, a process or a stage.
+Identifying a subset of variables from the omics that are related is often a desired goal because it reduces the amount of variables allowing to perform experiments on the bench on just those that might be important.
+In other fields, such as machine learning, selecting the important variables is known as [feature selection](https://en.wikipedia.org/wiki/Feature_selection "Wikipedia page of feature selection").
+There are several methods that are used to do this [@cavill2016a].
+An example of this is when performing eQTL analysis, where a locus is related to a change in gene expression [@repnik2016; @hu2021; @jung2020; @dai2019].
 
 -   A predictive model
 
-    Predictive models usually require a very good understanding of the current and/or past relationships, as well as, a good feature selection procedure.
-    If a good model on previous data exists it might be used to predict future events.
-    Sometimes, models are only build to predict events without being able to accurately describe the mechanism, why they work.
-    This kind of methods are used improve treatments, diagnosis and prognosis prediction [@wheeler2014].
+Predictive models usually require a very good understanding of the current and/or past relationships, as well as, a good feature selection procedure.
+If a good model on previous data exists it might be used to predict future events.
+Sometimes, models are only built to predict events without being able to accurately understand the underlying mechanism.
+This kind of methods are used to improve treatment selection, diagnosis and prediction of prognosis [@wheeler2014].
 
 -   Impute values
 
-    Some methods aim to accurately guess which values have one block given some other information.
-    Missing values can happen for a variety of reasons from practical ones, like a sample not being available, to technical ones, such as laboratory method failing [@yin2019a].
-    However, this is often a intermediate step to other goals.
+Some methods aim to accurately guess the values of missing data given some other information.
+Missing values can happen for a variety of reasons from practical ones, like a sample not being available, to technical ones, such as laboratory mistake [@yin2019a].
+However, this is often a intermediate step to other goals.
 
 To complete these goals it is important to have enough statistical power to determine the significance of tests performed (if any) and to understand how complete are the data sources used on the integration [@tarazona2021].
 Having more statistical power helps identifying the relationships one seeks when using this methods.
 
-Formally the objective of methods might be defined as a function to be optimized or a procedure to be followed until certain conditions are meet between the variables received as input.
-
 #### Relationship between variables and samples
 
-Depending on the amount of variables and in which samples have been measured studies can be classiffied in two types of integration.
+Depending on the amount of variables and samples used in studies can be classiffied in two types.
 Traditionally for each sample few variables are measured, for instance on a biopsy with RT-PCR only a few genes are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample.
 This has lead to the following situation:
 
@@ -502,158 +508,156 @@ For a single sample of RNA around 50k genome identifiers (genes, long non coding
 Which leads to the case where there are many more variables than samples.
 Thus high-throughput data analysis typically falls into the category of $p \gg n$ problems ( big p, little n), where the number of genes or proteins, $p$, is considerably larger than the number of samples, $n$.
 With such high number of variables the identification of the relevant variables is hard because variables will co-variate.
-When many variables are tightly correlated, discovering which one is important using just numerical methods is very difficult.
-It is even more difficult when looking for causal relationships.
+When many variables are tightly correlated, discovering which one is important using just numerical methods is challenging.
+This is even more difficult when looking for causal relationships.
 
 -   More samples than variables
 
-This was the usual case when for instance, when from a cohort of patients the temperature is measured along the stage of a disease: two variables for each sample.
+This was the usual case when for instance, from a cohort of patients the temperature is measured along the stage of a disease: two variables, time and temperature for each sample.
 If there are more than 2 patients, then the number of samples is greater than the number of variables studied.
 This is described in the literature as $n \gg p$ (or big n, little p).
-Nowadays this is less frequent on the bioscience world, and does not causes trouble analyzing it because the high number of samples allow to accurately estimate variables' dispersion.
+Nowadays this is less frequent on the bioscience world, and does not causes trouble analyzing it because the high number of samples allows to accurately estimate the dispersion of variables.
 
-To estimate the number of samples required there are several methods available [@tarazona2020].
-Having just the enough amount of samples for the desired statistical power is not enough if the samples of different blocks do not match between them.
+There are several methods available to estimate the number of samples required [@tarazona2020].
+Having just the enough samples for the desired statistical power, however, it is not recommended in case some samples cannot be correctly processed.
 
 #### Relationship between samples
 
 Depending on the relationship between the samples of the different blocks of data, the questions answerable and the methods that work on them differ.
 
-A sample can have multiple or one data source.
+A sample can have multiple or one data source, for instance we could have RNA-seq and 16S data from the same sample.
 In a study if all the samples have all the data from multiple data sources it is a complete case.
 If some samples have data from some data sources but not from others the study is not a with a complete case.
 
 Sometimes because the sample is not enough, or there are some technical or organizational problems a source of data for a sample (which is known as an incomplete case) might be lost.
 This results in a new source of variation that has to be dealt with, which complicates the conclusion one can draw from the studies of these kind of data.
 
-Even when all the cases of a patient are complete the samples can come from several sites of the same individual or with different combinations of variables, which makes is relevant to understand the relationships between the different samples.
+Even when all the cases of a patient are complete the samples can come from several sites of the same individual or with different combinations of variables, which makes it relevant to understand the relationships between the different samples.
 
 There is no easy classification of this as each experiment might be designed differently.
 In general, experiments are designed to be as consistent as possible but in face of adverse events that become a variation of the design the analysis complicates.
-Either some data is imputed or some samples are omitted for the analysis, or if the differences are minor these samples are used as being from a different group.
-This can happen with samples taken at different timepoints as patients might not come to the visit with the doctor on time.
+Either some data is imputed or some samples are omitted for the analysis.
+This can happen with samples taken at different timepoints as patients for instance if they miss a follow up visit.
 
 ##### Time {.unnumbered}
 
-As mentioned above, time is one of the factors that sometimes cannot be controlled, despite having programmed visits every two weeks some patients might come early or later due to multiple reasons (holidays, other conflicting duties, ...).
+As mentioned above, time is one of the factors that sometimes cannot be controlled, despite having programmed visits every two weeks, for instance, some patients might come early or later due to multiple reasons.
 
-Sometimes, precisely the objective of the study is to analyze the relationships at different time, or see how the relationships change with time.
-To discover causality between two variables the cause must be before the consequence, which highlights the importance of time.
+Sometimes, the objective of the study is precisely to analyze the relationships at different time, or to asses how the relationships change with time.
+To discover causality between two variables the cause must precede the consequence, which highlights the importance of time.
 Being aware of the time differences and time scales is crucial in most cases.
 
-On cell lines or other lab experiments conditions can be repeated even if they are at different time points.
-However, with patients there are not biological replicates like with cell-lines.
+During in vitro experiments, conditions can be reproduced even if they are at different time.
+However, when using patients [] replicates can not usually be performed like on vitro experiments.
 This makes it harder to study time-related change on patients.
 
 Lastly, time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNA-seq [@massoni-badosa2020; @zhu2017].
-Some features and genes are more affected by time than others but as they are measured at the same time it might distort the data.
-Processing time is also very hard to keep track on practical settings and requires a highly coordinated effort [@ferreira2018].
+Some genes are more influenced by time than others but as they are measured at the same time in all samples this might distort the data.
+Keeping track of the time that it takes to process samples is also hard to due and requires a highly coordinated effort [@ferreira2018].
 
 #### Relationship between variables
 
-Once the data is collected, the next step is understand the relationship between the variables present.
-As seen, some variables influence other variables which affects the outcome in a complex ways.
+Once data is collected, the next step is to understand the relationship between the variables present.
+As mentioned earlier, some variables influence others which can affect the outcome in complex ways.
 With many variables present in a dataset it is important to be aware of known relationships between variables.
-Even in a simple dataset, like a RNA-seq dataset, it is important to be aware of the relationships between variables.
+Even in a simple dataset, like an RNA-seq dataset, it is important to be aware of the relationships between variables.
 
 Since the discovery of the lactose [operon](https://en.wikipedia.org/wiki/Operon) it is known how some genes regulate each other [@jacob1961].
-It is not know how other variables are related between them.
+However, it is not know how other variables are related between them.
 For instance, how does the increase in expression of a gene affects the growth of a microorganism?
 Usually the relationships between variables are mediated by many factors or interactions.
 
-One of the best example of such interactions is when some variables correlate.
-Their correlation can be used to reduce the number of variables being analyzed by ignoring the relationships between them and using the most representative variable (less correlated and with more variation).
-This step is usually done by the dimension reduction methods... However, sometimes this is not desired or feasible as the correlation does not explain the direction of the causality of the interaction between the variables (if there is any).
+One of the best examples of such interactions is when some variables correlate.
+Their correlation can be used to reduce the number of variables being analyzed by ignoring the relationships between them and using the most representative variable (less widely correlated and with more variation).
+This step is usually done by dimension reduction methods.
+However, sometimes this is not desirable or feasible as the correlation does not explain the direction of the causality of the interaction between the variables (if there is any).
 
-Network approaches relate the variables between them (such as [@koh_iomicspass_2019]).
+Network approaches relate the variables to each other [@koh_iomicspass_2019].
 These approaches are fairly new and growing in popularity partly because they can address the direction of the interaction.
 
 In partial correlations some or all of the other variables are considered on how much do they affect the others and this effect is reduced [@yule1907].
-This assumes a linear relationship and is computationally expensive when there are thousands of variables.
+This assumes a linear relationship and it is computationally expensive when there are thousands of variables.
 
 #### Input data
 
-We have classified the studies according to the data they use (as \@ref(data-origin) ).
-But, some methods to account for relationships of variables only work when data is from the same patients on each data set used to integrate while other do not:
+We have classified the studies according to the data they use (as seen in \@ref(data-origin) ).
+But, some methods to account for relationships of variables only work when a dataset is complete while other do not:
 
 -   Data from the same samples:
 
 These methods do not handle well or at all missing data.
 They need complete cases/data of the samples in order to be able to integrate the results.
-These methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], Multiple co-inertia analysis (MCIA) [@culhane_cross-platform_2003], Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019], Multi-Omics Factor Analysis (MOFA) [@argelaguet_multi-omics_2018], STATegRa [@gomez-cabreroSTATegraComprehensiveMultiomics2019].
+These methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], Multiple co-inertia analysis (MCIA) [@culhane_cross-platform_2003], Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019], Multi-Omics Factor Analysis (MOFA) [@argelaguet_multi-omics_2018] and STATegRa [@gomez-cabreroSTATegraComprehensiveMultiomics2019].
 
 -   Data from different samples:
 
 These methods do not need data from the same sample.
 They draw their conclusions generalizing from the data available.
 Some of them handle missing data, while others do use the data at face value.
-These method includes MetaPhlAn2 [@franzosaSpecieslevelFunctionalProfiling2018], HUMAnN,[@truongMetaPhlAn2EnhancedMetagenomic2015], LEfSe [@segataMetagenomicBiomarkerDiscovery2011].
+These method includes MetaPhlAn2 [@franzosaSpecieslevelFunctionalProfiling2018], HUMAnN,[@truongMetaPhlAn2EnhancedMetagenomic2015] and LEfSe [@segataMetagenomicBiomarkerDiscovery2011].
 
 Furthermore, some methods are designed to integrate specific types of datasets, (usually because they make some assumptions that are only met on that kind of data).
-For instance, HCG, 16S, RNA-seq and metabolomics do not share the same data distribution, and are different between them.
-Also even with the same data depending on the processing of the data they can have very different properties: OTUs (operational taxonomic unit) properties are not the same as ASV (amplicon sequence variants).
+For instance, HCG, 16S rRNA-seq, RNA-seq and metabolomics do not share the same data distribution, and are different between them.
+Also even with the same data depending on the processing of the data they can have very different properties: OTUs (operational taxonomic unit) properties are not the same as ASV (amplicon sequence variants) when analyzing 16S rRNAseq data.
 
 #### Mathematical framework
 
-Depending on the input and the objective methods use different mathematical framework to process the data.
+Depending on the input and the objective, methods use different mathematical frameworks to process the data.
 Some of them have previously appeared:
 
 -   Networks
 
-    Networks methods were mentioned because they use and find information about interaction of variables.
-    Multilayer networks, including the multiplex, Molti-C-DREAM[@didier2018], RWR-MH, RWR-M [@valdeolivas2019].
+    Networks methods were mentioned because they use and find information about the interaction of variables.
+    Multilayer networks, including the multiplex, Molti-C-DREAM [@didier2018], Random Walk with Restart on Multiplex and Heterogeneous Biological Networks RWR-MH, Random walk with Restart on Multiplex RWR-M [@valdeolivas2019].
     Network embedding MultiVERSE are some of the methods using networks [@pio-lopez2021].
 
     Bayesian approaches are also quite frequent, these methods use the Bayes' theorem to see the relationships between variables.
     The Bayes' theorem explains that the conditional probability of a variable is related to the prior knowledge of conditions that might be related to the event [@bayes1763].
-    Some methods that use these approaches are [RIMBANET](http://research.mssm.edu/integrative-network-biology/RIMBANET/RIMBANET_overview.html) [@zhu2012], [BCC](https://github.com/ttriche/bayesCC) [@lock2013] and others like [@virtanen2012].
+    Some methods that use these approaches are Reconstructing Integrative Molecular Bayesian Network ([RIMBANET](https://labs.icahn.mssm.edu/zhulab/?s=rimbanet)) [@zhu2012], Bayesian Consensus Clustering ([BCC](https://github.com/ttriche/bayesCC)) [@lock2013] and others like [@virtanen2012].
 
 -   Dimensional Reduction
 
-    These methods focus on finding just a few variables and summarizing them using some function that has some properties.
-    The selection of variables is usually done with L1 or Lasso Regression regularization technique or L2 also known as Ridge Regression.
+    These methods focus on finding just a few variables and summarizing them using a function that has some desired property such as the correlation between thre transformed variables is maximal while the components are orthogonal.s The selection of variables is usually done with L1 or Lasso Regression regularization technique or L2 also known as Ridge Regression.
     L1-regularization adds a penalty equal to the absolute value of the magnitude of coefficients which might leads to some coefficients becoming zero and the variable eliminated from the model.
     On the other hand, L2-regularization does not result in elimination of coefficients or sparse models and can only be used when there is multicollinearity as it works well to avoid over-fitting.
 
-    Several tools use this approach: Momix [@cantini_benchmarking_2020], RGCCA [@tenenhaus2017], mixOmics [@rohart2017], STATegRa [@gomez-cabrero2019], ...
+    Several tools use this approach, Momix [@cantini_benchmarking_2020], regularized canonical correlation analysis (RGCCA) [@tenenhaus2017], mixOmics [@rohart2017] and STATegRa [@gomez-cabrero2019].
 
 -   Active module identification
 
     Multiomic objective genetic algorithm (scores based in two metrics; node score and density of interactions score).
-    An example of a method using this approach is MOGAMUN [@novoa-del-toro2020]
+    An example of a method using this approach is Multi-Objective Genetic Algorithm to Find Active Modules in Multiplex Biological Networks (MOGAMUN) [@novoa-del-toro2020]
 
-Usually depending on the mathematical framework used they return these methods return similar output.
+Usually depending on the mathematical framework used, these methods return similar outputs.
 
 #### Output results
 
 According to the output the integration methods can be classified in several groups:
 
-For the network methods the following output is usually returned: Connections between the variables/nodes, a measure of how strong is the connection (or simply if there is a connection or if there is not one).
+For the network methods the following output is usually returned: Connections between the variables/nodes, a measure of how strong is the connection (or simply if there is a connection or not).
 
-For those from dimensional reduction methods there are three: Shared factor across the data, specific factors for each data or mixed factors.
+For dimensional reduction methods there are three possible outputs: Shared factor across the data, specific factors for each data or mixed factors.
 
 -   Shared factors:
 
-The integration results in a vector of the samples in a lower dimensional space that is shared by all the data used to integrate.
+Integration results in a vector of the samples in a lower dimensional space that is shared by all the data set used to integrate.
 Such methods include iCluster, Multi-Omics Factor Analysis (MOFA) [@argelaguet_multi-omics_2018].
 
 -   Specific factors:
 
-The integration results in several vectors of the samples in a lower dimensional space of each data used to integrate.
-Such methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], Multiple co-inertia analysis (MCIA) [@culhane_cross-platform_2003], Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019].
+Integration results in several vectors of the samples in a lower dimensional space of each data set used to integrate.
+Such methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], Multiple co-inertia analysis (MCIA) [@culhane_cross-platform_2003] and Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019].
 
 -   Mixed factors:
 
-The integration results in both previous factors, specific of each data and common to all the data.
-Such methods include Joint and Individual Variation Explained (JIVE), integrative Non-negative Matrix Factorization ([iNMF](https://github.com/yangzi4/iNMF)) [@yang2016].
-
-These methods are used to understand and discuss the results with previous knowledge or independent sources of data.
+Integration results in both shared and specific factors, to each dataset and common to all them.
+Such methods include Joint and Individual Variation Explained (JIVE) and integrative Non-negative Matrix Factorization ([iNMF](https://github.com/yangzi4/iNMF)) [@yang2016].
 
 ### Interpretation
 
-How to interpret the results of the methods is highly linked to understanding the method and its output.
+How to interpret the results of applying the different methods is highly linked to understanding the method and its output.
 On a correlation between two variables, the interpretation of the analysis is clear, if one variable increase, the other one too.
-The implications of these observation can be far reaching but the principles to understand them are simple.
+The implications of this correlation can be far reaching but the principles to understand them are simple.
 
 However, on more complex methods the interpretation becomes less clear.
 The interpretation of a canonical correlation analysis is much harder [@sherry2005].
@@ -663,32 +667,34 @@ The interpretation also helps to discuss the results and relate it to other prev
 
 -   Individually:
 
-How each variable relates to another, like in the correlation analysis, the relationship between two variables under study.
-Or by patient: how do interpret that in these patient variable A and B is X and Y?
+Here we study how each variable relates to another.
+In the correlation analysis, the relationship between two variables under study.
+Or if looking by patient: how do interpret that in these patient variable A and B is X and Y?
 
 -   Globally:
 
-In a principal component analysis for instance how is interpreted that some variables have the same loading?
-What happens in a more difficult method like canonical correlation analysis?
+In a principal component analysis for instance how do we interpret that some variables have the same loading?
+What happens in a more complex method like canonical correlation analysis?
 
-There have been some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981]. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
+There are some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981].
+Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
 Which is used to compare the results of the integration with the dataset of interest and to compare different tools.
 These datasets are created with some relationships that the tools are expected to find.
 
-There exists several methods to create synthetic datasets like MOSim [@haberman2019], metaSPARSim [@patuzzi2019], CAMISIM [@fritz2019], ballgown [@fu2021], polyester [@frazee2021] and even edgeR [@mccarthy2012] can be used.
-These methods are useful to compare different setup and methods but they can miss some subtle not previously reported relations on real data.
+There exists several methods to create synthetic datasets like MOSim [@haberman2019], metaSPARSim [@patuzzi2019], CAMISIM [@fritz2019], ballgown [@fu2021], polyester [@frazee2021] and even edgeR [@mccarthy2012].
+These methods are useful to compare different setup but they can miss some subtle not previously reported relations on real data.
 
 ### Reviews
 
-The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool for a research [@cantini_benchmarking_2020].
+The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool to apply a given dataset and research question [@cantini_benchmarking_2020].
 
-Some of these reviews are focused on a specific type of data integration: metabolomics [@cavill2016], genomics [@mcgovern2015a], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies [@de_souza_ibd_2017; @tarazona2021a; @valles-colomer2016].
+Some of these reviews focus on a specific type of data integration: metabolomics [@cavill2016], genomics [@mcgovern2015a], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies [@de_souza_ibd_2017; @tarazona2021a; @valles-colomer2016].
 On this regard there are several efforts to integrate data on IBD but no comprehensive review to date is known to the author.
+The most comprehensive article to date is a very recent review identifying problems and providing recommendations for future work [@sudhakar2022].
 
 ### Summary {#methods-integration}
 
-The field of integration is large and complex, with high interest over the last few years, specially in the psychology and omics field.
-As a methodology they are quite complex and diverse but there is a growing interest on them to help answer complex questions without using other complex tools like deep neuronal networks or other machine learning approches (despite not being incompatible).
+The field of integration is large and complex, with increasing interest over the last few years, specially in the psychology and omics fields As a methodology they are quite complex and diverse but there is a growing interest on them to help answer complex questions without using other complex tools like deep neuronal networks or other machine learning approches (despite not being incompatible).
 
 Methods to integrate have many characteristics, depending on the objectives and data that available.
-Regardless of the method used, interpretation and reporting is usually a main problem when using any of these methods as there are less people familiar with it.
+Regardless of the method used, interpretation and reporting is usually the main challenge.
