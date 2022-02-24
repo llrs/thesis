@@ -78,7 +78,7 @@ The dataset included information about location, gender, location, age, and the 
 
 ### Morgan's dataset {#methods-morgan}
 
-A previously published dataset from a pouchitis study was analyzed [@morgan2015b].
+A previously published dataset from a pouchitis study was analyzed [@morgan2015].
 On this study patients having undergone proctocolectomy with ileal pouch-anal anastomosis for treatment of UC or familial adenomatous polyposis at least 1 year prior to enrollment were recruited at Mount Sinai Hospital (Toronto, Canada) excluding individuals with a diagnosis of CD.
 The dataset has a total of 255 samples from 203 patients, containing data for both host transcriptome and intestinal microbiome.
 On some cases several biopsyes were collected from the same patients.
@@ -140,7 +140,7 @@ Data has the following characteristics: disease, age at diagnostic, age at the m
 
 ### Hernández' dataset {#methods-hernandez}
 
-This dataset was obtained after a collaboration "Integrative analysis of colonic biopsies from IBD patients identifies an interaction between microbial bile-acid inducible gene abundance and human Angiopoietin-like 4 gene expression" [@hernández-rocha2021a].
+This dataset was obtained after a collaboration "Integrative analysis of colonic biopsies from IBD patients identifies an interaction between microbial bile-acid inducible gene abundance and human Angiopoietin-like 4 gene expression" [@hernández-rocha2021].
 
 Patients with UC, CD were recruited when attending regularly scheduled visits or surveillance.
 In addition, asymptomatic healthy controls (HC) were recruited during routine, age-related colorectal cancer screening by colonoscopy.
@@ -238,7 +238,7 @@ Microbial cells were disrupted by mechanical lysis using FastPrep-24.
 Heat treatment and centrifugation were conducted after adding a cooling adaptor.
 Supernatants were treated with RNase to eliminate RNA.
 Total DNA was purified using gDNA columns as described in detail previously [@berry2011].
-Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol [@klindworth2013] using forward and reverse primers 341F-ovh/785R-ovh [@edgar2013a].
+Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol [@klindworth2013] using forward and reverse primers 341F-ovh/785R-ovh [@edgar2013].
 Purification of amplicons was performed by using the AMPure XP system (Beckmann).
 Next, sequencing was performed with pooled samples in paired-end modus (PE275) using an MiSeq system (Illumina, Inc.) according to the manufacturer's instructions and 25% (v/v) PhiX standard library.
 
@@ -255,7 +255,7 @@ The result of MiSeq Nano were processed with bcl2fastq (v1.8.4).
 
 #### Microbial profiling
 
-For the HSCT dataset the processing of raw-reads was performed by using the [IMNGS](https://www.imngs.org/ "IMNGS website") (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the [UPARSE](https://www.drive5.com/uparse/ "UPARSE website") approach [@edgar2013a].
+For the HSCT dataset the processing of raw-reads was performed by using the [IMNGS](https://www.imngs.org/ "IMNGS website") (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the [UPARSE](https://www.drive5.com/uparse/ "UPARSE website") approach [@edgar2013].
 Sequences were demultiplexed, trimmed to the first base with a quality score \<3 and then paired.
 Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error \>3 were excluded from the analysis.
 The 5 nucleotides from each end of the remaining reads were trimmed to avoid GC bias and non-random base composition.
@@ -326,7 +326,7 @@ Were each model is build similarly by adding the subtraction of the projected va
 
 The main method used on this thesis has been regularized generalized canonical correlation analysis (RGCCA) a method derived from the canonical correlation.
 Canonical correlation is a method that uses data about the same unit but from different origins to find how much the different sources agree.
-Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017a] which was used on this thesis.
+Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017] which was used on this thesis.
 The method and implementation will be explained in detail on the next section.
 
 ![Workflow of the analysis process](images/workflow%20integration.png)

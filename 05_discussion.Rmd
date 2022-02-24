@@ -38,7 +38,7 @@ There are frequent new tools and methods released, and the most up to date list 
 With the increase of tools there have been more pressure on comparing different tools.
 There have been already some articles comparing the different tools, which the previous mentioned list also has.
 There are reviews of different tools on the same datasets [@cantini2020], some are more theoretical, others are focused on a different field.
-Recently there has been a recent article focused on integration on IBD [@sudhakar2022a].
+Recently there has been a recent article focused on integration on IBD [@sudhakar2022].
 
 WGCNA did not work well.
 As it is a tool designed to find common patterns based on correlations it requires homogeneous samples.
@@ -93,14 +93,14 @@ But the most important thing is to consider which variables are independent of w
 
 Quality of RNAseq analysis and 16S sequencing is important.
 Avoid contamination, same primers and read lengths (if using Illumina machines).
-Comparing 16S taxa ASV or OTUs is hard and selectying the right tool to compare them is important [@nearing2022].
+Comparing 16S taxa ASV or OTUs is hard and selecting the right tool to compare them is important [@nearing2022].
 
 Some batch effects are avoidable due to the experDesign package.
 This might help to improve the quality of the datasets and to expand previously sequenced datasets.
 
-$$@jiang2019$$ A paper about multi-omics and microbiome...
+[@jiang2019] A paper about multi-omics and microbiome...
 
-$$@krassowski2020a$$ advice and recommendations on software engineering and reproducibility practices to share a comprehensive awareness with new researchers in multi-omics for end-to-end workflow.
+[@krassowski2020] advice and recommendations on software engineering and reproducibility practices to share a comprehensive awareness with new researchers in multi-omics for end-to-end workflow.
 
 ## Relevance for other research
 

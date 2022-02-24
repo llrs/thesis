@@ -11,7 +11,7 @@ To diagnose IBD doctors use endoscopy and/or magnetic resonance imaging and hist
 
 Treatments provided for IBD include, noninflammatory drugs, suppressors and biologics, i.e, anti TNF- anti-IL2, 23, anti-integrin $\alpha4\beta7$.
 The therapeutic options can induce remission in some patients, but they often need continuous treatment to avoid recurrence.
-Nevertheless, many patients are refractory or intolerant to those therapies and need to undergo surgery or other strategies like dietetic and psychological support [@raine2021a] .
+Nevertheless, many patients are refractory or intolerant to those therapies and need to undergo surgery or other strategies like dietetic and psychological support [@raine2021] .
 
 ## Inflammatory bowel disease {#IBD}
 
@@ -45,11 +45,11 @@ But once a segment is affected by the disease it can be considered as involved, 
 ### Etiology and pathogenesis
 
 Several mechanisms have been proposed to drive IBD pathogenesis [@zhang2014; @hugot2004].
-Some of them are based on a relationship between the immune system and the microbiome [@silva2016a; @demattos2015].
+Some of them are based on a relationship between the immune system and the microbiome [@silva2016; @demattos2015].
 It is also unclear if CD and the UC share the same origin considering their different symptoms.
 
-There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015b; @satsangi2006c].
-Disease can be classified based on age at onset as very early, early or adult on-set disease [@satsangi2006c].
+There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015; @satsangi2006].
+Disease can be classified based on age at onset as very early, early or adult on-set disease [@satsangi2006].
 Genome-wide association studies (GWAS) have linked IBD to over 100 genetic loci, including a *NOD2* gene, but so far there is not any known mechanism how polymorfism on this genes are driving the disease [@horowitz2021].
 On early pedriatic and adult disease the genetic component is lower than on very early on set and it is thought that the environmental factors are the main cause of the disease at those ages.
 
@@ -95,7 +95,7 @@ Specially *Faecalibacterium prausnitzii* is one microorganism of interest [@kost
 
 <!--# Aida 2.3 p24-->
 
-In fact, it has been recently proposed that several unique microbial species can distinguish healthy controls from UC and CD patients [@sankarasubramanian2020a; @lopez-siles2014].
+In fact, it has been recently proposed that several unique microbial species can distinguish healthy controls from UC and CD patients [@sankarasubramanian2020; @lopez-siles2014].
 
 ![(#fig:composition) The microbial composition in a healthy and IBD gut.](images/tesis_AM_Figure2.png "Microbial composition and epithelial barrier status in healthy versus IBD gut.")
 
@@ -194,7 +194,7 @@ Other environmental factors have been linked to IBD but without enough evidence 
 ### CD physiology {#CD}
 
 As previously introduced, CD is a chronic inflammatory disorder characterized by a discontinuous inflammation of the gastrointestinal tract.
-Inflammation on the gastrointestinal tract is transmural and can affect from the mouth to the anus, but mainly it manifests on the ileum and colon [@demattos2015a].
+Inflammation on the gastrointestinal tract is transmural and can affect from the mouth to the anus, but mainly it manifests on the ileum and colon [@demattos2015].
 It is frequently associated with extraintestinal manifestation and/or concomitant immune-mediated diseases.
 
 <!--# Clinical presentation -->
@@ -232,7 +232,7 @@ Other scores consider area affected:
 <!--# Add Figure 2 from ACM thesis?-->
 
 To some extent, there is a disassociation between clinical symptoms and the endoscopy finding.
-Often patients report feeling better despite lack of muscular healing [@bhattacharya2016a].
+Often patients report feeling better despite lack of muscular healing [@bhattacharya2016].
 To overcome this disassociation and be able to compare the well-being of patients several scores and thresholds are used on research and by physicians that will be described later.
 
 <!--# Disease course -->
@@ -245,7 +245,7 @@ Frequently the damage caused by the disease evolves to fibrostenotic stricture o
 Damage of the disease might not be apparent to patients and might be only seen several years later than the first detection [@bhattacharya2016].
 Mucosal healing is a first step towards the healing of deeper layers of the inflamed bowel wall on the CD.
 
-Patients might progress from an inflammatory phenotype to a stricturing or penetrating one [@satsangi2006a].
+Patients might progress from an inflammatory phenotype to a stricturing or penetrating one [@satsangi2006].
 Stricturing is a narrowing of a part of the intestine often because of scar tissue and fibrosis in its wall.
 Penetrating is when the epithelium has some holes or tubes.
 If these tubes result in an abnormal connection between two body parts it is a fistula, it might also result in an abcess, a collections of pus, often developed in the abdomen, pelvis, or around the anal area.
@@ -260,7 +260,7 @@ If the segments from rectum to the sigmoid colon are affected is a distal coliti
 If the inflammation continues to the descending colon it is then an extensive colitis until it affects the whole colon when it becomes a pancolitis.
 The extension of UC is inversely related to the frequency.
 However, the extension and severity of the disease correlates: the prognosis is worse the more extended it is [@etchevers2009].
-In addition, the damage usually consists in many neutrophil in the lumen crypt [@bassolasmolina2018a].
+In addition, the damage usually consists in many neutrophil in the lumen crypt [@bassolasmolina2018].
 
 <!--# Clinical care -->
 
@@ -397,7 +397,7 @@ This has lead to the identification of expression quantitative trait loci (eQTL)
 #### Metabolome
 
 More recently there have been an increased interest on the study of the metabolic stat of IBD patients, given that microorganisms interact with the host also via their products and metabolites.
-There is evidence some of these metabolomic products come from the microbiome [@ferrer-picón2020b; @mayorgas2021].
+There is evidence some of these metabolomic products come from the microbiome [@ferrer-picón2020; @mayorgas2021].
 Some studies have integrated the metabolome with the RNAseq and state of the epithelium [@ahmed2016; @gallagher2021].
 
 ## Integration
@@ -470,14 +470,14 @@ The objective here might be to accurately describe whether a patient has one or 
 
 Sometimes the question is which omic method is the best describing a disease.
 This knowledge could prevent performing expensive tests and replace them by more affordable or easier technique that has enough predictive power or is sensitive enough and specific for the task.
-An example of this is the search of markers on blood to identify links between different cell populations [@tang2017a; @ibrahim2017].
+An example of this is the search of markers on blood to identify links between different cell populations [@tang2017; @ibrahim2017].
 
 -   Finding a molecular signature.
 
 A signature is usually a group of features that describe/are representative of a cell type, a process or a stage.
 Identifying a subset of variables from the omics that are related is often a desired goal because it reduces the amount of variables allowing to perform experiments on the bench on just those that might be important.
 In other fields, such as machine learning, selecting the important variables is known as [feature selection](https://en.wikipedia.org/wiki/Feature_selection "Wikipedia page of feature selection").
-There are several methods that are used to do this [@cavill2016a].
+There are several methods that are used to do this [@cavill2016].
 An example of this is when performing eQTL analysis, where a locus is related to a change in gene expression [@repnik2016; @hu2021; @jung2020; @dai2019].
 
 -   A predictive model
@@ -490,7 +490,7 @@ This kind of methods are used to improve treatment selection, diagnosis and pred
 -   Impute values
 
 Some methods aim to accurately guess the values of missing data given some other information.
-Missing values can happen for a variety of reasons from practical ones, like a sample not being available, to technical ones, such as laboratory mistake [@yin2019a].
+Missing values can happen for a variety of reasons from practical ones, like a sample not being available, to technical ones, such as laboratory mistake [@yin2019].
 However, this is often a intermediate step to other goals.
 
 To complete these goals it is important to have enough statistical power to determine the significance of tests performed (if any) and to understand how complete are the data sources used on the integration [@tarazona2021].
@@ -657,7 +657,7 @@ Such methods include Regularized Generalized Canonical Correlation Analysis (RGC
 -   Mixed factors:
 
 Integration results in both shared and specific factors, to each dataset and common to all them.
-Such methods include Joint and Individual Variation Explained (JIVE) [@lock2013b] and integrative Non-negative Matrix Factorization ([iNMF](https://github.com/yangzi4/iNMF)) [@yang2016].
+Such methods include Joint and Individual Variation Explained (JIVE) [@lock2013a] and integrative Non-negative Matrix Factorization ([iNMF](https://github.com/yangzi4/iNMF)) [@yang2016].
 
 ### Interpretation
 
@@ -694,7 +694,7 @@ These methods are useful to compare different setup but they can miss some subtl
 
 The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool to apply a given dataset and research question [@cantini_benchmarking_2020].
 
-Some of these reviews focus on a specific type of data integration: metabolomics [@cavill2016], genomics [@mcgovern2015a], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies [@de_souza_ibd_2017; @tarazona2021a; @valles-colomer2016].
+Some of these reviews focus on a specific type of data integration: metabolomics [@cavill2016], genomics [@mcgovern2015], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies [@de_souza_ibd_2017; @tarazona2021; @valles-colomer2016].
 On this regard there are several efforts to integrate data on IBD but no comprehensive review to date is known to the author.
 The most comprehensive article to date is a very recent review identifying problems and providing recommendations for future work [@sudhakar2022].
 

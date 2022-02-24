@@ -22,13 +22,13 @@ Some links that I found useful on the thesis and could be useful if you are inte
     | STATIS | [@abdi2012] |
     | joint NMF | [@zhang2012] |
     | sMBPLS | [@li2012] |
-    | Bayesian group factor analysis | [@virtanen2012a] |
-    | RIMBANET | [@zhu2012a] |
+    | Bayesian group factor analysis | [@virtanen2012] |
+    | RIMBANET | [@zhu2012] |
     | FactoMineR | [@abdi2013] |
     | JIVE | [@lock2013a] |
     | pandaR | [@schlauch2017] |
-    | omicade4 | [@meng2014a] |
-    | STATegRa | [@planell2021a] |
+    | omicade4 | [@meng2014] |
+    | STATegRa | [@planell2021] |
     | Joint factor model | [@ray2014] |
     | GFAsparse | [@bunte2016] |
     | Sparse CCA | [@chen2013] |
@@ -41,7 +41,7 @@ Some links that I found useful on the thesis and could be useful if you are inte
     | PLSCA | [@beaton2016] |
     | mixOmics | [@singh2019] |
     | mixedCCA | [@yoon2019] |
-    | SLIDE | [@gaynanova2017a] |
+    | SLIDE | [@gaynanova2017] |
     | fCCAC | [@madrigal2017] |
     | TSKCCA | [@yoshida2017] |
     | SMSMA | [@kawaguchi2017] |
@@ -66,7 +66,6 @@ Some links that I found useful on the thesis and could be useful if you are inte
     | DPCCA | [@gundersen2020] |
     | MEFISTO | [@velten2020] |
     | MultiPower | [@tarazona2020] |
-    | mixedCCA | [@yoon2019a] |
     : Integration methods available and their references.
 
     <!--# Check https://github.com/mikelove/awesome-multi-omics -->

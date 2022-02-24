@@ -5,6 +5,7 @@
 ### experDesign
 
 `experDesign` package built in R was released for the first time on CRAN on 2020-09-08 after nearly a year after the initial release made on [github](https://github.com/llrs/experDesign).
+It was published on a journal on 2021-11-27[@revillasancho2021].
 
 The package uses functional programming to create and modify objects and the features used.
 The package bases its performance on the large body of work made by the R core team.
@@ -22,9 +23,10 @@ It adds the information to the introduced `data.frame` or returns an vector with
 Regarding time related variables `experDesign` will use them as factors, while issuing a warning to the user.
 
 Since its development it has been used on a couple of RNA sequencing experiments that required a batch design, one of organoids bulk RNA-seq and another one of biopsies bulk RNA-seq from the BARCELONA cohort.
+It was also used to check if there is any observable batch effect on the datasets analyzed.
 
-On both cases it worked well and no batch effect was created when sequencing the samples.
-However on the organoids dataset, a change on the matrigel used to produce them introduced a batch effect that made it impossible to compare samples before and after that change (there weren't any shared sample before and after the change of matrigel).
+On the designed datasets `experDesign` worked well and no batch effect was created when sequencing the samples.
+However, on the organoids dataset, a change on the matrigel used to produce them introduced a batch effect that made it impossible to compare samples before and after that change (there were not any shared sample before and after the change of matrigel).
 
 ```{r experDesign, include=FALSE, eval=FALSE}
 library("dlstats")
@@ -42,7 +44,7 @@ Showing the interest the community have on solutions like this.
 
 ### BaseSet
 
-`BaseSet` package, built in R, was released for the first time on CRAN on 2020-11-11, nearly two years after the initial work started on [github](https://github.com/llrs/BaseSet).
+`BaseSet` package, built in R, was released for the first time on CRAN on 2020-11-11, nearly two years after the initial work started on [github](https://github.com/llrs/BaseSet "Repository").
 
 The package uses both functional programming and object oriented program to create and modify the TidySet S4 object defined[^results-1].
 Mixing it with S3 generic functions it provides a powerful interface compatible with the tidyverse principles, a [group of packages](https://www.tidyverse.org/) following the same design.
@@ -64,7 +66,7 @@ The package provides a new class to handle fuzzy sets and the associate informat
 
 -   Last, some [utility functions](https://docs.ropensci.org/BaseSet/reference/index.html#utiles) to use set name conventions and some other auxiliary functions
 
-The package had a long development process with initial iterations basing on GSEABase package which was later abandoned to include also some uncertainty on the relationship of a gene with a given gene set.
+The package had a long development process with initial iterations basing on GSEABase package which was later abandoned ([GSEAdv](https://github.com/llrs/GSEAdv)) to also include some uncertainty on the relationship of a gene with a given gene set.
 
 The package also participated on an exploration on part of the Bioconductor community (project to develop, support, and disseminate free open source software that facilitates rigorous and reproducible analysis of data from current and emerging biological assay) for more modern and faster handling of sets.
 There were three different packages created as part of this process, `BaseSet`, `BiocSet` published [on Bioconductor](https://bioconductor.org/packages/BiocSet/) and `unisets`, available [on github](https://github.com/kevinrue/unisets).
@@ -83,14 +85,14 @@ cran_stats("BaseSet") %>%
   median()
 ```
 
-Since its release on CRAN it has had a median of \~400 downloads each month from RStudio package manager, so the total number of downloads is higher.
+Since its release on CRAN it has had a median of \~400 downloads each month from RStudio package manager.
 
 ### inteRmodels
 
 The package was build once the method used to find accurate models of the relationships of the data available of a dataset using RGCCA was established.
-It simplifies the process and makes it easier to perform it.
+Using the package [on github](https://github.com/llrs/intermodel "inteRmodel") simplifies the process and makes it easier to redo it .
 
-The package consists of functions that can be grouped in three categories:
+The package has functions that can be grouped in three categories:
 
 -   To look for models and evaluate them.
     There are functions to search for a model given some rules, that check them using leave-one-out methodology.
@@ -100,8 +102,7 @@ The package consists of functions that can be grouped in three categories:
 -   Building: To easier build correct models on RGCCA, simplifying the process to create a symmetric matrix.
 
 Currently it is only [available on github](https:intermodel.llrs.dev), so the number of downloads and usage is unknown but since its release a user has contacted to keep it up to date with development versions of RGCCA.
-Which now it is compatible with the next release of [RGCCA being prepared](https://github.com/rgcca-factory/RGCCA/tree/CRAN)[^results-2].
-Together with a copy of the RGCCA packages with more tests has enabled to identify changes on the RGCCA package that could affect users.
+Currently, it is compatible with the next release of [RGCCA being prepared](https://github.com/rgcca-factory/RGCCA/tree/CRAN)[^results-2].
 
 [^results-2]: I also contributed with some comments and feedback to the package to make it easier to read the source and check the inputs and improve the documentation so that it is coherent with the code and previous results of the functions.
 
@@ -124,7 +125,7 @@ The effect of the sparsity value was measured by its effect on the inner AVE sco
 ![(#fig:puget-tau2AVE) Effect of tau on the inner AVE. The suggested tau value is the column between the regular grid.](images/pugets_tau_to_AVE.png)
 
 Exploratory analysis with the superblock model was done.
-The first two components of the superblock didn't help to explain the biology or classify the tumors:
+The first two components of the superblock did not help to explain the biology or classify the tumors:
 
 ![(#fig:puget-superblock) First components of the superblock](images/pugets_superblock.png)
 
@@ -199,8 +200,8 @@ Weighted gene co-expression network analysis did not provide relevant links betw
 
 <!--# TODO: explain why STATegRa didn't work out -->
 
-STATegRa didn't show a value of, the assumption that there is a shared common factor without influence of other categorical variables was too much.
-In addition, the model is fixed, so it didn't allow to find new or other relationships that are not one to one.
+STATegRa did not show a value of, the assumption that there is a shared common factor without influence of other categorical variables was too much.
+In addition, the model is fixed, so it did not allow to find new or other relationships that are not one to one.
 
 With RGCCA we could select different models and use all the data available without much assumptions.
 The models with the highest inner AVE of the family 1 and the family 2 models were similar to those on the Häsler dataset.
@@ -230,7 +231,7 @@ The lower the dispersion, the more robust the model was to different conditions 
 ![(#fig:hsct-bootstrap) The point with the black circle is the AVE of the original data. The dispersion is shown by the ellipses](images/hsct-bootstrap.png)
 
 With the bootstrapped models we used BaseSet to estimate the probability that each variable to be relevant for the association with a disease.
-However, due to big amount of small probabilities when using the BaseSet package to calculate which variables are more relevant it couldn't provide a good estimation on time.
+However, due to big amount of small probabilities when using the BaseSet package to calculate which variables are more relevant it could not provide a good estimation on time.
 
 MCIA was applied as a baseline of the integration, the first two components were represented similarly to those of the blocks when using RGCCA.
 
@@ -273,7 +274,7 @@ MCIA results was high but not as high as the model 2.2.
 ### Morgan's dataset {#results-morgan}
 
 We tested if results of inteRmodel were consistent on this dataset.
-The different models weren't able to separate the samples neither by location or sex.
+The different models were not able to separate the samples neither by location or sex.
 
 ![(#fig:morgan-models) First component of the transcriptome and microbiome of the Morgan's dataset.](images/morgans_models.png)
 
@@ -298,6 +299,8 @@ Diversity plots
 <!--# TODO: Add plots of diversity -->
 
 ### Howell's dataset {#results-howell}
+
+<!--# TODO: Update when reanalysis is done -->
 
 This dataset was processed to confirm the results on the previous datasets.
 
