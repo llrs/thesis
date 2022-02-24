@@ -361,7 +361,7 @@ Furthermore several studies have been carried out to discover links between micr
 These studies, known as integration, multi-omic or interaction studies, usually use multiple sequencing assays as the bases of the analysis [@beck2021].
 
 However, confirming causal interactions of the variables of each essay is difficult.
-To find relationships some articles use correlation [@hasler_uncoupling_2016], there are others that use a combination of methods from correlations, partial correlations to integrative methods [@tang_integrated_2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations [ref:needed howell2018].
+To find relationships some articles use correlation [@hasler_uncoupling_2016], there are others that use a combination of methods from correlations, partial correlations to integrative methods [@tang_integrated_2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations [@hernández-rocha2021].
 
 Very rarely there is an experimental confirmation of the relationships between variables of the different assays because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
 One of the few methods published that shows an interaction between genes and microorganisms on IBD is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
@@ -411,7 +411,7 @@ Other words used are integration, and if specific to data from sequencing techno
 Here integration will be used as it is the more general one and not restricted to omics or sequencing technologies.
 
 Since the beginning of the integration methods there have been many methods proposed [@krassowski2020].
-Some of the early methods were initially used for surveying the agreement of different evaluating systems [ref:needed], others were developed for agricultural sciences [@hotelling_relations_1936] or food industry [@biancolillo].
+Some of the early methods were initially used for surveying the agreement of different evaluating systems [@yannakoudakis2015], others were developed for agricultural sciences [@hotelling_relations_1936] or food industry [@biancolillo].
 Some of these methods are specific for one application or data type while others are more generally applicable.
 Lately, the access to bigger datasets with more variables and often from the same samples has increased the focus of the research community on the methodologies available on several disciplines but mainly on biological sciences.
 The explosion of data on biological sciences has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time.
@@ -498,7 +498,7 @@ Having more statistical power helps identifying the relationships one seeks when
 
 #### Relationship between variables and samples
 
-Depending on the amount of variables and samples used in studies can be classiffied in two types.
+Depending on the amount of variables and samples used in studies can be classified in two types.
 Traditionally for each sample few variables are measured, for instance on a biopsy with RT-PCR only a few genes are measured, however with the new omics techniques (transcriptomics, metabolomics, methylomics, genomics), thousands of variables are measured for the same sample.
 This has lead to the following situation:
 
@@ -519,7 +519,7 @@ This is described in the literature as $n \gg p$ (or big n, little p).
 Nowadays this is less frequent on the bioscience world, and does not causes trouble analyzing it because the high number of samples allows to accurately estimate the dispersion of variables.
 
 There are several methods available to estimate the number of samples required [@tarazona2020].
-Having just the enough samples for the desired statistical power, however, it is not recommended in case some samples cannot be correctly processed.
+Having just the enough samples for the desired statistical power, however, might not be enough in case some samples are not correctly processed.
 
 #### Relationship between samples
 
@@ -547,8 +547,8 @@ Sometimes, the objective of the study is precisely to analyze the relationships 
 To discover causality between two variables the cause must precede the consequence, which highlights the importance of time.
 Being aware of the time differences and time scales is crucial in most cases.
 
-During in vitro experiments, conditions can be reproduced even if they are at different time.
-However, when using patients [] replicates can not usually be performed like on vitro experiments.
+During *in vitro* experiments, conditions can be reproduced even if they are at different time.
+However, when using patients material replicates can not usually be performed like *in vitro* experiments.
 This makes it harder to study time-related change on patients.
 
 Lastly, time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNA-seq [@massoni-badosa2020; @zhu2017].
@@ -613,7 +613,7 @@ Some of them have previously appeared:
 
     Bayesian approaches are also quite frequent, these methods use the Bayes' theorem to see the relationships between variables.
     The Bayes' theorem explains that the conditional probability of a variable is related to the prior knowledge of conditions that might be related to the event [@bayes1763].
-    Some methods that use these approaches are Reconstructing Integrative Molecular Bayesian Network ([RIMBANET](https://labs.icahn.mssm.edu/zhulab/?s=rimbanet)) [@zhu2012], Bayesian Consensus Clustering ([BCC](https://github.com/ttriche/bayesCC)) [@lock2013] and others like [@virtanen2012].
+    Some methods that use these approaches are Reconstructing Integrative Molecular Bayesian Network ([RIMBANET](https://labs.icahn.mssm.edu/zhulab/?s=rimbanet)) [@zhu2012] and Bayesian Consensus Clustering ([BCC](https://github.com/ttriche/bayesCC)) [@lock2013].
 
 -   Dimensional Reduction
 
@@ -622,6 +622,7 @@ Some of them have previously appeared:
     On the other hand, L2-regularization does not result in elimination of coefficients or sparse models and can only be used when there is multicollinearity as it works well to avoid over-fitting.
 
     Several tools use this approach, Momix [@cantini_benchmarking_2020], regularized canonical correlation analysis (RGCCA) [@tenenhaus2017], mixOmics [@rohart2017] and STATegRa [@gomez-cabrero2019].
+    Other methods use bayesian approches like the Bayesian Group Factor Analysis [@virtanen2012].
 
 -   Active module identification
 
