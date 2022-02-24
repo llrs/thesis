@@ -53,7 +53,7 @@ Disease can be classified based on age at onset as very early, early or adult on
 Genome-wide association studies (GWAS) have linked IBD to over 100 genetic loci, including a *NOD2* gene, but so far there is not any known mechanism how polymorfism on this genes are driving the disease [@horowitz2021].
 On early pedriatic and adult disease the genetic component is lower than on very early on set and it is thought that the environmental factors are the main cause of the disease at those ages.
 
-On the following sections I'll explore the role of several of the possible factors involved on the pahtogenesis, starting with the genetics.
+On the following sections I will explore the role of several of the possible factors involved on the pahtogenesis, starting with the genetics.
 
 #### Genetics
 
@@ -466,7 +466,7 @@ Most of the times one (or several) of the following results are expected from in
 One of the purposes of integration might be to use multiple sources of data to accurately describe how do samples or patients fit on a predefined possibles states.
 The objective here might be to accurately describe whether a patient has one or other related disease of a possible subset of diseases or phenotype [@rohart2016].
 
--   An overview of the role of each individual block in a biological system
+-   An overview of the role of each individual omic in a biological system
 
 Sometimes the question is which omic method is the best describing a disease.
 This knowledge could prevent performing expensive tests and replace them by more affordable or easier technique that has enough predictive power or is sensitive enough and specific for the task.
@@ -521,9 +521,13 @@ Nowadays this is less frequent on the bioscience world, and does not causes trou
 There are several methods available to estimate the number of samples required [@tarazona2020].
 Having just the enough samples for the desired statistical power, however, might not be enough in case some samples are not correctly processed.
 
+In addition, variables might be separated on different blocks of variables.
+These blocks might be just of the same source or from multiple methods.
+Depending on the method this blocks might have special meaning: when all the data is joined in a single block it is known as superblock.
+
 #### Relationship between samples
 
-Depending on the relationship between the samples of the different blocks of data, the questions answerable and the methods that work on them differ.
+Depending on the relationship between the samples, the questions answerable and the methods that work on them differ.
 
 A sample can have multiple or one data source, for instance we could have RNA-seq and 16S data from the same sample.
 In a study if all the samples have all the data from multiple data sources it is a complete case.
@@ -575,8 +579,9 @@ However, sometimes this is not desirable or feasible as the correlation does not
 Network approaches relate the variables to each other [@koh_iomicspass_2019].
 These approaches are fairly new and growing in popularity partly because they can address the direction of the interaction.
 
-In partial correlations some or all of the other variables are considered on how much do they affect the others and this effect is reduced [@yule1907].
-This assumes a linear relationship and it is computationally expensive when there are thousands of variables.
+In partial correlations the effect of other variables on the two being under study are taken into account [@yule1907].
+They assumes a linear relationship between the co-occurring variables and those of interest.
+However, it is computationally expensive when there are thousands of variables.
 
 #### Input data
 
@@ -602,8 +607,8 @@ Also even with the same data depending on the processing of the data they can ha
 
 #### Mathematical framework
 
-Depending on the input and the objective, methods use different mathematical frameworks to process the data.
-Some of them have previously appeared:
+Methods use different mathematical frameworks to process the data.
+Here I briefly describe some common mathematical frameworks, some of which have previously appeared:
 
 -   Networks
 
@@ -652,7 +657,7 @@ Such methods include Regularized Generalized Canonical Correlation Analysis (RGC
 -   Mixed factors:
 
 Integration results in both shared and specific factors, to each dataset and common to all them.
-Such methods include Joint and Individual Variation Explained (JIVE) and integrative Non-negative Matrix Factorization ([iNMF](https://github.com/yangzi4/iNMF)) [@yang2016].
+Such methods include Joint and Individual Variation Explained (JIVE) [@lock2013b] and integrative Non-negative Matrix Factorization ([iNMF](https://github.com/yangzi4/iNMF)) [@yang2016].
 
 ### Interpretation
 
