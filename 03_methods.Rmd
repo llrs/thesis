@@ -144,19 +144,18 @@ This dataset was obtained after a collaboration "Integrative analysis of colonic
 
 Patients with UC, IBD-unclassified (IBD-U) and CD were recruited when attending regularly scheduled visits or surveillance.
 Asymptomatic healthy controls (HC) were recruited during routine, age-related colorectal cancer screening by colonoscopy.
-134 samples were collected together with information about the disease, age at diagnosis, age at the moment of the sampling, sex and segment.
+134 samples were collected together with information about the disease, age at diagnosis, age at the moment of the sampling, sex, segment and smoking status.
 
 <!--# TODO table of patients and samples -->
 
 | Characteristic                          | Hernández' |
 |-----------------------------------------|------------|
-| Disease (CD/UC/controls)                |            |
-| Age at diagnostic (\<17/\<40/>40 years) |            |
-| Age: mean (min-max)                     |            |
-| Sex (female/male)                       |            |
-| Segment (ileum/colon)                   |            |
-|                                         |            |
-|                                         |            |
+| Disease (CD/UC/controls)                | 54/66/46   |
+| Age at diagnostic (\<17/\<40/>40 years) | 29/73/18   |
+| Age: mean (min-max)                     | 40 (17-71) |
+| Sex (female/male)                       | 81/85      |
+| Segment (ileum/colon)                   | 97/159     |
+| Smoking (never/ex/current)              | 115/34/16  |
 
 : Table of samples included from Hernández's dataset characteristics.
 
