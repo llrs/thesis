@@ -68,7 +68,7 @@ Some links that I found useful on the thesis and could be useful if you are inte
 | MultiPower                     | [@tarazona2020]               |
 : (#tab:appendix-methods) Integration methods available and their references.
 
-    <!--# Check https://github.com/mikelove/awesome-multi-omics -->
+<!-- #Check https://github.com/mikelove/awesome-multi-omics -->
 
 -   [Bookdown](https://github.com/rstudio/bookdown/): The book about how to write this type of books.
 
@@ -106,23 +106,33 @@ However, due to the long times of calculation that it would require it was not u
 
 To analyze the antiTNF cohort (also named BARCELONA) a [different repository](https://github.com/llrs/Barcelona "Barcelona repository") was created to analyze the data using the previously developed packages.
 
-## By project
+## By project/publication
 
 All code of the analysis of the publications is available (in his messed state and complicated history) and a brief description as to why they were used:
 
 [Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367):
 
 -   [TRIM](https://github.com/llrs/TRIM "HSCT dataset exploration code on github"): Mangle with the sample, dataset, explore several methods...
--   [sgcca_hyperparameters](https://github.com/llrs/sgcca_hyperparameters "RGCCA exploration code on github"): Explore the effects of the hyperparameters on RGCCA on the provided dataset.
+-   [Puget's](https://github.com/llrs/sgcca_hyperparameters "RGCCA exploration code on github"): Explore the effects of the hyperparameters on RGCCA on the provided dataset.
 -   [inteRmodel](https://github.com/llrs/inteRmodel "Integration package on github"): Package for easy repeating the methodology developed on TRIM.
--   [pouchitis](https://github.com/llrs/pouchitis "Pouchitis code on github"): Work with the pouchitis cohort used in this article.
--   [uncoupling](https://github.com/llrs/Uncoupling "Uncoupling code on github"): Work with the UC/CD dataset used in this article.
+-   [Morgan's](https://github.com/llrs/pouchitis "Pouchitis code on github"): Work with the pouchitis cohort used in this article.
+-   [Häsler's](https://github.com/llrs/Uncoupling "Uncoupling code on github"): Work with the UC/CD dataset used in this article.
 -   [integration](https://github.com/llrs/integration-helper "Integration package on github"): Package with functions that I wrote or used on different parts of exploring the TRIM dataset ended up here.
 
 BaseSet:
 
--   [BaseSet](https://cran.r-project.org/package=BaseSet "BaseSet landing page on CRAN"): Fuzzy logic implementation, available on [rOpenSci too](https://github.com/ropensci/BaseSet "BaseSet git repository")
+-   [BaseSet](https://cran.r-project.org/package=BaseSet "BaseSet landing page on CRAN"): Fuzzy logic implementation, available on [rOpenSci too](https://github.com/ropensci/BaseSet "BaseSet git repository") and its [documentation website](https://docs.ropensci.org/BaseSet "BaseSet") .
 
 experDesign:
 
--   [experDesign](https://github.com/llrs/experDesign "Git repository"): Help design experiments in batches, [available on CRAN too](https://cran.r-project.org/package=experDesign "experDesign landing page on CRAN").
+-   [experDesign](https://cran.r-project.org/package=experDesign "experDesign landing page on CRAN"): Help design experiments in batches. It has a [documentation website too](https://experDesign.llrs.dev/ "experDesign").
+
+
+BARCELONA:
+
+- [BARCELONA](https://github.com/llrs/Barcelona): Code to analyze the BARCELONA's dataset
+
+Validation:
+
+-  [Howell's](https://github.com/llrs/howell_2018): Work with Howell's 2018 dataset. 
+- [Cristian's](https://github.com/llrs/cristian_mark): Work with Cristian's 2020 dataset. 

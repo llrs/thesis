@@ -10,7 +10,7 @@ bookdown::gitbook:
       collapse: false
       toc_float: true
       toc_appendix: yes
-      toc_depth: 3
+      toc_depth: 2
       scroll_highlight: yes
       before: |
         <li><strong><a href="./">Data integration on IBD</a></strong></li>
