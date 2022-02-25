@@ -1,6 +1,6 @@
-# Appendix {-}
+# (APPENDIX) Appendix {-}
 
-## Online resources
+# Online resources
 
 Some links that I found useful on the thesis and could be useful if you are interested on the multi-omics field.
 
@@ -78,13 +78,13 @@ Some links that I found useful on the thesis and could be useful if you are inte
 
 -   [GitHub](https://github.com "GitHub"): Company which allows to freely host remote [git](https://git-scm.com/ "git") repositories of many projects, including some used or developed on this thesis.
 
-## Software
+# Software
 
 Along the years of this thesis several pieces of software have been generated as well as packages.
 Here they are listed for easier retrieval.
 They are listed on two ways, one with a brief explanation and another one ordered by what software piece is used on each analysis.
 
-### Listed
+## Listed
 
 An improved/tested version of [RGCCA](https://github.com/llrs/RGCCA), some modifications on the internal functions to ease the maintenance as well as adding tests and sometimes improving the documentation.
 Also modified so that it is possible to provide a vector of models so that the model of the first dimension is not the same as the model on the second dimension (not sure if mathematically speaking makes sense but from a biological one I think it might be interesting to have it).
@@ -106,7 +106,7 @@ However, due to the long times of calculation that it would require it was not u
 
 To analyze the antiTNF cohort (also named BARCELONA) a [different repository](https://github.com/llrs/Barcelona "Barcelona repository") was created to analyze the data using the previously developed packages.
 
-### By project
+## By project
 
 All code of the analysis of the publications is available (in his messed state and complicated history) and a brief description as to why they were used:
 

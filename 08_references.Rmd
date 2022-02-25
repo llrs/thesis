@@ -6,5 +6,4 @@ knitr::write_bib(c('bookdown', 'knitr', 'rmarkdown', 'htmlwidgets',  'DT',
 ), 'packages.bib')
 ```
 
-::: {#refs}
-:::
+<div id="refs"></div>
