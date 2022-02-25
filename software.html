@@ -208,7 +208,7 @@ div.csl-indent {
 <li class="chapter" data-level="B" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i><b>B</b> Software</a>
 <ul>
 <li class="chapter" data-level="B.1" data-path="software.html"><a href="software.html#listed"><i class="fa fa-check"></i><b>B.1</b> Listed</a></li>
-<li class="chapter" data-level="B.2" data-path="software.html"><a href="software.html#by-project"><i class="fa fa-check"></i><b>B.2</b> By project</a></li>
+<li class="chapter" data-level="B.2" data-path="software.html"><a href="software.html#by-projectpublication"><i class="fa fa-check"></i><b>B.2</b> By project/publication</a></li>
 </ul></li>
 </ul>
 
@@ -250,25 +250,34 @@ This package was meant to be used with the probabilities that arise from bootstr
 However, due to the long times of calculation that it would require it was not used.</p>
 <p>To analyze the antiTNF cohort (also named BARCELONA) a <a href="https://github.com/llrs/Barcelona" title="Barcelona repository">different repository</a> was created to analyze the data using the previously developed packages.</p>
 </div>
-<div id="by-project" class="section level2" number="9.2">
-<h2><span class="header-section-number">B.2</span> By project</h2>
+<div id="by-projectpublication" class="section level2" number="9.2">
+<h2><span class="header-section-number">B.2</span> By project/publication</h2>
 <p>All code of the analysis of the publications is available (in his messed state and complicated history) and a brief description as to why they were used:</p>
 <p><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367">Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a>:</p>
 <ul>
 <li><a href="https://github.com/llrs/TRIM" title="HSCT dataset exploration code on github">TRIM</a>: Mangle with the sample, dataset, explore several methods…</li>
-<li><a href="https://github.com/llrs/sgcca_hyperparameters" title="RGCCA exploration code on github">sgcca_hyperparameters</a>: Explore the effects of the hyperparameters on RGCCA on the provided dataset.</li>
+<li><a href="https://github.com/llrs/sgcca_hyperparameters" title="RGCCA exploration code on github">Puget’s</a>: Explore the effects of the hyperparameters on RGCCA on the provided dataset.</li>
 <li><a href="https://github.com/llrs/inteRmodel" title="Integration package on github">inteRmodel</a>: Package for easy repeating the methodology developed on TRIM.</li>
-<li><a href="https://github.com/llrs/pouchitis" title="Pouchitis code on github">pouchitis</a>: Work with the pouchitis cohort used in this article.</li>
-<li><a href="https://github.com/llrs/Uncoupling" title="Uncoupling code on github">uncoupling</a>: Work with the UC/CD dataset used in this article.</li>
+<li><a href="https://github.com/llrs/pouchitis" title="Pouchitis code on github">Morgan’s</a>: Work with the pouchitis cohort used in this article.</li>
+<li><a href="https://github.com/llrs/Uncoupling" title="Uncoupling code on github">Häsler’s</a>: Work with the UC/CD dataset used in this article.</li>
 <li><a href="https://github.com/llrs/integration-helper" title="Integration package on github">integration</a>: Package with functions that I wrote or used on different parts of exploring the TRIM dataset ended up here.</li>
 </ul>
 <p>BaseSet:</p>
 <ul>
-<li><a href="https://cran.r-project.org/package=BaseSet" title="BaseSet landing page on CRAN">BaseSet</a>: Fuzzy logic implementation, available on <a href="https://github.com/ropensci/BaseSet" title="BaseSet git repository">rOpenSci too</a></li>
+<li><a href="https://cran.r-project.org/package=BaseSet" title="BaseSet landing page on CRAN">BaseSet</a>: Fuzzy logic implementation, available on <a href="https://github.com/ropensci/BaseSet" title="BaseSet git repository">rOpenSci too</a> and its <a href="https://docs.ropensci.org/BaseSet" title="BaseSet">documentation website</a> .</li>
 </ul>
 <p>experDesign:</p>
 <ul>
-<li><a href="https://github.com/llrs/experDesign" title="Git repository">experDesign</a>: Help design experiments in batches, <a href="https://cran.r-project.org/package=experDesign" title="experDesign landing page on CRAN">available on CRAN too</a>.</li>
+<li><a href="https://cran.r-project.org/package=experDesign" title="experDesign landing page on CRAN">experDesign</a>: Help design experiments in batches. It has a <a href="https://experDesign.llrs.dev/" title="experDesign">documentation website too</a>.</li>
+</ul>
+<p>BARCELONA:</p>
+<ul>
+<li><a href="https://github.com/llrs/Barcelona">BARCELONA</a>: Code to analyze the BARCELONA’s dataset</li>
+</ul>
+<p>Validation:</p>
+<ul>
+<li><a href="https://github.com/llrs/howell_2018">Howell’s</a>: Work with Howell’s 2018 dataset.</li>
+<li><a href="https://github.com/llrs/cristian_mark">Cristian’s</a>: Work with Cristian’s 2020 dataset.</li>
 </ul>
 
 </div>
@@ -354,7 +363,7 @@ gitbook.start({
 "collapse": false,
 "toc_float": true,
 "toc_appendix": true,
-"toc_depth": 3,
+"toc_depth": 2,
 "scroll_highlight": true
 }
 });

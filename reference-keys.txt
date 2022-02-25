@@ -122,4 +122,4 @@ acknowledgments
 online-resources
 software
 listed
-by-project
+by-projectpublication
