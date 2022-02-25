@@ -1,6 +1,6 @@
 # References {.unnumbered}
 
-```{r include=FALSE}
+```{r include=FALSE, cache=TRUE}
 knitr::write_bib(c('bookdown', 'knitr', 'rmarkdown', 'htmlwidgets',  'DT',
   'miniUI', 'servr', 'citr', "RGCCA"
 ), 'packages.bib')
