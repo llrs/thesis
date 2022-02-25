@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-02-24" />
+<meta name="date" content="2022-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -250,7 +250,7 @@ The data came from diffuse intrinsic pontine glioma patients whose transcriptome
 The copy number variation of the patients was processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using <a href="https://www.softgenetics.com/mutationSurveyor.php" title="Website of the software">Mutation Surveyor software</a>.
 In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor <span class="citation">[<a href="#ref-puget2012" role="doc-biblioref">150</a>]</span>.</p>
 <table>
-<caption>Table about Puget’s dataset characteristics.</caption>
+<caption><span id="tab:Puget">Table 3.1: </span> Table about Puget’s dataset characteristics.</caption>
 <thead>
 <tr class="header">
 <th>Characteristic</th>
@@ -288,7 +288,7 @@ The protocol was approved by the Institutional Ethics Committee of the Hospital 
 The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen, Hilde, Germany) and stored at -80°C until total RNA extraction.
 In total 158 samples with both RNA and DNA extraction of the same segment and time were available:</p>
 <table>
-<caption>Table of HSCT dataset characteristics.</caption>
+<caption><span id="tab:HSCT">Table 3.2: </span> Table of HSCT dataset characteristics.</caption>
 <thead>
 <tr class="header">
 <th>Characteristic</th>
@@ -340,7 +340,7 @@ Both RNA and DNA was then sequenced on HiSeq 2000 and MiSeq respectively.
 These biopsies included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy controls.
 The dataset included information about location, gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.</p>
 <table>
-<caption>Table of Häsler’s dataset characteristics.</caption>
+<caption><span id="tab:Hasler">Table 3.3: </span> Table of Häsler’s dataset characteristics.</caption>
 <thead>
 <tr class="header">
 <th>Characteristic</th>
@@ -372,7 +372,7 @@ On some cases several biopsyes were collected from the same patients.
 This dataset included anonymous identifiers for patients, whether the sample was from the pre-pouch ileum (PPI) or from the pouch, the sex, the outcome of the procedure and an inflammatory severity score ISCORE.
 The pouch ileum might be inflamed or not.</p>
 <table>
-<caption>Table of Morgan’s dataset characteristics.</caption>
+<caption><span id="tab:Morgan">Table 3.4: </span> Table of Morgan’s dataset characteristics.</caption>
 <thead>
 <tr class="header">
 <th>Characteristic</th>
@@ -404,7 +404,7 @@ The protocol was approved by the Institutional Ethics Committee of the Hospital 
 In all patients, starting anti-TNF treatment will be decided before the protocol entry decision according to medical clinical practice.</p>
 <p>Anonymized identification of the patients, disease, sex age at diagnostic, age at the moment of the sample taking, time since the start of the treatment and sample segment was collected.</p>
 <table>
-<caption>Table of samples included from the BARCELONA dataset characteristics.</caption>
+<caption><span id="tab:BARCELONA">Table 3.5: </span> Table of samples included from the BARCELONA dataset characteristics.</caption>
 <thead>
 <tr class="header">
 <th>Characteristic</th>
@@ -455,7 +455,7 @@ A cohort of 66 treatment-naïve children at diagnosis of their IBD, along with 3
 There are 10 non-IBD samples, 11 with Crohn’s disease and 11 with ulcerative colitis.
 Data has the following characteristics: disease, age at diagnostic, age at the moment of the study, sex, segment, and clinical history which have the following characteristics:</p>
 <table>
-<caption>Table of samples included from Howell’s dataset characteristics.</caption>
+<caption><span id="tab:howell">Table 3.6: </span> Table of samples included from Howell’s dataset characteristics.</caption>
 <thead>
 <tr class="header">
 <th>Characteristic</th>
@@ -498,7 +498,7 @@ In addition, asymptomatic healthy controls (HC) were recruited during routine, a
 290 samples were collected together with information about the disease, age at diagnosis, age at the moment of the sampling, sex, segment and smoking status.</p>
 <!--# TODO table of patients and samples -->
 <table>
-<caption>Table of samples included from Hernández’s dataset characteristics.</caption>
+<caption><span id="tab:hernandez">Table 3.7: </span> Table of samples included from Hernández’s dataset characteristics.</caption>
 <thead>
 <tr class="header">
 <th>Characteristic</th>
@@ -674,9 +674,9 @@ The O2PLS model can be written as a factor analysis where some factors are commo
 Canonical correlation is a method that uses data about the same unit but from different origins to find how much the different sources agree.
 Regularized generalized canonical correlation analysis is implemented on the homonymous package <a href="https://cran.r-project.org/package=RGCCA">RGCCA</a> <span class="citation">[<a href="#ref-tenenhaus2017" role="doc-biblioref">130</a>]</span> which was used on this thesis.
 The method and implementation will be explained in detail on the next section.</p>
-<div class="figure">
+<div class="figure"><span style="display:block;" id="fig:workflow-process"></span>
 <img src="images/workflow%20integration.png" alt="" />
-<p class="caption">Workflow of the analysis process</p>
+<p class="caption">Figure 3.1:  Workflow of the analysis process</p>
 </div>
 </div>
 </div>
@@ -747,7 +747,7 @@ However, that mathematically works better does not mean that it have more biolog
 Others are based on the maximization of a function of covariances: SUMCOV (sum of covariances method), SSQCOV (sum of squared covariances method), SABSCOV (sum of absolute values of the covariances method).
 The following table summarized the equivalent parameters needed on RGCCA to work like these methods:</p>
 <table>
-<caption>(tab)Equivalences of RGCCA for multi-block data analysis to other methods</caption>
+<caption><span id="tab:RGCCA-methods">Table 3.8: </span> Equivalences of RGCCA for multi-block data analysis to other methods</caption>
 <thead>
 <tr class="header">
 <th>Method</th>
