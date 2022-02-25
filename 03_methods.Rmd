@@ -26,7 +26,7 @@ In addition, this dataset contained information on age, localization of the tumo
 | Sex (female/male)         | 28/25    |
 | Location (cort/dipg/midl) | 20/22/11 |
 
-: Table about Puget's dataset characteristics.
+: (#tab:Puget) Table about Puget's dataset characteristics.
 
 ### HSCT dataset {#methods-hsct}
 
@@ -57,7 +57,7 @@ In total 158 samples with both RNA and DNA extraction of the same segment and ti
 | SES-CD local: mean (min-max)            | 2.15 (0-12) |
 | CDAI: mean (min-max)                    | 120 (0-450  |
 
-: Table of HSCT dataset characteristics.
+: (#tab:HSCT) Table of HSCT dataset characteristics.
 
 ### Häsler's dataset {#methods-hasler}
 
@@ -74,7 +74,7 @@ The dataset included information about location, gender, location, age, and the 
 | Sex (female/male)              | 42/17    |
 | Location (ileum/colon)         | 30/29    |
 
-: Table of Häsler's dataset characteristics.
+: (#tab:Hasler) Table of Häsler's dataset characteristics.
 
 ### Morgan's dataset {#methods-morgan}
 
@@ -91,7 +91,7 @@ The pouch ileum might be inflamed or not.
 | Sex individuals (female/male) | 101/102  |
 | Location (Pouch/PPI)          | 59/196   |
 
-: Table of Morgan's dataset characteristics.
+: (#tab:Morgan) Table of Morgan's dataset characteristics.
 
 ### BARCELONA dataset {#methods-barcelona}
 
@@ -116,7 +116,7 @@ Anonymized identification of the patients, disease, sex age at diagnostic, age a
 | Time (0/14/46 weeks)                    | 41/40/32   |
 | Sample segment (ileum/colon)            | 39/87      |
 
-: Table of samples included from the BARCELONA dataset characteristics.
+: (#tab:BARCELONA) Table of samples included from the BARCELONA dataset characteristics.
 
 ### Howell's dataset {#methods-howell}
 
@@ -136,7 +136,7 @@ Data has the following characteristics: disease, age at diagnostic, age at the m
 | Segment (ileum/colon)                           | 31/46     |
 | Clinical history (inflammation/no inflammation) | 24/53     |
 
-: Table of samples included from Howell's dataset characteristics.
+: (#tab:howell) Table of samples included from Howell's dataset characteristics.
 
 ### Hernández' dataset {#methods-hernandez}
 
@@ -157,7 +157,7 @@ In addition, asymptomatic healthy controls (HC) were recruited during routine, a
 | Smoking (never/ex/current)              | 115/34/16  |
 | Segment (ileum/colon)                   | 97/193     |
 
-: Table of samples included from Hernández's dataset characteristics.
+: (#tab:hernandez) Table of samples included from Hernández's dataset characteristics.
 
 ## Processing samples
 
@@ -329,7 +329,7 @@ Canonical correlation is a method that uses data about the same unit but from di
 Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017] which was used on this thesis.
 The method and implementation will be explained in detail on the next section.
 
-![Workflow of the analysis process](images/workflow%20integration.png)
+![ (#fig:workflow-process) Workflow of the analysis process](images/workflow%20integration.png)
 
 ## Regularized generalized canonical correlation analysis
 
@@ -429,7 +429,7 @@ The following table summarized the equivalent parameters needed on RGCCA to work
 | SSQCOV  | Factorial | $\Vert a_j \Vert = 1$ | 1         |
 | SABSCOV | Centroid  | $\Vert a_j \Vert = 1$ | 1         |
 
-: (tab)Equivalences of RGCCA for multi-block data analysis to other methods
+: (#tab:RGCCA-methods) Equivalences of RGCCA for multi-block data analysis to other methods
 
 There are other methods that can be done with RGCCA.
 Canonical correlation analysis would be equivalent to data variance equal to 1 and shrinkage of 0.
