@@ -21,4 +21,6 @@ QuitChildProcessesOnExit: Yes
 
 MarkdownWrap: Sentence
 
+ZoteroLibraries: "My Library"
+
 SpellingDictionary: en_US
