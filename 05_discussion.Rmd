@@ -1,5 +1,8 @@
 # Discussion
 
+In this chapter we will summarize the main findings in relation to the broad research community and other work as well as the impact of the results to improve further research in the future or be used on clinical environments.
+
+
 Häsler data data were obtained using the same sequencing techniques from endoscopic biopsies as our dataset HSCT and Barcelona and it is of the same disease/field.
 The confirmation that it works on it it helped to continue forward.
 
@@ -25,7 +28,10 @@ In addition, the numeric precision of said calculations suffers from the flotati
 To support multiplying more than 1000 float numbers a different strategy such as using log values might be better.
 We could not come up with a better strategy to find all the combinations needed, perhaps a better method exists that could be used to find which are the terms more influential to the end result.
 
-In this chapter we will summarize the main findings in relation to the broad research community and other work as well as the impact of the results to improve further research in the future or be used on clinical environments.
+Some batch effects are avoidable due to the experDesign package.
+This might help to improve the quality of the datasets and to expand previously sequenced datasets.
+
+
 
 If we had to summarize all the work in one sentence we would say that...
 
@@ -48,18 +54,14 @@ adonis worked to identify which variables were important.
 
 MCIA works well as baseline.
 
-STATegRa not customizable the interaction between the datasets.
+STATegRa is not customizable to specific interaction between the datasets.
 
 RGCCA some improvements.
 
-Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing.
-[@zhang2019]
-
-How to move the transition from bench to hospital [@collij2021].
+Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing [@zhang2019].
 
 <!--# From @collij2021 add references/adapt-->
-
-New technologies like "organ-on-chip" or more specifically "gut-on-chip" will be of great help in identifying causality by introducing the gut microbiota in this system and then study the interaction of the gut microbiota and the intestinal epithelium.
+To study complex systems, new technologies like "organ-on-chip" or more specifically "gut-on-chip" are being developed [@collij2021]. By introducing gut microbiota, these system will be of great help in the stud of the interaction of the gut microbiota dn the intestinal epithelium.
 
 #### Designing models
 
@@ -93,10 +95,15 @@ But the most important thing is to consider which variables are independent of w
 
 Quality of RNAseq analysis and 16S sequencing is important.
 Avoid contamination, same primers and read lengths (if using Illumina machines).
-Comparing 16S taxa ASV or OTUs is hard and selecting the right tool to compare them is important [@nearing2022].
+Comparing 16S taxa ASV or OTUs is hard and selecting the right tool to compare them is important [@nearing2022]. 
+It is also worth to keep in mind that several species have different number of copies of the 16S. 
+Thus chosing one region or the other affects the result. 
+In addition, it has been observed that there are differences between the regions used to amplify the 16S.
+It would be better to fully sequence the 16S.
 
-Some batch effects are avoidable due to the experDesign package.
-This might help to improve the quality of the datasets and to expand previously sequenced datasets.
+Furthermore, the precision of 16S sequecing for classification of taxa is not very precise. 
+As suggested by adherent invasive epithelical cells (AIEC), cells with same genetic background might show different behaviour and thus play a different role on the health of the patients.  
+
 
 [@jiang2019] A paper about multi-omics and microbiome...
 
