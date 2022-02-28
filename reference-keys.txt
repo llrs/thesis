@@ -112,9 +112,9 @@ results-barcelona
 results-howell
 results-hernandez
 discussion
+preliminary-steps
 designing-models
 evaluating-models
-other
 relevance-for-other-research
 implications-of-research
 conclusions
