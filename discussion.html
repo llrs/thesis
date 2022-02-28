@@ -232,6 +232,7 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 </div>
 <div id="discussion" class="section level1" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Discussion</h1>
+<p>In this chapter we will summarize the main findings in relation to the broad research community and other work as well as the impact of the results to improve further research in the future or be used on clinical environments.</p>
 <p>Häsler data data were obtained using the same sequencing techniques from endoscopic biopsies as our dataset HSCT and Barcelona and it is of the same disease/field.
 The confirmation that it works on it it helped to continue forward.</p>
 <p>Transciptome is related to localization of the samples.</p>
@@ -249,7 +250,8 @@ It failed because it is computationally expensive to calculate the likelihood of
 In addition, the numeric precision of said calculations suffers from the flotating point problems and must be considered carefully.
 To support multiplying more than 1000 float numbers a different strategy such as using log values might be better.
 We could not come up with a better strategy to find all the combinations needed, perhaps a better method exists that could be used to find which are the terms more influential to the end result.</p>
-<p>In this chapter we will summarize the main findings in relation to the broad research community and other work as well as the impact of the results to improve further research in the future or be used on clinical environments.</p>
+<p>Some batch effects are avoidable due to the experDesign package.
+This might help to improve the quality of the datasets and to expand previously sequenced datasets.</p>
 <p>If we had to summarize all the work in one sentence we would say that…</p>
 <p>Many work focus on finding some genes or bacteria to answer a question they have in mind.
 On the thesis the focus was more on finding a good representation of the disease that allowed me to identify genes and bacteria that were relevant to our questions.</p>
@@ -264,13 +266,11 @@ As it is a tool designed to find common patterns based on correlations it requir
 Having samples from multiple sites and conditions did not help.</p>
 <p>adonis worked to identify which variables were important.</p>
 <p>MCIA works well as baseline.</p>
-<p>STATegRa not customizable the interaction between the datasets.</p>
+<p>STATegRa is not customizable to specific interaction between the datasets.</p>
 <p>RGCCA some improvements.</p>
-<p>Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing.
-<span class="citation">[<a href="#ref-zhang2019" role="doc-biblioref">200</a>]</span></p>
-<p>How to move the transition from bench to hospital <span class="citation">[<a href="#ref-collij2021" role="doc-biblioref">201</a>]</span>.</p>
+<p>Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing <span class="citation">[<a href="#ref-zhang2019" role="doc-biblioref">200</a>]</span>.</p>
 <!--# From @collij2021 add references/adapt-->
-<p>New technologies like “organ-on-chip” or more specifically “gut-on-chip” will be of great help in identifying causality by introducing the gut microbiota in this system and then study the interaction of the gut microbiota and the intestinal epithelium.</p>
+<p>To study complex systems, new technologies like “organ-on-chip” or more specifically “gut-on-chip” are being developed <span class="citation">[<a href="#ref-collij2021" role="doc-biblioref">201</a>]</span>. By introducing gut microbiota, these system will be of great help in the stud of the interaction of the gut microbiota dn the intestinal epithelium.</p>
 <div id="designing-models" class="section level4" number="5.0.0.1">
 <h4><span class="header-section-number">5.0.0.1</span> Designing models</h4>
 <p>The model of the generalized canonical correlation is highly dependent of the blocks present.</p>
@@ -298,9 +298,13 @@ But the most important thing is to consider which variables are independent of w
 <h3><span class="header-section-number">5.0.1</span> Other</h3>
 <p>Quality of RNAseq analysis and 16S sequencing is important.
 Avoid contamination, same primers and read lengths (if using Illumina machines).
-Comparing 16S taxa ASV or OTUs is hard and selecting the right tool to compare them is important <span class="citation">[<a href="#ref-nearing2022" role="doc-biblioref">203</a>]</span>.</p>
-<p>Some batch effects are avoidable due to the experDesign package.
-This might help to improve the quality of the datasets and to expand previously sequenced datasets.</p>
+Comparing 16S taxa ASV or OTUs is hard and selecting the right tool to compare them is important <span class="citation">[<a href="#ref-nearing2022" role="doc-biblioref">203</a>]</span>.
+It is also worth to keep in mind that several species have different number of copies of the 16S.
+Thus chosing one region or the other affects the result.
+In addition, it has been observed that there are differences between the regions used to amplify the 16S.
+It would be better to fully sequence the 16S.</p>
+<p>Furthermore, the precision of 16S sequecing for classification of taxa is not very precise.
+As suggested by adherent invasive epithelical cells (AIEC), cells with same genetic background might show different behaviour and thus play a different role on the health of the patients.</p>
 <p><span class="citation">[<a href="#ref-jiang2019" role="doc-biblioref">204</a>]</span> A paper about multi-omics and microbiome…</p>
 <p><span class="citation">[<a href="#ref-krassowski2020" role="doc-biblioref">93</a>]</span> advice and recommendations on software engineering and reproducibility practices to share a comprehensive awareness with new researchers in multi-omics for end-to-end workflow.</p>
 </div>
