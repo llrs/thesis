@@ -585,7 +585,7 @@ However, it is computationally expensive when there are thousands of variables.
 
 #### Input data
 
-We have classified the studies according to the data they use (as seen in \@ref(data-origin) ).
+We have classified the studies according to the data they use (as seen [previously](#data-origin) ).
 But, some methods to account for relationships of variables only work when a dataset is complete while other do not:
 
 -   Data from the same samples:
