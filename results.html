@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-02-25" />
+<meta name="date" content="2022-02-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -313,13 +313,13 @@ The centroid scheme was selected because it takes into account all the relations
 The first two components of the superblock did not help to explain the biology or classify the tumors:</p>
 <div class="figure"><span style="display:block;" id="fig:puget-superblock"></span>
 <img src="images/pugets_superblock.png" alt="" />
-<p class="caption">Figure 4.2:  First components of the superblock</p>
+<p class="caption">Figure 4.2:  First components of the superblock which has all the data of the samples.</p>
 </div>
 <p>The same data was used to look for a good model from the data itself including a model with a superblock but looking at the first component of the CGH and transcriptome block.
 This allowed to visually inspect if each model’s components helped to classify the samples:</p>
 <div class="figure"><span style="display:block;" id="fig:puget-models"></span>
 <img src="images/pugets_models.png" alt="" />
-<p class="caption">Figure 4.3:  Different models tried with the same data showing the first components of the CGH data and the transcriptome.</p>
+<p class="caption">Figure 4.3:  Different models tried with the same data showing the first components of the CGH data and the transcriptome. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data.</p>
 </div>
 <p>Showing the components of the CGH and the transcriptomics of the superblock show better classification than that of the superblock.
 However the other models show a better classification of the samples with much simpler models.</p>
@@ -376,7 +376,7 @@ In addition, the model is fixed, so it did not allow to find new or other relati
 The models with the highest inner AVE of the family 1 and the family 2 models were similar to those on the Häsler dataset.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-models"></span>
 <img src="images/hsct-models.png" alt="" />
-<p class="caption">Figure 4.7:  On the x-axis the transcriptome, on the Y axis the Microbiome. Each square represents a different model of the HSCT dataset. On panel A colored by disease status, on panel B colored by sample location.</p>
+<p class="caption">Figure 4.7:  On the x-axis the transcriptome, on the Y axis the Microbiome. Each square represents a different model of the HSCT dataset. On panel A colored by disease status, on panel B colored by sample location. Model 0 has only transcriptome and microbiome data, models 1 to 1.2 with data about the samples and models 2.1 to 2.3 with data about the samples split in 3 blokcs.</p>
 </div>
 <p>The weights of these models can be observed here:</p>
 <!--# TODO: Show tables of the models -->
@@ -388,13 +388,13 @@ The most similar models are those that have split the metadata into 3 blocks, fo
 Each bootstrap had its own dispersion on the variables according to the samples selected, the distribution of the bootstraps used are represented here:</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-bootstrap-quality"></span>
 <img src="images/hsct-bootstrap-characteristics.png" alt="" />
-<p class="caption">Figure 4.8:  Dispersion of the bootstraps on the age and percentage of colon and controls samples.</p>
+<p class="caption">Figure 4.8:  Dispersion of the bootstraped samples on age and percentage of colon and controls samples.</p>
 </div>
 <p>Evaluating the same model on each bootstrap lead to a dispersion on the inner AVE of the model.
 The lower the dispersion, the more robust the model was to different conditions than in the initial testing.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-bootstrap"></span>
 <img src="images/hsct-bootstrap.png" alt="" />
-<p class="caption">Figure 4.9:  The point with the black circle is the AVE of the original data. The dispersion is shown by the ellipses</p>
+<p class="caption">Figure 4.9:  Bootstrap of the models 0, 1.2 and 2.2. The point with the black circle is the AVE of the original data. The dispersion is shown by the ellipses.</p>
 </div>
 <p>With the bootstrapped models we used BaseSet to estimate the probability that each variable to be relevant for the association with a disease.
 However, due to big amount of small probabilities when using the BaseSet package to calculate which variables are more relevant it could not provide a good estimation on time.</p>
@@ -402,18 +402,18 @@ However, due to big amount of small probabilities when using the BaseSet package
 <!--# TODO: Include plot with the result -->
 <div class="figure"><span style="display:block;" id="fig:hsct-mcia"></span>
 <img src="images/paper1_MCIA.png" alt="" />
-<p class="caption">Figure 4.10:  MCIA first two synthetic variables on the IBD related cohorts.</p>
+<p class="caption">Figure 4.10:  MCIA first two synthetic variables on the IBD related cohorts. In red circles the colon and in blue triangles the ileum.</p>
 </div>
 <p>The AUC of classifying the transcriptome in colon or ileum segments was compared between the two methods.</p>
 <!--# TODO: Add plot of the comparison of AUC -->
 <div class="figure"><span style="display:block;" id="fig:hsct-auc"></span>
 <img src="images/paper1_MCIA.png" alt="" />
-<p class="caption">Figure 4.11:  ROC curve of the different datasets with the models from RGCCA and the result with MCIA</p>
+<p class="caption">Figure 4.11:  ROC curve of the different datasets with the models from RGCCA and the result with MCIA. In gray the MCIA method and with discontinued lines the models of RGCCA.</p>
 </div>
 <p>The different models selected different variables as can be seen below:</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-features"></span>
 <img src="images/hsct-features.png" alt="" />
-<p class="caption">Figure 4.12:  Upset plot of the variables selected on each model showing the intersection between the different models</p>
+<p class="caption">Figure 4.12:  Upset plot of the variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes and OTUs.</p>
 </div>
 <p>Differences and similarities between the selected features of each model can be observed on Figure <a href="results.html#fig:hsct-features">4.12</a>.
 Genes are very similar between model 0 to 1.2 and between 2 to 2.3, while OTUs are very unique on model 0 and others shared between most models.</p>
@@ -429,13 +429,13 @@ Lastly, the time and the demographic block are related by a factor of a 0.1.
 In either case the family 1 and family 2 models can correctly separate by sample location (colon or ileum) but not by disease type or inflammation status as can be seen below.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-models"></span>
 <img src="images/hasler-models.png" alt="" />
-<p class="caption">Figure 4.13:  Models on the Häsler’s dataset</p>
+<p class="caption">Figure 4.13:  Models on the Häsler’s dataset. Model 0 with just the transcriptome and microbiome data. Models 1.1 to 1.2 with transcriptome, microbiome and sample data in a single block. Models 2.1 and 2.2 with transcriptome, microbiome and sample data in multiple blocks. On the A panel colored by disease on the B panel colored by location of the sample.</p>
 </div>
 <p>There is no observable cluster of IBD samples and the other samples, showing that on this dataset the differences of the microbiome between the different type of samples are less stark.</p>
 <p>MCIA was applied as a baseline of the integration and compared to the different models to know which one separates best colon and ileum samples.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-mcia"></span>
 <img src="images/paper1_MCIA.png" alt="ROC curve of the different datasets with the models from RGCCA and the result with MCIA" />
-<p class="caption">Figure 4.14:  ROC curve of the different datasets with the models from RGCCA and the result with MCIA</p>
+<p class="caption">Figure 4.14:  ROC curve of the different models from RGCCA, discontinued line, and the result with MCIA in gray.</p>
 </div>
 <p>MCIA results was high but not as high as the model 2.2.</p>
 </div>
@@ -445,15 +445,15 @@ In either case the family 1 and family 2 models can correctly separate by sample
 The different models were not able to separate the samples neither by location or sex.</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-models"></span>
 <img src="images/morgans_models.png" alt="" />
-<p class="caption">Figure 4.15:  First component of the transcriptome and microbiome of the Morgan’s dataset.</p>
+<p class="caption">Figure 4.15:  First component of the transcriptome and microbiome of the Morgan’s dataset.Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample.</p>
 </div>
 <p>Nevertheless we compared the classification with the MCIA algorithm and still resulted that model 2.2 provide a better classification than MCIA.</p>
 <p>When exploring the bootstraps of the data we found that model 1.2 is highly variable:</p>
-<!--# TODO: MCIA plot-->
 <div class="figure"><span style="display:block;" id="fig:morgan-bootstrap"></span>
 <img src="images/morgans_bootstrap.png" alt="" />
-<p class="caption">Figure 4.16:  Inner and outer AVE scores of the bootstrapped models.</p>
+<p class="caption">Figure 4.16:  Inner and outer AVE scores of the bootstrapped models 0 1.2 and 2.2. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptonme and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks.</p>
 </div>
+<!--# TODO: Add points of the modesl on the real dataset -->
 <p>In addition the model 2.2 usually has a lower inner AVE compared to model 1.2.</p>
 <!--# TODO: AUC comparison of RGCCA and MCIA -->
 </div>
@@ -471,13 +471,13 @@ The different models were not able to separate the samples neither by location o
 Model 2.2 was selected.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-models"></span>
 <img src="images/howells_models.png" alt="" />
-<p class="caption">Figure 4.17:  The three main models on the Howells dataset. Colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn’s disease.</p>
+<p class="caption">Figure 4.17:  The three main models, model 0, 1.2 and 2.2 on the Howell’s dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn’s disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks.</p>
 </div>
 <p>Model 1.2 has a 0.1 relationship between the ASV and the transcriptome and 1 between transcriptome and metadata.
 While model 2.2 has a relationship of 1 between location and transcriptome and demographics and ASV but only of 0.1 between demographics and location.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-bootstrap"></span>
 <img src="images/howells_models_bootstrap.png" alt="" />
-<p class="caption">Figure 4.18:  Bootstrap of the different models.</p>
+<p class="caption">Figure 4.18:  Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset.</p>
 </div>
 <p>The bootstrapping showed that model 1.2 has indeed higher inner AVE values than model 2.2 and is more stable than model 1.2.
 While model 0 shows a high variation according to which samples are selected.</p>
