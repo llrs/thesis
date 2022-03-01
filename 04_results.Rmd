@@ -297,9 +297,10 @@ This dataset was processed as usual but as part of the quality controls of the d
 
 ![(#fig:barcelona-diversity) Diversity indices of Barcelona according to the location and disease status.](images/barcelona-diversity.png)
 
-Diversity of control samples should be lower and not on the same range as with samples of patients with IBD. 
-This was the third time the data was sequenced, so it does not seem to be a problem of the sequencing facility.
-For this reason this data was abandoned as not reliable 
+Control samples diversity should be lower and not on the same range as with samples of patients with IBD. 
+The dataset's 16S was sequenced several times by different platforms.
+Despite the pilots and the negative controls on the sequencing process, each time there were different problems: contamination, low quality and then this suspicious diversity.
+It does not seem to be a problem of the sequencing facility, so this data was abandoned as unreliable.
 
 
 ### Howell's dataset {#results-howell}

@@ -4,14 +4,14 @@
 
 Quality of RNAseq analysis and 16S sequencing is important.
 Avoid contamination, same primers and read lengths (if using Illumina machines).
-Comparing 16S taxa ASV or OTUs is hard and selecting the right tool to compare them is important [@nearing2022]. 
-It is also worth to keep in mind that several species have different number of copies of the 16S. 
-Thus chosing one region or the other affects the result. 
+Comparing 16S taxa ASV or OTUs is hard and selecting the right tool to compare them is important [@nearing2022].
+It is also worth to keep in mind that several species have different number of copies of the 16S.
+Thus chosing one region or the other affects the result.
 In addition, it has been observed that there are differences between the regions used to amplify the 16S.
 It would be better to fully sequence the 16S.
 
-Furthermore, the precision of 16S sequecing for classification of taxa is not very precise. 
-As suggested by adherent invasive epithelical cells (AIEC), cells with same genetic background might show different behaviour and thus play a different role on the health of the patients.  
+Furthermore, the precision of 16S sequecing for classification of taxa is not very precise.
+As suggested by adherent invasive epithelical cells (AIEC), cells with same genetic background might show different behaviour and thus play a different role on the health of the patients.
 
 In this chapter we will summarize the main findings in relation to the broad research community and other work as well as the impact of the results to improve further research in the future or be used on clinical environments.
 
@@ -54,14 +54,14 @@ WGCNA did not work well.
 It is a tool designed to find common patterns based on correlations requiring homogeneous samples.
 Having samples from multiple segments and conditions did not help.
 We could have tried to make smaller groups and then compare the modules between them but it probably would not have ended well as the groups would be too small.
-Lastly, having microbiome and RNASeq on the same matrix, would probably be hard for the process to find good relationships if we applied the same normalization process to both of them. 
+Lastly, having microbiome and RNASeq on the same matrix, would probably be hard for the process to find good relationships if we applied the same normalization process to both of them.
 
-adonis and globaltest worked well to identify which variables were important. 
+adonis and globaltest worked well to identify which variables were important.
 But it could be that we missed some other important variable.
-However, even if we missed it we probably haven't collected it or it is not available so, no point on trying to find it. 
+However, even if we missed it we probably haven't collected it or it is not available so, no point on trying to find it.
 
-There is a lack of methodology to calculate the size of cohorts for interaction or multiomic studies. 
-There are no clear rules about which alpha power or which kind of relations are tested. 
+There is a lack of methodology to calculate the size of cohorts for interaction or multiomic studies.
+There are no clear rules about which alpha power or which kind of relations are tested.
 This is due to a lack of mathematical background and modelization of the relations on the biological field.
 In addition to the highly local and not generalizable interactions that happen on biological samples.
 
@@ -70,7 +70,6 @@ MCIA works well as baseline.
 STATegRa is not customizable to specific interaction between the datasets.
 
 RGCCA some improvements.
-
 
 ## Designing models
 
@@ -100,13 +99,11 @@ The procedure of separating independent variables in their own block of data and
 The procedural method of searching a model and testing them is implemented on [inteRmodel](https://llrs.github.io/inteRmodel/ "inteRmodel").
 But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling.
 
-
 Transciptome is related to localization of the samples.
 
 Microbiome is more related to the disease and other variables of the patients.
 
 Time is an important variable when modelling the disease, if multiple timepoints are taken they should be taken into account to identify the state of the disease for each patient.
-
 
 [@jiang2019] A paper about multi-omics and microbiome...
 
@@ -137,4 +134,6 @@ The several environmental factors highly affect the disease, so analysis or comp
 Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing [@zhang2019].
 
 <!--# From @collij2021 add references/adapt-->
-To study complex systems, new technologies like "organ-on-chip" or more specifically "gut-on-chip" are being developed [@collij2021]. By introducing gut microbiota, these system will be of great help in the stud of the interaction of the gut microbiota dn the intestinal epithelium.
+
+To study complex systems, new technologies like "organ-on-chip" or more specifically "gut-on-chip" are being developed [@collij2021].
+By introducing gut microbiota, these system will be of great help in the stud of the interaction of the gut microbiota dn the intestinal epithelium.
