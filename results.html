@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-02-28" />
+<meta name="date" content="2022-03-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -381,7 +381,6 @@ The models with the highest inner AVE of the family 1 and the family 2 models we
 <p class="caption">Figure 4.7:  On the x-axis the transcriptome, on the Y axis the Microbiome. Each square represents a different model of the HSCT dataset. On panel A colored by disease status, on panel B colored by sample location. Model 0 has only transcriptome and microbiome data, models 1 to 1.2 with data about the samples and models 2.1 to 2.3 with data about the samples split in 3 blokcs.</p>
 </div>
 <p>The weights of these models can be observed here:</p>
-<!--# TODO: Show tables of the models -->
 <p>The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see Figure and <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002">S2</a> data of <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">198</a>]</span>).
 Overall, we see that the relationships in the model affected the distribution of samples on the components of both the host transcriptome and the microbiome.</p>
 <p>The different models selected different variables, some of which are shared between models.
@@ -423,7 +422,11 @@ Genes are very similar between model 0 to 1.2 and between 2 to 2.3, while OTUs a
 <div id="results-hasler" class="section level3" number="4.2.3">
 <h3><span class="header-section-number">4.2.3</span> Häsler’s dataset</h3>
 <p>In this dataset, the parameter tau behaved slightly differently than with the previous dataset but the value from the Schäfer’s method for tau was close to the best value.</p>
-<!--# TODO: Show how different/what happened with tau -->
+<div class="figure"><span style="display:block;" id="fig:hasler-tau"></span>
+<img src="images/hasler-centroid_tau.png" alt="" />
+<p class="caption">Figure 4.13:  Changes on tau on the centroid scheme on the Häsler dataset affect the inner AVE score on the model 1.</p>
+</div>
+<!-- # TODO: fill the  AVE numbers here -->
 <p>In contrast to the HSCT’s dataset, the model with the highest inner AVE was model 1.2 (inner AVE value of ) but model 2.2 was close to it (inner AVE of ).
 Model 2.2 has a relationship of 0.1 between microbiome and the host transcriptome and of 1 between the location and the host transcriptome.
 The microbiome block is also related by a factor of 0.1 with the demographic block and of 1 with the time block.
@@ -431,39 +434,45 @@ Lastly, the time and the demographic block are related by a factor of a 0.1.
 In either case the family 1 and family 2 models can correctly separate by sample location (colon or ileum) but not by disease type or inflammation status as can be seen below.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-models"></span>
 <img src="images/hasler-models.png" alt="" />
-<p class="caption">Figure 4.13:  Models on the Häsler’s dataset. Model 0 with just the transcriptome and microbiome data. Models 1.1 to 1.2 with transcriptome, microbiome and sample data in a single block. Models 2.1 and 2.2 with transcriptome, microbiome and sample data in multiple blocks. On the A panel colored by disease on the B panel colored by location of the sample.</p>
+<p class="caption">Figure 4.14:  Models on the Häsler’s dataset. Model 0 with just the transcriptome and microbiome data. Models 1.1 to 1.2 with transcriptome, microbiome and sample data in a single block. Models 2.1 and 2.2 with transcriptome, microbiome and sample data in multiple blocks. On the A panel colored by disease on the B panel colored by location of the sample.</p>
 </div>
 <p>There is no observable cluster of IBD samples and the other samples, showing that on this dataset the differences of the microbiome between the different type of samples are less stark.</p>
 <p>MCIA was applied as a baseline of the integration and compared to the different models to know which one separates best colon and ileum samples.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-mcia"></span>
-<img src="images/paper1_MCIA.png" alt="ROC curve of the different datasets with the models from RGCCA and the result with MCIA" />
-<p class="caption">Figure 4.14:  ROC curve of the different models from RGCCA, discontinued line, and the result with MCIA in gray.</p>
+<img src="images/hasler-mcia.png" alt="MCIA results" />
+<p class="caption">Figure 4.15:  MCIA first two dimensions of the dataset.</p>
 </div>
+<!-- # Add ROC curves with RGCCA models on it-->
 <p>MCIA results was high but not as high as the model 2.2.</p>
 </div>
 <div id="results-morgan" class="section level3" number="4.2.4">
 <h3><span class="header-section-number">4.2.4</span> Morgan’s dataset</h3>
-<p>We tested if results of inteRmodel were consistent on this dataset.
+<p>We tested if results of inteRmodel were consistent on this dataset with the other datasets.
 The different models were not able to separate the samples neither by location or sex.</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-models"></span>
 <img src="images/morgans_models.png" alt="" />
-<p class="caption">Figure 4.15:  First component of the transcriptome and microbiome of the Morgan’s dataset.Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample.</p>
+<p class="caption">Figure 4.16:  First component of the transcriptome and microbiome of the Morgan’s dataset.Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample.</p>
 </div>
 <p>Nevertheless we compared the classification with the MCIA algorithm and still resulted that model 2.2 provide a better classification than MCIA.</p>
 <p>When exploring the bootstraps of the data we found that model 1.2 is highly variable:</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-bootstrap"></span>
 <img src="images/morgans_bootstrap.png" alt="" />
-<p class="caption">Figure 4.16:  Inner and outer AVE scores of the bootstrapped models 0 1.2 and 2.2. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptonme and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks.</p>
+<p class="caption">Figure 4.17:  Inner and outer AVE scores of the bootstrapped models 0 1.2 and 2.2. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptonme and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks.</p>
 </div>
-<!--# TODO: Add points of the modesl on the real dataset -->
+<!--# TODO: Add points of the models on the real dataset -->
 <p>In addition the model 2.2 usually has a lower inner AVE compared to model 1.2.</p>
 <!--# TODO: AUC comparison of RGCCA and MCIA -->
 </div>
 <div id="results-barcelona" class="section level3" number="4.2.5">
 <h3><span class="header-section-number">4.2.5</span> BARCELONA dataset</h3>
-<p>This dataset was processed but the results are not trustable as the microbiome diversity falls off the accepted values.</p>
-<p>Diversity plots</p>
-<!--# TODO: Add plots of diversity -->
+<p>This dataset was processed as usual but as part of the quality controls of the dataset the diversity measures of the samples was analyzed:</p>
+<div class="figure"><span style="display:block;" id="fig:barcelona-diversity"></span>
+<img src="images/barcelona-diversity.png" alt="" />
+<p class="caption">Figure 4.18:  Diversity indices of Barcelona according to the location and disease status.</p>
+</div>
+<p>Diversity of control samples should be lower and not on the same range as with samples of patients with IBD.
+This was the third time the data was sequenced, so it does not seem to be a problem of the sequencing facility.
+For this reason this data was abandoned as not reliable</p>
 </div>
 <div id="results-howell" class="section level3" number="4.2.6">
 <h3><span class="header-section-number">4.2.6</span> Howell’s dataset</h3>
@@ -473,13 +482,13 @@ The different models were not able to separate the samples neither by location o
 Model 2.2 was selected.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-models"></span>
 <img src="images/howells_models.png" alt="" />
-<p class="caption">Figure 4.17:  The three main models, model 0, 1.2 and 2.2 on the Howell’s dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn’s disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks.</p>
+<p class="caption">Figure 4.19:  The three main models, model 0, 1.2 and 2.2 on the Howell’s dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn’s disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks.</p>
 </div>
 <p>Model 1.2 has a 0.1 relationship between the ASV and the transcriptome and 1 between transcriptome and metadata.
 While model 2.2 has a relationship of 1 between location and transcriptome and demographics and ASV but only of 0.1 between demographics and location.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-bootstrap"></span>
 <img src="images/howells_models_bootstrap.png" alt="" />
-<p class="caption">Figure 4.18:  Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset.</p>
+<p class="caption">Figure 4.20:  Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset.</p>
 </div>
 <p>The bootstrapping showed that model 1.2 has indeed higher inner AVE values than model 2.2 and is more stable than model 1.2.
 While model 0 shows a high variation according to which samples are selected.</p>
@@ -487,6 +496,7 @@ While model 0 shows a high variation according to which samples are selected.</p
 <p>On this dataset we also focused on the most important ASV according to the model 2.2 that were present in more than 2 samples that in total were present in the whole dataset.
 These ASV were summarized to a single value and then used to calculate the AUC, which was 0.85.
 The dot product of the ASV and genes were also calculated and used to find out which ASV are related to which genes.</p>
+<!--# TODO show hair ball plot ? -->
 <!--# TODO continue/fix this -->
 </div>
 <div id="results-hernandez" class="section level3" number="4.2.7">

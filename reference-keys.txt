@@ -21,10 +21,12 @@ fig:hsct-bootstrap
 fig:hsct-mcia
 fig:hsct-auc
 fig:hsct-features
+fig:hasler-tau
 fig:hasler-models
 fig:hasler-mcia
 fig:morgan-models
 fig:morgan-bootstrap
+fig:barcelona-diversity
 fig:howell-models
 fig:howell-bootstrap
 tab:appendix-methods
