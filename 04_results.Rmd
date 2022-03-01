@@ -207,8 +207,6 @@ The models with the highest inner AVE of the family 1 and the family 2 models we
 
 The weights of these models can be observed here:
 
-<!--# TODO: Show tables of the models -->
-
 The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see Figure and [S2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002) data of [@revilla2021]).
 Overall, we see that the relationships in the model affected the distribution of samples on the components of both the host transcriptome and the microbiome.
 
@@ -251,7 +249,9 @@ Genes are very similar between model 0 to 1.2 and between 2 to 2.3, while OTUs a
 
 In this dataset, the parameter tau behaved slightly differently than with the previous dataset but the value from the Schäfer's method for tau was close to the best value.
 
-<!--# TODO: Show how different/what happened with tau -->
+![(#fig:hasler-tau) Changes on tau on the centroid scheme on the Häsler dataset affect the inner AVE score on the model 1.](images/hasler-centroid_tau.png)
+
+<!-- # TODO: fill the  AVE numbers here -->
 
 In contrast to the HSCT's dataset, the model with the highest inner AVE was model 1.2 (inner AVE value of ) but model 2.2 was close to it (inner AVE of ).
 Model 2.2 has a relationship of 0.1 between microbiome and the host transcriptome and of 1 between the location and the host transcriptome.
@@ -265,13 +265,15 @@ There is no observable cluster of IBD samples and the other samples, showing tha
 
 MCIA was applied as a baseline of the integration and compared to the different models to know which one separates best colon and ileum samples.
 
-![(#fig:hasler-mcia) ROC curve of the different models from RGCCA, discontinued line, and the result with MCIA in gray.](images/paper1_MCIA.png){alt="ROC curve of the different datasets with the models from RGCCA and the result with MCIA"}
+![(#fig:hasler-mcia) MCIA first two dimensions of the dataset. ](images/hasler-mcia.png){alt="MCIA results"}
+
+<!-- # Add ROC curves with RGCCA models on it-->
 
 MCIA results was high but not as high as the model 2.2.
 
 ### Morgan's dataset {#results-morgan}
 
-We tested if results of inteRmodel were consistent on this dataset.
+We tested if results of inteRmodel were consistent on this dataset with the other datasets.
 The different models were not able to separate the samples neither by location or sex.
 
 ![(#fig:morgan-models) First component of the transcriptome and microbiome of the Morgan's dataset.Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample.](images/morgans_models.png)
@@ -283,7 +285,7 @@ When exploring the bootstraps of the data we found that model 1.2 is highly vari
 
 ![(#fig:morgan-bootstrap) Inner and outer AVE scores of the bootstrapped models 0 1.2 and 2.2. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptonme and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks.](images/morgans_bootstrap.png)
 
-<!--# TODO: Add points of the modesl on the real dataset -->
+<!--# TODO: Add points of the models on the real dataset -->
 
 In addition the model 2.2 usually has a lower inner AVE compared to model 1.2.
 
@@ -291,11 +293,14 @@ In addition the model 2.2 usually has a lower inner AVE compared to model 1.2.
 
 ### BARCELONA dataset {#results-barcelona}
 
-This dataset was processed but the results are not trustable as the microbiome diversity falls off the accepted values.
+This dataset was processed as usual but as part of the quality controls of the dataset the diversity measures of the samples was analyzed:
 
-Diversity plots
+![(#fig:barcelona-diversity) Diversity indices of Barcelona according to the location and disease status.](images/barcelona-diversity.png)
 
-<!--# TODO: Add plots of diversity -->
+Diversity of control samples should be lower and not on the same range as with samples of patients with IBD. 
+This was the third time the data was sequenced, so it does not seem to be a problem of the sequencing facility.
+For this reason this data was abandoned as not reliable 
+
 
 ### Howell's dataset {#results-howell}
 
@@ -322,6 +327,8 @@ On this dataset we also focused on the most important ASV according to the model
 These ASV were summarized to a single value and then used to calculate the AUC, which was 0.85.
 The dot product of the ASV and genes were also calculated and used to find out which ASV are related to which genes.
 
+
+<!--# TODO show hair ball plot ? -->
 <!--# TODO continue/fix this -->
 
 ### Hernández' dataset {#results-hernandez}
