@@ -199,8 +199,8 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="5.1" data-path="discussion.html"><a href="discussion.html#preliminary-steps"><i class="fa fa-check"></i><b>5.1</b> Preliminary steps<span></span></a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="discussion.html"><a href="discussion.html#the-datasets"><i class="fa fa-check"></i><b>5.1.1</b> <strong>The datasets</strong><span></span></a></li>
-<li class="chapter" data-level="5.1.2" data-path="discussion.html"><a href="discussion.html#the-methods"><i class="fa fa-check"></i><b>5.1.2</b> <strong>The methods</strong><span></span></a></li>
+<li class="chapter" data-level="5.1.1" data-path="discussion.html"><a href="discussion.html#the-datasets"><i class="fa fa-check"></i><b>5.1.1</b> The datasets<span></span></a></li>
+<li class="chapter" data-level="5.1.2" data-path="discussion.html"><a href="discussion.html#the-methods"><i class="fa fa-check"></i><b>5.1.2</b> The methods<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="discussion.html"><a href="discussion.html#designing-models"><i class="fa fa-check"></i><b>5.2</b> Designing models<span></span></a></li>
 <li class="chapter" data-level="5.3" data-path="discussion.html"><a href="discussion.html#evaluating-models"><i class="fa fa-check"></i><b>5.3</b> Evaluating models<span></span></a></li>
@@ -251,7 +251,7 @@ In addition control samples can be added, a blank to control for extraneous mate
 Rarely there are problems with bulk RNAseq sequencing and its quality.
 On the contrary DNA extraction and 16S sequencing was a new procedure.
 Initially it was done with the guidelines of collaborators.
-Later, when we did ourselvs we did not include control samples but after some problems we started adding at least blank samples to identify those bacteria that might come with the solvent or be due to contamination.</p>
+Later, when we did ourselves we did not include control samples but after some problems we started adding at least blank samples to identify those bacteria that might come with the solvent or be due to contamination.</p>
 <p>Once the 16S data was obtained we initially processed it to obtain OTUs.
 OTUs were the standard some years back.
 However, OTUs are not comparable between studies even those that use the same primers.
@@ -261,39 +261,74 @@ However, comparing 16S taxa ASV or OTUs is hard and selecting the right tool to 
 <p>It is also worth to keep in mind that several species have variable number of 16S rRNA genes.
 Higher sequences counts of certain 16S might not mean higher abundance of that species compared to another with lower 16S counts.
 However, the exact copy number status may change even within the same bacterial species, making the correction difficult <span class="citation">[<a href="#ref-louca2018" role="doc-biblioref">200</a>]</span>.
-It is possible to accurately correct for copy number variation on mock populations where the species and the genomes are known (or at least the 16S rRNA), but harder on samples which content is unkown.</p>
+It is possible to accurately correct for copy number variation on mock populations where the species and the genomes are known (or at least the 16S rRNA), but harder on samples which content is unknown.</p>
 <!--# In addition, there are differences on the sequencing reads depending on the  regions selected to amplify the 16S. It would be better to fully sequence the 16S. -->
 <p>Furthermore, the precision of 16S sequencing for classification of taxa is not enough to understand its role on the gut.
-Adherent invasive cells, are cells with same genetic content that show different behavior<span class="citation">[<a href="#ref-nadalian2021" role="doc-biblioref">201</a>]</span>.
+Adherent invasive cells, are cells with same genetic content that show different behavior <span class="citation">[<a href="#ref-nadalian2021" role="doc-biblioref">201</a>]</span>.
+These microbiome is known to be present on patients with IBD.
 Thus even with the complete sequence play a different role on the health of the patients.</p>
-<p>Largely all these steps were out of my control as they were performed by a lab teammate or by collaborators.</p>
+<p>Most of these steps were out of my control as they were performed by a lab teammate or by collaborators.
+Other concerns are currently unavoidable or could not have been found beforehand.</p>
 <div id="the-datasets" class="section level3 hasAnchor" number="5.1.1">
-<h3><span class="header-section-number">5.1.1</span> <strong>The datasets</strong><a href="discussion.html#the-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">5.1.1</span> The datasets<a href="discussion.html#the-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>There is a lack of methodology to calculate the size of cohorts for interaction or multiomic studies.
 There are no clear rules about which alpha power or which kind of relations are tested.
 This is due to a lack of mathematical background and modelization of the relations on the biological field.
 In addition to the highly local and not generalizable interactions that happen on biological samples.
 Usually size of the datasets is determined by practical concerns, either costs or patient recruitment on protocols.</p>
+<p>There are some efforts to simulate multi-omic datasets <span class="citation">[<a href="#ref-martínez-mira2018" role="doc-biblioref">202</a>]</span>.
+They usually focus on RNA-seq, ATAC-seq (DNase-seq), ChIP-seq, small RNA-seq, Methyl-seq or proteomics.
+To my knowledge there is no accurate generator of 16S datasets or other microbiome datasets.
+This made impossible to simulate and compare different tools on a known dataset.
+Current approaches focus on comparing tools on (several) previously published datasets <span class="citation">[<a href="#ref-cantini2021" role="doc-biblioref">203</a>]</span>.
+An approach that we have taken not to compare different tools that we also do but to validate findings of one dataset in other datasets.</p>
 <p>Comparing different datasets is complicated because each is collected with different goals and processed differently.
-We looked up for the most similar datasets in order to be able to confirm our results.
-Although on each section we analyzed multiple datasets.</p>
-<p>On this thesis there were two datasets collected and sequenced.
-The HSCT and the BARCELONA dataset.
-On the HSCT dataset the ….</p>
-<p>On the BARCELONA dataset .
-What happened with the BARCELONA cohort and the organoids cohort (not described here) highlights the importance of the quality check of the data.
-On the first case it was a clear batch effect that at the time of sequencing it was unavoidable and could not be corrected.
-On the BARCELONA cohort despite no batch effect or other quality issues with the data, the diversity indices made impossible using it.</p>
+In addition, there is not a resource were datasets of publications are collected or the relationships between different datasets is not shared.
+Authors upload their data to different not centralized data repositories such as gene expression omnibus (<a href="https://www.ncbi.nlm.nih.gov/geo/">GEO</a>), European Genome-Phenome Archive (<a href="https://ega-archive.org/">EGA</a>) or as supplementary data on their articles.
+On some big projects they upload their data to dedicated sites <span class="citation">[<a href="#ref-humanmicrobiomeprojectconsortium2012" role="doc-biblioref">204</a>]</span>.
+There are also some restrictions when sharing sequencing data due to privacy concerns or consent regulations.</p>
+<p>All this made finding annotated, appropriate and similar datasets difficult.
+We looked up for the most similar datasets in order to be able to confirm our results outside our own cohorts.
+On this thesis there were two datasets collected and sequenced: the HSCT and the BARCELONA dataset.</p>
+<p>As explained on <a href="materials-and-methods.html#methods-hsct">methods</a>, the HSCT dataset is a very special cohort of patients undergoing hematopoietic stem cell transplant.
+This treatment is reserved to patients whose all the other treatment failed and this is the only way to reach remission.
+This is common on patients with long time CD.
+These patients are highly characterized and there is follow up data for several years.
+However, it does not include UC patients and they are not representative of the IBD, or even CD, patients.</p>
+<p>On the HSCT dataset microbiome features were OTUs.
+OTUs can not be imputed afterwards to ASV.
+As such, the annotation of the 16S data is not the same as in the others datasets.</p>
+<p>The BARCELONA dataset includes samples from CD and UC of an ongoing study.
+Similar to the HSCT dataset, patients on this study were followed up for up to a year.
+The patients were younger and had less years with the disease, which could provide with more insights on the initial relationships between the microbiome and the mucosa of the IBD.</p>
+<p>However, the data quality of BARCELONA was not good enough to make reliable analysis and confidently extract hypothesis or relationships.
+It is not clear what happened or how to avoid such problems on the future.
+It could be a problem of the original DNA extraction and of the sequencing process which did not include both positive and negative controls.</p>
+<p>What happened with the BARCELONA dataset -and the organoids cohort not described here- highlights the importance of data quality checks.
+On the BARCELONA cohort despite no batch effect or other quality issues with the data as checked with <code>experDesign</code>, the diversity indices made impossible using it.
+The organoids cohort is a dataset that was sequenced following the <code>experDesign</code> recommendations for distribution of samples on different batches.
+However, a batch effect was found.
+The batch effect was created on the lab process before the samples’ sequencing.
+Caution and a good relationship with the data sample and data generator is important to discover these kind of problems.</p>
+<p>Other datasets used from published sourced were assumed they had already passed enough controls and had a good quality.
+Nevertheless, they were screened to avoid this kind of quality issues.</p>
+<p>The Puget’s dataset dataset provided a good benchmark to test the methods and understand how RGCCA works.
+It is a completely different type of data (except for the microarray that is similar to the RNAseq).
+But we were not as much interested on the biology as on learning about the methods and possibilities of integration.</p>
 <p>Häsler data were obtained using the same sequencing techniques from endoscopic biopsies as our dataset HSCT and Barcelona and it is of the same disease/field.
-The confirmation that the inteRmodel approach works on it it helped to continue forward.</p>
+The 16S data was very similar to the The confirmation that the inteRmodel approach works on it it helped to continue forward.</p>
 <p>The taxonomy of the different datasets was done differently.
 After the first two datasets it was used the SILVA database to annotate the ASV.</p>
-<p>On the HSCT dataset as OTUs were used it could not be imputed afterwards to the same SILVA database without recasting the 16S to ASV.
-The annotation of the 16S data is not the same as in the others.
-The Cristian’s dataset was also imputed with SILVA but using a different database version.</p>
+<p>Morgan’s dataset is related to IBD but it is from a cohort of patients (it does not include any healthy control) that underwent colectomy and samples are specific of the pouch or pre-pouch ileum, there are no healthy samples and there is no follow up.
+It made very unlikely that a classification of the location could be achieved and the classification of the samples according to the microbiota could not be based on the disease (as all of them had undergone the same procedure with the same disease).
+There seems to be gradation on the models on  that could partially be explained by different degrees of inflammation.</p>
+<p>Howell’s dataset is very similar to our BARCELONA dataset but on pediatric cases.
+It includes both CD and UC (and controls).
+The time with the disease of these patients is much lower, and they have might followed less treatments and probably have not had any surgery</p>
+<p>The Cristian’s dataset was also imputed with SILVA but using a different database version.</p>
 </div>
 <div id="the-methods" class="section level3 hasAnchor" number="5.1.2">
-<h3><span class="header-section-number">5.1.2</span> <strong>The methods</strong><a href="discussion.html#the-methods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">5.1.2</span> The methods<a href="discussion.html#the-methods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>As seen on the introduction many methods are available.
 Some of them were tested on one or several datasets.</p>
 <p>If we had to summarize all the work in one sentence we would say that…</p>
@@ -303,7 +338,7 @@ On the thesis the focus was more on finding a good representation of the disease
 There are frequent new tools and methods released, and the most up to date list of tools might be added to a <a href="https://github.com/mikelove/awesome-multi-omics" title="Awesome multi-omics list">collaborative list</a> (from which the appendix table of methods has been taken).</p>
 <p>With the increase of tools there have been more pressure on comparing different tools.
 There have been already some articles comparing the different tools, which the previous mentioned list also has.
-There are reviews of different tools on the same datasets <span class="citation">[<a href="#ref-cantini2020" role="doc-biblioref">202</a>]</span>, some are more theoretical, others are focused on a different field.
+There are reviews of different tools on the same datasets <span class="citation">[<a href="#ref-cantini2020" role="doc-biblioref">205</a>]</span>, some are more theoretical, others are focused on a different field.
 Recently there has been a recent article focused on integration on IBD <span class="citation">[<a href="#ref-sudhakar2022" role="doc-biblioref">149</a>]</span>.</p>
 <p>adonis and globaltest worked well to identify which variables were important.
 But it could be that we missed some other important variable.
@@ -340,7 +375,7 @@ Depending on the goals of the research one or the other should be used.
 If we are more interested on the model of the relationships the inner AVE makes more sense.</p>
 <p>Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
 Another option is to use an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately.
-Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4 package">MCIA</a> <span class="citation">[<a href="#ref-mengMultivariateApproachIntegration2014" role="doc-biblioref">203</a>]</span>.
+Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4 package">MCIA</a> <span class="citation">[<a href="#ref-mengMultivariateApproachIntegration2014" role="doc-biblioref">206</a>]</span>.
 Which was compared by looking at the area under the curve for classifying the samples according to their location.</p>
 <p>Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn’s disease.
 In this article we did not look in depth to the biological relevance of the microorganisms an genes found.</p>
@@ -350,13 +385,13 @@ But the most important thing is to consider which variables are independent of w
 <p>Transciptome is related to localization of the samples.</p>
 <p>Microbiome is more related to the disease and other variables of the patients.</p>
 <p>Time is an important variable when modelling the disease, if multiple timepoints are taken they should be taken into account to identify the state of the disease for each patient.</p>
-<p><span class="citation">[<a href="#ref-jiang2019" role="doc-biblioref">204</a>]</span> A paper about multi-omics and microbiome…</p>
+<p><span class="citation">[<a href="#ref-jiang2019" role="doc-biblioref">207</a>]</span> A paper about multi-omics and microbiome…</p>
 <p><span class="citation">[<a href="#ref-krassowski2020" role="doc-biblioref">93</a>]</span> advice and recommendations on software engineering and reproducibility practices to share a comprehensive awareness with new researchers in multi-omics for end-to-end workflow.</p>
 </div>
 <div id="relevance-for-other-research" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Relevance for other research<a href="discussion.html#relevance-for-other-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>It is hard to provide more information that can be later used by researchers on the wet lab.</p>
-<p>Paper about using transcriptomics to infer inflammation without colonoscopy <span class="citation">[<a href="#ref-ungar2022" role="doc-biblioref">205</a>]</span></p>
+<p>Paper about using transcriptomics to infer inflammation without colonoscopy <span class="citation">[<a href="#ref-ungar2022" role="doc-biblioref">208</a>]</span></p>
 <p>There is a disconnect between the computational side and the experimental side, driven by the difficulty to think an experiment to test the new information that multi-omic experiments provide.</p>
 <p>Many combinations possible that are hard to explore, further research on how to reduce the space of possible combinations of bacteria or evaluate which combinations are more important might be useful on the future.
 As this might help focus on the most promising bacteria.</p>
@@ -368,9 +403,9 @@ How to apply this results ?</p>
 <p>Sequence just the ASV on patients to classify them on disease might be an option that would require further clinical validation.</p>
 <p>Selecting which genes are related to the microorganisms is will require also further validation (for which I did not have the creativity to think of).</p>
 <p>The several environmental factors highly affect the disease, so analysis or comparisons without taking into account them might provide misleading or false results.</p>
-<p>Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing <span class="citation">[<a href="#ref-zhang2019" role="doc-biblioref">206</a>]</span>.</p>
+<p>Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing <span class="citation">[<a href="#ref-zhang2019" role="doc-biblioref">209</a>]</span>.</p>
 <!--# From @collij2021 add references/adapt-->
-<p>To study complex systems, new technologies like “organ-on-chip” or more specifically “gut-on-chip” are being developed <span class="citation">[<a href="#ref-collij2021" role="doc-biblioref">207</a>]</span>.
+<p>To study complex systems, new technologies like “organ-on-chip” or more specifically “gut-on-chip” are being developed <span class="citation">[<a href="#ref-collij2021" role="doc-biblioref">210</a>]</span>.
 By introducing gut microbiota, these system will be of great help in the stud of the interaction of the gut microbiota dn the intestinal epithelium.</p>
 
 </div>
@@ -392,23 +427,32 @@ By introducing gut microbiota, these system will be of great help in the stud of
 <div id="ref-nadalian2021" class="csl-entry">
 201. Nadalian B, Yadegar A, Houri H, Olfatifar M, Shahrokh S, Asadzadeh Aghdaei H, et al. <a href="https://doi.org/10.1111/jgh.15260">Prevalence of the pathobiont adherent-invasive Escherichia coli and inflammatory bowel disease: a systematic review and meta-analysis</a>. Journal of Gastroenterology and Hepatology. 2021;36:852–63.
 </div>
+<div id="ref-martínez-mira2018" class="csl-entry">
+202. Martínez-Mira C, Conesa A, Tarazona S. <a href="https://doi.org/10.1101/421834">MOSim: Multi-Omics Simulation in R</a>. 2018.
+</div>
+<div id="ref-cantini2021" class="csl-entry">
+203. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. <a href="https://doi.org/10.1038/s41467-020-20430-7">Benchmarking joint multi-omics dimensionality reduction approaches for the study of cancer</a>. Nature Communications. 2021;12:124.
+</div>
+<div id="ref-humanmicrobiomeprojectconsortium2012" class="csl-entry">
+204. Human Microbiome Project Consortium BA, Nelson KE, Pop M, Creasy HH, Giglio MG, Huttenhower C, et al. <a href="https://doi.org/10.1038/nature11209">A framework for human microbiome research.</a> Nature. 2012;486:21521.
+</div>
 <div id="ref-cantini2020" class="csl-entry">
-202. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. <a href="https://doi.org/10.1101/2020.01.14.905760">Benchmarking joint multi-omics dimensionality reduction approaches for cancer study</a>. bioRxiv. 2020;2020.01.14.905760.
+205. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. <a href="https://doi.org/10.1101/2020.01.14.905760">Benchmarking joint multi-omics dimensionality reduction approaches for cancer study</a>. bioRxiv. 2020;2020.01.14.905760.
 </div>
 <div id="ref-mengMultivariateApproachIntegration2014" class="csl-entry">
-203. Meng C, Kuster B, Culhane AC, Gholami AM. <a href="https://doi.org/10.1186/1471-2105-15-162">A multivariate approach to the integration of multi-omics datasets</a>. BMC Bioinformatics. 2014;15:162.
+206. Meng C, Kuster B, Culhane AC, Gholami AM. <a href="https://doi.org/10.1186/1471-2105-15-162">A multivariate approach to the integration of multi-omics datasets</a>. BMC Bioinformatics. 2014;15:162.
 </div>
 <div id="ref-jiang2019" class="csl-entry">
-204. Jiang D, Armour CR, Hu C, Mei M, Tian C, Sharpton TJ, et al. <a href="https://www.frontiersin.org/article/10.3389/fgene.2019.00995">Microbiome multi-omics network analysis: Statistical considerations, limitations, and opportunities</a>. Frontiers in Genetics. 2019;10.
+207. Jiang D, Armour CR, Hu C, Mei M, Tian C, Sharpton TJ, et al. <a href="https://www.frontiersin.org/article/10.3389/fgene.2019.00995">Microbiome multi-omics network analysis: Statistical considerations, limitations, and opportunities</a>. Frontiers in Genetics. 2019;10.
 </div>
 <div id="ref-ungar2022" class="csl-entry">
-205. Ungar B, Yavzori M, Fudim E, Picard O, Kopylov U, Eliakim R, et al. Host transcriptome signatures in human faecal-washes predict histological remission in patients with IBD. Gut. 2022. <a href="https://doi.org/10.1136/gutjnl-2021-325516">https://doi.org/10.1136/gutjnl-2021-325516</a>.
+208. Ungar B, Yavzori M, Fudim E, Picard O, Kopylov U, Eliakim R, et al. Host transcriptome signatures in human faecal-washes predict histological remission in patients with IBD. Gut. 2022. <a href="https://doi.org/10.1136/gutjnl-2021-325516">https://doi.org/10.1136/gutjnl-2021-325516</a>.
 </div>
 <div id="ref-zhang2019" class="csl-entry">
-206. Zhang X, Li L, Butcher J, Stintzi A, Figeys D. <a href="https://doi.org/10.1186/s40168-019-0767-6">Advancing functional and translational microbiome research using meta-omics approaches</a>. Microbiome. 2019;7:154.
+209. Zhang X, Li L, Butcher J, Stintzi A, Figeys D. <a href="https://doi.org/10.1186/s40168-019-0767-6">Advancing functional and translational microbiome research using meta-omics approaches</a>. Microbiome. 2019;7:154.
 </div>
 <div id="ref-collij2021" class="csl-entry">
-207. Collij V, Klaassen MAY, Weersma RK, Vila AV. <a href="https://doi.org/10.1007/s00439-020-02218-3">Gut microbiota in inflammatory bowel diseases: moving from basic science to clinical applications</a>. Human Genetics. 2021;140:703–8.
+210. Collij V, Klaassen MAY, Weersma RK, Vila AV. <a href="https://doi.org/10.1007/s00439-020-02218-3">Gut microbiota in inflammatory bowel diseases: moving from basic science to clinical applications</a>. Human Genetics. 2021;140:703–8.
 </div>
 </div>
             </section>
