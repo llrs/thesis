@@ -1,41 +1,76 @@
 # Discussion
 
-## Preliminary steps
-
-Quality of RNAseq analysis and 16S sequencing is important.
-Avoid contamination, same primers and read lengths (if using Illumina machines).
-Comparing 16S taxa ASV or OTUs is hard and selecting the right tool to compare them is important [@nearing2022].
-It is also worth to keep in mind that several species have different number of copies of the 16S.
-Thus chosing one region or the other affects the result.
-In addition, it has been observed that there are differences between the regions used to amplify the 16S.
-It would be better to fully sequence the 16S.
-
-Furthermore, the precision of 16S sequecing for classification of taxa is not very precise.
-As suggested by adherent invasive epithelical cells (AIEC), cells with same genetic background might show different behaviour and thus play a different role on the health of the patients.
-
 In this chapter we will summarize the main findings in relation to the broad research community and other work as well as the impact of the results to improve further research in the future or be used on clinical environments.
 
-Häsler data data were obtained using the same sequencing techniques from endoscopic biopsies as our dataset HSCT and Barcelona and it is of the same disease/field.
-The confirmation that it works on it it helped to continue forward.
+## Preliminary steps
 
-What happened with the BARCELONA cohort and the organoids cohort (not described here) highlights the importance of the quality check of the data.
-On the first case it was a clear batch effect that at the time of sequencing it was unavoidable and could not be corrected.
-On the BARCELONA cohort despite no batch effect or other quality issues with the data, the diversity indices made impossible using it.
+Quality of the initial data for integration is important for a valid integration analysis.
+On RNAseq and 16S analysis the sequencing data quality is important.
+On sequencing data it is very important to avoid contamination and have enough amount of data for the analysis.
+To avoid contamination it is very important the protocol how are processed the samples before the sequencing.
+In addition control samples can be added, a blank to control for extraneous material and a sample with known content to confirm that the sequencing worked correctly.
+
+On bulk RNAseq the extraction procedure and sequencing protocol has been setup many years ago and works very well.
+Rarely there are problems with bulk RNAseq sequencing and its quality.
+On the contrary DNA extraction and 16S sequencing was a new procedure.
+Initially it was done with the guidelines of collaborators.
+Later, when we did ourselvs we did not include control samples but after some problems we started adding at least blank samples to identify those bacteria that might come with the solvent or be due to contamination.
+
+Once the 16S data was obtained we initially processed it to obtain OTUs.
+OTUs were the standard some years back.
+However, OTUs are not comparable between studies even those that use the same primers.
+For this reason, and after a suggestion from a reviewer, we moved to process later 16S sequencing datasets to obtain ASV.
+ASV allow to compare the taxonomic imputation between studies using the same primers.
+However, comparing 16S taxa ASV or OTUs is hard and selecting the right tool to compare them is important [@nearing2022].
+
+It is also worth to keep in mind that several species have variable number of 16S rRNA genes.
+Higher sequences counts of certain 16S might not mean higher abundance of that species compared to another with lower 16S counts.
+However, the exact copy number status may change even within the same bacterial species, making the correction difficult [@louca2018].
+It is possible to accurately correct for copy number variation on mock populations where the species and the genomes are known (or at least the 16S rRNA), but harder on samples which content is unkown.
+
+<!--# In addition, there are differences on the sequencing reads depending on the  regions selected to amplify the 16S. It would be better to fully sequence the 16S. -->
+
+Furthermore, the precision of 16S sequencing for classification of taxa is not enough to understand its role on the gut.
+Adherent invasive cells, are cells with same genetic content that show different behavior[@nadalian2021].
+Thus even with the complete sequence play a different role on the health of the patients.
+
+Largely all these steps were out of my control as they were performed by a lab teammate or by collaborators.
+
+### **The datasets**
+
+There is a lack of methodology to calculate the size of cohorts for interaction or multiomic studies.
+There are no clear rules about which alpha power or which kind of relations are tested.
+This is due to a lack of mathematical background and modelization of the relations on the biological field.
+In addition to the highly local and not generalizable interactions that happen on biological samples.
+Usually size of the datasets is determined by practical concerns, either costs or patient recruitment on protocols.
 
 Comparing different datasets is complicated because each is collected with different goals and processed differently.
 We looked up for the most similar datasets in order to be able to confirm our results.
 Although on each section we analyzed multiple datasets.
 
-Shared selected variables
+On this thesis there were two datasets collected and sequenced.
+The HSCT and the BARCELONA dataset.
+On the HSCT dataset the ....
 
-`BaseSet` did not work for its intended usage on this thesis.
-It failed because it is computationally expensive to calculate the likelihood of 1500 variables, there are too many combinations.
-In addition, the numeric precision of said calculations suffers from the flotating point problems and must be considered carefully.
-To support multiplying more than 1000 float numbers a different strategy such as using log values might be better.
-We could not come up with a better strategy to find all the combinations needed, perhaps a better method exists that could be used to find which are the terms more influential to the end result.
+On the BARCELONA dataset .
+What happened with the BARCELONA cohort and the organoids cohort (not described here) highlights the importance of the quality check of the data.
+On the first case it was a clear batch effect that at the time of sequencing it was unavoidable and could not be corrected.
+On the BARCELONA cohort despite no batch effect or other quality issues with the data, the diversity indices made impossible using it.
 
-Some batch effects are avoidable due to the experDesign package.
-This might help to improve the quality of the datasets and to expand previously sequenced datasets.
+Häsler data were obtained using the same sequencing techniques from endoscopic biopsies as our dataset HSCT and Barcelona and it is of the same disease/field.
+The confirmation that the inteRmodel approach works on it it helped to continue forward.
+
+The taxonomy of the different datasets was done differently.
+After the first two datasets it was used the SILVA database to annotate the ASV.
+
+On the HSCT dataset as OTUs were used it could not be imputed afterwards to the same SILVA database without recasting the 16S to ASV.
+The annotation of the 16S data is not the same as in the others.
+The Cristian's dataset was also imputed with SILVA but using a different database version.
+
+### **The methods**
+
+As seen on the introduction many methods are available.
+Some of them were tested on one or several datasets.
 
 If we had to summarize all the work in one sentence we would say that...
 
@@ -50,26 +85,30 @@ There have been already some articles comparing the different tools, which the p
 There are reviews of different tools on the same datasets [@cantini2020], some are more theoretical, others are focused on a different field.
 Recently there has been a recent article focused on integration on IBD [@sudhakar2022].
 
+adonis and globaltest worked well to identify which variables were important.
+But it could be that we missed some other important variable.
+However, even if we missed it we probably haven't collected it or it is not available so, no point on trying to find it.
+
 WGCNA did not work well.
 It is a tool designed to find common patterns based on correlations requiring homogeneous samples.
 Having samples from multiple segments and conditions did not help.
 We could have tried to make smaller groups and then compare the modules between them but it probably would not have ended well as the groups would be too small.
 Lastly, having microbiome and RNASeq on the same matrix, would probably be hard for the process to find good relationships if we applied the same normalization process to both of them.
 
-adonis and globaltest worked well to identify which variables were important.
-But it could be that we missed some other important variable.
-However, even if we missed it we probably haven't collected it or it is not available so, no point on trying to find it.
-
-There is a lack of methodology to calculate the size of cohorts for interaction or multiomic studies.
-There are no clear rules about which alpha power or which kind of relations are tested.
-This is due to a lack of mathematical background and modelization of the relations on the biological field.
-In addition to the highly local and not generalizable interactions that happen on biological samples.
-
 MCIA works well as baseline.
 
 STATegRa is not customizable to specific interaction between the datasets.
 
 RGCCA some improvements.
+
+`BaseSet` did not work for its intended usage on this thesis.
+It failed because it is computationally expensive to calculate the likelihood of 1500 variables, there are too many combinations.
+In addition, the numeric precision of said calculations suffers from the flotating point problems and must be considered carefully.
+To support multiplying more than 1000 float numbers a different strategy such as using log values might be better.
+We could not come up with a better strategy to find all the combinations needed, perhaps a better method exists that could be used to find which are the terms more influential to the end result.
+
+Some batch effects are avoidable due to the experDesign package.
+This might help to improve the quality of the datasets and to expand previously sequenced datasets.
 
 ## Designing models
 
