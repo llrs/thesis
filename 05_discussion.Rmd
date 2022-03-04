@@ -40,24 +40,35 @@ Other concerns are currently unavoidable or could not have been found beforehand
 
 ### The datasets
 
-There is a lack of methodology to calculate the size of cohorts for interaction or multiomic studies.
+There is not a methodology to calculate the size of cohorts for interaction or multiomic studies.
 There are no clear rules about which alpha power or which kind of relations are tested.
-This is due to a lack of mathematical background and modelization of the relations on the biological field.
+This might be due to a lack of mathematical background and modelization of the relations on the biological field.
+Further research on this area might help finding which kind of relationships can be found given certain dataset size.
 In addition to the highly local and not generalizable interactions that happen on biological samples.
-Usually size of the datasets is determined by practical concerns, either costs or patient recruitment on protocols.
+Usually size of the datasets is determined from practical reasons: either costs or patient recruitment on protocols.
 
 There are some efforts to simulate multi-omic datasets [@martínez-mira2018].
 They usually focus on RNA-seq, ATAC-seq (DNase-seq), ChIP-seq, small RNA-seq, Methyl-seq or proteomics.
 To my knowledge there is no accurate generator of 16S datasets or other microbiome datasets.
-This made impossible to simulate and compare different tools on a known dataset.
-Current approaches focus on comparing tools on (several) previously published datasets [@cantini2021].
-An approach that we have taken not to compare different tools that we also do but to validate findings of one dataset in other datasets.
+This made impossible to simulate and compare different tools on a dataset with known relationships.
+Current approaches focus on comparing tools on (several) previously published datasets [@cantini2021], an approach that we have taken too.
+This approach was not used to compare different tools, that we also do it, but to validate findings of one dataset in other datasets.
+
+There is not a golden dataset for integration.
+There are many possible relationships between variables and different ways these relationships might be: regulated DNA, protein recruitment, transcription factors, siRNA regulation.
+Not a single one can be measured on a sufficiently detailed timescale that it can matter and as a result we are left with trying to guess what are the the relationships between variables.
+In addition, this is compound by the lack of explanations about how this relationships might come, despite other indications.
 
 Comparing different datasets is complicated because each is collected with different goals and processed differently.
 In addition, there is not a resource were datasets of publications are collected or the relationships between different datasets is not shared.
-Authors upload their data to different not centralized data repositories such as gene expression omnibus ([GEO](https://www.ncbi.nlm.nih.gov/geo/)), European Genome-Phenome Archive ([EGA](https://ega-archive.org/)) or as supplementary data on their articles.
-On some big projects they upload their data to dedicated sites [@humanmicrobiomeprojectconsortium2012].
-There are also some restrictions when sharing sequencing data due to privacy concerns or consent regulations.
+Authors upload their data to different, not centralized, data repositories, such as, gene expression omnibus ([GEO](https://www.ncbi.nlm.nih.gov/geo/)), European Genome-Phenome Archive ([EGA](https://ega-archive.org/)), European Nucleotide Archive ([ENA](https://www.ebi.ac.uk/ena/browser/home)), among others.
+Authors might provide the processed data as supplementary material on their articles.
+Some projects whose primary purpose is providing data for the community establishing their own dedicated sites to store the data [@humanmicrobiomeprojectconsortium2012].
+
+Finding different datasets for very similarly purposes is very difficult.
+And once it is found there might be batch effects.
+There are tools to overcome this, but currently only work if they share some features in common [@ugidos2020].
+This usually means having undergone similar RNA sequencing procedures.
 
 All this made finding annotated, appropriate and similar datasets difficult.
 We looked up for the most similar datasets in order to be able to confirm our results outside our own cohorts.
@@ -67,8 +78,7 @@ As explained on [methods](#methods-hsct), the HSCT dataset is a very special coh
 This treatment is reserved to patients whose all the other treatment failed and this is the only way to reach remission.
 This is common on patients with long time CD.
 These patients are highly characterized and there is follow up data for several years.
-However, it does not include UC patients and they are not representative of the IBD, or even CD, patients.
-
+However, it does not include UC patients and they are not representative of the IBD, or even CD, patients.\
 On the HSCT dataset microbiome features were OTUs.
 OTUs can not be imputed afterwards to ASV.
 As such, the annotation of the 16S data is not the same as in the others datasets.
@@ -78,18 +88,18 @@ Similar to the HSCT dataset, patients on this study were followed up for up to a
 The patients were younger and had less years with the disease, which could provide with more insights on the initial relationships between the microbiome and the mucosa of the IBD.
 
 However, the data quality of BARCELONA was not good enough to make reliable analysis and confidently extract hypothesis or relationships.
-It is not clear what happened or how to avoid such problems on the future.
-It could be a problem of the original DNA extraction and of the sequencing process which did not include both positive and negative controls.
+It is not clear what happened and as a consequence it is not clear how to avoid such problems on the future.
+It could be a problem of the original DNA extraction and/or of its sequencing process which did not include both positive and negative controls.
 
 What happened with the BARCELONA dataset -and the organoids cohort not described here- highlights the importance of data quality checks.
 On the BARCELONA cohort despite no batch effect or other quality issues with the data as checked with `experDesign`, the diversity indices made impossible using it.
 The organoids cohort is a dataset that was sequenced following the `experDesign` recommendations for distribution of samples on different batches.
 However, a batch effect was found.
 The batch effect was created on the lab process before the samples' sequencing.
-Caution and a good relationship with the data sample and data generator is important to discover these kind of problems.
+Caution and a good relationship with the data sample and data generator is important to discover these kind of problems and ensure the quality of the data.
 
 Other datasets used from published sourced were assumed they had already passed enough controls and had a good quality.
-Nevertheless, they were screened to avoid this kind of quality issues.
+Nevertheless, they were screened to avoid quality issues.
 
 The Puget's dataset dataset provided a good benchmark to test the methods and understand how RGCCA works.
 It is a completely different type of data (except for the microarray that is similar to the RNAseq).
@@ -101,7 +111,7 @@ The 16S data was very similar to the The confirmation that the inteRmodel approa
 The taxonomy of the different datasets was done differently.
 After the first two datasets it was used the SILVA database to annotate the ASV.
 
-Morgan's dataset is related to IBD but it is from a cohort of patients (it does not include any healthy control) that underwent colectomy and samples are specific of the pouch or pre-pouch ileum, there are no healthy samples and there is no follow up.
+Morgan's dataset is related to IBD but it is from a cohort of patients that underwent colectomy and samples are specific of the pouch or pre-pouch ileum, there are no healthy samples and there is no follow up.
 It made very unlikely that a classification of the location could be achieved and the classification of the samples according to the microbiota could not be based on the disease (as all of them had undergone the same procedure with the same disease).
 There seems to be gradation on the models on \ref{#fig:morgan-models} that could partially be explained by different degrees of inflammation.
 
@@ -113,13 +123,14 @@ The Cristian's dataset was also imputed with SILVA but using a different databas
 
 ### The methods
 
-As seen on the introduction many methods are available.
-Some of them were tested on one or several datasets.
+As seen on the introduction and on the [appendices](#online-resources) many methods are available.
+Methods are very different in how they can be used.
+Some of them were tested several datasets but their most important validation process undergone is the mathematical validation they have.
 
-If we had to summarize all the work in one sentence we would say that...
-
-Many work focus on finding some genes or bacteria to answer a question they have in mind.
-On the thesis the focus was more on finding a good representation of the disease that allowed me to identify genes and bacteria that were relevant to our questions.
+Many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria is related to inflammation.
+On this thesis the focus was on finding a good representation of the disease that allowed me to identify genes and bacteria that were relevant to our questions.
+We didn't make other assumptions that thinking that the microbiome and the transcriptome are related.
+This assumption is backed up by several other previous studies supporting this relationship [ref:needed].
 
 There are many methods for integration developed, each with their shortcomings and strengths.
 There are frequent new tools and methods released, and the most up to date list of tools might be added to a [collaborative list](https://github.com/mikelove/awesome-multi-omics "Awesome multi-omics list") (from which the appendix table of methods has been taken).
