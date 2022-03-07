@@ -44,8 +44,7 @@ But once a segment is affected by the disease it can be considered as involved, 
 
 ### Etiology and pathogenesis
 
-Several mechanisms have been proposed to drive IBD pathogenesis [@zhang2014; @hugot2004].
-Some of them are based on a relationship between the immune system and the microbiome [@silva2016; @demattos2015].
+Several mechanisms have been proposed to drive IBD pathogenesis [@zhang2014; @hugot2004]. Some of them are based on a relationship between the immune system and the microbiome [@silva2016; @demattos2015].
 It is also unclear if CD and the UC share the same origin considering their different symptoms.
 
 There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015; @satsangi2006].
@@ -63,8 +62,7 @@ This has lead to look for genetic factors on IBD both on general population and 
 Genome wide association studies (GWAS) are one of the most common genetic studies performed, together with methylation studies.
 To discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.
 
-With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019].
-Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in UC [@jostins2012; @momozawa2018].
+With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019]. Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in UC [@jostins2012; @momozawa2018].
 The mechanism of how this gene protects from UC has not been confirmed yet [@horowitz2021].
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
@@ -89,9 +87,7 @@ IBD has been characterized by a breakdown in the balance between beneficial and 
 Indeed, many studies show that patients with IBD have less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
 $\alpha$-diversity is a measure of the species present on a single sample and its abundance while $\beta$-diversity compares the diversity between samples.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004].
-At the same time there is often a reduction of protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium* which might be able to protect individuals from mucosal inflammation via several mechanism such as a downregulation of proinflammatory cytokines or the stimulation of IL-10 and antiinflammatory cytokines [@ott2004].
-Specially *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004]. At the same time there is often a reduction of protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium* which might be able to protect individuals from mucosal inflammation via several mechanism such as a downregulation of proinflammatory cytokines or the stimulation of IL-10 and antiinflammatory cytokines [@ott2004]. Specially *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
 
 <!--# Aida 2.3 p24-->
 
@@ -206,8 +202,7 @@ All these can lead to delays on correct diagnosis of the disease.
 
 <!--# Tesis Ana p21-->
 
-The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with CD [@khanna2017].
-The detection of fecal calprotectin, is generally a good marker of endoscopic activity with sensitivity above 70% and specificity above 80% [@guardiola2018; @sands2015].
+The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with CD [@khanna2017]. The detection of fecal calprotectin, is generally a good marker of endoscopic activity with sensitivity above 70% and specificity above 80% [@guardiola2018; @sands2015].
 
 <!--# End-->
 
@@ -302,8 +297,7 @@ On CD the effects are not so stark and generally it does not produce changes on 
 Antibiotics, such as metronidazol and ciprofloxacina, are effective to deal with secondary effects of IBD such as abscess and bacterian overgrowth in CD [@feller2010; @prantera2009], but they do not seem effective on UC [@prantera2009].
 
 Corticosteroids can be taken orally, such as prednisolona, prednisona and Budesonide; intravenous, hidrocortisona, metilprednisolona; or via enemas and suppositories.
-Budesonide is not absorved well and has a limited biodistribution but it has good therapeutic benefits with a reduced systemic toxicity in IBD [@rezaie2015; @peyrin-biroulet2010].
-These drugs work very well as antiinflammatory for mild or severe IBD but do not work well as maintenance drug [@lichtenstein2009; @ouellette2001].
+Budesonide is not absorved well and has a limited biodistribution but it has good therapeutic benefits with a reduced systemic toxicity in IBD [@rezaie2015; @peyrin-biroulet2010]. These drugs work very well as antiinflammatory for mild or severe IBD but do not work well as maintenance drug [@lichtenstein2009; @ouellette2001].
 
 Thiopurines (Azathioprine, mercaptopurina) are immunosuppressants drugs that deactivate key process of limphocytes T that might trigger the inflammation.
 As a side effect they are toxic due to their interaction with nucleic acids [@warner2018].
@@ -374,7 +368,7 @@ According to the data used, we can classify the studies:
 
 Most of the integrations refer some other source of data to the transcriptomics of the patient.
 The transcriptome of patients derived samples has been extensively studied since the existence of microarrays.
-There are known marker gens of inflammation and many research focus on identifying prognosis predictors and treatment response prediction based on gene expression [@planell2013; @leal2015].
+There are known marker gens of inflammation and many research focus on identifying prognosis predictors and treatment response prediction based on gene expression [@planell2013; @leal2015; @massimino2021].
 Recently single-cell RNA-seq technology has enabled to estimate cell populations of the samples with better degree of success than bulk RNA-sequencing.
 Single cell technologies are starting to be used for integration.
 
@@ -397,8 +391,7 @@ This has lead to the identification of expression quantitative trait loci (eQTL)
 #### Metabolome
 
 More recently there have been an increased interest on the study of the metabolic stat of IBD patients, given that microorganisms interact with the host also via their products and metabolites.
-There is evidence some of these metabolomic products come from the microbiome [@ferrer-picón2020; @mayorgas2021].
-Some studies have integrated the metabolome with the RNAseq and state of the epithelium [@ahmed2016; @gallagher2021].
+There is evidence some of these metabolomic products come from the microbiome [@ferrer-picón2020; @mayorgas2021]. Some studies have integrated the metabolome with the RNAseq and state of the epithelium [@ahmed2016; @gallagher2021].
 
 ## Integration
 
@@ -417,8 +410,7 @@ Lately, the access to bigger datasets with more variables and often from the sam
 The explosion of data on biological sciences has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time.
 If done with multiple sequencing technologies it is usually referred as multi-omics methods, which usually only uses omic data.
 
-It is crucial to classify, review and compare tools available, as well as, to benchmark these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019].
-Part of these efforts use the methods' strategies to classify them [@cavill2016; @chongComputationalApproachesIntegrative2017].
+It is crucial to classify, review and compare tools available, as well as, to benchmark these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019]. Part of these efforts use the methods' strategies to classify them [@cavill2016; @chongComputationalApproachesIntegrative2017].
 Following this view I will review the available integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
 
 ### Classification of integration method
@@ -477,8 +469,7 @@ An example of this is the search of markers on blood to identify links between d
 A signature is usually a group of features that describe/are representative of a cell type, a process or a stage.
 Identifying a subset of variables from the omics that are related is often a desired goal because it reduces the amount of variables allowing to perform experiments on the bench on just those that might be important.
 In other fields, such as machine learning, selecting the important variables is known as [feature selection](https://en.wikipedia.org/wiki/Feature_selection "Wikipedia page of feature selection").
-There are several methods that are used to do this [@cavill2016].
-An example of this is when performing eQTL analysis, where a locus is related to a change in gene expression [@repnik2016; @hu2021; @jung2020; @dai2019].
+There are several methods that are used to do this [@cavill2016]. An example of this is when performing eQTL analysis, where a locus is related to a change in gene expression [@repnik2016; @hu2021; @jung2020; @dai2019].
 
 -   A predictive model
 
@@ -682,8 +673,7 @@ Or if looking by patient: how do interpret that in these patient variable A and 
 In a principal component analysis for instance how do we interpret that some variables have the same loading?
 What happens in a more complex method like canonical correlation analysis?
 
-There are some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981].
-Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
+There are some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981]. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
 Which is used to compare the results of the integration with the dataset of interest and to compare different tools.
 These datasets are created with some relationships that the tools are expected to find.
 
