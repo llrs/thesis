@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-03-04" />
+<meta name="date" content="2022-03-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -513,7 +513,7 @@ These techniques allow to measure or visualize where are the cells expressing ce
 <p>Furthermore several studies have been carried out to discover links between microbiome and the inflammation, followed by those looking for some relationship between genetics and the disease and more recently the metabolome.
 These studies, known as integration, multi-omic or interaction studies, usually use multiple sequencing assays as the bases of the analysis <span class="citation">[<a href="#ref-beck2021" role="doc-biblioref">78</a>]</span>.</p>
 <p>However, confirming causal interactions of the variables of each essay is difficult.
-To find relationships some articles use correlation <span class="citation">[<a href="#ref-hasler_uncoupling_2016" role="doc-biblioref">79</a>]</span>, there are others that use a combination of methods from correlations, partial correlations to integrative methods <span class="citation">[<a href="#ref-tang_integrated_2017" role="doc-biblioref">80</a>–<a href="#ref-huWholeExomeSequencing2021" role="doc-biblioref">82</a>]</span> and network integrations <span class="citation">[<a href="#ref-hernández-rocha2021" role="doc-biblioref">81</a>]</span>.</p>
+To find relationships some articles use correlation <span class="citation">[<a href="#ref-hasler_uncoupling_2016" role="doc-biblioref">79</a>]</span>, there are others that use a combination of methods from correlations, partial correlations to integrative methods <span class="citation">[<a href="#ref-tang2017" role="doc-biblioref">80</a>–<a href="#ref-huWholeExomeSequencing2021" role="doc-biblioref">82</a>]</span> and network integrations <span class="citation">[<a href="#ref-hernández-rocha2021" role="doc-biblioref">81</a>]</span>.</p>
 <p>Very rarely there is an experimental confirmation of the relationships between variables of the different assays because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
 One of the few methods published that shows an interaction between genes and microorganisms on IBD is to expose the <em>ex-vivo</em> sample or cell lines with microbiomes or supernatant of at their culture <span class="citation">[<a href="#ref-mayorgas2021" role="doc-biblioref">83</a>]</span>.</p>
 <div id="data-origin" class="section level3 hasAnchor" number="1.2.1">
@@ -532,7 +532,7 @@ Single cell technologies are starting to be used for integration.</p>
 <p>Many of the integration analysis on IBD are done between host transcriptome and the microbiome.
 These studies use datasets from IBD patients usually stratified by disease activity or severity of inflammation or location of the disease.
 Most of them are based on correlation analysis between the microbiome and RNA-seq <span class="citation">[<a href="#ref-hasler_uncoupling_2016" role="doc-biblioref">79</a>]</span>.
-Conclusions of these integrations range from finding differences on the correlation depending on the type of disease (<span class="citation">[<a href="#ref-hasler_uncoupling_2016" role="doc-biblioref">79</a>]</span>) to finding relationships with inflammatory genes <span class="citation">[<a href="#ref-tang_integrated_2017" role="doc-biblioref">80</a>]</span>.</p>
+Conclusions of these integrations range from finding differences on the correlation depending on the type of disease (<span class="citation">[<a href="#ref-hasler_uncoupling_2016" role="doc-biblioref">79</a>]</span>) to finding relationships with inflammatory genes <span class="citation">[<a href="#ref-tang2017" role="doc-biblioref">80</a>]</span>.</p>
 </div>
 <div id="genetics-1" class="section level4 hasAnchor" number="1.2.1.3">
 <h4><span class="header-section-number">1.2.1.3</span> Genetics<a href="introduction.html#genetics-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -566,7 +566,7 @@ Lately, the access to bigger datasets with more variables and often from the sam
 The explosion of data on biological sciences has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time.
 If done with multiple sequencing technologies it is usually referred as multi-omics methods, which usually only uses omic data.</p>
 <p>It is crucial to classify, review and compare tools available, as well as, to benchmark these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them <span class="citation">[<a href="#ref-wu_selective_2019" role="doc-biblioref">97</a>]</span>.
-Part of these efforts use the methods’ strategies to classify them <span class="citation">[<a href="#ref-cavill_transcriptomic_2016" role="doc-biblioref">98</a>, <a href="#ref-chongComputationalApproachesIntegrative2017" role="doc-biblioref">99</a>]</span>.
+Part of these efforts use the methods’ strategies to classify them <span class="citation">[<a href="#ref-cavill2016" role="doc-biblioref">98</a>, <a href="#ref-chongComputationalApproachesIntegrative2017" role="doc-biblioref">99</a>]</span>.
 Following this view I will review the available integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.</p>
 <div id="classification-of-integration-method" class="section level3 hasAnchor" number="1.3.1">
 <h3><span class="header-section-number">1.3.1</span> Classification of integration method<a href="introduction.html#classification-of-integration-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -611,14 +611,14 @@ The objective here might be to accurately describe whether a patient has one or 
 </ul>
 <p>Sometimes the question is which omic method is the best describing a disease.
 This knowledge could prevent performing expensive tests and replace them by more affordable or easier technique that has enough predictive power or is sensitive enough and specific for the task.
-An example of this is the search of markers on blood to identify links between different cell populations <span class="citation">[<a href="#ref-tang2017" role="doc-biblioref">101</a>, <a href="#ref-ibrahim2017" role="doc-biblioref">102</a>]</span>.</p>
+An example of this is the search of markers on blood to identify links between different cell populations <span class="citation">[<a href="#ref-tang2017" role="doc-biblioref">80</a>, <a href="#ref-ibrahim2017" role="doc-biblioref">101</a>]</span>.</p>
 <ul>
 <li>Finding a molecular signature.</li>
 </ul>
 <p>A signature is usually a group of features that describe/are representative of a cell type, a process or a stage.
 Identifying a subset of variables from the omics that are related is often a desired goal because it reduces the amount of variables allowing to perform experiments on the bench on just those that might be important.
 In other fields, such as machine learning, selecting the important variables is known as <a href="https://en.wikipedia.org/wiki/Feature_selection" title="Wikipedia page of feature selection">feature selection</a>.
-There are several methods that are used to do this <span class="citation">[<a href="#ref-cavill2016" role="doc-biblioref">103</a>]</span>.
+There are several methods that are used to do this <span class="citation">[<a href="#ref-cavill2016" role="doc-biblioref">98</a>]</span>.
 An example of this is when performing eQTL analysis, where a locus is related to a change in gene expression <span class="citation">[<a href="#ref-repnik2016" role="doc-biblioref">87</a>–<a href="#ref-dai2019" role="doc-biblioref">90</a>]</span>.</p>
 <ul>
 <li>A predictive model</li>
@@ -626,14 +626,14 @@ An example of this is when performing eQTL analysis, where a locus is related to
 <p>Predictive models usually require a very good understanding of the current and/or past relationships, as well as, a good feature selection procedure.
 If a good model on previous data exists it might be used to predict future events.
 Sometimes, models are only built to predict events without being able to accurately understand the underlying mechanism.
-This kind of methods are used to improve treatment selection, diagnosis and prediction of prognosis <span class="citation">[<a href="#ref-wheeler2014" role="doc-biblioref">104</a>]</span>.</p>
+This kind of methods are used to improve treatment selection, diagnosis and prediction of prognosis <span class="citation">[<a href="#ref-wheeler2014" role="doc-biblioref">102</a>]</span>.</p>
 <ul>
 <li>Impute values</li>
 </ul>
 <p>Some methods aim to accurately guess the values of missing data given some other information.
-Missing values can happen for a variety of reasons from practical ones, like a sample not being available, to technical ones, such as laboratory mistake <span class="citation">[<a href="#ref-yin2019" role="doc-biblioref">105</a>]</span>.
+Missing values can happen for a variety of reasons from practical ones, like a sample not being available, to technical ones, such as laboratory mistake <span class="citation">[<a href="#ref-yin2019" role="doc-biblioref">103</a>]</span>.
 However, this is often a intermediate step to other goals.</p>
-<p>To complete these goals it is important to have enough statistical power to determine the significance of tests performed (if any) and to understand how complete are the data sources used on the integration <span class="citation">[<a href="#ref-tarazona2021" role="doc-biblioref">106</a>]</span>.
+<p>To complete these goals it is important to have enough statistical power to determine the significance of tests performed (if any) and to understand how complete are the data sources used on the integration <span class="citation">[<a href="#ref-tarazona2021" role="doc-biblioref">104</a>]</span>.
 Having more statistical power helps identifying the relationships one seeks when using this methods.</p>
 </div>
 <div id="relationship-between-variables-and-samples" class="section level4 hasAnchor" number="1.3.1.3">
@@ -657,7 +657,7 @@ This is even more difficult when looking for causal relationships.</p>
 If there are more than 2 patients, then the number of samples is greater than the number of variables studied.
 This is described in the literature as <span class="math inline">\(n \gg p\)</span> (or big n, little p).
 Nowadays this is less frequent on the bioscience world, and does not causes trouble analyzing it because the high number of samples allows to accurately estimate the dispersion of variables.</p>
-<p>There are several methods available to estimate the number of samples required <span class="citation">[<a href="#ref-tarazona2020" role="doc-biblioref">107</a>]</span>.
+<p>There are several methods available to estimate the number of samples required <span class="citation">[<a href="#ref-tarazona2020" role="doc-biblioref">105</a>]</span>.
 Having just the enough samples for the desired statistical power, however, might not be enough in case some samples are not correctly processed.</p>
 <p>In addition, variables might be separated on different blocks of variables.
 These blocks might be just of the same source or from multiple methods.
@@ -685,9 +685,9 @@ Being aware of the time differences and time scales is crucial in most cases.</p
 <p>During <em>in vitro</em> experiments, conditions can be reproduced even if they are at different time.
 However, when using patients material replicates can not usually be performed like <em>in vitro</em> experiments.
 This makes it harder to study time-related change on patients.</p>
-<p>Lastly, time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNA-seq <span class="citation">[<a href="#ref-massoni-badosa2020" role="doc-biblioref">108</a>, <a href="#ref-zhu2017" role="doc-biblioref">109</a>]</span>.
+<p>Lastly, time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNA-seq <span class="citation">[<a href="#ref-massoni-badosa2020" role="doc-biblioref">106</a>, <a href="#ref-zhu2017" role="doc-biblioref">107</a>]</span>.
 Some genes are more influenced by time than others but as they are measured at the same time in all samples this might distort the data.
-Keeping track of the time that it takes to process samples is also hard to due and requires a highly coordinated effort <span class="citation">[<a href="#ref-ferreira2018" role="doc-biblioref">110</a>]</span>.</p>
+Keeping track of the time that it takes to process samples is also hard to due and requires a highly coordinated effort <span class="citation">[<a href="#ref-ferreira2018" role="doc-biblioref">108</a>]</span>.</p>
 </div>
 </div>
 <div id="relationship-between-variables" class="section level4 hasAnchor" number="1.3.1.5">
@@ -696,7 +696,7 @@ Keeping track of the time that it takes to process samples is also hard to due a
 As mentioned earlier, some variables influence others which can affect the outcome in complex ways.
 With many variables present in a dataset it is important to be aware of known relationships between variables.
 Even in a simple dataset, like an RNA-seq dataset, it is important to be aware of the relationships between variables.</p>
-<p>Since the discovery of the lactose <a href="https://en.wikipedia.org/wiki/Operon">operon</a> it is known how some genes regulate each other <span class="citation">[<a href="#ref-jacob1961" role="doc-biblioref">111</a>]</span>.
+<p>Since the discovery of the lactose <a href="https://en.wikipedia.org/wiki/Operon">operon</a> it is known how some genes regulate each other <span class="citation">[<a href="#ref-jacob1961" role="doc-biblioref">109</a>]</span>.
 However, it is not know how other variables are related between them.
 For instance, how does the increase in expression of a gene affects the growth of a microorganism?
 Usually the relationships between variables are mediated by many factors or interactions.</p>
@@ -704,9 +704,9 @@ Usually the relationships between variables are mediated by many factors or inte
 Their correlation can be used to reduce the number of variables being analyzed by ignoring the relationships between them and using the most representative variable (less widely correlated and with more variation).
 This step is usually done by dimension reduction methods.
 However, sometimes this is not desirable or feasible as the correlation does not explain the direction of the causality of the interaction between the variables (if there is any).</p>
-<p>Network approaches relate the variables to each other <span class="citation">[<a href="#ref-koh_iomicspass_2019" role="doc-biblioref">112</a>]</span>.
+<p>Network approaches relate the variables to each other <span class="citation">[<a href="#ref-koh_iomicspass_2019" role="doc-biblioref">110</a>]</span>.
 These approaches are fairly new and growing in popularity partly because they can address the direction of the interaction.</p>
-<p>In partial correlations the effect of other variables on the two being under study are taken into account <span class="citation">[<a href="#ref-yule1907" role="doc-biblioref">113</a>]</span>.
+<p>In partial correlations the effect of other variables on the two being under study are taken into account <span class="citation">[<a href="#ref-yule1907" role="doc-biblioref">111</a>]</span>.
 They assumes a linear relationship between the co-occurring variables and those of interest.
 However, it is computationally expensive when there are thousands of variables.</p>
 </div>
@@ -719,14 +719,14 @@ But, some methods to account for relationships of variables only work when a dat
 </ul>
 <p>These methods do not handle well or at all missing data.
 They need complete cases/data of the samples in order to be able to integrate the results.
-These methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) <span class="citation">[<a href="#ref-tenenhaus_regularized_2011" role="doc-biblioref">114</a>, <a href="#ref-tenenhaus_variable_2014" role="doc-biblioref">115</a>]</span>, Multiple co-inertia analysis (MCIA) <span class="citation">[<a href="#ref-culhane_cross-platform_2003" role="doc-biblioref">116</a>]</span>, Multi-Study Factor Analysis (MSFA) <span class="citation">[<a href="#ref-vito_multi-study_2019" role="doc-biblioref">117</a>]</span>, Multi-Omics Factor Analysis (MOFA) <span class="citation">[<a href="#ref-argelaguet_multi-omics_2018" role="doc-biblioref">118</a>]</span> and STATegRa <span class="citation">[<a href="#ref-gomez-cabreroSTATegraComprehensiveMultiomics2019" role="doc-biblioref">119</a>]</span>.</p>
+These methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) <span class="citation">[<a href="#ref-tenenhaus_regularized_2011" role="doc-biblioref">112</a>, <a href="#ref-tenenhaus_variable_2014" role="doc-biblioref">113</a>]</span>, Multiple co-inertia analysis (MCIA) <span class="citation">[<a href="#ref-culhane_cross-platform_2003" role="doc-biblioref">114</a>]</span>, Multi-Study Factor Analysis (MSFA) <span class="citation">[<a href="#ref-vito_multi-study_2019" role="doc-biblioref">115</a>]</span>, Multi-Omics Factor Analysis (MOFA) <span class="citation">[<a href="#ref-argelaguet_multi-omics_2018" role="doc-biblioref">116</a>]</span> and STATegRa <span class="citation">[<a href="#ref-gomez-cabreroSTATegraComprehensiveMultiomics2019" role="doc-biblioref">117</a>]</span>.</p>
 <ul>
 <li>Data from different samples:</li>
 </ul>
 <p>These methods do not need data from the same sample.
 They draw their conclusions generalizing from the data available.
 Some of them handle missing data, while others do use the data at face value.
-These method includes MetaPhlAn2 <span class="citation">[<a href="#ref-franzosaSpecieslevelFunctionalProfiling2018" role="doc-biblioref">120</a>]</span>, HUMAnN,<span class="citation">[<a href="#ref-truongMetaPhlAn2EnhancedMetagenomic2015" role="doc-biblioref">121</a>]</span> and LEfSe <span class="citation">[<a href="#ref-segataMetagenomicBiomarkerDiscovery2011" role="doc-biblioref">122</a>]</span>.</p>
+These method includes MetaPhlAn2 <span class="citation">[<a href="#ref-franzosaSpecieslevelFunctionalProfiling2018" role="doc-biblioref">118</a>]</span>, HUMAnN,<span class="citation">[<a href="#ref-truongMetaPhlAn2EnhancedMetagenomic2015" role="doc-biblioref">119</a>]</span> and LEfSe <span class="citation">[<a href="#ref-segataMetagenomicBiomarkerDiscovery2011" role="doc-biblioref">120</a>]</span>.</p>
 <p>Furthermore, some methods are designed to integrate specific types of datasets, (usually because they make some assumptions that are only met on that kind of data).
 For instance, HCG, 16S rRNA-seq, RNA-seq and metabolomics do not share the same data distribution, and are different between them.
 Also even with the same data depending on the processing of the data they can have very different properties: OTUs (operational taxonomic unit) properties are not the same as ASV (amplicon sequence variants) when analyzing 16S rRNAseq data.</p>
@@ -738,20 +738,20 @@ Here I briefly describe some common mathematical frameworks, some of which have 
 <ul>
 <li><p>Networks</p>
 <p>Networks methods were mentioned because they use and find information about the interaction of variables.
-Multilayer networks, including the multiplex, Molti-C-DREAM <span class="citation">[<a href="#ref-didier2018" role="doc-biblioref">123</a>]</span>, Random Walk with Restart on Multiplex and Heterogeneous Biological Networks RWR-MH, Random walk with Restart on Multiplex RWR-M <span class="citation">[<a href="#ref-valdeolivas2019" role="doc-biblioref">124</a>]</span>.
-Network embedding MultiVERSE are some of the methods using networks <span class="citation">[<a href="#ref-pio-lopez2021" role="doc-biblioref">125</a>]</span>.</p>
+Multilayer networks, including the multiplex, Molti-C-DREAM <span class="citation">[<a href="#ref-didier2018" role="doc-biblioref">121</a>]</span>, Random Walk with Restart on Multiplex and Heterogeneous Biological Networks RWR-MH, Random walk with Restart on Multiplex RWR-M <span class="citation">[<a href="#ref-valdeolivas2019" role="doc-biblioref">122</a>]</span>.
+Network embedding MultiVERSE are some of the methods using networks <span class="citation">[<a href="#ref-pio-lopez2021" role="doc-biblioref">123</a>]</span>.</p>
 <p>Bayesian approaches are also quite frequent, these methods use the Bayes’ theorem to see the relationships between variables.
-The Bayes’ theorem explains that the conditional probability of a variable is related to the prior knowledge of conditions that might be related to the event <span class="citation">[<a href="#ref-bayes1763" role="doc-biblioref">126</a>]</span>.
-Some methods that use these approaches are Reconstructing Integrative Molecular Bayesian Network (<a href="https://labs.icahn.mssm.edu/zhulab/?s=rimbanet">RIMBANET</a>) <span class="citation">[<a href="#ref-zhu2012" role="doc-biblioref">127</a>]</span> and Bayesian Consensus Clustering (<a href="https://github.com/ttriche/bayesCC">BCC</a>) <span class="citation">[<a href="#ref-lock2013" role="doc-biblioref">128</a>]</span>.</p></li>
+The Bayes’ theorem explains that the conditional probability of a variable is related to the prior knowledge of conditions that might be related to the event <span class="citation">[<a href="#ref-bayes1763" role="doc-biblioref">124</a>]</span>.
+Some methods that use these approaches are Reconstructing Integrative Molecular Bayesian Network (<a href="https://labs.icahn.mssm.edu/zhulab/?s=rimbanet">RIMBANET</a>) <span class="citation">[<a href="#ref-zhu2012" role="doc-biblioref">125</a>]</span> and Bayesian Consensus Clustering (<a href="https://github.com/ttriche/bayesCC">BCC</a>) <span class="citation">[<a href="#ref-lock2013" role="doc-biblioref">126</a>]</span>.</p></li>
 <li><p>Dimensional Reduction</p>
 <p>These methods focus on finding just a few variables and summarizing them using a function that has some desired property such as the correlation between thre transformed variables is maximal while the components are orthogonal.s The selection of variables is usually done with L1 or Lasso Regression regularization technique or L2 also known as Ridge Regression.
 L1-regularization adds a penalty equal to the absolute value of the magnitude of coefficients which might leads to some coefficients becoming zero and the variable eliminated from the model.
 On the other hand, L2-regularization does not result in elimination of coefficients or sparse models and can only be used when there is multicollinearity as it works well to avoid over-fitting.</p>
-<p>Several tools use this approach, Momix <span class="citation">[<a href="#ref-cantini_benchmarking_2020" role="doc-biblioref">129</a>]</span>, regularized canonical correlation analysis (RGCCA) <span class="citation">[<a href="#ref-tenenhaus2017" role="doc-biblioref">130</a>]</span>, mixOmics <span class="citation">[<a href="#ref-rohart2017" role="doc-biblioref">131</a>]</span> and STATegRa <span class="citation">[<a href="#ref-gomez-cabrero2019" role="doc-biblioref">132</a>]</span>.
-Other methods use bayesian approches like the Bayesian Group Factor Analysis <span class="citation">[<a href="#ref-virtanen2012" role="doc-biblioref">133</a>]</span>.</p></li>
+<p>Several tools use this approach, Momix <span class="citation">[<a href="#ref-cantini_benchmarking_2020" role="doc-biblioref">127</a>]</span>, regularized canonical correlation analysis (RGCCA) <span class="citation">[<a href="#ref-tenenhaus2017" role="doc-biblioref">128</a>]</span>, mixOmics <span class="citation">[<a href="#ref-rohart2017" role="doc-biblioref">129</a>]</span> and STATegRa <span class="citation">[<a href="#ref-gomez-cabrero2019" role="doc-biblioref">130</a>]</span>.
+Other methods use bayesian approches like the Bayesian Group Factor Analysis <span class="citation">[<a href="#ref-virtanen2012" role="doc-biblioref">131</a>]</span>.</p></li>
 <li><p>Active module identification</p>
 <p>Multiomic objective genetic algorithm (scores based in two metrics; node score and density of interactions score).
-An example of a method using this approach is Multi-Objective Genetic Algorithm to Find Active Modules in Multiplex Biological Networks (MOGAMUN) <span class="citation">[<a href="#ref-novoa-del-toro2020" role="doc-biblioref">134</a>]</span></p></li>
+An example of a method using this approach is Multi-Objective Genetic Algorithm to Find Active Modules in Multiplex Biological Networks (MOGAMUN) <span class="citation">[<a href="#ref-novoa-del-toro2020" role="doc-biblioref">132</a>]</span></p></li>
 </ul>
 <p>Usually depending on the mathematical framework used, these methods return similar outputs.</p>
 </div>
@@ -764,17 +764,17 @@ An example of a method using this approach is Multi-Objective Genetic Algorithm 
 <li>Shared factors:</li>
 </ul>
 <p>Integration results in a vector of the samples in a lower dimensional space that is shared by all the data set used to integrate.
-Such methods include iCluster, Multi-Omics Factor Analysis (MOFA) <span class="citation">[<a href="#ref-argelaguet_multi-omics_2018" role="doc-biblioref">118</a>]</span>.</p>
+Such methods include iCluster, Multi-Omics Factor Analysis (MOFA) <span class="citation">[<a href="#ref-argelaguet_multi-omics_2018" role="doc-biblioref">116</a>]</span>.</p>
 <ul>
 <li>Specific factors:</li>
 </ul>
 <p>Integration results in several vectors of the samples in a lower dimensional space of each data set used to integrate.
-Such methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) <span class="citation">[<a href="#ref-tenenhaus_regularized_2011" role="doc-biblioref">114</a>, <a href="#ref-tenenhaus_variable_2014" role="doc-biblioref">115</a>]</span>, Multiple co-inertia analysis (MCIA) <span class="citation">[<a href="#ref-culhane_cross-platform_2003" role="doc-biblioref">116</a>]</span> and Multi-Study Factor Analysis (MSFA) <span class="citation">[<a href="#ref-vito_multi-study_2019" role="doc-biblioref">117</a>]</span>.</p>
+Such methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) <span class="citation">[<a href="#ref-tenenhaus_regularized_2011" role="doc-biblioref">112</a>, <a href="#ref-tenenhaus_variable_2014" role="doc-biblioref">113</a>]</span>, Multiple co-inertia analysis (MCIA) <span class="citation">[<a href="#ref-culhane_cross-platform_2003" role="doc-biblioref">114</a>]</span> and Multi-Study Factor Analysis (MSFA) <span class="citation">[<a href="#ref-vito_multi-study_2019" role="doc-biblioref">115</a>]</span>.</p>
 <ul>
 <li>Mixed factors:</li>
 </ul>
 <p>Integration results in both shared and specific factors, to each dataset and common to all them.
-Such methods include Joint and Individual Variation Explained (JIVE) <span class="citation">[<a href="#ref-lock2013a" role="doc-biblioref">135</a>]</span> and integrative Non-negative Matrix Factorization (<a href="https://github.com/yangzi4/iNMF">iNMF</a>) <span class="citation">[<a href="#ref-yang2016" role="doc-biblioref">136</a>]</span>.</p>
+Such methods include Joint and Individual Variation Explained (JIVE) <span class="citation">[<a href="#ref-lock2013a" role="doc-biblioref">133</a>]</span> and integrative Non-negative Matrix Factorization (<a href="https://github.com/yangzi4/iNMF">iNMF</a>) <span class="citation">[<a href="#ref-yang2016" role="doc-biblioref">134</a>]</span>.</p>
 </div>
 </div>
 <div id="interpretation" class="section level3 hasAnchor" number="1.3.2">
@@ -783,7 +783,7 @@ Such methods include Joint and Individual Variation Explained (JIVE) <span class
 On a correlation between two variables, the interpretation of the analysis is clear, if one variable increase, the other one too.
 The implications of this correlation can be far reaching but the principles to understand them are simple.</p>
 <p>However, on more complex methods the interpretation becomes less clear.
-The interpretation of a canonical correlation analysis is much harder <span class="citation">[<a href="#ref-sherry2005" role="doc-biblioref">137</a>]</span>.
+The interpretation of a canonical correlation analysis is much harder <span class="citation">[<a href="#ref-sherry2005" role="doc-biblioref">135</a>]</span>.
 Also on more complex methods the number of parameters required increases so the time and intellectual effort to understand the relationships between the parameters is also higher.</p>
 <p>The interpretation also helps to discuss the results and relate it to other previously know information.</p>
 <ul>
@@ -797,19 +797,19 @@ Or if looking by patient: how do interpret that in these patient variable A and 
 </ul>
 <p>In a principal component analysis for instance how do we interpret that some variables have the same loading?
 What happens in a more complex method like canonical correlation analysis?</p>
-<p>There are some articles about how to interpret those methods on real datasets <span class="citation">[<a href="#ref-sherryConductingInterpretingCanonical1981" role="doc-biblioref">138</a>]</span>.
-Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset <span class="citation">[<a href="#ref-chung_multi-omics_2019" role="doc-biblioref">139</a>, <a href="#ref-martinez-mira_mosim_2018" role="doc-biblioref">140</a>]</span>.
+<p>There are some articles about how to interpret those methods on real datasets <span class="citation">[<a href="#ref-sherryConductingInterpretingCanonical1981" role="doc-biblioref">136</a>]</span>.
+Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset <span class="citation">[<a href="#ref-chung_multi-omics_2019" role="doc-biblioref">137</a>, <a href="#ref-martinez-mira_mosim_2018" role="doc-biblioref">138</a>]</span>.
 Which is used to compare the results of the integration with the dataset of interest and to compare different tools.
 These datasets are created with some relationships that the tools are expected to find.</p>
-<p>There exists several methods to create synthetic datasets like MOSim <span class="citation">[<a href="#ref-haberman2019" role="doc-biblioref">141</a>]</span>, metaSPARSim <span class="citation">[<a href="#ref-patuzzi2019" role="doc-biblioref">142</a>]</span>, CAMISIM <span class="citation">[<a href="#ref-fritz2019" role="doc-biblioref">143</a>]</span>, ballgown <span class="citation">[<a href="#ref-fu2021" role="doc-biblioref">144</a>]</span>, polyester <span class="citation">[<a href="#ref-frazee2021" role="doc-biblioref">145</a>]</span> and even edgeR <span class="citation">[<a href="#ref-mccarthy2012" role="doc-biblioref">146</a>]</span>.
+<p>There exists several methods to create synthetic datasets like MOSim <span class="citation">[<a href="#ref-haberman2019" role="doc-biblioref">139</a>]</span>, metaSPARSim <span class="citation">[<a href="#ref-patuzzi2019" role="doc-biblioref">140</a>]</span>, CAMISIM <span class="citation">[<a href="#ref-fritz2019" role="doc-biblioref">141</a>]</span>, ballgown <span class="citation">[<a href="#ref-fu2021" role="doc-biblioref">142</a>]</span>, polyester <span class="citation">[<a href="#ref-frazee2021" role="doc-biblioref">143</a>]</span> and even edgeR <span class="citation">[<a href="#ref-mccarthy2012" role="doc-biblioref">144</a>]</span>.
 These methods are useful to compare different setup but they can miss some subtle not previously reported relations on real data.</p>
 </div>
 <div id="reviews" class="section level3 hasAnchor" number="1.3.3">
 <h3><span class="header-section-number">1.3.3</span> Reviews<a href="introduction.html#reviews" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool to apply a given dataset and research question <span class="citation">[<a href="#ref-cantini_benchmarking_2020" role="doc-biblioref">129</a>]</span>.</p>
-<p>Some of these reviews focus on a specific type of data integration: metabolomics <span class="citation">[<a href="#ref-cavill2016" role="doc-biblioref">103</a>]</span>, genomics <span class="citation">[<a href="#ref-mcgovern2015" role="doc-biblioref">10</a>]</span>, microbiomics… Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies <span class="citation">[<a href="#ref-tarazona2021" role="doc-biblioref">106</a>, <a href="#ref-de_souza_ibd_2017" role="doc-biblioref">147</a>, <a href="#ref-valles-colomer2016" role="doc-biblioref">148</a>]</span>.
+<p>The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool to apply a given dataset and research question <span class="citation">[<a href="#ref-cantini_benchmarking_2020" role="doc-biblioref">127</a>]</span>.</p>
+<p>Some of these reviews focus on a specific type of data integration: metabolomics <span class="citation">[<a href="#ref-cavill2016" role="doc-biblioref">98</a>]</span>, genomics <span class="citation">[<a href="#ref-mcgovern2015" role="doc-biblioref">10</a>]</span>, microbiomics… Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies <span class="citation">[<a href="#ref-tarazona2021" role="doc-biblioref">104</a>, <a href="#ref-de_souza_ibd_2017" role="doc-biblioref">145</a>, <a href="#ref-valles-colomer2016" role="doc-biblioref">146</a>]</span>.
 On this regard there are several efforts to integrate data on IBD but no comprehensive review to date is known to the author.
-The most comprehensive article to date is a very recent review identifying problems and providing recommendations for future work <span class="citation">[<a href="#ref-sudhakar2022" role="doc-biblioref">149</a>]</span>.</p>
+The most comprehensive article to date is a very recent review identifying problems and providing recommendations for future work <span class="citation">[<a href="#ref-sudhakar2022" role="doc-biblioref">147</a>]</span>.</p>
 </div>
 <div id="methods-integration" class="section level3 hasAnchor" number="1.3.4">
 <h3><span class="header-section-number">1.3.4</span> Summary<a href="introduction.html#methods-integration" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1050,8 +1050,8 @@ Regardless of the method used, interpretation and reporting is usually the main 
 <div id="ref-hasler_uncoupling_2016" class="csl-entry">
 79. Häsler R, Sheibani-Tezerji R, Sinha A, Barann M, Rehman A, Esser D, et al. <a href="https://doi.org/10.1136/gutjnl-2016-311651">Uncoupling of mucosal gene regulation, <span class="nocase">mRNA</span> splicing and adherent microbiota signatures in inflammatory bowel disease</a>. Gut. 2017;66:2087–97.
 </div>
-<div id="ref-tang_integrated_2017" class="csl-entry">
-80. Tang MS, Bowcutt R, Leung JM, Wolff MJ, Gundra UM, Hudesman D, et al. <a href="https://doi.org/10.1097/MIB.0000000000001208">Integrated <span>Analysis</span> of <span>Biopsies</span> from <span>Inflammatory Bowel Disease Patients Identifies SAA1</span> as a <span>Link Between Mucosal Microbes</span> with <span>TH17</span> and <span>TH22 Cells</span></a>. Inflammatory Bowel Diseases. 2017;23:1544–54.
+<div id="ref-tang2017" class="csl-entry">
+80. Tang MS, Bowcutt R, Leung JM, Wolff MJ, Gundra UM, Hudesman D, et al. <a href="https://doi.org/10.1097/MIB.0000000000001208">Integrated Analysis of Biopsies from Inflammatory Bowel Disease Patients Identifies SAA1 as a Link Between Mucosal Microbes with TH17 and TH22 Cells</a>. Inflammatory Bowel Diseases. 2017;23:1544–54.
 </div>
 <div id="ref-hernández-rocha2021" class="csl-entry">
 81. Hernández-Rocha C, Borowski K, Turpin W, Filice M, Nayeri S, Raygoza Garay JA, et al. Integrative analysis of colonic biopsies from inflammatory bowel disease patients identifies an interaction between microbial bile-acid inducible gene abundance and human angiopoietin-like 4 gene expression. Journal of Crohn’s and Colitis. 2021. <a href="https://doi.org/10.1093/ecco-jcc/jjab096">https://doi.org/10.1093/ecco-jcc/jjab096</a>.
@@ -1098,8 +1098,8 @@ Regardless of the method used, interpretation and reporting is usually the main 
 <div id="ref-wu_selective_2019" class="csl-entry">
 97. Wu C, Zhou F, Ren J, Li X, Jiang Y, Ma S. <a href="https://doi.org/10.3390/ht8010004">A <span>Selective Review</span> of <span>Multi</span>-<span>Level Omics Data Integration Using Variable Selection</span></a>. High-Throughput. 2019;8:4.
 </div>
-<div id="ref-cavill_transcriptomic_2016" class="csl-entry">
-98. Cavill R, Jennen D, Kleinjans J, Bried’e JJ. <a href="https://doi.org/10.1093/bib/bbv090">Transcriptomic and metabolomic data integration</a>. Briefings in Bioinformatics. 2016;17:891–901.
+<div id="ref-cavill2016" class="csl-entry">
+98. Cavill R, Jennen D, Kleinjans J, Briedé JJ. <a href="https://doi.org/10.1093/bib/bbv090">Transcriptomic and metabolomic data integration</a>. Briefings in Bioinformatics. 2016;17:891–901.
 </div>
 <div id="ref-chongComputationalApproachesIntegrative2017" class="csl-entry">
 99. Chong J, Xia J. <a href="https://doi.org/10.3390/metabo7040062">Computational approaches for integrative analysis of the metabolome and microbiome</a>. Metabolites. 2017;7:62.
@@ -1107,152 +1107,146 @@ Regardless of the method used, interpretation and reporting is usually the main 
 <div id="ref-rohart2016" class="csl-entry">
 100. Rohart F, Mason EA, Matigian N, Mosbergen R, Korn O, Chen T, et al. <a href="https://doi.org/10.7717/peerj.1845">A molecular classification of human mesenchymal stromal cells</a>. PeerJ. 2016;4:e1845.
 </div>
-<div id="ref-tang2017" class="csl-entry">
-101. Tang MS, Bowcutt R, Leung JM, Wolff MJ, Gundra UM, Hudesman D, et al. <a href="https://doi.org/10.1097/MIB.0000000000001208">Integrated Analysis of Biopsies from Inflammatory Bowel Disease Patients Identifies SAA1 as a Link Between Mucosal Microbes with TH17 and TH22 Cells</a>. Inflammatory Bowel Diseases. 2017;23:1544–54.
-</div>
 <div id="ref-ibrahim2017" class="csl-entry">
-102. Ibrahim EC, Guillemot V, Comte M, Tenenhaus A, Zendjidjian XY, Cancel A, et al. <a href="https://doi.org/10.1038/s41537-017-0027-3">Modeling a linkage between blood transcriptional expression and activity in brain regions to infer the phenotype of schizophrenia patients</a>. npj Schizophrenia. 2017;3:25.
-</div>
-<div id="ref-cavill2016" class="csl-entry">
-103. Cavill R, Jennen D, Kleinjans J, Briedé JJ. <a href="https://doi.org/10.1093/bib/bbv090">Transcriptomic and metabolomic data integration</a>. Briefings in Bioinformatics. 2016;17:891–901.
+101. Ibrahim EC, Guillemot V, Comte M, Tenenhaus A, Zendjidjian XY, Cancel A, et al. <a href="https://doi.org/10.1038/s41537-017-0027-3">Modeling a linkage between blood transcriptional expression and activity in brain regions to infer the phenotype of schizophrenia patients</a>. npj Schizophrenia. 2017;3:25.
 </div>
 <div id="ref-wheeler2014" class="csl-entry">
-104. Wheeler HE, Aquino-Michaels K, Gamazon ER, Trubetskoy VV, Dolan ME, Huang RS, et al. <a href="https://doi.org/10.1002/gepi.21808">Poly-Omic Prediction of Complex Traits: OmicKriging</a>. Genetic Epidemiology. 2014;38:402–15.
+102. Wheeler HE, Aquino-Michaels K, Gamazon ER, Trubetskoy VV, Dolan ME, Huang RS, et al. <a href="https://doi.org/10.1002/gepi.21808">Poly-Omic Prediction of Complex Traits: OmicKriging</a>. Genetic Epidemiology. 2014;38:402–15.
 </div>
 <div id="ref-yin2019" class="csl-entry">
-105. Yin L, Chau CKL, Sham P-C, So H-C. <a href="https://doi.org/10.1016/j.ajhg.2019.10.012">Integrating Clinical Data and Imputed Transcriptome from GWAS to Uncover Complex Disease Subtypes: Applications in Psychiatry and Cardiology</a>. The American Journal of Human Genetics. 2019;105:1193–212.
+103. Yin L, Chau CKL, Sham P-C, So H-C. <a href="https://doi.org/10.1016/j.ajhg.2019.10.012">Integrating Clinical Data and Imputed Transcriptome from GWAS to Uncover Complex Disease Subtypes: Applications in Psychiatry and Cardiology</a>. The American Journal of Human Genetics. 2019;105:1193–212.
 </div>
 <div id="ref-tarazona2021" class="csl-entry">
-106. Tarazona S, Arzalluz-Luque A, Conesa A. <a href="https://doi.org/10.1038/s43588-021-00086-z">Undisclosed, unmet and neglected challenges in multi-omics studies</a>. Nature Computational Science. 2021;1–8.
+104. Tarazona S, Arzalluz-Luque A, Conesa A. <a href="https://doi.org/10.1038/s43588-021-00086-z">Undisclosed, unmet and neglected challenges in multi-omics studies</a>. Nature Computational Science. 2021;1–8.
 </div>
 <div id="ref-tarazona2020" class="csl-entry">
-107. Tarazona S, Balzano-Nogueira L, Gómez-Cabrero D, Schmidt A, Imhof A, Hankemeier T, et al. <a href="https://doi.org/10.1038/s41467-020-16937-8">Harmonization of quality metrics and power calculation in multi-omic studies</a>. Nature Communications. 2020;11:3092.
+105. Tarazona S, Balzano-Nogueira L, Gómez-Cabrero D, Schmidt A, Imhof A, Hankemeier T, et al. <a href="https://doi.org/10.1038/s41467-020-16937-8">Harmonization of quality metrics and power calculation in multi-omic studies</a>. Nature Communications. 2020;11:3092.
 </div>
 <div id="ref-massoni-badosa2020" class="csl-entry">
-108. Massoni-Badosa R, Iacono G, Moutinho C, Kulis M, Palau N, Marchese D, et al. <a href="https://doi.org/10.1186/s13059-020-02032-0">Sampling time-dependent artifacts in single-cell genomics studies</a>. Genome Biology. 2020;21:112.
+106. Massoni-Badosa R, Iacono G, Moutinho C, Kulis M, Palau N, Marchese D, et al. <a href="https://doi.org/10.1186/s13059-020-02032-0">Sampling time-dependent artifacts in single-cell genomics studies</a>. Genome Biology. 2020;21:112.
 </div>
 <div id="ref-zhu2017" class="csl-entry">
-109. Zhu Y, Wang L, Yin Y, Yang E. <a href="https://doi.org/10.1038/s41598-017-05882-0">Systematic analysis of gene expression patterns associated with postmortem interval in human tissues</a>. Scientific Reports. 2017;7:5435.
+107. Zhu Y, Wang L, Yin Y, Yang E. <a href="https://doi.org/10.1038/s41598-017-05882-0">Systematic analysis of gene expression patterns associated with postmortem interval in human tissues</a>. Scientific Reports. 2017;7:5435.
 </div>
 <div id="ref-ferreira2018" class="csl-entry">
-110. Ferreira PG, Muñoz-Aguirre M, Reverter F, Sá Godinho CP, Sousa A, Amadoz A, et al. <a href="https://doi.org/10.1038/s41467-017-02772-x">The effects of death and post-mortem cold ischemia on human tissue transcriptomes</a>. Nature Communications. 2018;9:490.
+108. Ferreira PG, Muñoz-Aguirre M, Reverter F, Sá Godinho CP, Sousa A, Amadoz A, et al. <a href="https://doi.org/10.1038/s41467-017-02772-x">The effects of death and post-mortem cold ischemia on human tissue transcriptomes</a>. Nature Communications. 2018;9:490.
 </div>
 <div id="ref-jacob1961" class="csl-entry">
-111. Jacob F, Monod J. <a href="https://doi.org/10.1016/S0022-2836(61)80072-7">Genetic regulatory mechanisms in the synthesis of proteins</a>. Journal of Molecular Biology. 1961;3:318–56.
+109. Jacob F, Monod J. <a href="https://doi.org/10.1016/S0022-2836(61)80072-7">Genetic regulatory mechanisms in the synthesis of proteins</a>. Journal of Molecular Biology. 1961;3:318–56.
 </div>
 <div id="ref-koh_iomicspass_2019" class="csl-entry">
-112. Koh HWL, Fermin D, Vogel C, Choi KP, Ewing RM, Choi H. <a href="https://doi.org/10.1038/s41540-019-0099-y"><span class="nocase">iOmicsPASS</span>: Network-based integration of multiomics data for predictive subnetwork discovery</a>. npj Systems Biology and Applications. 2019;5:1–0.
+110. Koh HWL, Fermin D, Vogel C, Choi KP, Ewing RM, Choi H. <a href="https://doi.org/10.1038/s41540-019-0099-y"><span class="nocase">iOmicsPASS</span>: Network-based integration of multiomics data for predictive subnetwork discovery</a>. npj Systems Biology and Applications. 2019;5:1–0.
 </div>
 <div id="ref-yule1907" class="csl-entry">
-113. Yule GU. <a href="https://www.jstor.org/stable/92723">On the theory of correlation for any number of variables, treated by a new system of notation</a>. Proceedings of the Royal Society of London Series A, Containing Papers of a Mathematical and Physical Character. 1907;79:182–93.
+111. Yule GU. <a href="https://www.jstor.org/stable/92723">On the theory of correlation for any number of variables, treated by a new system of notation</a>. Proceedings of the Royal Society of London Series A, Containing Papers of a Mathematical and Physical Character. 1907;79:182–93.
 </div>
 <div id="ref-tenenhaus_regularized_2011" class="csl-entry">
-114. Tenenhaus A, Tenenhaus M. <a href="https://doi.org/10.1007/s11336-011-9206-8">Regularized <span>Generalized Canonical Correlation Analysis</span></a>. Psychometrika. 2011;76:257–84.
+112. Tenenhaus A, Tenenhaus M. <a href="https://doi.org/10.1007/s11336-011-9206-8">Regularized <span>Generalized Canonical Correlation Analysis</span></a>. Psychometrika. 2011;76:257–84.
 </div>
 <div id="ref-tenenhaus_variable_2014" class="csl-entry">
-115. Tenenhaus A, Philippe C, Guillemot V, Le Cao K-A, Grill J, Frouin V. <a href="https://doi.org/10.1093/biostatistics/kxu001">Variable selection for generalized canonical correlation analysis</a>. Biostatistics. 2014;15:569–83.
+113. Tenenhaus A, Philippe C, Guillemot V, Le Cao K-A, Grill J, Frouin V. <a href="https://doi.org/10.1093/biostatistics/kxu001">Variable selection for generalized canonical correlation analysis</a>. Biostatistics. 2014;15:569–83.
 </div>
 <div id="ref-culhane_cross-platform_2003" class="csl-entry">
-116. Culhane AC, Perri‘ere G, Higgins DG. <a href="https://doi.org/10.1186/1471-2105-4-59">Cross-platform comparison and visualisation of gene expression data using co-inertia analysis</a>. BMC Bioinformatics. 2003;4:59.
+114. Culhane AC, Perri‘ere G, Higgins DG. <a href="https://doi.org/10.1186/1471-2105-4-59">Cross-platform comparison and visualisation of gene expression data using co-inertia analysis</a>. BMC Bioinformatics. 2003;4:59.
 </div>
 <div id="ref-vito_multi-study_2019" class="csl-entry">
-117. Vito RD, Bellio R, Trippa L, Parmigiani G. <a href="https://doi.org/10.1111/biom.12974">Multi-study factor analysis</a>. Biometrics. 2019;75:337–46.
+115. Vito RD, Bellio R, Trippa L, Parmigiani G. <a href="https://doi.org/10.1111/biom.12974">Multi-study factor analysis</a>. Biometrics. 2019;75:337–46.
 </div>
 <div id="ref-argelaguet_multi-omics_2018" class="csl-entry">
-118. Argelaguet R, Velten B, Arnol D, Dietrich S, Zenz T, Marioni JC, et al. <a href="https://doi.org/10.15252/msb.20178124">Multi-<span>Omics Factor Analysis</span>a framework for unsupervised integration of multi-omics data sets</a>. Molecular Systems Biology. 2018;14:e8124.
+116. Argelaguet R, Velten B, Arnol D, Dietrich S, Zenz T, Marioni JC, et al. <a href="https://doi.org/10.15252/msb.20178124">Multi-<span>Omics Factor Analysis</span>a framework for unsupervised integration of multi-omics data sets</a>. Molecular Systems Biology. 2018;14:e8124.
 </div>
 <div id="ref-gomez-cabreroSTATegraComprehensiveMultiomics2019" class="csl-entry">
-119. Gomez-Cabrero D, Tarazona S, Ferreir’os-Vidal I, Ramirez RN, Company C, Schmidt A, et al. <a href="https://doi.org/10.1038/s41597-019-0202-7"><span>STATegra</span>, a comprehensive multi-omics dataset of <span>B</span>-cell differentiation in mouse</a>. Scientific Data. 2019;6:1–5.
+117. Gomez-Cabrero D, Tarazona S, Ferreir’os-Vidal I, Ramirez RN, Company C, Schmidt A, et al. <a href="https://doi.org/10.1038/s41597-019-0202-7"><span>STATegra</span>, a comprehensive multi-omics dataset of <span>B</span>-cell differentiation in mouse</a>. Scientific Data. 2019;6:1–5.
 </div>
 <div id="ref-franzosaSpecieslevelFunctionalProfiling2018" class="csl-entry">
-120. Franzosa EA, McIver LJ, Rahnavard G, Thompson LR, Schirmer M, Weingart G, et al. <a href="https://doi.org/10.1038/s41592-018-0176-y">Species-level functional profiling of metagenomes and metatranscriptomes</a>. Nature Methods. 2018;15:962.
+118. Franzosa EA, McIver LJ, Rahnavard G, Thompson LR, Schirmer M, Weingart G, et al. <a href="https://doi.org/10.1038/s41592-018-0176-y">Species-level functional profiling of metagenomes and metatranscriptomes</a>. Nature Methods. 2018;15:962.
 </div>
 <div id="ref-truongMetaPhlAn2EnhancedMetagenomic2015" class="csl-entry">
-121. Truong DT, Franzosa EA, Tickle TL, Scholz M, Weingart G, Pasolli E, et al. <a href="https://doi.org/10.1038/nmeth.3589">MetaPhlAn2 for enhanced metagenomic taxonomic profiling</a>. Nature Methods. 2015;12:902–3.
+119. Truong DT, Franzosa EA, Tickle TL, Scholz M, Weingart G, Pasolli E, et al. <a href="https://doi.org/10.1038/nmeth.3589">MetaPhlAn2 for enhanced metagenomic taxonomic profiling</a>. Nature Methods. 2015;12:902–3.
 </div>
 <div id="ref-segataMetagenomicBiomarkerDiscovery2011" class="csl-entry">
-122. Segata N, Izard J, Waldron L, Gevers D, Miropolsky L, Garrett WS, et al. <a href="https://doi.org/10.1186/gb-2011-12-6-r60">Metagenomic biomarker discovery and explanation</a>. Genome Biology. 2011;12:R60.
+120. Segata N, Izard J, Waldron L, Gevers D, Miropolsky L, Garrett WS, et al. <a href="https://doi.org/10.1186/gb-2011-12-6-r60">Metagenomic biomarker discovery and explanation</a>. Genome Biology. 2011;12:R60.
 </div>
 <div id="ref-didier2018" class="csl-entry">
-123. Didier G, Valdeolivas A, Baudot A. <a href="https://doi.org/10.12688/f1000research.15486.2">Identifying communities from multiplex biological networks by randomized optimization of modularity</a>. F1000Research. 2018;7.
+121. Didier G, Valdeolivas A, Baudot A. <a href="https://doi.org/10.12688/f1000research.15486.2">Identifying communities from multiplex biological networks by randomized optimization of modularity</a>. F1000Research. 2018;7.
 </div>
 <div id="ref-valdeolivas2019" class="csl-entry">
-124. Valdeolivas A, Tichit L, Navarro C, Perrin S, Odelin G, Levy N, et al. <a href="https://doi.org/10.1093/bioinformatics/bty637">Random walk with restart on multiplex and heterogeneous biological networks</a>. Bioinformatics (Oxford, England). 2019;35:497–505.
+122. Valdeolivas A, Tichit L, Navarro C, Perrin S, Odelin G, Levy N, et al. <a href="https://doi.org/10.1093/bioinformatics/bty637">Random walk with restart on multiplex and heterogeneous biological networks</a>. Bioinformatics (Oxford, England). 2019;35:497–505.
 </div>
 <div id="ref-pio-lopez2021" class="csl-entry">
-125. Pio-Lopez L, Valdeolivas A, Tichit L, Remy É, Baudot A. <a href="http://arxiv.org/abs/2008.10085">MultiVERSE: A multiplex and multiplex-heterogeneous network embedding approach</a>. arXiv:200810085 [cs, q-bio]. 2021.
+123. Pio-Lopez L, Valdeolivas A, Tichit L, Remy É, Baudot A. <a href="http://arxiv.org/abs/2008.10085">MultiVERSE: A multiplex and multiplex-heterogeneous network embedding approach</a>. arXiv:200810085 [cs, q-bio]. 2021.
 </div>
 <div id="ref-bayes1763" class="csl-entry">
-126. Bayes T, Price null. <a href="https://doi.org/10.1098/rstl.1763.0053">An essay towards solving a problem in the doctrine of chances. By the late rev. Mr. Bayes, f. R. s.</a> Philosophical Transactions of the Royal Society of London. 1763;53:370–418.
+124. Bayes T, Price null. <a href="https://doi.org/10.1098/rstl.1763.0053">An essay towards solving a problem in the doctrine of chances. By the late rev. Mr. Bayes, f. R. s.</a> Philosophical Transactions of the Royal Society of London. 1763;53:370–418.
 </div>
 <div id="ref-zhu2012" class="csl-entry">
-127. Zhu J, Sova P, Xu Q, Dombek KM, Xu EY, Vu H, et al. <a href="https://doi.org/10.1371/journal.pbio.1001301">Stitching together Multiple Data Dimensions Reveals Interacting Metabolomic and Transcriptomic Networks That Modulate Cell Regulation</a>. PLOS Biology. 2012;10:e1001301.
+125. Zhu J, Sova P, Xu Q, Dombek KM, Xu EY, Vu H, et al. <a href="https://doi.org/10.1371/journal.pbio.1001301">Stitching together Multiple Data Dimensions Reveals Interacting Metabolomic and Transcriptomic Networks That Modulate Cell Regulation</a>. PLOS Biology. 2012;10:e1001301.
 </div>
 <div id="ref-lock2013" class="csl-entry">
-128. Lock EF, Dunson DB. <a href="https://doi.org/10.1093/bioinformatics/btt425">Bayesian consensus clustering</a>. Bioinformatics. 2013;29:2610–6.
+126. Lock EF, Dunson DB. <a href="https://doi.org/10.1093/bioinformatics/btt425">Bayesian consensus clustering</a>. Bioinformatics. 2013;29:2610–6.
 </div>
 <div id="ref-cantini_benchmarking_2020" class="csl-entry">
-129. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. <a href="https://doi.org/10.1101/2020.01.14.905760">Benchmarking joint multi-omics dimensionality reduction approaches for cancer study</a>. bioRxiv. 2020;2020.01.14.905760.
+127. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. <a href="https://doi.org/10.1101/2020.01.14.905760">Benchmarking joint multi-omics dimensionality reduction approaches for cancer study</a>. bioRxiv. 2020;2020.01.14.905760.
 </div>
 <div id="ref-tenenhaus2017" class="csl-entry">
-130. Tenenhaus M, Tenenhaus A, Groenen PJF. <a href="https://doi.org/10.1007/s11336-017-9573-x">Regularized Generalized Canonical Correlation Analysis: A Framework for Sequential Multiblock Component Methods</a>. Psychometrika. 2017;82:737–77.
+128. Tenenhaus M, Tenenhaus A, Groenen PJF. <a href="https://doi.org/10.1007/s11336-017-9573-x">Regularized Generalized Canonical Correlation Analysis: A Framework for Sequential Multiblock Component Methods</a>. Psychometrika. 2017;82:737–77.
 </div>
 <div id="ref-rohart2017" class="csl-entry">
-131. Rohart F, Gautier B, Singh A, Cao K-AL. <a href="https://doi.org/10.1371/journal.pcbi.1005752">mixOmics: An R package for <span>‘</span>omics feature selection and multiple data integration</a>. PLOS Computational Biology. 2017;13:e1005752.
+129. Rohart F, Gautier B, Singh A, Cao K-AL. <a href="https://doi.org/10.1371/journal.pcbi.1005752">mixOmics: An R package for <span>‘</span>omics feature selection and multiple data integration</a>. PLOS Computational Biology. 2017;13:e1005752.
 </div>
 <div id="ref-gomez-cabrero2019" class="csl-entry">
-132. Gomez-Cabrero D, Tarazona S, Ferreirós-Vidal I, Ramirez RN, Company C, Schmidt A, et al. <a href="https://doi.org/10.1038/s41597-019-0202-7">STATegra, a comprehensive multi-omics dataset of B-cell differentiation in mouse</a>. Scientific Data. 2019;6:1–5.
+130. Gomez-Cabrero D, Tarazona S, Ferreirós-Vidal I, Ramirez RN, Company C, Schmidt A, et al. <a href="https://doi.org/10.1038/s41597-019-0202-7">STATegra, a comprehensive multi-omics dataset of B-cell differentiation in mouse</a>. Scientific Data. 2019;6:1–5.
 </div>
 <div id="ref-virtanen2012" class="csl-entry">
-133. Virtanen S, Klami A, Khan S, Kaski S. <a href="https://proceedings.mlr.press/v22/virtanen12.html">Bayesian Group Factor Analysis</a>. PMLR; 2012. p. 1269–77.
+131. Virtanen S, Klami A, Khan S, Kaski S. <a href="https://proceedings.mlr.press/v22/virtanen12.html">Bayesian Group Factor Analysis</a>. PMLR; 2012. p. 1269–77.
 </div>
 <div id="ref-novoa-del-toro2020" class="csl-entry">
-134. Novoa-del-Toro E-M, Mezura-Montes E, Vignes M, Magdinier F, Tichit L, Baudot A. <a href="https://doi.org/10.1101/2020.05.25.114215">A Multi-Objective Genetic Algorithm to Find Active Modules in Multiplex Biological Networks</a>. bioRxiv. 2020;2020.05.25.114215.
+132. Novoa-del-Toro E-M, Mezura-Montes E, Vignes M, Magdinier F, Tichit L, Baudot A. <a href="https://doi.org/10.1101/2020.05.25.114215">A Multi-Objective Genetic Algorithm to Find Active Modules in Multiplex Biological Networks</a>. bioRxiv. 2020;2020.05.25.114215.
 </div>
 <div id="ref-lock2013a" class="csl-entry">
-135. Lock EF, Hoadley KA, Marron JS, Nobel AB. <a href="https://doi.org/10.1214/12-AOAS597">JOINT AND INDIVIDUAL VARIATION EXPLAINED (JIVE) FOR INTEGRATED ANALYSIS OF MULTIPLE DATA TYPES</a>. The annals of applied statistics. 2013;7:523–42.
+133. Lock EF, Hoadley KA, Marron JS, Nobel AB. <a href="https://doi.org/10.1214/12-AOAS597">JOINT AND INDIVIDUAL VARIATION EXPLAINED (JIVE) FOR INTEGRATED ANALYSIS OF MULTIPLE DATA TYPES</a>. The annals of applied statistics. 2013;7:523–42.
 </div>
 <div id="ref-yang2016" class="csl-entry">
-136. Yang Z, Michailidis G. <a href="https://doi.org/10.1093/bioinformatics/btv544">A non-negative matrix factorization method for detecting modules in heterogeneous omics multi-modal data</a>. Bioinformatics. 2016;32:1–8.
+134. Yang Z, Michailidis G. <a href="https://doi.org/10.1093/bioinformatics/btv544">A non-negative matrix factorization method for detecting modules in heterogeneous omics multi-modal data</a>. Bioinformatics. 2016;32:1–8.
 </div>
 <div id="ref-sherry2005" class="csl-entry">
-137. Sherry A, Henson RK. <a href="https://doi.org/10.1207/s15327752jpa8401_09">Conducting and Interpreting Canonical Correlation Analysis in Personality Research: A User-Friendly Primer</a>. Journal of Personality Assessment. 2005;84:37–48.
+135. Sherry A, Henson RK. <a href="https://doi.org/10.1207/s15327752jpa8401_09">Conducting and Interpreting Canonical Correlation Analysis in Personality Research: A User-Friendly Primer</a>. Journal of Personality Assessment. 2005;84:37–48.
 </div>
 <div id="ref-sherryConductingInterpretingCanonical1981" class="csl-entry">
-138. Sherry A, Henson RK. Conducting and <span>Interpreting Canonical Correlation Analysis</span> in <span>Personality Research</span>: <span>A User</span>-<span>Friendly Primer</span>. 1981.
+136. Sherry A, Henson RK. Conducting and <span>Interpreting Canonical Correlation Analysis</span> in <span>Personality Research</span>: <span>A User</span>-<span>Friendly Primer</span>. 1981.
 </div>
 <div id="ref-chung_multi-omics_2019" class="csl-entry">
-139. Chung R-H, Kang C-Y. <a href="https://doi.org/10.1093/gigascience/giz045">A multi-omics data simulator for complex disease studies and its application to evaluate multi-omics data analysis methods for disease classification</a>. GigaScience. 2019;8.
+137. Chung R-H, Kang C-Y. <a href="https://doi.org/10.1093/gigascience/giz045">A multi-omics data simulator for complex disease studies and its application to evaluate multi-omics data analysis methods for disease classification</a>. GigaScience. 2019;8.
 </div>
 <div id="ref-martinez-mira_mosim_2018" class="csl-entry">
-140. Martínez-Mira C, Conesa A, Tarazona S. <a href="https://doi.org/10.1101/421834"><span>MOSim</span>: <span>Multi</span>-<span>Omics Simulation</span> in <span>R</span></a>. Preprint. <span>Bioinformatics</span>; 2018.
+138. Martínez-Mira C, Conesa A, Tarazona S. <a href="https://doi.org/10.1101/421834"><span>MOSim</span>: <span>Multi</span>-<span>Omics Simulation</span> in <span>R</span></a>. Preprint. <span>Bioinformatics</span>; 2018.
 </div>
 <div id="ref-haberman2019" class="csl-entry">
-141. Haberman Y, Karns R, Dexheimer PJ, Schirmer M, Somekh J, Jurickova I, et al. <a href="https://doi.org/10.1038/s41467-018-07841-3">Ulcerative colitis mucosal transcriptomes reveal mitochondriopathy and personalized mechanisms underlying disease severity and treatment response</a>. Nature Communications. 2019;10.
+139. Haberman Y, Karns R, Dexheimer PJ, Schirmer M, Somekh J, Jurickova I, et al. <a href="https://doi.org/10.1038/s41467-018-07841-3">Ulcerative colitis mucosal transcriptomes reveal mitochondriopathy and personalized mechanisms underlying disease severity and treatment response</a>. Nature Communications. 2019;10.
 </div>
 <div id="ref-patuzzi2019" class="csl-entry">
-142. Patuzzi I, Baruzzo G, Losasso C, Ricci A, Di Camillo B. <a href="https://doi.org/10.1186/s12859-019-2882-6">metaSPARSim: A 16S rRNA gene sequencing count data simulator</a>. BMC Bioinformatics. 2019;20:416.
+140. Patuzzi I, Baruzzo G, Losasso C, Ricci A, Di Camillo B. <a href="https://doi.org/10.1186/s12859-019-2882-6">metaSPARSim: A 16S rRNA gene sequencing count data simulator</a>. BMC Bioinformatics. 2019;20:416.
 </div>
 <div id="ref-fritz2019" class="csl-entry">
-143. Fritz A, Hofmann P, Majda S, Dahms E, Dröge J, Fiedler J, et al. <a href="https://doi.org/10.1186/s40168-019-0633-6">CAMISIM: Simulating metagenomes and microbial communities</a>. Microbiome. 2019;7:17.
+141. Fritz A, Hofmann P, Majda S, Dahms E, Dröge J, Fiedler J, et al. <a href="https://doi.org/10.1186/s40168-019-0633-6">CAMISIM: Simulating metagenomes and microbial communities</a>. Microbiome. 2019;7:17.
 </div>
 <div id="ref-fu2021" class="csl-entry">
-144. Fu J, Frazee AC, Collado-Torres L, Jaffe AE, Leek JT. <a href="https://doi.org/10.18129/B9.bioc.ballgown">Ballgown: Flexible, isoform-level differential expression analysis</a>. Bioconductor version: Release (3.13); 2021.
+142. Fu J, Frazee AC, Collado-Torres L, Jaffe AE, Leek JT. <a href="https://doi.org/10.18129/B9.bioc.ballgown">Ballgown: Flexible, isoform-level differential expression analysis</a>. Bioconductor version: Release (3.13); 2021.
 </div>
 <div id="ref-frazee2021" class="csl-entry">
-145. Frazee AC, Jaffe AE, Kirchner R, Leek JT. <a href="https://doi.org/10.18129/B9.bioc.polyester">Polyester: Simulate RNA-seq reads</a>. Bioconductor version: Release (3.13); 2021.
+143. Frazee AC, Jaffe AE, Kirchner R, Leek JT. <a href="https://doi.org/10.18129/B9.bioc.polyester">Polyester: Simulate RNA-seq reads</a>. Bioconductor version: Release (3.13); 2021.
 </div>
 <div id="ref-mccarthy2012" class="csl-entry">
-146. McCarthy DJ, Chen Y, Smyth GK. <a href="https://doi.org/10.1093/nar/gks042">Differential expression analysis of multifactor RNA-Seq experiments with respect to biological variation</a>. Nucleic Acids Research. 2012;40:4288–97.
+144. McCarthy DJ, Chen Y, Smyth GK. <a href="https://doi.org/10.1093/nar/gks042">Differential expression analysis of multifactor RNA-Seq experiments with respect to biological variation</a>. Nucleic Acids Research. 2012;40:4288–97.
 </div>
 <div id="ref-de_souza_ibd_2017" class="csl-entry">
-147. De Souza HSP, Fiocchi C, Iliopoulos D. <a href="https://doi.org/10.1038/nrgastro.2017.110">The <span>IBD</span> interactome: <span>An</span> integrated view of aetiology, pathogenesis and therapy</a>. 2017;14.
+145. De Souza HSP, Fiocchi C, Iliopoulos D. <a href="https://doi.org/10.1038/nrgastro.2017.110">The <span>IBD</span> interactome: <span>An</span> integrated view of aetiology, pathogenesis and therapy</a>. 2017;14.
 </div>
 <div id="ref-valles-colomer2016" class="csl-entry">
-148. Valles-Colomer M, Darzi Y, Vieira-Silva S, Falony G, Raes J, Joossens M. <a href="https://doi.org/10.1093/ecco-jcc/jjw024">Meta-omics in inflammatory bowel disease research: Applications, challenges, and guidelines</a>. Journal of Crohn’s and Colitis. 2016;10:735–46.
+146. Valles-Colomer M, Darzi Y, Vieira-Silva S, Falony G, Raes J, Joossens M. <a href="https://doi.org/10.1093/ecco-jcc/jjw024">Meta-omics in inflammatory bowel disease research: Applications, challenges, and guidelines</a>. Journal of Crohn’s and Colitis. 2016;10:735–46.
 </div>
 <div id="ref-sudhakar2022" class="csl-entry">
-149. Sudhakar P, Alsoud D, Wellens J, Verstockt S, Arnauts K, Verstockt B, et al. <a href="https://doi.org/10.1093/ecco-jcc/jjac027">Tailoring multi-omics to inflammatory bowel diseases: All for one and one for all</a>. Journal of Crohn’s and Colitis. 2022;jjac027.
+147. Sudhakar P, Alsoud D, Wellens J, Verstockt S, Arnauts K, Verstockt B, et al. <a href="https://doi.org/10.1093/ecco-jcc/jjac027">Tailoring multi-omics to inflammatory bowel diseases: All for one and one for all</a>. Journal of Crohn’s and Colitis. 2022;jjac027.
 </div>
 </div>
 <div class="footnotes">
