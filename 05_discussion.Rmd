@@ -128,16 +128,16 @@ Methods are very different in how they can be used.
 Some of them were tested several datasets but their most important validation process undergone is the mathematical validation they have.
 
 Many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria is related to inflammation.
-On this thesis the focus was on finding a good representation of the disease that allowed me to identify genes and bacteria that were relevant to our questions.
-We didn't make other assumptions that thinking that the microbiome and the transcriptome are related.
+On this thesis the focus was on finding a good representation of the disease that allowed to identify genes and bacteria that were relevant to the disease.
+We made the assumptions that the microbiome and the transcriptome are related.
 This assumption is backed up by several other previous studies supporting this relationship [ref:needed].
 
 There are many methods for integration developed, each with their shortcomings and strengths.
 There are frequent new tools and methods released, and the most up to date list of tools might be added to a [collaborative list](https://github.com/mikelove/awesome-multi-omics "Awesome multi-omics list") (from which the appendix table of methods has been taken).
 
 With the increase of tools there have been more pressure on comparing different tools.
-There have been already some articles comparing the different tools, which the previous mentioned list also has.
-There are reviews of different tools on the same datasets [@cantini2020], some are more theoretical, others are focused on a different field.
+There have been already some articles comparing different tools, which the previous mentioned list also has.
+There are reviews of different tools on the same datasets [@cantini2020], some are more theoretical [ref:needed], others are focused on a different field [@cavill2016].
 Recently there has been a recent article focused on integration on IBD [@sudhakar2022].
 
 adonis and globaltest worked well to identify which variables were important.
@@ -167,10 +167,21 @@ This might help to improve the quality of the datasets and to expand previously 
 
 ## Designing models
 
-The model of the generalized canonical correlation is highly dependent of the blocks present.
+Previous publications using RGCCA on IBD focused on validating inflammation markers genes DUOX2 and APOA1 as inflammation predictors ([@tang2017]) from previously published articles [@haberman2014].
+Some publication tried to summarize the existing relationships on IBD [@hasler_uncoupling_2016].
+
+Modeling the relationships on RGCCA the connections between blocks had to be modified.
+Also what belongs to a block should be modified.
+The features selected by RGCCA are highly dependent on which connections are made.
 
 If one has preexisting theories about the data, a specific model can be used stating these known or hypothetical relationships.
 However, if new relationships are being explored or no prior beliefs on the data are held the models should be created with random links between blocks, and evaluate which model is better.
+
+The connections tested required that all models should be connected and no isolated blocks were left, all blocks should be indirectly connected to other blocks.
+This avoids optimizing two different networks of blocks that are not connected between them.
+Thus, forcing the model to represent all the information.
+
+Typically blocks are defined
 
 ## Evaluating models
 

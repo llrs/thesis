@@ -361,7 +361,7 @@ Furthermore several studies have been carried out to discover links between micr
 These studies, known as integration, multi-omic or interaction studies, usually use multiple sequencing assays as the bases of the analysis [@beck2021].
 
 However, confirming causal interactions of the variables of each essay is difficult.
-To find relationships some articles use correlation [@hasler_uncoupling_2016], there are others that use a combination of methods from correlations, partial correlations to integrative methods [@tang_integrated_2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations [@hernández-rocha2021].
+To find relationships some articles use correlation [@hasler_uncoupling_2016], there are others that use a combination of methods from correlations, partial correlations to integrative methods [@tang2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations [@hernández-rocha2021].
 
 Very rarely there is an experimental confirmation of the relationships between variables of the different assays because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
 One of the few methods published that shows an interaction between genes and microorganisms on IBD is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
@@ -383,7 +383,7 @@ Single cell technologies are starting to be used for integration.
 Many of the integration analysis on IBD are done between host transcriptome and the microbiome.
 These studies use datasets from IBD patients usually stratified by disease activity or severity of inflammation or location of the disease.
 Most of them are based on correlation analysis between the microbiome and RNA-seq [@hasler_uncoupling_2016].
-Conclusions of these integrations range from finding differences on the correlation depending on the type of disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang_integrated_2017].
+Conclusions of these integrations range from finding differences on the correlation depending on the type of disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang2017].
 
 #### Genetics
 
@@ -418,7 +418,7 @@ The explosion of data on biological sciences has been driven by the new sequenci
 If done with multiple sequencing technologies it is usually referred as multi-omics methods, which usually only uses omic data.
 
 It is crucial to classify, review and compare tools available, as well as, to benchmark these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019].
-Part of these efforts use the methods' strategies to classify them [@cavill_transcriptomic_2016; @chongComputationalApproachesIntegrative2017].
+Part of these efforts use the methods' strategies to classify them [@cavill2016; @chongComputationalApproachesIntegrative2017].
 Following this view I will review the available integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
 
 ### Classification of integration method

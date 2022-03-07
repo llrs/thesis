@@ -61,7 +61,7 @@ In total 158 samples with both RNA and DNA extraction of the same segment and ti
 
 ### Häsler's dataset {#methods-hasler}
 
-An IBD-related dataset was obtained by Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler [@häsler2017].
+An IBD-related dataset was obtained by Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler [@hasler_uncoupling_2016].
 Biopsies were obtained endoscopically during routine diagnosis RNA was extracted.
 DNA from the 16S rRNA gene was amplified with primers 319F and 806R.
 Both RNA and DNA was then sequenced on HiSeq 2000 and MiSeq respectively.
