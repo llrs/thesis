@@ -113,7 +113,7 @@ After the first two datasets it was used the SILVA database to annotate the ASV.
 
 Morgan's dataset is related to IBD but it is from a cohort of patients that underwent colectomy and samples are specific of the pouch or pre-pouch ileum, there are no healthy samples and there is no follow up.
 It made very unlikely that a classification of the location could be achieved and the classification of the samples according to the microbiota could not be based on the disease (as all of them had undergone the same procedure with the same disease).
-There seems to be gradation on the models on \ref{#fig:morgan-models} that could partially be explained by different degrees of inflammation.
+There seems to be gradation on the models on \@ref(fig:morgan-models) that could partially be explained by different degrees of inflammation.
 
 Howell's dataset is very similar to our BARCELONA dataset but on pediatric cases.
 It includes both CD and UC (and controls).

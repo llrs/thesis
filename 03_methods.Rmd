@@ -479,10 +479,10 @@ This can be done with [clusterProfiler](https://bioconductor.org/packages/cluste
 It checks the enrichment of features of a given group on the (background) list provided.
 
 $$
-\begin{cases}
-H_0 & : & P_{subset} \leq  P_{overall} \\
-H_1 & : & P_{subset} > P_{overall}
-\end{cases}
+H_0 : P_{subset} \leq  P_{overall}
+$$
+$$
+H_1 : P_{subset} > P_{overall}
 $$
 
 The test used is usually the fisher test, the hypergeometric test or the proportion test.
@@ -531,9 +531,8 @@ This method consist on first calculating the rank of genes $rank(g_j)=r_j$ where
 Then later calculate the following functions:
 
 $$
-P_{hit}(S, i)=\sum_{g_j \in S, j \leq i}\dfrac{|r_j|^p}{N_R} \text{, where } N_R = \sum_{g_j \in S}|r_j|^p
+P_{hit}(S, i)=\sum_{g_j \in S, j \leq i}\dfrac{|r_j|^p}{N_R} \text{, where } N_R = \sum_{g_j \in S}|r_j|^p 
 $$
-
 $$
 P_{miss}(S, i) = \sum_{g_j \not \in S, j \leq i}\dfrac{1}{N - N_H}
 $$
@@ -706,11 +705,10 @@ To compare between different models the area under the curve (AUC) of the receiv
 It is based on the following formulas, where $\text{FP}$ is false positive, $N$ is a negative, $P$ is positive, $\text{TP}$ is true positive and $\text{FN}$ is false negative:
 
 $$
-FPR = \frac{FP}{N}=\dfrac{FP}{FP+TN}
+FPR = \frac{FP}{N} = \dfrac{FP}{FP+TN} 
 $$
-
 $$
-TPR = \frac{TP}{P}=\dfrac{FP}{FP+FN} 
+TPR = \frac{TP}{P} = \dfrac{FP}{FP+FN} 
 $$
 
 The ROC curve is that where the true positive rate (TPR) or sensitivity, recall or hit rate is represented against the false positive rate (FPR) on the x axis.

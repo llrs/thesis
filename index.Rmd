@@ -40,7 +40,7 @@ The thesis is under the [doctoral programme in biomedicine](http://www.ub.edu/do
 My thesis directors' were [Juanjo Lozano](https://orcid.org/0000-0001-7613-3908 "Juanjo's ORCID") and [Azucena Salas](https://orcid.org/0000-0003-4572-2907 "Azu's ORCID"), my boss, who helped as bioinformatician and disease expert respectively.
 They provided advice and guidance on how to analyse the data and where to focus on the different experiments/analysis.
 
-[This thesis](https://thesis.llrs.dev) is licensed under the [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/ "License summary link").
+[This thesis](https://thesis.llrs.dev) is licensed under the [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/ "License summary link").  
 !["CC-BY image"](images/by.png "CC-BY image of creative commons")
 
 # Abstract {.unnumbered}
