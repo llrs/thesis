@@ -4,4 +4,6 @@ Microbiome under some dataset can classify the patients according to their disea
 Doing so reliable might take some time.
 It is hard to make it generalizable.
 
+Overoptimizing for a dataset might be possible but so far we haven't seen this, on the contrary on different dataset the models of connections seem consistently even if the particular taxa do not show a great overlap. 
+
 If we had to summarize all the work in one sentence we would say that…
