@@ -188,16 +188,16 @@ On the microbiome data the results were similar but the p-value was considerably
 Diversity indices of the samples were explored and compared for several subsets.
 Splitting by location of the sample and disease provided the highest differences and the diversity index along time did not change much.
 
-<!--# TODO: explain why WGCNA didn't work out: there are some troubles with scales, n not enough for a diversity of samples (or this is for discussion)?-->
+<!--# TODO: explain why WGCNA did not work out: there are some troubles with scales, n not enough for a diversity of samples (or this is for discussion)?-->
 
 Weighted gene co-expression network analysis did not provide relevant links between bacteria and transcriptome as it failed to find an acceptable scale free degree.
 
 ![(#fig:hsct-wgcna-power) Power evaluation of WGCNA of the HSCT dataset.](images/hsct-wgcna-power.png)
 
-As can be seen on the Figure \@ref(fig:hsct-wgcna-power), the scale free topology doesn't reach the recommended threshold of 0.9 and the mean connectivity is also very low even for the first power.
+As can be seen on the Figure \@ref(fig:hsct-wgcna-power), the scale free topology does not reach the recommended threshold of 0.9 and the mean connectivity is also very low even for the first power.
 
 STATegRa was used between stool 16S data and intestinal 16S data under the assumption that there is a shared common factor without influence of other categorical variables.
-However, it didn't find a good agreement between these two data sources and 16S data source was not longer used on the analysis.
+However, it did not find a good agreement between these two data sources and 16S data source was not longer used on the analysis.
 In addition, the model is fixed, so it did not allow to find new or other relationships that are not one to one.
 
 With RGCCA we could select different models and use all the data available without much assumptions.
