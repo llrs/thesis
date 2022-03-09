@@ -1,5 +1,7 @@
 # Acknowledgments
 
+Azu
+
 Juanjo
 
 Pau + grup
@@ -10,11 +12,9 @@ Metges: Julià, Helena...
 
 Ana, Alba, Isa, Marisol, Maica...
 
-Azu
-
 Familia
 
-Twitter #rStats and other people on Bioconductor (support.bioconductor.org) Biostars, [Bioinformatics SE](https://bioinformatics.stackexchange.com/)
+Twitter #rStats and other people on Bioconductor (support.bioconductor.org), Biostars, [Bioinformatics SE](https://bioinformatics.stackexchange.com/)
 
 <!--# Helena, Elena, Nuria, Carolina-->
 
