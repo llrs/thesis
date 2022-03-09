@@ -30,6 +30,9 @@ fig:barcelona-diversity
 fig:howell-models
 fig:howell-bootstrap
 tab:appendix-methods
+english
+spanish
+catalan
 introduction
 IBD
 etiology-and-pathogenesis
