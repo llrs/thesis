@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-03-08" />
+<meta name="date" content="2022-03-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -97,7 +97,6 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li><a href="index.html#preface">Preface<span></span></a></li>
-<li><a href="abstract.html#abstract">Abstract<span></span></a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction<span></span></a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#IBD"><i class="fa fa-check"></i><b>1.1</b> Inflammatory bowel disease<span></span></a>
@@ -664,11 +663,9 @@ X_k = TP_k ^ T + E_k
 The O2PLS model can be written as a factor analysis where some factors are common between both blocks.</p>
 <p><span class="math display">\[
 \text{X model: } X = TW ^ T + T_{\text{Y-ortho}} P ^ T_{\text{Y-ortho}} + E
-\]</span>
-<span class="math display">\[
+\]</span> <span class="math display">\[
 \text{Y model: } Y = UC ^ T + U_{\text{X-ortho}} P ^ T_{\text{X-ortho}} + F
-\]</span>
-<span class="math display">\[
+\]</span> <span class="math display">\[
 \text{Inner relation: } U = T + H
 \]</span></p>
 <p>Were each model is build similarly by adding the subtraction of the projected values of the other component keeping the relationship between them as stated on the third line.</p>
@@ -842,8 +839,7 @@ This can be done with <a href="https://bioconductor.org/packages/clusterProfiler
 It checks the enrichment of features of a given group on the (background) list provided.</p>
 <p><span class="math display">\[
 H_0 : P_{subset} \leq  P_{overall}
-\]</span>
-<span class="math display">\[
+\]</span> <span class="math display">\[
 H_1 : P_{subset} &gt; P_{overall}
 \]</span></p>
 <p>The test used is usually the fisher test, the hypergeometric test or the proportion test.
@@ -882,8 +878,7 @@ It has been widely used since its original publication, also on IBD <span class=
 Then later calculate the following functions:</p>
 <p><span class="math display">\[
 P_{hit}(S, i)=\sum_{g_j \in S, j \leq i}\dfrac{|r_j|^p}{N_R} \text{, where } N_R = \sum_{g_j \in S}|r_j|^p 
-\]</span>
-<span class="math display">\[
+\]</span> <span class="math display">\[
 P_{miss}(S, i) = \sum_{g_j \not \in S, j \leq i}\dfrac{1}{N - N_H}
 \]</span></p>
 <p>With these values the enrichment score (ES) defined as: <span class="math inline">\(ES=max(|P_{hit}(S, i)-P_{miss}(S, i)\vert)\)</span> is calculated from the walk.
@@ -1021,11 +1016,10 @@ It can take into account spatial distribution and, given the number of samples t
 It is based on the following formulas, where <span class="math inline">\(\text{FP}\)</span> is false positive, <span class="math inline">\(N\)</span> is a negative, <span class="math inline">\(P\)</span> is positive, <span class="math inline">\(\text{TP}\)</span> is true positive and <span class="math inline">\(\text{FN}\)</span> is false negative:</p>
 <p><span class="math display">\[
 FPR = \frac{FP}{N} = \dfrac{FP}{FP+TN} 
-\]</span>
-<span class="math display">\[
+\]</span> <span class="math display">\[
 TPR = \frac{TP}{P} = \dfrac{FP}{FP+FN} 
 \]</span></p>
-<p>The ROC curve is that where the true positive rate (TPR) or sensitivity, recall or hit rate is represented against the false positive rate (FPR) on the x axis.
+<p>The ROC curve is that where the true positive rate (TPR) or sensitivity, recall or hit rate is represented against the false positive rate (FPR) on the abscissa.
 The area under this curve is a measure of how good such classifications performs overall, being 0.5 as good as a random selection.
 The higher it is to 1 the better as it classifies incorrectly less samples and accurately classify them.</p>
 

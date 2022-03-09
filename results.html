@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-03-08" />
+<meta name="date" content="2022-03-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -97,7 +97,6 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li><a href="index.html#preface">Preface<span></span></a></li>
-<li><a href="abstract.html#abstract">Abstract<span></span></a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction<span></span></a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#IBD"><i class="fa fa-check"></i><b>1.1</b> Inflammatory bowel disease<span></span></a>
@@ -244,7 +243,7 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <div id="experdesign-1" class="section level3 hasAnchor" number="4.1.1">
 <h3><span class="header-section-number">4.1.1</span> experDesign<a href="results.html#experdesign-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><code>experDesign</code> package built in R was released for the first time on CRAN on 2020-09-08 after nearly a year after the initial release made on <a href="https://github.com/llrs/experDesign">github</a>.
-It was published on a journal on 2021-11-27<span class="citation">[<a href="#ref-revillasancho2021" role="doc-biblioref">193</a>]</span>.</p>
+It was published on a journal on 2021-11-27 <span class="citation">[<a href="#ref-revillasancho2021" role="doc-biblioref">193</a>]</span>.</p>
 <p>The package uses functional programming to create and modify objects and the features used.
 The package bases its performance on the large body of work made by the R core team.
 It adds the information to the introduced <code>data.frame</code> or returns an vector with the appropriate information.</p>
@@ -275,8 +274,8 @@ The package provides a new class to handle fuzzy sets and the associate informat
 <li><p><a href="https://docs.ropensci.org/BaseSet/reference/index.html#set-operations">Set operations</a> like adjacency cartesian product, cardinality, complement, incidence, independence, intersection, union, subtract, power set or size.</p></li>
 <li><p><a href="https://docs.ropensci.org/BaseSet/reference/index.html#set-operations">Functions to work with TidySets</a> to add relationships, sets, elements or some complimentary data about them.
 Remove the same or simply move around data or calculate the number of elements, relations and sets.</p></li>
-<li><p><a href="https://docs.ropensci.org/BaseSet/reference/index.html#reading-files">Functions to read</a> files from formats where sets are usually stored in the bioinformatician field: GAF, GMT and OBO formats</p></li>
-<li><p>Last, some <a href="https://docs.ropensci.org/BaseSet/reference/index.html#utiles">utility functions</a> to use set name conventions and some other auxiliary functions</p></li>
+<li><p><a href="https://docs.ropensci.org/BaseSet/reference/index.html#reading-files">Functions to read</a> files from formats where sets are usually stored in the bioinformatician field: GAF, GMT and OBO formats.</p></li>
+<li><p>Last, some <a href="https://docs.ropensci.org/BaseSet/reference/index.html#utiles">utility functions</a> to use set name conventions and some other auxiliary functions.</p></li>
 </ul>
 <p>The package had a long development process with initial iterations basing on GSEABase package which was later abandoned (<a href="https://github.com/llrs/GSEAdv">GSEAdv</a>) to also include some uncertainty on the relationship of a gene with a given gene set.</p>
 <p>The package also participated on an exploration on part of the Bioconductor community (project to develop, support, and disseminate free open source software that facilitates rigorous and reproducible analysis of data from current and emerging biological assay) for more modern and faster handling of sets.
@@ -314,7 +313,7 @@ The centroid scheme was selected because it takes into account all the relations
 <p>The effect of the sparsity value was measured by its effect on the inner AVE scores and the combination of the different values for each block.</p>
 <div class="figure"><span style="display:block;" id="fig:puget-tau2AVE"></span>
 <img src="images/pugets_tau_to_AVE.png" alt="" />
-<p class="caption">Figure 4.1:  Effect of tau on the inner AVE. The suggested tau value is the column between the regular grid.</p>
+<p class="caption">Figure 4.1:  Effect of tau on the inner AVE. The suggested tau value is the column between the regular grid, on the ordinate axis the y’s tau values and on the abscissa the gene expression (GE) on the left and the comparative genomic hybridization (CGH) on the right. The highest inner AVE is with high tau values for y and middle to upper values for GE and CGH.</p>
 </div>
 <p>Exploratory analysis with the superblock model was done.
 The first two components of the superblock did not help to explain the biology or classify the tumors:</p>
@@ -369,21 +368,21 @@ The resulting p-value was well below the 0,05 threshold defined for RNA-seq data
 </div>
 <p>Diversity indices of the samples were explored and compared for several subsets.
 Splitting by location of the sample and disease provided the highest differences and the diversity index along time did not change much.</p>
-<!--# TODO: explain why WGCNA didn't work out: there are some troubles with scales, n not enough for a diversity of samples (or this is for discussion)?-->
+<!--# TODO: explain why WGCNA did not work out: there are some troubles with scales, n not enough for a diversity of samples (or this is for discussion)?-->
 <p>Weighted gene co-expression network analysis did not provide relevant links between bacteria and transcriptome as it failed to find an acceptable scale free degree.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-wgcna-power"></span>
 <img src="images/hsct-wgcna-power.png" alt="" />
-<p class="caption">Figure 4.6:  Power evaluation of WGCNA of the HSCT dataset.</p>
+<p class="caption">Figure 4.6:  Power evaluation of WGCNA of the HSCT dataset. On the ordinate the power on the abscissa on the left the scale free topology model fit; on the right the mean connectivity. There is a low fit even on large power and the mean connectivity is below 100 from the very first value.</p>
 </div>
-<p>As can be seen on the Figure <a href="results.html#fig:hsct-wgcna-power">4.6</a>, the scale free topology doesn’t reach the recommended threshold of 0.9 and the mean connectivity is also very low even for the first power.</p>
+<p>As can be seen on the Figure <a href="results.html#fig:hsct-wgcna-power">4.6</a>, the scale free topology does not reach the recommended threshold of 0.9 and the mean connectivity is also very low even for the first power.</p>
 <p>STATegRa was used between stool 16S data and intestinal 16S data under the assumption that there is a shared common factor without influence of other categorical variables.
-However, it didn’t find a good agreement between these two data sources and 16S data source was not longer used on the analysis.
+However, it did not find a good agreement between these two data sources and 16S data source was not longer used on the analysis.
 In addition, the model is fixed, so it did not allow to find new or other relationships that are not one to one.</p>
 <p>With RGCCA we could select different models and use all the data available without much assumptions.
 The models with the highest inner AVE of the family 1 and the family 2 models were similar to those on the Häsler dataset.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-models"></span>
 <img src="images/hsct-models.png" alt="" />
-<p class="caption">Figure 4.7:  On the x-axis the transcriptome, on the Y axis the Microbiome. Each square represents a different model of the HSCT dataset. On panel A colored by disease status, on panel B colored by sample location. Model 0 has only transcriptome and microbiome data, models 1 to 1.2 with data about the samples and models 2.1 to 2.3 with data about the samples split in 3 blokcs.</p>
+<p class="caption">Figure 4.7:  On the abscissa the transcriptome, on the ordinate the Microbiome. Each square represents a different model of the HSCT dataset. On panel A colored by disease status, on panel B colored by sample location. Model 0 has only transcriptome and microbiome data, models 1 to 1.2 with data about the samples and models 2.1 to 2.3 with data about the samples split in 3 blocks.</p>
 </div>
 <p>The weights of these models can be observed here:</p>
 <p>The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see Figure and <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002">S2</a> data of <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">196</a>]</span>).
@@ -400,7 +399,7 @@ Each bootstrap had its own dispersion on the variables according to the samples 
 The lower the dispersion, the more robust the model was to different conditions than in the initial testing.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-bootstrap"></span>
 <img src="images/hsct-bootstrap.png" alt="" />
-<p class="caption">Figure 4.9:  Bootstrap of the models 0, 1.2 and 2.2. The point with the black circle is the AVE of the original data. The dispersion is shown by the ellipses.</p>
+<p class="caption">Figure 4.9:  Bootstrap of the models 0, 1.2 and 2.2. The point with the black circle is the AVE of the original data. The dispersion is shown by the ellipses. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped.</p>
 </div>
 <p>With the bootstrapped models we used BaseSet to estimate the probability that each variable to be relevant for the association with a disease.
 However, due to big amount of small probabilities when using the BaseSet package to calculate which variables are more relevant it could not provide a good estimation on time.</p>
@@ -429,7 +428,7 @@ Genes are very similar between model 0 to 1.2 and between 2 to 2.3, while OTUs a
 <p>In this dataset, the parameter tau behaved slightly differently than with the previous dataset but the value from the Schäfer’s method for tau was close to the best value.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-tau"></span>
 <img src="images/hasler-centroid_tau.png" alt="" />
-<p class="caption">Figure 4.13:  Changes on tau on the centroid scheme on the Häsler dataset affect the inner AVE score on the model 1.</p>
+<p class="caption">Figure 4.13:  Changes on tau on the centroid scheme on the Häsler dataset affect the inner AVE score on the model 1. The panel A shows on the ordinate the RNAseq tau value, the panel B on the right, shows the tau of the microorganism; both of them show the y’s tau on the abscissa.</p>
 </div>
 <!-- # TODO: fill the  AVE numbers here -->
 <p>In contrast to the HSCT’s dataset, the model with the highest inner AVE was model 1.2 (inner AVE value of ) but model 2.2 was close to it (inner AVE of ).
@@ -445,10 +444,11 @@ In either case the family 1 and family 2 models can correctly separate by sample
 <p>MCIA was applied as a baseline of the integration and compared to the different models to know which one separates best colon and ileum samples.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-mcia"></span>
 <img src="images/hasler-mcia.png" alt="MCIA results" />
-<p class="caption">Figure 4.15:  MCIA first two dimensions of the dataset.</p>
+<p class="caption">Figure 4.15:  MCIA first two dimensions of the dataset colored by state, the shape is according to the location of the samples. Shows two vertical groups on the first syntethic dimension according to the location of the samples.</p>
 </div>
 <!-- # Add ROC curves with RGCCA models on it-->
-<p>MCIA results was high but not as high as the model 2.2.</p>
+<p>MCIA’s AUC results was as high as the model 2.2 to classify samples according to their location.
+It was even better to classify the samples according to the type of sample they are: 0.6248 vs 0.5514 the best AUC from RGCCA that corresponds to model 1.2 .</p>
 </div>
 <div id="results-morgan" class="section level3 hasAnchor" number="4.2.4">
 <h3><span class="header-section-number">4.2.4</span> Morgan’s dataset<a href="results.html#results-morgan" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -456,9 +456,9 @@ In either case the family 1 and family 2 models can correctly separate by sample
 The different models were not able to separate the samples neither by location or sex.</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-models"></span>
 <img src="images/morgans_models.png" alt="" />
-<p class="caption">Figure 4.16:  First component of the transcriptome and microbiome of the Morgan’s dataset.Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample.</p>
+<p class="caption">Figure 4.16:  First component of the transcriptome and microbiome of the Morgan’s dataset.Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models.</p>
 </div>
-<p>Nevertheless we compared the classification with the MCIA algorithm and still resulted that model 2.2 provide a better classification than MCIA.</p>
+<p>Nevertheless, we compared the classification with the MCIA algorithm and still resulted that model 2.2 provide a better classification than MCIA.</p>
 <p>When exploring the bootstraps of the data we found that model 1.2 is highly variable:</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-bootstrap"></span>
 <img src="images/morgans_bootstrap.png" alt="" />
@@ -473,7 +473,7 @@ The different models were not able to separate the samples neither by location o
 <p>This dataset was processed as usual but as part of the quality controls of the dataset the diversity measures of the samples was analyzed:</p>
 <div class="figure"><span style="display:block;" id="fig:barcelona-diversity"></span>
 <img src="images/barcelona-diversity.png" alt="" />
-<p class="caption">Figure 4.18:  Diversity indices of Barcelona according to the location and disease status.</p>
+<p class="caption">Figure 4.18:  Diversity indices of Barcelona according to the location and disease status. There is a lot of diversity between different groups but importantly the control samples overlap with the patients with inflammatory bowel disease.</p>
 </div>
 <p>Control samples diversity should be lower and not on the same range as with samples of patients with IBD.
 The dataset’s 16S was sequenced several times by different platforms.
@@ -502,14 +502,13 @@ While model 0 shows a high variation according to which samples are selected.</p
 <p>On this dataset we also focused on the most important ASV according to the model 2.2 that were present in more than 2 samples that in total were present in the whole dataset.
 These ASV were summarized to a single value and then used to calculate the AUC, which was 0.85.
 The dot product of the ASV and genes were also calculated and used to find out which ASV are related to which genes.</p>
-<!--# TODO show hair ball plot ? -->
+<!--# TODO show hair ball plot ? Doesn't work well; I don't like it -->
 <!--# TODO continue/fix this -->
 </div>
 <div id="results-hernandez" class="section level3 hasAnchor" number="4.2.7">
 <h3><span class="header-section-number">4.2.7</span> Hernández’ dataset<a href="results.html#results-hernandez" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This dataset was processed to confirm the results on the previous datasets.</p>
-<p>The models are.
-Model 1.2 is, model 2.2.</p>
+<p>The models are.</p>
 <!--# TODO models -->
 <!--# TODO: Bootstrap -->
 <!--# TODO MCIA -->
