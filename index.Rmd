@@ -22,6 +22,8 @@ description: |
   Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with IBD and some controls to discover key differences on this relationship.
 ---
 
+<!--# TODO add the first two pages with the formal requirements of the faculty  -->
+
 # Preface {.unnumbered}
 
 ![UB logo](images/ub_logo.png "University where I defend the thesis"){width="160"} ![IDIBAPS logo](images/idibaps_logo.png "Research center"){width="160"} ![CIBER logo](images/logo_ciber.png "Hiring institution"){width="160" height="38"}
@@ -43,7 +45,11 @@ They provided advice and guidance on how to analyse the data and where to focus 
 [This thesis](https://thesis.llrs.dev) is licensed under the [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/ "License summary link").  
 !["CC-BY image"](images/by.png "CC-BY image of creative commons")
 
-# Abstract {.unnumbered}
+# Abstracts {.unlisted .unnumbered}
+
+<!--# Max length of 600 words-->
+
+## English
 
 **Introduction**: Inflammatory bowel disease is a complex disease with several factors that affect each other. 
 The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine. 
@@ -58,3 +64,36 @@ Furthermore, the classification of samples was used to find which methods provid
 **Discussion**: Biological relevance, difficult.
 
 **Conclusion**: Chips or further tests.
+
+## Spanish
+
+**Introducción**: Inflammatory bowel disease is a complex disease with several factors that affect each other. 
+The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine. 
+Finding those relationships will help to advance treatments, diagnosis or prevent it. 
+
+**Métodos**: To identify these relationships we based our analysis on intestinal bacterial 16S data and human transcriptome from biopsies. 
+We used canonical correlation analysis to find models that are coherent with previous knowledge on the biologiy of the disease and provide insights on the relationships between bacteria and genes. 
+
+**Resultados**: We compared our own methods with previously published methods, mainly MCIA, to assess the advantages and disadvantages of the different proposed relationships. 
+Furthermore, the classification of samples was used to find which methods provide are more accurate. 
+
+**Discussión**: Biological relevance, difficult.
+
+**Conclusión**: Chips or further tests.
+
+
+## Catalan
+
+**Introducció**: Inflammatory bowel disease is a complex disease with several factors that affect each other. 
+The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine. 
+Finding those relationships will help to advance treatments, diagnosis or prevent it. 
+
+**Mètodos**: To identify these relationships we based our analysis on intestinal bacterial 16S data and human transcriptome from biopsies. 
+We used canonical correlation analysis to find models that are coherent with previous knowledge on the biologiy of the disease and provide insights on the relationships between bacteria and genes. 
+
+**Resultats**: We compared our own methods with previously published methods, mainly MCIA, to assess the advantages and disadvantages of the different proposed relationships. 
+Furthermore, the classification of samples was used to find which methods provide are more accurate. 
+
+**Discussió**: Biological relevance, difficult.
+
+**Conclusió**: Chips or further tests.
