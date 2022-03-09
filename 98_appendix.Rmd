@@ -104,7 +104,7 @@ I developed a package to analyze sets and fuzzy sets [BaseSet](https://github.co
 This package was meant to be used with the probabilities that arise from bootstrapping the models.
 However, due to the long times of calculation that it would require it was not used.
 
-To analyze the antiTNF cohort (also named BARCELONA) a [different repository](https://github.com/llrs/Barcelona "Barcelona repository") was created to analyze the data using the previously developed packages.
+To analyze the BARCELONA cohort (also named antiTNF) a [different repository](https://github.com/llrs/Barcelona "Barcelona repository") was created to analyze the data using the previously developed packages.
 
 ## By project/publication
 

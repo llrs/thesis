@@ -46,16 +46,16 @@ At least one biopsy was collected and fresh-frozen at -80°C for microbial DNA e
 The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen, Hilde, Germany) and stored at -80°C until total RNA extraction.
 In total 158 samples with both RNA and DNA extraction of the same segment and time were available:
 
-| Characteristic                          | HSCT        |
-|-----------------------------------------|-------------|
-| Sex (female/male)                       | 22/15       |
-| Age at diagnostic (\<17/\<40/>40 years) | 7/11/0      |
-| Years of disease: mean (min-max)        | 14 (8-28)   |
-| Age: mean (min-max)                     | 44 (23-70)  |
-| Samples (non-disease/CD)                | 51/107      |
-| Location (ileum/colon/unknown)          | 48/108/2    |
-| SES-CD local: mean (min-max)            | 2.15 (0-12) |
-| CDAI: mean (min-max)                    | 120 (0-450  |
+| Characteristic                           | HSCT        |
+|------------------------------------------|-------------|
+| Sex (female/male)                        | 22/15       |
+| Age at diagnostic (\<17/\<40/\>40 years) | 7/11/0      |
+| Years of disease: mean (min-max)         | 14 (8-28)   |
+| Age: mean (min-max)                      | 44 (23-70)  |
+| Samples (non-disease/CD)                 | 51/107      |
+| Location (ileum/colon/unknown)           | 48/108/2    |
+| SES-CD local: mean (min-max)             | 2.15 (0-12) |
+| CDAI: mean (min-max)                     | 120 (0-450  |
 
 : (#tab:HSCT) Table of HSCT dataset characteristics.
 
@@ -105,16 +105,16 @@ In all patients, starting anti-TNF treatment will be decided before the protocol
 
 Anonymized identification of the patients, disease, sex age at diagnostic, age at the moment of the sample taking, time since the start of the treatment and sample segment was collected.
 
-| Characteristic                          | BARCELONA  |
-|-----------------------------------------|------------|
-| Individuals                             | 62         |
-| Status (CD/UC/Controls)                 | 33/21/8    |
-| Sex (female/male)                       | 29/33      |
-| Age at diagnostic (\<17/\<40/>40 years) | 2/44/8     |
-| Years of disease: mean (min-max)        | 7.6 (0-32) |
-| Age: mean (min-max)                     | 41 (18-68) |
-| Time (0/14/46 weeks)                    | 41/40/32   |
-| Sample segment (ileum/colon)            | 39/87      |
+| Characteristic                           | BARCELONA  |
+|------------------------------------------|------------|
+| Individuals                              | 62         |
+| Status (CD/UC/Controls)                  | 33/21/8    |
+| Sex (female/male)                        | 29/33      |
+| Age at diagnostic (\<17/\<40/\>40 years) | 2/44/8     |
+| Years of disease: mean (min-max)         | 7.6 (0-32) |
+| Age: mean (min-max)                      | 41 (18-68) |
+| Time (0/14/46 weeks)                     | 41/40/32   |
+| Sample segment (ileum/colon)             | 39/87      |
 
 : (#tab:BARCELONA) Table of samples included from the BARCELONA dataset characteristics.
 
@@ -130,7 +130,7 @@ Data has the following characteristics: disease, age at diagnostic, age at the m
 | Characteristic                                  | Howell's  |
 |-------------------------------------------------|-----------|
 | Disease (CD/UC/controls)                        | 10/11/11  |
-| Age at diagnostic (\<17/\<40/>40 years)         | 32/0/0    |
+| Age at diagnostic (\<17/\<40/\>40 years)        | 32/0/0    |
 | Age: mean (min-max)                             | 12 (6-15) |
 | Sex (female/male)                               | 10/22     |
 | Segment (ileum/colon)                           | 31/46     |
@@ -148,14 +148,14 @@ In addition, asymptomatic healthy controls (HC) were recruited during routine, a
 
 <!--# TODO table of patients and samples -->
 
-| Characteristic                          | Hernández' |
-|-----------------------------------------|------------|
-| Disease (CD/UC/controls)                | 54/66/46   |
-| Age at diagnostic (\<17/\<40/>40 years) | 29/73/18   |
-| Age: mean (min-max)                     | 40 (17-71) |
-| Sex (female/male)                       | 81/85      |
-| Smoking (never/ex/current)              | 115/34/16  |
-| Segment (ileum/colon)                   | 97/193     |
+| Characteristic                           | Hernández' |
+|------------------------------------------|------------|
+| Disease (CD/UC/controls)                 | 54/66/46   |
+| Age at diagnostic (\<17/\<40/\>40 years) | 29/73/18   |
+| Age: mean (min-max)                      | 40 (17-71) |
+| Sex (female/male)                        | 81/85      |
+| Smoking (never/ex/current)               | 115/34/16  |
+| Segment (ileum/colon)                    | 97/193     |
 
 : (#tab:hernandez) Table of samples included from Hernández's dataset characteristics.
 
@@ -312,11 +312,9 @@ The O2PLS model can be written as a factor analysis where some factors are commo
 
 $$
 \text{X model: } X = TW ^ T + T_{\text{Y-ortho}} P ^ T_{\text{Y-ortho}} + E
-$$ 
-$$
+$$ $$
 \text{Y model: } Y = UC ^ T + U_{\text{X-ortho}} P ^ T_{\text{X-ortho}} + F
-$$
-$$
+$$ $$
 \text{Inner relation: } U = T + H
 $$
 
@@ -329,7 +327,7 @@ Canonical correlation is a method that uses data about the same unit but from di
 Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017] which was used on this thesis.
 The method and implementation will be explained in detail on the next section.
 
-![ (#fig:workflow-process) Workflow of the analysis process](images/workflow%20integration.png)
+![(#fig:workflow-process) Workflow of the analysis process](images/workflow%20integration.png)
 
 ## Regularized generalized canonical correlation analysis
 
@@ -467,7 +465,7 @@ Data was normalized using the trimmed mean of M-values and log-2 transformed int
 The samples were adjusted for inter-patient differences blocking for patient.
 
 To correct for multiple testing, the false discovery rate was estimated using the method of Benjamini and Hochberg [@yoavbenjamini].
-A gene was considered differentially expressed when it was significant at 5% FDR special attention was given to those genes that showed a fold-change higher than |1.5|.
+A gene was considered differentially expressed when it was significant at 5% FDR special attention was given to those genes that showed a fold-change higher than \|1.5\|.
 
 ## Functional enrichment methods
 
@@ -480,8 +478,7 @@ It checks the enrichment of features of a given group on the (background) list p
 
 $$
 H_0 : P_{subset} \leq  P_{overall}
-$$
-$$
+$$ $$
 H_1 : P_{subset} > P_{overall}
 $$
 
@@ -532,8 +529,7 @@ Then later calculate the following functions:
 
 $$
 P_{hit}(S, i)=\sum_{g_j \in S, j \leq i}\dfrac{|r_j|^p}{N_R} \text{, where } N_R = \sum_{g_j \in S}|r_j|^p 
-$$
-$$
+$$ $$
 P_{miss}(S, i) = \sum_{g_j \not \in S, j \leq i}\dfrac{1}{N - N_H}
 $$
 
@@ -625,7 +621,7 @@ $$
 D_2 = \dfrac{1}{\sum_{1=1}^Sp_i^2}
 $$
 
-The effective Shannon diversity is: 
+The effective Shannon diversity is:
 
 $$
 D = \dfrac{1}{-\sum_{i =1}^S p_i \log_e{p_i}}
@@ -706,11 +702,10 @@ It is based on the following formulas, where $\text{FP}$ is false positive, $N$ 
 
 $$
 FPR = \frac{FP}{N} = \dfrac{FP}{FP+TN} 
-$$
-$$
+$$ $$
 TPR = \frac{TP}{P} = \dfrac{FP}{FP+FN} 
 $$
 
-The ROC curve is that where the true positive rate (TPR) or sensitivity, recall or hit rate is represented against the false positive rate (FPR) on the x axis.
+The ROC curve is that where the true positive rate (TPR) or sensitivity, recall or hit rate is represented against the false positive rate (FPR) on the abscissa.
 The area under this curve is a measure of how good such classifications performs overall, being 0.5 as good as a random selection.
 The higher it is to 1 the better as it classifies incorrectly less samples and accurately classify them.

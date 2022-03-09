@@ -169,8 +169,9 @@ In addition, the numeric precision of said calculations suffers from the flotati
 To support multiplying more than 1000 float numbers a different strategy such as using log values might be better.
 We could not come up with a better strategy to find all the combinations needed, perhaps a better method exists that could be used to find which are the terms more influential to the end result.
 
-Some batch effects are avoidable due to the experDesign package.
+Some batch effects are avoidable due to the `experDesign` package.
 This might help to improve the quality of the datasets and to expand previously sequenced datasets.
+However, As seen on the previous section, this does not prevent all problems with batch effects and let through the worst kind of
 
 We selected `MCIA` as a baseline to compare our method because it works well and has a good documentation as well as it is fairly used on the computational world.
 The method was developed after `RGCCA` and recently there have been publications that show that it outperforms other methods on its versatility on different contexts [@cantini2021].

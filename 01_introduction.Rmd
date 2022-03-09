@@ -411,7 +411,7 @@ The explosion of data on biological sciences has been driven by the new sequenci
 If done with multiple sequencing technologies it is usually referred as multi-omics methods, which usually only uses omic data.
 
 It is crucial to classify, review and compare tools available, as well as, to benchmark these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019]. Part of these efforts use the methods' strategies to classify them [@cavill2016; @chongComputationalApproachesIntegrative2017].
-Following this view I will review the available integration methods according to several axis: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
+Following this view I will review the available integration methods according to several axes: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
 
 ### Classification of integration method
 
@@ -464,7 +464,7 @@ Sometimes the question is which omic method is the best describing a disease.
 This knowledge could prevent performing expensive tests and replace them by more affordable or easier technique that has enough predictive power or is sensitive enough and specific for the task.
 An example of this is the search of markers on blood to identify links between different cell populations [@tang2017; @ibrahim2017].
 
--   Finding a molecular signature.
+-   Finding a molecular signature
 
 A signature is usually a group of features that describe/are representative of a cell type, a process or a stage.
 Identifying a subset of variables from the omics that are related is often a desired goal because it reduces the amount of variables allowing to perform experiments on the bench on just those that might be important.
