@@ -142,23 +142,23 @@ It ends up advising to set up guidelines for multi-omic studies tailored to the 
 On IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria is related to inflammation.
 On this thesis, the focus was on finding a good representation of the disease that allowed to identify genes and bacteria that were relevant to the disease.
 We made the assumptions that the microbiome and the transcriptome are related.
-This assumption is backed up by several other previous studies supporting this relationship or others [@holmes2012; @brand2021; @cornish2008; @thomas1998] [ref:needed about relationship between microbiome and mucosa].
+This assumption is backed up by several other previous studies supporting this relationship or others [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
 
 However, it is also known the role of other factors that are outside the omics dataset.
 To guide the search of which of these variables are important tools that relate the variance of a block with other variables, both numeric and categoric, are needed.
-On this case, `adonis` and `globaltest` worked well to identify which variables that were recorded were important.
-Following, the previous article about being conscious of the gap, we could miss some other important variable.
-However, even if we missed it, we probably haven't collected it or it is not available, there is nothing at this point that can be done.
-This also enters in conflict with the general idea of data protection, that the minimum sufficient information should be collected.
-In this case we might have miss a variable but to identify it we would need to collect too much information from the patients.
+Despite PERMANOVA, `adonis` and `globaltest` worked well to identify which variables about the samples were important, they do not provide variable selection and do not give any insight into which specific microbial species are driving the association between the microbiome and the variables [@susin2020].
+\
+In addition, we could miss some other important variables.
+Sudhakar *et. al.* [@sudhakar2022] recommend being conscious of the gap between the data available and the biological process.
+However, even if we missed them, we probably have not collected it or it is not available, there is nothing at this point that can be done.
+This also enters in conflict with a principle of data protection: the minimum sufficient information should be collected.
+We might not identify a relevant variable but to identify it we would need to collect too much information from the patients and for little or no clear benefits.
 
 We tried to find which genes and bacteria are correlated between them using `WGCNA`.
 It is a tool designed to find common patterns based on correlations requiring homogeneous samples, with a minimum of 12 samples required for condition.
 When applied to the whole dataset there might bee too much variance in order of WGCNA to find the proper signal.
 In addition, having microbiome and RNASeq on the same matrix, would probably be hard for the process to find good relationships if we applied the same normalization process to both of them without scalation.\
 We could have tried to make smaller groups and then compare the modules between them but it groups would be too small because samples were from multiple segments and conditions.
-
-We selected `MCIA` as a baseline to compare our method because it works well and has a good documentation as well as it is fairly used on the computational world.
 
 We briefly considered using `STATegRa`.
 But it is not possible to select which interactions between the blocks exists and by that time we already knew it was important to consider several of the variables collected from the patients.
@@ -171,6 +171,10 @@ We could not come up with a better strategy to find all the combinations needed,
 
 Some batch effects are avoidable due to the experDesign package.
 This might help to improve the quality of the datasets and to expand previously sequenced datasets.
+
+We selected `MCIA` as a baseline to compare our method because it works well and has a good documentation as well as it is fairly used on the computational world.
+The method was developed after `RGCCA` and recently there have been publications that show that it outperforms other methods on its versatility on different contexts [@cantini2021].
+On the dataset analyzed we found it was very competitive but this will be discussed on section \@ref(evaluating-models) .
 
 ## Designing models
 
@@ -211,11 +215,15 @@ The procedure of separating independent variables in their own block of data and
 The procedural method of searching a model and testing them is implemented on [`inteRmodel`](https://llrs.github.io/inteRmodel/ "inteRmodel").
 But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling.
 
-Transciptome is related to localization of the samples [ref:needed].
+It is known that mucosal transciptome is related to localization of the samples [ref:needed].
+The difference is so great that many times the colon and ileum samples are analyzed separately.
 
-Microbiome is more related to the disease and other variables of the patients.
+The variability of microbiome has made challenging to find clear patterns on what it is related.
+It is more related to the disease and other variables of the patients.
 
 Time is an important variable when modelling the disease, if multiple timepoints are taken they should be taken into account to identify the state of the disease for each patient.
+As well as they multiple samples with microbiota from the same patient provide a common microbiome background, which can help to identify altered microbiome states later on.
+Due to technical challenges very few datasets provide data from the same patient on multiple locations.
 
 [@jiang2019] A paper about multi-omics and microbiome...
 
