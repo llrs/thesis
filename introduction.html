@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-03-09" />
+<meta name="date" content="2022-03-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="abstracts.html"/>
 <link rel="next" href="hypothesis-and-objectives.html"/>
-<script src="libs/header-attrs-2.12/header-attrs.js"></script>
+<script src="libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -97,6 +97,12 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li><a href="index.html#preface">Preface<span></span></a></li>
+<li><a href="abstracts.html#abstracts">Abstracts<span></span></a>
+<ul>
+<li><a href="abstracts.html#english">English<span></span></a></li>
+<li><a href="abstracts.html#spanish">Spanish<span></span></a></li>
+<li><a href="abstracts.html#catalan">Catalan<span></span></a></li>
+</ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction<span></span></a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#IBD"><i class="fa fa-check"></i><b>1.1</b> Inflammatory bowel disease<span></span></a>
@@ -136,9 +142,9 @@ div.csl-indent {
 <li class="chapter" data-level="3.1.6" data-path="materials-and-methods.html"><a href="materials-and-methods.html#methods-howell"><i class="fa fa-check"></i><b>3.1.6</b> Howell’s dataset<span></span></a></li>
 <li class="chapter" data-level="3.1.7" data-path="materials-and-methods.html"><a href="materials-and-methods.html#methods-hernandez"><i class="fa fa-check"></i><b>3.1.7</b> Hernández’ dataset<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#processing-samples"><i class="fa fa-check"></i><b>3.2</b> Processing samples<span></span></a>
+<li class="chapter" data-level="3.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#sample-processing"><i class="fa fa-check"></i><b>3.2</b> Sample processing<span></span></a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#transcriptome-sequencing"><i class="fa fa-check"></i><b>3.2.1</b> Transcriptome sequencing<span></span></a></li>
+<li class="chapter" data-level="3.2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#rna-sequencing"><i class="fa fa-check"></i><b>3.2.1</b> RNA sequencing<span></span></a></li>
 <li class="chapter" data-level="3.2.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#microbial-dna-sequencing"><i class="fa fa-check"></i><b>3.2.2</b> Microbial DNA sequencing<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#integration-methods"><i class="fa fa-check"></i><b>3.3</b> Integration methods<span></span></a>
@@ -216,6 +222,11 @@ div.csl-indent {
 <li class="chapter" data-level="B.1" data-path="software.html"><a href="software.html#listed"><i class="fa fa-check"></i><b>B.1</b> Listed<span></span></a></li>
 <li class="chapter" data-level="B.2" data-path="software.html"><a href="software.html#by-projectpublication"><i class="fa fa-check"></i><b>B.2</b> By project/publication<span></span></a></li>
 </ul></li>
+<li class="chapter" data-level="C" data-path="articles.html"><a href="articles.html"><i class="fa fa-check"></i><b>C</b> Articles<span></span></a>
+<ul>
+<li class="chapter" data-level="C.1" data-path="articles.html"><a href="articles.html#app-multiomics"><i class="fa fa-check"></i><b>C.1</b> Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis<span></span></a></li>
+<li class="chapter" data-level="C.2" data-path="articles.html"><a href="articles.html#app-experDesign"><i class="fa fa-check"></i><b>C.2</b> experDesign: stratifying samples into batches with minimal bias<span></span></a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -270,7 +281,8 @@ A segment of the gastrointestinal tract might recover if the patient receives tr
 But once a segment is affected by the disease it can be considered as involved, as some damage remains even if the tissues is no longer inflammed.</p>
 <div id="etiology-and-pathogenesis" class="section level3 hasAnchor" number="1.1.1">
 <h3><span class="header-section-number">1.1.1</span> Etiology and pathogenesis<a href="introduction.html#etiology-and-pathogenesis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Several mechanisms have been proposed to drive IBD pathogenesis <span class="citation">[<a href="#ref-zhang2014" role="doc-biblioref">6</a>, <a href="#ref-hugot2004" role="doc-biblioref">7</a>]</span>. Some of them are based on a relationship between the immune system and the microbiome <span class="citation">[<a href="#ref-silva2016" role="doc-biblioref">8</a>, <a href="#ref-demattos2015" role="doc-biblioref">9</a>]</span>.
+<p>Several mechanisms have been proposed to drive IBD pathogenesis <span class="citation">[<a href="#ref-zhang2014" role="doc-biblioref">6</a>, <a href="#ref-hugot2004" role="doc-biblioref">7</a>]</span>.
+Some of them are based on a relationship between the immune system and the microbiome <span class="citation">[<a href="#ref-silva2016" role="doc-biblioref">8</a>, <a href="#ref-demattos2015" role="doc-biblioref">9</a>]</span>.
 It is also unclear if CD and the UC share the same origin considering their different symptoms.</p>
 <p>There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) <span class="citation">[<a href="#ref-mcgovern2015" role="doc-biblioref">10</a>, <a href="#ref-satsangi2006" role="doc-biblioref">11</a>]</span>.
 Disease can be classified based on age at onset as very early, early or adult on-set disease <span class="citation">[<a href="#ref-satsangi2006" role="doc-biblioref">11</a>]</span>.
@@ -283,7 +295,8 @@ On early pedriatic and adult disease the genetic component is lower than on very
 <p>This has lead to look for genetic factors on IBD both on general population and on the early cases.
 Genome wide association studies (GWAS) are one of the most common genetic studies performed, together with methylation studies.
 To discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.</p>
-<p>With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants <span class="citation">[<a href="#ref-kumar2019" role="doc-biblioref">13</a>]</span>. Particularly, the <em>NOD2</em> gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in UC <span class="citation">[<a href="#ref-jostins2012" role="doc-biblioref">14</a>, <a href="#ref-momozawa2018" role="doc-biblioref">15</a>]</span>.
+<p>With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants <span class="citation">[<a href="#ref-kumar2019" role="doc-biblioref">13</a>]</span>.
+Particularly, the <em>NOD2</em> gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in UC <span class="citation">[<a href="#ref-jostins2012" role="doc-biblioref">14</a>, <a href="#ref-momozawa2018" role="doc-biblioref">15</a>]</span>.
 The mechanism of how this gene protects from UC has not been confirmed yet <span class="citation">[<a href="#ref-horowitz2021" role="doc-biblioref">12</a>]</span>.</p>
 <p>Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
 Recently expression quantitative trait loci (eQTL) particularly showed <span class="citation">[<a href="#ref-mcgovern2015" role="doc-biblioref">10</a>]</span> that locis are on enhancers or promoters like e.g.
@@ -302,7 +315,9 @@ IBD has been characterized by a breakdown in the balance between beneficial and 
 <p>Indeed, many studies show that patients with IBD have less biodiversity.
 Biodiversity is measured on <span class="math inline">\(\alpha\)</span> (alfa) and <span class="math inline">\(\beta\)</span> (beta) diversity.
 <span class="math inline">\(\alpha\)</span>-diversity is a measure of the species present on a single sample and its abundance while <span class="math inline">\(\beta\)</span>-diversity compares the diversity between samples.
-There are some reports of taxonomic changes and increase on <em>Enterobacteriaceae sp</em>, <em>Escherichia coli</em> (specially the invasive strain) at the mucosal layer of IBD patients <span class="citation">[<a href="#ref-ott2004" role="doc-biblioref">19</a>]</span>. At the same time there is often a reduction of protective species like <em>Bifidobacterium</em>, <em>Lactobacillus</em> and <em>Faecalibacterium</em> which might be able to protect individuals from mucosal inflammation via several mechanism such as a downregulation of proinflammatory cytokines or the stimulation of IL-10 and antiinflammatory cytokines <span class="citation">[<a href="#ref-ott2004" role="doc-biblioref">19</a>]</span>. Specially <em>Faecalibacterium prausnitzii</em> is one microorganism of interest <span class="citation">[<a href="#ref-kostic2014" role="doc-biblioref">20</a>, <a href="#ref-sender2016" role="doc-biblioref">21</a>]</span>.</p>
+There are some reports of taxonomic changes and increase on <em>Enterobacteriaceae sp</em>, <em>Escherichia coli</em> (specially the invasive strain) at the mucosal layer of IBD patients <span class="citation">[<a href="#ref-ott2004" role="doc-biblioref">19</a>]</span>.
+At the same time there is often a reduction of protective species like <em>Bifidobacterium</em>, <em>Lactobacillus</em> and <em>Faecalibacterium</em> which might be able to protect individuals from mucosal inflammation via several mechanism such as a downregulation of proinflammatory cytokines or the stimulation of IL-10 and antiinflammatory cytokines <span class="citation">[<a href="#ref-ott2004" role="doc-biblioref">19</a>]</span>.
+Specially <em>Faecalibacterium prausnitzii</em> is one microorganism of interest <span class="citation">[<a href="#ref-kostic2014" role="doc-biblioref">20</a>, <a href="#ref-sender2016" role="doc-biblioref">21</a>]</span>.</p>
 <!--# Aida 2.3 p24-->
 <p>In fact, it has been recently proposed that several unique microbial species can distinguish healthy controls from UC and CD patients <span class="citation">[<a href="#ref-sankarasubramanian2020" role="doc-biblioref">22</a>, <a href="#ref-lopez-siles2014" role="doc-biblioref">23</a>]</span>.</p>
 <div class="figure"><span style="display:block;" id="fig:composition"></span>
@@ -391,7 +406,8 @@ Other less frequent co-occurring manifestations are arthritis, primary sclerosin
 These symptoms make it hard to correctly diagnose the disease by non-specialists, in addition there is not a non invasive easy procedure to diagnose it.
 All these can lead to delays on correct diagnosis of the disease.</p>
 <!--# Tesis Ana p21-->
-<p>The detection of parasites or bacteria, such as <em>Clostridium difficile</em>, have been associated with CD <span class="citation">[<a href="#ref-khanna2017" role="doc-biblioref">45</a>]</span>. The detection of fecal calprotectin, is generally a good marker of endoscopic activity with sensitivity above 70% and specificity above 80% <span class="citation">[<a href="#ref-guardiola2018" role="doc-biblioref">46</a>, <a href="#ref-sands2015" role="doc-biblioref">47</a>]</span>.</p>
+<p>The detection of parasites or bacteria, such as <em>Clostridium difficile</em>, have been associated with CD <span class="citation">[<a href="#ref-khanna2017" role="doc-biblioref">45</a>]</span>.
+The detection of fecal calprotectin, is generally a good marker of endoscopic activity with sensitivity above 70% and specificity above 80% <span class="citation">[<a href="#ref-guardiola2018" role="doc-biblioref">46</a>, <a href="#ref-sands2015" role="doc-biblioref">47</a>]</span>.</p>
 <!--# End-->
 <p>Usually the best diagnosis method is to perform a colonoscopy, whether there is inflammation on the gastrointestinal tract on discontinuous regions then is CD.
 This inflammation could also present ulceration with rectal sparing and histological lesions which also help to diagnose the patients <span class="citation">[<a href="#ref-corralizamárquez2019" role="doc-biblioref">48</a>]</span>.</p>
@@ -462,7 +478,8 @@ In CU it helps in the clinic remission but it does not always mean that there is
 On CD the effects are not so stark and generally it does not produce changes on the disease <span class="citation">[<a href="#ref-akobeng2016" role="doc-biblioref">62</a>]</span>.</p>
 <p>Antibiotics, such as metronidazol and ciprofloxacina, are effective to deal with secondary effects of IBD such as abscess and bacterian overgrowth in CD <span class="citation">[<a href="#ref-feller2010" role="doc-biblioref">63</a>, <a href="#ref-prantera2009" role="doc-biblioref">64</a>]</span>, but they do not seem effective on UC <span class="citation">[<a href="#ref-prantera2009" role="doc-biblioref">64</a>]</span>.</p>
 <p>Corticosteroids can be taken orally, such as prednisolona, prednisona and Budesonide; intravenous, hidrocortisona, metilprednisolona; or via enemas and suppositories.
-Budesonide is not absorved well and has a limited biodistribution but it has good therapeutic benefits with a reduced systemic toxicity in IBD <span class="citation">[<a href="#ref-peyrin-biroulet2010" role="doc-biblioref">53</a>, <a href="#ref-rezaie2015" role="doc-biblioref">65</a>]</span>. These drugs work very well as antiinflammatory for mild or severe IBD but do not work well as maintenance drug <span class="citation">[<a href="#ref-lichtenstein2009" role="doc-biblioref">66</a>, <a href="#ref-ouellette2001" role="doc-biblioref">67</a>]</span>.</p>
+Budesonide is not absorved well and has a limited biodistribution but it has good therapeutic benefits with a reduced systemic toxicity in IBD <span class="citation">[<a href="#ref-peyrin-biroulet2010" role="doc-biblioref">53</a>, <a href="#ref-rezaie2015" role="doc-biblioref">65</a>]</span>.
+These drugs work very well as antiinflammatory for mild or severe IBD but do not work well as maintenance drug <span class="citation">[<a href="#ref-lichtenstein2009" role="doc-biblioref">66</a>, <a href="#ref-ouellette2001" role="doc-biblioref">67</a>]</span>.</p>
 <p>Thiopurines (Azathioprine, mercaptopurina) are immunosuppressants drugs that deactivate key process of limphocytes T that might trigger the inflammation.
 As a side effect they are toxic due to their interaction with nucleic acids <span class="citation">[<a href="#ref-warner2018" role="doc-biblioref">68</a>]</span>.
 on CD they are useful to induce and keep remission <span class="citation">[<a href="#ref-chande2015" role="doc-biblioref">69</a>]</span>, while on UC they are used to keep the remission <span class="citation">[<a href="#ref-gisbert2009" role="doc-biblioref">70</a>]</span>.</p>
@@ -538,7 +555,8 @@ This has lead to the identification of expression quantitative trait loci (eQTL)
 <div id="metabolome" class="section level4 hasAnchor" number="1.2.1.4">
 <h4><span class="header-section-number">1.2.1.4</span> Metabolome<a href="introduction.html#metabolome" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>More recently there have been an increased interest on the study of the metabolic stat of IBD patients, given that microorganisms interact with the host also via their products and metabolites.
-There is evidence some of these metabolomic products come from the microbiome <span class="citation">[<a href="#ref-ferrer-picón2020" role="doc-biblioref">24</a>, <a href="#ref-mayorgas2021" role="doc-biblioref">83</a>]</span>. Some studies have integrated the metabolome with the RNAseq and state of the epithelium <span class="citation">[<a href="#ref-ahmed2016" role="doc-biblioref">92</a>, <a href="#ref-gallagher2021" role="doc-biblioref">93</a>]</span>.</p>
+There is evidence some of these metabolomic products come from the microbiome <span class="citation">[<a href="#ref-ferrer-picón2020" role="doc-biblioref">24</a>, <a href="#ref-mayorgas2021" role="doc-biblioref">83</a>]</span>.
+Some studies have integrated the metabolome with the RNAseq and state of the epithelium <span class="citation">[<a href="#ref-ahmed2016" role="doc-biblioref">92</a>, <a href="#ref-gallagher2021" role="doc-biblioref">93</a>]</span>.</p>
 </div>
 </div>
 </div>
@@ -557,7 +575,8 @@ Some of these methods are specific for one application or data type while others
 Lately, the access to bigger datasets with more variables and often from the same samples has increased the focus of the research community on the methodologies available on several disciplines but mainly on biological sciences.
 The explosion of data on biological sciences has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time.
 If done with multiple sequencing technologies it is usually referred as multi-omics methods, which usually only uses omic data.</p>
-<p>It is crucial to classify, review and compare tools available, as well as, to benchmark these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them <span class="citation">[<a href="#ref-wu_selective_2019" role="doc-biblioref">98</a>]</span>. Part of these efforts use the methods’ strategies to classify them <span class="citation">[<a href="#ref-cavill2016" role="doc-biblioref">99</a>, <a href="#ref-chongComputationalApproachesIntegrative2017" role="doc-biblioref">100</a>]</span>.
+<p>It is crucial to classify, review and compare tools available, as well as, to benchmark these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them <span class="citation">[<a href="#ref-wu_selective_2019" role="doc-biblioref">98</a>]</span>.
+Part of these efforts use the methods’ strategies to classify them <span class="citation">[<a href="#ref-cavill2016" role="doc-biblioref">99</a>, <a href="#ref-chongComputationalApproachesIntegrative2017" role="doc-biblioref">100</a>]</span>.
 Following this view I will review the available integration methods according to several axes: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.</p>
 <div id="classification-of-integration-method" class="section level3 hasAnchor" number="1.3.1">
 <h3><span class="header-section-number">1.3.1</span> Classification of integration method<a href="introduction.html#classification-of-integration-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -609,7 +628,8 @@ An example of this is the search of markers on blood to identify links between d
 <p>A signature is usually a group of features that describe/are representative of a cell type, a process or a stage.
 Identifying a subset of variables from the omics that are related is often a desired goal because it reduces the amount of variables allowing to perform experiments on the bench on just those that might be important.
 In other fields, such as machine learning, selecting the important variables is known as <a href="https://en.wikipedia.org/wiki/Feature_selection" title="Wikipedia page of feature selection">feature selection</a>.
-There are several methods that are used to do this <span class="citation">[<a href="#ref-cavill2016" role="doc-biblioref">99</a>]</span>. An example of this is when performing eQTL analysis, where a locus is related to a change in gene expression <span class="citation">[<a href="#ref-repnik2016" role="doc-biblioref">88</a>–<a href="#ref-dai2019" role="doc-biblioref">91</a>]</span>.</p>
+There are several methods that are used to do this <span class="citation">[<a href="#ref-cavill2016" role="doc-biblioref">99</a>]</span>.
+An example of this is when performing eQTL analysis, where a locus is related to a change in gene expression <span class="citation">[<a href="#ref-repnik2016" role="doc-biblioref">88</a>–<a href="#ref-dai2019" role="doc-biblioref">91</a>]</span>.</p>
 <ul>
 <li>A predictive model</li>
 </ul>
@@ -787,7 +807,8 @@ Or if looking by patient: how do interpret that in these patient variable A and 
 </ul>
 <p>In a principal component analysis for instance how do we interpret that some variables have the same loading?
 What happens in a more complex method like canonical correlation analysis?</p>
-<p>There are some articles about how to interpret those methods on real datasets <span class="citation">[<a href="#ref-sherryConductingInterpretingCanonical1981" role="doc-biblioref">137</a>]</span>. Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset <span class="citation">[<a href="#ref-chung_multi-omics_2019" role="doc-biblioref">138</a>, <a href="#ref-martinez-mira_mosim_2018" role="doc-biblioref">139</a>]</span>.
+<p>There are some articles about how to interpret those methods on real datasets <span class="citation">[<a href="#ref-sherryConductingInterpretingCanonical1981" role="doc-biblioref">137</a>]</span>.
+Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset <span class="citation">[<a href="#ref-chung_multi-omics_2019" role="doc-biblioref">138</a>, <a href="#ref-martinez-mira_mosim_2018" role="doc-biblioref">139</a>]</span>.
 Which is used to compare the results of the integration with the dataset of interest and to compare different tools.
 These datasets are created with some relationships that the tools are expected to find.</p>
 <p>There exists several methods to create synthetic datasets like MOSim <span class="citation">[<a href="#ref-haberman2019" role="doc-biblioref">140</a>]</span>, metaSPARSim <span class="citation">[<a href="#ref-patuzzi2019" role="doc-biblioref">141</a>]</span>, CAMISIM <span class="citation">[<a href="#ref-fritz2019" role="doc-biblioref">142</a>]</span>, ballgown <span class="citation">[<a href="#ref-fu2021" role="doc-biblioref">143</a>]</span>, polyester <span class="citation">[<a href="#ref-frazee2021" role="doc-biblioref">144</a>]</span> and even edgeR <span class="citation">[<a href="#ref-mccarthy2012" role="doc-biblioref">145</a>]</span>.

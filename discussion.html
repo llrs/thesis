@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-03-09" />
+<meta name="date" content="2022-03-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="results.html"/>
 <link rel="next" href="conclusions.html"/>
-<script src="libs/header-attrs-2.12/header-attrs.js"></script>
+<script src="libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -97,6 +97,12 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li><a href="index.html#preface">Preface<span></span></a></li>
+<li><a href="abstracts.html#abstracts">Abstracts<span></span></a>
+<ul>
+<li><a href="abstracts.html#english">English<span></span></a></li>
+<li><a href="abstracts.html#spanish">Spanish<span></span></a></li>
+<li><a href="abstracts.html#catalan">Catalan<span></span></a></li>
+</ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction<span></span></a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#IBD"><i class="fa fa-check"></i><b>1.1</b> Inflammatory bowel disease<span></span></a>
@@ -136,9 +142,9 @@ div.csl-indent {
 <li class="chapter" data-level="3.1.6" data-path="materials-and-methods.html"><a href="materials-and-methods.html#methods-howell"><i class="fa fa-check"></i><b>3.1.6</b> Howell’s dataset<span></span></a></li>
 <li class="chapter" data-level="3.1.7" data-path="materials-and-methods.html"><a href="materials-and-methods.html#methods-hernandez"><i class="fa fa-check"></i><b>3.1.7</b> Hernández’ dataset<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#processing-samples"><i class="fa fa-check"></i><b>3.2</b> Processing samples<span></span></a>
+<li class="chapter" data-level="3.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#sample-processing"><i class="fa fa-check"></i><b>3.2</b> Sample processing<span></span></a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#transcriptome-sequencing"><i class="fa fa-check"></i><b>3.2.1</b> Transcriptome sequencing<span></span></a></li>
+<li class="chapter" data-level="3.2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#rna-sequencing"><i class="fa fa-check"></i><b>3.2.1</b> RNA sequencing<span></span></a></li>
 <li class="chapter" data-level="3.2.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#microbial-dna-sequencing"><i class="fa fa-check"></i><b>3.2.2</b> Microbial DNA sequencing<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#integration-methods"><i class="fa fa-check"></i><b>3.3</b> Integration methods<span></span></a>
@@ -215,6 +221,11 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="B.1" data-path="software.html"><a href="software.html#listed"><i class="fa fa-check"></i><b>B.1</b> Listed<span></span></a></li>
 <li class="chapter" data-level="B.2" data-path="software.html"><a href="software.html#by-projectpublication"><i class="fa fa-check"></i><b>B.2</b> By project/publication<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="articles.html"><a href="articles.html"><i class="fa fa-check"></i><b>C</b> Articles<span></span></a>
+<ul>
+<li class="chapter" data-level="C.1" data-path="articles.html"><a href="articles.html#app-multiomics"><i class="fa fa-check"></i><b>C.1</b> Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis<span></span></a></li>
+<li class="chapter" data-level="C.2" data-path="articles.html"><a href="articles.html#app-experDesign"><i class="fa fa-check"></i><b>C.2</b> experDesign: stratifying samples into batches with minimal bias<span></span></a></li>
 </ul></li>
 </ul>
 
@@ -355,16 +366,19 @@ On this thesis, the focus was on finding a good representation of the disease th
 We made the assumptions that the microbiome and the transcriptome are related.
 This assumption is backed up by several other previous studies supporting this relationship or others <span class="citation">[<a href="#ref-thomas1998" role="doc-biblioref">40</a>, <a href="#ref-cornish2008" role="doc-biblioref">41</a>, <a href="#ref-holmes2012" role="doc-biblioref">205</a>–<a href="#ref-brand2021" role="doc-biblioref">207</a>]</span>.</p>
 <p>However, it is also known the role of other factors that are outside the omics dataset.
-To guide the search of which of these variables are important tools that relate the variance of a block with other variables, both numeric and categoric, are needed.
-Despite PERMANOVA, <code>adonis</code> and <code>globaltest</code> worked well to identify which variables about the samples were important, they do not provide variable selection and do not give any insight into which specific microbial species are driving the association between the microbiome and the variables <span class="citation">[<a href="#ref-susin2020" role="doc-biblioref">208</a>]</span>.<br />
+To guide the search of which of these variables are important tools that relate the variance of a block with other variables, both numeric and categoric, are needed.<br />
+PERMANOVA, <code>adonis</code> and <code>globaltest</code> worked well to identify which variables about the samples were important.
+But they do not provide variable selection or give any insight into which specific microbial species are driving the association between the microbiome and the variables <span class="citation">[<a href="#ref-susin2020" role="doc-biblioref">208</a>]</span>.<br />
 In addition, we could miss some other important variables.
 Sudhakar <em>et. al.</em> <span class="citation">[<a href="#ref-sudhakar2022" role="doc-biblioref">148</a>]</span> recommend being conscious of the gap between the data available and the biological process.
 However, even if we missed them, we probably have not collected it or it is not available, there is nothing at this point that can be done.
 This also enters in conflict with a principle of data protection: the minimum sufficient information should be collected.
 We might not identify a relevant variable but to identify it we would need to collect too much information from the patients and for little or no clear benefits.</p>
 <p>We tried to find which genes and bacteria are correlated between them using <code>WGCNA</code>.
-It is a tool designed to find common patterns based on correlations requiring homogeneous samples, with a minimum of 12 samples required for condition.
+It is a tool designed to find common co-occurring patterns based on correlations.
+It requires homogeneous samples, with a minimum of 12 samples for condition.
 When applied to the whole dataset there might bee too much variance in order of WGCNA to find the proper signal.
+This might be the reason why it failed to achieve a good fit on the scale free topology with around 100 of mean connectivity.
 In addition, having microbiome and RNASeq on the same matrix, would probably be hard for the process to find good relationships if we applied the same normalization process to both of them without scalation.<br />
 We could have tried to make smaller groups and then compare the modules between them but it groups would be too small because samples were from multiple segments and conditions.</p>
 <p>We briefly considered using <code>STATegRa</code>.
@@ -374,9 +388,13 @@ It failed because it is computationally expensive to calculate the likelihood of
 In addition, the numeric precision of said calculations suffers from the flotating point problems and must be considered carefully.
 To support multiplying more than 1000 float numbers a different strategy such as using log values might be better.
 We could not come up with a better strategy to find all the combinations needed, perhaps a better method exists that could be used to find which are the terms more influential to the end result.</p>
-<p>Some batch effects are avoidable due to the <code>experDesign</code> package.
-This might help to improve the quality of the datasets and to expand previously sequenced datasets.
-However, As seen on the previous section, this does not prevent all problems with batch effects and let through the worst kind of</p>
+<p>The development of the <code>experDesign</code> package helped avoid batch effects due to the <code>experDesign</code> package.
+This package might help to improve the quality of the datasets and to expand previously sequenced datasets.
+However, as seen on the previous section, this does not prevent all problems with batch effects and still batch effects resulting on a less useful experiment might get through.
+As discussed on the related publication, there are several tools already focused on this problem: <code>OSAT</code> (<span class="citation">[<a href="#ref-yan2012" role="doc-biblioref">209</a>]</span>), <code>anticlust</code> (<span class="citation">[<a href="#ref-papenberg2020" role="doc-biblioref">210</a>]</span>) and <code>Omixer</code> (<span class="citation">[<a href="#ref-sinke2021" role="doc-biblioref">211</a>]</span>).
+But these tools have some shortcomings, that are covered by <code>experDesign</code>, <code>OSAT</code> cannot handle missing values and does not work well for arbitrary batches.
+<code>anticlust</code> only accepts numerical variables but it is based on a mathematical theorem that makes it very powerful.
+<code>Omixer</code> has bugs that prevent comparing with the other tools with no possible workaround.</p>
 <p>We selected <code>MCIA</code> as a baseline to compare our method because it works well and has a good documentation as well as it is fairly used on the computational world.
 The method was developed after <code>RGCCA</code> and recently there have been publications that show that it outperforms other methods on its versatility on different contexts <span class="citation">[<a href="#ref-cantini2021" role="doc-biblioref">201</a>]</span>.
 On the dataset analyzed we found it was very competitive but this will be discussed on section <a href="discussion.html#evaluating-models">5.3</a> .</p>
@@ -384,7 +402,7 @@ On the dataset analyzed we found it was very competitive but this will be discus
 </div>
 <div id="designing-models" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Designing models<a href="discussion.html#designing-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Previous publications using <code>RGCCA</code> on IBD focused on validating inflammation markers genes DUOX2 and APOA1 as inflammation predictors (<span class="citation">[<a href="#ref-tang2017" role="doc-biblioref">80</a>]</span>) from previously published articles <span class="citation">[<a href="#ref-haberman2014" role="doc-biblioref">209</a>]</span>.
+<p>Previous publications using <code>RGCCA</code> on IBD focused on validating inflammation markers genes DUOX2 and APOA1 as inflammation predictors (<span class="citation">[<a href="#ref-tang2017" role="doc-biblioref">80</a>]</span>) from previously published articles <span class="citation">[<a href="#ref-haberman2014" role="doc-biblioref">212</a>]</span>.
 Some publication tried to summarize the existing relationships on IBD <span class="citation">[<a href="#ref-hasler_uncoupling_2016" role="doc-biblioref">79</a>]</span>.</p>
 <p>Modeling the relationships on <code>RGCCA</code> the connections between blocks had to be modified.
 Also what belongs to a block should be modified.
@@ -405,7 +423,7 @@ Depending on the goals of the research one or the other should be used.
 If we are more interested on the model of the relationships the inner AVE makes more sense.</p>
 <p>Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
 Another option is to use an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately.
-Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4 package">MCIA</a> <span class="citation">[<a href="#ref-mengMultivariateApproachIntegration2014" role="doc-biblioref">210</a>]</span>.
+Of the multiple methods available we used <a href="https://bioconductor.org/packages/omicade4" title="Omicade4 package">MCIA</a> <span class="citation">[<a href="#ref-mengMultivariateApproachIntegration2014" role="doc-biblioref">213</a>]</span>.
 Which was compared by looking at the area under the curve for classifying the samples according to their location.</p>
 <p>Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn’s disease.
 In this article we did not look in depth to the biological relevance of the microorganisms an genes found.</p>
@@ -419,13 +437,13 @@ It is more related to the disease and other variables of the patients.</p>
 <p>Time is an important variable when modelling the disease, if multiple timepoints are taken they should be taken into account to identify the state of the disease for each patient.
 As well as they multiple samples with microbiota from the same patient provide a common microbiome background, which can help to identify altered microbiome states later on.
 Due to technical challenges very few datasets provide data from the same patient on multiple locations.</p>
-<p><span class="citation">[<a href="#ref-jiang2019" role="doc-biblioref">211</a>]</span> A paper about multi-omics and microbiome…</p>
+<p><span class="citation">[<a href="#ref-jiang2019" role="doc-biblioref">214</a>]</span> A paper about multi-omics and microbiome…</p>
 <p><span class="citation">[<a href="#ref-krassowski2020" role="doc-biblioref">94</a>]</span> advice and recommendations on software engineering and reproducibility practices to share a comprehensive awareness with new researchers in multi-omics for end-to-end workflow.</p>
 </div>
 <div id="relevance-for-other-research" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Relevance for other research<a href="discussion.html#relevance-for-other-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>It is hard to provide more information that can be later used by researchers on the wet lab.</p>
-<p>Paper about using transcriptomics to infer inflammation without colonoscopy <span class="citation">[<a href="#ref-ungar2022" role="doc-biblioref">212</a>]</span></p>
+<p>Paper about using transcriptomics to infer inflammation without colonoscopy <span class="citation">[<a href="#ref-ungar2022" role="doc-biblioref">215</a>]</span></p>
 <p>There is a disconnect between the computational side and the experimental side, driven by the difficulty to think an experiment to test the new information that multi-omic experiments provide.</p>
 <p>Many combinations possible that are hard to explore, further research on how to reduce the space of possible combinations of bacteria or evaluate which combinations are more important might be useful on the future.
 As this might help focus on the most promising bacteria.</p>
@@ -437,9 +455,9 @@ How to apply this results ?</p>
 <p>Sequence just the ASV on patients to classify them on disease might be an option that would require further clinical validation.</p>
 <p>Selecting which genes are related to the microorganisms is will require also further validation (for which I did not have the creativity to think of).</p>
 <p>The several environmental factors highly affect the disease, so analysis or comparisons without taking into account them might provide misleading or false results.</p>
-<p>Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing <span class="citation">[<a href="#ref-zhang2019" role="doc-biblioref">213</a>]</span>.</p>
+<p>Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing <span class="citation">[<a href="#ref-zhang2019" role="doc-biblioref">216</a>]</span>.</p>
 <!--# From @collij2021 add references/adapt-->
-<p>To study complex systems, new technologies like “organ-on-chip” or more specifically “gut-on-chip” are being developed <span class="citation">[<a href="#ref-collij2021" role="doc-biblioref">214</a>]</span>.
+<p>To study complex systems, new technologies like “organ-on-chip” or more specifically “gut-on-chip” are being developed <span class="citation">[<a href="#ref-collij2021" role="doc-biblioref">217</a>]</span>.
 By introducing gut microbiota, these system will be of great help in the stud of the interaction of the gut microbiota dn the intestinal epithelium.</p>
 
 </div>
@@ -500,23 +518,32 @@ By introducing gut microbiota, these system will be of great help in the stud of
 <div id="ref-susin2020" class="csl-entry">
 208. Susin A, Wang Y, Lê Cao K-A, Calle ML. <a href="https://doi.org/10.1093/nargab/lqaa029">Variable selection in microbiome compositional data analysis</a>. NAR Genomics and Bioinformatics. 2020;2:lqaa029.
 </div>
+<div id="ref-yan2012" class="csl-entry">
+209. Yan L, Ma C, Wang D, Hu Q, Qin M, Conroy JM, et al. <a href="https://doi.org/10.1186/1471-2164-13-689">OSAT: A tool for sample-to-batch allocations in genomics experiments</a>. BMC Genomics. 2012;13:689.
+</div>
+<div id="ref-papenberg2020" class="csl-entry">
+210. Papenberg M, Klau GW. Using anticlustering to partition data sets into equivalent parts. Psychological Methods. 2020. <a href="https://doi.org/10.1037/met0000301">https://doi.org/10.1037/met0000301</a>.
+</div>
+<div id="ref-sinke2021" class="csl-entry">
+211. Sinke L, Cats D, Heijmans BT. Omixer: Multivariate and reproducible sample randomization to proactively counter batch effects in omics studies. Bioinformatics. 2021. <a href="https://doi.org/10.1093/bioinformatics/btab159">https://doi.org/10.1093/bioinformatics/btab159</a>.
+</div>
 <div id="ref-haberman2014" class="csl-entry">
-209. Haberman Y, Tickle TL, Dexheimer PJ, Kim M-O, Tang D, Karns R, et al. <a href="https://doi.org/10.1172/JCI75436">Pediatric Crohn disease patients exhibit specific ileal transcriptome and microbiome signature</a>. The Journal of Clinical Investigation. 2014;124:3617–33.
+212. Haberman Y, Tickle TL, Dexheimer PJ, Kim M-O, Tang D, Karns R, et al. <a href="https://doi.org/10.1172/JCI75436">Pediatric Crohn disease patients exhibit specific ileal transcriptome and microbiome signature</a>. The Journal of Clinical Investigation. 2014;124:3617–33.
 </div>
 <div id="ref-mengMultivariateApproachIntegration2014" class="csl-entry">
-210. Meng C, Kuster B, Culhane AC, Gholami AM. <a href="https://doi.org/10.1186/1471-2105-15-162">A multivariate approach to the integration of multi-omics datasets</a>. BMC Bioinformatics. 2014;15:162.
+213. Meng C, Kuster B, Culhane AC, Gholami AM. <a href="https://doi.org/10.1186/1471-2105-15-162">A multivariate approach to the integration of multi-omics datasets</a>. BMC Bioinformatics. 2014;15:162.
 </div>
 <div id="ref-jiang2019" class="csl-entry">
-211. Jiang D, Armour CR, Hu C, Mei M, Tian C, Sharpton TJ, et al. <a href="https://doi.org/10.3389/fgene.2019.00995">Microbiome multi-omics network analysis: Statistical considerations, limitations, and opportunities</a>. Frontiers in Genetics. 2019;10.
+214. Jiang D, Armour CR, Hu C, Mei M, Tian C, Sharpton TJ, et al. <a href="https://doi.org/10.3389/fgene.2019.00995">Microbiome multi-omics network analysis: Statistical considerations, limitations, and opportunities</a>. Frontiers in Genetics. 2019;10.
 </div>
 <div id="ref-ungar2022" class="csl-entry">
-212. Ungar B, Yavzori M, Fudim E, Picard O, Kopylov U, Eliakim R, et al. Host transcriptome signatures in human faecal-washes predict histological remission in patients with IBD. Gut. 2022. <a href="https://doi.org/10.1136/gutjnl-2021-325516">https://doi.org/10.1136/gutjnl-2021-325516</a>.
+215. Ungar B, Yavzori M, Fudim E, Picard O, Kopylov U, Eliakim R, et al. Host transcriptome signatures in human faecal-washes predict histological remission in patients with IBD. Gut. 2022. <a href="https://doi.org/10.1136/gutjnl-2021-325516">https://doi.org/10.1136/gutjnl-2021-325516</a>.
 </div>
 <div id="ref-zhang2019" class="csl-entry">
-213. Zhang X, Li L, Butcher J, Stintzi A, Figeys D. <a href="https://doi.org/10.1186/s40168-019-0767-6">Advancing functional and translational microbiome research using meta-omics approaches</a>. Microbiome. 2019;7:154.
+216. Zhang X, Li L, Butcher J, Stintzi A, Figeys D. <a href="https://doi.org/10.1186/s40168-019-0767-6">Advancing functional and translational microbiome research using meta-omics approaches</a>. Microbiome. 2019;7:154.
 </div>
 <div id="ref-collij2021" class="csl-entry">
-214. Collij V, Klaassen MAY, Weersma RK, Vila AV. <a href="https://doi.org/10.1007/s00439-020-02218-3">Gut microbiota in inflammatory bowel diseases: moving from basic science to clinical applications</a>. Human Genetics. 2021;140:703–8.
+217. Collij V, Klaassen MAY, Weersma RK, Vila AV. <a href="https://doi.org/10.1007/s00439-020-02218-3">Gut microbiota in inflammatory bowel diseases: moving from basic science to clinical applications</a>. Human Genetics. 2021;140:703–8.
 </div>
 </div>
             </section>
