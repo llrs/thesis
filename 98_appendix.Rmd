@@ -136,3 +136,20 @@ Validation:
 
 -  [Howell's](https://github.com/llrs/howell_2018): Work with Howell's 2018 dataset. 
 - [Cristian's](https://github.com/llrs/cristian_mark): Work with Cristian's 2020 dataset. 
+
+
+# Articles
+
+Articles related to this project published during the thesis. 
+
+## Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis {#app-multiomics}
+
+[Available online](https://doi.org/10.1371/journal.pone.0246367)
+
+\includepdf[pages=-, pagecommand={}]{paper_experDesign.pdf} 
+
+## experDesign: stratifying samples into batches with minimal bias {#app-experDesign}
+
+[Available online](https://joss.theoj.org/papers/10.21105/joss.03358)
+
+\includepdf[pages=-, pagecommand={}]{paper_experDesign.pdf}

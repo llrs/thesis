@@ -23,7 +23,9 @@ bookdown::gitbook:
         href: https://twitter.com/intent/tweet?text=Nice%20read%20of%20%40Lluis_Revilla%20thesis
 bookdown::epub_book: default
 bookdown::pdf_book:
-  keep_tex: no
+  includes:
+    in_header: "preamble.tex"
+  keep_tex: yes
   dev: "cairo_pdf"
   latex_engine: pdflatex # xelatex # lualatex # pdflatex #
   link-citations: yes
