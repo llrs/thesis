@@ -143,13 +143,18 @@ Validation:
 Articles related to this project published during the thesis. 
 
 ## Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis {#app-multiomics}
+<!-- Change header, https://texfaq.org/FAQ-runheadtoobig -->
+\sectionmark{inteRmodel: paper}
 
-[Available online](https://doi.org/10.1371/journal.pone.0246367)
+[Available online](https://doi.org/10.1371/journal.pone.0246367) \textwidth \textheight
 
-\includepdf[pages=-, pagecommand={}]{paper_experDesign.pdf} 
+<!--Help page on https://texdoc.org/serve/pdfpages/0 -->
+\includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight  - 25pt}, trim=0 0 0 20pt,]{paper_multiomics.pdf} 
 
 ## experDesign: stratifying samples into batches with minimal bias {#app-experDesign}
 
+\sectionmark{experDesign: paper}
+
 [Available online](https://joss.theoj.org/papers/10.21105/joss.03358)
 
-\includepdf[pages=-, pagecommand={}]{paper_experDesign.pdf}
+\includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - 25pt}, trim=0 0 0 20pt,]{paper_experDesign.pdf}
