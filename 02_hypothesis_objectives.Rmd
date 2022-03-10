@@ -8,16 +8,10 @@ Finally, I believe that environmental factors interact with the IBD and are resp
 
 ## Objectives
 
-Identify microorganisms and genes related to the IBD.
+The main objective of the thesis is finding the relationships between microbiome and gene expression in the intestinal mucosa. For this reason weIdentify microorganisms and genes related to the IBD.
 
--   Genes and microorganisms that are related to healthy patients
+-   Identify how is the relationship between the intestine mucose gene expression and the microbiome present on the intestine. 
 
--   Genes and microorganisms that are related to IBD patients while controlling for environmental factors.
+-   Find the influence of variables such as location (colon and ileum), the treatment received, IBD activity, sex, age, etc. in the microbiome and mucosa relationship.
 
-    -   Only related to Crohn's disease
-
-    -   Only related to ulcerative colitis
-
-    -   Related to both
-
--   Effect of the genes and microorganisms related to the IBD.
+-   Identify possible mechanism of interaction between the microbiome and mucosa 
