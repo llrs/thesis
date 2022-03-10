@@ -146,8 +146,9 @@ This assumption is backed up by several other previous studies supporting this r
 
 However, it is also known the role of other factors that are outside the omics dataset.
 To guide the search of which of these variables are important tools that relate the variance of a block with other variables, both numeric and categoric, are needed.
-Despite PERMANOVA, `adonis` and `globaltest` worked well to identify which variables about the samples were important, they do not provide variable selection and do not give any insight into which specific microbial species are driving the association between the microbiome and the variables [@susin2020].
 \
+PERMANOVA, `adonis` and `globaltest` worked well to identify which variables about the samples were important.
+But they do not provide variable selection or give any insight into which specific microbial species are driving the association between the microbiome and the variables [@susin2020].\
 In addition, we could miss some other important variables.
 Sudhakar *et. al.* [@sudhakar2022] recommend being conscious of the gap between the data available and the biological process.
 However, even if we missed them, we probably have not collected it or it is not available, there is nothing at this point that can be done.
@@ -155,8 +156,10 @@ This also enters in conflict with a principle of data protection: the minimum su
 We might not identify a relevant variable but to identify it we would need to collect too much information from the patients and for little or no clear benefits.
 
 We tried to find which genes and bacteria are correlated between them using `WGCNA`.
-It is a tool designed to find common patterns based on correlations requiring homogeneous samples, with a minimum of 12 samples required for condition.
+It is a tool designed to find common co-occurring patterns based on correlations.
+It requires homogeneous samples, with a minimum of 12 samples for condition.
 When applied to the whole dataset there might bee too much variance in order of WGCNA to find the proper signal.
+This might be the reason why it failed to achieve a good fit on the scale free topology with around 100 of mean connectivity.
 In addition, having microbiome and RNASeq on the same matrix, would probably be hard for the process to find good relationships if we applied the same normalization process to both of them without scalation.\
 We could have tried to make smaller groups and then compare the modules between them but it groups would be too small because samples were from multiple segments and conditions.
 
@@ -169,9 +172,13 @@ In addition, the numeric precision of said calculations suffers from the flotati
 To support multiplying more than 1000 float numbers a different strategy such as using log values might be better.
 We could not come up with a better strategy to find all the combinations needed, perhaps a better method exists that could be used to find which are the terms more influential to the end result.
 
-Some batch effects are avoidable due to the `experDesign` package.
-This might help to improve the quality of the datasets and to expand previously sequenced datasets.
-However, As seen on the previous section, this does not prevent all problems with batch effects and let through the worst kind of
+The development of the `experDesign` package helped avoid batch effects due to the `experDesign` package.
+This package might help to improve the quality of the datasets and to expand previously sequenced datasets.
+However, as seen on the previous section, this does not prevent all problems with batch effects and still batch effects resulting on a less useful experiment might get through.
+As discussed on the related publication, there are several tools already focused on this problem: `OSAT` ([@yan2012]), `anticlust` ([@papenberg2020]) and `Omixer` ([@sinke2021]).
+But these tools have some shortcomings, that are covered by `experDesign`, `OSAT` cannot handle missing values and does not work well for arbitrary batches.
+`anticlust` only accepts numerical variables but it is based on a mathematical theorem that makes it very powerful.
+`Omixer` has bugs that prevent comparing with the other tools with no possible workaround.
 
 We selected `MCIA` as a baseline to compare our method because it works well and has a good documentation as well as it is fairly used on the computational world.
 The method was developed after `RGCCA` and recently there have been publications that show that it outperforms other methods on its versatility on different contexts [@cantini2021].

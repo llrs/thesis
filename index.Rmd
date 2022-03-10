@@ -45,11 +45,11 @@ They provided advice and guidance on how to analyse the data and where to focus 
 [This thesis](https://thesis.llrs.dev) is licensed under the [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/ "License summary link").  
 !["CC-BY image"](images/by.png "CC-BY image of creative commons")
 
-# Abstracts {.unlisted .unnumbered}
+# Abstracts {.unnumbered}
 
 <!--# Max length of 600 words-->
 
-## English
+## English {.unnumbered}
 
 **Introduction**: Inflammatory bowel disease is a complex disease with several factors that affect each other. 
 The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine. 
@@ -65,7 +65,7 @@ Furthermore, the classification of samples was used to find which methods provid
 
 **Conclusion**: Chips or further tests.
 
-## Spanish
+## Spanish {.unnumbered}
 
 **Introducción**: Inflammatory bowel disease is a complex disease with several factors that affect each other. 
 The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine. 
@@ -82,7 +82,7 @@ Furthermore, the classification of samples was used to find which methods provid
 **Conclusión**: Chips or further tests.
 
 
-## Catalan
+## Catalan {.unnumbered}
 
 **Introducció**: Inflammatory bowel disease is a complex disease with several factors that affect each other. 
 The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine. 
