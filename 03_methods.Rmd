@@ -3,13 +3,13 @@
 <!-- # Some sections of this chapter has been adapted from "Multi-Omic Modelling of IBD with Regularized Canonical Correlation Analysis" [@revilla2021] or other publications of the research group. -->
 
 This chapter contains a brief description of the main characteristics of the different datasets used on this thesis .
-The complete processing protocol before obtaining the data of those dataset that not generated at Hosptial Clínic can be found on their respective reference.
+The complete processing protocol before obtaining the data of those dataset that were not generated at Hosptial Clínic can be found on their respective reference.
 
-Samples of the different cohorts collected on the Hospital Clínic were collected similarly and described only once.
+Samples of the different cohorts collected in Hospital Clínic were collected similarly and described only once.
 Differences between protocols are noted on the respective dataset's section.
 
-It also describes all the methods used to analyze data from the multiple cohorts used on this thesis.
-The actual code used can be found on the links provided on the [appendix](#software "Link to the software appendix").
+Here we describe all the methods used to analyze data from the multiple cohorts included in this thesis.
+The code used can be found on the links provided in the [appendix](#software "Link to the software appendix").
 
 ## Datasets
 
@@ -17,7 +17,7 @@ The actual code used can be found on the links provided on the [appendix](#softw
 
 The glioma dataset is the data provided as an example of biological data by the authors of RGCCA from a previous publication [@puget2012].
 The data came from diffuse intrinsic pontine glioma patients whose transcriptome was analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F.
-The copy number variation of the patients was processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using [Mutation Surveyor software](https://www.softgenetics.com/mutationSurveyor.php "Website of the software").
+The copy number variation of the samples was processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using [Mutation Surveyor software](https://www.softgenetics.com/mutationSurveyor.php "Website of the software").
 In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor [@puget2012].
 
 | Characteristic            | Puget's  |
@@ -32,64 +32,64 @@ In addition, this dataset contained information on age, localization of the tumo
 
 <!--# COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
 
-Samples from the HSCT dataset used in this thesis were from a cohort of patients with severe refractory CD undergoing hematopoietic stem cell transplant.
+Samples from the HSCT dataset used in this thesis were from a cohort of patients with severe refractory CD undergoing HSCT.
 Patients were treated in the Department of Gastroenterology (Hospital Clínic de Barcelona --Spain--).
 The protocol was approved by the Catalan Transplantation Organization and by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7244).
 All patients provided written consent following extensive counselling about being included on the study and using their data on publications.
 
-Colonic and ileal biopsies were obtained at several time points during ileo-colonoscopy, at inclusion and every six or twelve months after HSCT until 4 years after the start of the treatment.
+Colonic and ileal biopsies were obtained at several time points during ileo-colonoscopy, at inclusion and every 6 or 12 months after HSCT up to 4 years after the start of the treatment.
 Samples were obtained when possible from both uninvolved and involved areas.
 In addition, biopsies were taken from the ileum and colon regions of 19 non-IBD controls consisting of individuals with no history of IBD and who presented no significant pathological findings following endoscopic examination for colon cancer surveillance (Hospital Univesitari Mútua de Terrassa --Spain--).
 The protocol was approved by the Institutional Ethics Committee of the Hospital Univesitari Mútua de Terrassa (Study Number NA1651).
 
 At least one biopsy was collected and fresh-frozen at -80°C for microbial DNA extraction.
 The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen, Hilde, Germany) and stored at -80°C until total RNA extraction.
-In total 158 samples with both RNA and DNA extraction of the same segment and time were available:
+In total 158 samples with both RNA and DNA extraction of the same segment and time were available \@ref(tab:HSCT):
 
-| Characteristic                           | HSCT        |
-|------------------------------------------|-------------|
-| Sex (female/male)                        | 22/15       |
-| Age at diagnostic (\<17/\<40/\>40 years) | 7/11/0      |
-| Years of disease: mean (min-max)         | 14 (8-28)   |
-| Age: mean (min-max)                      | 44 (23-70)  |
-| Samples (non-disease/CD)                 | 51/107      |
-| Location (ileum/colon/unknown)           | 48/108/2    |
-| SES-CD local: mean (min-max)             | 2.15 (0-12) |
-| CDAI: mean (min-max)                     | 120 (0-450  |
+| Characteristic                                       | HSCT        |
+|------------------------------------------------------|-------------|
+| Sex (female/male)                                    | 22/15       |
+| Age at diagnostic (\<17/\<40/\>40 years)             | 7/11/0      |
+| Duration (in years): mean (min-max)                  | 14 (8-28)   |
+| Age: mean (min-max)                                  | 44 (23-70)  |
+| Disease status (non-IBD/CD)                          | 51/107      |
+| Sample location (ileum/colon/unknown)                | 48/108/2    |
+| Local simple endoscopic score for CD: mean (min-max) | 2.15 (0-12) |
+| CDAI: mean (min-max)                                 | 120 (0-450  |
 
 : (#tab:HSCT) Table of HSCT dataset characteristics.
 
 ### Häsler's dataset {#methods-hasler}
 
 An IBD-related dataset was obtained by Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler [@hasler_uncoupling_2016].
-Biopsies were obtained endoscopically during routine diagnosis RNA was extracted.
+Biopsies were obtained endoscopically during routine diagnosis RNA and DNA were extracted using standard procedures.
 DNA from the 16S rRNA gene was amplified with primers 319F and 806R.
 Both RNA and DNA was then sequenced on HiSeq 2000 and MiSeq respectively.
-These biopsies included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy controls.
-The dataset included information about location, gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.
+These biopsies included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy non-IBD.
+The dataset included information about gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.
 
-| Characteristic                 | Häsler's |
-|--------------------------------|----------|
-| Samples (non-disease/diseased) | 33/26    |
-| Sex (female/male)              | 42/17    |
-| Location (ileum/colon)         | 30/29    |
+| Characteristic                    | Häsler's |
+|-----------------------------------|----------|
+| Disease status (non-IBD/diseased) | 33/26    |
+| Sex (female/male)                 | 42/17    |
+| Sample location (ileum/colon)     | 30/29    |
 
 : (#tab:Hasler) Table of Häsler's dataset characteristics.
 
 ### Morgan's dataset {#methods-morgan}
 
 A previously published dataset from a pouchitis study was analyzed [@morgan2015].
-On this study patients having undergone proctocolectomy with ileal pouch-anal anastomosis for treatment of UC or familial adenomatous polyposis at least 1 year prior to enrollment were recruited at Mount Sinai Hospital (Toronto, Canada) excluding individuals with a diagnosis of CD.
+In this study patients having undergone proctocolectomy with ileal pouch-anal anastomosis for treatment of UC or familial adenomatous polyposis at least 1 year prior to enrollment were recruited at Mount Sinai Hospital (Toronto, Canada) excluding individuals with a diagnosis of CD.
 The dataset has a total of 255 samples from 203 patients, containing data for both host transcriptome and intestinal microbiome.
 On some cases several biopsyes were collected from the same patients.
-This dataset included anonymous identifiers for patients, whether the sample was from the pre-pouch ileum (PPI) or from the pouch, the sex, the outcome of the procedure and an inflammatory severity score ISCORE.
+This dataset included anonymous identifiers for patients, whether the sample was from the pre-pouch ileum (PPI) or from the pouch, the sex, the outcome of the procedure and an inflammation score.
 The pouch ileum might be inflamed or not.
 
-| Characteristic                | Morgan's |
-|-------------------------------|----------|
-| Samples                       | 255      |
-| Sex individuals (female/male) | 101/102  |
-| Location (Pouch/PPI)          | 59/196   |
+| Characteristic              | Morgan's |
+|-----------------------------|----------|
+| Samples (n)                 | 255      |
+| Sex patients (female/male)  | 101/102  |
+| Sample location (Pouch/PPI) | 59/196   |
 
 : (#tab:Morgan) Table of Morgan's dataset characteristics.
 
@@ -120,12 +120,11 @@ Anonymized identification of the patients, disease, sex age at diagnostic, age a
 
 ### Howell's dataset {#methods-howell}
 
-This dataset was downloaded after the publication of an article "DNA Methylation and Transcription Patterns in Intestinal Epithelial Cells From Pediatric Patients With IBDs Differentiate Disease Subtypes and Associate With Outcome" [@howell2018].
-A cohort of 66 treatment-naïve children at diagnosis of their IBD, along with 30 age- and sex-matched non-inflammatory control children, were recruited by the Paediatric Gastroenterology team at Addenbrooke's Hospital (England).
+This dataset included a cohort of 66 treatment-naïve children at diagnosis of their IBD, along with 30 age- and sex-matched non-inflammatory control children, recruited at the Paediatric Gastroenterology unit at Addenbrooke's Hospital (England) [@howell2018].
 
-From their dataset data from 77 samples that had both RNAseq and 16S data was used.
-There are 10 non-IBD samples, 11 with Crohn's disease and 11 with ulcerative colitis.
-Data has the following characteristics: disease, age at diagnostic, age at the moment of the study, sex, segment, and clinical history which have the following characteristics:
+Data from 77 samples that had both RNAseq and 16S data was used.
+There are 10 non-IBD samples, 11 with CD and 11 with UC.
+Data has the following characteristics: disease, age at diagnostic, age at time of study, sex, sample location, and disease activity:
 
 | Characteristic                                  | Howell's  |
 |-------------------------------------------------|-----------|
@@ -140,11 +139,11 @@ Data has the following characteristics: disease, age at diagnostic, age at the m
 
 ### Hernández' dataset {#methods-hernandez}
 
-This dataset was obtained after a collaboration "Integrative analysis of colonic biopsies from IBD patients identifies an interaction between microbial bile-acid inducible gene abundance and human Angiopoietin-like 4 gene expression" [@hernández-rocha2021].
+This dataset was obtained from collaborators at Mount Sinai, Toronto, Canada [@hernández-rocha2021].
 
 Patients with UC, CD were recruited when attending regularly scheduled visits or surveillance.
 In addition, asymptomatic healthy controls (HC) were recruited during routine, age-related colorectal cancer screening by colonoscopy.
-290 samples were collected together with information about the disease, age at diagnosis, age at the moment of the sampling, sex, segment and smoking status.
+290 samples were collected together with information about the disease, age at diagnosis, age at the moment of the sampling, sex, sample location and smoking status.
 
 <!--# TODO table of patients and samples -->
 
@@ -155,17 +154,18 @@ In addition, asymptomatic healthy controls (HC) were recruited during routine, a
 | Age: mean (min-max)                      | 40 (17-71) |
 | Sex (female/male)                        | 81/85      |
 | Smoking (never/ex/current)               | 115/34/16  |
-| Segment (ileum/colon)                    | 97/193     |
+| Sample Location (ileum/colon)            | 97/193     |
 
 : (#tab:hernandez) Table of samples included from Hernández's dataset characteristics.
 
-## Processing samples
+## Sample processing
 
-### Transcriptome sequencing
+### RNA sequencing
 
 Total RNA from mucosal samples (HSCT cohort) was isolated using the RNAeasy kit (Qiagen, Hilde, Germany).
 RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4000 platform.
-Later, those samples with good enough quality as recommended by [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ "FastQC website") afterwards [cutadapt](https://github.com/marcelm/cutadapt "cutadapt repository") (version 1.7.1) [@martin2011] was used for quality filtering and the libraries were mapped against the human reference genome using the [STAR aligner](https://github.com/alexdobin/STAR "STAR repository") (2.5.2a) with Ensembl annotation ([release 26 of GENCODE](https://www.gencodegenes.org/human/release_26.html "GENCODE release 26"), GRCh38.p10 or superior) [@dobin2013].
+Samples with good enough quality as recommended by [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ "FastQC website") were processed with [cutadapt](https://github.com/marcelm/cutadapt "cutadapt repository") (version 1.7.1 [@martin2011]) for quality filtering.
+Later, the libraries were mapped against the human reference genome using the [STAR aligner](https://github.com/alexdobin/STAR "STAR repository") (2.5.2a) with Ensembl annotation ([release 26 of GENCODE](https://www.gencodegenes.org/human/release_26.html "GENCODE release 26"), GRCh38.p10 or superior) [@dobin2013].
 
 <details>
 
@@ -245,7 +245,7 @@ Next, sequencing was performed with pooled samples in paired-end modus (PE275) u
 <!--# Macrogen: 341f/785r not used/contaminated --->
 
 On the BARCELONA dataset the DNA was processed equally in house.
-The only difference was using different 16S-V3V4 primers pair 341f/806r on a MiSeq Nano sequencing by the RTSF Genomics Core at Michigan State University.
+The only difference was using different 16S-V3V4 primers pair 341f/806r on a MiSeq Nano sequencing by the RTSF Genomics Core at Michigan State University, United State of America.
 The sequence of the primers used was:
 
 341f: 5'-CCTACGGGAGGCAGCAG-3'\
@@ -267,7 +267,7 @@ The resulting OTUs table was normalized using edgeR (Version 3.28 or later) [@mc
 
 For all the other datasets [dada2](https://bioconductor.org/packages/dada2) [@callahan2016] (Version 1.14 or later) was used to analyze microbiome data.
 It creates amplicon sequencing variants from the 16S sequencing data, without merging similar sequences at any threshold.
-It is an alternative to OTUs which allows to be able to compare results between studies because it does not summarize together any sequence and provides more resolution to differences on the fragment amplified.
+It is an alternative to the use of OTUs which allows to compare results between studies and provides more resolution to differences on the fragment amplified.
 
 ## Integration methods
 
@@ -284,16 +284,16 @@ $$
 where $K$ is the total number of matrices, $X_k$ the transformed matrices and $Q_k$ is a square matrix with $r_{ij}$ in diagonal elements indicating the hyperspace of features metrics, $u_k$ are auxiliary axes, $v$ the reference structure and w the weights of the matrices.
 This can be used to obtain a dimension of $P_k^d=u_k^d(u_k^d Q_k {u_k^d}^T)^{-1} u_k^d Q_k$ given that for each dimension the residuals are obtained following $X_k^{d-1} = X_1^d- X_1^d P_1^{d-1}$ where $d$ are the dimensions needed.
 
-It was used as a baseline method to compare the RGCCA integration.
+MCIA was used as a baseline method to compare the RGCCA integration.
 
 ### STATegRa
 
-To explore how much do different blocks of a dataset have in common [STATegRa](https://bioconductor.org/packages/STATegRa) was used [@planell2021].
+We used [`STATegRa`](https://bioconductor.org/packages/STATegRa) To explore how much do different blocks of a dataset have in common [@planell2021].
 It is a framework for integrating datasets with two data types using parametric and non-parametric methods.
 The methods used are omics component analysis based on singular value decomposition (SVD) of the data matrix.
 There are three different methods provided to this end: *DISCO-SCA*, *JIVE* and *O2PLS*.
 
-On DISCO-SCA it uses:
+DISCO-SCA uses:
 
 $$
 X_k = TP_k ^ T + E_k
@@ -318,22 +318,20 @@ $$ $$
 \text{Inner relation: } U = T + H
 $$
 
-Were each model is build similarly by adding the subtraction of the projected values of the other component keeping the relationship between them as stated on the third line.
+Each model is built similarly by adding the subtraction of the projected values of the other component keeping the relationship between them as stated on the third line.
 
 ### RGCCA
 
 The main method used on this thesis has been regularized generalized canonical correlation analysis (RGCCA) a method derived from the canonical correlation.
 Canonical correlation is a method that uses data about the same unit but from different origins to find how much the different sources agree.
-Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017] which was used on this thesis.
-The method and implementation will be explained in detail on the next section.
+Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017] which was used here.
+The method and implementation will be explained in detail in the next section.
 
 ![(#fig:workflow-process) Workflow of the analysis process](images/workflow%20integration.png)
 
 ## Regularized generalized canonical correlation analysis
 
-To understand the regularized canonical correlation analysis first a brief description of principal component analysis is provided.
-A brief description of the canonical correlation method will be used to explain the general case.
-Finally the regularized generalized canonical correlation analysis will be introduced.
+To understand the regularized canonical correlation analysis I first provide a brief description of principal component analysis.
 
 Principal component analysis defines a new orthogonal coordinate system that optimally describes variance in a single dataset.
 It does so by decomposing the numerical matrix into the eigenvalues and eigenvectors with decreasing variance.
@@ -349,15 +347,15 @@ $$
 \rho = \underset{a, b}{\mathrm{argmax}} (\mathrm{cor}(a^T X, b^T Y))
 $$
 
-Being $a$ and $b$ random variables that given $X$ and $Y$, the two data sources, maximize the correlation between $a^T X$ and $b^T Y$, the first canonical variables, the new variables.
-$a$ and $b$ are the weights.
+On this equation $a$ and $b$ are random variables that given $X$ and $Y$, the two data sources, maximize the correlation between $a^T X$ and $b^T Y$, the first canonical variables, the new variables.
+$a$ and $b$ are also known as weights or loadings of the variables.
 
-Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020] regularized generalized canonical correlation analysis (RGCCA) emerged with a generalization from canonical correlations extending the procedure to more than two sources of data [@R-RGCCA] and being made more flexible generalizing from other proposed methods.
+Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020], regularized generalized canonical correlation analysis (RGCCA) emerged with a generalization from canonical correlations extending the procedure to more than two sources of data [@R-RGCCA] and being made more flexible generalizing from other proposed methods.
 
 ### Description
 
-RGCCA works with numeric matrices, as big as you want, as it is designed for datasets with more variables than samples ( $p \gg n$).
-However, for each sample it needs to have a complete case with no missing values (at the time of writing this thesis there is a [new development version](https://github.com/rgcca-factory/RGCCA/tree/CRAN "RGCCA repository on github"), not released on CRAN[^methods-1] yet, that replaces any missing value by a 0) and time is not considered as a special variable.
+RGCCA works with numeric matrices that can be as big as needed, as it is designed for datasets with more variables than samples ( $p \gg n$).
+However, for each sample it needs to have a complete case with no missing values (at the time of writing this thesis there is an [in-development version](https://github.com/rgcca-factory/RGCCA/tree/CRAN "RGCCA repository on github"), not released on CRAN[^methods-1] yet, that replaces any missing value by a 0) and in which time is not considered as a special variable.
 It uses a dimensional reduction approach to relate the different blocks of data between them and produce specific factors for each dataset.
 The objective function is:
 
@@ -393,9 +391,9 @@ $$
 \underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g( \mathrm{cov}(X_j a_j, X_k a_k)) \mathrm{~~s.t.~~} \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
 $$
 
-The $s_j$ controls the sparsity estimated of the data, the smaller it is, the higher sparsity of $X_j$ is.
-As $s_j$ is closer to 0, more features are selected as it looks to optimize covariance; while if it is closer to 1, less features are selected and it resembles the correlation.
-The values of $s_j$ were estimated using Schäfer method [@schäfer2005] when the block was from 16S data or RNAseq, otherwise 1 was used.
+The $s_j$ controls the sparsity estimated of the data, the smaller it is, the higher the sparsity of $X_j$ is.
+As $s_j$ is closer to 0, more features are selected as it looks to optimize covariance; while if it is closer to 1, less features are selected and the function resembles the correlation.
+The values of $s_j$ were estimated using the Schäfer method [@schäfer2005] when the block included 16S data or RNAseq, otherwise 1 was used.
 
 As previously mentioned, there are different $g$ functions that could be used; but the centroid method was chosen to detect both positive and negative relationships.
 
@@ -410,13 +408,13 @@ RGCCA as other dimensional reduction techniques provides specific weights for ea
 
 To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE).
 RGCCA returns an AVE score for each block, which measures how the variables of the block correlate with the dimension component of the block.
-It also provides two AVE scores of the whole model: the inner, which measures how each dimension accounts for the variance, and the outer, which measures how variables correlates with the dimensions component.
+It also provides two AVE scores of the whole model: the inner, which measures how each dimension accounts for the variance, and the outer, which measures how variables correlate with the dimension components.
 The closer the inner AVE is to 1, the better the model adjusts to the data.
-However, that mathematically works better does not mean that it have more biological meaning or that it provides more insights on the biology.
+However, that mathematically works better does not guarantee that the model provides more insights into the biology.
 
 It can also generate results as other related methods based on the maximization of a function of correlations: SUMCOR (sum of correlations method) [@horst1961], SSQCOR (sum of squared correlations method) [@kettenring1971], SABSCOR (sum of absolute values of the correlations method) [@vandegeer1984].
-Others are based on the maximization of a function of covariances: SUMCOV (sum of covariances method), SSQCOV (sum of squared covariances method), SABSCOV (sum of absolute values of the covariances method).
-The following table summarized the equivalent parameters needed on RGCCA to work like these methods:
+Others methods are based on the maximization of a function of covariances: SUMCOV (sum of covariances method), SSQCOV (sum of squared covariances method), SABSCOV (sum of absolute values of the covariances method).
+The following table summarizes the equivalent parameters needed on RGCCA to work:
 
 | Method  | Scheme    | Normalization         | Shrinkage |
 |---------|-----------|-----------------------|-----------|
@@ -431,8 +429,8 @@ The following table summarized the equivalent parameters needed on RGCCA to work
 
 There are other methods that can be done with RGCCA.
 Canonical correlation analysis would be equivalent to data variance equal to 1 and shrinkage of 0.
-Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1.
-Redundancy analysis could be performed with one block weights' normalized value is 1 and the variance of the other equal to 1.
+Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1 in RGCCA.
+Redundancy analysis could be performed where one block's weight normalized value is 1 and the variance of the other equal to 1.
 
 ### Models
 
@@ -461,20 +459,20 @@ The final models were further validated using a bootstrap approach to measure th
 ## Statistics
 
 Differential expression analysis was performed with the limma-trend method [@ritchie2015; @law2014] and edgeR [@mccarthy2012] (Bioconductor version 3.10 or superior) packages.
-Data was normalized using the trimmed mean of M-values and log-2 transformed into counts per millions following the workflow described on [@law2018] using voom.
-The samples were adjusted for inter-patient differences blocking for patient.
+Data was normalized using the trimmed mean of M-values and log-2 transformed into counts per millions following the workflow previously described using voom [@law2018].
 
 To correct for multiple testing, the false discovery rate was estimated using the method of Benjamini and Hochberg [@yoavbenjamini].
-A gene was considered differentially expressed when it was significant at 5% FDR special attention was given to those genes that showed a fold-change higher than \|1.5\|.
+A gene was considered differentially expressed when it was significant at 5% FDR.
+Special attention was given to those genes that showed a fold-change higher than \|1.5\|.
 
 ## Functional enrichment methods
 
 Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
 They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.
 
-Many functional enrichment methods are based on an over representation analysis, where a group of elements is tested whether they are present on other group.
-This can be done with [clusterProfiler](https://bioconductor.org/packages/clusterProfiler) which tests genes enrichment for functionality based on information on pathway databases [@wu2021] and used on several publications [@richter2021].
-It checks the enrichment of features of a given group on the (background) list provided.
+Many functional enrichment methods are based on an over representation analysis, where a group of elements is tested for their mesure in other groups.
+This can be done with [`clusterProfiler`](https://bioconductor.org/packages/clusterProfiler) which tests genes enrichment for functionality based on information on pathway databases [@wu2021] that it is used in several publications [@richter2021].
+`clusterProfiler` checks the enrichment of features of a given group on the (background) list provided.
 
 $$
 H_0 : P_{subset} \leq  P_{overall}
@@ -482,7 +480,7 @@ $$ $$
 H_1 : P_{subset} > P_{overall}
 $$
 
-The test used is usually the fisher test, the hypergeometric test or the proportion test.
+The statistical test used is usually the fisher test, the hypergeometric test or the proportion test.
 I describe the hypergeometric test and the proportion test below.
 
 ### Hypergeometric test
@@ -491,7 +489,7 @@ The hypergeometric distribution describes the probability of $k$ successes (when
 
 [^methods-2]: without replacement
 
-Applied on this context $N$ is the number of genes being used and $n$ the number of genes on a pathway.
+In this context $N$ is the number of genes being used and $n$ the number of genes on a pathway.
 So it can be used to compare the genes found on it ($k$) compared to the expected $K$ numbers of the distribution using the following equation:
 
 $$
@@ -501,7 +499,7 @@ $$
 
 ### Proportion test
 
-The overrepresentation of a given group of elements can be also tested with the proportion test, which is sometimes also used on clusterProfiler.
+The overrepresentation of a given group of elements can also be tested with the proportion test, which is sometimes also used on clusterProfiler.
 The proportion test uses the $\chi^2$ distribution to test if the observed frequency ($O_i$) is close to the expected frequency ($E_i$):
 
 $$
@@ -521,10 +519,10 @@ This increases the $p$-value as it raises the Chi-square statistic.
 
 There are other methods that to test if some variables shows an unexpected importance according to a statistic like fold change or value gene set enrichment analysis was developed [@subramanian2005] .
 Gene set enrichment analysis (GSEA) is a computational method originally developed to determine whether a priori defined set of genes shows statistically significant and concordant differences between two biological states.
-This methods check if a group of variables present in an ordered list is present in some skewed distribution and compare it against a random group of similar size.
+This methods check if a group of variables present in an ordered list shows a skewed distribution and it compares it against a random group of similar size.
 It has been widely used since its original publication, also on IBD [@protiva2016].
 
-This method consist on first calculating the rank of genes $rank(g_j)=r_j$ where each $g$ is a gene.
+This method calculates the rank of genes $rank(g_j)=r_j$ where each $g$ is a gene.
 Then later calculate the following functions:
 
 $$
@@ -534,12 +532,12 @@ P_{miss}(S, i) = \sum_{g_j \not \in S, j \leq i}\dfrac{1}{N - N_H}
 $$
 
 With these values the enrichment score (ES) defined as: $ES=max(|P_{hit}(S, i)-P_{miss}(S, i)\vert)$ is calculated from the walk.
-At least 1000 permutations are usually used but a high number of permutations are required for an accurate score of the enrichment score.
-However, when more than one pathway ($S$) is evaluated in order to compare between the enrichment scores between them, they must be normalized by dividing the scores by the mean of all the ES.
+At least 1000 permutations are usually used but a high number of permutations are required for an accurate estimation of the enrichment score.
+However, when more than one pathway ($S$) is evaluated in order to compare between their enrichment scores, they must be normalized by dividing the scores by the mean of all the ES.
 When power $p$ is 0 it is equivalent to the standard Kolmogorov--Smirnov statistic, though it is usually set to 1.
 
-For testing gene set enrichment analysis I used [fgsea](https://bioconductor.org/packages/fgsea) [@korotkevich2021] implementation for its speed and integration with other methods used on this thesis.
-Pathways of genes from the REACTOME database were tested on the weight of different models or on the comparisons performed [@fabregat2016].
+For testing GSEA I used [`fgsea`](https://bioconductor.org/packages/fgsea) [@korotkevich2021] implementation for its speed and integration with other methods used in this thesis.
+Gene pathways from the REACTOME database were tested on the weight of different models or on the comparisons performed [@fabregat2016].
 
 ### GSVA
 
@@ -554,7 +552,7 @@ $$
 z_{ij}=\hat{F_r}(x_{ij}) = \frac{1}{n}\sum_{k=1}^n\sum_{y=0}^{x_{ij}}\dfrac{e^{-(x_{ik}+r)}(x_{ik} + r)^y }{y!}
 $$
 
-where $r = 0.5$ is used in order to set the mode of the Poisson kernel at each $x_{ik}$, that is, similar to a gene expression for a given sample.
+$r = 0.5$ is used in order to set the mode of the Poisson kernel at each $x_{ik}$, that is, similar to the expression of a gene for a given sample.
 
 Later this is converted to ranks $z_{(i)j}$ for each sample and normalized: $r_{ij}=|\frac{p}{2}-z_{(i)j}|$ to make the distribution of ranks symmetric around zero to later compare with a normal distribution using a Kolmogorov-Smirnov-like random walk statistic:
 
@@ -565,7 +563,7 @@ $$
 
 Here $\tau$ describes the weight of the tail in the random walk (default is set to 1).
 $\gamma_k$ is the k-th gene set and $I(g_{(i)}\in \gamma_k)$ is the indicator function whether the gene ranked i-th belongs to the gene set $\gamma_k$ .
-$|\gamma_k|$ indicates the ordination of the gene set, the number of genes of the gene set and $p$ the number of genes in the data set.
+$|\gamma_k|$ indicates the ordination of the gene set, the number of genes of the gene set and $p$ the number of genes in the dataset.
 
 This difference is later converted to enrichment score for each gene set for each sample, similar to GSEA.
 This score can be calculated as a difference of hits and misses or the maximum deviation from zero of the random walk (which allows to detect gene sets that have genes with different opposing expression patterns).
@@ -582,7 +580,7 @@ SS_W = \frac{1}{n} \sum_{i=1}^{N-1}\sum_{j=i+1}^N d_{ij}^2\epsilon{ij}
 $$
 
 When using euclidian distances ($d$) it is equivalent to MANOVA.
-Here $\epsilon_{ij}$ takes the value of 1 if the observation $i$ and the observation $j$ are in the same group, otherwise it takes the value of zero.
+Here $\epsilon_{ij}$ takes the value of 1 if the observation $i$ and the observation $j$ are in the same group, otherwise it takes the value of 0.
 This can be later used to test which variance is bigger, inter-groups or intra-groups by using the following formula:
 
 $$
@@ -596,9 +594,9 @@ This allows to test if the variables are related to the variance of the data as 
 
 ### globaltest
 
-It is a methods for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
-I tested which variables, (sex, age, location, time since diagnostic, treatment) are important on the datasets with [globaltest](https://bioconductor.org/packages/globaltest) (Version 5.40 or later).
-It provides a general statistic to test hypothesis against a high dimensional dataset.
+It is a method for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
+I tested which variables, (sex, age, location, time since diagnosis, treatment) are important on the datasets with [globaltest](https://bioconductor.org/packages/globaltest) (Version 5.40 or later).
+This method provides a general statistic to test hypothesis against a high dimensional dataset.
 
 $$
 S = \sum_{i=1}^p x_i^{'} x_i g(t_i^2)
@@ -634,7 +632,7 @@ Where $p_i$ is the proportion of species $i$ and $S$ is the number of species.
 ### WGCNA
 
 To look for relationships between the microbiome and the RNAseq we used weighted gene co-expression network analysis.
-We used weighted gene co-expression network analysis as implemented on [WGCNA](https://cran.r-project.org/package=WGCNA) [@langfelder2008] and also correlations.
+We used weighted gene co-expression network analysis as implemented on [WGCNA](https://cran.r-project.org/package=WGCNA) [@langfelder2008] as well as correlations.
 The Spearman rank correlation coefficient is
 
 Being $(X_1 , Y_1 ),\dots, (X_n , Y_n)$, assign a rank where $(R_1 , S_1 ), \dots , (R_n , S_n )$ for n being all the variables which:
@@ -648,7 +646,7 @@ The distribution of the Spearman correlation coefficient is symmetric around 0 a
 
 ### BaseSet
 
-[BaseSet](https://cran.r-project.org/package=BaseSet) was developed and used to find which variables are really involved on the interaction and how likely were to be together more robustly.
+[BaseSet](https://cran.r-project.org/package=BaseSet) was developed and used to find which variables are really involved on the interaction and how likely they were to be together.
 It is a package that uses fuzzy set logic to calculate the probability to belong to a group, in this case, those genes and bacteria selected by the model that interact with the other.
 
 Under the standard fuzzy set logic a set $S$ is a group of elements for which each element $e$ has an $\alpha$ membership to that set [@filzmoser2004; @dubois1993].
@@ -708,4 +706,4 @@ $$
 
 The ROC curve is that where the true positive rate (TPR) or sensitivity, recall or hit rate is represented against the false positive rate (FPR) on the abscissa.
 The area under this curve is a measure of how good such classifications performs overall, being 0.5 as good as a random selection.
-The higher it is to 1 the better as it classifies incorrectly less samples and accurately classify them.
+The closer it is to 1 the better as it classifies incorrectly less samples and accurately classify more.
