@@ -7,3 +7,5 @@ _bookdown_files
 rsconnect
 draft_phd
 tesis
+_main.*
+_main_cache
