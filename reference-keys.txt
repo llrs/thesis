@@ -30,9 +30,6 @@ fig:barcelona-diversity
 fig:howell-models
 fig:howell-bootstrap
 tab:appendix-methods
-english
-spanish
-catalan
 introduction
 IBD
 etiology-and-pathogenesis
@@ -75,8 +72,8 @@ methods-morgan
 methods-barcelona
 methods-howell
 methods-hernandez
-processing-samples
-transcriptome-sequencing
+sample-processing
+rna-sequencing
 microbial-dna-sequencing
 dna-sequencing
 microbial-profiling
@@ -130,3 +127,6 @@ online-resources
 software
 listed
 by-projectpublication
+articles
+app-multiomics
+app-experDesign
