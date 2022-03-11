@@ -2,9 +2,9 @@
 title: "Data integration on inflammatory bowel disease"
 author: "Lluís Revilla Sancho"
 date: "`r Sys.Date()`"
-mainfont: boisik
 documentclass: book
 knit: "bookdown::render_book"
+site: bookdown::bookdown_site
 github-repo: "llrs/thesis"
 url: 'https\://thesis.llrs.dev'
 csl: bmc_bioinformatics.csl
