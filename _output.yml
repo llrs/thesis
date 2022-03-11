@@ -29,7 +29,6 @@ bookdown::pdf_book:
   dev: "cairo_pdf"
   latex_engine: pdflatex # xelatex # lualatex # pdflatex #
   link-citations: yes
-  # links-as-notes: yes
   # papersize: a5
   citation_package: default # pandoc-citeproc
   template: null
