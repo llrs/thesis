@@ -4,7 +4,7 @@
 
 Some links that I found useful on the thesis and could be useful if you are interested on the multi-omics field.
 
--   [Awesome multi-omics](https://github.com/mikelove/awesome-multi-omics): An online repository of references to multi-omics methods. Reproduced here with their references [^references-1]:
+-   [Awesome multi-omics https://github.com/mikelove/awesome-multi-omics](https://github.com/mikelove/awesome-multi-omics) : An online repository of references to multi-omics methods. Reproduced here with their references [^references-1]:
 
     [^references-1]: Consulted on 2021/11/10 from <https://github.com/mikelove/awesome-multi-omics>
 
@@ -66,7 +66,7 @@ Some links that I found useful on the thesis and could be useful if you are inte
 | DPCCA                          | [@gundersen2020]              |
 | MEFISTO                        | [@velten2020]                 |
 | MultiPower                     | [@tarazona2020]               |
-: (#tab:appendix-methods) Integration methods available and their references.
+Table: (#tab:appendix-methods) Integration methods available and their references.
 
 <!-- #Check https://github.com/mikelove/awesome-multi-omics -->
 
@@ -84,6 +84,48 @@ Along the years of this thesis several pieces of software have been generated as
 Here they are listed for easier retrieval.
 They are listed on two ways, one with a brief explanation and another one ordered by what software piece is used on each analysis.
 
+## STAR
+
+The parameters and options used with STAR are:
+
+    STAR \
+        --outSAMtype BAM SortedByCoordinate \
+        --outFilterIntronMotifs RemoveNoncanonical \
+        --outSAMattributes All \
+        --outReadsUnmapped Fastx \
+        --outSAMstrandField intronMotif \
+        --outFilterScoreMinOverLread 0.5 \
+        --outFilterMatchNminOverLread 0.5 \
+        --outFilterType BySJout \
+        --alignSJoverhangMin 8 \
+        --alignSJDBoverhangMin 1 \
+        --outFilterMismatchNmax 999 \
+        --outFilterMismatchNoverLmax 0.04 \
+        --genomeDir "$genome/STAR" \
+        --limitBAMsortRAM 10000000000 \
+        --runMode alignReads \
+        --genomeLoad NoSharedMemory \
+        --quantMode TranscriptomeSAM \
+        --outFileNamePrefix $output \
+        --runThreadN "$threads" \
+        --readFilesCommand zcat \
+        --readFilesIn "$file1" "$file2"
+
+
+## RSEM
+
+Code used for RSEM 
+
+    rsem-calculate-expression \
+        --quiet \
+        --paired-end \
+        -p "$threads"  \
+        --estimate-rspd \
+        --append-names \
+        --no-bam-output \
+        --bam "$rseminp" "$genome/RSEM/RSEM" "$rsem"
+        
+        
 ## Listed
 
 An improved/tested version of [RGCCA](https://github.com/llrs/RGCCA), some modifications on the internal functions to ease the maintenance as well as adding tests and sometimes improving the documentation.
@@ -158,3 +200,62 @@ Articles related to this project published during the thesis.
 [Available online](https://joss.theoj.org/papers/10.21105/joss.03358)
 
 \includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - 25pt}, trim=0 0 0 20pt,]{paper_experDesign.pdf}
+
+# BARCELONA dataset {#barcelona}
+
+<!--# Adapted from the ethical committee submission-->
+
+All patients with an established diagnosis of IBD, including Crohn's disease, ulcerative colitis, unclassified IBD, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 46 weeks a biopsy from an ileocolonoscopy.
+The protocol was approved by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7845 and HCB/2012/7956).
+
+Patients that were referred to the Hospital Clínic de Barcelona IBD unit, who had already started treatment with a biologic agent in another center, were also included adapting to the corresponding time-schedule of their treatment.
+In all patients, starting anti-TNF treatment will be decided before the protocol entry decision according to medical clinical practice.
+
+Anonymized identification of the patients, disease, sex age at diagnostic, age at the moment of the sample taking, time since the start of the treatment and sample segment was collected.
+
+| Characteristic                           | BARCELONA  |
+|------------------------------------------|------------|
+| Individuals                              | 62         |
+| Status (non-IBD/CD/UC)                   | 8/33/21    |
+| Sex (female/male)                        | 29/33      |
+| Age at diagnostic (\<17/\<40/\>40 years) | 2/44/8     |
+| Years of disease: mean (min-max)         | 7.6 (0-32) |
+| Age: mean (min-max)                      | 41 (18-68) |
+| Time (0/14/46 weeks)                     | 41/40/32   |
+| Sample segment (ileum/colon)             | 39/87      |
+
+Table: (#tab:BARCELONA) Samples included from the BARCELONA dataset characteristics.
+
+<!--# Macrogen: 341f/785r not used/contaminated --->
+The process of DNA extraction and sequencing was different for this dataset.
+We used different 16S-V3V4 primers pair 341f/806r on a MiSeq Nano sequencing by the RTSF Genomics Core at Michigan State University, United State of America.
+The sequence of the primers used was:
+
+341f: 5'-CCTACGGGAGGCAGCAG-3'\
+806r: 5'-GGACTACHVHHHTWTCTAAT-3'
+
+The result of MiSeq Nano were processed with bcl2fastq (v1.8.4).
+
+This dataset was processed as usual but as part of the quality controls of the dataset the diversity measures of the samples was analyzed:
+
+![(#fig:barcelona-diversity) Diversity indices of Barcelona according to the location and disease status. There is a lot of diversity between different groups but importantly the control samples overlap with the patients with inflammatory bowel disease.](images/barcelona-diversity.png)
+
+Control samples diversity should be lower and not on the same range as with samples of patients with IBD.
+The dataset's 16S was sequenced several times by different platforms.
+Despite the pilots and the negative controls on the sequencing process, each time there were different problems: contamination, low quality and then this suspicious diversity.
+It does not seem to be a problem of the sequencing facility, so this data was abandoned as unreliable.
+
+
+# Models output
+
+<!--# TODO include files for these genes-->
+
+## HSCT
+### Genes
+### Microbiome
+## Häsler
+### Genes
+### Microbiome
+## Howell
+### Genes
+### Microbiome
