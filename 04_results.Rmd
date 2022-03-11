@@ -110,6 +110,8 @@ Currently, it is compatible with the next release of [RGCCA being prepared](http
 
 On the following sections the main results of analyzing each dataset are presented.
 
+<!--# Show taxonomy plots-->
+
 ### Puget's dataset {#results-puget}
 
 On this dataset the different parameters and capabilities of RGCCA were tested.
@@ -210,6 +212,8 @@ The weights of these models can be observed here:
 The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see Figure and [S2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002) data of [@revilla2021]).
 Overall, we see that the relationships in the model affected the distribution of samples on the components of both the host transcriptome and the microbiome.
 
+<!--# TODO include tables of the models -->
+
 The different models selected different variables, some of which are shared between models.
 The most similar models are those that have split the metadata into 3 blocks, followed by those that have the metadata in a single block.
 
@@ -263,6 +267,8 @@ In either case the family 1 and family 2 models can correctly separate by sample
 
 There is no observable cluster of IBD samples and the other samples, showing that on this dataset the differences of the microbiome between the different type of samples are less stark.
 
+<!--# TODO include tables of the models -->
+
 MCIA was applied as a baseline of the integration and compared to the different models to know which one separates best colon and ileum samples.
 
 ![(#fig:hasler-mcia) MCIA first two dimensions of the dataset colored by state, the shape is according to the location of the samples. Shows two vertical groups on the first syntethic dimension according to the location of the samples.](images/hasler-mcia.png){alt="MCIA results"}
@@ -281,6 +287,8 @@ The different models were not able to separate the samples neither by location o
 
 Nevertheless, we compared the classification with the MCIA algorithm and still resulted that model 2.2 provide a better classification than MCIA.
 
+<!--# TODO include tables of the models -->
+
 When exploring the bootstraps of the data we found that model 1.2 is highly variable:
 
 ![(#fig:morgan-bootstrap) Inner and outer AVE scores of the bootstrapped models 0 1.2 and 2.2. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptonme and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks.](images/morgans_bootstrap.png)
@@ -290,17 +298,6 @@ When exploring the bootstraps of the data we found that model 1.2 is highly vari
 In addition the model 2.2 usually has a lower inner AVE compared to model 1.2.
 
 <!--# TODO: AUC comparison of RGCCA and MCIA -->
-
-### BARCELONA dataset {#results-barcelona}
-
-This dataset was processed as usual but as part of the quality controls of the dataset the diversity measures of the samples was analyzed:
-
-![(#fig:barcelona-diversity) Diversity indices of Barcelona according to the location and disease status. There is a lot of diversity between different groups but importantly the control samples overlap with the patients with inflammatory bowel disease.](images/barcelona-diversity.png)
-
-Control samples diversity should be lower and not on the same range as with samples of patients with IBD.
-The dataset's 16S was sequenced several times by different platforms.
-Despite the pilots and the negative controls on the sequencing process, each time there were different problems: contamination, low quality and then this suspicious diversity.
-It does not seem to be a problem of the sequencing facility, so this data was abandoned as unreliable.
 
 ### Howell's dataset {#results-howell}
 
