@@ -26,7 +26,7 @@ In addition, this dataset contained information on age, localization of the tumo
 | Sex (female/male)         | 28/25    |
 | Location (cort/dipg/midl) | 20/22/11 |
 
-: (#tab:Puget) Table about Puget's dataset characteristics.
+Table: (#tab:Puget) Puget's dataset characteristics.
 
 ### HSCT dataset {#methods-hsct}
 
@@ -57,7 +57,7 @@ In total 158 samples with both RNA and DNA extraction of the same segment and ti
 | Local simple endoscopic score for CD: mean (min-max) | 2.15 (0-12) |
 | CDAI: mean (min-max)                                 | 120 (0-450  |
 
-: (#tab:HSCT) Table of HSCT dataset characteristics.
+Table: (#tab:HSCT) HSCT dataset characteristics.
 
 ### Häsler's dataset {#methods-hasler}
 
@@ -68,13 +68,13 @@ Both RNA and DNA was then sequenced on HiSeq 2000 and MiSeq respectively.
 These biopsies included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy non-IBD.
 The dataset included information about gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.
 
-| Characteristic                    | Häsler's |
-|-----------------------------------|----------|
-| Disease status (non-IBD/diseased) | 33/26    |
-| Sex (female/male)                 | 42/17    |
-| Sample location (ileum/colon)     | 30/29    |
+| Characteristic                | Häsler's |
+|-------------------------------|----------|
+| Disease status (non-IBD/IBD)  | 33/26    |
+| Sex (female/male)             | 42/17    |
+| Sample location (ileum/colon) | 30/29    |
 
-: (#tab:Hasler) Table of Häsler's dataset characteristics.
+Table: (#tab:Hasler) Table of Häsler's dataset characteristics.
 
 ### Morgan's dataset {#methods-morgan}
 
@@ -91,32 +91,7 @@ The pouch ileum might be inflamed or not.
 | Sex patients (female/male)  | 101/102  |
 | Sample location (Pouch/PPI) | 59/196   |
 
-: (#tab:Morgan) Table of Morgan's dataset characteristics.
-
-### BARCELONA dataset {#methods-barcelona}
-
-<!--# Adapted from the ethical committee submission-->
-
-All patients with an established diagnosis of IBD, including Crohn's disease, ulcerative colitis, IBD unclassified, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 46 weeks a biopsy from an ileocolonoscopy.
-The protocol was approved by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7845 and HCB/2012/7956).
-
-Patients that were referred to the Hospital Clínic de Barcelona IBD unit, who had already started treatment with a biologic agent in another center, were also included adapting to the corresponding time-schedule of their treatment.
-In all patients, starting anti-TNF treatment will be decided before the protocol entry decision according to medical clinical practice.
-
-Anonymized identification of the patients, disease, sex age at diagnostic, age at the moment of the sample taking, time since the start of the treatment and sample segment was collected.
-
-| Characteristic                           | BARCELONA  |
-|------------------------------------------|------------|
-| Individuals                              | 62         |
-| Status (CD/UC/Controls)                  | 33/21/8    |
-| Sex (female/male)                        | 29/33      |
-| Age at diagnostic (\<17/\<40/\>40 years) | 2/44/8     |
-| Years of disease: mean (min-max)         | 7.6 (0-32) |
-| Age: mean (min-max)                      | 41 (18-68) |
-| Time (0/14/46 weeks)                     | 41/40/32   |
-| Sample segment (ileum/colon)             | 39/87      |
-
-: (#tab:BARCELONA) Table of samples included from the BARCELONA dataset characteristics.
+Table: (#tab:Morgan) Table of Morgan's dataset characteristics.
 
 ### Howell's dataset {#methods-howell}
 
@@ -128,14 +103,14 @@ Data has the following characteristics: disease, age at diagnostic, age at time 
 
 | Characteristic                                  | Howell's  |
 |-------------------------------------------------|-----------|
-| Disease (CD/UC/controls)                        | 10/11/11  |
+| Disease (non-IBD/CD/UC)                         | 11/10/11  |
 | Age at diagnostic (\<17/\<40/\>40 years)        | 32/0/0    |
 | Age: mean (min-max)                             | 12 (6-15) |
 | Sex (female/male)                               | 10/22     |
 | Segment (ileum/colon)                           | 31/46     |
 | Clinical history (inflammation/no inflammation) | 24/53     |
 
-: (#tab:howell) Table of samples included from Howell's dataset characteristics.
+Table: (#tab:howell) Table of samples included from Howell's dataset characteristics.
 
 ### Hernández' dataset {#methods-hernandez}
 
@@ -149,14 +124,14 @@ In addition, asymptomatic healthy controls (HC) were recruited during routine, a
 
 | Characteristic                           | Hernández' |
 |------------------------------------------|------------|
-| Disease (CD/UC/controls)                 | 54/66/46   |
+| Disease (non-IBD/CD/UC)                  | 46/54/66   |
 | Age at diagnostic (\<17/\<40/\>40 years) | 29/73/18   |
 | Age: mean (min-max)                      | 40 (17-71) |
 | Sex (female/male)                        | 81/85      |
 | Smoking (never/ex/current)               | 115/34/16  |
 | Sample Location (ileum/colon)            | 97/193     |
 
-: (#tab:hernandez) Table of samples included from Hernández's dataset characteristics.
+Table: (#tab:hernandez) Table of samples included from Hernández's dataset characteristics.
 
 ## Sample processing
 
@@ -167,59 +142,7 @@ RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4
 Samples with good enough quality as recommended by [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ "FastQC website") were processed with [cutadapt](https://github.com/marcelm/cutadapt "cutadapt repository") (version 1.7.1 [@martin2011]) for quality filtering.
 Later, the libraries were mapped against the human reference genome using the [STAR aligner](https://github.com/alexdobin/STAR "STAR repository") (2.5.2a) with Ensembl annotation ([release 26 of GENCODE](https://www.gencodegenes.org/human/release_26.html "GENCODE release 26"), GRCh38.p10 or superior) [@dobin2013].
 
-<details>
-
-<summary>
-
-Code used with STAR
-
-</summary>
-
-    STAR \
-        --outSAMtype BAM SortedByCoordinate \
-        --outFilterIntronMotifs RemoveNoncanonical \
-        --outSAMattributes All \
-        --outReadsUnmapped Fastx \
-        --outSAMstrandField intronMotif \
-        --outFilterScoreMinOverLread 0.5 \
-        --outFilterMatchNminOverLread 0.5 \
-        --outFilterType BySJout \
-        --alignSJoverhangMin 8 \
-        --alignSJDBoverhangMin 1 \
-        --outFilterMismatchNmax 999 \
-        --outFilterMismatchNoverLmax 0.04 \
-        --genomeDir "$genome/STAR" \
-        --limitBAMsortRAM 10000000000 \
-        --runMode alignReads \
-        --genomeLoad NoSharedMemory \
-        --quantMode TranscriptomeSAM \
-        --outFileNamePrefix $output \
-        --runThreadN "$threads" \
-        --readFilesCommand zcat \
-        --readFilesIn "$file1" "$file2"
-
-</details>
-
 Read counts per gene were obtained with [RSEM](https://github.com/deweylab/RSEM "RSEM repository") (version 1.2.31) [@li2011] as previously described [@corralizaDifferencesPeripheralTissue].
-
-<details>
-
-<summary>
-
-Code used with RSEM
-
-</summary>
-
-    rsem-calculate-expression \
-        --quiet \
-        --paired-end \
-        -p "$threads"  \
-        --estimate-rspd \
-        --append-names \
-        --no-bam-output \
-        --bam "$rseminp" "$genome/RSEM/RSEM" "$rsem"
-
-</details>
 
 ### Microbial DNA sequencing
 
@@ -232,8 +155,6 @@ Samples were immediately used or placed at -20°C for long-term storage until DN
 
 #### DNA sequencing
 
-Library preparation and sequencing of the HSCT dataset were performed at the Technische Universität München.
-Briefly, volumes of 600$\mu$L DNA stabilization solution (STRATEC biomedical) and 400$\mu$L Phenol:choloform:isoamyl alcohol (25:24:1, Sigma-Aldrich) were added to the aliquots.
 Microbial cells were disrupted by mechanical lysis using FastPrep-24.
 Heat treatment and centrifugation were conducted after adding a cooling adaptor.
 Supernatants were treated with RNase to eliminate RNA.
@@ -242,16 +163,8 @@ Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) follow
 Purification of amplicons was performed by using the AMPure XP system (Beckmann).
 Next, sequencing was performed with pooled samples in paired-end modus (PE275) using an MiSeq system (Illumina, Inc.) according to the manufacturer's instructions and 25% (v/v) PhiX standard library.
 
-<!--# Macrogen: 341f/785r not used/contaminated --->
-
-On the BARCELONA dataset the DNA was processed equally in house.
-The only difference was using different 16S-V3V4 primers pair 341f/806r on a MiSeq Nano sequencing by the RTSF Genomics Core at Michigan State University, United State of America.
-The sequence of the primers used was:
-
-341f: 5'-CCTACGGGAGGCAGCAG-3'\
-806r: 5'-GGACTACHVHHHTWTCTAAT-3'
-
-The result of MiSeq Nano were processed with bcl2fastq (v1.8.4).
+Library preparation and sequencing of the HSCT dataset were performed at the Technische Universität München.
+Briefly, volumes of 600$\mu$L DNA stabilization solution (STRATEC biomedical) and 400$\mu$L Phenol:choloform:isoamyl alcohol (25:24:1, Sigma-Aldrich) were added to the aliquots.
 
 #### Microbial profiling
 
@@ -299,7 +212,7 @@ $$
 X_k = TP_k ^ T + E_k
 $$
 
-with $T$ the $I \times R$ matrix of components scores that is shared between all blocks and $P_k$ the $J_k \times R$ matrix of components loadings for block $k$.
+Where $T$ is the $I \times R$ matrix of components scores that is shared between all blocks and $P_k$ the $J_k \times R$ matrix of components loadings for block $k$.
 
 Let $X_1,X_2, \dots X_i$ be blocks of data and $X=[X_1,X_2, \dots X_i]$ represent the joint data, then the JIVE decomposition is defined as:
 
@@ -327,7 +240,7 @@ Canonical correlation is a method that uses data about the same unit but from di
 Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017] which was used here.
 The method and implementation will be explained in detail in the next section.
 
-![(#fig:workflow-process) Workflow of the analysis process](images/workflow%20integration.png)
+![(#fig:workflow-process) Workflow of the analysis process](images/workflow_integration2.png)
 
 ## Regularized generalized canonical correlation analysis
 
@@ -425,7 +338,7 @@ The following table summarizes the equivalent parameters needed on RGCCA to work
 | SSQCOV  | Factorial | $\Vert a_j \Vert = 1$ | 1         |
 | SABSCOV | Centroid  | $\Vert a_j \Vert = 1$ | 1         |
 
-: (#tab:RGCCA-methods) Equivalences of RGCCA for multi-block data analysis to other methods
+Table: (#tab:RGCCA-methods) Equivalences of RGCCA for multi-block data analysis to other methods
 
 There are other methods that can be done with RGCCA.
 Canonical correlation analysis would be equivalent to data variance equal to 1 and shrinkage of 0.
@@ -476,12 +389,18 @@ This can be done with [`clusterProfiler`](https://bioconductor.org/packages/clus
 
 $$
 H_0 : P_{subset} \leq  P_{overall}
-$$ $$
+$$
+
+$$
 H_1 : P_{subset} > P_{overall}
 $$
 
 The statistical test used is usually the fisher test, the hypergeometric test or the proportion test.
 I describe the hypergeometric test and the proportion test below.
+
+### Fisher test
+
+<!--# TODO Fill with the fisher test-->
 
 ### Hypergeometric test
 
@@ -490,7 +409,7 @@ The hypergeometric distribution describes the probability of $k$ successes (when
 [^methods-2]: without replacement
 
 In this context $N$ is the number of genes being used and $n$ the number of genes on a pathway.
-So it can be used to compare the genes found on it ($k$) compared to the expected $K$ numbers of the distribution using the following equation:
+It can be used to compare the genes found on a pathway ($k$ genes) compared to the expected $K$ numbers of the distribution using the following equation:
 
 $$
 P_X(k) = P(X = k) 
@@ -517,17 +436,18 @@ This increases the $p$-value as it raises the Chi-square statistic.
 
 ### Gene Set Enrichment Analysis
 
-There are other methods that to test if some variables shows an unexpected importance according to a statistic like fold change or value gene set enrichment analysis was developed [@subramanian2005] .
-Gene set enrichment analysis (GSEA) is a computational method originally developed to determine whether a priori defined set of genes shows statistically significant and concordant differences between two biological states.
+There are other methods that test if some variables show an unexpected importance according to a statistic like fold change or value, such as gene set enrichment analysis (GSEA) [@subramanian2005].
+GSEA is a computational method originally developed to determine whether a priori defined set of genes shows statistically significant and concordant differences between two biological states.
 This methods check if a group of variables present in an ordered list shows a skewed distribution and it compares it against a random group of similar size.
 It has been widely used since its original publication, also on IBD [@protiva2016].
 
-This method calculates the rank of genes $rank(g_j)=r_j$ where each $g$ is a gene.
-Then later calculate the following functions:
+This method calculates the rank of genes $rank(g_j)=r_j$ where each $g$ is a gene, and then it calculates the following functions:
 
 $$
 P_{hit}(S, i)=\sum_{g_j \in S, j \leq i}\dfrac{|r_j|^p}{N_R} \text{, where } N_R = \sum_{g_j \in S}|r_j|^p 
-$$ $$
+$$
+
+$$
 P_{miss}(S, i) = \sum_{g_j \not \in S, j \leq i}\dfrac{1}{N - N_H}
 $$
 
@@ -616,13 +536,13 @@ $\beta$-diversity was calculated using the phyloseq package for exploratory anal
 The effective Simpson (also known as inverse Simpson) is:
 
 $$
-D_2 = \dfrac{1}{\sum_{1=1}^Sp_i^2}
+D_{\text{inverse Simpson}} = \dfrac{1}{\sum_{1=1}^Sp_i^2}
 $$
 
 The effective Shannon diversity is:
 
 $$
-D = \dfrac{1}{-\sum_{i =1}^S p_i \log_e{p_i}}
+D_{\text{effective Shannon}} = \dfrac{1}{-\sum_{i =1}^S p_i \log_e{p_i}}
 $$
 
 Where $p_i$ is the proportion of species $i$ and $S$ is the number of species.
@@ -699,8 +619,9 @@ To compare between different models the area under the curve (AUC) of the receiv
 It is based on the following formulas, where $\text{FP}$ is false positive, $N$ is a negative, $P$ is positive, $\text{TP}$ is true positive and $\text{FN}$ is false negative:
 
 $$
-FPR = \frac{FP}{N} = \dfrac{FP}{FP+TN} 
-$$ $$
+FPR = \frac{FP}{N} = \dfrac{FP}{FP+TN} $$ 
+\
+$$
 TPR = \frac{TP}{P} = \dfrac{FP}{FP+FN} 
 $$
 
