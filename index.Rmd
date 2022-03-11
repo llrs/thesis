@@ -5,11 +5,10 @@ date: "`r Sys.Date()`"
 mainfont: boisik
 documentclass: book
 knit: "bookdown::render_book"
-site: bookdown::bookdown_site
 github-repo: "llrs/thesis"
 url: 'https\://thesis.llrs.dev'
 csl: bmc_bioinformatics.csl
-cover-image: images/R_logo_science.png
+book_filename: data_integration_IBD
 link-citations: true
 split_by: chapter
 twitter-handle: Lluis_Revilla
@@ -19,11 +18,31 @@ lof: yes
 bibliography:
 - references.bib
 - packages.bib
-description: |
-  Thesis about the relationship between microbiome and transcriptome on the gastrointestinal tract on patients with IBD and some controls to discover key differences on this relationship.
 ---
 
 <!--# TODO add the first two pages with the formal requirements of the faculty  -->
+
+<!--# TODO Fix metathis to provide good media coverage  -->
+```{r metathis, cache=TRUE, eval=knitr::is_html_output()}
+library("metathis")
+meta() %>%
+  meta_description(
+    "Thesis searching the relationship between microbiome and transcriptome on the intestine on patients with IBD to discover key genes and bacteria."
+  ) %>% 
+  meta_name("github-repo" = "llrs/thesis") %>% 
+  meta_viewport() %>% 
+  meta_social(
+    title = "Data integration on inflammatory bowel disease",
+    url = "https://thesis.llrs.dev",
+    image = "https://r4ds.had.co.nz/cover.png",
+    image_alt = "The cover of the book",
+    og_type = "book",
+    og_author = c("Lluís Revilla Sancho"),
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@Lluis_Revilla"
+  )
+```
+
 
 # Preface {.unnumbered}
 
@@ -39,11 +58,11 @@ The thesis was carried out on the [Institut d'Investigacions Biomèdiques August
 The thesis was done on [the IBD unit](https://www.ibd-bcn.org/ "Group's website") which is a translational team of biologist, microbiologists, veterinaries, bioinformaticians, doctors and nurses (at [Hospital Clínic](https://www.clinicbarcelona.org/en "Hospital Clínic")) in a multidisciplinary team.
 The leading doctor of the unit was [Julian Panés](https://orcid.org/0000-0002-4971-6902 "Julià website") whose interest on the disease lead to receiving a grant that made possible this thesis.
 
-The thesis is under the [doctoral programme in biomedicine](http://www.ub.edu/doctorat_biomedicina/eng/index.htm "Doctoral program's website") of the [University of Barcelona (UB)](https://www.ub.edu/web/portal/en/ "UB website").
+The thesis is on the [doctoral programme in biomedicine](http://www.ub.edu/doctorat_biomedicina/eng/index.htm "Doctoral program's website") of the [University of Barcelona (UB)](https://www.ub.edu/web/portal/en/ "UB website").
 My thesis directors' were [Juanjo Lozano](https://orcid.org/0000-0001-7613-3908 "Juanjo's ORCID") and [Azucena Salas](https://orcid.org/0000-0003-4572-2907 "Azu's ORCID"), my boss, who helped as bioinformatician and disease expert respectively.
 They provided advice and guidance on how to analyse the data and where to focus on the different experiments/analysis.
 
-[This thesis](https://thesis.llrs.dev) is licensed under the [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/ "License summary link").  
+This thesis, available on [https://thesis.llrs.dev](https://thesis.llrs.dev) is licensed under the [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/ "License summary link").  
 !["CC-BY image"](images/by.png "CC-BY image of creative commons")
 
 # Abstracts {.unnumbered}
