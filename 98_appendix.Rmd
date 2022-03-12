@@ -201,7 +201,11 @@ Articles related to this project published during the thesis.
 
 \includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - 25pt}, trim=0 0 0 20pt,]{paper_experDesign.pdf}
 
-# BARCELONA dataset {#barcelona}
+# Other datasets
+
+
+## BARCELONA dataset {#barcelona}
+
 
 <!--# Adapted from the ethical committee submission-->
 
@@ -245,6 +249,24 @@ The dataset's 16S was sequenced several times by different platforms.
 Despite the pilots and the negative controls on the sequencing process, each time there were different problems: contamination, low quality and then this suspicious diversity.
 It does not seem to be a problem of the sequencing facility, so this data was abandoned as unreliable.
 
+## Hernández' dataset {#hernandez}
+
+This dataset was obtained from collaborators at Mount Sinai, Toronto, Canada [@hernández-rocha2021].
+
+Patients with UC, CD were recruited when attending regularly scheduled visits or surveillance.
+In addition, asymptomatic healthy controls (HC) were recruited during routine, age-related colorectal cancer screening by colonoscopy.
+290 samples were collected together with information about the disease, age at diagnosis, age at the moment of the sampling, sex, sample location and smoking status.
+
+| Characteristic                           | Hernández' |
+|------------------------------------------|------------|
+| Disease (non-IBD/CD/UC)                  | 46/54/66   |
+| Age at diagnostic (\<17/\<40/\>40 years) | 29/73/18   |
+| Age: mean (min-max)                      | 40 (17-71) |
+| Sex (female/male)                        | 81/85      |
+| Smoking (never/ex/current)               | 115/34/16  |
+| Sample Location (ileum/colon)            | 97/193     |
+
+Table: (#tab:hernandez) Characteristics of samples included from Hernández's dataset. 
 
 # Models output
 
