@@ -9,10 +9,16 @@ github-repo: "llrs/thesis"
 url: 'https\://thesis.llrs.dev'
 csl: bmc_bioinformatics.csl
 book_filename: data_integration_IBD
-link-citations: true
 split_by: chapter
 twitter-handle: Lluis_Revilla
+# Pandoc options
+link-citations: true
 colorlinks: yes
+# https://bookdown.org/yihui/rmarkdown-cookbook/latex-variables.html
+# Only works here (set when printing and sending)
+# links-as-notes: true
+# fontfamily: boisik
+papersize: a4
 lot: yes
 lof: yes
 bibliography:
@@ -23,7 +29,7 @@ bibliography:
 <!--# TODO add the first two pages with the formal requirements of the faculty  -->
 
 <!--# TODO Fix metathis to provide good media coverage  -->
-```{r metathis, cache=TRUE, eval=knitr::is_html_output()}
+```{r metathis, cache=TRUE, include=FALSE, eval=knitr::is_html_output()}
 library("metathis")
 meta() %>%
   meta_description(

@@ -27,14 +27,14 @@ bookdown::pdf_book:
     in_header: "preamble.tex"
   keep_tex: yes
   dev: "cairo_pdf"
-  latex_engine: pdflatex # xelatex # lualatex # pdflatex #
-  link-citations: yes
-  # papersize: a5
-  citation_package: default # pandoc-citeproc
-  template: null
-  toc: yes
-  toc_appendix: yes
-  toc_unnumbered: yes
+  # Options: xelatex lualatex pdflatex
+  latex_engine: pdflatex
+  link-citations: true
+  # pandoc-citeproc
+  citation_package: default
+  toc: true
+  toc_appendix: true
+  toc_unnumbered: true
   toc_depth: 3
 bookdown::word_document2:
   fig_caption: true
