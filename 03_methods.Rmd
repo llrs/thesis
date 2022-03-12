@@ -26,7 +26,7 @@ In addition, this dataset contained information on age, localization of the tumo
 | Sex (female/male)         | 28/25    |
 | Location (cort/dipg/midl) | 20/22/11 |
 
-Table: (#tab:Puget) Characteristics of samples from Puget's dataset.
+: (#tab:Puget) Characteristics of samples from Puget's dataset.
 
 ### HSCT dataset {#methods-hsct}
 
@@ -57,7 +57,7 @@ In total 158 samples with both RNA and DNA extraction of the same segment and ti
 | Local simple endoscopic score for CD: mean (min-max) | 2.15 (0-12) |
 | CDAI: mean (min-max)                                 | 120 (0-450  |
 
-Table: (#tab:HSCT) Characteristics of samples from HSCT dataset.
+: (#tab:HSCT) Characteristics of samples from HSCT dataset.
 
 ### Häsler's dataset {#methods-hasler}
 
@@ -74,7 +74,7 @@ The dataset included information about gender, location, age, and the status (in
 | Sex (female/male)             | 42/17    |
 | Sample location (ileum/colon) | 30/29    |
 
-Table: (#tab:Hasler) Characteristics of samples from Häsler's dataset.
+: (#tab:Hasler) Characteristics of samples from Häsler's dataset.
 
 ### Morgan's dataset {#methods-morgan}
 
@@ -91,7 +91,7 @@ The pouch ileum might be inflamed or not.
 | Sex patients (female/male)  | 101/102  |
 | Sample location (Pouch/PPI) | 59/196   |
 
-Table: (#tab:Morgan) Characteristics of samples from Morgan's dataset.
+: (#tab:Morgan) Characteristics of samples from Morgan's dataset.
 
 ### Howell's dataset {#methods-howell}
 
@@ -110,7 +110,7 @@ Data has the following characteristics: disease, age at diagnostic, age at time 
 | Segment (ileum/colon)                           | 31/46     |
 | Clinical history (inflammation/no inflammation) | 24/53     |
 
-Table: (#tab:howell) Characteristics of samples included from Howell's dataset.
+: (#tab:howell) Characteristics of samples included from Howell's dataset.
 
 ## Sample processing
 
@@ -159,7 +159,7 @@ The resulting OTUs table was normalized using edgeR (Version 3.28 or later) [@mc
 
 For all the other datasets [dada2](https://bioconductor.org/packages/dada2) [@callahan2016] (Version 1.14 or later) was used to analyze microbiome data.
 It creates amplicon sequencing variants from the 16S sequencing data, without merging similar sequences at any threshold.
-It is an alternative to the use of OTUs which allows to compare results between studies and provides more resolution to differences on the fragment amplified.
+It is an alternative to the use of OTUs which allows to compare results between studies and provides more resolution to identify differences on the fragment of 16S amplified.
 
 ## Integration methods
 
@@ -204,9 +204,9 @@ The O2PLS model can be written as a factor analysis where some factors are commo
 
 $$
 \begin{aligned}
-\text{X model: } X = TW ^ T + T_{\text{Y-ortho}} P ^ T_{\text{Y-ortho}} + E \\
-\text{Y model: } Y = UC ^ T + U_{\text{X-ortho}} P ^ T_{\text{X-ortho}} + F \\
-\text{Inner relation: } U = T + H
+& \text{X model : } X = TW ^ T + T_{\text{Y-ortho}} P ^ T_{\text{Y-ortho}} + E \\
+& \text{Y model : } Y = UC ^ T + U_{\text{X-ortho}} P ^ T_{\text{X-ortho}} + F \\
+& \text{Inner relation : } U = T + H
 \end{aligned}
 $$
 
@@ -236,7 +236,7 @@ It provides a similar output, new variables and weights of the existing variable
 The function it maximizes is:
 
 $$
-\rho = \underset{a, b}{\mathrm{argmax}} (\mathrm{cor}(a^T X, b^T Y))
+\rho = \underset{a, b}{\text{argmax}} (\text{cor}(a^T X, b^T Y))
 $$
 
 On this equation $a$ and $b$ are random variables that given $X$ and $Y$, the two data sources, maximize the correlation between $a^T X$ and $b^T Y$, the first canonical variables, the new variables.
@@ -254,7 +254,7 @@ The objective function is:
 [^methods-1]: CRAN is The Comprehensive R Archive Network available at <https://cran.r-project.org/>
 
 $$
-\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk} g( \mathrm{cov}(X_j a_j, X_k a_k)) \mathrm{~~s.t.~~} (1-\tau_j)var(X_j a_j)+\tau_j \Vert a_j \Vert^2 = 1, j=1,\ldots,J
+\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk} g( \text{cov}(X_j a_j, X_k a_k)) \text{~~s.t.~~} (1-\tau_j)var(X_j a_j)+\tau_j \Vert a_j \Vert^2 = 1, j=1,\ldots,J
 $$
 
 Being $X_j$ the values from sample $j$, the weights of the variables of said sample are represented by $a$.
@@ -280,7 +280,7 @@ The authors realized that there is a special problem due to sparsity on biologic
 The method to perform the dimensional reduction using the sparse method consists on maximizing the same equation but with a different constraint: Specifically, RGCCA with all $\tau_j = 1$, combined with an L1-penalty that gives rise to SGCCA:
 
 $$
-\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g( \mathrm{cov}(X_j a_j, X_k a_k)) \mathrm{~~s.t.~~} \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
+\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g( \text{cov}(X_j a_j, X_k a_k)) \text{~~s.t.~~} \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
 $$
 
 The $s_j$ controls the sparsity estimated of the data, the smaller it is, the higher the sparsity of $X_j$ is.
@@ -317,9 +317,9 @@ The following table summarizes the equivalent parameters needed on RGCCA to work
 | SSQCOV  | Factorial | $\Vert a_j \Vert = 1$ | 1         |
 | SABSCOV | Centroid  | $\Vert a_j \Vert = 1$ | 1         |
 
-Table: (#tab:RGCCA-methods) Equivalences of RGCCA for multi-block data analysis to other methods
+: (#tab:RGCCA-methods) Equivalences of RGCCA for multi-block data analysis to other methods
 
-There are other methods that can be done with RGCCA.
+There are other methods that can be performed with RGCCA.
 Canonical correlation analysis would be equivalent to data variance equal to 1 and shrinkage of 0.
 Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1 in RGCCA.
 Redundancy analysis could be performed where one block's weight normalized value is 1 and the variance of the other equal to 1.
@@ -378,7 +378,25 @@ I describe the hypergeometric test and the proportion test below.
 
 ### Fisher test
 
-<!--# TODO Fill with the fisher test-->
+The fisher test calculates how independently are two categories.
+Say if genes in category X are independent of category Y, if we use the contingency table
+
+|                       | In category X | Not in category X | Row total   |
+|-----------------------|---------------|-------------------|-------------|
+| **In category Y**     | a             | b                 | a+b         |
+| **Not in category Y** | c             | d                 | c+d         |
+| **Column total**      | a+c           | b+d               | a+b+c+d = n |
+
+: (#tab:fisher) Fisher contingency table
+
+Given this contingency table \@ref(tab:fisher), the probability of X and Y being independent can be calculated with:
+
+$$
+\begin{aligned}
+P & = \frac{ \displaystyle{{a+b}\choose{a}} \displaystyle{{c+d}\choose{c}} }{ \displaystyle{{n}\choose{a+c}} } \\
+& = \frac{(a+b)!~(c+d)!~(a+c)!~(b+d)!}{a!~~b!~~c!~~d!~~n!}
+\end{aligned}
+$$
 
 ### Hypergeometric test
 
@@ -393,6 +411,9 @@ $$
 P_X(k) = P(X = k) 
 = \frac{\binom{K}{k} \binom{N - K}{n-k}}{\binom{N}{n}}
 $$
+
+This looks like the fisher test, because hypergeometric test assesses the extremeness of observing $k$ or more of
+that overlap ($a$ on ) and thus it is the same as a one-sided Fisher's exact test.
 
 ### Proportion test
 
