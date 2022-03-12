@@ -1,6 +1,6 @@
 # Results
 
-## Packages
+## Packages/methods
 
 ### experDesign
 
