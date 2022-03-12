@@ -26,7 +26,7 @@ In addition, this dataset contained information on age, localization of the tumo
 | Sex (female/male)         | 28/25    |
 | Location (cort/dipg/midl) | 20/22/11 |
 
-Table: (#tab:Puget) Puget's dataset characteristics.
+Table: (#tab:Puget) Characteristics of samples from Puget's dataset.
 
 ### HSCT dataset {#methods-hsct}
 
@@ -57,7 +57,7 @@ In total 158 samples with both RNA and DNA extraction of the same segment and ti
 | Local simple endoscopic score for CD: mean (min-max) | 2.15 (0-12) |
 | CDAI: mean (min-max)                                 | 120 (0-450  |
 
-Table: (#tab:HSCT) HSCT dataset characteristics.
+Table: (#tab:HSCT) Characteristics of samples from HSCT dataset.
 
 ### Häsler's dataset {#methods-hasler}
 
@@ -74,7 +74,7 @@ The dataset included information about gender, location, age, and the status (in
 | Sex (female/male)             | 42/17    |
 | Sample location (ileum/colon) | 30/29    |
 
-Table: (#tab:Hasler) Table of Häsler's dataset characteristics.
+Table: (#tab:Hasler) Characteristics of samples from Häsler's dataset.
 
 ### Morgan's dataset {#methods-morgan}
 
@@ -91,7 +91,7 @@ The pouch ileum might be inflamed or not.
 | Sex patients (female/male)  | 101/102  |
 | Sample location (Pouch/PPI) | 59/196   |
 
-Table: (#tab:Morgan) Table of Morgan's dataset characteristics.
+Table: (#tab:Morgan) Characteristics of samples from Morgan's dataset.
 
 ### Howell's dataset {#methods-howell}
 
@@ -110,28 +110,7 @@ Data has the following characteristics: disease, age at diagnostic, age at time 
 | Segment (ileum/colon)                           | 31/46     |
 | Clinical history (inflammation/no inflammation) | 24/53     |
 
-Table: (#tab:howell) Table of samples included from Howell's dataset characteristics.
-
-### Hernández' dataset {#methods-hernandez}
-
-This dataset was obtained from collaborators at Mount Sinai, Toronto, Canada [@hernández-rocha2021].
-
-Patients with UC, CD were recruited when attending regularly scheduled visits or surveillance.
-In addition, asymptomatic healthy controls (HC) were recruited during routine, age-related colorectal cancer screening by colonoscopy.
-290 samples were collected together with information about the disease, age at diagnosis, age at the moment of the sampling, sex, sample location and smoking status.
-
-<!--# TODO table of patients and samples -->
-
-| Characteristic                           | Hernández' |
-|------------------------------------------|------------|
-| Disease (non-IBD/CD/UC)                  | 46/54/66   |
-| Age at diagnostic (\<17/\<40/\>40 years) | 29/73/18   |
-| Age: mean (min-max)                      | 40 (17-71) |
-| Sex (female/male)                        | 81/85      |
-| Smoking (never/ex/current)               | 115/34/16  |
-| Sample Location (ileum/colon)            | 97/193     |
-
-Table: (#tab:hernandez) Table of samples included from Hernández's dataset characteristics.
+Table: (#tab:howell) Characteristics of samples included from Howell's dataset.
 
 ## Sample processing
 
@@ -224,11 +203,11 @@ Finally, the O2PLS approach uses multiple linear regression to estimate the pure
 The O2PLS model can be written as a factor analysis where some factors are common between both blocks.
 
 $$
-\text{X model: } X = TW ^ T + T_{\text{Y-ortho}} P ^ T_{\text{Y-ortho}} + E
-$$ $$
-\text{Y model: } Y = UC ^ T + U_{\text{X-ortho}} P ^ T_{\text{X-ortho}} + F
-$$ $$
+\begin{aligned}
+\text{X model: } X = TW ^ T + T_{\text{Y-ortho}} P ^ T_{\text{Y-ortho}} + E \\
+\text{Y model: } Y = UC ^ T + U_{\text{X-ortho}} P ^ T_{\text{X-ortho}} + F \\
 \text{Inner relation: } U = T + H
+\end{aligned}
 $$
 
 Each model is built similarly by adding the subtraction of the projected values of the other component keeping the relationship between them as stated on the third line.
@@ -388,11 +367,10 @@ This can be done with [`clusterProfiler`](https://bioconductor.org/packages/clus
 `clusterProfiler` checks the enrichment of features of a given group on the (background) list provided.
 
 $$
-H_0 : P_{subset} \leq  P_{overall}
-$$
-
-$$
+\begin{aligned}
+H_0 : P_{subset} \leq  P_{overall} \\
 H_1 : P_{subset} > P_{overall}
+\end{aligned}
 $$
 
 The statistical test used is usually the fisher test, the hypergeometric test or the proportion test.
@@ -444,11 +422,10 @@ It has been widely used since its original publication, also on IBD [@protiva201
 This method calculates the rank of genes $rank(g_j)=r_j$ where each $g$ is a gene, and then it calculates the following functions:
 
 $$
-P_{hit}(S, i)=\sum_{g_j \in S, j \leq i}\dfrac{|r_j|^p}{N_R} \text{, where } N_R = \sum_{g_j \in S}|r_j|^p 
-$$
-
-$$
-P_{miss}(S, i) = \sum_{g_j \not \in S, j \leq i}\dfrac{1}{N - N_H}
+\begin{aligned}
+& P_{hit}(S, i) = \sum_{g_j \in S, j \leq i}\dfrac{|r_j|^p}{N_R} \text{, where } N_R = \sum_{g_j \in S}|r_j|^p \\
+& P_{miss}(S, i) = \sum_{g_j \not \in S, j \leq i}\dfrac{1}{N - N_H}
+\end{aligned}
 $$
 
 With these values the enrichment score (ES) defined as: $ES=max(|P_{hit}(S, i)-P_{miss}(S, i)\vert)$ is calculated from the walk.
@@ -530,19 +507,16 @@ It was performed with variables individually and also with interactions between 
 
 Microbiome diversity was measured using vegan and [phyloseq](https://bioconductor.org/packages/phyloseq) methods [@oksanen2020].
 $\alpha$-diversity is a measure of how much a given microbiome at a taxonomic level is present on a sample.
-Several measures exists, on the thesis I used the effective Simpson or Shannon diversity index to compare diversity between samples and conditions.
+Several measures exists, on the thesis I used the effective Simpson or effective Shannon diversity index to compare diversity between samples and conditions.
 $\beta$-diversity was calculated using the phyloseq package for exploratory analysis.
 
-The effective Simpson (also known as inverse Simpson) is:
+The effective Simpson (also known as inverse Simpson) and the effective Shannon are:
 
 $$
-D_{\text{inverse Simpson}} = \dfrac{1}{\sum_{1=1}^Sp_i^2}
-$$
-
-The effective Shannon diversity is:
-
-$$
-D_{\text{effective Shannon}} = \dfrac{1}{-\sum_{i =1}^S p_i \log_e{p_i}}
+\begin{aligned}
+& D_{\text{effective Simpson}} = \dfrac{1}{\sum_{1=1}^Sp_i^2} \\
+& D_{\text{effective Shannon}} = \dfrac{1}{-\sum_{i =1}^S p_i \log_e{p_i}}
+\end{aligned}
 $$
 
 Where $p_i$ is the proportion of species $i$ and $S$ is the number of species.
@@ -619,10 +593,10 @@ To compare between different models the area under the curve (AUC) of the receiv
 It is based on the following formulas, where $\text{FP}$ is false positive, $N$ is a negative, $P$ is positive, $\text{TP}$ is true positive and $\text{FN}$ is false negative:
 
 $$
-FPR = \frac{FP}{N} = \dfrac{FP}{FP+TN} $$ 
-\
-$$
+\begin{aligned}
+FPR = \frac{FP}{N} = \dfrac{FP}{FP+TN} \\
 TPR = \frac{TP}{P} = \dfrac{FP}{FP+FN} 
+\end{aligned}
 $$
 
 The ROC curve is that where the true positive rate (TPR) or sensitivity, recall or hit rate is represented against the false positive rate (FPR) on the abscissa.
