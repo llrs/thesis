@@ -106,6 +106,30 @@ Currently, it is compatible with the next release of [RGCCA being prepared](http
 
 [^results-2]: I also contributed with some comments and feedback to the package to make it easier to read the source and check the inputs and improve the documentation so that it is coherent with the code and previous results of the functions.
 
+<!--# TODO expand the explanation of the method why and how-->
+
+To search models it starts with a initial connectivity of the blocks and  creates all the combinations of connections given .
+
+The functions `analyze` helps to analyze code of a single integration, providing the results on a tidy format for further processing. 
+To create the connections between blocks the function `weight_design` is available. 
+It creates all the possible matrices given a number of blocks and a number of weights. 
+Optionally it can create just a subset of those based on a numeric vector. 
+However, it does not provide a way to have the design named. 
+\
+If the user wants to create their own design matrices, they can use `symm` and modify the design of the model with `sbuSymm`. 
+`symm`, takes an initial matrix to pick up the row and column names. 
+It is recommended that the user checks the design matrix is fully connected, which the package facilitates with the function `correct`. This is also recommended even if the design matrices are created with `weight_design`. 
+
+For the bootstrap procedure there is the function `boot_index` to create the bootstrapped index of samples to be used by `boot_index_sgcca`. 
+If the bootstrapped samples used is not important one can use `boot_samples_sgcca`.
+If the users want to perform a leave-one-out procedure they can use `looIndex`. 
+
+The package cannot choose which variables use from the block with information to split into several blocks.
+However, it provides the `model_RGCCA` function to make it easy to prepare such variables for RGCCA input. 
+The inteRmodel procedure will only be useful if the user should decide which variables are independent from others and split them into different blocks.
+To asses this the user can use the methods we used, as described on the above section \@ref(variance).
+It is important to keep in mind the possible causal relationships on user's data [@greenland2002].
+
 ## Analysis
 
 On the following sections the main results of analyzing each dataset are presented.
@@ -175,7 +199,7 @@ If we added a superblock with all the data of the different blocks from model 1 
 | **Superblock**   |  1  |  1  |     0      |      1       |
 | **Localization** |  0  |  0  |     1      |      0       |
 
-: (#tab:puget-model-superblock-2) Relationships between the different blocks on the Puget's dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship.
+: (#tab:puget-model-superblock) Relationships between the different blocks on the Puget's dataset for model superblock. 0 indicates no relationship and 1 indicates a strong relationship.
 
 But when the best model with the superblock that had highest inner AVE is quite different:
 
@@ -186,7 +210,7 @@ But when the best model with the superblock that had highest inner AVE is quite 
 | **Superblock**     |  0  |  1  |     0      |      0       |
 | **Localization**   |  1  |  0  |     0      |      0       |
 
-: (#tab:puget-model-superblock-2) Relationships between the different blocks on the puget's dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship.
+: (#tab:puget-model-superblock-2) Relationships between the different blocks on the Puget's dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship.
 
 Exploratory analysis with the superblock model was done.
 The first two components of the superblock did not help to explain the biology or classify the tumors:
@@ -524,15 +548,55 @@ In addition the model 2.2 usually has a lower inner AVE compared to model 1.2.
 
 <!--# TODO: Update when reanalysis is done -->
 
-This dataset was processed to confirm the results on the previous datasets.
+This dataset was processed to confirm the results on the previous datasets. 
+As always first we started with model 0, connecting both the RNAseq and the 16S blocks:
 
-Model 1.2 was the best according to the AVE score but perform worse when attempting to recreate known biological differences via classifying samples.
-Model 2.2 was selected.
+
+|Model 0| RNAseq| 16S|
+|-------|:-----:|:--:|
+|RNAseq |      0|   1|
+|16S    |      1|   0|
+
+: (#tab:howell-model0) Relationships between the different blocks on the Howell's dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.
+
+Later we look for the best model of family 1.
+This resulted on the following model:
+
+|Model 1.2| RNAseq| 16S| metadata|
+|---------|:-----:|:--:|:-------:|
+|RNAseq   |    0.0| 0.1|        1|
+|16S      |    0.1| 0.0|        0|
+|metadata |    1.0| 0.0|        0|
+
+: (#tab:howell-model1-2) Relationships between the different blocks on the Howell's dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.
+
+Model 1.2 \@ref(tab:howell-model1-2) was the best according to the AVE score but perform worse when attempting to recreate known biological differences via classifying samples as we can see below \@ref(fig:howell-models):
 
 ![(#fig:howell-models) The three main models, model 0, 1.2 and 2.2 on the Howell's dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks.](images/howells_models.png)
 
+Model 2.2 was selected for further analysis as it describes more accurately the biology of the dataset it. 
+Model 2.2 can be seen on \@ref(tab:howell-model2-2).
+
+|  Model 2.2  | RNAseq| 16S| demographics| location|
+|-------------|:-----:|:--:|:-----------:|:-------:|
+|RNAseq       |      0|   0|            0|        1|
+|16S          |      0|   0|            1|        0|
+|demographics |      0|   1|            0|      0.1|
+|location     |      1|   0|          0.1|        0|
+
+: (#tab:howell-model2-2) Relationships between the different blocks on the Howell's dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
+
 Model 1.2 has a 0.1 relationship between the ASV and the transcriptome and 1 between transcriptome and metadata.
 While model 2.2 has a relationship of 1 between location and transcriptome and demographics and ASV but only of 0.1 between demographics and location.
+
+| Model | inner AVE | outer AVE |
+|-------|-----------|-----------|
+| 0     | 0.718098  | 0.111239  |
+| 1.2   | 0.8972258 | 0.1660267 |
+| 2.2   | 0.8433274 | 0.1659844 |
+
+: (#tab:howell-models-ave) The models and their AVE values.
+
 
 ![(#fig:howell-bootstrap) Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset.](images/howells_models_bootstrap.png)
 
@@ -547,4 +611,4 @@ The dot product of the ASV and genes were also calculated and used to find out w
 
 <!--# TODO show hair ball plot ? Doesn't work well; I don't like it -->
 
-<!--# TODO continue/fix this -->
+<!--# TODO continue/fix this --
