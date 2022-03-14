@@ -110,7 +110,7 @@ Data has the following characteristics: disease, age at diagnostic, age at time 
 | Segment (ileum/colon)                           | 31/46     |
 | Clinical history (inflammation/no inflammation) | 24/53     |
 
-: (#tab:howell) Characteristics of samples included from Howell's dataset.
+: (#tab:howell) Characteristics of samples from Howell's dataset.
 
 ## Sample processing
 
@@ -219,7 +219,10 @@ Canonical correlation is a method that uses data about the same unit but from di
 Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017] which was used here.
 The method and implementation will be explained in detail in the next section.
 
-![(#fig:workflow-process) Workflow of the analysis process](images/workflow_integration2.png)
+```{r workflow-process, fig.cap="Workflow of the analysis process"}
+knitr::include_graphics("images/workflow_integration2.png")
+```
+
 
 ## Regularized generalized canonical correlation analysis
 
@@ -302,7 +305,7 @@ To measure the quality of the model, the implementation provides indicators base
 RGCCA returns an AVE score for each block, which measures how the variables of the block correlate with the dimension component of the block.
 It also provides two AVE scores of the whole model: the inner, which measures how each dimension accounts for the variance, and the outer, which measures how variables correlate with the dimension components.
 The closer the inner AVE is to 1, the better the model adjusts to the data.
-However, that mathematically works better does not guarantee that the model provides more insights into the biology.
+However, that mathematically fits better to the data does not guarantee that the model provides more insights into the biology.
 
 It can also generate results as other related methods based on the maximization of a function of correlations: SUMCOR (sum of correlations method) [@horst1961], SSQCOR (sum of squared correlations method) [@kettenring1971], SABSCOR (sum of absolute values of the correlations method) [@vandegeer1984].
 Others methods are based on the maximization of a function of covariances: SUMCOV (sum of covariances method), SSQCOV (sum of squared covariances method), SABSCOV (sum of absolute values of the covariances method).
@@ -319,16 +322,14 @@ The following table summarizes the equivalent parameters needed on RGCCA to work
 
 : (#tab:RGCCA-methods) Equivalences of RGCCA for multi-block data analysis to other methods
 
-There are other methods that can be performed with RGCCA.
-Canonical correlation analysis would be equivalent to data variance equal to 1 and shrinkage of 0.
-Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1 in RGCCA.
-Redundancy analysis could be performed where one block's weight normalized value is 1 and the variance of the other equal to 1.
+There are other methods that can be performed with RGCCA, for example: The classical canonical correlation analysis would be equivalent to data variance equal to 1 and shrinkage of 0.
+Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1 in RGCCA. Finally, redundancy analysis could be performed where one block's weight normalized value is 1 and the variance of the other equals to 1.
 
 ### Models
 
 There is no formal definition of what constitutes a block of data on multi-omics tools.
 Most multi-omics and integration tools assume one block for each type of data, such as an essay a survey or an experiment.
-We decided to split the block with data about the samples to separate independent variables from the same block.
+We decided to split the block with the variables about the samples to separate independent variables.
 The hypothesis we made was that more blocks with highly related variables but independent from the other blocks would fit better the data and thus help to identify causal or dependent variables.
 
 To model what might be the relationships within datasets current practices include using a pre-selected model of relations between blocks.
@@ -460,17 +461,17 @@ Gene pathways from the REACTOME database were tested on the weight of different 
 ### GSVA
 
 To estimate the expression of the pathways and compare their expression levels between conditions gene set variation analysis as implemented on [GSVA](https://bioconductor.org/packages/GSVA) was used [@hänzelmann2013].
-It is a method that summarize the variables' numerical value changing the space of $\text{variable x sample}$ to $\text{group x sample}$ .
+It is a method that summarizes the variables' numerical value changing the space of $\text{variable x sample}$ to $\text{group x sample}$ .
 This enables other methods to use this new space instead of the original variables, which provides a successful way to look into data [@escudero-hernández2021].
 GSVA was used (again from the REACTOME database) to find the relationships between the pathways and the microbiome at different taxonomic levels.
 
-This is done via an estimation and a comparison with a discrete Poisson kernel: $i$ indicates the gene till $k$ and samples are indicated by $j$ till $n$.
+This is done via an estimation and a comparison with a discrete Poisson kernel: $i$ indicates the gene from a total of $k$ genes, and samples are indicated by $j$ from $n$ number of samples.
 
 $$
 z_{ij}=\hat{F_r}(x_{ij}) = \frac{1}{n}\sum_{k=1}^n\sum_{y=0}^{x_{ij}}\dfrac{e^{-(x_{ik}+r)}(x_{ik} + r)^y }{y!}
 $$
 
-$r = 0.5$ is used in order to set the mode of the Poisson kernel at each $x_{ik}$, that is, similar to the expression of a gene for a given sample.
+$r = 0.5$ is used to set the mode of the Poisson kernel at each $x_{ik}$, that is, similar to the expression of a gene for a given sample.
 
 Later this is converted to ranks $z_{(i)j}$ for each sample and normalized: $r_{ij}=|\frac{p}{2}-z_{(i)j}|$ to make the distribution of ranks symmetric around zero to later compare with a normal distribution using a Kolmogorov-Smirnov-like random walk statistic:
 
@@ -486,7 +487,7 @@ $|\gamma_k|$ indicates the ordination of the gene set, the number of genes of th
 This difference is later converted to enrichment score for each gene set for each sample, similar to GSEA.
 This score can be calculated as a difference of hits and misses or the maximum deviation from zero of the random walk (which allows to detect gene sets that have genes with different opposing expression patterns).
 
-## Variance and diversity methods
+## Variance and diversity methods {#variance}
 
 ### PERMANOVA
 
@@ -512,7 +513,7 @@ This allows to test if the variables are related to the variance of the data as 
 
 ### globaltest
 
-It is a method for testing complex hypothesis and help decide if the variables were influencing [@goeman2006].
+It is a method for testing complex hypothesis and calculate the influence of each variable on a given outcome [@goeman2006].
 I tested which variables, (sex, age, location, time since diagnosis, treatment) are important on the datasets with [globaltest](https://bioconductor.org/packages/globaltest) (Version 5.40 or later).
 This method provides a general statistic to test hypothesis against a high dimensional dataset.
 
@@ -548,15 +549,14 @@ Where $p_i$ is the proportion of species $i$ and $S$ is the number of species.
 
 To look for relationships between the microbiome and the RNAseq we used weighted gene co-expression network analysis.
 We used weighted gene co-expression network analysis as implemented on [WGCNA](https://cran.r-project.org/package=WGCNA) [@langfelder2008] as well as correlations.
-The Spearman rank correlation coefficient is
+The Spearman rank correlation coefficient is:
 
-Being $(X_1 , Y_1 ),\dots, (X_n , Y_n)$, assign a rank where $(R_1 , S_1 ), \dots , (R_n , S_n )$ for n being all the variables which:
 
 $$
 R_s(X,Y) = \dfrac{\sum_{i=1}^n (R_i - \bar{R}) (S_i - \bar{S} )}{\sqrt{\sum_{i=1}^n (R_i - \bar{R})^2}\sqrt{\sum_{i=1}^n (S_i - \bar{S})^2}}
 $$
 
-where $\bar{R}=\dfrac{1}{n}\sum_{i=1}^n R_i$ conversely to S: $\bar{S}=\dfrac{1}{n}\sum_{i=1}^n S_i$.
+Being $(X_1 , Y_1 ),\dots, (X_n , Y_n)$, assign a rank where $(R_1 , S_1 ), \dots , (R_n , S_n )$ for $n$ being all the variables where $\bar{R}=\dfrac{1}{n}\sum_{i=1}^n R_i$ and likewise $\bar{S}=\dfrac{1}{n}\sum_{i=1}^n S_i$.
 The distribution of the Spearman correlation coefficient is symmetric around 0 and can be approximated to a normal distribution as $\sqrt{n-1}R_{s(X,Y)} \sim N(0,1)$ which can be used to calculate the p-value of a given estimation.
 
 ### BaseSet
@@ -567,11 +567,12 @@ It is a package that uses fuzzy set logic to calculate the probability to belong
 Under the standard fuzzy set logic a set $S$ is a group of elements for which each element $e$ has an $\alpha$ membership to that set [@filzmoser2004; @dubois1993].
 $\alpha$ is usually bounded between 0 and 1: $\alpha \in [0, 1]$ .
 A given element $e$ can belong to more than one set.
-Assimilating the membership function to probability we can calculate the probability of a given element $e$ to belong to a set $S$ and not any other set: $P(e \in S|e\not \in S^c)$.
+Assimilating the membership function to probability we can calculate the probability of a given element $e$ to belong to a set $S$ and not any other set: $P(e \in S|e \not \in S^c)$.
 Which applied to the data and the case at hand, it is the probability that a given variable is associated with a given outcome and not with any other outcome.
 
 The membership function was derived from the bootstraps used for each model on the thousand iterations of the integrative method applied to give an estimation of how probable is a given gene and bacteria to be selected as relevant for the model.
-With the probabilities of the bootstraps it was used to calculate (via `set_size`) the genes and bacteria that are specific of the model that allows to separate the transcriptome by its location and the microbiome by the disease status.
+The bootstraps of the models where used to calculate the probability of a variable to be selected by RGCCA. 
+This probability was used to calculate (via `set_size`) the genes and bacteria that are specific of the model that allows to separate the transcriptome by its location and the microbiome by the disease status.
 
 ### experDesign
 
