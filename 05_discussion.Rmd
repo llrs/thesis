@@ -145,8 +145,7 @@ We made the assumptions that the microbiome and the transcriptome are related.
 This assumption is backed up by several other previous studies supporting this relationship or others [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
 
 However, it is also known the role of other factors that are outside the omics dataset.
-To guide the search of which of these variables are important tools that relate the variance of a block with other variables, both numeric and categoric, are needed.
-\
+To guide the search of which of these variables are important tools that relate the variance of a block with other variables, both numeric and categoric, are needed.\
 PERMANOVA, `adonis` and `globaltest` worked well to identify which variables about the samples were important.
 But they do not provide variable selection or give any insight into which specific microbial species are driving the association between the microbiome and the variables [@susin2020].\
 In addition, we could miss some other important variables.
