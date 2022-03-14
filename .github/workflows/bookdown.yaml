@@ -21,7 +21,7 @@ jobs:
           use-public-rspm: true
 
       - name: Install bookdown
-        run: Rscript -e "install.packages('bookdown')"
+        run: Rscript -e "install.packages(c('bookdown', 'metathis'))"
 
       # - name: Setup Debug Session
       #   uses: csexton/debugger-action@v1
@@ -95,7 +95,7 @@ jobs:
           use-public-rspm: true
 
       - name: Install bookdown
-        run: Rscript -e "install.packages('bookdown')"
+        run: Rscript -e "install.packages(c('bookdown', 'tinytext')"
       # - name: Setup Debug Session
       #   uses: csexton/debugger-action@v1
 
