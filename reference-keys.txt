@@ -6,6 +6,7 @@ tab:Hasler
 tab:Morgan
 tab:howell
 fig:workflow-process
+fig:multiomic-datasets
 tab:RGCCA-methods
 tab:fisher
 fig:puget-tau2AVE
