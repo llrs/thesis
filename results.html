@@ -24,7 +24,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-03-14" />
+<meta name="date" content="2022-03-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -361,7 +361,8 @@ Optionally it can create just a subset of those based on a numeric vector.
 However, it does not provide a way to have the design named.<br />
 If the user wants to create their own design matrices, they can use <code>symm</code> and modify the design of the model with <code>sbuSymm</code>.
 <code>symm</code>, takes an initial matrix to pick up the row and column names.
-It is recommended that the user checks the design matrix is fully connected, which the package facilitates with the function <code>correct</code>. This is also recommended even if the design matrices are created with <code>weight_design</code>.</p>
+It is recommended that the user checks the design matrix is fully connected, which the package facilitates with the function <code>correct</code>.
+This is also recommended even if the design matrices are created with <code>weight_design</code>.</p>
 <p>For the bootstrap procedure there is the function <code>boot_index</code> to create the bootstrapped index of samples to be used by <code>boot_index_sgcca</code>.
 If the bootstrapped samples used is not important one can use <code>boot_samples_sgcca</code>.
 If the users want to perform a leave-one-out procedure they can use <code>looIndex</code>.</p>
@@ -386,8 +387,10 @@ The horst and the centroid scheme were similar while the factorial resulted in t
 The centroid scheme was selected because it takes into account all the relationship regardless of the canonical correlation sign between the blocks and it is similarity to horst scheme.</p>
 <p>The effect of the sparsity value was measured by its effect on the inner AVE scores and the combination of the different values for each block.</p>
 <div class="figure"><span style="display:block;" id="fig:puget-tau2AVE"></span>
-<img src="images/pugets_tau_to_AVE.png" alt="" />
-<p class="caption">Figure 4.1:  Effect of tau on the inner AVE. The suggested tau value is the column between the regular grid, on the ordinate axis the y’s tau values and on the abscissa the gene expression (GE) on the left and the comparative genomic hybridization (CGH) on the right. The highest inner AVE is with high tau values for y and middle to upper values for GE and CGH.</p>
+<img src="images/pugets_tau_to_AVE.png" alt="Effect of tau on the inner AVE on Puget's dataset. The suggested tau value is the column between the regular grid, on the ordinate axis the y's tau values and on the abscissa the gene expression (GE) on the left and the comparative genomic hybridization (CGH) on the right. The highest inner AVE is with high tau values for y and middle to upper values for GE and CGH."  />
+<p class="caption">
+Figure 4.1: Effect of tau on the inner AVE on Puget’s dataset. The suggested tau value is the column between the regular grid, on the ordinate axis the y’s tau values and on the abscissa the gene expression (GE) on the left and the comparative genomic hybridization (CGH) on the right. The highest inner AVE is with high tau values for y and middle to upper values for GE and CGH.
+</p>
 </div>
 <table>
 <caption><span id="tab:Puget-model1">Table 4.1: </span> Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.</caption>
@@ -627,14 +630,18 @@ The centroid scheme was selected because it takes into account all the relations
 <p>Exploratory analysis with the superblock model was done.
 The first two components of the superblock did not help to explain the biology or classify the tumors:</p>
 <div class="figure"><span style="display:block;" id="fig:puget-superblock"></span>
-<img src="images/pugets_superblock.png" alt="" />
-<p class="caption">Figure 4.2:  First components of the superblock which has all the data of the samples.</p>
+<img src="images/pugets_superblock.png" alt="First components of the superblock which has all the data of the samples on the Puget's dataset."  />
+<p class="caption">
+Figure 4.2: First components of the superblock which has all the data of the samples on the Puget’s dataset.
+</p>
 </div>
 <p>The same data was used to look for a good model from the data itself including a model with a superblock but looking at the first component of the CGH and transcriptome block.
 This allowed to visually inspect if each model’s components helped to classify the samples:</p>
 <div class="figure"><span style="display:block;" id="fig:puget-models"></span>
-<img src="images/pugets_models.png" alt="" />
-<p class="caption">Figure 4.3:  Different models tried with the same data showing the first components of the CGH data and the transcriptome. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data.</p>
+<img src="images/pugets_models.png" alt="Different models tried with the same data showing the first components of the CGH data and the transcriptome. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data."  />
+<p class="caption">
+Figure 4.3: Different models tried with the same data showing the first components of the CGH data and the transcriptome. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data.
+</p>
 </div>
 <p>Showing the components of the CGH and the transcriptomics of the superblock show better classification than that of the superblock.
 However the other models show a better classification of the samples with much simpler models.</p>
@@ -652,9 +659,12 @@ The first components of each model can be seen in the figure:</p>
 On the other hand, the major difference is the dispersion on the CGH component on each model.</p>
 <p>The effect of the superblock and weights on different models to the inner AVE.
 There are significant differences between having the superblock and not having it.</p>
+<!--TODO double check which interaction indicates yes/no -->
 <div class="figure"><span style="display:block;" id="fig:puget-weights"></span>
-<img src="images/pugets-weights.png" alt="" />
-<p class="caption">Figure 4.4:  Effect of superblock and weights on the inner AVE</p>
+<img src="images/pugets-weights.png" alt="Effect of superblock and weights on the inner AVE on Puget's dataset. Designs with the superblock showed higher inner AVe scores than without it. Interaction yes/no indicates RNA and CGH interaction."  />
+<p class="caption">
+Figure 4.4: Effect of superblock and weights on the inner AVE on Puget’s dataset. Designs with the superblock showed higher inner AVe scores than without it. Interaction yes/no indicates RNA and CGH interaction.
+</p>
 </div>
 <p>The different models resulted on the following AVE values.</p>
 <table>
@@ -715,8 +725,10 @@ The resulting p-value was well below the 0,05 threshold defined for RNA-seq data
 <p><img src="images/hsct-globaltest.png" /></p>
 <p>On the microbiome data the results were similar but the p-value was considerably higher but still below the threshold.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-diversity"></span>
-<img src="images/hsct-ASV-diversity.png" alt="" />
-<p class="caption">Figure 4.5:  Alpha diversity according to Shannon and Simpon effective measures</p>
+<img src="images/hsct-ASV-diversity.png" alt="Microbiome diversity on HSCT dataset. On the upper section the Shannon effective and on the lower row the Simpson effective diversity splitted by colon and ileum and controls and CD."  />
+<p class="caption">
+Figure 4.5: Microbiome diversity on HSCT dataset. On the upper section the Shannon effective and on the lower row the Simpson effective diversity splitted by colon and ileum and controls and CD.
+</p>
 </div>
 <p>Diversity indices of the samples were explored and compared for several subsets.
 Splitting by location of the sample and disease provided the highest differences and the diversity index along time did not change much.</p>
@@ -1543,8 +1555,8 @@ While model 0 shows a high variation according to which samples are selected.</p
 These ASV were summarized to a single value and then used to calculate the AUC, which was 0.85.
 The dot product of the ASV and genes were also calculated and used to find out which ASV are related to which genes.</p>
 <!--# TODO show hair ball plot ? Doesn't work well; I don't like it -->
-<!--# TODO continue/fix this --
-
+<p>&lt;!–
+# TODO continue/fix this –</p>
 
 </div>
 </div>
