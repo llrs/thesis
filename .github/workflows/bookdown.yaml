@@ -96,14 +96,14 @@ jobs:
       - uses: r-lib/actions/setup-tinytex@master
       - name: Install pdflatex
         run: |
-          apt-get install -y \
+          sudo apt-get install -y \
           texlive-base \
           texlive-binaries \
           texlive-fonts-recommended \
           texlive-latex-base \
           texlive-latex-recommended \
           texlive-latex-extra \
-          && apt-get clean \
+          && sudo apt-get clean \
 
       - name: Install bookdown
         run: Rscript -e "install.packages(c('bookdown', 'tinytext'))"
