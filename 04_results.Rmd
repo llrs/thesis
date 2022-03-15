@@ -108,24 +108,24 @@ Currently, it is compatible with the next release of [RGCCA being prepared](http
 
 <!--# TODO expand the explanation of the method why and how-->
 
-To search models it starts with a initial connectivity of the blocks and  creates all the combinations of connections given .
+To search models it starts with a initial connectivity of the blocks and creates all the combinations of connections given .
 
-The functions `analyze` helps to analyze code of a single integration, providing the results on a tidy format for further processing. 
-To create the connections between blocks the function `weight_design` is available. 
-It creates all the possible matrices given a number of blocks and a number of weights. 
-Optionally it can create just a subset of those based on a numeric vector. 
-However, it does not provide a way to have the design named. 
-\
-If the user wants to create their own design matrices, they can use `symm` and modify the design of the model with `sbuSymm`. 
-`symm`, takes an initial matrix to pick up the row and column names. 
-It is recommended that the user checks the design matrix is fully connected, which the package facilitates with the function `correct`. This is also recommended even if the design matrices are created with `weight_design`. 
+The functions `analyze` helps to analyze code of a single integration, providing the results on a tidy format for further processing.
+To create the connections between blocks the function `weight_design` is available.
+It creates all the possible matrices given a number of blocks and a number of weights.
+Optionally it can create just a subset of those based on a numeric vector.
+However, it does not provide a way to have the design named.\
+If the user wants to create their own design matrices, they can use `symm` and modify the design of the model with `sbuSymm`.
+`symm`, takes an initial matrix to pick up the row and column names.
+It is recommended that the user checks the design matrix is fully connected, which the package facilitates with the function `correct`.
+This is also recommended even if the design matrices are created with `weight_design`.
 
-For the bootstrap procedure there is the function `boot_index` to create the bootstrapped index of samples to be used by `boot_index_sgcca`. 
+For the bootstrap procedure there is the function `boot_index` to create the bootstrapped index of samples to be used by `boot_index_sgcca`.
 If the bootstrapped samples used is not important one can use `boot_samples_sgcca`.
-If the users want to perform a leave-one-out procedure they can use `looIndex`. 
+If the users want to perform a leave-one-out procedure they can use `looIndex`.
 
 The package cannot choose which variables use from the block with information to split into several blocks.
-However, it provides the `model_RGCCA` function to make it easy to prepare such variables for RGCCA input. 
+However, it provides the `model_RGCCA` function to make it easy to prepare such variables for RGCCA input.
 The inteRmodel procedure will only be useful if the user should decide which variables are independent from others and split them into different blocks.
 To asses this the user can use the methods we used, as described on the above section \@ref(variance).
 It is important to keep in mind the possible causal relationships on user's data [@greenland2002].
@@ -148,7 +148,10 @@ The centroid scheme was selected because it takes into account all the relations
 
 The effect of the sparsity value was measured by its effect on the inner AVE scores and the combination of the different values for each block.
 
-![(#fig:puget-tau2AVE) Effect of tau on the inner AVE. The suggested tau value is the column between the regular grid, on the ordinate axis the y's tau values and on the abscissa the gene expression (GE) on the left and the comparative genomic hybridization (CGH) on the right. The highest inner AVE is with high tau values for y and middle to upper values for GE and CGH.](images/pugets_tau_to_AVE.png)
+```{r puget-tau2AVE, fig.cap="Effect of tau on the inner AVE on Puget's dataset. The suggested tau value is the column between the regular grid, on the ordinate axis the y's tau values and on the abscissa the gene expression (GE) on the left and the comparative genomic hybridization (CGH) on the right. The highest inner AVE is with high tau values for y and middle to upper values for GE and CGH.", fig.scap="Effect of tau on the inner AVE on Puget's dataset."}
+knitr::include_graphics("images/pugets_tau_to_AVE.png")
+```
+
 
 | Model 1          | GE  | CGH | Localization |
 |------------------|:---:|:---:|:------------:|
@@ -215,12 +218,18 @@ But when the best model with the superblock that had highest inner AVE is quite 
 Exploratory analysis with the superblock model was done.
 The first two components of the superblock did not help to explain the biology or classify the tumors:
 
-![(#fig:puget-superblock) First components of the superblock which has all the data of the samples.](images/pugets_superblock.png)
+```{r puget-superblock, fig.cap="First components of the superblock which has all the data of the samples on the Puget's dataset.", fig.scap="Superblock components on Puget's dataset"}
+knitr::include_graphics("images/pugets_superblock.png")
+```
+
 
 The same data was used to look for a good model from the data itself including a model with a superblock but looking at the first component of the CGH and transcriptome block.
 This allowed to visually inspect if each model's components helped to classify the samples:
 
-![(#fig:puget-models) Different models tried with the same data showing the first components of the CGH data and the transcriptome. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data.](images/pugets_models.png)
+```{r puget-models, fig.scap="Different models tried with the same data showing the first components of the CGH data and the transcriptome.", fig.cap="Different models tried with the same data showing the first components of the CGH data and the transcriptome. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data."}
+knitr::include_graphics("images/pugets_models.png")
+```
+
 
 Showing the components of the CGH and the transcriptomics of the superblock show better classification than that of the superblock.
 However the other models show a better classification of the samples with much simpler models.
@@ -246,7 +255,12 @@ On the other hand, the major difference is the dispersion on the CGH component o
 The effect of the superblock and weights on different models to the inner AVE.
 There are significant differences between having the superblock and not having it.
 
-![(#fig:puget-weights) Effect of superblock and weights on the inner AVE](images/pugets-weights.png)
+<!--TODO double check which interaction indicates yes/no -->
+
+```{r puget-weights, fig.scap="Effect of superblock and weights on the inner AVE on Puget's dataset.", fig.cap="Effect of superblock and weights on the inner AVE on Puget's dataset. Designs with the superblock showed higher inner AVe scores than without it. Interaction yes/no indicates RNA and CGH interaction."}
+knitr::include_graphics("images/pugets-weights.png")
+```
+
 
 The different models resulted on the following AVE values.
 
@@ -284,7 +298,10 @@ The resulting p-value was well below the 0,05 threshold defined for RNA-seq data
 
 On the microbiome data the results were similar but the p-value was considerably higher but still below the threshold.
 
-![(#fig:hsct-diversity) Alpha diversity according to Shannon and Simpon effective measures](images/hsct-ASV-diversity.png)
+```{r hsct-diversity, fig.cap="Microbiome diversity on HSCT dataset. On the upper section the Shannon effective and on the lower row the Simpson effective diversity splitted by colon and ileum and controls and CD.", fig.scap="Microbiome diversity on HSCT dataset."}
+knitr::include_graphics("images/hsct-ASV-diversity.png")
+```
+
 
 Diversity indices of the samples were explored and compared for several subsets.
 Splitting by location of the sample and disease provided the highest differences and the diversity index along time did not change much.
@@ -548,25 +565,24 @@ In addition the model 2.2 usually has a lower inner AVE compared to model 1.2.
 
 <!--# TODO: Update when reanalysis is done -->
 
-This dataset was processed to confirm the results on the previous datasets. 
+This dataset was processed to confirm the results on the previous datasets.
 As always first we started with model 0, connecting both the RNAseq and the 16S blocks:
 
-
-|Model 0| RNAseq| 16S|
-|-------|:-----:|:--:|
-|RNAseq |      0|   1|
-|16S    |      1|   0|
+| Model 0 | RNAseq | 16S |
+|---------|:------:|:---:|
+| RNAseq  |   0    |  1  |
+| 16S     |   1    |  0  |
 
 : (#tab:howell-model0) Relationships between the different blocks on the Howell's dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.
 
 Later we look for the best model of family 1.
 This resulted on the following model:
 
-|Model 1.2| RNAseq| 16S| metadata|
-|---------|:-----:|:--:|:-------:|
-|RNAseq   |    0.0| 0.1|        1|
-|16S      |    0.1| 0.0|        0|
-|metadata |    1.0| 0.0|        0|
+| Model 1.2 | RNAseq | 16S | metadata |
+|-----------|:------:|:---:|:--------:|
+| RNAseq    |  0.0   | 0.1 |    1     |
+| 16S       |  0.1   | 0.0 |    0     |
+| metadata  |  1.0   | 0.0 |    0     |
 
 : (#tab:howell-model1-2) Relationships between the different blocks on the Howell's dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.
 
@@ -574,15 +590,15 @@ Model 1.2 \@ref(tab:howell-model1-2) was the best according to the AVE score but
 
 ![(#fig:howell-models) The three main models, model 0, 1.2 and 2.2 on the Howell's dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks.](images/howells_models.png)
 
-Model 2.2 was selected for further analysis as it describes more accurately the biology of the dataset it. 
+Model 2.2 was selected for further analysis as it describes more accurately the biology of the dataset it.
 Model 2.2 can be seen on \@ref(tab:howell-model2-2).
 
-|  Model 2.2  | RNAseq| 16S| demographics| location|
-|-------------|:-----:|:--:|:-----------:|:-------:|
-|RNAseq       |      0|   0|            0|        1|
-|16S          |      0|   0|            1|        0|
-|demographics |      0|   1|            0|      0.1|
-|location     |      1|   0|          0.1|        0|
+| Model 2.2    | RNAseq | 16S | demographics | location |
+|--------------|:------:|:---:|:------------:|:--------:|
+| RNAseq       |   0    |  0  |      0       |    1     |
+| 16S          |   0    |  0  |      1       |    0     |
+| demographics |   0    |  1  |      0       |   0.1    |
+| location     |   1    |  0  |     0.1      |    0     |
 
 : (#tab:howell-model2-2) Relationships between the different blocks on the Howell's dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
 
@@ -597,7 +613,6 @@ While model 2.2 has a relationship of 1 between location and transcriptome and d
 
 : (#tab:howell-models-ave) The models and their AVE values.
 
-
 ![(#fig:howell-bootstrap) Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset.](images/howells_models_bootstrap.png)
 
 The bootstrapping showed that model 1.2 has indeed higher inner AVE values than model 2.2 and is more stable than model 1.2.
@@ -611,4 +626,5 @@ The dot product of the ASV and genes were also calculated and used to find out w
 
 <!--# TODO show hair ball plot ? Doesn't work well; I don't like it -->
 
-<!--# TODO continue/fix this --
+\<!--
+# TODO continue/fix this --
