@@ -29,7 +29,7 @@ bibliography:
 <!--# TODO add the first two pages with the formal requirements of the faculty  -->
 
 ```{r setup, echo = FALSE}
-knitr::opts_chunk$set(echo = FALSE, cache = TRUE)
+knitr::opts_chunk$set(echo = FALSE, cache = TRUE, out.width="100%")
 ```
 
 <!--# TODO Fix metathis to provide good media coverage  -->

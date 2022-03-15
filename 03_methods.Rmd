@@ -224,7 +224,7 @@ Regularized generalized canonical correlation analysis is implemented on the hom
 The method and implementation will be explained in detail in the next section.
 
 
-```{r multiomic_datasets, fig.scap="Multiomic relationships.", fig.cap="Multiomic relationships on different datasets. Integration methods focus on relationships within datasets. Common relationships between datasets are used as confirmation/validation."}
+```{r multiomic-datasets, fig.scap="Multiomic relationships.", fig.cap="Multiomic relationships on different datasets. Integration methods focus on relationships within datasets. Common relationships between datasets are used as confirmation/validation."}
 knitr::include_graphics("images/multiomic_datasets.png")
 ```
 
