@@ -188,7 +188,7 @@ Articles related to this project published during the thesis.
 <!-- Change header, https://texfaq.org/FAQ-runheadtoobig -->
 \sectionmark{inteRmodel: paper}
 
-[Available online](https://doi.org/10.1371/journal.pone.0246367) \textwidth \textheight
+Article peer-reviewed published on 2021, freely [available online](https://doi.org/10.1371/journal.pone.0246367). 
 
 <!--Help page on https://texdoc.org/serve/pdfpages/0 -->
 \includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight  - 25pt}, trim=0 0 0 20pt,]{paper_multiomics.pdf} 
@@ -197,7 +197,7 @@ Articles related to this project published during the thesis.
 
 \sectionmark{experDesign: paper}
 
-[Available online](https://joss.theoj.org/papers/10.21105/joss.03358)
+Article peer-reviewed published on 2021, freely [available online](https://joss.theoj.org/papers/10.21105/joss.03358)
 
 \includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - 25pt}, trim=0 0 0 20pt,]{paper_experDesign.pdf}
 

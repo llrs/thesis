@@ -30,6 +30,7 @@ bibliography:
 
 ```{r setup, echo = FALSE}
 knitr::opts_chunk$set(echo = FALSE, cache = TRUE, out.width="100%")
+library("knitr")
 ```
 
 <!--# TODO Fix metathis to provide good media coverage  -->
