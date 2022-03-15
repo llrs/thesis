@@ -39,7 +39,7 @@ jobs:
 
 
       - name: Deploy to GitHub pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
           branch: gh-pages
           folder: _book
@@ -74,9 +74,12 @@ jobs:
           key: bookdown-${{ hashFiles('**/*Rmd') }}
           restore-keys: bookdown-
 
+      - name: Update latest
+        run: |
+          git pull --all
 
       - name: Deploy to GitHub pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
           branch: gh-pages
           folder: _book
@@ -103,7 +106,7 @@ jobs:
           texlive-latex-base \
           texlive-latex-recommended \
           texlive-latex-extra \
-          && sudo apt-get clean \
+          && sudo apt-get clean
 
       - name: Install bookdown
         run: Rscript -e "install.packages(c('bookdown', 'tinytext'))"
@@ -121,9 +124,12 @@ jobs:
           key: bookdown-${{ hashFiles('**/*Rmd') }}
           restore-keys: bookdown-
 
+      - name: Update latest
+        run: |
+          git pull --all
 
       - name: Deploy to GitHub pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
           branch: gh-pages
           folder: _book
