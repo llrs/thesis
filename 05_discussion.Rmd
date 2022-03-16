@@ -154,6 +154,8 @@ However, even if we missed them, we probably have not collected it or it is not 
 This also enters in conflict with a principle of data protection: the minimum sufficient information should be collected.
 We might not identify a relevant variable but to identify it we would need to collect too much information from the patients and for little or no clear benefits.
 
+<!--# TODO Discuss why WGCNA did not work out-->
+
 We tried to find which genes and bacteria are correlated between them using `WGCNA`.
 It is a tool designed to find common co-occurring patterns based on correlations.
 It requires homogeneous samples, with a minimum of 12 samples for condition.
