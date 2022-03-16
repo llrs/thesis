@@ -313,13 +313,11 @@ knitr::include_graphics("images/hsct-ASV-diversity.png")
 Diversity indices of the samples were explored and compared for several subsets.
 Splitting by location of the sample and disease provided the highest differences and the diversity index along time did not change much.
 
-<!--# TODO: explain why WGCNA did not work out: there are some troubles with scales, n not enough for a diversity of samples (or this is for discussion)?-->
-
 Weighted gene co-expression network analysis did not provide relevant links between bacteria and transcriptome as it failed to find an acceptable scale free degree.
+As can be seen on the Figure \@ref(fig:hsct-wgcna-power), the scale free topology does not reach the recommended threshold of 0.9 and the mean connectivity is also very low even for the first power.
 
 ![(#fig:hsct-wgcna-power) Power evaluation of WGCNA of the HSCT dataset. On the ordinate the power on the abscissa on the left the scale free topology model fit; on the right the mean connectivity. There is a low fit even on large power and the mean connectivity is below 100 from the very first value.](images/hsct-wgcna-power.png)
 
-As can be seen on the Figure \@ref(fig:hsct-wgcna-power), the scale free topology does not reach the recommended threshold of 0.9 and the mean connectivity is also very low even for the first power.
 
 STATegRa was used between stool 16S data and intestinal 16S data under the assumption that there is a shared common factor without influence of other categorical variables.
 However, it did not find a good agreement between these two data sources and 16S data source was not longer used on the analysis.
@@ -360,7 +358,7 @@ When looking for the model that adjust better following this structure we arrive
 On model two we split the invariable variables from those related to the location:
 
 | Model 2           | Transcriptome | Microbiome | Location | Demographic | Time |
-|-------------------|:-------------:|:----------:|:--------:|:-----------:|------|
+|-------------------|:-------------:|:----------:|:--------:|:-----------:|:----:|
 | **Transcriptome** |       0       |     1      |    1     |      1      |      |
 | **Microbiome**    |       1       |     0      |    1     |      1      |      |
 | **Demographic**   |       1       |     1      |    0     |      0      |      |
@@ -370,10 +368,10 @@ On model two we split the invariable variables from those related to the locatio
 
 Following this split, the model that has higher inner AVE for these blocks is the following:
 
-<!--# Dobule check this model with the original data -->
+<!--# TODO Dobule check this model with the original data -->
 
 | Model 2.2         | Transcriptome | Microbiome | Demographic | Location | Time |
-|-------------------|:-------------:|:----------:|:-----------:|:--------:|------|
+|-------------------|:-------------:|:----------:|:-----------:|:--------:|:----:|
 | **Transcriptome** |       0       |     0      |      0      |   0.6    | 0    |
 | **Microbiome**    |       0       |     0      |     0.2     |   0.1    | 0    |
 | **Demographic**   |       0       |    0.2     |      0      |    0     | 1    |
@@ -384,10 +382,10 @@ Following this split, the model that has higher inner AVE for these blocks is th
 
 We also tested specifically a model from the family 2.3 
 
-<!--# TODO fix this  the model is the same as in 2.2 and it shouldn't or whould it? (wrong on the paper) -->
+<!--# TODO fix this  the model is the same as in 2.2 and it shouldn't or would it? (wrong on the paper) -->
 
-| Model 2.3         | Transcriptome | Microbiome | Demographic | Location |     |
-|-------------------|:-------------:|:----------:|:-----------:|:--------:|-----|
+| Model 2.3         | Transcriptome | Microbiome | Demographic | Location | Time|
+|-------------------|:-------------:|:----------:|:-----------:|:--------:|:---:|
 | **Transcriptome** |       0       |     0      |      0      |    1     | 0   |
 | **Microbiome**    |       0       |     0      |     0.1     |   0.1    | 0   |
 | **Demographic**   |       0       |    0.1     |      0      |    0     | 1   |
@@ -397,7 +395,7 @@ We also tested specifically a model from the family 2.3
 
 : (#tab:hsct-model2-3) Relationships between the different blocks on the HSCT dataset for model 2.3. 0 indicates no relationship and 1 indicates a strong relationship.
 
-The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see figure \@ref(hsct-models) and [S2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002) data of [@revilla2021]).
+The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see figure \@ref(fig:hsct-models) and [S2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002) data of [@revilla2021]).
 Overall, we see that the relationships in the model affected the distribution of samples on the components of both the host transcriptome and the microbiome.
 
 | Model | inner AVE | outer AVE  |
@@ -431,13 +429,13 @@ However, due to big amount of small probabilities when using the BaseSet package
 
 MCIA was applied as a baseline of the integration, the first two components were represented similarly to those of the blocks when using RGCCA.
 
-<!--# TODO: Include plot with the result only this dataset (same for all the other datasets) -->
+<!--# TODO Include plot with the result only this dataset (same for all the other datasets) -->
 
 ![(#fig:hsct-mcia) MCIA first two synthetic variables on the IBD related cohorts. In red circles the colon and in blue triangles the ileum.](images/paper1_MCIA.png)
 
 The AUC of classifying the transcriptome in colon or ileum segments was compared between the two methods.
 
-<!--# TODO: Add plot of the comparison of AUC -->
+<!--# TODO Add plot of the comparison of AUC -->
 
 ![(#fig:hsct-auc) ROC curve of the different datasets with the models from RGCCA and the result with MCIA. In gray the MCIA method and with discontinued lines the models of RGCCA.](images/paper1_MCIA.png)
 
@@ -454,7 +452,7 @@ In this dataset, the parameter tau behaved slightly differently than with the pr
 
 ![(#fig:hasler-tau) Changes on tau on the centroid scheme on the Häsler dataset affect the inner AVE score on the model 1. The panel A shows on the ordinate the RNAseq tau value, the panel B on the right, shows the tau of the microorganism; both of them show the y's tau on the abscissa.](images/hasler-centroid_tau.png)
 
-<!--# TODO: fill the  AVE numbers here -->
+<!--# TODO fill the  AVE numbers here -->
 
 In contrast to the HSCT's dataset, the model with the highest inner AVE was model 1.2 (inner AVE value of ) but model 2.2 was close to it (inner AVE of ).
 Model 2.2 has a relationship of 0.1 between microbiome and the host transcriptome and of 1 between the location and the host transcriptome.
@@ -466,13 +464,25 @@ In either case the family 1 and family 2 models can correctly separate by sample
 
 There is no observable cluster of IBD samples and the other samples, showing that on this dataset the differences of the microbiome between the different type of samples are less stark.
 
-<!--# TODO include tables of the models -->
+
+```{r hasler-auc-plot, fig.scap="AUC for models with RGCCA on Häsler's dataset", fig.cap="AUC for models with RGCCA on Häsler's dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample."}
+include_graphics("images/hasler-auc.png")
+```
+
+
+```{r hasler-auc}
+df <- data.frame(
+  Model = c("0", "1.1", "1.2", "2.1", "2.2"),
+  AUC = c(0.801149425287356, 0.97816091954023, 0.997701149425287, 1, 1))
+kable(df, caption.short = "AUC for models with RGCCA on Häsler's dataset",
+      caption = "AUC for models with RGCCA on Häsler's dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample.")
+```
+
 
 MCIA was applied as a baseline of the integration and compared to the different models to know which one separates best colon and ileum samples.
 
 ![(#fig:hasler-mcia) MCIA first two dimensions of the dataset colored by state, the shape is according to the location of the samples. Shows two vertical groups on the first syntethic dimension according to the location of the samples.](images/hasler-mcia.png){alt="MCIA results"}
 
-<!-- # Add ROC curves with RGCCA models on it-->
 
 MCIA's AUC results was as high as the model 2.2 to classify samples according to their location.
 It was even better to classify the samples according to the type of sample they are: 0.6248 vs 0.5514 the best AUC from RGCCA that corresponds to model 1.2 .
@@ -564,11 +574,31 @@ When exploring the bootstraps of the data we found that model 1.2 is highly vari
 
 ![(#fig:morgan-bootstrap) Inner and outer AVE scores of the bootstrapped models 0 1.2 and 2.2. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptonme and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks.](images/morgans_bootstrap.png)
 
-<!--# TODO: Add points of the models on the real dataset -->
+<!--# TODO Add points of the models on the real dataset -->
 
 In addition the model 2.2 usually has a lower inner AVE compared to model 1.2.
 
-<!--# TODO: AUC comparison of RGCCA and MCIA -->
+```{r morgan-auc-plot, fig.scap="AUC plot for Morgan's dataset", fig.cap="AUC for Morgan's dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA."}
+include_graphics("images/morgan-auc.png")
+```
+
+The area under the curve for these models is:
+
+```{r morgan-auc}
+df <- data.frame(Model = c("0", "1", "1.1", "1.2", "2", "2.1", "2.2", "2.3"),
+           AUC = c(0.496973365617433, 0.793497059840886, 0.816153580076098, 0.560619162919405, 
+0.85463507436873, 0.847371151850571, 0.835264614320304, 0.835264614320304
+))
+kable(df, caption.short="AUC for Morgan's dataset", 
+      caption="AUC for Morgan's dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA.")
+```
+
+With MCIA:
+
+```{r morgan-mcia-plot, fig.scap="MCIA firsts dimensions on Morgan's dataset.", fig.cap="MCIA firsts dimensions on Morgan's dataset. Color and shape is according to the location of the sample. There is some separation by location."}
+include_graphics("images/morgan-mcia.png")
+```
+If we quantify this separation by the first dimension of MCIA, the AUC is 0.818, which is slightly worst than the models of family 2.
 
 ### Howell's dataset {#results-howell}
 
@@ -596,9 +626,9 @@ This resulted on the following model:
 
 Model 1.2 \@ref(tab:howell-model1-2) was the best according to the AVE score but perform worse when attempting to recreate known biological differences via classifying samples as we can see below \@ref(fig:howell-models):
 
-<!--# TODO: Update plot (old plot without some ASV) -->
+<!--# Found a bug on the plotting!! -->
 
-![(#fig:howell-models) The three main models, model 0, 1.2 and 2.2 on the Howell's dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks.](images/howells_models.png)
+![(#fig:howell-models) The three main models, model 0, 1.2 and 2.2 on the Howell's dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks.](images/howell-models.png)
 
 Model 2.2 was selected for further analysis as it describes more accurately the biology of the dataset it.
 Model 2.2 can be seen on \@ref(tab:howell-model2-2).
@@ -628,7 +658,27 @@ While model 2.2 has a relationship of 1 between location and transcriptome and d
 The bootstrapping showed that model 1.2 has indeed higher inner AVE values than model 2.2 and is more stable than model 1.2.
 While model 0 shows a high variation according to which samples are selected.
 
-<!--# TODO: show MCIA plots -->
+
+```{r howell-mcia, fig.scap="MCIA method on Howell's dataset.", fig.cap="MCIA method on Howell's dataset. The first dimensions separates by location."}
+include_graphics("images/howell-mcia.png")
+```
+
+If we look at the classification of the 
+
+```{r howell-auc-plot, fig.scap="AUC of the RGCCA models on Howell's dataset.", fig.cap="AUC of the RGCCA models on Howell's dataset. The classification of the location of the sample according to the first componenent of the models shown."}
+include_graphics("images/howell-rgcca-auc.png")
+```
+
+
+```{r howell-auc}
+df <- data.frame(
+  model = c("0", "1", "1.2", "2", "2.2"),
+  AUC = c(0.625525946704067, 0.597475455820477, 1, 1, 1)
+)
+kable(df, caption.short = "AUC of the RGCCA models on Howell's dataset",
+      caption = "AUC of the RGCCA models on Howell's dataset. The classification of the location of the sample according to the first componenent of the models shown. Model 0, 2 and 2.2 have a perfect classification of the samples to their respective location.")
+```
+
 
 On this dataset we also focused on the most important ASV according to the model 2.2 that were present in more than 2 samples that in total were present in the whole dataset.
 These ASV were summarized to a single value and then used to calculate the AUC, which was 0.85.
