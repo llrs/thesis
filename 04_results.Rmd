@@ -294,14 +294,29 @@ On the transcriptome the most important factor is location which is more than 15
 
 <!-- # Data on TRIM/intestinal_16S_RNAseq_metadb/models.RData and on TRIM/intestinal_16S_RNAseq_metadb/variance.R-->
 
-![](images/hsct-adonis.png)
+```{r hsct-permanova-rnaseq}
+df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD", "Location:Sex", "Location:IBD:Sex", "Residuals"),
+                 R = c(0.18057, 0.03120, 0.01306, 0.01279, 0.02427, 0.00816, 0.00486, 0.72508),
+                 "p-value" = c(.0002, .0002, .0012, 0.11798, 0.11458, 0.03519, 0.52190, NA),
+                 check.names = FALSE)
+kable(df, caption.short = "Permanova analysis of transcriptome.",
+      caption = "Permanova analysis of transcriptome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
+```
+
+
+```{r hsct-permanova-microbiome}
+df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD", "Location:Sex", "Location:IBD:Sex", "Residuals"),
+                 R = c(0.06061, 0.04967, 0.01712, 0.01091, 0.02089, 0.01139, 0.00289, 0.82652),
+                 "p-value" = c(.0002000, .0002000, .0003999, 0.6604679, 0.8476305, 0.00759185, 0.9994001, NA),
+                 check.names = FALSE)
+kable(df, caption.short = "Permanova analysis of microbiome",
+      caption = "Permanova analysis of microbiome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
+```
 
 <!--# global test from the comments on TRIM/intestinal_16S_RNAseq_metadb/variance.R -->
 
-With globaltest the results were similar.
+With globaltest the results were similar: sex, ibd, location, age and time since diagnosis were able to explain the SESCD score (p-value $5.7 ·10^{-21}  $).
 The resulting p-value was well below the 0,05 threshold defined for RNA-seq data on the models including the segment of the sample, sex and treatment.
-
-![](images/hsct-globaltest.png)
 
 On the microbiome data the results were similar but the p-value was considerably higher but still below the threshold.
 
@@ -429,7 +444,7 @@ However, due to big amount of small probabilities when using the BaseSet package
 
 MCIA was applied as a baseline of the integration, the first two components were represented similarly to those of the blocks when using RGCCA.
 
-<!--# TODO Include plot with the result only this dataset (same for all the other datasets) -->
+<!--# TODO plot mcia for hsct -->
 
 ![(#fig:hsct-mcia) MCIA first two synthetic variables on the IBD related cohorts. In red circles the colon and in blue triangles the ileum.](images/paper1_MCIA.png)
 
@@ -452,9 +467,17 @@ In this dataset, the parameter tau behaved slightly differently than with the pr
 
 ![(#fig:hasler-tau) Changes on tau on the centroid scheme on the Häsler dataset affect the inner AVE score on the model 1. The panel A shows on the ordinate the RNAseq tau value, the panel B on the right, shows the tau of the microorganism; both of them show the y's tau on the abscissa.](images/hasler-centroid_tau.png)
 
-<!--# TODO fill the  AVE numbers here -->
+```{r hasler-aves}
+df <- data.frame(Model = c("0", "1.1", "1.2", "2.1", "2.2"),
+           "inner AVE" = c(0.8217371, 0.7461423, 0.8349410, 0.4980681, 0.7513065),
+           "outer AVE" = c(0.0961236, 0.1024148, 0.1025486, 0.1008395, 0.1009915),
+         check.names = FALSE)
+kable(df, caption.short = "AVE values of RGCCA models on Häsler's dataset",
+      caption = "AVE values of RGCCA models on Häsler's dataset. The inner and the outer AVE scores of multiple models tested on the Häsler dataset are shown. The model with the hightes inner AVE is model 1.2.")
+```
 
-In contrast to the HSCT's dataset, the model with the highest inner AVE was model 1.2 (inner AVE value of ) but model 2.2 was close to it (inner AVE of ).
+
+In contrast to the HSCT's dataset, the model with the highest inner AVE was model 1.2 but model 2.2 was close to it.
 Model 2.2 has a relationship of 0.1 between microbiome and the host transcriptome and of 1 between the location and the host transcriptome.
 The microbiome block is also related by a factor of 0.1 with the demographic block and of 1 with the time block.
 Lastly, the time and the demographic block are related by a factor of a 0.1.
@@ -538,22 +561,13 @@ Following this split, the model that has higher inner AVE for these blocks is th
 
 : (#tab:morgan-model2-2) Relationships between the different blocks on the Morgan's dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
 
-We also tested specifically a model from the family 2.3:
-
-<!--# TODO fix this  the model is the same as in 2.2 and it shouldn't (wrong on the paper) -->
-
-| Model 2.3         | Transcriptome | Microbiome | Demographic | Location |
-|-------------------|:-------------:|:----------:|:-----------:|:--------:|
-| **Transcriptome** |       0       |    0.1     |      1      |   0.1    |
-| **Microbiome**    |      0.1      |     0      |      0      |    0     |
-| **Demographic**   |       1       |     0      |      0      |    0     |
-| **Location**      |      0.1      |     0      |      0      |    0     |
-
-: (#tab:morgan-model2-3) Relationships between the different blocks on the Morgan's dataset for model 2.3. 0 indicates no relationship and 1 indicates a strong relationship.
+Each model is different from previous models.
+After model 2.2 we looked on the model similar to model 2.3 on HSCT dataset showed but it is the same as in model 2.2. 
+However, it is kept on the further analysis.
 
 The different models were not able to separate the samples neither by location or sex.
 
-![(#fig:morgan-models) First component of the transcriptome and microbiome of the Morgan's dataset.Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models.](images/morgans_models.png)
+![(#fig:morgan-models) First component of the transcriptome and microbiome of the Morgan's dataset.Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models.](images/morgan_models.png)
 
 Nevertheless, we compared the classification with the MCIA algorithm and still resulted that model 2.2 provide a better classification than MCIA.
 
@@ -572,7 +586,7 @@ Nevertheless, we compared the classification with the MCIA algorithm and still r
 
 When exploring the bootstraps of the data we found that model 1.2 is highly variable:
 
-![(#fig:morgan-bootstrap) Inner and outer AVE scores of the bootstrapped models 0 1.2 and 2.2. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptonme and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks.](images/morgans_bootstrap.png)
+![(#fig:morgan-bootstrap) Inner and outer AVE scores of the bootstrapped models 0 1.2 and 2.2. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptonme and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks.](images/morgan_bootstrap.png)
 
 <!--# TODO Add points of the models on the real dataset -->
 
@@ -684,4 +698,12 @@ On this dataset we also focused on the most important ASV according to the model
 These ASV were summarized to a single value and then used to calculate the AUC, which was 0.85.
 The dot product of the ASV and genes were also calculated and used to find out which ASV are related to which genes.
 
-<!--# TODO show hair ball plot ? Doesn't work well; I don't like it -->
+
+### Between datasets
+
+The HSCT genes were compared to the Howell's genes from model 2.2.
+
+```{r pathways-hsct-howell, fig.scap="Significance of pathways on common genes on HSCT and Howell's dataset.", fig.cap="Significance of pathways on common genes on HSCT and Howell's dataset ordered by p-value, the size is according to the number of genes on the pathway found on the dataset."}
+include_graphics("images/pathways_hsct_howell.png")
+```
+
