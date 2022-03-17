@@ -299,23 +299,24 @@ df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD",
                  R = c(0.18057, 0.03120, 0.01306, 0.01279, 0.02427, 0.00816, 0.00486, 0.72508),
                  "p-value" = c(.0002, .0002, .0012, 0.11798, 0.11458, 0.03519, 0.52190, NA),
                  check.names = FALSE)
-kable(df, caption.short = "Permanova analysis of transcriptome.",
+k <- kable(df, caption.short = "Permanova analysis of transcriptome.",
       caption = "Permanova analysis of transcriptome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
+kableExtra::kable_styling(k, latex_options = "hold_position")
 ```
-
 
 ```{r hsct-permanova-microbiome}
 df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD", "Location:Sex", "Location:IBD:Sex", "Residuals"),
                  R = c(0.06061, 0.04967, 0.01712, 0.01091, 0.02089, 0.01139, 0.00289, 0.82652),
                  "p-value" = c(.0002000, .0002000, .0003999, 0.6604679, 0.8476305, 0.00759185, 0.9994001, NA),
                  check.names = FALSE)
-kable(df, caption.short = "Permanova analysis of microbiome",
+k <- kable(df, caption.short = "Permanova analysis of microbiome",
       caption = "Permanova analysis of microbiome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
+kableExtra::kable_styling(k, latex_options = "hold_position")
 ```
 
 <!--# global test from the comments on TRIM/intestinal_16S_RNAseq_metadb/variance.R -->
 
-With globaltest the results were similar: sex, ibd, location, age and time since diagnosis were able to explain the SESCD score (p-value $5.7 ·10^{-21}  $).
+With globaltest the results were similar: sex, ibd, location, age and time since diagnosis were able to explain the SESCD score (p-value $5.7 \cdot 10^{-21}$ ).
 The resulting p-value was well below the 0,05 threshold defined for RNA-seq data on the models including the segment of the sample, sex and treatment.
 
 On the microbiome data the results were similar but the p-value was considerably higher but still below the threshold.
@@ -383,15 +384,13 @@ On model two we split the invariable variables from those related to the locatio
 
 Following this split, the model that has higher inner AVE for these blocks is the following:
 
-<!--# TODO Dobule check this model with the original data -->
-
 | Model 2.2         | Transcriptome | Microbiome | Demographic | Location | Time |
 |-------------------|:-------------:|:----------:|:-----------:|:--------:|:----:|
-| **Transcriptome** |       0       |     0      |      0      |   0.6    | 0    |
+| **Transcriptome** |       0       |     0      |      0      |   1    | 0    |
 | **Microbiome**    |       0       |     0      |     0.2     |   0.1    | 0    |
-| **Demographic**   |       0       |    0.2     |      0      |    0     | 1    |
-| **Location**      |      0.6      |    0.1     |      0      |    0     | 0    |
-| Time              |       0       |     0      |      1      |    0     | 0    |
+| **Demographic**   |       0       |    0.2     |      0      |    0     | 0.6    |
+| **Location**      |      1      |    0.1     |      0      |    0     | 0    |
+| Time              |       0       |     0      |      0.6    |    0     | 0    |
 
 : (#tab:hsct-model2-2) Relationships between the different blocks on the HSCT dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
 
@@ -401,8 +400,8 @@ We also tested specifically a model from the family 2.3
 
 | Model 2.3         | Transcriptome | Microbiome | Demographic | Location | Time|
 |-------------------|:-------------:|:----------:|:-----------:|:--------:|:---:|
-| **Transcriptome** |       0       |     0      |      0      |    1     | 0   |
-| **Microbiome**    |       0       |     0      |     0.1     |   0.1    | 0   |
+| **Transcriptome** |       0       |   0.1      |      0      |    1     | 0   |
+| **Microbiome**    |      0.1      |     0      |     0.1     |   0.1    | 0   |
 | **Demographic**   |       0       |    0.1     |      0      |    0     | 1   |
 | **Location**      |       1       |    0.1     |      0      |    0     | 0   |
 | **Time**          |       0       |     0      |      1      |    0     | 0   |
@@ -442,17 +441,33 @@ The lower the dispersion, the more robust the model was to different conditions 
 With the bootstrapped models we used BaseSet to estimate the probability that each variable to be relevant for the association with a disease.
 However, due to big amount of small probabilities when using the BaseSet package to calculate which variables are more relevant it could not provide a good estimation on time.
 
-MCIA was applied as a baseline of the integration, the first two components were represented similarly to those of the blocks when using RGCCA.
+MCIA was applied as a baseline of the integration, the first two components were represented similarly to those of the blocks when using RGCCA \@ref(fig:hsct-mcia).
 
-<!--# TODO plot mcia for hsct -->
+```{r hsct-mcia, fig.scap="MCIA on the HSCT dataset", fig.cap="MCIA first two synthetic variables on the IBD related cohorts. In red circles the colon and in blue triangles the ileum."}
+include_graphics("images/hsct-mcia.png")
+```
 
-![(#fig:hsct-mcia) MCIA first two synthetic variables on the IBD related cohorts. In red circles the colon and in blue triangles the ileum.](images/paper1_MCIA.png)
+The AUC of classifying the transcriptome in colon or ileum segments was compared between the models (see \@ref(fig:hsct-auc-plot) and with MCIA.
 
-The AUC of classifying the transcriptome in colon or ileum segments was compared between the two methods.
+```{r hsct-auc-plot, fig.scap="ROC curves of the RGCCA models on the HSCT dataset.", fig.cap="ROC curve of the different datasets with the models from RGCCA and the result with MCIA. In gray the MCIA method and with discontinued lines the models of RGCCA."}
+include_graphics("images/hsct-auc-models.png")
+```
 
-<!--# TODO Add plot of the comparison of AUC -->
+These models have the following AUC to classify the location of the sample according to the first component of the transcriptome block.
 
-![(#fig:hsct-auc) ROC curve of the different datasets with the models from RGCCA and the result with MCIA. In gray the MCIA method and with discontinued lines the models of RGCCA.](images/paper1_MCIA.png)
+```{r hsct-auc}
+df <- data.frame(Model = c("0", "1", "1.1", "1.2", "2", "2.1", "2.2", "2.3"),
+           AUC = c(0.453703703703704, 0.430941358024691, 0.463927469135802, 0.595871913580247, 
+0.945023148148148, 0.998842592592593, 0.998070987654321, 0.996913580246914
+))
+k <- kable(df, caption.short = "AUC values of RGCCA models on the HSCT dataset.",
+      caption = "AUC values of RGCCA models of the HSCT dataset classyfing the location of the sample according to the first component of the transcriptome block. From model 0 to model 2.3, the best classification is achieved with model 2.1. Note that this is removing two samples for which the location is unkown.")
+kableExtra::kable_styling(k, latex_options = "hold_position")
+```
+
+
+On MCIA the AUC for the classification of ileum or colon samples is of 0.9851 once those two samples with unknown location are excluded. 
+This is on par with the models of family 2 as can be seen on the table \@ref(tab:hsct-auc).
 
 The different models selected different variables as can be seen below:
 
@@ -467,17 +482,77 @@ In this dataset, the parameter tau behaved slightly differently than with the pr
 
 ![(#fig:hasler-tau) Changes on tau on the centroid scheme on the Häsler dataset affect the inner AVE score on the model 1. The panel A shows on the ordinate the RNAseq tau value, the panel B on the right, shows the tau of the microorganism; both of them show the y's tau on the abscissa.](images/hasler-centroid_tau.png)
 
+
+Models for Häsler dataset are:
+
+
+```{r hasler-model-0}
+m0 <- structure(c(0, 1, 1, 0), .Dim = c(2L, 2L), .Dimnames = list(c("RNAseq", 
+"micro"), c("RNAseq", "micro")))
+k <- kable(as.data.frame(m0), caption.short = "Model 0 of Häsler dataset", 
+           caption = "Model 0 of Häsler dataset")
+kableExtra::kable_styling(k, latex_options = "hold_position")
+```
+
+The first model for family 1 is:
+
+```{r hasler-model-1-1}
+m1.1 <- structure(c(0, 0, 1, 0, 0, 1, 1, 1, 0), .Dim = c(3L, 3L), .Dimnames = list(
+    c("RNAseq", "micro", "meta"), c("RNAseq", "micro", "meta"
+    )))
+k <- kable(as.data.frame(m1.1), caption.short = "Model 1.1 of Häsler dataset", 
+           caption = "Model 1.1 of Häsler dataset")
+kableExtra::kable_styling(k, latex_options = "hold_position")
+```
+
+The after optimization of the model of family 1, the best one is:
+
+```{r hasler-model-1-2}
+m1.2 <- structure(c(0, 0, 1, 0, 0, 0.1, 1, 0.1, 0), .Dim = c(3L, 3L), .Dimnames = list(
+    c("RNAseq", "micro", "meta"), c("RNAseq", "micro", "meta"
+    )))
+k <- kable(as.data.frame(m1.2), caption.short = "Model 1.2 of Häsler dataset", 
+           caption = "Model 1.2 of Häsler dataset")
+kableExtra::kable_styling(k, latex_options = "hold_position")
+```
+
+The first model for family 2 is:
+
+```{r hasler-model-2-1}
+m2.1 <- structure(c(0, 0, 1, 0, 0, 0, 0, 0.5, 1, 0, 1, 0.5, 0, 0, 0, 
+0, 1, 0, 0, 1, 0, 0, 0, 1, 0), .Dim = c(5L, 5L), .Dimnames = list(
+    c("RNAseq", "micro", "Location", "Demographic", "Time"), 
+    c("RNAseq", "micro", "Location", "Demographic", "Time")))
+k <- kable(as.data.frame(m2.1), caption.short = "Model 2.1 of Häsler dataset", 
+           caption = "Model 2.1 of Häsler dataset")
+kableExtra::kable_styling(k, latex_options = "hold_position")
+```
+
+After optimization of models of family 1 the best model according to the inner AVE score is:
+
+```{r hasler-model-2-2}
+m2.2 <- structure(c(0, 0.1, 1, 0, 0, 0.1, 0, 0, 0.1, 1, 1, 0, 0, 0, 0, 
+0, 0.1, 0, 0, 0.1, 0, 1, 0, 0.1, 0), .Dim = c(5L, 5L), .Dimnames = list(
+    c("RNAseq", "micro", "Location", "Demographic", "Time"), 
+    c("RNAseq", "micro", "Location", "Demographic", "Time")))
+k <- kable(as.data.frame(m2.2), caption.short = "Model 2.2 of Häsler dataset", 
+           caption = "Model 2.2 of Häsler dataset")
+kableExtra::kable_styling(k, latex_options = "hold_position")
+```
+
+We can see here the AVE scores of each of the previous models:
+
 ```{r hasler-aves}
 df <- data.frame(Model = c("0", "1.1", "1.2", "2.1", "2.2"),
            "inner AVE" = c(0.8217371, 0.7461423, 0.8349410, 0.4980681, 0.7513065),
            "outer AVE" = c(0.0961236, 0.1024148, 0.1025486, 0.1008395, 0.1009915),
          check.names = FALSE)
-kable(df, caption.short = "AVE values of RGCCA models on Häsler's dataset",
+k <- kable(df, caption.short = "AVE values of RGCCA models on Häsler's dataset",
       caption = "AVE values of RGCCA models on Häsler's dataset. The inner and the outer AVE scores of multiple models tested on the Häsler dataset are shown. The model with the hightes inner AVE is model 1.2.")
+kableExtra::kable_styling(k, latex_options = "hold_position")
 ```
 
-
-In contrast to the HSCT's dataset, the model with the highest inner AVE was model 1.2 but model 2.2 was close to it.
+In contrast to the HSCT's dataset, the model with the highest inner AVE was model 1.2 but model 2.2 was close to it (see \@ref(tab:hasler-aves).
 Model 2.2 has a relationship of 0.1 between microbiome and the host transcriptome and of 1 between the location and the host transcriptome.
 The microbiome block is also related by a factor of 0.1 with the demographic block and of 1 with the time block.
 Lastly, the time and the demographic block are related by a factor of a 0.1.
@@ -497,8 +572,9 @@ include_graphics("images/hasler-auc.png")
 df <- data.frame(
   Model = c("0", "1.1", "1.2", "2.1", "2.2"),
   AUC = c(0.801149425287356, 0.97816091954023, 0.997701149425287, 1, 1))
-kable(df, caption.short = "AUC for models with RGCCA on Häsler's dataset",
+k <- kable(df, caption.short = "AUC for models with RGCCA on Häsler's dataset",
       caption = "AUC for models with RGCCA on Häsler's dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample.")
+kableExtra::kable_styling(k, latex_options = "hold_position")
 ```
 
 
@@ -603,8 +679,9 @@ df <- data.frame(Model = c("0", "1", "1.1", "1.2", "2", "2.1", "2.2", "2.3"),
            AUC = c(0.496973365617433, 0.793497059840886, 0.816153580076098, 0.560619162919405, 
 0.85463507436873, 0.847371151850571, 0.835264614320304, 0.835264614320304
 ))
-kable(df, caption.short="AUC for Morgan's dataset", 
+k <- kable(df, caption.short="AUC for Morgan's dataset", 
       caption="AUC for Morgan's dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA.")
+kableExtra::kable_styling(k, latex_options = "hold_position")
 ```
 
 With MCIA:
@@ -689,8 +766,9 @@ df <- data.frame(
   model = c("0", "1", "1.2", "2", "2.2"),
   AUC = c(0.625525946704067, 0.597475455820477, 1, 1, 1)
 )
-kable(df, caption.short = "AUC of the RGCCA models on Howell's dataset",
+k <- kable(df, caption.short = "AUC of the RGCCA models on Howell's dataset",
       caption = "AUC of the RGCCA models on Howell's dataset. The classification of the location of the sample according to the first componenent of the models shown. Model 0, 2 and 2.2 have a perfect classification of the samples to their respective location.")
+kableExtra::kable_styling(k, latex_options = "hold_position")
 ```
 
 
@@ -702,6 +780,9 @@ The dot product of the ASV and genes were also calculated and used to find out w
 ### Between datasets
 
 The HSCT genes were compared to the Howell's genes from model 2.2.
+There are 3580 selected on model 2.2 on HSCT dataset and 2189 genes on Howell's dataset.
+From them the 1228 genes in common were analyzed for which GO terms and pathways they are enriched.
+The results is represented on \@ref(fig:pathways-hsct-howell).
 
 ```{r pathways-hsct-howell, fig.scap="Significance of pathways on common genes on HSCT and Howell's dataset.", fig.cap="Significance of pathways on common genes on HSCT and Howell's dataset ordered by p-value, the size is according to the number of genes on the pathway found on the dataset."}
 include_graphics("images/pathways_hsct_howell.png")
