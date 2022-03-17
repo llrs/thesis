@@ -21,7 +21,7 @@ jobs:
           use-public-rspm: true
 
       - name: Install bookdown
-        run: Rscript -e "install.packages(c('bookdown', 'metathis'))"
+        run: Rscript -e "install.packages(c('bookdown', 'metathis', 'knitr', 'kableExtra'))"
 
       # - name: Setup Debug Session
       #   uses: csexton/debugger-action@v1
@@ -58,7 +58,7 @@ jobs:
 
 
       - name: Install bookdown
-        run: Rscript -e "install.packages(c('bookdown', 'metathis'))"
+        run: Rscript -e "install.packages(c('bookdown', 'metathis', 'knitr', 'kableExtra'))"
 
       # - name: Setup Debug Session
       #   uses: csexton/debugger-action@v1
@@ -109,7 +109,7 @@ jobs:
           && sudo apt-get clean
 
       - name: Install bookdown
-        run: Rscript -e "install.packages(c('bookdown', 'tinytext'))"
+        run: Rscript -e "install.packages(c('bookdown', 'tinytext', 'knitr', 'kableExtra'))"
       # - name: Setup Debug Session
       #   uses: csexton/debugger-action@v1
 
