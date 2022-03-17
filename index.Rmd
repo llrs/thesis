@@ -16,7 +16,7 @@ link-citations: true
 colorlinks: yes
 # https://bookdown.org/yihui/rmarkdown-cookbook/latex-variables.html
 # Only works here (set when printing and sending)
-# links-as-notes: true
+links-as-notes: true
 # fontfamily: boisik
 papersize: a4
 lot: yes
@@ -28,8 +28,13 @@ bibliography:
 
 <!--# TODO add the first two pages with the formal requirements of the faculty  -->
 
-```{r setup, echo = FALSE}
-knitr::opts_chunk$set(echo = FALSE, cache = TRUE, out.width="100%")
+```{r setup, echo=FALSE, include=FALSE}
+Sys.setlocale('LC_ALL','C')
+knitr::opts_chunk$set(
+	echo = FALSE,
+	cache = TRUE,
+	out.width = "100%"
+)
 library("knitr")
 ```
 
