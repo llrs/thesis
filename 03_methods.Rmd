@@ -261,7 +261,7 @@ The objective function is:
 [^methods-1]: CRAN is The Comprehensive R Archive Network available at <https://cran.r-project.org/>
 
 $$
-\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk} g( \text{cov}(X_j a_j, X_k a_k)) \text{~~s.t.~~} (1-\tau_j)var(X_j a_j)+\tau_j \Vert a_j \Vert^2 = 1, j=1,\ldots,J
+\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk} g( \text{cov}(X_j a_j, X_k a_k)) \text{ s.t. } (1-\tau_j)var(X_j a_j)+\tau_j \Vert a_j \Vert^2 = 1, j=1, \ldots, J
 $$
 
 Being $X_j$ the values from sample $j$, the weights of the variables of said sample are represented by $a$.
@@ -336,7 +336,7 @@ Most multi-omics and integration tools assume one block for each type of data, s
 We decided to split the block with the variables about the samples to separate independent variables.
 The hypothesis we made was that more blocks with highly related variables but independent from the other blocks would fit better the data and thus help to identify causal or dependent variables.
 
-To model what might be the relationships within datasets current practices include using a pre-selected model of relations between blocks (See figure \@ref(multiomic-datasets)).
+To model what might be the relationships within datasets current practices include using a pre-selected model of relations between blocks (See figure \@ref(fig:multiomic-datasets)).
 However, this model might not be an accurate representation of the relations between blocks and several models might need to be fitted.
 To help find the fitting model for the data I created an R package, named [inteRmodel](https://llrs.github.io/inteRmodel/), which helps finding the right model for the dataset via a bootstrapping procedure.
 
