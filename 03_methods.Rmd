@@ -398,7 +398,7 @@ Given this contingency table \@ref(tab:fisher), the probability of X and Y being
 
 $$
 \begin{aligned}
-P & = \frac{ \displaystyle{{a+b}\choose{a}} \displaystyle{{c+d}\choose{c}} }{ \displaystyle{{n}\choose{a+c}} } \\
+P & = \dfrac{ \binom{a+b}{a} \binom{c+d}{c} }{\binom{n}{a+c}} \\
 & = \frac{(a+b)!~(c+d)!~(a+c)!~(b+d)!}{a!~~b!~~c!~~d!~~n!}
 \end{aligned}
 $$
