@@ -1,3 +1,6 @@
 source("~/.Rprofile", local = FALSE)
-library("knitr")
-library("bookdown")
+
+if (!(requireNamespace("knitr") && requireNamespace("bookdown"))) {
+  library("knitr")
+  library("bookdown")
+}
