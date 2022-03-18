@@ -100,6 +100,7 @@ jobs:
       - name: Install pdflatex
         run: |
           sudo apt-get install -y \
+          libcurl4-openssl-dev \
           texlive-base \
           texlive-binaries \
           texlive-fonts-recommended \
