@@ -149,7 +149,7 @@ results
 packagesmethods
 experdesign-1
 baseset-1
-intermodels
+intermodel
 analysis
 results-puget
 results-hsct
