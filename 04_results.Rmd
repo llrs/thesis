@@ -122,7 +122,8 @@ This is also recommended even if the design matrices are created with `weight_de
 
 To search models `search_models` starts with a initial connectivity of the blocks and creates all the combinations of connections given.
 
-For the bootstrap procedure there is the function `boot_index` to create the bootstrapped index of samples to be used by `boot_index_sgcca`.
+For the bootstrap procedure there is the function `boot_index` to create the bootstrapped index of samples to be used by `boot_index_sgcca`. 
+`boot_index` randomly selects as much samples as specified by the arguments to create as much indices as the required by the second argument.
 If the bootstrapped samples used is not important one can use `boot_samples_sgcca`.
 If the users want to perform a leave-one-out procedure they can use `looIndex`.
 
@@ -130,6 +131,7 @@ If the users want to perform a leave-one-out procedure they can use `looIndex`.
 include_graphics("images/inteRmodel-workflows.png")
 ```
 
+For more information, you can access the (manual online)[https://llrs.github.io/inteRmodel/] or once it is installed.
 
 The package cannot choose which variables use from the block with information to split into several blocks.
 However, it provides the `model_RGCCA` function to make it easy to prepare such variables for RGCCA input.
@@ -384,7 +386,7 @@ On model two we split the invariable variables from those related to the locatio
 
 : (#tab:hsct-model2) Relationships between the different blocks on the HSCT dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship.
 
-Following this split, the model that has higher inner AVE for these blocks is the following:
+Following this split, we used inteRmodel (See section above \@ref(inteRmodel) )to find the model that has higher inner AVE for these blocks is the following:
 
 | Model 2.2         | Transcriptome | Microbiome | Demographic | Location | Time |
 |-------------------|:-------------:|:----------:|:-----------:|:--------:|:----:|

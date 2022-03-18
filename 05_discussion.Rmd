@@ -10,11 +10,12 @@ On sequencing data it is very important to avoid contamination and have enough a
 To avoid contamination it is very important the protocol how are processed the samples before the sequencing.
 In addition control samples can be added, a blank to control for extraneous material and a sample with known content to confirm that the sequencing worked correctly.
 
-On bulk RNAseq the extraction procedure and sequencing protocol has been setup many years ago and works very well.
+On bulk RNAseq the extraction procedure and sequencing protocol (On Methods \@ref(processing)) has been setup many years ago and works very well.
 Rarely there are problems with bulk RNAseq sequencing and its quality.
 On the contrary DNA extraction and 16S sequencing was a new procedure.
-Initially it was done with the guidelines of collaborators.
-Later, when we did ourselves we did not include control samples but after some problems we started adding at least blank samples to identify those bacteria that might come with the solvent or be due to contamination.
+Initially it was done with the guidelines and support of collaborators.
+Later, we did not include control samples on the first 16S sequencing attempts but after some problems we started adding at least blank samples to identify those bacteria that might come with the solvent or be from a contamination on the sequencing facility.
+This allowed us to discard contamination sources on later sequencing shipments.
 
 Once the 16S data was obtained we initially processed it to obtain OTUs.
 OTUs were the standard some years back.

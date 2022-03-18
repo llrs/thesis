@@ -112,7 +112,7 @@ Data has the following characteristics: disease, age at diagnostic, age at time 
 
 : (#tab:howell) Characteristics of samples from Howell's dataset.
 
-## Sample processing
+## Sample processing {#processing}
 
 ### RNA sequencing
 
