@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Conclusions | Data integration on inflammatory bowel disease</title>
   <meta name="description" content="Chapter 6 Conclusions | Data integration on inflammatory bowel disease" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Conclusions | Data integration on inflammatory bowel disease" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://thesis.llrs.dev" />
   
   
   <meta name="github-repo" content="llrs/thesis" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-03-15" />
+<meta name="date" content="2022-03-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="discussion.html"/>
 <link rel="next" href="acknowledgments.html"/>
-<script src="libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -72,7 +70,9 @@
 <meta property="og:image:alt" content="The cover of the book"/>
 <meta property="og:type" content="book"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="article:author" content="Lluís Revilla Sancho"/>
+<meta property="article:author" content="Llu&lt;U+00ED&gt;s Revilla Sancho"/>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -159,7 +159,7 @@ div.csl-indent {
 <li class="chapter" data-level="3.1.4" data-path="materials-and-methods.html"><a href="materials-and-methods.html#methods-morgan"><i class="fa fa-check"></i><b>3.1.4</b> Morgan’s dataset<span></span></a></li>
 <li class="chapter" data-level="3.1.5" data-path="materials-and-methods.html"><a href="materials-and-methods.html#methods-howell"><i class="fa fa-check"></i><b>3.1.5</b> Howell’s dataset<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#sample-processing"><i class="fa fa-check"></i><b>3.2</b> Sample processing<span></span></a>
+<li class="chapter" data-level="3.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#processing"><i class="fa fa-check"></i><b>3.2</b> Sample processing<span></span></a>
 <ul>
 <li class="chapter" data-level="3.2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#rna-sequencing"><i class="fa fa-check"></i><b>3.2.1</b> RNA sequencing<span></span></a></li>
 <li class="chapter" data-level="3.2.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#microbial-dna-sequencing"><i class="fa fa-check"></i><b>3.2.2</b> Microbial DNA sequencing<span></span></a></li>
@@ -214,6 +214,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.2.3" data-path="results.html"><a href="results.html#results-hasler"><i class="fa fa-check"></i><b>4.2.3</b> Häsler’s dataset<span></span></a></li>
 <li class="chapter" data-level="4.2.4" data-path="results.html"><a href="results.html#results-morgan"><i class="fa fa-check"></i><b>4.2.4</b> Morgan’s dataset<span></span></a></li>
 <li class="chapter" data-level="4.2.5" data-path="results.html"><a href="results.html#results-howell"><i class="fa fa-check"></i><b>4.2.5</b> Howell’s dataset<span></span></a></li>
+<li class="chapter" data-level="4.2.6" data-path="results.html"><a href="results.html#between-datasets"><i class="fa fa-check"></i><b>4.2.6</b> Between datasets<span></span></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>5</b> Discussion<span></span></a>
@@ -265,10 +266,15 @@ div.csl-indent {
 <li class="chapter" data-level="E.2.1" data-path="models-output.html"><a href="models-output.html#genes-1"><i class="fa fa-check"></i><b>E.2.1</b> Genes<span></span></a></li>
 <li class="chapter" data-level="E.2.2" data-path="models-output.html"><a href="models-output.html#microbiome-3"><i class="fa fa-check"></i><b>E.2.2</b> Microbiome<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="E.3" data-path="models-output.html"><a href="models-output.html#howell"><i class="fa fa-check"></i><b>E.3</b> Howell<span></span></a>
+<li class="chapter" data-level="E.3" data-path="models-output.html"><a href="models-output.html#morgan"><i class="fa fa-check"></i><b>E.3</b> Morgan<span></span></a>
 <ul>
 <li class="chapter" data-level="E.3.1" data-path="models-output.html"><a href="models-output.html#genes-2"><i class="fa fa-check"></i><b>E.3.1</b> Genes<span></span></a></li>
 <li class="chapter" data-level="E.3.2" data-path="models-output.html"><a href="models-output.html#microbiome-4"><i class="fa fa-check"></i><b>E.3.2</b> Microbiome<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="E.4" data-path="models-output.html"><a href="models-output.html#howell"><i class="fa fa-check"></i><b>E.4</b> Howell<span></span></a>
+<ul>
+<li class="chapter" data-level="E.4.1" data-path="models-output.html"><a href="models-output.html#genes-3"><i class="fa fa-check"></i><b>E.4.1</b> Genes<span></span></a></li>
+<li class="chapter" data-level="E.4.2" data-path="models-output.html"><a href="models-output.html#microbiome-5"><i class="fa fa-check"></i><b>E.4.2</b> Microbiome<span></span></a></li>
 </ul></li>
 </ul></li>
 </ul>
