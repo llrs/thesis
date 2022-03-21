@@ -13,3 +13,42 @@
 } {
     \endorigfigure
 }
+
+
+% Creating marker on the page margins
+% https://tex.stackexchange.com/questions/113323/how-can-one-put-a-marker-to-every-page-in-a-chapter
+
+% \usepackage[a4paper,margin=15mm]{geometry}
+% \usepackage{background}
+% \usetikzlibrary{calc}
+% \usepackage{xifthen}
+% \usepackage{totcount}
+% \usepackage{lipsum}
+% % \usepackage(zref}
+% \regtotcounter{chapter}
+
+% \backgroundsetup{
+% contents={
+%         \begin{tikzpicture}[overlay]
+%             \pgfmathtruncatemacro{\mytotalchapters}{\totvalue{chapter} > 0 ? \totvalue{chapter} : 20}
+%             \pgfmathsetmacro{\mypaperheight}{\paperheight/28.453}
+%             \pgfmathsetmacro{\mytop}{-(\thechapter-1)/\mytotalchapters*\mypaperheight}
+%             \pgfmathsetmacro{\mybottom}{-\thechapter/\mytotalchapters*\mypaperheight}
+%             \ifcase \thechapter
+%                 \xdef \mycolor{white}
+%                 \or \xdef \mycolor{red}
+%                 \or \xdef \mycolor{orange}
+%                 \or \xdef \mycolor{yellow}
+%                 \or \xdef \mycolor{green}
+%                 \or \xdef \mycolor{blue}
+%                 \or \xdef \mycolor{violet}
+%                 \else \xdef \mycolor{black}
+%             \fi
+%             \ifthenelse{\isodd{\value{page}}}
+%             {\fill[\mycolor] ($(current page.north east)+(0,\mytop)$) rectangle ($(current page.north east)+(-0.5,\mybottom)$);}
+%             {\fill[\mycolor] ($(current page.north west)+(0,\mytop)$) rectangle ($(current page.north west)+(0.5,\mybottom)$);}
+%         \end{tikzpicture}
+%     },
+%     scale=1,
+%     angle=0
+% }
