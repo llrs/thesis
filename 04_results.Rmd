@@ -640,7 +640,7 @@ When looking for the model that adjust better following this structure we arrive
 
 : (#tab:morgan-model1-2) Relationships between the different blocks on the Morgan's dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.
 
-On model two we split the invariable variables from those related to the location:
+On model two we split the invariable variables from those related to the location (see \@ref(tab:morgan-model2)):
 
 | Model 2           | Transcriptome | Microbiome | Demographic | Location |
 |-------------------|:-------------:|:----------:|:-----------:|:--------:|
