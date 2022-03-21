@@ -164,70 +164,106 @@ knitr::include_graphics("images/pugets_tau_to_AVE.png")
 
 The first model of the family of models 1 can be seen on Table \@ref(tab:Puget-model1):
 
-| Model 1          | GE  | CGH | Localization |
-|------------------|:---:|:---:|:------------:|
-| **GE**           |  0  |  0  |      1       |
-| **CGH**          |  0  |  0  |      1       |
-| **Localization** |  1  |  1  |      0       |
 
-: (#tab:Puget-model1) Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.
+```{r Puget-model1}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+  "Model 1" = c("GE", "CGH", "Localization"),
+  GE = c(0L, 0L, 1L),
+  CGH = c(0L, 0L, 1L),
+  Localization = c(1L, 1L, 0L)
+)
+kable(df, align = c("c", "c", "c", "c"),
+           caption.short = "Model 1 for Puget's dataset.",
+           caption = "Model 1 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
 
-When looking for the model that adjust better following this structure we arrived to model 1.2, described below (Table \@ref(tab:puget-model1-2):
+```
 
-| Model 1.2        | GE  | CGH | Localization |
-|------------------|:---:|:---:|:------------:|
-| **GE**           |  0  |  0  |      1       |
-| **CGH**          |  0  |  0  |     0.1      |
-| **Localization** |  1  | 0.1 |      0       |
 
-: (#tab:puget-model1-2) Relationships between the different blocks on the Puget's dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.
+When looking for the model that adjust better following this structure we arrived to model 1.2, described below (Table \@ref(tab:puget-model1-2)) :
 
-On model 2 we split the invariable variables from those related to the location (able \@ref(tab:puget-model2):
 
-| Model 2          | GE  | CGH | Invariable | Localization |
-|------------------|:---:|:---:|:----------:|:------------:|
-| **GE**           |  0  |  1  |     1      |      1       |
-| **CGH**          |  1  |  0  |     1      |      1       |
-| **Invariable**   |  1  |  1  |     0      |      0       |
-| **Localization** |  1  |  1  |     0      |      0       |
+```{r puget-model1-2}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+         "Model 1.2" = c("GE", "CGH", "Localization"),
+                GE = c(0L, 0L, 1L),
+               CGH = c(0, 0, 0.1),
+      Localization = c(1, 0.1, 0)
+)
+kable(df, align = c("c", "c", "c", "c"),
+           caption.short = "Model 1.2 for Puget's dataset.",
+           caption = "Model 1.2 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+```
 
-: (#tab:puget-model2) Relationships between the different blocks on the Puget's dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship.
+
+On model 2 we split the invariable variables from those related to the location (Table \@ref(tab:puget-model2)):
+
+```{r puget-model2}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+           Model.2 = c("GE", "CGH", "Invariable", "Localization"),
+                GE = c(0L, 1L, 1L, 1L),
+               CGH = c(1L, 0L, 1L, 1L),
+        Invariable = c(1L, 1L, 0L, 0L),
+      Localization = c(1L, 1L, 0L, 0L)
+)
+kable(df, align = c("c", "c", "c", "c", "c"),
+           caption.short = "Model 2 for Puget's dataset.",
+           caption = "Model 2 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+```
 
 Following this split, the model that has higher inner AVE for these blocks is the following (Table \@ref(tab:puget-model2-2)):
 
-| Model 2.2        | GE  | CGH | Invariable | Localization |
-|------------------|:---:|:---:|:----------:|:------------:|
-| **GE**           |  1  | 1/3 |     0      |      1       |
-| **CGH**          | 1/3 |  0  |    1/3     |      0       |
-| **Invariable**   |  0  | 1/3 |     0      |      0       |
-| **Localization** |  1  |  0  |     0      |      0       |
+```{r puget-model2-2}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+         Model.2.2 = c("GE", "CGH", "Invariable", "Localization"),
+                GE = c("1", "1/3", "0", "1"),
+               CGH = c("1/3", "0", "1/3", "0"),
+        Invariable = c("0", "1/3", "0", "0"),
+      Localization = c(1L, 0L, 0L, 0L)
+      )
+kable(df, align = c("c", "c", "c", "c", "c"),
+           caption.short = "Model 2.2 for Puget's dataset.",
+           caption = "Model 2.2 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+```
 
-: (#tab:puget-model2-2) Relationships between the different blocks on the Puget's dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
+If we added a superblock with all the data of the different blocks from model 1 we started with the standard relationship between blocks (Table \@ref(tab:puget-model-superblock)):
 
-If we added a superblock with all the data of the different blocks from model 1 we started with the standard relationship between blocks (Table \@ref(tab:puget-model-superblock):
+```{r puget-model-superblock}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+  Model.superblock = c("GE", "CGH", "Superblock", "Localization"),
+                GE = c(0L, 0L, 1L, 0L),
+               CGH = c(0L, 0L, 1L, 0L),
+        Superblock = c(1L, 1L, 0L, 1L),
+      Localization = c(0L, 0L, 1L, 0L)
+      )
+kable(df, align = c("c", "c", "c", "c", "c"),
+           caption.short = "Model with superblock for Puget's dataset.",
+           caption = "Relationships between the different blocks on the Puget's dataset for model superblock. 0 indicates no relationship and 1 indicates a strong relationship.")
+```
 
-| Model superblock | GE  | CGH | Superblock | Localization |
-|------------------|:---:|:---:|:----------:|:------------:|
-| **GE**           |  0  |  0  |     1      |      0       |
-| **CGH**          |  0  |  0  |     1      |      0       |
-| **Superblock**   |  1  |  1  |     0      |      1       |
-| **Localization** |  0  |  0  |     1      |      0       |
+But when the best model with the superblock that had highest inner AVE is quite different (Table \@ref(tab:puget-model-superblock-2)):
 
-: (#tab:puget-model-superblock) Relationships between the different blocks on the Puget's dataset for model superblock. 0 indicates no relationship and 1 indicates a strong relationship.
 
-But when the best model with the superblock that had highest inner AVE is quite different (Table \@ref(tab:puget-model-superblock-2):
-
-| Model superblock.2 | GE  | CGH | Superblock | Localization |
-|--------------------|:---:|:---:|:----------:|:------------:|
-| **GE**             |  1  | 1/3 |     0      |      1       |
-| **CGH**            | 1/3 |  0  |     1      |      0       |
-| **Superblock**     |  0  |  1  |     0      |      0       |
-| **Localization**   |  1  |  0  |     0      |      0       |
-
-: (#tab:puget-model-superblock-2) Relationships between the different blocks on the Puget's dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship.
+```{r puget-model-superblock-2}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+  Model.superblock = c("GE", "CGH", "Superblock", "Localization"),
+                GE = c("1", "1/3", "0", "1"),
+               CGH = c("1/3", "0", "1", "0"),
+        Superblock = c(0L, 1L, 0L, 1L),
+      Localization = c(1L, 0L, 0L, 0L)
+      )
+kable(df, align = c("c", "c", "c", "c", "c"),
+           caption.short = "Model with superblock.2 for Puget's dataset.",
+           caption = "Relationships between the different blocks on the Puget's dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+```
 
 Exploratory analysis with the superblock model was done.
-The first two components of the superblock did not help to explain the biology or classify the tumors:
+The first two components of the superblock did not help to explain the biology or classify the tumors (See \@ref(fig:puget-superblock)):
 
 ```{r puget-superblock, fig.cap="First components of the superblock which has all the data of the samples on the Puget's dataset.", fig.scap="Superblock components on Puget's dataset"}
 knitr::include_graphics("images/pugets_superblock.png")
@@ -235,7 +271,7 @@ knitr::include_graphics("images/pugets_superblock.png")
 
 
 The same data was used to look for a good model from the data itself including a model with a superblock but looking at the first component of the CGH and transcriptome block.
-This allowed to visually inspect if each model's components helped to classify the samples (Figure \@ref(fig:puget-models):
+This allowed to visually inspect if each model's components helped to classify the samples (Figure \@ref(fig:puget-models)):
 
 ```{r puget-models, fig.scap="Different models tried with the same data showing the first components of the CGH data and the transcriptome.", fig.cap="Different models tried with the same data showing the first components of the CGH data and the transcriptome. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data."}
 knitr::include_graphics("images/pugets_models.png")
