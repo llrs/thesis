@@ -301,9 +301,13 @@ One level was omitted to avoid overfitting the data.
 Each block, regardless if it had continuous numeric variables or dummy variables was standardized to zero mean and unit variance.
 Later, it was divided by the square root of the number of variables of the block for an unbiased estimation.
 
-### Output
+### Output {#rgcca-output}
 
-RGCCA as other dimensional reduction techniques provides specific weights for each variable on each dimension and a sample score on each dimension, together with quality scores.
+RGCCA as other dimensional reduction techniques provides specific weights for each variable on each dimension and a sample score on each dimension, together with quality scores. 
+The most important output are the canonical component of each block.
+These canonical components 
+
+<!-- TODO expand about the canonical components -->
 
 To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE).
 RGCCA returns an AVE score for each block, which measures how the variables of the block correlate with the dimension component of the block.
