@@ -72,6 +72,7 @@ fig:howell-mcia
 fig:howell-auc-plot
 tab:howell-auc
 fig:pathways-hsct-howell
+fig:reproducible-matrix
 tab:appendix-methods
 tab:BARCELONA
 fig:barcelona-diversity
@@ -127,7 +128,7 @@ stategra
 rgcca
 regularized-generalized-canonical-correlation-analysis
 description
-output
+rgcca-output
 models
 statistics
 functional-enrichment-methods
