@@ -421,14 +421,17 @@ Lately, the access to bigger datasets with more variables and often from the sam
 The explosion of data on biological sciences has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time.
 If done with multiple sequencing technologies it is usually referred as multi-omics methods, which usually only uses omic data.
 
-It is crucial to classify, review and compare tools available, as well as, to benchmark these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019].
-Part of these efforts use the methods' strategies to classify them [@cavill2016; @chongComputationalApproachesIntegrative2017].
+It is crucial to classify, review and compare tools available, as well as, to benchmark these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019]. Part of these efforts use the methods' strategies to classify them [@cavill2016; @chongComputationalApproachesIntegrative2017].
 Following this view I will review the available integration methods according to several axes: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
 
-### Classification of integration method
+### Classification of integration methods
 
-Integration methods have very different properties that allow them to be classified and compared.
-Here I classify those meant to be used with omics datasets, with references to concrete methodology and in occasionaly to articles using them.
+Integration methods have very different properties that allow them to be classified and compared [@huang2017].
+Here I classify those meant to be used with omics datasets, with references to concrete methodology and in occasionally to articles using them.
+
+```{r classification, fig.scap="Unsupervised data integration methodology.", fig.cap="Unsupervised data integration methodology. Figure 1 from Huang 2017."}
+include_graphics("images/figure1_huang2017.jpg")
+```
 
 #### Data type: numeric or categorical
 
