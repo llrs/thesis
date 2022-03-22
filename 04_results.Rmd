@@ -341,7 +341,7 @@ df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD",
                  check.names = FALSE)
 k <- kable(df, caption.short = "Permanova analysis of transcriptome.",
       caption = "Permanova analysis of transcriptome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "hold_position"), full_width = FALSE, fixed_thead = TRUE)
+k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), full_width = FALSE, fixed_thead = TRUE)
 kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
 ```
 
@@ -352,7 +352,7 @@ df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD",
                  check.names = FALSE)
 k <- kable(df, caption.short = "Permanova analysis of microbiome",
       caption = "Permanova analysis of microbiome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "hold_position"),
+k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"),
                                full_width = FALSE, fixed_thead = TRUE)
 kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
 ```
@@ -505,7 +505,7 @@ df <- data.frame(Model = c("0", "1", "1.1", "1.2", "2", "2.1", "2.2", "2.3"),
 ))
 k <- kable(df, caption.short = "AUC values of RGCCA models on the HSCT dataset.",
       caption = "AUC values of RGCCA models of the HSCT dataset classyfing the location of the sample according to the first component of the transcriptome block. From model 0 to model 2.3, the best classification is achieved with model 2.1. Note that this is removing two samples for which the location is unkown.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "hold_position"), 
+k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
                                full_width = FALSE, fixed_thead = TRUE)
 kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
 ```
@@ -536,7 +536,7 @@ m0 <- structure(c(0, 1, 1, 0), .Dim = c(2L, 2L), .Dimnames = list(c("RNAseq",
 "micro"), c("RNAseq", "micro")))
 k <- kable(as.data.frame(m0), caption.short = "Model 0 of H\u00E4sler dataset", 
            caption = "Model 0 of H\u00E4sler dataset")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "hold_position"), 
+k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
                                full_width = FALSE, fixed_thead = TRUE)
 kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
 ```
@@ -549,7 +549,7 @@ m1.1 <- structure(c(0, 0, 1, 0, 0, 1, 1, 1, 0), .Dim = c(3L, 3L), .Dimnames = li
     )))
 k <- kable(as.data.frame(m1.1), caption.short = "Model 1.1 of H\u00E4sler dataset", 
            caption = "Model 1.1 of H\u00E4sler dataset")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "hold_position"), 
+k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
                           full_width = FALSE, fixed_thead = TRUE)
 kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
 ```
@@ -562,7 +562,7 @@ m1.2 <- structure(c(0, 0, 1, 0, 0, 0.1, 1, 0.1, 0), .Dim = c(3L, 3L), .Dimnames 
     )))
 k <- kable(as.data.frame(m1.2), caption.short = "Model 1.2 of H\u00E4sler dataset", 
            caption = "Model 1.2 of H\u00E4sler dataset")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "hold_position"), 
+k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
                           full_width = FALSE, fixed_thead = TRUE)
 kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
 ```
@@ -576,7 +576,7 @@ m2.1 <- structure(c(0, 0, 1, 0, 0, 0, 0, 0.5, 1, 0, 1, 0.5, 0, 0, 0,
     c("RNAseq", "micro", "Location", "Demographic", "Time")))
 k <- kable(as.data.frame(m2.1), caption.short = "Model 2.1 of H\u00E4sler dataset", 
            caption = "Model 2.1 of H\u00E4sler dataset")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "hold_position"), 
+k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
                                full_width = FALSE, fixed_thead = TRUE)
 kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
 ```
@@ -590,7 +590,7 @@ m2.2 <- structure(c(0, 0.1, 1, 0, 0, 0.1, 0, 0, 0.1, 1, 1, 0, 0, 0, 0,
     c("RNAseq", "micro", "Location", "Demographic", "Time")))
 k <- kable(as.data.frame(m2.2), caption.short = "Model 2.2 of H\u00E4sler dataset", 
            caption = "Model 2.2 of H\u00E4sler dataset")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "hold_position"), 
+k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
                                full_width = FALSE, fixed_thead = TRUE)
 kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
 ```
@@ -604,7 +604,7 @@ df <- data.frame(Model = c("0", "1.1", "1.2", "2.1", "2.2"),
          check.names = FALSE)
 k <- kable(df, caption.short = "AVE values of RGCCA models on H\u00E4sler's dataset",
       caption = "AVE values of RGCCA models on H\u00E4sler's dataset. The inner and the outer AVE scores of multiple models tested on the H\u00E4sler dataset are shown. The model with the hightes inner AVE is model 1.2.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "hold_position"), 
+k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
                                full_width = FALSE, fixed_thead = TRUE)
 kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
 ```
@@ -633,7 +633,7 @@ df <- data.frame(
   AUC = c(0.801149425287356, 0.97816091954023, 0.997701149425287, 1, 1))
 k <- kable(df, caption.short = "AUC for models with RGCCA on H\u00E4sler's dataset",
       caption = "AUC for models with RGCCA on H\u00E4sler's dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "hold_position"), 
+k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
                           full_width = FALSE, fixed_thead = TRUE)
 kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
 ```
@@ -742,7 +742,7 @@ df <- data.frame(Model = c("0", "1", "1.1", "1.2", "2", "2.1", "2.2", "2.3"),
 ))
 k <- kable(df, caption.short="AUC for Morgan's dataset", 
       caption="AUC for Morgan's dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "hold_position"), 
+k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
                           full_width = FALSE, fixed_thead = TRUE)
 kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
 ```
@@ -832,7 +832,7 @@ df <- data.frame(
 )
 k <- kable(df, caption.short = "AUC of the RGCCA models on Howell's dataset",
       caption = "AUC of the RGCCA models on Howell's dataset. The classification of the location of the sample according to the first componenent of the models shown. Model 0, 2 and 2.2 have a perfect classification of the samples to their respective location.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "hold_position"), 
+k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
                           full_width = FALSE, fixed_thead = TRUE)
 kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
 ```
