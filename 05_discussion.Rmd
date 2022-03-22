@@ -130,7 +130,7 @@ The quality of the software and methods also differs.
 Some of them were tested several datasets but their most important validation process undergone is the mathematical validation they have.
 
 With the increase of tools there have been increasingly important to compare different tools.
-There are reviews of different tools on the same datasets [@cantini2020], some are more theoretical [ref:needed], others are focused on a different field [@cavill2016].
+There are reviews of different tools on the same datasets [@cantini2020], some are more theoretical [@bersanelli2016], others are focused on a different field [@cavill2016].
 
 Of all these methods very few have been applied on IBD datasets.
 Recently there has been an article focused on integration on IBD [@sudhakar2022].
@@ -231,7 +231,6 @@ Furthermore, to evaluate a design bootstraping can be used to know how well the 
 Although on `inteRmodel` there is the option to use a leave-one-out procedure, we didn't use it to evaluate the fitness of the models.
 
 Using an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately is also a common approach to evaluate and validate models.
-
 Using the same approach on different data helps to ensure the replicability of the results [@community2021].
 
 ```{r reproducible-matrix, fig.scap="Reproducibility matrix", fig.cap="Reproducibility matrix indicating the terminology used between using the same method and the same data. Figure from The Turing Way: A Handbook for Reproducible Data Science (Version v1.0.1)."}
@@ -245,13 +244,20 @@ We also compared our method with a different one to see how generalisable are th
 Of the multiple methods available we used [`MCIA`](https://bioconductor.org/packages/omicade4 "Omicade4 package") [@mengMultivariateApproachIntegration2014].
 We compared it with `inteRmodel` by looking at the area under the curve for classifying the samples with the canonical component of the transcriptome data according to their location.
 
-Besides a way to compare methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn's disease.
-In this article we did not look in depth to the biological relevance of the microorganisms an genes found.
-
 The procedure of separating independent variables in their own block of data and later search the best model that fits the data provides a good strategy that should be consider for integration efforts.
-
 The procedural method of searching a model and testing them is implemented on [`inteRmodel`](https://llrs.github.io/inteRmodel/ "inteRmodel").
-But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling.
+But the most important thing is to consider which variables are independent of which and if they can be separated into a block for later usage on the modeling (See [@pearl2011]).
+This can lead to undesired conclusions like the effect known as [Simpson's paradox](https://en.wikipedia.org/wiki/Simpson%27s_paradox) [@simpson1951].
+
+Splitting the variables of each sample into several blocks forces `RGCCA` to adjust for a new canonical dimension.
+The omics block such as gene expression and 16S data could be split, as the expression of some genes influence other genes, such as [transcriptor factors](https://en.wikipedia.org/wiki/Transcription_factor) (First mentioned on [@stillman1984]) , [miRNA](https://en.wikipedia.org/wiki/MicroRNA) [@lee1993], [siRNA](https://en.wikipedia.org/wiki/Small_interfering_RNA) [@hamilton1999]... All these interactions and regulations could distord the canonical correlations.
+However, the nature of this relationships is not linear and the interaction between them is multiple and very complex.
+Its complexity has prevented to accurately account for all subcellular reactions at speeds that could be useful (it has only been recently accomplished for a prokaryote cell [@thornburg2022]).
+In addition, these interactions are time dependent, are not linear and are highly group.
+For these reasons the genes and 16S block was not split.
+
+Besides comparing the results of different methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn's disease.
+So far the models were only discussed on their technical merits.
 
 It is known that mucosal transciptome is related to localization of the samples [ref:needed].
 The difference is so great that many times the colon and ileum samples are analyzed separately.
