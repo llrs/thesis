@@ -2,6 +2,7 @@
 % \usepackage{navigator} % To mofidy the outline https://osl.ugr.es/CTAN/macros/generic/navigator/navigator-doc.pdf
 \usepackage{tocbibind} % To include the indices of tables and figures
 % https://tex.stackexchange.com/questions/48509/insert-list-of-figures-in-the-table-of-contents
+
 % To add figure after the environment not later at the end of the section
 % From https://stackoverflow.com/a/33801326/2886003
 \usepackage{float}
@@ -9,7 +10,7 @@
 \let\origfigure\figure
 \let\endorigfigure\endfigure
 \renewenvironment{figure}[1][2] {
-    \expandafter\origfigure\expandafter[H]
+    \expandafter\origfigure\expandafter[!ht]
 } {
     \endorigfigure
 }
