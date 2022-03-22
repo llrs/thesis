@@ -32,13 +32,13 @@ bibliography:
 Sys.setlocale('LC_ALL','C')
 knitr::opts_chunk$set(
 	echo = FALSE,
-	cache = TRUE,
 	out.width = "100%"
 )
 library("knitr")
 ```
 
 <!--# TODO Fix metathis to provide good media coverage  -->
+
 ```{r metathis, cache=TRUE, include=FALSE, eval=knitr::is_html_output(excludes = "epub")}
 library("metathis")
 meta() %>%
@@ -57,6 +57,26 @@ meta() %>%
     twitter_card_type = "summary_large_image",
     twitter_creator = "@Lluis_Revilla"
   )
+```
+
+```{r tables-formatting}
+library("kableExtra")
+options(knitr.kable.NA = "")
+format_design <- function(x, data){
+  dims <- dim(data)
+  nrow <- nrow(data)
+  ncol <- ncol(data) + as.numeric(!all(rownames(data) == seq_len(nrow(data))))
+  k <- kable_styling(x, latex_options = c("striped", "HOLD_position", "repeat_header"), 
+                            full_width = FALSE, fixed_thead = TRUE)
+  k <- column_spec(k, column = 1, border_left = TRUE, bold = TRUE)
+  k <- column_spec(k, column = ncol, border_right = TRUE, bold = FALSE)
+  row_spec(k, row = 0, bold = TRUE)
+  
+}
+format_kable <- function(x) {
+  k <- format_design(x)
+  column_spec(format_design(x), column = 1, border_right = TRUE, bold = TRUE)
+}
 ```
 
 

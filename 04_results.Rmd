@@ -162,21 +162,22 @@ The effect of the sparsity value was measured by its effect on the inner AVE sco
 knitr::include_graphics("images/pugets_tau_to_AVE.png")
 ```
 
-The first model of the family of models 1 can be seen on Table \@ref(tab:Puget-model1):
+The first model of the family of models 1 can be seen on Table \@ref(tab:puget-model1):
 
 
-```{r Puget-model1}
+```{r puget-model1}
 df <- data.frame(
   stringsAsFactors = FALSE,
   "Model 1" = c("GE", "CGH", "Localization"),
   GE = c(0L, 0L, 1L),
   CGH = c(0L, 0L, 1L),
-  Localization = c(1L, 1L, 0L)
+  Localization = c(1L, 1L, 0L),
+  check.names = FALSE
 )
-kable(df, align = c("c", "c", "c", "c"),
+k <- kable(df, align = c("c", "c", "c", "c"),
            caption.short = "Model 1 for Puget's dataset.",
            caption = "Model 1 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
-
+format_design(k, df)
 ```
 
 
@@ -191,9 +192,10 @@ df <- data.frame(
                CGH = c(0, 0, 0.1),
       Localization = c(1, 0.1, 0)
 )
-kable(df, align = c("c", "c", "c", "c"),
+k <- kable(df, align = c("c", "c", "c", "c"),
            caption.short = "Model 1.2 for Puget's dataset.",
            caption = "Model 1.2 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
 ```
 
 
@@ -208,9 +210,10 @@ df <- data.frame(
         Invariable = c(1L, 1L, 0L, 0L),
       Localization = c(1L, 1L, 0L, 0L)
 )
-kable(df, align = c("c", "c", "c", "c", "c"),
+k <- kable(df, align = c("c", "c", "c", "c", "c"),
            caption.short = "Model 2 for Puget's dataset.",
            caption = "Model 2 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
 ```
 
 Following this split, the model that has higher inner AVE for these blocks is the following (Table \@ref(tab:puget-model2-2)):
@@ -224,9 +227,10 @@ df <- data.frame(
         Invariable = c("0", "1/3", "0", "0"),
       Localization = c(1L, 0L, 0L, 0L)
       )
-kable(df, align = c("c", "c", "c", "c", "c"),
+k <- kable(df, align = c("c", "c", "c", "c", "c"),
            caption.short = "Model 2.2 for Puget's dataset.",
            caption = "Model 2.2 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
 ```
 
 If we added a superblock with all the data of the different blocks from model 1 we started with the standard relationship between blocks (Table \@ref(tab:puget-model-superblock)):
@@ -240,9 +244,10 @@ df <- data.frame(
         Superblock = c(1L, 1L, 0L, 1L),
       Localization = c(0L, 0L, 1L, 0L)
       )
-kable(df, align = c("c", "c", "c", "c", "c"),
+k <- kable(df, align = c("c", "c", "c", "c", "c"),
            caption.short = "Model with superblock for Puget's dataset.",
            caption = "Relationships between the different blocks on the Puget's dataset for model superblock. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
 ```
 
 But when the best model with the superblock that had highest inner AVE is quite different (Table \@ref(tab:puget-model-superblock-2)):
@@ -257,9 +262,10 @@ df <- data.frame(
         Superblock = c(0L, 1L, 0L, 1L),
       Localization = c(1L, 0L, 0L, 0L)
       )
-kable(df, align = c("c", "c", "c", "c", "c"),
+k <- kable(df, align = c("c", "c", "c", "c", "c"),
            caption.short = "Model with superblock.2 for Puget's dataset.",
            caption = "Relationships between the different blocks on the Puget's dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
 ```
 
 Exploratory analysis with the superblock model was done.
@@ -341,8 +347,7 @@ df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD",
                  check.names = FALSE)
 k <- kable(df, caption.short = "Permanova analysis of transcriptome.",
       caption = "Permanova analysis of transcriptome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), full_width = FALSE, fixed_thead = TRUE)
-kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
+format_design(k, df)
 ```
 
 ```{r hsct-permanova-microbiome}
@@ -352,9 +357,7 @@ df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD",
                  check.names = FALSE)
 k <- kable(df, caption.short = "Permanova analysis of microbiome",
       caption = "Permanova analysis of microbiome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"),
-                               full_width = FALSE, fixed_thead = TRUE)
-kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
+format_design(k, df)
 ```
 
 <!--# global test from the comments on TRIM/intestinal_16S_RNAseq_metadb/variance.R -->
@@ -505,9 +508,7 @@ df <- data.frame(Model = c("0", "1", "1.1", "1.2", "2", "2.1", "2.2", "2.3"),
 ))
 k <- kable(df, caption.short = "AUC values of RGCCA models on the HSCT dataset.",
       caption = "AUC values of RGCCA models of the HSCT dataset classyfing the location of the sample according to the first component of the transcriptome block. From model 0 to model 2.3, the best classification is achieved with model 2.1. Note that this is removing two samples for which the location is unkown.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
-                               full_width = FALSE, fixed_thead = TRUE)
-kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
+format_design(k, df)
 ```
 
 
@@ -532,26 +533,28 @@ Models for Häsler dataset are:
 
 
 ```{r hasler-model-0}
-m0 <- structure(c(0, 1, 1, 0), .Dim = c(2L, 2L), .Dimnames = list(c("RNAseq", 
-"micro"), c("RNAseq", "micro")))
-k <- kable(as.data.frame(m0), caption.short = "Model 0 of H\u00E4sler dataset", 
+m0 <- data.frame("Model 0" = c("RNAseq", "micro"),
+                 RNAseq = c(0, 1),
+                 micro = c(1, 0),
+                 check.names = FALSE)
+k <- kable(m0, caption.short = "Model 0 of H\u00E4sler dataset", 
            caption = "Model 0 of H\u00E4sler dataset")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
-                               full_width = FALSE, fixed_thead = TRUE)
-kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
+format_design(k, m0)
 ```
 
 The first model for family 1 is on table \@ref(tab:hasler-model-1-1):
 
 ```{r hasler-model-1-1}
-m1.1 <- structure(c(0, 0, 1, 0, 0, 1, 1, 1, 0), .Dim = c(3L, 3L), .Dimnames = list(
-    c("RNAseq", "micro", "meta"), c("RNAseq", "micro", "meta"
-    )))
-k <- kable(as.data.frame(m1.1), caption.short = "Model 1.1 of H\u00E4sler dataset", 
+m1.1 <- data.frame(
+  "Model 1.1" = c("RNAseq", "micro", "meta"),
+  RNAseq = c(0, 0, 1), 
+  micro = c(0, 0, 1), 
+  meta = c(1, 1, 0),
+  check.names = FALSE
+)
+k <- kable(m1.1, caption.short = "Model 1.1 of H\u00E4sler dataset", 
            caption = "Model 1.1 of H\u00E4sler dataset")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
-                          full_width = FALSE, fixed_thead = TRUE)
-kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
+format_design(k, m1.1)
 ```
 
 The after optimization of the model of family 1, the best one is on table \@ref(tab:hasler-model-1-2):
@@ -562,9 +565,7 @@ m1.2 <- structure(c(0, 0, 1, 0, 0, 0.1, 1, 0.1, 0), .Dim = c(3L, 3L), .Dimnames 
     )))
 k <- kable(as.data.frame(m1.2), caption.short = "Model 1.2 of H\u00E4sler dataset", 
            caption = "Model 1.2 of H\u00E4sler dataset")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
-                          full_width = FALSE, fixed_thead = TRUE)
-kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
+format_design(k, m1.2)
 ```
 
 The first model for family 2 is on table \@ref(tab:hasler-model-2-1):
@@ -576,9 +577,7 @@ m2.1 <- structure(c(0, 0, 1, 0, 0, 0, 0, 0.5, 1, 0, 1, 0.5, 0, 0, 0,
     c("RNAseq", "micro", "Location", "Demographic", "Time")))
 k <- kable(as.data.frame(m2.1), caption.short = "Model 2.1 of H\u00E4sler dataset", 
            caption = "Model 2.1 of H\u00E4sler dataset")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
-                               full_width = FALSE, fixed_thead = TRUE)
-kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
+format_design(k, df)
 ```
 
 After optimization of models of family 1 the best model according to the inner AVE score is on table \@ref(tab:hasler-model-2-2):
@@ -590,9 +589,7 @@ m2.2 <- structure(c(0, 0.1, 1, 0, 0, 0.1, 0, 0, 0.1, 1, 1, 0, 0, 0, 0,
     c("RNAseq", "micro", "Location", "Demographic", "Time")))
 k <- kable(as.data.frame(m2.2), caption.short = "Model 2.2 of H\u00E4sler dataset", 
            caption = "Model 2.2 of H\u00E4sler dataset")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
-                               full_width = FALSE, fixed_thead = TRUE)
-kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
+format_design(k, df)
 ```
 
 On table \@ref(tab:hasler-aves), we can see here the AVE scores of each of the previous models:
@@ -604,9 +601,7 @@ df <- data.frame(Model = c("0", "1.1", "1.2", "2.1", "2.2"),
          check.names = FALSE)
 k <- kable(df, caption.short = "AVE values of RGCCA models on H\u00E4sler's dataset",
       caption = "AVE values of RGCCA models on H\u00E4sler's dataset. The inner and the outer AVE scores of multiple models tested on the H\u00E4sler dataset are shown. The model with the hightes inner AVE is model 1.2.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
-                               full_width = FALSE, fixed_thead = TRUE)
-kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
+format_design(k, df)
 ```
 
 In contrast to the HSCT's dataset (table \@ref(tab:hsct-models-ave)), the model with the highest inner AVE was model 1.2 but model 2.2 was close to it (see table \@ref(tab:hasler-aves)).
@@ -633,9 +628,7 @@ df <- data.frame(
   AUC = c(0.801149425287356, 0.97816091954023, 0.997701149425287, 1, 1))
 k <- kable(df, caption.short = "AUC for models with RGCCA on H\u00E4sler's dataset",
       caption = "AUC for models with RGCCA on H\u00E4sler's dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
-                          full_width = FALSE, fixed_thead = TRUE)
-kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
+format_design(k, df)
 ```
 
 MCIA was applied as a baseline of the integration and compared to the different models to know which one separates best colon and ileum samples.
@@ -742,9 +735,7 @@ df <- data.frame(Model = c("0", "1", "1.1", "1.2", "2", "2.1", "2.2", "2.3"),
 ))
 k <- kable(df, caption.short="AUC for Morgan's dataset", 
       caption="AUC for Morgan's dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
-                          full_width = FALSE, fixed_thead = TRUE)
-kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
+format_design(k, df)
 ```
 
 With MCIA:
@@ -832,9 +823,7 @@ df <- data.frame(
 )
 k <- kable(df, caption.short = "AUC of the RGCCA models on Howell's dataset",
       caption = "AUC of the RGCCA models on Howell's dataset. The classification of the location of the sample according to the first componenent of the models shown. Model 0, 2 and 2.2 have a perfect classification of the samples to their respective location.")
-k <- kableExtra::kable_styling(k, latex_options = c("striped", "HOLD_position"), 
-                          full_width = FALSE, fixed_thead = TRUE)
-kableExtra::column_spec(k, column = 1, border_right = TRUE, bold = TRUE)
+format_design(k, df)
 ```
 
 
