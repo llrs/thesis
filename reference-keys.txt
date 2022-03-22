@@ -13,7 +13,7 @@ tab:fisher
 fig:experdesign-flowchart
 fig:intermodel-workflows
 fig:puget-tau2AVE
-tab:Puget-model1
+tab:puget-model1
 tab:puget-model1-2
 tab:puget-model2
 tab:puget-model2-2

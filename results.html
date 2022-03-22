@@ -412,239 +412,515 @@ It is similarity to horst scheme.</p>
 Figure 4.3: Effect of tau on the inner AVE on Puget’s dataset. The suggested tau value is the column between the regular grid, on the ordinate axis the y’s tau values and on the abscissa the gene expression (GE) on the left and the comparative genomic hybridization (CGH) on the right. The highest inner AVE is with high tau values for y and middle to upper values for GE and CGH.
 </p>
 </div>
-<p>The first model of the family of models 1 can be seen on Table <a href="results.html#tab:Puget-model1">4.1</a>:</p>
-<table>
-<caption><span id="tab:Puget-model1">Table 4.1: </span>Model 1 for Puget’s dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.</caption>
+<p>The first model of the family of models 1 can be seen on Table <a href="results.html#tab:puget-model1">4.1</a>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:puget-model1">Table 4.1: </span>Model 1 for Puget’s dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.
+</caption>
 <thead>
-<tr class="header">
-<th align="center">Model.1</th>
-<th align="center">GE</th>
-<th align="center">CGH</th>
-<th align="center">Localization</th>
+<tr>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Model 1
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+GE
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+CGH
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Localization
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="center">GE</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+GE
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;border-right:1px solid;">
+1
+</td>
 </tr>
-<tr class="even">
-<td align="center">CGH</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+CGH
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;border-right:1px solid;">
+1
+</td>
 </tr>
-<tr class="odd">
-<td align="center">Localization</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+Localization
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0
+</td>
 </tr>
 </tbody>
 </table>
 <p>When looking for the model that adjust better following this structure we arrived to model 1.2, described below (Table <a href="results.html#tab:puget-model1-2">4.2</a>) :</p>
-<table>
-<caption><span id="tab:puget-model1-2">Table 4.2: </span>Model 1.2 for Puget’s dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.</caption>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:puget-model1-2">Table 4.2: </span>Model 1.2 for Puget’s dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.
+</caption>
 <thead>
-<tr class="header">
-<th align="center">Model.1.2</th>
-<th align="center">GE</th>
-<th align="center">CGH</th>
-<th align="center">Localization</th>
+<tr>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Model.1.2
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+GE
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+CGH
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Localization
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="center">GE</td>
-<td align="center">0</td>
-<td align="center">0.0</td>
-<td align="center">1.0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+GE
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0.0
+</td>
+<td style="text-align:center;border-right:1px solid;">
+1.0
+</td>
 </tr>
-<tr class="even">
-<td align="center">CGH</td>
-<td align="center">0</td>
-<td align="center">0.0</td>
-<td align="center">0.1</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+CGH
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0.0
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0.1
+</td>
 </tr>
-<tr class="odd">
-<td align="center">Localization</td>
-<td align="center">1</td>
-<td align="center">0.1</td>
-<td align="center">0.0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+Localization
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0.1
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0.0
+</td>
 </tr>
 </tbody>
 </table>
 <p>On model 2 we split the invariable variables from those related to the location (Table <a href="results.html#tab:puget-model2">4.3</a>):</p>
-<table>
-<caption><span id="tab:puget-model2">Table 4.3: </span>Model 2 for Puget’s dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.</caption>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:puget-model2">Table 4.3: </span>Model 2 for Puget’s dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.
+</caption>
 <thead>
-<tr class="header">
-<th align="center">Model.2</th>
-<th align="center">GE</th>
-<th align="center">CGH</th>
-<th align="center">Invariable</th>
-<th align="center">Localization</th>
+<tr>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Model.2
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+GE
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+CGH
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Invariable
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Localization
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="center">GE</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">1</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+GE
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;border-right:1px solid;">
+1
+</td>
 </tr>
-<tr class="even">
-<td align="center">CGH</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+CGH
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;border-right:1px solid;">
+1
+</td>
 </tr>
-<tr class="odd">
-<td align="center">Invariable</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+Invariable
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0
+</td>
 </tr>
-<tr class="even">
-<td align="center">Localization</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+Localization
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0
+</td>
 </tr>
 </tbody>
 </table>
 <p>Following this split, the model that has higher inner AVE for these blocks is the following (Table <a href="results.html#tab:puget-model2-2">4.4</a>):</p>
-<table>
-<caption><span id="tab:puget-model2-2">Table 4.4: </span>Model 2.2 for Puget’s dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.</caption>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:puget-model2-2">Table 4.4: </span>Model 2.2 for Puget’s dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.
+</caption>
 <thead>
-<tr class="header">
-<th align="center">Model.2.2</th>
-<th align="center">GE</th>
-<th align="center">CGH</th>
-<th align="center">Invariable</th>
-<th align="center">Localization</th>
+<tr>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Model.2.2
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+GE
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+CGH
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Invariable
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Localization
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="center">GE</td>
-<td align="center">1</td>
-<td align="center">1/3</td>
-<td align="center">0</td>
-<td align="center">1</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+GE
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1/3
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;border-right:1px solid;">
+1
+</td>
 </tr>
-<tr class="even">
-<td align="center">CGH</td>
-<td align="center">1/3</td>
-<td align="center">0</td>
-<td align="center">1/3</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+CGH
+</td>
+<td style="text-align:center;">
+1/3
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1/3
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0
+</td>
 </tr>
-<tr class="odd">
-<td align="center">Invariable</td>
-<td align="center">0</td>
-<td align="center">1/3</td>
-<td align="center">0</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+Invariable
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1/3
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0
+</td>
 </tr>
-<tr class="even">
-<td align="center">Localization</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+Localization
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0
+</td>
 </tr>
 </tbody>
 </table>
 <p>If we added a superblock with all the data of the different blocks from model 1 we started with the standard relationship between blocks (Table <a href="results.html#tab:puget-model-superblock">4.5</a>):</p>
-<table>
-<caption><span id="tab:puget-model-superblock">Table 4.5: </span>Relationships between the different blocks on the Puget’s dataset for model superblock. 0 indicates no relationship and 1 indicates a strong relationship.</caption>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:puget-model-superblock">Table 4.5: </span>Relationships between the different blocks on the Puget’s dataset for model superblock. 0 indicates no relationship and 1 indicates a strong relationship.
+</caption>
 <thead>
-<tr class="header">
-<th align="center">Model.superblock</th>
-<th align="center">GE</th>
-<th align="center">CGH</th>
-<th align="center">Superblock</th>
-<th align="center">Localization</th>
+<tr>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Model.superblock
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+GE
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+CGH
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Superblock
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Localization
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="center">GE</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+GE
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0
+</td>
 </tr>
-<tr class="even">
-<td align="center">CGH</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+CGH
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0
+</td>
 </tr>
-<tr class="odd">
-<td align="center">Superblock</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+Superblock
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;border-right:1px solid;">
+1
+</td>
 </tr>
-<tr class="even">
-<td align="center">Localization</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+Localization
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0
+</td>
 </tr>
 </tbody>
 </table>
 <p>But when the best model with the superblock that had highest inner AVE is quite different (Table <a href="results.html#tab:puget-model-superblock-2">4.6</a>):</p>
-<table>
-<caption><span id="tab:puget-model-superblock-2">Table 4.6: </span>Relationships between the different blocks on the Puget’s dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship.</caption>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:puget-model-superblock-2">Table 4.6: </span>Relationships between the different blocks on the Puget’s dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship.
+</caption>
 <thead>
-<tr class="header">
-<th align="center">Model.superblock</th>
-<th align="center">GE</th>
-<th align="center">CGH</th>
-<th align="center">Superblock</th>
-<th align="center">Localization</th>
+<tr>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Model.superblock
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+GE
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+CGH
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Superblock
+</th>
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Localization
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="center">GE</td>
-<td align="center">1</td>
-<td align="center">1/3</td>
-<td align="center">0</td>
-<td align="center">1</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+GE
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1/3
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;border-right:1px solid;">
+1
+</td>
 </tr>
-<tr class="even">
-<td align="center">CGH</td>
-<td align="center">1/3</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+CGH
+</td>
+<td style="text-align:center;">
+1/3
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0
+</td>
 </tr>
-<tr class="odd">
-<td align="center">Superblock</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+Superblock
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0
+</td>
 </tr>
-<tr class="even">
-<td align="center">Localization</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+Localization
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;border-right:1px solid;">
+0
+</td>
 </tr>
 </tbody>
 </table>
@@ -739,62 +1015,110 @@ From the many variables the location, sex, patient id and others were found to b
 <p>With the permanova analysis we found that more of the 50% of the variance of normalized RNA-seq data and microbiome data respectively is explained by the variables of location, disease, sex, and the interaction between disease and sex.
 On the transcriptome the most important factor is location which is more than 15% of the variance, while on the microbiome data the most important factor is the patient id followed by location of the sample.</p>
 <!-- # Data on TRIM/intestinal_16S_RNAseq_metadb/models.RData and on TRIM/intestinal_16S_RNAseq_metadb/variance.R-->
-<pre><code>## Warning in kableExtra::kable_styling(k, latex_options = c(&quot;striped&quot;,
-## &quot;HOLD_position&quot;), : Please specify format in kable. kableExtra can customize
-## either HTML or LaTeX outputs. See https://haozhu233.github.io/kableExtra/ for
-## details.</code></pre>
-<pre><code>## Warning in kableExtra::column_spec(k, column = 1, border_right = TRUE, bold =
-## TRUE): Please specify format in kable. kableExtra can customize either HTML or
-## LaTeX outputs. See https://haozhu233.github.io/kableExtra/ for details.</code></pre>
-<table>
-<caption><span id="tab:hsct-permanova-rnaseq">Table 4.8: </span>Permanova analysis of transcriptome. The variables and their interactions (shown with :) and the <span class="math inline">\(R^2\)</span> values and the associated p-value. The higher the <span class="math inline">\(R^2\)</span> the more variance is explained by that factor.</caption>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:hsct-permanova-rnaseq">Table 4.8: </span>Permanova analysis of transcriptome. The variables and their interactions (shown with :) and the <span class="math inline">\(R^2\)</span> values and the associated p-value. The higher the <span class="math inline">\(R^2\)</span> the more variance is explained by that factor.
+</caption>
 <thead>
-<tr class="header">
-<th align="left">Factor</th>
-<th align="right">R</th>
-<th align="right">p-value</th>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Factor
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+R
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+p-value
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left">Location</td>
-<td align="right">0.18057</td>
-<td align="right">0.00020</td>
+<tr>
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
+Location
+</td>
+<td style="text-align:right;">
+0.18057
+</td>
+<td style="text-align:right;border-right:1px solid;">
+0.00020
+</td>
 </tr>
-<tr class="even">
-<td align="left">IBD</td>
-<td align="right">0.03120</td>
-<td align="right">0.00020</td>
+<tr>
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
+IBD
+</td>
+<td style="text-align:right;">
+0.03120
+</td>
+<td style="text-align:right;border-right:1px solid;">
+0.00020
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Sex</td>
-<td align="right">0.01306</td>
-<td align="right">0.00120</td>
+<tr>
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
+Sex
+</td>
+<td style="text-align:right;">
+0.01306
+</td>
+<td style="text-align:right;border-right:1px solid;">
+0.00120
+</td>
 </tr>
-<tr class="even">
-<td align="left">IBD:Sex</td>
-<td align="right">0.01279</td>
-<td align="right">0.11798</td>
+<tr>
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
+IBD:Sex
+</td>
+<td style="text-align:right;">
+0.01279
+</td>
+<td style="text-align:right;border-right:1px solid;">
+0.11798
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Location:IBD</td>
-<td align="right">0.02427</td>
-<td align="right">0.11458</td>
+<tr>
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
+Location:IBD
+</td>
+<td style="text-align:right;">
+0.02427
+</td>
+<td style="text-align:right;border-right:1px solid;">
+0.11458
+</td>
 </tr>
-<tr class="even">
-<td align="left">Location:Sex</td>
-<td align="right">0.00816</td>
-<td align="right">0.03519</td>
+<tr>
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
+Location:Sex
+</td>
+<td style="text-align:right;">
+0.00816
+</td>
+<td style="text-align:right;border-right:1px solid;">
+0.03519
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Location:IBD:Sex</td>
-<td align="right">0.00486</td>
-<td align="right">0.52190</td>
+<tr>
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
+Location:IBD:Sex
+</td>
+<td style="text-align:right;">
+0.00486
+</td>
+<td style="text-align:right;border-right:1px solid;">
+0.52190
+</td>
 </tr>
-<tr class="even">
-<td align="left">Residuals</td>
-<td align="right">0.72508</td>
-<td align="right">NA</td>
+<tr>
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
+Residuals
+</td>
+<td style="text-align:right;">
+0.72508
+</td>
+<td style="text-align:right;border-right:1px solid;">
+</td>
 </tr>
 </tbody>
 </table>
@@ -804,104 +1128,103 @@ On the transcriptome the most important factor is location which is more than 15
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 Factor
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 R
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 p-value
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 Location
 </td>
 <td style="text-align:right;">
 0.06061
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.0002000
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 IBD
 </td>
 <td style="text-align:right;">
 0.04967
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.0002000
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 Sex
 </td>
 <td style="text-align:right;">
 0.01712
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.0003999
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 IBD:Sex
 </td>
 <td style="text-align:right;">
 0.01091
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.6604679
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 Location:IBD
 </td>
 <td style="text-align:right;">
 0.02089
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.8476305
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 Location:Sex
 </td>
 <td style="text-align:right;">
 0.01139
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.0075918
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 Location:IBD:Sex
 </td>
 <td style="text-align:right;">
 0.00289
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.9994001
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 Residuals
 </td>
 <td style="text-align:right;">
 0.82652
 </td>
-<td style="text-align:right;">
-NA
+<td style="text-align:right;border-right:1px solid;">
 </td>
 </tr>
 </tbody>
@@ -1279,76 +1602,76 @@ Figure 4.13: ROC curve of the different datasets with the models from RGCCA and 
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 Model
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 AUC
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 0
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.4537037
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 1
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.4309414
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 1.1
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.4639275
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 1.2
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.5958719
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.9450231
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2.1
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.9988426
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2.2
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.9980710
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2.3
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.9969136
 </td>
 </tr>
@@ -1378,36 +1701,37 @@ Genes are very similar between model 0 to 1.2 and between 2 to 2.3, while OTUs a
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Model 0
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 RNAseq
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 micro
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 RNAseq
 </td>
 <td style="text-align:right;">
 0
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 micro
 </td>
 <td style="text-align:right;">
 1
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0
 </td>
 </tr>
@@ -1420,22 +1744,23 @@ micro
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
+Model 1.1
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 RNAseq
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 micro
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 meta
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 RNAseq
 </td>
 <td style="text-align:right;">
@@ -1444,12 +1769,12 @@ RNAseq
 <td style="text-align:right;">
 0
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 micro
 </td>
 <td style="text-align:right;">
@@ -1458,12 +1783,12 @@ micro
 <td style="text-align:right;">
 0
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 meta
 </td>
 <td style="text-align:right;">
@@ -1472,7 +1797,7 @@ meta
 <td style="text-align:right;">
 1
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0
 </td>
 </tr>
@@ -1485,22 +1810,22 @@ meta
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 RNAseq
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 micro
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 meta
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 RNAseq
 </td>
 <td style="text-align:right;">
@@ -1509,12 +1834,12 @@ RNAseq
 <td style="text-align:right;">
 0.0
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 1.0
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 micro
 </td>
 <td style="text-align:right;">
@@ -1523,12 +1848,12 @@ micro
 <td style="text-align:right;">
 0.0
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.1
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 meta
 </td>
 <td style="text-align:right;">
@@ -1537,7 +1862,7 @@ meta
 <td style="text-align:right;">
 0.1
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.0
 </td>
 </tr>
@@ -1550,31 +1875,31 @@ meta
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 RNAseq
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 micro
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 Location
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 Demographic
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 Time
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 RNAseq
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0
 </td>
 <td style="text-align:right;">
@@ -1591,10 +1916,10 @@ RNAseq
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 micro
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0
 </td>
 <td style="text-align:right;">
@@ -1611,10 +1936,10 @@ micro
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 Location
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 1
 </td>
 <td style="text-align:right;">
@@ -1631,10 +1956,10 @@ Location
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 Demographic
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0
 </td>
 <td style="text-align:right;">
@@ -1651,10 +1976,10 @@ Demographic
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 Time
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0
 </td>
 <td style="text-align:right;">
@@ -1679,31 +2004,31 @@ Time
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 RNAseq
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 micro
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 Location
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 Demographic
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 Time
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 RNAseq
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.0
 </td>
 <td style="text-align:right;">
@@ -1720,10 +2045,10 @@ RNAseq
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 micro
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.1
 </td>
 <td style="text-align:right;">
@@ -1740,10 +2065,10 @@ micro
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 Location
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 1.0
 </td>
 <td style="text-align:right;">
@@ -1760,10 +2085,10 @@ Location
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 Demographic
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.0
 </td>
 <td style="text-align:right;">
@@ -1780,10 +2105,10 @@ Demographic
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 Time
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.0
 </td>
 <td style="text-align:right;">
@@ -1808,70 +2133,70 @@ Time
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 Model
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 inner AVE
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 outer AVE
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 0
 </td>
 <td style="text-align:right;">
 0.8217371
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.0961236
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 1.1
 </td>
 <td style="text-align:right;">
 0.7461423
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.1024148
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 1.2
 </td>
 <td style="text-align:right;">
 0.8349410
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.1025486
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2.1
 </td>
 <td style="text-align:right;">
 0.4980681
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.1008395
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2.2
 </td>
 <td style="text-align:right;">
 0.7513065
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.1009915
 </td>
 </tr>
@@ -1901,52 +2226,52 @@ Figure 4.17: AUC for models with RGCCA on Häsler’s dataset. The AUC was calcu
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 Model
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 AUC
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 0
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.8011494
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 1.1
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.9781609
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 1.2
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.9977011
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2.1
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 1.0000000
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2.2
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 1.0000000
 </td>
 </tr>
@@ -2216,76 +2541,76 @@ Figure 4.21: AUC for Morgan’s dataset classificating the localization of the s
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 Model
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 AUC
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 0
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.4969734
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 1
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.7934971
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 1.1
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.8161536
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 1.2
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.5606192
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.8546351
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2.1
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.8473712
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2.2
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.8352646
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2.3
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.8352646
 </td>
 </tr>
@@ -2464,52 +2789,52 @@ Figure 4.26: AUC of the RGCCA models on Howell’s dataset. The classification o
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 model
 </th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;">
 AUC
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 0
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.6255259
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 1
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 0.5974755
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 1.2
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 1.0000000
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 1.0000000
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-left:1px solid;">
 2.2
 </td>
-<td style="text-align:right;">
+<td style="text-align:right;border-right:1px solid;">
 1.0000000
 </td>
 </tr>
