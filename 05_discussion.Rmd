@@ -253,19 +253,29 @@ Splitting the variables of each sample into several blocks forces `RGCCA` to adj
 The omics block such as gene expression and 16S data could be split, as the expression of some genes influence other genes, such as [transcriptor factors](https://en.wikipedia.org/wiki/Transcription_factor) (First mentioned on [@stillman1984]) , [miRNA](https://en.wikipedia.org/wiki/MicroRNA) [@lee1993], [siRNA](https://en.wikipedia.org/wiki/Small_interfering_RNA) [@hamilton1999]... All these interactions and regulations could distord the canonical correlations.
 However, the nature of this relationships is not linear and the interaction between them is multiple and very complex.
 Its complexity has prevented to accurately account for all subcellular reactions at speeds that could be useful (it has only been recently accomplished for a prokaryote cell [@thornburg2022]).
-In addition, these interactions are time dependent, are not linear and are highly group.
-For these reasons the genes and 16S block was not split.
+In addition, these interactions are time dependent, not linear and are highly interconected between a large number of variables.
+For these reasons gene expression and 16S block were not split into several blocks.
 
-Besides comparing the results of different methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn's disease.
+Besides comparing the results of different methods, these models need to be evaluated by the insights they provide on the biological system they are being applied to, in our case IBD.
 So far the models were only discussed on their technical merits.
 
-It is known that mucosal transciptome is related to localization of the samples [ref:needed].
+It is known that mucosal transciptome is related to localization of the samples [@criss2021].
 The difference is so great that many times the colon and ileum samples are analyzed separately.
+As such, it was a reasonable assumption to expect models to reflect this differences on the gene expression canonical component.
 
-The variability of microbiome has made challenging to find clear patterns on what it is related.
-It is more related to the disease and other variables of the patients.
+The variability of microbiome challenges finding clear patterns.
+On healthy humans, it has been suggested that there is a common microbial composition on all humans [@arumugam2011]. Such theory suggests three groups of similar microbiota composition, named enterotypes. However, the enterotypes classification is not unanimously accepted [@koren2013; @cheng2019].
 
-Time is an important variable when modelling the disease, if multiple timepoints are taken they should be taken into account to identify the state of the disease for each patient.
+There are many factors that influence the gut microbiome [@hasan2019]. But the role of microbiome on IBD has recently gained some interest [@khanna2014; @bringiotti2014; @lloyd-price2019].
+It has been associated with predictors of CD treatment response and suggested that they could be useful for building an improved classifier for CD and treatment response based on sufferers' microbiome in the future [@douglas2018].
+Thee is for instance, an association between IBD and butyrate producers (See [@takahashi2016]) which has shown to influence permeability of the epithelial barrier [@ferrer-picón2020].
+
+The relapse nature of IBD, suggests that at different time points the gene expression or the microbiome might be different.
+For this reason, time is an important variable when modelling the disease.
+Even microbiome of patients in remission have different microbiome from non-IBD patients [@halfvarson2017].
+If multiple timepoints are taken they should be taken into account to identify the state of the disease for each patient.
+On the cohorts analyzed on this thesis, only the HSCT and the Häsler dataset had
+
 As well as they multiple samples with microbiota from the same patient provide a common microbiome background, which can help to identify altered microbiome states later on.
 Due to technical challenges very few datasets provide data from the same patient on multiple locations.
 
