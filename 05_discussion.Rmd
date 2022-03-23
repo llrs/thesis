@@ -270,20 +270,26 @@ There are many factors that influence the gut microbiome [@hasan2019]. But the r
 It has been associated with predictors of CD treatment response and suggested that they could be useful for building an improved classifier for CD and treatment response based on sufferers' microbiome in the future [@douglas2018].
 Thee is for instance, an association between IBD and butyrate producers (See [@takahashi2016]) which has shown to influence permeability of the epithelial barrier [@ferrer-picón2020].
 
+In addition, It is known that microbiome of patients in remission is different from non-IBD patients [@halfvarson2017].
+So even if two individual seem healthy at this moment their microbiome might not be similar.
+
 The relapse nature of IBD, suggests that at different time points the gene expression or the microbiome might be different.
 For this reason, time is an important variable when modelling the disease.
-Even microbiome of patients in remission have different microbiome from non-IBD patients [@halfvarson2017].
 If multiple timepoints are taken they should be taken into account to identify the state of the disease for each patient.
-On the cohorts analyzed on this thesis, only the HSCT and the Häsler dataset had
+Even on healthy non-IBD patients, multiple samples with microbiota from the same patients could provide a common microbiome background, which can help to identify core individual microbiome and altered microbiome states later on.
 
-As well as they multiple samples with microbiota from the same patient provide a common microbiome background, which can help to identify altered microbiome states later on.
-Due to technical challenges very few datasets provide data from the same patient on multiple locations.
-
-[@jiang2019] A paper about multi-omics and microbiome...
-
-[@krassowski2020] advice and recommendations on software engineering and reproducibility practices to share a comprehensive awareness with new researchers in multi-omics for end-to-end workflow.
+On the cohorts analyzed on this thesis, only the HSCT and the Häsler dataset had some time related variables available.
+However, Häsler dataset only had age at date of sampling, and there were not several samples for the same patients at different timepoints.
+This leaves the HSCT dataset with the only one with multiple timepoints from the same patients.
+Having that many samples from the same patient might explain why the classification of the disease on this cohort works so well, with relatively a very complicated cohort with several background treatments, refractory to all previous treatments , some of them having undergone surgery too and with wide systemic changes going on.
+Despite all of this there was a huge agreement in genes identified as relevant between datasets and the pathways identified are relevant to the intestine (See \@ref(fig:pathways-hsct-howell)).
 
 ## Relevance for other research
+
+On this thesis several methods has been developed for helping research.
+`experDesign` is on the primary steps from moving from the bench to the in-silico experiments.
+`BaseSets` and `inteRmodel` are more relevant for computational analysis.
+`BaseSets` might help beyond integration analysis
 
 It is hard to provide more information that can be later used by researchers on the wet lab.
 
@@ -296,6 +302,8 @@ As this might help focus on the most promising bacteria.
 
 ## Implications of research
 
+[@krassowski2020] advice and recommendations on software engineering and reproducibility practices to share a comprehensive awareness with new researchers in multi-omics for end-to-end workflow.
+
 Translational research?
 How to apply this results ?
 
@@ -306,6 +314,8 @@ Selecting which genes are related to the microorganisms is will require also fur
 The several environmental factors highly affect the disease, so analysis or comparisons without taking into account them might provide misleading or false results.
 
 Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing [@zhang2019].
+
+[@jiang2019] A paper about multi-omics and microbiome...
 
 <!--# From @collij2021 add references/adapt-->
 
