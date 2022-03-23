@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-03-22" />
+<meta name="date" content="2022-03-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -509,24 +509,32 @@ This can lead to undesired conclusions like the effect known as <a href="https:/
 The omics block such as gene expression and 16S data could be split, as the expression of some genes influence other genes, such as <a href="https://en.wikipedia.org/wiki/Transcription_factor">transcriptor factors</a> (First mentioned on <span class="citation">[<a href="#ref-stillman1984" role="doc-biblioref">225</a>]</span>) , <a href="https://en.wikipedia.org/wiki/MicroRNA">miRNA</a> <span class="citation">[<a href="#ref-lee1993" role="doc-biblioref">226</a>]</span>, <a href="https://en.wikipedia.org/wiki/Small_interfering_RNA">siRNA</a> <span class="citation">[<a href="#ref-hamilton1999" role="doc-biblioref">227</a>]</span>… All these interactions and regulations could distord the canonical correlations.
 However, the nature of this relationships is not linear and the interaction between them is multiple and very complex.
 Its complexity has prevented to accurately account for all subcellular reactions at speeds that could be useful (it has only been recently accomplished for a prokaryote cell <span class="citation">[<a href="#ref-thornburg2022" role="doc-biblioref">228</a>]</span>).
-In addition, these interactions are time dependent, are not linear and are highly group.
-For these reasons the genes and 16S block was not split.</p>
-<p>Besides comparing the results of different methods, these models do need to be evaluated by the insights they provide on the biological system they are being applied to, in our case the Crohn’s disease.
+In addition, these interactions are time dependent, not linear and are highly interconected between a large number of variables.
+For these reasons gene expression and 16S block were not split into several blocks.</p>
+<p>Besides comparing the results of different methods, these models need to be evaluated by the insights they provide on the biological system they are being applied to, in our case IBD.
 So far the models were only discussed on their technical merits.</p>
-<p>It is known that mucosal transciptome is related to localization of the samples [ref:needed].
-The difference is so great that many times the colon and ileum samples are analyzed separately.</p>
-<p>The variability of microbiome has made challenging to find clear patterns on what it is related.
-It is more related to the disease and other variables of the patients.</p>
-<p>Time is an important variable when modelling the disease, if multiple timepoints are taken they should be taken into account to identify the state of the disease for each patient.
-As well as they multiple samples with microbiota from the same patient provide a common microbiome background, which can help to identify altered microbiome states later on.
+<p>It is known that mucosal transciptome is related to localization of the samples <span class="citation">[<a href="#ref-criss2021" role="doc-biblioref">229</a>]</span>.
+The difference is so great that many times the colon and ileum samples are analyzed separately.
+As such, it was a reasonable assumption to expect models to reflect this differences on the gene expression canonical component.</p>
+<p>The variability of microbiome challenges finding clear patterns.
+On healthy humans, it has been suggested that there is a common microbial composition on all humans <span class="citation">[<a href="#ref-arumugam2011" role="doc-biblioref">230</a>]</span>. Such theory suggests three groups of similar microbiota composition, named enterotypes. However, the enterotypes classification is not unanimously accepted <span class="citation">[<a href="#ref-koren2013" role="doc-biblioref">231</a>, <a href="#ref-cheng2019" role="doc-biblioref">232</a>]</span>.</p>
+<p>There are many factors that influence the gut microbiome <span class="citation">[<a href="#ref-hasan2019" role="doc-biblioref">233</a>]</span>. But the role of microbiome on IBD has recently gained some interest <span class="citation">[<a href="#ref-khanna2014" role="doc-biblioref">16</a>, <a href="#ref-bringiotti2014" role="doc-biblioref">234</a>, <a href="#ref-lloyd-price2019" role="doc-biblioref">235</a>]</span>.
+It has been associated with predictors of CD treatment response and suggested that they could be useful for building an improved classifier for CD and treatment response based on sufferers’ microbiome in the future <span class="citation">[<a href="#ref-douglas2018" role="doc-biblioref">236</a>]</span>.
+Thee is for instance, an association between IBD and butyrate producers (See <span class="citation">[<a href="#ref-takahashi2016" role="doc-biblioref">237</a>]</span>) which has shown to influence permeability of the epithelial barrier <span class="citation">[<a href="#ref-ferrer-picón2020" role="doc-biblioref">24</a>]</span>.</p>
+<p>The relapse nature of IBD, suggests that at different time points the gene expression or the microbiome might be different.
+For this reason, time is an important variable when modelling the disease.
+Even microbiome of patients in remission have different microbiome from non-IBD patients <span class="citation">[<a href="#ref-halfvarson2017" role="doc-biblioref">238</a>]</span>.
+If multiple timepoints are taken they should be taken into account to identify the state of the disease for each patient.
+On the cohorts analyzed on this thesis, only the HSCT and the Häsler dataset had</p>
+<p>As well as they multiple samples with microbiota from the same patient provide a common microbiome background, which can help to identify altered microbiome states later on.
 Due to technical challenges very few datasets provide data from the same patient on multiple locations.</p>
-<p><span class="citation">[<a href="#ref-jiang2019" role="doc-biblioref">229</a>]</span> A paper about multi-omics and microbiome…</p>
+<p><span class="citation">[<a href="#ref-jiang2019" role="doc-biblioref">239</a>]</span> A paper about multi-omics and microbiome…</p>
 <p><span class="citation">[<a href="#ref-krassowski2020" role="doc-biblioref">94</a>]</span> advice and recommendations on software engineering and reproducibility practices to share a comprehensive awareness with new researchers in multi-omics for end-to-end workflow.</p>
 </div>
 <div id="relevance-for-other-research" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Relevance for other research<a href="discussion.html#relevance-for-other-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>It is hard to provide more information that can be later used by researchers on the wet lab.</p>
-<p>Paper about using transcriptomics to infer inflammation without colonoscopy <span class="citation">[<a href="#ref-ungar2022" role="doc-biblioref">230</a>]</span></p>
+<p>Paper about using transcriptomics to infer inflammation without colonoscopy <span class="citation">[<a href="#ref-ungar2022" role="doc-biblioref">240</a>]</span></p>
 <p>There is a disconnect between the computational side and the experimental side, driven by the difficulty to think an experiment to test the new information that multi-omic experiments provide.</p>
 <p>Many combinations possible that are hard to explore, further research on how to reduce the space of possible combinations of bacteria or evaluate which combinations are more important might be useful on the future.
 As this might help focus on the most promising bacteria.</p>
@@ -538,15 +546,21 @@ How to apply this results ?</p>
 <p>Sequence just the ASV on patients to classify them on disease might be an option that would require further clinical validation.</p>
 <p>Selecting which genes are related to the microorganisms is will require also further validation (for which I did not have the creativity to think of).</p>
 <p>The several environmental factors highly affect the disease, so analysis or comparisons without taking into account them might provide misleading or false results.</p>
-<p>Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing <span class="citation">[<a href="#ref-zhang2019" role="doc-biblioref">231</a>]</span>.</p>
+<p>Multi-omics seems to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing <span class="citation">[<a href="#ref-zhang2019" role="doc-biblioref">241</a>]</span>.</p>
 <!--# From @collij2021 add references/adapt-->
-<p>To study complex systems, new technologies like “organ-on-chip” or more specifically “gut-on-chip” are being developed <span class="citation">[<a href="#ref-collij2021" role="doc-biblioref">232</a>]</span>.
+<p>To study complex systems, new technologies like “organ-on-chip” or more specifically “gut-on-chip” are being developed <span class="citation">[<a href="#ref-collij2021" role="doc-biblioref">242</a>]</span>.
 By introducing gut microbiota, these system will be of great help in the stud of the interaction of the gut microbiota dn the intestinal epithelium.</p>
 
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body">
+<div id="ref-khanna2014" class="csl-entry">
+16. Khanna S, Tosh PK. <a href="https://doi.org/10.1016/j.mayocp.2013.10.011">A Clinician’s Primer on the Role of the Microbiome in Human Health and Disease</a>. Mayo Clinic Proceedings. 2014;89:107–14.
+</div>
+<div id="ref-ferrer-picón2020" class="csl-entry">
+24. Ferrer-Picón E, Dotti I, Corraliza AM, Mayorgas A, Esteller M, Perales JC, et al. <a href="https://doi.org/10.1093/ibd/izz119">Intestinal Inflammation Modulates the Epithelial Response to Butyrate in Patients With Inflammatory Bowel Disease</a>. Inflammatory Bowel Diseases. 2020;26:43–55.
+</div>
 <div id="ref-thomas1998" class="csl-entry">
 40. Thomas GAO, Rhodes J, Green JT. <a href="https://doi.org/10.1111/j.1572-0241.1998.00144.x">Inflammatory bowel disease and smoking<span></span>a review</a>. Official journal of the American College of Gastroenterology | ACG. 1998;93:144149.
 </div>
@@ -661,17 +675,47 @@ By introducing gut microbiota, these system will be of great help in the stud of
 <div id="ref-thornburg2022" class="csl-entry">
 228. Thornburg ZR, Bianchi DM, Brier TA, Gilbert BR, Earnest TM, Melo MCR, et al. <a href="https://doi.org/10.1016/j.cell.2021.12.025">Fundamental behaviors emerge from simulations of a living minimal cell</a>. Cell. 2022;185:345–360.e28.
 </div>
+<div id="ref-criss2021" class="csl-entry">
+229. Criss ZK, Bhasin N, Di Rienzi SC, Rajan A, Deans-Fielder K, Swaminathan G, et al. <a href="https://doi.org/10.1152/physiolgenomics.00061.2021">Drivers of transcriptional variance in human intestinal epithelial organoids</a>. Physiological Genomics. 2021;53:486–508.
+</div>
+<div id="ref-arumugam2011" class="csl-entry">
+230. Arumugam M, Raes J, Pelletier E, Le Paslier D, Yamada T, Mende DR, et al. <a href="https://doi.org/10.1038/nature09944">Enterotypes of the human gut microbiome</a>. Nature. 2011;473:174–80.
+</div>
+<div id="ref-koren2013" class="csl-entry">
+231. Koren O, Knights D, Gonzalez A, Waldron L, Segata N, Knight R, et al. <a href="https://doi.org/10.1371/journal.pcbi.1002863">A Guide to Enterotypes across the Human Body: Meta-Analysis of Microbial Community Structures in Human Microbiome Datasets</a>. PLOS Computational Biology. 2013;9:e1002863.
+</div>
+<div id="ref-cheng2019" class="csl-entry">
+232. Cheng M, Ning K. <a href="https://doi.org/10.1016/j.gpb.2018.02.004">Stereotypes About Enterotype: the Old and New Ideas</a>. Genomics, Proteomics &amp; Bioinformatics. 2019;17:4–12.
+</div>
+<div id="ref-hasan2019" class="csl-entry">
+233. Hasan N, Yang H. <a href="https://doi.org/10.7717/peerj.7502">Factors affecting the composition of the gut microbiota, and its modulation</a>. PeerJ. 2019;7:e7502.
+</div>
+<div id="ref-bringiotti2014" class="csl-entry">
+234. Bringiotti R, Ierardi E, Lovero R, Losurdo G, Leo AD, Principi M. <a href="https://doi.org/10.4291/wjgp.v5.i4.550">Intestinal microbiota: The explosive mixture at the origin of inflammatory bowel disease?</a> World Journal of Gastrointestinal Pathophysiology. 2014;5:550–9.
+</div>
+<div id="ref-lloyd-price2019" class="csl-entry">
+235. Lloyd-Price J, Arze C, Ananthakrishnan AN, Schirmer M, Avila-Pacheco J, Poon TW, et al. <a href="https://doi.org/10.1038/s41586-019-1237-9">Multi-omics of the gut microbial ecosystem in inflammatory bowel diseases</a>. Nature. 2019;569:655.
+</div>
+<div id="ref-douglas2018" class="csl-entry">
+236. Douglas GM, Hansen R, Jones CMA, Dunn KA, Comeau AM, Bielawski JP, et al. <a href="https://doi.org/10.1186/s40168-018-0398-3">Multi-omics differentially classify disease state and treatment outcome in pediatric crohn<span>’</span>s disease</a>. Microbiome. 2018;6:13.
+</div>
+<div id="ref-takahashi2016" class="csl-entry">
+237. Takahashi K, Nishida A, Fujimoto T, Fujii M, Shioya M, Imaeda H, et al. <a href="https://doi.org/10.1159/000441768">Reduced abundance of butyrate-producing bacteria species in the fecal microbial community in crohn’s disease</a>. Digestion. 2016;93:59–65.
+</div>
+<div id="ref-halfvarson2017" class="csl-entry">
+238. Halfvarson J, Brislawn CJ, Lamendella R, Vázquez-Baeza Y, Walters WA, Bramer LM, et al. <a href="https://doi.org/10.1038/nmicrobiol.2017.4">Dynamics of the human gut microbiome in inflammatory bowel disease</a>. Nature Microbiology. 2017;2:1–7.
+</div>
 <div id="ref-jiang2019" class="csl-entry">
-229. Jiang D, Armour CR, Hu C, Mei M, Tian C, Sharpton TJ, et al. <a href="https://doi.org/10.3389/fgene.2019.00995">Microbiome multi-omics network analysis: Statistical considerations, limitations, and opportunities</a>. Frontiers in Genetics. 2019;10.
+239. Jiang D, Armour CR, Hu C, Mei M, Tian C, Sharpton TJ, et al. <a href="https://doi.org/10.3389/fgene.2019.00995">Microbiome multi-omics network analysis: Statistical considerations, limitations, and opportunities</a>. Frontiers in Genetics. 2019;10.
 </div>
 <div id="ref-ungar2022" class="csl-entry">
-230. Ungar B, Yavzori M, Fudim E, Picard O, Kopylov U, Eliakim R, et al. Host transcriptome signatures in human faecal-washes predict histological remission in patients with IBD. Gut. 2022. <a href="https://doi.org/10.1136/gutjnl-2021-325516">https://doi.org/10.1136/gutjnl-2021-325516</a>.
+240. Ungar B, Yavzori M, Fudim E, Picard O, Kopylov U, Eliakim R, et al. Host transcriptome signatures in human faecal-washes predict histological remission in patients with IBD. Gut. 2022. <a href="https://doi.org/10.1136/gutjnl-2021-325516">https://doi.org/10.1136/gutjnl-2021-325516</a>.
 </div>
 <div id="ref-zhang2019" class="csl-entry">
-231. Zhang X, Li L, Butcher J, Stintzi A, Figeys D. <a href="https://doi.org/10.1186/s40168-019-0767-6">Advancing functional and translational microbiome research using meta-omics approaches</a>. Microbiome. 2019;7:154.
+241. Zhang X, Li L, Butcher J, Stintzi A, Figeys D. <a href="https://doi.org/10.1186/s40168-019-0767-6">Advancing functional and translational microbiome research using meta-omics approaches</a>. Microbiome. 2019;7:154.
 </div>
 <div id="ref-collij2021" class="csl-entry">
-232. Collij V, Klaassen MAY, Weersma RK, Vila AV. <a href="https://doi.org/10.1007/s00439-020-02218-3">Gut microbiota in inflammatory bowel diseases: moving from basic science to clinical applications</a>. Human Genetics. 2021;140:703–8.
+242. Collij V, Klaassen MAY, Weersma RK, Vila AV. <a href="https://doi.org/10.1007/s00439-020-02218-3">Gut microbiota in inflammatory bowel diseases: moving from basic science to clinical applications</a>. Human Genetics. 2021;140:703–8.
 </div>
 </div>
             </section>
