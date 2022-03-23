@@ -68,10 +68,9 @@ format_design <- function(x, data){
   ncol <- ncol(data) + as.numeric(!all(rownames(data) == seq_len(nrow(data))))
   k <- kable_styling(x, latex_options = c("striped", "HOLD_position", "repeat_header"), 
                             full_width = FALSE, fixed_thead = TRUE)
-  k <- column_spec(k, column = 1, border_left = TRUE, bold = TRUE)
-  k <- column_spec(k, column = ncol, border_right = TRUE, bold = FALSE)
-  row_spec(k, row = 0, bold = TRUE)
-  
+  k <- column_spec(k, column = 1, border_left = TRUE, bold = TRUE, include_thead = FALSE)
+  k <- column_spec(k, column = ncol, border_right = TRUE, bold = FALSE, include_thead = FALSE)
+  row_spec(k, row = 0, bold = TRUE, italic = TRUE)
 }
 format_kable <- function(x) {
   k <- format_design(x)
