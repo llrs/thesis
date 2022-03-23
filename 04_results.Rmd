@@ -317,16 +317,21 @@ knitr::include_graphics("images/pugets-weights.png")
 
 The different models resulted on the following AVE values as reported on \@ref(tab:puget-models-ave):
 
-| Model        | inner AVE | outer AVE  |
-|--------------|-----------|------------|
-| 1            | 0.6333592 | 0.06920968 |
-| 1.2          | 0.851236  | 0.06923187 |
-| 2            | 0.2791546 | 0.07386952 |
-| 2.2          | 0.6902329 | 0.06927069 |
-| superblock   | 0.7055847 | 0.07345775 |
-| superblock.2 | 0.8047477 | 0.06958205 |
+```{r puget-models-ave}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+             Model = c("1", "1.2", "2", "2.2", "superblock", "superblock.2"),
+         "inner AVE" = c(0.6333592,0.851236,0.2791546,
+                       0.6902329,0.7055847,0.8047477),
+         "outer AVE" = c(0.06920968,0.06923187,
+                       0.07386952,0.06927069,0.07345775,0.06958205),
+  check.names = FALSE
+)
+k <- kable(df, caption.short ="AVE values of RGCCA models on Puget's dataset.", 
+           caption = "AVE values of RGCCA models on Puget's dataset. Values for both inner and outer AVE of the first canonical component of models 1, 1.2, 2 2.2 and superblock and superblock.2 are shown.")
+format_design(k, df)
+```
 
-: (#tab:puget-models-ave) The models and their AVE values.
 
 ### HSCT dataset {#results-hsct}
 
@@ -436,7 +441,7 @@ Following this split, we used inteRmodel (See section above \@ref(intermodel) )t
 | **Microbiome**    |       0       |     0      |     0.2     |   0.1    | 0    |
 | **Demographic**   |       0       |    0.2     |      0      |    0     | 0.6    |
 | **Location**      |      1      |    0.1     |      0      |    0     | 0    |
-| Time              |       0       |     0      |      0.6    |    0     | 0    |
+| **Time**              |       0       |     0      |      0.6    |    0     | 0    |
 
 : (#tab:hsct-model2-2) Relationships between the different blocks on the HSCT dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
 
