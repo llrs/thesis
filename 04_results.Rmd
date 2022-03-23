@@ -396,6 +396,19 @@ The models with the highest inner AVE of the family 1 and the family 2 models we
 ![(#fig:hsct-models) On the abscissa the transcriptome, on the ordinate the Microbiome. Each square represents a different model of the HSCT dataset. On panel A colored by disease status, on panel B colored by sample location. Model 0 has only transcriptome and microbiome data, models 1 to 1.2 with data about the samples and models 2.1 to 2.3 with data about the samples split in 3 blocks.](images/hsct-models.png)
 
 The weights of these models can be observed here:
+```{r hsct-model0}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+           "Model 0" = c("Transcriptome", "Microbiome"),
+     Transcriptome = c(0L, 1L),
+        Microbiome = c(1L, 0L),
+  check.names = FALSE
+)
+k <- kable(df, caption.short = "Model 0 of HSCT dataset.",
+      caption = "Relationships between the different blocks on the HSCT dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
+
 
 | Model 0           | Transcriptome | Microbiome |
 |-------------------|:-------------:|:----------:|
@@ -404,61 +417,89 @@ The weights of these models can be observed here:
 
 : (#tab:hsct-model0) Relationships between the different blocks on the HSCT dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.
 
-| Model 1.1         | Transcriptome | Microbiome | metadata |
-|-------------------|:-------------:|:----------:|:--------:|
-| **Transcriptome** |       0       |     0      |    1     |
-| **Microbiome**    |       0       |     0      |    1     |
-| **metadata**      |       1       |     1      |    0     |
-
-: (#tab:hsct-model1-1) Relationships between the different blocks on the HSCT dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.
+```{r hsct-model1-1}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+         "Model 1.1" = c("Transcriptome", "Microbiome", "metadata"),
+     Transcriptome = c(0L, 0L, 1L),
+        Microbiome = c(0L, 0L, 1L),
+          metadata = c(1L, 1L, 0L),
+  check.names = FALSE
+)
+k <- kable(df, caption.short = "Model 1.1 of HSCT dataset.",
+           caption = "elationships between the different blocks on the HSCT dataset for model 1.1. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
 
 When looking for the model that adjust better following this structure we arrived to model 1.2, described below:
 
-| Model 1.2         | Transcriptome | Microbiome | metadata |
-|-------------------|:-------------:|:----------:|:--------:|
-| **Transcriptome** |       0       |     0      |    1     |
-| **Microbiome**    |       0       |     0      |   0.1    |
-| **metadata**      |       1       |    0.1     |    0     |
-
-: (#tab:hsct-model1-2) Relationships between the different blocks on the HSCT dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.
+```{r hsct-model1-2}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+  "Model 1.2" = c("Transcriptome", "Microbiome", "metadata"),
+  Transcriptome = c(0L, 0L, 1L),
+  Microbiome = c(0, 0, 0.1),
+  metadata = c(1, 0.1, 0),
+  check.names = FALSE
+)
+k <- kable(df, caption.short = "Model 1.2 of HSCT dataset.", 
+           caption = "Relationships between the different blocks on the HSCT dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
 
 On model two we split the invariable variables from those related to the location:
 
-| Model 2           | Transcriptome | Microbiome | Location | Demographic | Time |
-|-------------------|:-------------:|:----------:|:--------:|:-----------:|:----:|
-| **Transcriptome** |       0       |     1      |    1     |      1      |      |
-| **Microbiome**    |       1       |     0      |    1     |      1      |      |
-| **Demographic**   |       1       |     1      |    0     |      0      |      |
-| **Location**      |       1       |     1      |    0     |      0      |      |
+```{r hsct-model2}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+  "Model 2" = c("Transcriptome", "Microbiome","Demographic","Location"),
+  Transcriptome = c(0L, 1L, 1L, 1L),
+  Microbiome = c(1L, 0L, 1L, 1L),
+  Location = c(1L, 1L, 0L, 0L),
+  Demographic = c(1L, 1L, 0L, 0L),
+  Time = c(0L, 0L, 1L, 0L),
+  check.names = FALSE)
+k <- kable(df, caption.short = "Model 2 of HSCT dataset.",
+           caption = "Relationships between the different blocks on the HSCT dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
 
-: (#tab:hsct-model2) Relationships between the different blocks on the HSCT dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship.
+Following this split, we used inteRmodel (See section above \@ref(intermodel)) to find the model that has higher inner AVE for these blocks is the one on table \@ref(tab:hsct-model2-2):
 
-Following this split, we used inteRmodel (See section above \@ref(intermodel) )to find the model that has higher inner AVE for these blocks is the following:
+```{r hsct-model2-2}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+               "Model 2.2" = c("Transcriptome",
+                             "Microbiome","Demographic","Location","Time"),
+     Transcriptome = c(0L, 0L, 0L, 1L, 0L),
+        Microbiome = c(0, 0, 0.2, 0.1, 0),
+       Demographic = c(0, 0.2, 0, 0, 0.6),
+          Location = c(1, 0.1, 0, 0, 0),
+              Time = c(0, 0, 0.6, 0, 0),
+  check.names = FALSE)
+k <- kable(df, caption.short = "Model 2.2",
+           caption = "Relationships between the different blocks on the HSCT dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
 
-| Model 2.2         | Transcriptome | Microbiome | Demographic | Location | Time |
-|-------------------|:-------------:|:----------:|:-----------:|:--------:|:----:|
-| **Transcriptome** |       0       |     0      |      0      |   1    | 0    |
-| **Microbiome**    |       0       |     0      |     0.2     |   0.1    | 0    |
-| **Demographic**   |       0       |    0.2     |      0      |    0     | 0.6    |
-| **Location**      |      1      |    0.1     |      0      |    0     | 0    |
-| **Time**              |       0       |     0      |      0.6    |    0     | 0    |
+We also tested specifically a model from the family 2.3, which can be seen on table \@ref(tab:hsct-model2-3):
 
-: (#tab:hsct-model2-2) Relationships between the different blocks on the HSCT dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
-
-We also tested specifically a model from the family 2.3 
-
-<!--# TODO fix this  the model is the same as in 2.2 and it shouldn't or would it? (wrong on the paper) -->
-
-| Model 2.3         | Transcriptome | Microbiome | Demographic | Location | Time|
-|-------------------|:-------------:|:----------:|:-----------:|:--------:|:---:|
-| **Transcriptome** |       0       |   0.1      |      0      |    1     | 0   |
-| **Microbiome**    |      0.1      |     0      |     0.1     |   0.1    | 0   |
-| **Demographic**   |       0       |    0.1     |      0      |    0     | 1   |
-| **Location**      |       1       |    0.1     |      0      |    0     | 0   |
-| **Time**          |       0       |     0      |      1      |    0     | 0   |
-|                   |               |            |             |          |     |
-
-: (#tab:hsct-model2-3) Relationships between the different blocks on the HSCT dataset for model 2.3. 0 indicates no relationship and 1 indicates a strong relationship.
+```{r hsct-model2-3}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+               "Model 2.3" = c("Transcriptome",
+                             "Microbiome","Demographic","Location","Time"),
+     Transcriptome = c(0, 0.1, 0, 1, 0),
+        Microbiome = c(0.1, 0, 0.1, 0.1, 0),
+       Demographic = c(0, 0.1, 0, 0, 1),
+          Location = c(1, 0.1, 0, 0, 0),
+              Time = c(0L, 0L, 1L, 0L, 0L),
+  check.names = FALSE
+      )
+k <- kable(df, caption.short = "Model 2.3 of HSCT dataset.",
+      caption = "Relationships between the different blocks on the HSCT dataset for model 2.3. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
 
 The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see figure \@ref(fig:hsct-models) and [S2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002) data of [@revilla2021]).
 Overall, we see that the relationships in the model affected the distribution of samples on the components of both the host transcriptome and the microbiome.
