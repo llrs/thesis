@@ -72,7 +72,7 @@ The package provides a new class to handle fuzzy sets and the associate informat
 
 The package had a long development process with initial iterations based on GSEABase package which was later abandoned ([GSEAdv](https://github.com/llrs/GSEAdv)) to also include some uncertainty on the relationship of a gene with a given gene set.
 
-The package formed part of an exploration of the Bioconductor community (project to develop, support, and disseminate free open source software that facilitates rigorous and reproducible analysis of data from current and emerging biological assay) for more modern and faster handling of sets than (GSEABAse)[https://bioconductor.org/packages/GSEABase].
+The package formed part of an exploration of the Bioconductor community (project to develop, support, and disseminate free open source software that facilitates rigorous and reproducible analysis of data from current and emerging biological assay) for more modern and faster handling of sets than [GSEABase](https://bioconductor.org/packages/GSEABase).
 There were three different packages created as part of this process, `BaseSet`, `BiocSet` released [on Bioconductor](https://bioconductor.org/packages/BiocSet/) and `unisets`, available [on github](https://github.com/kevinrue/unisets).
 The three different approaches were presented at a birds of feather on BioC2019, the annual conference of Bioconductor on 2019.
 
@@ -131,7 +131,7 @@ If the users want to perform a leave-one-out procedure they can use `looIndex`.
 include_graphics("images/inteRmodel-workflows.png")
 ```
 
-For more information, you can access the (manual online)[https://llrs.github.io/inteRmodel/] or once it is installed.
+For more information, you can access the [manual online](https://llrs.github.io/inteRmodel/) or once it is installed.
 
 The package cannot choose which variables use from the block with information to split into several blocks.
 However, it provides the `model_RGCCA` function to make it easy to prepare such variables for RGCCA input.
@@ -174,7 +174,7 @@ df <- data.frame(
   Localization = c(1L, 1L, 0L),
   check.names = FALSE
 )
-k <- kable(df, align = c("c", "c", "c", "c"),
+k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Model 1 for Puget's dataset.",
            caption = "Model 1 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
@@ -192,7 +192,7 @@ df <- data.frame(
                CGH = c(0, 0, 0.1),
       Localization = c(1, 0.1, 0)
 )
-k <- kable(df, align = c("c", "c", "c", "c"),
+k <- kable(df, align =  rep("c", ncol(df)), 
            caption.short = "Model 1.2 for Puget's dataset.",
            caption = "Model 1.2 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
@@ -210,7 +210,7 @@ df <- data.frame(
         Invariable = c(1L, 1L, 0L, 0L),
       Localization = c(1L, 1L, 0L, 0L)
 )
-k <- kable(df, align = c("c", "c", "c", "c", "c"),
+k <- kable(df, align =  rep("c", ncol(df)), 
            caption.short = "Model 2 for Puget's dataset.",
            caption = "Model 2 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
@@ -227,7 +227,7 @@ df <- data.frame(
         Invariable = c("0", "1/3", "0", "0"),
       Localization = c(1L, 0L, 0L, 0L)
       )
-k <- kable(df, align = c("c", "c", "c", "c", "c"),
+k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Model 2.2 for Puget's dataset.",
            caption = "Model 2.2 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
@@ -244,7 +244,7 @@ df <- data.frame(
         Superblock = c(1L, 1L, 0L, 1L),
       Localization = c(0L, 0L, 1L, 0L)
       )
-k <- kable(df, align = c("c", "c", "c", "c", "c"),
+k <- kable(df, align =  rep("c", ncol(df)),
            caption.short = "Model with superblock for Puget's dataset.",
            caption = "Relationships between the different blocks on the Puget's dataset for model superblock. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
@@ -262,7 +262,7 @@ df <- data.frame(
         Superblock = c(0L, 1L, 0L, 1L),
       Localization = c(1L, 0L, 0L, 0L)
       )
-k <- kable(df, align = c("c", "c", "c", "c", "c"),
+k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Model with superblock.2 for Puget's dataset.",
            caption = "Relationships between the different blocks on the Puget's dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
@@ -327,7 +327,8 @@ df <- data.frame(
                        0.07386952,0.06927069,0.07345775,0.06958205),
   check.names = FALSE
 )
-k <- kable(df, caption.short ="AVE values of RGCCA models on Puget's dataset.", 
+k <- kable(df, align = rep("c", ncol(df)), 
+           caption.short ="AVE values of RGCCA models on Puget's dataset.", 
            caption = "AVE values of RGCCA models on Puget's dataset. Values for both inner and outer AVE of the first canonical component of models 1, 1.2, 2 2.2 and superblock and superblock.2 are shown.")
 format_design(k, df)
 ```
@@ -350,7 +351,8 @@ df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD",
                  R = c(0.18057, 0.03120, 0.01306, 0.01279, 0.02427, 0.00816, 0.00486, 0.72508),
                  "p-value" = c(.0002, .0002, .0012, 0.11798, 0.11458, 0.03519, 0.52190, NA),
                  check.names = FALSE)
-k <- kable(df, caption.short = "Permanova analysis of transcriptome.",
+k <- kable(df, align = rep("c", ncol(df)), 
+           caption.short = "Permanova analysis of transcriptome.",
       caption = "Permanova analysis of transcriptome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
 format_design(k, df)
 ```
@@ -360,7 +362,8 @@ df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD",
                  R = c(0.06061, 0.04967, 0.01712, 0.01091, 0.02089, 0.01139, 0.00289, 0.82652),
                  "p-value" = c(.0002000, .0002000, .0003999, 0.6604679, 0.8476305, 0.00759185, 0.9994001, NA),
                  check.names = FALSE)
-k <- kable(df, caption.short = "Permanova analysis of microbiome",
+k <- kable(df, align = rep("c", ncol(df)), 
+           caption.short = "Permanova analysis of microbiome",
       caption = "Permanova analysis of microbiome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
 format_design(k, df)
 ```
@@ -396,6 +399,7 @@ The models with the highest inner AVE of the family 1 and the family 2 models we
 ![(#fig:hsct-models) On the abscissa the transcriptome, on the ordinate the Microbiome. Each square represents a different model of the HSCT dataset. On panel A colored by disease status, on panel B colored by sample location. Model 0 has only transcriptome and microbiome data, models 1 to 1.2 with data about the samples and models 2.1 to 2.3 with data about the samples split in 3 blocks.](images/hsct-models.png)
 
 The weights of these models can be observed here:
+
 ```{r hsct-model0}
 df <- data.frame(
   stringsAsFactors = FALSE,
@@ -404,18 +408,13 @@ df <- data.frame(
         Microbiome = c(1L, 0L),
   check.names = FALSE
 )
-k <- kable(df, caption.short = "Model 0 of HSCT dataset.",
+k <- kable(df, align = rep("c", ncol(df)), 
+           caption.short = "Model 0 of HSCT dataset.",
       caption = "Relationships between the different blocks on the HSCT dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
-
-| Model 0           | Transcriptome | Microbiome |
-|-------------------|:-------------:|:----------:|
-| **Transcriptome** |       0       |     1      |
-| **Microbiome**    |       1       |     0      |
-
-: (#tab:hsct-model0) Relationships between the different blocks on the HSCT dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.
+If we include the information about the samples all together in a block called metadata we can start from this model on \@ref(tab:hsct-model1-1):
 
 ```{r hsct-model1-1}
 df <- data.frame(
@@ -426,12 +425,13 @@ df <- data.frame(
           metadata = c(1L, 1L, 0L),
   check.names = FALSE
 )
-k <- kable(df, caption.short = "Model 1.1 of HSCT dataset.",
+k <- kable(df, align = rep("c", ncol(df)), 
+           caption.short = "Model 1.1 of HSCT dataset.",
            caption = "elationships between the different blocks on the HSCT dataset for model 1.1. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
-When looking for the model that adjust better following this structure we arrived to model 1.2, described below:
+When looking for the model that adjust better following this blocks we arrived to model 1.2 thanks to `inteRmodel`, described below on table \@ref(tab:hsct-model1-2):
 
 ```{r hsct-model1-2}
 df <- data.frame(
@@ -442,7 +442,8 @@ df <- data.frame(
   metadata = c(1, 0.1, 0),
   check.names = FALSE
 )
-k <- kable(df, caption.short = "Model 1.2 of HSCT dataset.", 
+k <- kable(df, align = rep("c", ncol(df)), 
+           caption.short = "Model 1.2 of HSCT dataset.", 
            caption = "Relationships between the different blocks on the HSCT dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
@@ -452,19 +453,20 @@ On model two we split the invariable variables from those related to the locatio
 ```{r hsct-model2}
 df <- data.frame(
   stringsAsFactors = FALSE,
-  "Model 2" = c("Transcriptome", "Microbiome","Demographic","Location"),
-  Transcriptome = c(0L, 1L, 1L, 1L),
-  Microbiome = c(1L, 0L, 1L, 1L),
-  Location = c(1L, 1L, 0L, 0L),
-  Demographic = c(1L, 1L, 0L, 0L),
-  Time = c(0L, 0L, 1L, 0L),
+  "Model 2" = c("Transcriptome", "Microbiome","Demographic","Location", "Time"),
+  Transcriptome = c(0L, 1L, 1L, 1L, 0L),
+  Microbiome = c(1L, 0L, 1L, 1L, 0L),
+  Demographic = c(1L, 1L, 0L, 0L, 1L),
+  Location = c(1L, 1L, 0L, 0L, 0L),
+  Time = c(0L, 0L, 1L, 0L, 0L),
   check.names = FALSE)
-k <- kable(df, caption.short = "Model 2 of HSCT dataset.",
+k <- kable(df, align = rep("c", ncol(df)),
+           caption.short = "Model 2 of HSCT dataset.",
            caption = "Relationships between the different blocks on the HSCT dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
-Following this split, we used inteRmodel (See section above \@ref(intermodel)) to find the model that has higher inner AVE for these blocks is the one on table \@ref(tab:hsct-model2-2):
+Following this split, we used `inteRmodel` (See section above \@ref(intermodel)) to find the model that has higher inner AVE for these blocks is the one on table \@ref(tab:hsct-model2-2):
 
 ```{r hsct-model2-2}
 df <- data.frame(
@@ -477,7 +479,7 @@ df <- data.frame(
           Location = c(1, 0.1, 0, 0, 0),
               Time = c(0, 0, 0.6, 0, 0),
   check.names = FALSE)
-k <- kable(df, caption.short = "Model 2.2",
+k <- kable(df, caption.short = "Model 2.2", align = rep("c", ncol(df)),
            caption = "Relationships between the different blocks on the HSCT dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
@@ -496,26 +498,31 @@ df <- data.frame(
               Time = c(0L, 0L, 1L, 0L, 0L),
   check.names = FALSE
       )
-k <- kable(df, caption.short = "Model 2.3 of HSCT dataset.",
-      caption = "Relationships between the different blocks on the HSCT dataset for model 2.3. 0 indicates no relationship and 1 indicates a strong relationship.")
+k <- kable(df, align = rep("c", ncol(df)), 
+           caption.short = "Model 2.3 of HSCT dataset.", 
+           caption = "Relationships between the different blocks on the HSCT dataset for model 2.3. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
 The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see figure \@ref(fig:hsct-models) and [S2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002) data of [@revilla2021]).
 Overall, we see that the relationships in the model affected the distribution of samples on the components of both the host transcriptome and the microbiome.
 
-| Model | inner AVE | outer AVE  |
-|-------|-----------|------------|
-| 0     | 0.3999234 | 0.10016886 |
-| 1     | 0.623019  | 0.08423331 |
-| 1.1   | 0.5678189 | 0.08487135 |
-| 1.2   | 0.7043881 | 0.07757663 |
-| 2     | 0.2517363 | 0.09820497 |
-| 2.1   | 0.6940253 | 0.09402657 |
-| 2.2   | 0.818764  | 0.09416275 |
-| 2.3   | 0.7761846 | 0.09439379 |
 
-: (#tab:hsct-models-ave) The models on the HSCT and their AVE values.
+```{r hsct-models-ave}
+df <- data.frame(
+       Model = c(0, 1, 1.1, 1.2, 2, 2.1, 2.2, 2.3),
+         "inner AVE" = c(0.3999234,0.623019,0.5678189,
+                       0.7043881,0.2517363,0.6940253,0.818764,0.7761846),
+         "outer AVE" = c(0.10016886,0.08423331,
+                       0.08487135,0.07757663,0.09820497,0.09402657,0.09416275,
+                       0.09439379),
+       check.names = FALSE
+      )
+k <- kable(df, align = rep("c", ncol(df)),
+      caption.short = "The models on the HSCT and their AVE values.",
+      caption = "The models on the HSCT and their AVE values. For each model the inner AVE and the outer AVE is presented.")
+format_design(k, df)
+```
 
 The different models selected different variables, some of which are shared between models.
 The most similar models are those that have split the metadata into 3 blocks, followed by those that have the metadata in a single block.
@@ -552,8 +559,9 @@ df <- data.frame(Model = c("0", "1", "1.1", "1.2", "2", "2.1", "2.2", "2.3"),
            AUC = c(0.453703703703704, 0.430941358024691, 0.463927469135802, 0.595871913580247, 
 0.945023148148148, 0.998842592592593, 0.998070987654321, 0.996913580246914
 ))
-k <- kable(df, caption.short = "AUC values of RGCCA models on the HSCT dataset.",
-      caption = "AUC values of RGCCA models of the HSCT dataset classyfing the location of the sample according to the first component of the transcriptome block. From model 0 to model 2.3, the best classification is achieved with model 2.1. Note that this is removing two samples for which the location is unkown.")
+k <- kable(df, align = rep("c", ncol(df)),
+           caption.short = "AUC values of RGCCA models on the HSCT dataset.",
+           caption = "AUC values of RGCCA models of the HSCT dataset classyfing the location of the sample according to the first component of the transcriptome block. From model 0 to model 2.3, the best classification is achieved with model 2.1. Note that this is removing two samples for which the location is unkown.")
 format_design(k, df)
 ```
 
@@ -583,7 +591,8 @@ m0 <- data.frame("Model 0" = c("RNAseq", "micro"),
                  RNAseq = c(0, 1),
                  micro = c(1, 0),
                  check.names = FALSE)
-k <- kable(m0, caption.short = "Model 0 of H\u00E4sler dataset", 
+k <- kable(m0, align = rep("c", ncol(m0)),
+           caption.short = "Model 0 of H\u00E4sler dataset", 
            caption = "Model 0 of H\u00E4sler dataset")
 format_design(k, m0)
 ```
@@ -598,7 +607,8 @@ m1.1 <- data.frame(
   meta = c(1, 1, 0),
   check.names = FALSE
 )
-k <- kable(m1.1, caption.short = "Model 1.1 of H\u00E4sler dataset", 
+k <- kable(m1.1, align = rep("c", ncol(m1.1)),
+           caption.short = "Model 1.1 of H\u00E4sler dataset", 
            caption = "Model 1.1 of H\u00E4sler dataset")
 format_design(k, m1.1)
 ```
@@ -609,7 +619,9 @@ The after optimization of the model of family 1, the best one is on table \@ref(
 m1.2 <- structure(c(0, 0, 1, 0, 0, 0.1, 1, 0.1, 0), .Dim = c(3L, 3L), .Dimnames = list(
     c("RNAseq", "micro", "meta"), c("RNAseq", "micro", "meta"
     )))
-k <- kable(as.data.frame(m1.2), caption.short = "Model 1.2 of H\u00E4sler dataset", 
+k <- kable(as.data.frame(m1.2), 
+           align = rep("c", ncol(m1.2)),
+           caption.short = "Model 1.2 of H\u00E4sler dataset", 
            caption = "Model 1.2 of H\u00E4sler dataset")
 format_design(k, m1.2)
 ```
@@ -625,7 +637,8 @@ m2.1 <- data.frame(list(
                    Demographic = c(0, 1, 0, 0, 1), 
                    Time = c(0, 0, 0, 1, 0), 
                    check.names = FALSE)
-k <- kable(m2.1, caption.short = "Model 2.1 of H\u00E4sler dataset", 
+k <- kable(m2.1, align = rep("c", ncol(m2.1)),
+           caption.short = "Model 2.1 of H\u00E4sler dataset", 
            caption = "Model 2.1 of H\u00E4sler dataset")
 format_design(k, df)
 ```
@@ -639,7 +652,8 @@ m2.2 <- data.frame(list("Model 2.2" = c("RNAseq", "micro", "Location", "Demograp
                         Location = c(1, 0, 0, 0, 0), 
                         Demographic = c(0, 0.1, 0, 0, 0.1), 
                         Time = c(0, 1, 0, 0.1, 0)), check.names = FALSE)
-k <- kable(as.data.frame(m2.2), caption.short = "Model 2.2 of H\u00E4sler dataset", 
+k <- kable(m2.2, align = rep("c", ncol(m2.2)),
+           caption.short = "Model 2.2 of H\u00E4sler dataset", 
            caption = "Model 2.2 of H\u00E4sler dataset")
 format_design(k, df)
 ```
@@ -651,7 +665,8 @@ df <- data.frame(Model = c("0", "1.1", "1.2", "2.1", "2.2"),
            "inner AVE" = c(0.8217371, 0.7461423, 0.8349410, 0.4980681, 0.7513065),
            "outer AVE" = c(0.0961236, 0.1024148, 0.1025486, 0.1008395, 0.1009915),
          check.names = FALSE)
-k <- kable(df, caption.short = "AVE values of RGCCA models on H\u00E4sler's dataset",
+k <- kable(df, align = rep("c", ncol(df)),
+           caption.short = "AVE values of RGCCA models on H\u00E4sler's dataset",
       caption = "AVE values of RGCCA models on H\u00E4sler's dataset. The inner and the outer AVE scores of multiple models tested on the H\u00E4sler dataset are shown. The model with the hightes inner AVE is model 1.2.")
 format_design(k, df)
 ```
@@ -678,7 +693,8 @@ This accuracy resulted on high AUC values for all the models, as can be seen on 
 df <- data.frame(
   Model = c("0", "1.1", "1.2", "2.1", "2.2"),
   AUC = c(0.801149425287356, 0.97816091954023, 0.997701149425287, 1, 1))
-k <- kable(df, caption.short = "AUC for models with RGCCA on H\u00E4sler's dataset",
+k <- kable(df, align = rep("c", ncol(df)), 
+           caption.short = "AUC for models with RGCCA on H\u00E4sler's dataset",
       caption = "AUC for models with RGCCA on H\u00E4sler's dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample.")
 format_design(k, df)
 ```
@@ -694,54 +710,97 @@ It was even better to classify the samples according to the type of sample they 
 
 ### Morgan's dataset {#results-morgan}
 
-We tested if results of inteRmodel were consistent on this dataset with the other datasets.
+We tested if results of inteRmodel were consistent on this dataset with the other datasets. 
+The first model we tried is model 0 as in table \@ref(tab:morgan-model0):
 
-| Model 0           | Transcriptome | Microbiome |
-|-------------------|:-------------:|:----------:|
-| **Transcriptome** |       0       |     1      |
-| **Microbiome**    |       1       |     0      |
+```{r morgan-model0}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+           "Model 0" = c("Transcriptome", "Microbiome"),
+     Transcriptome = c(0L, 1L),
+        Microbiome = c(1L, 0L),
+  check.names = FALSE
+      )
+k <- kable(df, align = rep("c", ncol(df)),
+           caption.short = "Model 0 of Morgan's dataset.",
+           caption = "Relationships between the different blocks on the Morgan's dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
 
-: (#tab:morgan-model0) Relationships between the different blocks on the Morgan's dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.
+We then added the data about the samples as provided \@ref(methods-morgan), on a simple model as in table \@ref(tab:morgan-model1):
 
-| Model 1           | Transcriptome | Microbiome | metadata |
-|-------------------|:-------------:|:----------:|:--------:|
-| **Transcriptome** |       0       |     0      |    1     |
-| **Microbiome**    |       0       |     0      |    1     |
-| **metadata**      |       1       |     1      |    0     |
+```{r morgan-model1}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+           "Model 1" = c("Transcriptome", "Microbiome", "metadata"),
+     Transcriptome = c(0L, 0L, 1L),
+        Microbiome = c(0L, 0L, 1L),
+          metadata = c(1L, 1L, 0L),
+  check.names = FALSE
+      )
+k <- kable(df, align = rep("c", ncol(df)),
+           caption.short = "Model 1 of Morgan's dataset.",
+           caption = "Relationships between the different blocks on the Morgan's dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
 
-: (#tab:morgan-model1) Relationships between the different blocks on the Morgan's dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.
 
 When looking for the model that adjust better following this structure we arrived to model 1.2, described below:
 
-| Model 1.2         | Transcriptome | Microbiome | metadata |
-|-------------------|:-------------:|:----------:|:--------:|
-| **Transcriptome** |       0       |    0.1     |    0     |
-| **Microbiome**    |      0.1      |     0      |    1     |
-| **metadata**      |       0       |     1      |    0     |
+```{r morgan-model1-2}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+         "Model 1.2" = c("Transcriptome", "Microbiome", "metadata"),
+     Transcriptome = c(0, 0.1, 0),
+        Microbiome = c(0.1, 0, 1),
+          metadata = c(0L, 1L, 0L),
+  check.names = FALSE
+      )
+k <- kable(df, align = rep("c", ncol(df)),
+           caption.short = "Model 1.2 of Morgan's dataset.",
+           caption = "Relationships between the different blocks on the Morgan's dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
 
-: (#tab:morgan-model1-2) Relationships between the different blocks on the Morgan's dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.
 
 On model two we split the invariable variables from those related to the location (see \@ref(tab:morgan-model2)):
 
-| Model 2           | Transcriptome | Microbiome | Demographic | Location |
-|-------------------|:-------------:|:----------:|:-----------:|:--------:|
-| **Transcriptome** |       0       |     1      |      1      |    1     |
-| **Microbiome**    |       1       |     0      |      1      |    1     |
-| **Demographic**   |       1       |     1      |      0      |    0     |
-| **Location**      |       1       |     1      |      0      |    0     |
+```{r morgan-model2}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+                 "Model 2" = c("Transcriptome",
+                             "Microbiome","Demographic","Location"),
+     Transcriptome = c(0L, 1L, 1L, 1L),
+        Microbiome = c(1L, 0L, 1L, 1L),
+       Demographic = c(1L, 1L, 0L, 0L),
+          Location = c(1L, 1L, 0L, 0L),
+  check.names = FALSE 
+      )
+k <- kable(df, align = rep("c", ncol(df)),
+           caption.short = "Model 2 of Morgan's dataset.",
+           caption = "Relationships between the different blocks on the Morgan's dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
 
-: (#tab:morgan-model2) Relationships between the different blocks on the Morgan's dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship.
 
-Following this split, the model that has higher inner AVE for these blocks is the following:
+The model that has higher inner AVE for these blocks is the following:
 
-| Model 2.2         | Transcriptome | Microbiome | Demographic | Location |
-|-------------------|:-------------:|:----------:|:-----------:|:--------:|
-| **Transcriptome** |       0       |    0.1     |      1      |   0.1    |
-| **Microbiome**    |      0.1      |     0      |      0      |    0     |
-| **Demographic**   |       1       |     0      |      0      |    0     |
-| **Location**      |      0.1      |     0      |      0      |    0     |
-
-: (#tab:morgan-model2-2) Relationships between the different blocks on the Morgan's dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
+```{r morgan-model2-2}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+               "Model 2.2" = c("Transcriptome",
+                             "Microbiome","Demographic","Location"),
+     Transcriptome = c(0, 0.1, 1, 0.1),
+        Microbiome = c(0.1, 0, 0, 0),
+       Demographic = c(1L, 0L, 0L, 0L),
+          Location = c(0.1, 0, 0, 0),
+  check.names = FALSE
+      )
+k <- kable(df, align = rep("c", ncol(df)),
+           caption.short = "Model 2.2 of Morgan's dataset.",
+           caption = "Relationships between the different blocks on the Morgan's dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
 
 Each model is different from previous models.
 After model 2.2 we looked on the model similar to model 2.3 on HSCT dataset showed but it is the same as in model 2.2. 
@@ -753,18 +812,20 @@ The different models were not able to separate the samples neither by location o
 
 Nevertheless, we compared the classification with the MCIA algorithm and still resulted that model 2.2 provide a better classification than MCIA.
 
-| Model | inner AVE | outer AVE |
-|-------|-----------|-----------|
-| 0     | 0.4735601 | 0.1098639 |
-| 1     | 0.6333592 | 0.115228  |
-| 1.1   | 0.2448234 | 0.1104746 |
-| 1.2   | 0.7868443 | 0.042266  |
-| 2     | 0.4404123 | 0.108873  |
-| 2.1   | 0.6052598 | 0.10749   |
-| 2.2   | 0.6895661 | 0.1081315 |
-| 2.3   | 0.6895661 | 0.1081315 |
-
-: (#tab:morgan-models-ave) The models and their AVE values.
+```{r morgan-models-ave}
+df <- data.frame(
+       Model = c(0, 1, 1.1, 1.2, 2, 2.1, 2.2, 2.3),
+         "inner AVE" = c(0.4735601,0.6333592,0.2448234,
+                       0.7868443,0.4404123,0.6052598,0.6895661,0.6895661),
+         "outer AVE" = c(0.1098639,0.115228,0.1104746,
+                       0.042266,0.108873,0.10749,0.1081315,0.1081315),
+       check.names = FALSE
+      )
+k <- kable(df, align = rep("c", ncol(df)),
+      caption.short = "The models on Morgan's dataset and their AVE values.",
+      caption = "The models on Morgan's dataset and their AVE values. For each model the inner and outer AVE value is presented.")
+format_design(k, df)
+```
 
 When exploring the bootstraps of the data we found that model 1.2 is highly variable:
 
@@ -785,7 +846,8 @@ df <- data.frame(Model = c("0", "1", "1.1", "1.2", "2", "2.1", "2.2", "2.3"),
            AUC = c(0.496973365617433, 0.793497059840886, 0.816153580076098, 0.560619162919405, 
 0.85463507436873, 0.847371151850571, 0.835264614320304, 0.835264614320304
 ))
-k <- kable(df, caption.short="AUC for Morgan's dataset", 
+k <- kable(df, align = rep("c", ncol(df)), 
+           caption.short="AUC for Morgan's dataset", 
       caption="AUC for Morgan's dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA.")
 format_design(k, df)
 ```
@@ -803,23 +865,37 @@ If we quantify this separation by the first dimension of MCIA, the AUC is 0.818,
 This dataset was processed to confirm the results on the previous datasets.
 As always first we started with model 0, connecting both the RNAseq and the 16S blocks:
 
-| Model 0 | RNAseq | 16S |
-|---------|:------:|:---:|
-| RNAseq  |   0    |  1  |
-| 16S     |   1    |  0  |
+```{r howell-model0}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+       check.names = FALSE,
+           `Model 0` = c("RNAseq", "16S"),
+            RNAseq = c(0L, 1L),
+             `16S` = c(1L, 0L)
+      )
+k <- kable(df, align = rep("c", ncol(df)),
+           caption.short = "Model 0 of Howell's dataset.",
+           caption = "Relationships between the different blocks on the Howell's dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.")
+```
 
-: (#tab:howell-model0) Relationships between the different blocks on the Howell's dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.
-
-Later we look for the best model of family 1.
+Later we look for the best model of family 1 (without looking at any previous model of family 1).
 This resulted on the following model \@ref(tab:howell-model1-2):
 
-| Model 1.2 | RNAseq | 16S | metadata |
-|-----------|:------:|:---:|:--------:|
-| RNAseq    |  0.0   | 0.1 |    1     |
-| 16S       |  0.1   | 0.0 |    0     |
-| metadata  |  1.0   | 0.0 |    0     |
+```{r howell-model1-2}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+       check.names = FALSE,
+         `Model 1.2` = c("RNAseq", "16S", "metadata"),
+            RNAseq = c(0, 0.1, 1),
+             `16S` = c(0.1, 0, 0),
+          metadata = c(1L, 0L, 0L)
+      )
+k <- kable(df, align = rep("c", ncol(df)),
+           caption.short = "Models 1.2 of Howell's dataset.",
+           caption = "Relationships between the different blocks on the Howell's dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
 
-: (#tab:howell-model1-2) Relationships between the different blocks on the Howell's dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.
 
 Model 1.2 \@ref(tab:howell-model1-2) was the best according to the AVE score but perform worse when attempting to recreate known biological differences via classifying samples as we can see below \@ref(fig:howell-models):
 
@@ -830,25 +906,38 @@ Model 1.2 \@ref(tab:howell-model1-2) was the best according to the AVE score but
 Model 2.2 was selected for further analysis as it describes more accurately the biology of the dataset it.
 Model 2.2 can be seen on \@ref(tab:howell-model2-2).
 
-| Model 2.2    | RNAseq | 16S | demographics | location |
-|--------------|:------:|:---:|:------------:|:--------:|
-| RNAseq       |   0    |  0  |      0       |    1     |
-| 16S          |   0    |  0  |      1       |    0     |
-| demographics |   0    |  1  |      0       |   0.1    |
-| location     |   1    |  0  |     0.1      |    0     |
-
-: (#tab:howell-model2-2) Relationships between the different blocks on the Howell's dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
+```{r howell-model2-2}
+df <- data.frame(
+  stringsAsFactors = FALSE,
+       check.names = FALSE,
+         `Model 2.2` = c("RNAseq", "16S", "demographics", "location"),
+            RNAseq = c(0L, 0L, 0L, 1L),
+             `16S` = c(0L, 0L, 1L, 0L),
+      demographics = c(0, 1, 0, 0.1),
+          location = c(1, 0, 0.1, 0)
+      )
+k <- kable(df, align = rep("c", ncol(df)),
+           caption.short = "Models 2.2 of Howell's dataset.",
+           caption = "Relationships between the different blocks on the Howell's dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
 
 Model 1.2 has a 0.1 relationship between the ASV and the transcriptome and 1 between transcriptome and metadata.
 While model 2.2 has a relationship of 1 between location and transcriptome and demographics and ASV but only of 0.1 between demographics and location.
 
-| Model | inner AVE | outer AVE |
-|-------|-----------|-----------|
-| 0     | 0.718098  | 0.111239  |
-| 1.2   | 0.8972258 | 0.1660267 |
-| 2.2   | 0.8433274 | 0.1659844 |
+```{r howell-models-ave}
+df <- data.frame(
+       Model = c(0, 1.2, 2.2),
+   inner.AVE = c(0.718098, 0.8972258, 0.8433274),
+   outer.AVE = c(0.111239, 0.1660267, 0.1659844),
+   check.names = FALSE
+      )
+k <- kable(df, align = rep("c", ncol(df)),
+           caption.short = "Models 2.2 of Howell's dataset.",
+           caption = "Relationships between the different blocks on the Howell's dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
+```
 
-: (#tab:howell-models-ave) The models and their AVE values.
 
 ![(#fig:howell-bootstrap) Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset.](images/howells_models_bootstrap.png)
 
@@ -873,7 +962,8 @@ df <- data.frame(
   model = c("0", "1", "1.2", "2", "2.2"),
   AUC = c(0.625525946704067, 0.597475455820477, 1, 1, 1)
 )
-k <- kable(df, caption.short = "AUC of the RGCCA models on Howell's dataset",
+k <- kable(df, align = rep("c", ncol(df)), 
+           caption.short = "AUC of the RGCCA models on Howell's dataset",
       caption = "AUC of the RGCCA models on Howell's dataset. The classification of the location of the sample according to the first componenent of the models shown. Model 0, 2 and 2.2 have a perfect classification of the samples to their respective location.")
 format_design(k, df)
 ```
