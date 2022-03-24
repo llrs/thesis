@@ -63,7 +63,6 @@ fig:morgan-bootstrap
 fig:morgan-auc-plot
 tab:morgan-auc
 fig:morgan-mcia-plot
-tab:howell-model0
 tab:howell-model1-2
 fig:howell-models
 tab:howell-model2-2
@@ -165,8 +164,7 @@ discussion-datasets
 the-methods
 designing-models
 evaluating-models
-relevance-for-other-research
-implications-of-research
+implications
 conclusions
 acknowledgments
 online-resources
