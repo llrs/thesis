@@ -617,11 +617,15 @@ format_design(k, m1.2)
 The first model for family 2 is on table \@ref(tab:hasler-model-2-1):
 
 ```{r hasler-model-2-1}
-m2.1 <- structure(c(0, 0, 1, 0, 0, 0, 0, 0.5, 1, 0, 1, 0.5, 0, 0, 0, 
-0, 1, 0, 0, 1, 0, 0, 0, 1, 0), .Dim = c(5L, 5L), .Dimnames = list(
-    c("RNAseq", "micro", "Location", "Demographic", "Time"), 
-    c("RNAseq", "micro", "Location", "Demographic", "Time")))
-k <- kable(as.data.frame(m2.1), caption.short = "Model 2.1 of H\u00E4sler dataset", 
+m2.1 <- data.frame(list(
+                        "Model 2.1" = c("RNAseq", "micro", "Location", "Demographic", "Time")),
+                   RNAseq = c(0, 0, 1, 0, 0), 
+                   micro = c(0, 0, 0.5, 1, 0), 
+                   Location = c(1, 0.5, 0, 0, 0), 
+                   Demographic = c(0, 1, 0, 0, 1), 
+                   Time = c(0, 0, 0, 1, 0), 
+                   check.names = FALSE)
+k <- kable(m2.1, caption.short = "Model 2.1 of H\u00E4sler dataset", 
            caption = "Model 2.1 of H\u00E4sler dataset")
 format_design(k, df)
 ```
@@ -629,10 +633,12 @@ format_design(k, df)
 After optimization of models of family 1 the best model according to the inner AVE score is on table \@ref(tab:hasler-model-2-2):
 
 ```{r hasler-model-2-2}
-m2.2 <- structure(c(0, 0.1, 1, 0, 0, 0.1, 0, 0, 0.1, 1, 1, 0, 0, 0, 0, 
-0, 0.1, 0, 0, 0.1, 0, 1, 0, 0.1, 0), .Dim = c(5L, 5L), .Dimnames = list(
-    c("RNAseq", "micro", "Location", "Demographic", "Time"), 
-    c("RNAseq", "micro", "Location", "Demographic", "Time")))
+m2.2 <- data.frame(list("Model 2.2" = c("RNAseq", "micro", "Location", "Demographic", "Time"), 
+                        RNAseq = c(0, 0.1, 1, 0, 0),
+                        micro = c(0.1, 0, 0, 0.1, 1), 
+                        Location = c(1, 0, 0, 0, 0), 
+                        Demographic = c(0, 0.1, 0, 0, 0.1), 
+                        Time = c(0, 1, 0, 0.1, 0)), check.names = FALSE)
 k <- kable(as.data.frame(m2.2), caption.short = "Model 2.2 of H\u00E4sler dataset", 
            caption = "Model 2.2 of H\u00E4sler dataset")
 format_design(k, df)
