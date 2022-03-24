@@ -58,16 +58,14 @@
 <meta name="twitter:title" content="Chapter 3 Materials and methods | Data integration on inflammatory bowel disease"/>
 <meta name="twitter:description" content="Thesis searching the relationship between microbiome and transcriptome on the intestine on patients with IBD to discover key genes and bacteria."/>
 <meta name="twitter:url" content="https://thesis.llrs.dev"/>
-<meta name="twitter:image" content="https://r4ds.had.co.nz/cover.png"/>
-<meta name="twitter:image:alt" content="The cover of the book"/>
+<meta name="twitter:image:alt" content="The cover of the thesis."/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:creator" content="@Lluis_Revilla"/>
 <meta name="twitter:site" content="@Lluis_Revilla"/>
 <meta property="og:title" content="Chapter 3 Materials and methods | Data integration on inflammatory bowel disease"/>
 <meta property="og:description" content="Thesis searching the relationship between microbiome and transcriptome on the intestine on patients with IBD to discover key genes and bacteria."/>
 <meta property="og:url" content="https://thesis.llrs.dev"/>
-<meta property="og:image" content="https://r4ds.had.co.nz/cover.png"/>
-<meta property="og:image:alt" content="The cover of the book"/>
+<meta property="og:image:alt" content="The cover of the thesis."/>
 <meta property="og:type" content="book"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="article:author" content="Llu&lt;U+00ED&gt;s Revilla Sancho"/>
@@ -226,8 +224,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="discussion.html"><a href="discussion.html#designing-models"><i class="fa fa-check"></i><b>5.2</b> Designing models<span></span></a></li>
 <li class="chapter" data-level="5.3" data-path="discussion.html"><a href="discussion.html#evaluating-models"><i class="fa fa-check"></i><b>5.3</b> Evaluating models<span></span></a></li>
-<li class="chapter" data-level="5.4" data-path="discussion.html"><a href="discussion.html#relevance-for-other-research"><i class="fa fa-check"></i><b>5.4</b> Relevance for other research<span></span></a></li>
-<li class="chapter" data-level="5.5" data-path="discussion.html"><a href="discussion.html#implications-of-research"><i class="fa fa-check"></i><b>5.5</b> Implications of research<span></span></a></li>
+<li class="chapter" data-level="5.4" data-path="discussion.html"><a href="discussion.html#implications"><i class="fa fa-check"></i><b>5.4</b> Implications<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>6</b> Conclusions<span></span></a></li>
 <li class="chapter" data-level="7" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i><b>7</b> Acknowledgments<span></span></a></li>
@@ -547,6 +544,8 @@ The resulting OTUs table was normalized using edgeR (Version 3.28 or later) <spa
 <p>For all the other datasets <a href="https://bioconductor.org/packages/dada2">dada2</a> <span class="citation">[<a href="#ref-callahan2016" role="doc-biblioref">161</a>]</span> (Version 1.14 or later) was used to analyze microbiome data.
 It creates amplicon sequencing variants from the 16S sequencing data, without merging similar sequences at any threshold.
 It is an alternative to the use of OTUs which allows to compare results between studies and provides more resolution to identify differences on the fragment of 16S amplified.</p>
+<p>We used Silva v138.1 to annotate the 16S fragments whenever possible <span class="citation">[<a href="#ref-quast2013" role="doc-biblioref">162</a>]</span>.
+If we did not have access to the direct ASV we used the annotation provided by the original authors of the dataset.</p>
 <div class="figure"><span style="display:block;" id="fig:workflow-process"></span>
 <img src="images/workflow_integration2.png" alt="Workflow of the main analysis process of the thesis. Created with BioRender.com" width="100%" />
 <p class="caption">
@@ -560,7 +559,7 @@ Figure 3.1: Workflow of the main analysis process of the thesis. Created with Bi
 <h2><span class="header-section-number">3.3</span> Integration methods<a href="materials-and-methods.html#integration-methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="mcia" class="section level3 hasAnchor" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> MCIA<a href="materials-and-methods.html#mcia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two blocks <span class="citation">[<a href="#ref-meng2014" role="doc-biblioref">162</a>]</span>.
+<p>Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two blocks <span class="citation">[<a href="#ref-meng2014" role="doc-biblioref">163</a>]</span>.
 It is implemented on the package <a href="https://bioconductor.org/packages/omicade4">omicade4</a>.
 On its core MCIA maximizes the following formula:</p>
 <p><span class="math display">\[
@@ -572,7 +571,7 @@ This can be used to obtain a dimension of <span class="math inline">\(P_k^d=u_k^
 </div>
 <div id="stategra" class="section level3 hasAnchor" number="3.3.2">
 <h3><span class="header-section-number">3.3.2</span> STATegRa<a href="materials-and-methods.html#stategra" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We used <a href="https://bioconductor.org/packages/STATegRa"><code>STATegRa</code></a> To explore how much do different blocks of a dataset have in common <span class="citation">[<a href="#ref-planell2021" role="doc-biblioref">163</a>]</span>.
+<p>We used <a href="https://bioconductor.org/packages/STATegRa"><code>STATegRa</code></a> To explore how much do different blocks of a dataset have in common <span class="citation">[<a href="#ref-planell2021" role="doc-biblioref">164</a>]</span>.
 It is a framework for integrating datasets with two data types using parametric and non-parametric methods.
 The methods used are omics component analysis based on singular value decomposition (SVD) of the data matrix.
 There are three different methods provided to this end: <em>DISCO-SCA</em>, <em>JIVE</em> and <em>O2PLS</em>.</p>
@@ -616,7 +615,7 @@ Figure 3.2: Multiomic relationships on different datasets. Integration methods f
 It does so by decomposing the numerical matrix into the eigenvalues and eigenvectors with decreasing variance.
 Its results include new variables (the eigenvectors) and a vector of loadings or weight indicating the importance of the original variables for these new variables.
 Typically, data is normalized and standardized to avoid that a variable with higher variance and different scale dominate the results.</p>
-<p>The canonical correlation analysis <span class="citation">[<a href="#ref-jordan1875" role="doc-biblioref">164</a>, <a href="#ref-hotelling1936" role="doc-biblioref">165</a>]</span> is a method to find agreement between two, or more, scorers (as it was first introduced on the literature) or sources.
+<p>The canonical correlation analysis <span class="citation">[<a href="#ref-jordan1875" role="doc-biblioref">165</a>, <a href="#ref-hotelling1936" role="doc-biblioref">166</a>]</span> is a method to find agreement between two, or more, scorers (as it was first introduced on the literature) or sources.
 It extends the PCA to a two sources of data.
 It provides a similar output, new variables and weights of the existing variables indicating their importance.
 The function it maximizes is:</p>
@@ -625,7 +624,7 @@ The function it maximizes is:</p>
 \]</span></p>
 <p>On this equation <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are random variables that given <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, the two data sources, maximize the correlation between <span class="math inline">\(a^T X\)</span> and <span class="math inline">\(b^T Y\)</span>, the first canonical variables, the new variables.
 <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are also known as weights or loadings of the variables.</p>
-<p>Over several years of progress on the field of canonical correlations <span class="citation">[<a href="#ref-tenenhaus_regularized_2011" role="doc-biblioref">114</a>, <a href="#ref-tenenhaus_variable_2014" role="doc-biblioref">115</a>, <a href="#ref-tenenhaus_component-based_2008" role="doc-biblioref">166</a>–<a href="#ref-gloaguen2020" role="doc-biblioref">170</a>]</span>, regularized generalized canonical correlation analysis (RGCCA) emerged with a generalization from canonical correlations extending the procedure to more than two sources of data <span class="citation">[<a href="#ref-R-RGCCA" role="doc-biblioref"><strong>R-RGCCA?</strong></a>]</span> and being made more flexible generalizing from other proposed methods.</p>
+<p>Over several years of progress on the field of canonical correlations <span class="citation">[<a href="#ref-tenenhaus_regularized_2011" role="doc-biblioref">114</a>, <a href="#ref-tenenhaus_variable_2014" role="doc-biblioref">115</a>, <a href="#ref-tenenhaus_component-based_2008" role="doc-biblioref">167</a>–<a href="#ref-gloaguen2020" role="doc-biblioref">171</a>]</span>, regularized generalized canonical correlation analysis (RGCCA) emerged with a generalization from canonical correlations extending the procedure to more than two sources of data <span class="citation">[<a href="#ref-R-RGCCA" role="doc-biblioref"><strong>R-RGCCA?</strong></a>]</span> and being made more flexible generalizing from other proposed methods.</p>
 <div id="description" class="section level3 hasAnchor" number="3.4.1">
 <h3><span class="header-section-number">3.4.1</span> Description<a href="materials-and-methods.html#description" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>RGCCA works with numeric matrices that can be as big as needed, as it is designed for datasets with more variables than samples ( <span class="math inline">\(p \gg n\)</span>).
@@ -655,7 +654,7 @@ The method to perform the dimensional reduction using the sparse method consists
 \]</span></p>
 <p>The <span class="math inline">\(s_j\)</span> controls the sparsity estimated of the data, the smaller it is, the higher the sparsity of <span class="math inline">\(X_j\)</span> is.
 As <span class="math inline">\(s_j\)</span> is closer to 0, more features are selected as it looks to optimize covariance; while if it is closer to 1, less features are selected and the function resembles the correlation.
-The values of <span class="math inline">\(s_j\)</span> were estimated using the Schäfer method <span class="citation">[<a href="#ref-schäfer2005" role="doc-biblioref">171</a>]</span> when the block included 16S data or RNAseq, otherwise 1 was used.</p>
+The values of <span class="math inline">\(s_j\)</span> were estimated using the Schäfer method <span class="citation">[<a href="#ref-schäfer2005" role="doc-biblioref">172</a>]</span> when the block included 16S data or RNAseq, otherwise 1 was used.</p>
 <p>As previously mentioned, there are different <span class="math inline">\(g\)</span> functions that could be used; but the centroid method was chosen to detect both positive and negative relationships.</p>
 <p>Categorical data was encoded as binary (dummy) variables for each factor except one to keep degrees of freedom, where 0 indicates not present and 1 indicates present.
 One level was omitted to avoid overfitting the data.
@@ -673,7 +672,7 @@ RGCCA returns an AVE score for each block, which measures how the variables of t
 It also provides two AVE scores of the whole model: the inner, which measures how each dimension accounts for the variance, and the outer, which measures how variables correlate with the dimension components.
 The closer the inner AVE is to 1, the better the model adjusts to the data.
 However, that mathematically fits better to the data does not guarantee that the model provides more insights into the biology.</p>
-<p>It can also generate results as other related methods based on the maximization of a function of correlations: SUMCOR (sum of correlations method) <span class="citation">[<a href="#ref-horst1961" role="doc-biblioref">172</a>]</span>, SSQCOR (sum of squared correlations method) <span class="citation">[<a href="#ref-kettenring1971" role="doc-biblioref">173</a>]</span>, SABSCOR (sum of absolute values of the correlations method) <span class="citation">[<a href="#ref-vandegeer1984" role="doc-biblioref">174</a>]</span>.
+<p>It can also generate results as other related methods based on the maximization of a function of correlations: SUMCOR (sum of correlations method) <span class="citation">[<a href="#ref-horst1961" role="doc-biblioref">173</a>]</span>, SSQCOR (sum of squared correlations method) <span class="citation">[<a href="#ref-kettenring1971" role="doc-biblioref">174</a>]</span>, SABSCOR (sum of absolute values of the correlations method) <span class="citation">[<a href="#ref-vandegeer1984" role="doc-biblioref">175</a>]</span>.
 Others methods are based on the maximization of a function of covariances: SUMCOV (sum of covariances method), SSQCOV (sum of squared covariances method), SABSCOV (sum of absolute values of the covariances method).
 The following table summarizes the equivalent parameters needed on RGCCA to work:</p>
 <table>
@@ -726,7 +725,8 @@ The following table summarizes the equivalent parameters needed on RGCCA to work
 </tbody>
 </table>
 <p>There are other methods that can be performed with RGCCA, for example: The classical canonical correlation analysis would be equivalent to data variance equal to 1 and shrinkage of 0.
-Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1 in RGCCA. Finally, redundancy analysis could be performed where one block’s weight normalized value is 1 and the variance of the other equals to 1.</p>
+Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1 in RGCCA.
+Finally, redundancy analysis could be performed where one block’s weight normalized value is 1 and the variance of the other equals to 1.</p>
 </div>
 <div id="models" class="section level3 hasAnchor" number="3.4.3">
 <h3><span class="header-section-number">3.4.3</span> Models<a href="materials-and-methods.html#models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -750,9 +750,9 @@ These models are from the family 2 denoted by the name 2.Y, where 2 denotes the 
 </div>
 <div id="statistics" class="section level2 hasAnchor" number="3.5">
 <h2><span class="header-section-number">3.5</span> Statistics<a href="materials-and-methods.html#statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Differential expression analysis was performed with the limma-trend method <span class="citation">[<a href="#ref-ritchie2015" role="doc-biblioref">175</a>, <a href="#ref-law2014" role="doc-biblioref">176</a>]</span> and edgeR <span class="citation">[<a href="#ref-mccarthy2012" role="doc-biblioref">146</a>]</span> (Bioconductor version 3.10 or superior) packages.
-Data was normalized using the trimmed mean of M-values and log-2 transformed into counts per millions following the workflow previously described using voom <span class="citation">[<a href="#ref-law2018" role="doc-biblioref">177</a>]</span>.</p>
-<p>To correct for multiple testing, the false discovery rate was estimated using the method of Benjamini and Hochberg <span class="citation">[<a href="#ref-yoavbenjamini" role="doc-biblioref">178</a>]</span>.
+<p>Differential expression analysis was performed with the limma-trend method <span class="citation">[<a href="#ref-ritchie2015" role="doc-biblioref">176</a>, <a href="#ref-law2014" role="doc-biblioref">177</a>]</span> and edgeR <span class="citation">[<a href="#ref-mccarthy2012" role="doc-biblioref">146</a>]</span> (Bioconductor version 3.10 or superior) packages.
+Data was normalized using the trimmed mean of M-values and log-2 transformed into counts per millions following the workflow previously described using voom <span class="citation">[<a href="#ref-law2018" role="doc-biblioref">178</a>]</span>.</p>
+<p>To correct for multiple testing, the false discovery rate was estimated using the method of Benjamini and Hochberg <span class="citation">[<a href="#ref-yoavbenjamini" role="doc-biblioref">179</a>]</span>.
 A gene was considered differentially expressed when it was significant at 5% FDR.
 Special attention was given to those genes that showed a fold-change higher than |1.5|.</p>
 </div>
@@ -761,7 +761,7 @@ Special attention was given to those genes that showed a fold-change higher than
 <p>Functional enrichment methods are those methods that aim to provide with more information about the variables besides their numerical value measured.
 They can be very different in nature but they all use the numeric values of the variables and other information, being it from the same experiment data collection or from external data sources.</p>
 <p>Many functional enrichment methods are based on an over representation analysis, where a group of elements is tested for their mesure in other groups.
-This can be done with <a href="https://bioconductor.org/packages/clusterProfiler"><code>clusterProfiler</code></a> which tests genes enrichment for functionality based on information on pathway databases <span class="citation">[<a href="#ref-wu2021" role="doc-biblioref">179</a>]</span> that it is used in several publications <span class="citation">[<a href="#ref-richter2021" role="doc-biblioref">180</a>]</span>.
+This can be done with <a href="https://bioconductor.org/packages/clusterProfiler"><code>clusterProfiler</code></a> which tests genes enrichment for functionality based on information on pathway databases <span class="citation">[<a href="#ref-wu2021" role="doc-biblioref">180</a>]</span> that it is used in several publications <span class="citation">[<a href="#ref-richter2021" role="doc-biblioref">181</a>]</span>.
 <code>clusterProfiler</code> checks the enrichment of features of a given group on the (background) list provided.</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -823,8 +823,7 @@ It can be used to compare the genes found on a pathway (<span class="math inline
 P_X(k) = P(X = k) 
 = \frac{\binom{K}{k} \binom{N - K}{n-k}}{\binom{N}{n}}
 \]</span></p>
-<p>This looks like the fisher test, because hypergeometric test assesses the extremeness of observing <span class="math inline">\(k\)</span> or more of
-that overlap (<span class="math inline">\(a\)</span> on ) and thus it is the same as a one-sided Fisher’s exact test.</p>
+<p>This looks like the fisher test, because hypergeometric test assesses the extremeness of observing <span class="math inline">\(k\)</span> or more of that overlap (<span class="math inline">\(a\)</span> on ) and thus it is the same as a one-sided Fisher’s exact test.</p>
 </div>
 <div id="proportion-test" class="section level3 hasAnchor" number="3.6.3">
 <h3><span class="header-section-number">3.6.3</span> Proportion test<a href="materials-and-methods.html#proportion-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -842,10 +841,10 @@ Sometimes, the expected frequency is so low that a correction must be done to th
 </div>
 <div id="gene-set-enrichment-analysis" class="section level3 hasAnchor" number="3.6.4">
 <h3><span class="header-section-number">3.6.4</span> Gene Set Enrichment Analysis<a href="materials-and-methods.html#gene-set-enrichment-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>There are other methods that test if some variables show an unexpected importance according to a statistic like fold change or value, such as gene set enrichment analysis (GSEA) <span class="citation">[<a href="#ref-subramanian2005" role="doc-biblioref">181</a>]</span>.
+<p>There are other methods that test if some variables show an unexpected importance according to a statistic like fold change or value, such as gene set enrichment analysis (GSEA) <span class="citation">[<a href="#ref-subramanian2005" role="doc-biblioref">182</a>]</span>.
 GSEA is a computational method originally developed to determine whether a priori defined set of genes shows statistically significant and concordant differences between two biological states.
 This methods check if a group of variables present in an ordered list shows a skewed distribution and it compares it against a random group of similar size.
-It has been widely used since its original publication, also on IBD <span class="citation">[<a href="#ref-protiva2016" role="doc-biblioref">182</a>]</span>.</p>
+It has been widely used since its original publication, also on IBD <span class="citation">[<a href="#ref-protiva2016" role="doc-biblioref">183</a>]</span>.</p>
 <p>This method calculates the rank of genes <span class="math inline">\(rank(g_j)=r_j\)</span> where each <span class="math inline">\(g\)</span> is a gene, and then it calculates the following functions:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -857,14 +856,14 @@ It has been widely used since its original publication, also on IBD <span class=
 At least 1000 permutations are usually used but a high number of permutations are required for an accurate estimation of the enrichment score.
 However, when more than one pathway (<span class="math inline">\(S\)</span>) is evaluated in order to compare between their enrichment scores, they must be normalized by dividing the scores by the mean of all the ES.
 When power <span class="math inline">\(p\)</span> is 0 it is equivalent to the standard Kolmogorov–Smirnov statistic, though it is usually set to 1.</p>
-<p>For testing GSEA I used <a href="https://bioconductor.org/packages/fgsea"><code>fgsea</code></a> <span class="citation">[<a href="#ref-korotkevich2021" role="doc-biblioref">183</a>]</span> implementation for its speed and integration with other methods used in this thesis.
-Gene pathways from the REACTOME database were tested on the weight of different models or on the comparisons performed <span class="citation">[<a href="#ref-fabregat2016" role="doc-biblioref">184</a>]</span>.</p>
+<p>For testing GSEA I used <a href="https://bioconductor.org/packages/fgsea"><code>fgsea</code></a> <span class="citation">[<a href="#ref-korotkevich2021" role="doc-biblioref">184</a>]</span> implementation for its speed and integration with other methods used in this thesis.
+Gene pathways from the REACTOME database were tested on the weight of different models or on the comparisons performed <span class="citation">[<a href="#ref-fabregat2016" role="doc-biblioref">185</a>]</span>.</p>
 </div>
 <div id="gsva" class="section level3 hasAnchor" number="3.6.5">
 <h3><span class="header-section-number">3.6.5</span> GSVA<a href="materials-and-methods.html#gsva" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To estimate the expression of the pathways and compare their expression levels between conditions gene set variation analysis as implemented on <a href="https://bioconductor.org/packages/GSVA">GSVA</a> was used <span class="citation">[<a href="#ref-hänzelmann2013" role="doc-biblioref">185</a>]</span>.
+<p>To estimate the expression of the pathways and compare their expression levels between conditions gene set variation analysis as implemented on <a href="https://bioconductor.org/packages/GSVA">GSVA</a> was used <span class="citation">[<a href="#ref-hänzelmann2013" role="doc-biblioref">186</a>]</span>.
 It is a method that summarizes the variables’ numerical value changing the space of <span class="math inline">\(\text{variable x sample}\)</span> to <span class="math inline">\(\text{group x sample}\)</span> .
-This enables other methods to use this new space instead of the original variables, which provides a successful way to look into data <span class="citation">[<a href="#ref-escudero-hernández2021" role="doc-biblioref">186</a>]</span>.
+This enables other methods to use this new space instead of the original variables, which provides a successful way to look into data <span class="citation">[<a href="#ref-escudero-hernández2021" role="doc-biblioref">187</a>]</span>.
 GSVA was used (again from the REACTOME database) to find the relationships between the pathways and the microbiome at different taxonomic levels.</p>
 <p>This is done via an estimation and a comparison with a discrete Poisson kernel: <span class="math inline">\(i\)</span> indicates the gene from a total of <span class="math inline">\(k\)</span> genes, and samples are indicated by <span class="math inline">\(j\)</span> from <span class="math inline">\(n\)</span> number of samples.</p>
 <p><span class="math display">\[
@@ -887,7 +886,7 @@ This score can be calculated as a difference of hits and misses or the maximum d
 <h2><span class="header-section-number">3.7</span> Variance and diversity methods<a href="materials-and-methods.html#variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="permanova" class="section level3 hasAnchor" number="3.7.1">
 <h3><span class="header-section-number">3.7.1</span> PERMANOVA<a href="materials-and-methods.html#permanova" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The PERMANOVA method <span class="citation">[<a href="#ref-anderson2001" role="doc-biblioref">187</a>, <a href="#ref-warton2012" role="doc-biblioref">188</a>]</span>, provided by the <a href="https://cran.r-project.org/package=vegan">vegan</a> package on the <code>adonis</code> function, was used to test if microbiome data variance is due to other variables when using distances metrics.
+<p>The PERMANOVA method <span class="citation">[<a href="#ref-anderson2001" role="doc-biblioref">188</a>, <a href="#ref-warton2012" role="doc-biblioref">189</a>]</span>, provided by the <a href="https://cran.r-project.org/package=vegan">vegan</a> package on the <code>adonis</code> function, was used to test if microbiome data variance is due to other variables when using distances metrics.
 It uses the residual sum of squares such as:</p>
 <p><span class="math display">\[
 SS_W = \frac{1}{n} \sum_{i=1}^{N-1}\sum_{j=i+1}^N d_{ij}^2\epsilon{ij} 
@@ -904,7 +903,7 @@ F = \dfrac{SS_A/(\alpha -1)}{SS_W/(N-\alpha)}
 </div>
 <div id="globaltest" class="section level3 hasAnchor" number="3.7.2">
 <h3><span class="header-section-number">3.7.2</span> globaltest<a href="materials-and-methods.html#globaltest" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>It is a method for testing complex hypothesis and calculate the influence of each variable on a given outcome <span class="citation">[<a href="#ref-goeman2006" role="doc-biblioref">189</a>]</span>.
+<p>It is a method for testing complex hypothesis and calculate the influence of each variable on a given outcome <span class="citation">[<a href="#ref-goeman2006" role="doc-biblioref">190</a>]</span>.
 I tested which variables, (sex, age, location, time since diagnosis, treatment) are important on the datasets with <a href="https://bioconductor.org/packages/globaltest">globaltest</a> (Version 5.40 or later).
 This method provides a general statistic to test hypothesis against a high dimensional dataset.</p>
 <p><span class="math display">\[
@@ -915,7 +914,7 @@ S = \sum_{i=1}^p x_i^{&#39;} x_i g(t_i^2)
 </div>
 <div id="diversity-indices" class="section level3 hasAnchor" number="3.7.3">
 <h3><span class="header-section-number">3.7.3</span> Diversity indices<a href="materials-and-methods.html#diversity-indices" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Microbiome diversity was measured using vegan and <a href="https://bioconductor.org/packages/phyloseq">phyloseq</a> methods <span class="citation">[<a href="#ref-oksanen2020" role="doc-biblioref">190</a>]</span>.
+<p>Microbiome diversity was measured using vegan and <a href="https://bioconductor.org/packages/phyloseq">phyloseq</a> methods <span class="citation">[<a href="#ref-oksanen2020" role="doc-biblioref">191</a>]</span>.
 <span class="math inline">\(\alpha\)</span>-diversity is a measure of how much a given microbiome at a taxonomic level is present on a sample.
 Several measures exists, on the thesis I used the effective Simpson or effective Shannon diversity index to compare diversity between samples and conditions.
 <span class="math inline">\(\beta\)</span>-diversity was calculated using the phyloseq package for exploratory analysis.</p>
@@ -934,7 +933,7 @@ Several measures exists, on the thesis I used the effective Simpson or effective
 <div id="wgcna" class="section level3 hasAnchor" number="3.8.1">
 <h3><span class="header-section-number">3.8.1</span> WGCNA<a href="materials-and-methods.html#wgcna" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To look for relationships between the microbiome and the RNAseq we used weighted gene co-expression network analysis.
-We used weighted gene co-expression network analysis as implemented on <a href="https://cran.r-project.org/package=WGCNA">WGCNA</a> <span class="citation">[<a href="#ref-langfelder2008" role="doc-biblioref">191</a>]</span> as well as correlations.
+We used weighted gene co-expression network analysis as implemented on <a href="https://cran.r-project.org/package=WGCNA">WGCNA</a> <span class="citation">[<a href="#ref-langfelder2008" role="doc-biblioref">192</a>]</span> as well as correlations.
 The Spearman rank correlation coefficient is:</p>
 <p><span class="math display">\[
 R_s(X,Y) = \dfrac{\sum_{i=1}^n (R_i - \bar{R}) (S_i - \bar{S} )}{\sqrt{\sum_{i=1}^n (R_i - \bar{R})^2}\sqrt{\sum_{i=1}^n (S_i - \bar{S})^2}}
@@ -946,7 +945,7 @@ The distribution of the Spearman correlation coefficient is symmetric around 0 a
 <h3><span class="header-section-number">3.8.2</span> BaseSet<a href="materials-and-methods.html#baseset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><a href="https://cran.r-project.org/package=BaseSet">BaseSet</a> was developed and used to find which variables are really involved on the interaction and how likely they were to be together.
 It is a package that uses fuzzy set logic to calculate the probability to belong to a group, in this case, those genes and bacteria selected by the model that interact with the other.</p>
-<p>Under the standard fuzzy set logic a set <span class="math inline">\(S\)</span> is a group of elements for which each element <span class="math inline">\(e\)</span> has an <span class="math inline">\(\alpha\)</span> membership to that set <span class="citation">[<a href="#ref-filzmoser2004" role="doc-biblioref">192</a>, <a href="#ref-dubois1993" role="doc-biblioref">193</a>]</span>.
+<p>Under the standard fuzzy set logic a set <span class="math inline">\(S\)</span> is a group of elements for which each element <span class="math inline">\(e\)</span> has an <span class="math inline">\(\alpha\)</span> membership to that set <span class="citation">[<a href="#ref-filzmoser2004" role="doc-biblioref">193</a>, <a href="#ref-dubois1993" role="doc-biblioref">194</a>]</span>.
 <span class="math inline">\(\alpha\)</span> is usually bounded between 0 and 1: <span class="math inline">\(\alpha \in [0, 1]\)</span> .
 A given element <span class="math inline">\(e\)</span> can belong to more than one set.
 Assimilating the membership function to probability we can calculate the probability of a given element <span class="math inline">\(e\)</span> to belong to a set <span class="math inline">\(S\)</span> and not any other set: <span class="math inline">\(P(e \in S|e \not \in S^c)\)</span>.
@@ -957,7 +956,7 @@ This probability was used to calculate (via <code>set_size</code>) the genes and
 </div>
 <div id="experdesign" class="section level3 hasAnchor" number="3.8.3">
 <h3><span class="header-section-number">3.8.3</span> experDesign<a href="materials-and-methods.html#experdesign" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><a href="https://cran.r-project.org/package=experDesign">experDesign</a> was developed <span class="citation">[<a href="#ref-revillasancho2021" role="doc-biblioref">194</a>]</span> to prevent and quantify if a given experiment has batch effect due to the batches used to measure the values or other known variable.
+<p><a href="https://cran.r-project.org/package=experDesign">experDesign</a> was developed <span class="citation">[<a href="#ref-revillasancho2021" role="doc-biblioref">195</a>]</span> to prevent and quantify if a given experiment has batch effect due to the batches used to measure the values or other known variable.
 It might help to detect a bad design of the experiment.</p>
 <p>On pseudo code the core of the program can be described as:</p>
 <pre id="pseudocode-experDesign"><code>for each index:
@@ -983,7 +982,7 @@ It can take into account spatial distribution and, given the number of samples t
 <div id="ROC" class="section level3 hasAnchor" number="3.8.4">
 <h3><span class="header-section-number">3.8.4</span> ROC- AUC<a href="materials-and-methods.html#ROC" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To estimate if the selected features (genes or microorganism) by the integration methods have some biological meaningful contribution I measured if they can classify features, such as, which gastrointestinal segment is each sample from, or which type of disease does each patient have.</p>
-<p>To compare between different models the area under the curve (AUC) of the receiver operating characteristic (ROC) was calculated with the <a href="https://cran.r-project.org/package=pROC">pROC</a> package <span class="citation">[<a href="#ref-robin2011" role="doc-biblioref">195</a>]</span>.
+<p>To compare between different models the area under the curve (AUC) of the receiver operating characteristic (ROC) was calculated with the <a href="https://cran.r-project.org/package=pROC">pROC</a> package <span class="citation">[<a href="#ref-robin2011" role="doc-biblioref">196</a>]</span>.
 It is based on the following formulas, where <span class="math inline">\(\text{FP}\)</span> is false positive, <span class="math inline">\(N\)</span> is a negative, <span class="math inline">\(P\)</span> is positive, <span class="math inline">\(\text{TP}\)</span> is true positive and <span class="math inline">\(\text{FN}\)</span> is false negative:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1051,98 +1050,101 @@ The closer it is to 1 the better as it classifies incorrectly less samples and a
 <div id="ref-callahan2016" class="csl-entry">
 161. Callahan BJ, McMurdie PJ, Rosen MJ, Han AW, Johnson AJA, Holmes SP. <a href="https://doi.org/10.1038/nmeth.3869">DADA2: High-resolution sample inference from Illumina amplicon data</a>. Nature Methods. 2016;13:581–3.
 </div>
+<div id="ref-quast2013" class="csl-entry">
+162. Quast C, Pruesse E, Yilmaz P, Gerken J, Schweer T, Yarza P, et al. <a href="https://doi.org/10.1093/nar/gks1219">The SILVA ribosomal RNA gene database project: Improved data processing and web-based tools</a>. Nucleic Acids Research. 2013;41 Database issue:D590–6.
+</div>
 <div id="ref-meng2014" class="csl-entry">
-162. Meng C, Kuster B, Culhane AC, Gholami AM. <a href="https://doi.org/10.1186/1471-2105-15-162">A multivariate approach to the integration of multi-omics datasets</a>. BMC Bioinformatics. 2014;15:162.
+163. Meng C, Kuster B, Culhane AC, Gholami AM. <a href="https://doi.org/10.1186/1471-2105-15-162">A multivariate approach to the integration of multi-omics datasets</a>. BMC Bioinformatics. 2014;15:162.
 </div>
 <div id="ref-planell2021" class="csl-entry">
-163. Planell N, Lagani V, Sebastian-Leon P, van der Kloet F, Ewing E, Karathanasis N, et al. <a href="https://doi.org/10.3389/fgene.2021.620453">STATegra: Multi-omics data integration <span></span> a conceptual scheme with a bioinformatics pipeline</a>. Frontiers in Genetics. 2021;12.
+164. Planell N, Lagani V, Sebastian-Leon P, van der Kloet F, Ewing E, Karathanasis N, et al. <a href="https://doi.org/10.3389/fgene.2021.620453">STATegra: Multi-omics data integration <span></span> a conceptual scheme with a bioinformatics pipeline</a>. Frontiers in Genetics. 2021;12.
 </div>
 <div id="ref-jordan1875" class="csl-entry">
-164. Jordan C. <a href="https://doi.org/10.24033/bsmf.90">Essai sur la géométrie à n dimensions</a>. Bulletin de la Société Mathématique de France. 1875;3:103–74.
+165. Jordan C. <a href="https://doi.org/10.24033/bsmf.90">Essai sur la géométrie à n dimensions</a>. Bulletin de la Société Mathématique de France. 1875;3:103–74.
 </div>
 <div id="ref-hotelling1936" class="csl-entry">
-165. HOTELLING H. <a href="https://doi.org/10.1093/biomet/28.3-4.321">RELATIONS BETWEEN TWO SETS OF VARIATES</a>. Biometrika. 1936;28:321–77.
+166. HOTELLING H. <a href="https://doi.org/10.1093/biomet/28.3-4.321">RELATIONS BETWEEN TWO SETS OF VARIATES</a>. Biometrika. 1936;28:321–77.
 </div>
 <div id="ref-tenenhaus_component-based_2008" class="csl-entry">
-166. Tenenhaus M. <a href="https://doi.org/10.1080/14783360802159543">Component-based <span>Structural Equation Modelling</span></a>. Total Quality Management &amp; Business Excellence. 2008;19:871–86.
+167. Tenenhaus M. <a href="https://doi.org/10.1080/14783360802159543">Component-based <span>Structural Equation Modelling</span></a>. Total Quality Management &amp; Business Excellence. 2008;19:871–86.
 </div>
 <div id="ref-gloaguen2020" class="csl-entry">
-170. Gloaguen A, Philippe C, Frouin V, Gennari G, Dehaene-Lambertz G, Le Brusquet L, et al. Multiway generalized canonical correlation analysis. Biostatistics. 2020. <a href="https://doi.org/10.1093/biostatistics/kxaa010">https://doi.org/10.1093/biostatistics/kxaa010</a>.
+171. Gloaguen A, Philippe C, Frouin V, Gennari G, Dehaene-Lambertz G, Le Brusquet L, et al. Multiway generalized canonical correlation analysis. Biostatistics. 2020. <a href="https://doi.org/10.1093/biostatistics/kxaa010">https://doi.org/10.1093/biostatistics/kxaa010</a>.
 </div>
 <div id="ref-schäfer2005" class="csl-entry">
-171. Schäfer J, Strimmer K. <a href="https://doi.org/10.2202/1544-6115.1175">A Shrinkage Approach to Large-Scale Covariance Matrix Estimation and Implications for Functional Genomics</a>. Statistical Applications in Genetics and Molecular Biology. 2005;4.
+172. Schäfer J, Strimmer K. <a href="https://doi.org/10.2202/1544-6115.1175">A Shrinkage Approach to Large-Scale Covariance Matrix Estimation and Implications for Functional Genomics</a>. Statistical Applications in Genetics and Molecular Biology. 2005;4.
 </div>
 <div id="ref-horst1961" class="csl-entry">
-172. Horst P. <a href="https://doi.org/10.1007/BF02289710">Relations among m sets of measures</a>. Psychometrika. 1961;26:129–49.
+173. Horst P. <a href="https://doi.org/10.1007/BF02289710">Relations among m sets of measures</a>. Psychometrika. 1961;26:129–49.
 </div>
 <div id="ref-kettenring1971" class="csl-entry">
-173. KETTENRING JR. <a href="https://doi.org/10.1093/biomet/58.3.433">Canonical analysis of several sets of variables</a>. Biometrika. 1971;58:433–51.
+174. KETTENRING JR. <a href="https://doi.org/10.1093/biomet/58.3.433">Canonical analysis of several sets of variables</a>. Biometrika. 1971;58:433–51.
 </div>
 <div id="ref-vandegeer1984" class="csl-entry">
-174. Van de Geer JP. <a href="https://doi.org/10.1007/BF02294207">Linear relations among k sets of variables</a>. Psychometrika. 1984;49:79–94.
+175. Van de Geer JP. <a href="https://doi.org/10.1007/BF02294207">Linear relations among k sets of variables</a>. Psychometrika. 1984;49:79–94.
 </div>
 <div id="ref-ritchie2015" class="csl-entry">
-175. Ritchie MEM, Phipson B, Wu D, Hu Y, Law CWC, Shi W, et al. <a href="https://doi.org/10.1093/nar/gkv007">Limma powers differential expression analyses for RNA-sequencing and microarray studies</a>. Nucleic acids research. 2015;43:e47.
+176. Ritchie MEM, Phipson B, Wu D, Hu Y, Law CWC, Shi W, et al. <a href="https://doi.org/10.1093/nar/gkv007">Limma powers differential expression analyses for RNA-sequencing and microarray studies</a>. Nucleic acids research. 2015;43:e47.
 </div>
 <div id="ref-law2014" class="csl-entry">
-176. Law CW, Chen Y, Shi W, Smyth GK. <a href="https://doi.org/10.1186/gb-2014-15-2-r29">Voom: Precision weights unlock linear model analysis tools for RNA-seq read counts</a>. Genome Biology. 2014;15:R29.
+177. Law CW, Chen Y, Shi W, Smyth GK. <a href="https://doi.org/10.1186/gb-2014-15-2-r29">Voom: Precision weights unlock linear model analysis tools for RNA-seq read counts</a>. Genome Biology. 2014;15:R29.
 </div>
 <div id="ref-law2018" class="csl-entry">
-177. Law CW, Alhamdoosh M, Su S, Dong X, Tian L, Smyth GK, et al. <a href="https://doi.org/10.12688/f1000research.9005.3">RNA-seq analysis is easy as 1-2-3 with limma, Glimma and edgeR</a>. F1000Research. 2018;5.
+178. Law CW, Alhamdoosh M, Su S, Dong X, Tian L, Smyth GK, et al. <a href="https://doi.org/10.12688/f1000research.9005.3">RNA-seq analysis is easy as 1-2-3 with limma, Glimma and edgeR</a>. F1000Research. 2018;5.
 </div>
 <div id="ref-yoavbenjamini" class="csl-entry">
-178. Yoav Benjamini, Yosef Hochberg. <a href="http://www.jstor.org/stable/2346101">Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing</a>. Journal of the Royal Statistical Society Series B (Methodological). 57.
+179. Yoav Benjamini, Yosef Hochberg. <a href="http://www.jstor.org/stable/2346101">Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing</a>. Journal of the Royal Statistical Society Series B (Methodological). 57.
 </div>
 <div id="ref-wu2021" class="csl-entry">
-179. Wu T, Hu E, Xu S, Chen M, Guo P, Dai Z, et al. <a href="https://doi.org/10.1016/j.xinn.2021.100141">clusterProfiler 4.0: A universal enrichment tool for interpreting omics data</a>. The Innovation. 2021;2:100141.
+180. Wu T, Hu E, Xu S, Chen M, Guo P, Dai Z, et al. <a href="https://doi.org/10.1016/j.xinn.2021.100141">clusterProfiler 4.0: A universal enrichment tool for interpreting omics data</a>. The Innovation. 2021;2:100141.
 </div>
 <div id="ref-richter2021" class="csl-entry">
-180. Richter FC, Friedrich M, Pohin M, Alsaleh G, Guschina I, Wideman SK, et al. <a href="https://doi.org/10.1101/2021.10.25.465200">Cell-extrinsic autophagy in mature adipocytes regulates anti-inflammatory response to intestinal tissue injury through lipid mobilization</a>. 2021;2021.10.25.465200.
+181. Richter FC, Friedrich M, Pohin M, Alsaleh G, Guschina I, Wideman SK, et al. <a href="https://doi.org/10.1101/2021.10.25.465200">Cell-extrinsic autophagy in mature adipocytes regulates anti-inflammatory response to intestinal tissue injury through lipid mobilization</a>. 2021;2021.10.25.465200.
 </div>
 <div id="ref-subramanian2005" class="csl-entry">
-181. Subramanian A, Tamayo P, Mootha VK, Mukherjee S, Ebert BL, Gillette MA, et al. <a href="https://doi.org/10.1073/pnas.0506580102">Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles</a>. Proceedings of the National Academy of Sciences. 2005;102:15545–50.
+182. Subramanian A, Tamayo P, Mootha VK, Mukherjee S, Ebert BL, Gillette MA, et al. <a href="https://doi.org/10.1073/pnas.0506580102">Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles</a>. Proceedings of the National Academy of Sciences. 2005;102:15545–50.
 </div>
 <div id="ref-protiva2016" class="csl-entry">
-182. Protiva P, Pendyala S, Nelson C, Augenlicht LH, Lipkin M, Holt PR. <a href="https://doi.org/10.3945/ajcn.114.105304">Calcium and 1,25-dihydroxyvitamin D3 modulate genes of immune and inflammatory pathways in the human colon: A human crossover trial</a>. The American Journal of Clinical Nutrition. 2016;103:1224–31.
+183. Protiva P, Pendyala S, Nelson C, Augenlicht LH, Lipkin M, Holt PR. <a href="https://doi.org/10.3945/ajcn.114.105304">Calcium and 1,25-dihydroxyvitamin D3 modulate genes of immune and inflammatory pathways in the human colon: A human crossover trial</a>. The American Journal of Clinical Nutrition. 2016;103:1224–31.
 </div>
 <div id="ref-korotkevich2021" class="csl-entry">
-183. Korotkevich G, Sukhov V, Budin N, Shpak B, Artyomov MN, Sergushichev A. Fast gene set enrichment analysis. 2021. https://doi.org/<a href="https://doi.org/10.1101/060012">https://doi.org/10.1101/060012</a>.
+184. Korotkevich G, Sukhov V, Budin N, Shpak B, Artyomov MN, Sergushichev A. Fast gene set enrichment analysis. 2021. https://doi.org/<a href="https://doi.org/10.1101/060012">https://doi.org/10.1101/060012</a>.
 </div>
 <div id="ref-fabregat2016" class="csl-entry">
-184. Fabregat A, Sidiropoulos K, Garapati P, Gillespie M, Hausmann K, Haw R, et al. <a href="https://doi.org/10.1093/nar/gkv1351">The reactome pathway knowledgebase</a>. Nucleic Acids Research. 2016;44.
+185. Fabregat A, Sidiropoulos K, Garapati P, Gillespie M, Hausmann K, Haw R, et al. <a href="https://doi.org/10.1093/nar/gkv1351">The reactome pathway knowledgebase</a>. Nucleic Acids Research. 2016;44.
 </div>
 <div id="ref-hänzelmann2013" class="csl-entry">
-185. Hänzelmann S, Castelo R, Guinney J. <a href="https://doi.org/10.1186/1471-2105-14-7">GSVA: Gene set variation analysis for microarray and RNA-seq data</a>. BMC Bioinformatics. 2013;14:7.
+186. Hänzelmann S, Castelo R, Guinney J. <a href="https://doi.org/10.1186/1471-2105-14-7">GSVA: Gene set variation analysis for microarray and RNA-seq data</a>. BMC Bioinformatics. 2013;14:7.
 </div>
 <div id="ref-escudero-hernández2021" class="csl-entry">
-186. Escudero-Hernández C, Beelen Granlund A van, Bruland T, Sandvik AK, Koch S, Østvik AE, et al. <a href="https://doi.org/10.1016/j.jcmgh.2021.04.011">Transcriptomic Profiling of Collagenous Colitis Identifies Hallmarks of Nondestructive Inflammatory Bowel Disease</a>. Cellular and Molecular Gastroenterology and Hepatology. 2021;12:665–87.
+187. Escudero-Hernández C, Beelen Granlund A van, Bruland T, Sandvik AK, Koch S, Østvik AE, et al. <a href="https://doi.org/10.1016/j.jcmgh.2021.04.011">Transcriptomic Profiling of Collagenous Colitis Identifies Hallmarks of Nondestructive Inflammatory Bowel Disease</a>. Cellular and Molecular Gastroenterology and Hepatology. 2021;12:665–87.
 </div>
 <div id="ref-anderson2001" class="csl-entry">
-187. Anderson MJ. <a href="https://doi.org/10.1111/j.1442-9993.2001.01070.pp.x">A new method for non-parametric multivariate analysis of variance</a>. Austral Ecology. 2001;26:32–46.
+188. Anderson MJ. <a href="https://doi.org/10.1111/j.1442-9993.2001.01070.pp.x">A new method for non-parametric multivariate analysis of variance</a>. Austral Ecology. 2001;26:32–46.
 </div>
 <div id="ref-warton2012" class="csl-entry">
-188. Warton DI, Wright ST, Wang Y. <a href="https://doi.org/10.1111/j.2041-210X.2011.00127.x">Distance-based multivariate analyses confound location and dispersion effects</a>. Methods in Ecology and Evolution. 2012;3:89–101.
+189. Warton DI, Wright ST, Wang Y. <a href="https://doi.org/10.1111/j.2041-210X.2011.00127.x">Distance-based multivariate analyses confound location and dispersion effects</a>. Methods in Ecology and Evolution. 2012;3:89–101.
 </div>
 <div id="ref-goeman2006" class="csl-entry">
-189. Goeman JJ, van de Geer SA, van Houwelingen HC. <a href="https://www.jstor.org/stable/3879286">Testing against a high dimensional alternative</a>. Journal of the Royal Statistical Society Series B (Statistical Methodology). 2006;68:477–93.
+190. Goeman JJ, van de Geer SA, van Houwelingen HC. <a href="https://www.jstor.org/stable/3879286">Testing against a high dimensional alternative</a>. Journal of the Royal Statistical Society Series B (Statistical Methodology). 2006;68:477–93.
 </div>
 <div id="ref-oksanen2020" class="csl-entry">
-190. Oksanen J, Blanchet FG, Friendly M, Kindt R, Legendre P, McGlinn D, et al. <a href="https://CRAN.R-project.org/package=vegan">Vegan: Community ecology package</a>. 2020.
+191. Oksanen J, Blanchet FG, Friendly M, Kindt R, Legendre P, McGlinn D, et al. <a href="https://CRAN.R-project.org/package=vegan">Vegan: Community ecology package</a>. 2020.
 </div>
 <div id="ref-langfelder2008" class="csl-entry">
-191. Langfelder P, Horvath S. <a href="https://doi.org/10.1186/1471-2105-9-559">WGCNA: An r package for weighted correlation network analysis</a>. BMC Bioinformatics. 2008;9:559.
+192. Langfelder P, Horvath S. <a href="https://doi.org/10.1186/1471-2105-9-559">WGCNA: An r package for weighted correlation network analysis</a>. BMC Bioinformatics. 2008;9:559.
 </div>
 <div id="ref-filzmoser2004" class="csl-entry">
-192. Filzmoser P, Viertl R. <a href="https://doi.org/10.1007/s001840300269">Testing hypotheses with fuzzy data: The fuzzy p -value</a>. Metrika. 2004;59:21–9.
+193. Filzmoser P, Viertl R. <a href="https://doi.org/10.1007/s001840300269">Testing hypotheses with fuzzy data: The fuzzy p -value</a>. Metrika. 2004;59:21–9.
 </div>
 <div id="ref-dubois1993" class="csl-entry">
-193. Dubois D, Prade H. <a href="https://doi.org/10.1109/FUZZY.1993.327367">[Proceedings 1993] second IEEE international conference on fuzzy systems</a>. 1993. p. 1059–1068 vol.2.
+194. Dubois D, Prade H. <a href="https://doi.org/10.1109/FUZZY.1993.327367">[Proceedings 1993] second IEEE international conference on fuzzy systems</a>. 1993. p. 1059–1068 vol.2.
 </div>
 <div id="ref-revillasancho2021" class="csl-entry">
-194. Revilla Sancho L, Lozano J-J, Salas A. <a href="https://doi.org/10.21105/joss.03358">experDesign: stratifying samples into batches with minimal bias</a>. Journal of Open Source Software. 2021;6:3358.
+195. Revilla Sancho L, Lozano J-J, Salas A. <a href="https://doi.org/10.21105/joss.03358">experDesign: stratifying samples into batches with minimal bias</a>. Journal of Open Source Software. 2021;6:3358.
 </div>
 <div id="ref-robin2011" class="csl-entry">
-195. Robin X, Turck N, Hainard A, Tiberti N, Lisacek F, Sanchez J-C, et al. <a href="https://doi.org/10.1186/1471-2105-12-77">pROC: An open-source package for r and s+ to analyze and compare ROC curves</a>. BMC Bioinformatics. 2011;12:77.
+196. Robin X, Turck N, Hainard A, Tiberti N, Lisacek F, Sanchez J-C, et al. <a href="https://doi.org/10.1186/1471-2105-12-77">pROC: An open-source package for r and s+ to analyze and compare ROC curves</a>. BMC Bioinformatics. 2011;12:77.
 </div>
 </div>
 <div class="footnotes">
