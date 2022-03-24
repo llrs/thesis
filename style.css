@@ -19,12 +19,17 @@
 }
 
 /*Align caption to the right and change color*/
-p.caption {
-  text-align: center;
-  color: darkgrey;
-  font-style: bold;
-}
 
 .figure {
   position: center;
+}
+
+.table {
+  position: center;
+}
+
+caption {
+  text-align: center;
+  color: darkgrey;
+  font-style: bold;
 }
