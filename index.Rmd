@@ -19,6 +19,15 @@ colorlinks: yes
 links-as-notes: true
 # fontfamily: boisik
 papersize: a4
+fontsize: 12pt
+# Not needed https://tex.stackexchange.com/a/188337/178206
+# fontenc: utf8 
+geometry:
+ - top=25.4mm
+ - bottom=31.8mm
+classoption: 
+  - twoside
+  # - openright
 lot: yes
 lof: yes
 bibliography:
@@ -50,8 +59,8 @@ meta() %>%
   meta_social(
     title = "Data integration on inflammatory bowel disease",
     url = "https://thesis.llrs.dev",
-    image = "https://r4ds.had.co.nz/cover.png",
-    image_alt = "The cover of the book",
+    # image = "https://r4ds.had.co.nz/cover.png", # TODO
+    image_alt = "The cover of the thesis.",
     og_type = "book",
     og_author = c("Lluís Revilla Sancho"),
     twitter_card_type = "summary_large_image",
