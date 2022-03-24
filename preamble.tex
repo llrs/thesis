@@ -20,6 +20,14 @@
 \usepackage{caption}
 \captionsetup{width=\textwidth}
 
+% Allow figures and tables in a page from https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html#adjust-latex-placement-rules
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.15}
+\renewcommand{\floatpagefraction}{.66}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{4}
 
 % Creating marker on the page margins
 % https://tex.stackexchange.com/questions/113323/how-can-one-put-a-marker-to-every-page-in-a-chapter
