@@ -33,7 +33,7 @@ Nonetheless, the disease could result from an imbalanced microbial composition l
 The role of the gut microbiome in IBD is an active ongoing field of research.
 Several authors are currently studying the alterations reported in IBD of the intestinal microbiome.
 However, it is still unclear the cause-effect relation between dysbiosis and IBD.
-Partly due to the multiple variables already identified that have been linked to IBD; for instance, age, diet, usage of antibiotic, tobacco, and socioeconomic status [@human_microbiome_project_consortium_framework_2012].
+Partly due to the multiple variables already identified that have been linked to IBD; for instance, age, diet, usage of antibiotic, tobacco, and socioeconomic status [@humanmicrobiomeprojectconsortium2012].
 
 The relationship between host and microbiome has been proposed to play a fundamental role in maintaining disease.
 For instance, some *Proteobacteria* species which have adherent and invasive properties might exploit host defenses and promote a proinflammatory environment, altering the intestinal microbiota in favor of dysbiosis [@mukhopadhya2012].
