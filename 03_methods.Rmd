@@ -161,6 +161,9 @@ For all the other datasets [dada2](https://bioconductor.org/packages/dada2) [@ca
 It creates amplicon sequencing variants from the 16S sequencing data, without merging similar sequences at any threshold.
 It is an alternative to the use of OTUs which allows to compare results between studies and provides more resolution to identify differences on the fragment of 16S amplified.
 
+We used Silva v138.1 to annotate the 16S fragments whenever possible [@quast2013].
+If we did not have access to the direct ASV we used the annotation provided by the original authors of the dataset.
+
 ```{r workflow-process, fig.scap="Workflow of the analysis process.", fig.cap="Workflow of the main analysis process of the thesis. Created with BioRender.com"}
 knitr::include_graphics("images/workflow_integration2.png")
 ```
@@ -222,7 +225,6 @@ The main method used on this thesis has been regularized generalized canonical c
 Canonical correlation is a method that uses data about the same unit but from different origins to find how much the different sources agree.
 Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017] which was used here.
 The method and implementation will be explained in detail in the next section.
-
 
 ```{r multiomic-datasets, fig.scap="Multiomic relationships.", fig.cap="Multiomic relationships on different datasets. Integration methods focus on relationships within datasets. Common relationships between datasets are used as confirmation/validation. Created with BioRender.com"}
 knitr::include_graphics("images/multiomic_datasets.png")
@@ -303,9 +305,9 @@ Later, it was divided by the square root of the number of variables of the block
 
 ### Output {#rgcca-output}
 
-RGCCA as other dimensional reduction techniques provides specific weights for each variable on each dimension and a sample score on each dimension, together with quality scores. 
+RGCCA as other dimensional reduction techniques provides specific weights for each variable on each dimension and a sample score on each dimension, together with quality scores.
 The most important output are the canonical component of each block.
-These canonical components 
+These canonical components
 
 <!-- TODO expand about the canonical components -->
 
@@ -331,7 +333,8 @@ The following table summarizes the equivalent parameters needed on RGCCA to work
 : (#tab:RGCCA-methods) Equivalences of RGCCA for multi-block data analysis to other methods
 
 There are other methods that can be performed with RGCCA, for example: The classical canonical correlation analysis would be equivalent to data variance equal to 1 and shrinkage of 0.
-Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1 in RGCCA. Finally, redundancy analysis could be performed where one block's weight normalized value is 1 and the variance of the other equals to 1.
+Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1 in RGCCA.
+Finally, redundancy analysis could be performed where one block's weight normalized value is 1 and the variance of the other equals to 1.
 
 ### Models
 
@@ -421,8 +424,7 @@ P_X(k) = P(X = k)
 = \frac{\binom{K}{k} \binom{N - K}{n-k}}{\binom{N}{n}}
 $$
 
-This looks like the fisher test, because hypergeometric test assesses the extremeness of observing $k$ or more of
-that overlap ($a$ on ) and thus it is the same as a one-sided Fisher's exact test.
+This looks like the fisher test, because hypergeometric test assesses the extremeness of observing $k$ or more of that overlap ($a$ on ) and thus it is the same as a one-sided Fisher's exact test.
 
 ### Proportion test
 
@@ -559,7 +561,6 @@ To look for relationships between the microbiome and the RNAseq we used weighted
 We used weighted gene co-expression network analysis as implemented on [WGCNA](https://cran.r-project.org/package=WGCNA) [@langfelder2008] as well as correlations.
 The Spearman rank correlation coefficient is:
 
-
 $$
 R_s(X,Y) = \dfrac{\sum_{i=1}^n (R_i - \bar{R}) (S_i - \bar{S} )}{\sqrt{\sum_{i=1}^n (R_i - \bar{R})^2}\sqrt{\sum_{i=1}^n (S_i - \bar{S})^2}}
 $$
@@ -579,7 +580,7 @@ Assimilating the membership function to probability we can calculate the probabi
 Which applied to the data and the case at hand, it is the probability that a given variable is associated with a given outcome and not with any other outcome.
 
 The membership function was derived from the bootstraps used for each model on the thousand iterations of the integrative method applied to give an estimation of how probable is a given gene and bacteria to be selected as relevant for the model.
-The bootstraps of the models where used to calculate the probability of a variable to be selected by RGCCA. 
+The bootstraps of the models where used to calculate the probability of a variable to be selected by RGCCA.
 This probability was used to calculate (via `set_size`) the genes and bacteria that are specific of the model that allows to separate the transcriptome by its location and the microbiome by the disease status.
 
 ### experDesign
