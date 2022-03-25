@@ -410,7 +410,10 @@ It ends up advising to set up guidelines for multi-omic studies tailored to the 
 <p>Current methodological approaches focus on comparing tools on (several) previously published datasets <span class="citation">[<a href="#ref-cantini2021" role="doc-biblioref">207</a>]</span>, an approach that we have taken too.
 This approach was not used to compare different tools, that we also do it, but to validate findings of one dataset in other datasets.
 This is specially important due to the lack of golden datasets or a way to reliable simulate datasets as discussed on the previous section <a href="discussion.html#discussion-datasets">5.1.1</a>.</p>
-<p>On IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria is related to inflammation <span class="citation">[<a href="#ref-tang2017" role="doc-biblioref">80</a>]</span>. On this thesis, the focus was on finding a good representation of the relationships that allowed to identify genes and bacteria are relevant on the disease. We made the assumptions that the microbiome presence and the transcriptome are related. This assumption is backed up by several other previous studies supporting this relationship or others <span class="citation">[<a href="#ref-thomas1998" role="doc-biblioref">40</a>, <a href="#ref-cornish2008" role="doc-biblioref">41</a>, <a href="#ref-holmes2012" role="doc-biblioref">208</a>–<a href="#ref-brand2021" role="doc-biblioref">210</a>]</span>.</p>
+<p>On IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria is related to inflammation <span class="citation">[<a href="#ref-tang2017" role="doc-biblioref">80</a>]</span>.
+On this thesis, the focus was on finding a good representation of the relationships that allowed to identify genes and bacteria are relevant on the disease.
+We made the assumptions that the microbiome presence and the transcriptome are related.
+This assumption is backed up by several other previous studies supporting this relationship or others <span class="citation">[<a href="#ref-thomas1998" role="doc-biblioref">40</a>, <a href="#ref-cornish2008" role="doc-biblioref">41</a>, <a href="#ref-holmes2012" role="doc-biblioref">208</a>–<a href="#ref-brand2021" role="doc-biblioref">210</a>]</span>.</p>
 <p>Tools that relate the variance of a block with other variables, both numeric and categoric, are needed to search which variables are important.<br />
 PERMANOVA and <code>globaltest</code> worked well to identify which variables about the samples were important.
 But they do not give any insight into which specific microbial species are driving the association between the microbiome and the variables <span class="citation">[<a href="#ref-susin2020" role="doc-biblioref">211</a>]</span>.<br />
@@ -511,8 +514,11 @@ So far the models were only discussed on their technical merits.</p>
 The difference is so great that many times the colon and ileum samples are analyzed separately.
 As such, it was a reasonable assumption to expect models to reflect this differences on the gene expression canonical component.</p>
 <p>The variability of microbiome challenges finding clear patterns.
-On healthy humans, it has been suggested that there is a common microbial composition on all humans <span class="citation">[<a href="#ref-arumugam2011" role="doc-biblioref">230</a>]</span>. Such theory suggests three groups of similar microbiota composition, named enterotypes. However, the enterotypes classification is not unanimously accepted <span class="citation">[<a href="#ref-koren2013" role="doc-biblioref">231</a>, <a href="#ref-cheng2019" role="doc-biblioref">232</a>]</span>.</p>
-<p>There are many factors that influence the gut microbiome <span class="citation">[<a href="#ref-hasan2019" role="doc-biblioref">233</a>]</span>. But the role of microbiome on IBD has recently gained some interest <span class="citation">[<a href="#ref-khanna2014" role="doc-biblioref">16</a>, <a href="#ref-bringiotti2014" role="doc-biblioref">234</a>, <a href="#ref-lloyd-price2019" role="doc-biblioref">235</a>]</span>.
+On healthy humans, it has been suggested that there is a common microbial composition on all humans <span class="citation">[<a href="#ref-arumugam2011" role="doc-biblioref">230</a>]</span>.
+Such theory suggests three groups of similar microbiota composition, named enterotypes.
+However, the enterotypes classification is not unanimously accepted <span class="citation">[<a href="#ref-koren2013" role="doc-biblioref">231</a>, <a href="#ref-cheng2019" role="doc-biblioref">232</a>]</span>.</p>
+<p>There are many factors that influence the gut microbiome <span class="citation">[<a href="#ref-hasan2019" role="doc-biblioref">233</a>]</span>.
+But the role of microbiome on IBD has recently gained some interest <span class="citation">[<a href="#ref-khanna2014" role="doc-biblioref">16</a>, <a href="#ref-bringiotti2014" role="doc-biblioref">234</a>, <a href="#ref-lloyd-price2019" role="doc-biblioref">235</a>]</span>.
 It has been associated with predictors of CD treatment response and suggested that they could be useful for building an improved classifier for CD and treatment response based on sufferers’ microbiome in the future <span class="citation">[<a href="#ref-douglas2018" role="doc-biblioref">236</a>]</span>.
 Thee is for instance, an association between IBD and butyrate producers (See <span class="citation">[<a href="#ref-takahashi2016" role="doc-biblioref">237</a>]</span>) which has shown to influence permeability of the epithelial barrier <span class="citation">[<a href="#ref-ferrer-picón2020" role="doc-biblioref">24</a>]</span>.</p>
 <p>In addition, It is known that microbiome of patients in remission is different from non-IBD patients <span class="citation">[<a href="#ref-halfvarson2017" role="doc-biblioref">238</a>]</span>.
@@ -568,20 +574,25 @@ This might involve using more network integration methods.</p>
 <p>Krassowski’s <em>et. al.</em> (<span class="citation">[<a href="#ref-krassowski2020" role="doc-biblioref">94</a>]</span>) advice and recommendations on software engineering and reproducibility practices to share a comprehensive awareness with new researchers in multi-omics for end-to-end workflow.
 In addition the recent recommendation about integration on IBD (<span class="citation">[<a href="#ref-sudhakar2022" role="doc-biblioref">149</a>]</span>) suggests that there is still much to be done.
 To increase the results by these projects and the effectivity.</p>
-<p>The several environmental factors highly affect the disease, so analysis or comparisons without taking into account them might provide misleading or false results.</p>
 <p>There seems to be a tendency of multi-omics project to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing <span class="citation">[<a href="#ref-zhang2019" role="doc-biblioref">241</a>]</span>.
 This could be explained by the numerous problems that 16S sequencing have.
 Some of these are avoided or solved by using these other omics techniques.
 For instance the metatranscriptomics and metaproteomics could help detect what is actively producing the microbiota and the metagenomics, what is actually there at a more detailed level than 16S.
 But these methods also have their shortcomings.
 Metagenomics still does not detect adherent invasive cells and metatranscriptomics and metaproteomics do not provide who is producing what (even if paired with metagenomics or 16S data).</p>
-<p><span class="citation">[<a href="#ref-jiang2019" role="doc-biblioref">242</a>]</span> A paper about multi-omics and microbiome…</p>
-<!--# From @collij2021 add references/adapt-->
-<p>To study complex systems, new technologies like “organ-on-chip” or more specifically “gut-on-chip” are being developed <span class="citation">[<a href="#ref-collij2021" role="doc-biblioref">243</a>]</span>.
+<p>Perhaps as suggested in other publications network methods might be able to provide more detailed information about the relationships <span class="citation">[<a href="#ref-jiang2019" role="doc-biblioref">242</a>]</span>.
+But, it is unclear how complete and valid are these networks.
+There is some evidence that currently literature focus on already known and studied genes instead of more novel and with higher relevance genes <span class="citation">[<a href="#ref-haynes2018" role="doc-biblioref">243</a>]</span>.
+This could explain why there are many genes selected by the models with few pathways or gene sets.</p>
+<p>To study complex systems, new technologies like “organ-on-chip” or more specifically “gut-on-chip” are being developed <span class="citation">[<a href="#ref-collij2021" role="doc-biblioref">244</a>]</span>.
 These systems expand on the already useful technique of using organoids to better mimic the epithelial cross-talk on the laboratory.
 Latest developments include the addition of separate environments and distinct flow on these environments.
 By introducing gut microbiota, these systems will help studying the interaction of the gut microbiota and the intestinal epithelium.
 However, it is not clear how accurately accounts for other factors such as the accumulation of inflammation.</p>
+<p>Several factors affect the disease and the relationship between gut’s microbiome and gut’s mucosa.
+Analysis or comparisons without taking into account them might provide misleading or false results.
+To our knowledge this is the first study using these variables as part of the integration study with canonical correlations.
+We hope this provides a first approximation to accurately understand the relationships between genes and bacteria on IBD.</p>
 
 </div>
 </div>
@@ -749,8 +760,11 @@ However, it is not clear how accurately accounts for other factors such as the a
 <div id="ref-jiang2019" class="csl-entry">
 242. Jiang D, Armour CR, Hu C, Mei M, Tian C, Sharpton TJ, et al. <a href="https://doi.org/10.3389/fgene.2019.00995">Microbiome multi-omics network analysis: Statistical considerations, limitations, and opportunities</a>. Frontiers in Genetics. 2019;10.
 </div>
+<div id="ref-haynes2018" class="csl-entry">
+243. Haynes WA, Tomczak A, Khatri P. <a href="https://doi.org/10.1038/s41598-018-19333-x">Gene annotation bias impedes biomedical research</a>. Scientific Reports. 2018;8:1362.
+</div>
 <div id="ref-collij2021" class="csl-entry">
-243. Collij V, Klaassen MAY, Weersma RK, Vila AV. <a href="https://doi.org/10.1007/s00439-020-02218-3">Gut microbiota in inflammatory bowel diseases: moving from basic science to clinical applications</a>. Human Genetics. 2021;140:703–8.
+244. Collij V, Klaassen MAY, Weersma RK, Vila AV. <a href="https://doi.org/10.1007/s00439-020-02218-3">Gut microbiota in inflammatory bowel diseases: moving from basic science to clinical applications</a>. Human Genetics. 2021;140:703–8.
 </div>
 </div>
 <div class="footnotes">
