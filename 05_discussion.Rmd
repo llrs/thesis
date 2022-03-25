@@ -142,7 +142,10 @@ Current methodological approaches focus on comparing tools on (several) previous
 This approach was not used to compare different tools, that we also do it, but to validate findings of one dataset in other datasets.
 This is specially important due to the lack of golden datasets or a way to reliable simulate datasets as discussed on the previous section \@ref(discussion-datasets).
 
-On IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria is related to inflammation [@tang2017]. On this thesis, the focus was on finding a good representation of the relationships that allowed to identify genes and bacteria are relevant on the disease. We made the assumptions that the microbiome presence and the transcriptome are related. This assumption is backed up by several other previous studies supporting this relationship or others [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
+On IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria is related to inflammation [@tang2017].
+On this thesis, the focus was on finding a good representation of the relationships that allowed to identify genes and bacteria are relevant on the disease.
+We made the assumptions that the microbiome presence and the transcriptome are related.
+This assumption is backed up by several other previous studies supporting this relationship or others [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
 
 Tools that relate the variance of a block with other variables, both numeric and categoric, are needed to search which variables are important.\
 PERMANOVA and `globaltest` worked well to identify which variables about the samples were important.
@@ -261,9 +264,12 @@ The difference is so great that many times the colon and ileum samples are analy
 As such, it was a reasonable assumption to expect models to reflect this differences on the gene expression canonical component.
 
 The variability of microbiome challenges finding clear patterns.
-On healthy humans, it has been suggested that there is a common microbial composition on all humans [@arumugam2011]. Such theory suggests three groups of similar microbiota composition, named enterotypes. However, the enterotypes classification is not unanimously accepted [@koren2013; @cheng2019].
+On healthy humans, it has been suggested that there is a common microbial composition on all humans [@arumugam2011].
+Such theory suggests three groups of similar microbiota composition, named enterotypes.
+However, the enterotypes classification is not unanimously accepted [@koren2013; @cheng2019].
 
-There are many factors that influence the gut microbiome [@hasan2019]. But the role of microbiome on IBD has recently gained some interest [@khanna2014; @bringiotti2014; @lloyd-price2019].
+There are many factors that influence the gut microbiome [@hasan2019].
+But the role of microbiome on IBD has recently gained some interest [@khanna2014; @bringiotti2014; @lloyd-price2019].
 It has been associated with predictors of CD treatment response and suggested that they could be useful for building an improved classifier for CD and treatment response based on sufferers' microbiome in the future [@douglas2018].
 Thee is for instance, an association between IBD and butyrate producers (See [@takahashi2016]) which has shown to influence permeability of the epithelial barrier [@ferrer-picón2020].
 
