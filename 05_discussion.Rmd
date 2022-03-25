@@ -339,8 +339,6 @@ Krassowski's *et. al.* ([@krassowski2020]) advice and recommendations on softwar
 In addition the recent recommendation about integration on IBD ([@sudhakar2022]) suggests that there is still much to be done.
 To increase the results by these projects and the effectivity.
 
-The several environmental factors highly affect the disease, so analysis or comparisons without taking into account them might provide misleading or false results.
-
 There seems to be a tendency of multi-omics project to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing [@zhang2019].
 This could be explained by the numerous problems that 16S sequencing have.
 Some of these are avoided or solved by using these other omics techniques.
@@ -348,12 +346,18 @@ For instance the metatranscriptomics and metaproteomics could help detect what i
 But these methods also have their shortcomings.
 Metagenomics still does not detect adherent invasive cells and metatranscriptomics and metaproteomics do not provide who is producing what (even if paired with metagenomics or 16S data).
 
-[@jiang2019] A paper about multi-omics and microbiome...
-
-<!--# From @collij2021 add references/adapt-->
+Perhaps as suggested in other publications network methods might be able to provide more detailed information about the relationships [@jiang2019].
+But, it is unclear how complete and valid are these networks.
+There is some evidence that currently literature focus on already known and studied genes instead of more novel and with higher relevance genes [@haynes2018].
+This could explain why there are many genes selected by the models with few pathways or gene sets.
 
 To study complex systems, new technologies like "organ-on-chip" or more specifically "gut-on-chip" are being developed [@collij2021].
 These systems expand on the already useful technique of using organoids to better mimic the epithelial cross-talk on the laboratory.
 Latest developments include the addition of separate environments and distinct flow on these environments.
 By introducing gut microbiota, these systems will help studying the interaction of the gut microbiota and the intestinal epithelium.
 However, it is not clear how accurately accounts for other factors such as the accumulation of inflammation.
+
+Several factors affect the disease and the relationship between gut's microbiome and gut's mucosa.
+Analysis or comparisons without taking into account them might provide misleading or false results.
+To our knowledge this is the first study using these variables as part of the integration study with canonical correlations.
+We hope this provides a first approximation to accurately understand the relationships between genes and bacteria on IBD.
