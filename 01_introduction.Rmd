@@ -421,7 +421,8 @@ Lately, the access to bigger datasets with more variables and often from the sam
 The explosion of data on biological sciences has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time.
 If done with multiple sequencing technologies it is usually referred as multi-omics methods, which usually only uses omic data.
 
-It is crucial to classify, review and compare tools available, as well as, to benchmark these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019]. Part of these efforts use the methods' strategies to classify them [@cavill2016; @chongComputationalApproachesIntegrative2017].
+It is crucial to classify, review and compare tools available, as well as, to benchmark these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019].
+Part of these efforts use the methods' strategies to classify them [@cavill2016; @chongComputationalApproachesIntegrative2017].
 Following this view I will review the available integration methods according to several axes: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
 
 ### Classification of integration methods
