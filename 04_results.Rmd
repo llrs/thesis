@@ -600,36 +600,38 @@ format_design(k, m0)
 The first model for family 1 is on table \@ref(tab:hasler-model-1-1):
 
 ```{r hasler-model-1-1}
-m1.1 <- data.frame(
+df <- data.frame(
   "Model 1.1" = c("RNAseq", "micro", "meta"),
   RNAseq = c(0, 0, 1), 
   micro = c(0, 0, 1), 
   meta = c(1, 1, 0),
   check.names = FALSE
 )
-k <- kable(m1.1, align = rep("c", ncol(m1.1)),
+k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 1.1 of H\u00E4sler dataset", 
            caption = "Model 1.1 of H\u00E4sler dataset")
-format_design(k, m1.1)
+format_design(k, df)
 ```
 
 The after optimization of the model of family 1, the best one is on table \@ref(tab:hasler-model-1-2):
 
 ```{r hasler-model-1-2}
-m1.2 <- structure(c(0, 0, 1, 0, 0, 0.1, 1, 0.1, 0), .Dim = c(3L, 3L), .Dimnames = list(
-    c("RNAseq", "micro", "meta"), c("RNAseq", "micro", "meta"
-    )))
-k <- kable(as.data.frame(m1.2), 
-           align = rep("c", ncol(m1.2)),
+df <- data.frame("Model 1.2" = c("RNAseq", "micro", "meta"),
+                 RNAseq = c(0, 0, 1), 
+                 micro = c(0, 0, 0.1), 
+                 meta = c(1, 0.1, 0),
+                 check.names = FALSE)
+k <- kable(df, 
+           align = rep("c", ncol(df)),
            caption.short = "Model 1.2 of H\u00E4sler dataset", 
            caption = "Model 1.2 of H\u00E4sler dataset")
-format_design(k, m1.2)
+format_design(k, df)
 ```
 
 The first model for family 2 is on table \@ref(tab:hasler-model-2-1):
 
 ```{r hasler-model-2-1}
-m2.1 <- data.frame(list(
+df <- data.frame(list(
                         "Model 2.1" = c("RNAseq", "micro", "Location", "Demographic", "Time")),
                    RNAseq = c(0, 0, 1, 0, 0), 
                    micro = c(0, 0, 0.5, 1, 0), 
@@ -637,7 +639,7 @@ m2.1 <- data.frame(list(
                    Demographic = c(0, 1, 0, 0, 1), 
                    Time = c(0, 0, 0, 1, 0), 
                    check.names = FALSE)
-k <- kable(m2.1, align = rep("c", ncol(m2.1)),
+k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 2.1 of H\u00E4sler dataset", 
            caption = "Model 2.1 of H\u00E4sler dataset")
 format_design(k, df)
@@ -646,13 +648,13 @@ format_design(k, df)
 After optimization of models of family 1 the best model according to the inner AVE score is on table \@ref(tab:hasler-model-2-2):
 
 ```{r hasler-model-2-2}
-m2.2 <- data.frame(list("Model 2.2" = c("RNAseq", "micro", "Location", "Demographic", "Time"), 
+df <- data.frame(list("Model 2.2" = c("RNAseq", "micro", "Location", "Demographic", "Time"), 
                         RNAseq = c(0, 0.1, 1, 0, 0),
                         micro = c(0.1, 0, 0, 0.1, 1), 
                         Location = c(1, 0, 0, 0, 0), 
                         Demographic = c(0, 0.1, 0, 0, 0.1), 
                         Time = c(0, 1, 0, 0.1, 0)), check.names = FALSE)
-k <- kable(m2.2, align = rep("c", ncol(m2.2)),
+k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 2.2 of H\u00E4sler dataset", 
            caption = "Model 2.2 of H\u00E4sler dataset")
 format_design(k, df)
