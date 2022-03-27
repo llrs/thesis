@@ -386,8 +386,9 @@ Splitting by location of the sample and disease provided the highest differences
 Weighted gene co-expression network analysis did not provide relevant links between bacteria and transcriptome as it failed to find an acceptable scale free degree.
 As can be seen on the Figure \@ref(fig:hsct-wgcna-power), the scale free topology does not reach the recommended threshold of 0.9 and the mean connectivity is also very low even for the first power.
 
-![(#fig:hsct-wgcna-power) Power evaluation of WGCNA of the HSCT dataset. On the ordinate the power on the abscissa on the left the scale free topology model fit; on the right the mean connectivity. There is a low fit even on large power and the mean connectivity is below 100 from the very first value.](images/hsct-wgcna-power.png)
-
+```{r hsct-wgcna-power, fig.scap="Power evaluation of WGCNA of the HSCT dataset.", fig.cap="Power evaluation of WGCNA of the HSCT dataset. On the ordinate the power on the abscissa on the left the scale free topology model fit; on the right the mean connectivity. There is a low fit even on large power and the mean connectivity is below 100 from the very first value."}
+include_graphics("images/hsct-wgcna-power.png")
+```
 
 STATegRa was used between stool 16S data and intestinal 16S data under the assumption that there is a shared common factor without influence of other categorical variables.
 However, it did not find a good agreement between these two data sources and 16S data source was not longer used on the analysis.
@@ -396,7 +397,10 @@ In addition, the model is fixed, so it did not allow to find new or other relati
 With RGCCA we could select different models and use all the data available without much assumptions.
 The models with the highest inner AVE of the family 1 and the family 2 models were similar to those on the Häsler dataset.
 
-![(#fig:hsct-models) On the abscissa the transcriptome, on the ordinate the Microbiome. Each square represents a different model of the HSCT dataset. On panel A colored by disease status, on panel B colored by sample location. Model 0 has only transcriptome and microbiome data, models 1 to 1.2 with data about the samples and models 2.1 to 2.3 with data about the samples split in 3 blocks.](images/hsct-models.png)
+```{r hsct-models, fig.scap="Models on the HSCT dataset.", fig.cap="On the abscissa the transcriptome, on the ordinate the Microbiome. Each square represents a different model of the HSCT dataset. On panel A colored by disease status, on panel B colored by sample location. Model 0 has only transcriptome and microbiome data, models 1 to 1.2 with data about the samples and models 2.1 to 2.3 with data about the samples split in 3 blocks."}
+include_graphics("images/hsct-models.png")
+```
+
 
 The weights of these models can be observed here:
 
@@ -530,12 +534,18 @@ The most similar models are those that have split the metadata into 3 blocks, fo
 In order to analyze the accuracy of the models, one thousand bootstraps were used to integrate the data from the HSCT CD dataset.
 Each bootstrap had its own dispersion on the variables according to the samples selected, the distribution of the bootstraps used are represented here:
 
-![(#fig:hsct-bootstrap-quality) Dispersion of the bootstraped samples on age and percentage of colon and controls samples.](images/hsct-bootstrap-characteristics.png)
+```{r hsct-bootstrap-quality, fig.scap="Characteristics of the samples of  HSCT bootstraps.", fig.cap="Dispersion of the bootstraped samples on age and percentage of colon and controls samples."}
+include_graphics("images/hsct-bootstrap-characteristics.png")
+```
+
 
 Evaluating the same model on each bootstrap lead to a dispersion on the inner AVE of the model.
 The lower the dispersion, the more robust the model was to different conditions than in the initial testing.
 
-![(#fig:hsct-bootstrap) Bootstrap of the models 0, 1.2 and 2.2. The point with the black circle is the AVE of the original data. The dispersion is shown by the ellipses. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped.](images/hsct-bootstrap.png)
+```{r hsct-bootstrap, fig.scap="Bootstrap results on HSCT dataset.", fig.cap="Bootstrap of the models 0, 1.2 and 2.2. The point with the black circle is the AVE of the original data. The dispersion is shown by the ellipses. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped."}
+include_graphics("images/hsct-bootstrap.png")
+```
+
 
 With the bootstrapped models we used BaseSet to estimate the probability that each variable to be relevant for the association with a disease.
 However, due to big amount of small probabilities when using the BaseSet package to calculate which variables are more relevant it could not provide a good estimation on time.
@@ -571,7 +581,10 @@ This is on par with the models of family 2 as can be seen on the table \@ref(tab
 
 The different models selected different variables as can be seen below:
 
-![(#fig:hsct-features) Upset plot of the variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes and OTUs.](images/hsct-features.png)
+```{r hsct-features, fig.scap="Upset plot of variables selected on HSCT dataset.", fig.cap="Upset plot of the variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes and OTUs."}
+include_graphics("images/hsct-features.png")
+```
+
 
 Differences and similarities between the selected features of each model can be observed on Figure \@ref(fig:hsct-features).
 Genes are very similar between model 0 to 1.2 and between 2 to 2.3, while OTUs are very unique on model 0 and others shared between most models.
@@ -580,11 +593,11 @@ Genes are very similar between model 0 to 1.2 and between 2 to 2.3, while OTUs a
 
 In this dataset, the parameter tau behaved slightly differently than with the previous dataset but the value from the Schäfer's method for tau was close to the best value.
 
-![(#fig:hasler-tau) Changes on tau on the centroid scheme on the Häsler dataset affect the inner AVE score on the model 1. The panel A shows on the ordinate the RNAseq tau value, the panel B on the right, shows the tau of the microorganism; both of them show the y's tau on the abscissa.](images/hasler-centroid_tau.png)
-
+```{r hasler-tau, fig.scap="Tau effect on inner AVE on Häsler's dataset.", fig.cap="Changes on tau on the centroid scheme on the Häsler dataset affect the inner AVE score on the model 1. The panel A shows on the ordinate the RNAseq tau value, the panel B on the right, shows the tau of the microorganism; both of them show the y's tau on the abscissa."}
+include_graphics("images/hasler-centroid_tau.png")
+```
 
 Models for Häsler dataset are:
-
 
 ```{r hasler-model-0}
 m0 <- data.frame("Model 0" = c("RNAseq", "micro"),
@@ -679,7 +692,10 @@ The microbiome block is also related by a factor of 0.1 with the demographic blo
 Lastly, the time and the demographic block are related by a factor of a 0.1.
 In either case the family 1 and family 2 models can correctly separate by sample location (colon or ileum) but not by disease type or inflammation status as can be seen on figure \@ref(fig:hasler-models).
 
-![(#fig:hasler-models) Models on the Häsler's dataset. Model 0 with just the transcriptome and microbiome data. Models 1.1 to 1.2 with transcriptome, microbiome and sample data in a single block. Models 2.1 and 2.2 with transcriptome, microbiome and sample data in multiple blocks. On the A panel colored by disease on the B panel colored by location of the sample.](images/hasler-models.png)
+```{r hasler-models, fig.scap="Models on the Häsler's dataset.", fig.cap="Models on the Häsler's dataset. Model 0 with just the transcriptome and microbiome data. Models 1.1 to 1.2 with transcriptome, microbiome and sample data in a single block. Models 2.1 and 2.2 with transcriptome, microbiome and sample data in multiple blocks. On the A panel colored by disease on the B panel colored by location of the sample."}
+include_graphics("images/hasler-models.png")
+```
+
 
 There is no observable cluster of IBD samples and the other samples, showing that on this dataset the differences of the microbiome between the different type of samples are less stark.
 The classification of samples was very accurate in all the models, specially on model 2.2, see figure \@ref(fig:hasler-auc-plot):
@@ -704,8 +720,9 @@ format_design(k, df)
 MCIA was applied as a baseline of the integration and compared to the different models to know which one separates best colon and ileum samples.
 The result on the first two dimension is shown on figure \@ref(fig:hasler-mcia):
 
-![(#fig:hasler-mcia) MCIA first two dimensions of the dataset colored by state, the shape is according to the location of the samples. Shows two vertical groups on the first syntethic dimension according to the location of the samples.](images/hasler-mcia.png){alt="MCIA results"}
-
+```{r hasler-mcia, fig.scap="MCIA result on Häsler's dataset.", fig.cap="MCIA result on Häsler's dataset. MCIA first two dimensions of the dataset colored by state, the shape is according to the location of the samples. Shows two vertical groups on the first syntethic dimension according to the location of the samples."}
+include_graphics("images/hasler-mcia.png")
+```
 
 MCIA's AUC results was as high as the model 2.2 to classify samples according to their location.
 It was even better to classify the samples according to the type of sample they are: 0.6248 vs 1 the best AUC from RGCCA that corresponds to model 1.2.
@@ -810,7 +827,9 @@ However, it is kept on the further analysis.
 
 The different models were not able to separate the samples neither by location or sex.
 
-![(#fig:morgan-models) First component of the transcriptome and microbiome of the Morgan's dataset.Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models.](images/morgan_models.png)
+```{r morgan-models, fig.scap="First component of the transcriptome and microbiome of models on the Morgan's dataset. ", fig.cap="First component of the transcriptome and microbiome of models on the Morgan's dataset. Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models."}
+include_graphics("images/morgan_models.png")
+```
 
 Nevertheless, we compared the classification with the MCIA algorithm and still resulted that model 2.2 provide a better classification than MCIA.
 
@@ -831,7 +850,9 @@ format_design(k, df)
 
 When exploring the bootstraps of the data we found that model 1.2 is highly variable:
 
-![(#fig:morgan-bootstrap) Inner and outer AVE scores of the bootstrapped models 0 1.2 and 2.2. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptonme and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks.](images/morgan_bootstrap.png)
+```{r morgan-bootstrap, fig.scap="AVE scores of bootstrapped models on Morgans' dataset.", fig.cap="Inner and outer AVE scores of the bootstrapped models 0 1.2 and 2.2. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptonme and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks."}
+include_graphics("images/morgan_bootstrap.png")
+```
 
 <!--# TODO Add points of the models on the real dataset -->
 
@@ -901,9 +922,9 @@ format_design(k, df)
 
 Model 1.2 \@ref(tab:howell-model1-2) was the best according to the AVE score but perform worse when attempting to recreate known biological differences via classifying samples as we can see below \@ref(fig:howell-models):
 
-<!--# Found a bug on the plotting!! -->
-
-![(#fig:howell-models) The three main models, model 0, 1.2 and 2.2 on the Howell's dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks.](images/howell-models.png)
+```{r howell-models, fig.scap="Models on Howeell's datset.", fig.cap="The three main models, model 0, 1.2 and 2.2 on the Howell's dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks."}
+include_graphics("images/howell-models.png")
+```
 
 Model 2.2 was selected for further analysis as it describes more accurately the biology of the dataset it.
 Model 2.2 can be seen on \@ref(tab:howell-model2-2).
@@ -941,7 +962,10 @@ format_design(k, df)
 ```
 
 
-![(#fig:howell-bootstrap) Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset.](images/howells_models_bootstrap.png)
+```{r howell-bootstrap, fig.scap="Bootstrap of models on Howell's datset.", fig.cap="Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset."}
+include_graphics("images/howells_models_bootstrap.png")
+```
+
 
 The bootstrapping showed that model 1.2 has indeed higher inner AVE values than model 2.2 and is more stable than model 1.2.
 While model 0 shows a high variation according to which samples are selected.
