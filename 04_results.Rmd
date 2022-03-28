@@ -99,7 +99,7 @@ Using the package [on github](https://github.com/llrs/intermodel "inteRmodel") s
 The package has functions that can be grouped in three categories:
 
 -   Look for models and evaluate them:
-    To search for a model given some conditions, such as that all the blocks are connected, and check the models via bootstraping or leave one out procedures.
+    To search for a model given some conditions, such as that all the blocks are connected, and check the models via bootstrapping or leave one out procedures.
 
 -   Reporting: To make better reports by improving handling of names or simplifying the objects or how to calculate scores.
 
@@ -558,7 +558,7 @@ include_graphics("images/hsct-mcia.png")
 
 The AUC of classifying the transcriptome in colon or ileum segments was compared between the models (see \@ref(fig:hsct-auc-plot) and with MCIA.
 
-```{r hsct-auc-plot, fig.scap="ROC curves of the RGCCA models on the HSCT dataset.", fig.cap="ROC curve of the different datasets with the models from RGCCA and the result with MCIA. In gray the MCIA method and with discontinued lines the models of RGCCA."}
+```{r hsct-auc-plot, fig.scap="ROC curves of the RGCCA models on the HSCT dataset.", fig.cap="ROC curve of the different datasets with the models from RGCCA on the HSCT dataset."}
 include_graphics("images/hsct-auc-models.png")
 ```
 
@@ -581,7 +581,7 @@ This is on par with the models of family 2 as can be seen on the table \@ref(tab
 
 The different models selected different variables as can be seen below:
 
-```{r hsct-features, fig.scap="Upset plot of variables selected on HSCT dataset.", fig.cap="Upset plot of the variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes and OTUs."}
+```{r hsct-features, fig.scap="Upset plot of variables selected on HSCT dataset.", fig.cap="Upset plot of variables selected on HSCT dataset. The variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes, panel A, and OTUs, panel B."}
 include_graphics("images/hsct-features.png")
 ```
 
