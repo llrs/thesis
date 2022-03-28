@@ -222,12 +222,14 @@ On other studies there are less samples per individual and timepoint (if there a
 Variables of samples were separated according to what they are about on models of family 2.
 If it is about the individual it would be on the Demographic block, if it is about time on a Time block, and if about the location of the sample on a Location block (c.f. with tables on design of Puget's \@ref(tab:puget-model2-2), \@ref(tab:puget-model2); HSCT \@ref(tab:hsct-model2) \@ref(tab:hsct-model2-2), \@ref(tab:hsct-model2-3); Häsler: \@ref(tab:hasler-model-2-1), \@ref(tab:hasler-model-2-2), Morgan's \@ref(tab:morgan-model2), \@ref(tab:morgan-model2-2), Howell's \@ref(tab:howell-model2-2) models).
 
+The exploration of design on Puget's dataset, and the datasets analysis of HSCT, Häsler and Morgan's dataset was published after peer review [@revilla2021].
+
 ## Evaluating models
 
 To evaluate a model `RGCCA` provides the average variance explained (AVE), inner and outer (see section \@ref(rgcca-output)).
 As we are more interested on the model of the relationships the inner AVE makes more sense to evaluate it.
 
-Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
+Furthermore, to evaluate a design bootstrapping can be used to know how well the design does apply to a variety of data.
 Although on `inteRmodel` there is the option to use a leave-one-out procedure, we didn't use it to evaluate the fitness of the models.
 
 Using an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately is also a common approach to evaluate and validate models.
@@ -292,7 +294,7 @@ If the same primers are used the ASV could be directly compared.
 However, the ASV' length might be different.
 In addition, on this thesis we used dataset with different primers and also OTUs.
 For these reasons a direct comparison is not possible.
-A comparison of the taxonomy of the annotated microbiome on the datasets is the next possiblity.
+A comparison of the taxonomy of the annotated microbiome on the datasets is the next possibility.
 
 However, some datasets used did not provide the annotation (Häsler's and Morgan's dataset).
 So we are are left with comparing OTUs with ASVs.
@@ -303,6 +305,12 @@ This was not a surprise, as there are many factors that influence one's microbio
 The microbiome of each dataset seem capable to classify the samples according to the disease (data not shown).
 However, on further evaluation via bootstrapping this resulted not significant, as any relatively big amount of microbiome variables might classify the samples due to their specificity.
 
+<!--# TODO Finish-->
+
+On Howell's dataset and Häsler dataset, the best model is 1.2 which separates the microbiome component by location too (See Figure \@ref(fig:hasler-models) and table \@ref(tab:hasler-aves) for Häsler dataset and figures \@ref(fig:howell-models) and table \@ref(tab:howell-models-ave)).
+That models 2.2 according to the inner AVE are not that far away from models 1.2 seems to imply that the relationship of the microbiome is slightly stronger with the location than the relationship with the disease.
+As such both things should be considered when looking for a relationship with other genes.
+
 ## Implications
 
 On this thesis several methods has been developed for helping research.
@@ -312,7 +320,7 @@ On this thesis several methods has been developed for helping research.
 
 [^discussion-1]: See an exploration of this using [AUCell](https://bioconductor.org/packages/AUCell) on this website: <https://llrs.github.io/BaseSet_scRNAseq/AUCell.html>
 
-Some studies using host transcriptomics of faecal wash infer inflammation without colonoscopy [@ungar2022].
+Some studies using host transcriptomics of fecal wash infer inflammation without colonoscopy [@ungar2022].
 This would help patients to avoid an unpleasant experience, and reduce the usage of clinical facilities.
 It could be possible that just sequencing the intestinal microbiome could be enough to identify the patients' disease.
 However, this requires further validation to ensure that the diagnosis is accurate enough on a diverse and big population.
