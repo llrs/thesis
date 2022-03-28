@@ -1,9 +1,18 @@
 # Conclusions
 
-Microbiome under some dataset can classify the patients according to their disease.
-Doing so reliable might take some time.
-It is hard to make it generalizable.
+This doctoral thesis, in which we assessed the relationships between the microbiota and the gut transcriptome in inflammatory bowel disease.
+If we had to summarize all the work in one sentence we would say that...
 
-Overoptimizing for a dataset might be possible but so far we have not seen this, on the contrary on different dataset the models of connections seem consistently even if the particular taxa do not show a great overlap. 
+It allows us to conclude the following:
 
-If we had to summarize all the work in one sentence we would say that…
+## Study 1: Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis
+
+1.  Methods that use information about the samples show better results than omitting this information.
+2.  Correlations are not enough to identify relationship between genes and microorganisms.
+3.  The `inteRmodel` method provides consistent connections between blocks on different datasets of inflammatory bowel disease.
+
+## Study 2: Genes and microbiome relationship on inflammatory bowel disease
+
+1.  Transcriptomics is heavily influenced by location and not so much by the disease.
+2.  Microbiome is more related to the location of the samples than to the disease status but both are almost equally important
+3.  Microorganisms highly tied to intestinal location might indicate the disease of the patients, but microorganisms related to the disease are common in all the locations.
