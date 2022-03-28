@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-03-27" />
+<meta name="date" content="2022-03-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -226,7 +226,11 @@ div.csl-indent {
 <li class="chapter" data-level="5.3" data-path="discussion.html"><a href="discussion.html#evaluating-models"><i class="fa fa-check"></i><b>5.3</b> Evaluating models<span></span></a></li>
 <li class="chapter" data-level="5.4" data-path="discussion.html"><a href="discussion.html#implications"><i class="fa fa-check"></i><b>5.4</b> Implications<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>6</b> Conclusions<span></span></a></li>
+<li class="chapter" data-level="6" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>6</b> Conclusions<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="conclusions.html"><a href="conclusions.html#study-1-multi-omic-modelling-of-inflammatory-bowel-disease-with-regularized-canonical-correlation-analysis"><i class="fa fa-check"></i><b>6.1</b> Study 1: Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis<span></span></a></li>
+<li class="chapter" data-level="6.2" data-path="conclusions.html"><a href="conclusions.html#study-2-genes-and-microbiome-relationship-on-inflammatory-bowel-disease"><i class="fa fa-check"></i><b>6.2</b> Study 2: Genes and microbiome relationship on inflammatory bowel disease<span></span></a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i><b>7</b> Acknowledgments<span></span></a></li>
 <li><a href="references.html#references">References<span></span></a></li>
 <li class="appendix"><span><b>Appendix<span></span></b></span></li>
@@ -478,12 +482,13 @@ This is specially important because in our datasets we have samples from the sam
 On other studies there are less samples per individual and timepoint (if there are several timepoints) <span class="citation">[<a href="#ref-hasler_uncoupling_2016" role="doc-biblioref">79</a>, <a href="#ref-morgan2015" role="doc-biblioref">151</a>, <a href="#ref-howell2018" role="doc-biblioref">152</a>]</span>.</p>
 <p>Variables of samples were separated according to what they are about on models of family 2.
 If it is about the individual it would be on the Demographic block, if it is about time on a Time block, and if about the location of the sample on a Location block (c.f. with tables on design of Puget’s <a href="results.html#tab:puget-model2-2">4.4</a>, <a href="results.html#tab:puget-model2">4.3</a>; HSCT <a href="results.html#tab:hsct-model2">4.13</a> <a href="results.html#tab:hsct-model2-2">4.14</a>, <a href="results.html#tab:hsct-model2-3">4.15</a>; Häsler: <a href="results.html#tab:hasler-model-2-1">4.21</a>, <a href="results.html#tab:hasler-model-2-2">4.22</a>, Morgan’s <a href="results.html#tab:morgan-model2">4.28</a>, <a href="results.html#tab:morgan-model2-2">4.29</a>, Howell’s <a href="results.html#tab:howell-model2-2">4.33</a> models).</p>
+<p>The exploration of design on Puget’s dataset, and the datasets analysis of HSCT, Häsler and Morgan’s dataset was published after peer review <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">199</a>]</span>.</p>
 </div>
 <div id="evaluating-models" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Evaluating models<a href="discussion.html#evaluating-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To evaluate a model <code>RGCCA</code> provides the average variance explained (AVE), inner and outer (see section <a href="materials-and-methods.html#rgcca-output">3.4.2</a>).
 As we are more interested on the model of the relationships the inner AVE makes more sense to evaluate it.</p>
-<p>Furthermore, to evaluate a design bootstraping can be used to know how well the design does apply to a variety of data.
+<p>Furthermore, to evaluate a design bootstrapping can be used to know how well the design does apply to a variety of data.
 Although on <code>inteRmodel</code> there is the option to use a leave-one-out procedure, we didn’t use it to evaluate the fitness of the models.</p>
 <p>Using an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately is also a common approach to evaluate and validate models.
 Using the same approach on different data helps to ensure the replicability of the results <span class="citation">[<a href="#ref-community2021" role="doc-biblioref">221</a>]</span>.</p>
@@ -537,7 +542,7 @@ If the same primers are used the ASV could be directly compared.
 However, the ASV’ length might be different.
 In addition, on this thesis we used dataset with different primers and also OTUs.
 For these reasons a direct comparison is not possible.
-A comparison of the taxonomy of the annotated microbiome on the datasets is the next possiblity.</p>
+A comparison of the taxonomy of the annotated microbiome on the datasets is the next possibility.</p>
 <p>However, some datasets used did not provide the annotation (Häsler’s and Morgan’s dataset).
 So we are are left with comparing OTUs with ASVs.
 Despite the errors on ASV annotation ( <span class="citation">[<a href="#ref-edgar2018" role="doc-biblioref">239</a>]</span>), OTUs from the HSCT dataset can be compared to ASV from Howell’s dataset.
@@ -545,6 +550,10 @@ There were very few common taxonomic levels selected on both datasets (data not 
 This was not a surprise, as there are many factors that influence one’s microbiome profile and the diversity indexes already showed high differences between samples of the same dataset.</p>
 <p>The microbiome of each dataset seem capable to classify the samples according to the disease (data not shown).
 However, on further evaluation via bootstrapping this resulted not significant, as any relatively big amount of microbiome variables might classify the samples due to their specificity.</p>
+<!--# TODO Finish-->
+<p>On Howell’s dataset and Häsler dataset, the best model is 1.2 which separates the microbiome component by location too (See Figure <a href="results.html#fig:hasler-models">4.16</a> and table <a href="results.html#tab:hasler-aves">4.23</a> for Häsler dataset and figures <a href="results.html#fig:howell-models">4.23</a> and table <a href="results.html#tab:howell-models-ave">4.34</a>).
+That models 2.2 according to the inner AVE are not that far away from models 1.2 seems to imply that the relationship of the microbiome is slightly stronger with the location than the relationship with the disease.
+As such both things should be considered when looking for a relationship with other genes.</p>
 </div>
 <div id="implications" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Implications<a href="discussion.html#implications" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -552,7 +561,7 @@ However, on further evaluation via bootstrapping this resulted not significant, 
 <code>experDesign</code> is on the primary steps from moving from the bench to the in-silico experiments.
 <code>BaseSets</code> and <code>inteRmodel</code> are more relevant for computational analysis.
 <code>BaseSets</code> might help beyond integration analysis such as single cell annotation<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>.</p>
-<p>Some studies using host transcriptomics of faecal wash infer inflammation without colonoscopy <span class="citation">[<a href="#ref-ungar2022" role="doc-biblioref">240</a>]</span>.
+<p>Some studies using host transcriptomics of fecal wash infer inflammation without colonoscopy <span class="citation">[<a href="#ref-ungar2022" role="doc-biblioref">240</a>]</span>.
 This would help patients to avoid an unpleasant experience, and reduce the usage of clinical facilities.
 It could be possible that just sequencing the intestinal microbiome could be enough to identify the patients’ disease.
 However, this requires further validation to ensure that the diagnosis is accurate enough on a diverse and big population.
@@ -633,6 +642,9 @@ We hope this provides a first approximation to accurately understand the relatio
 </div>
 <div id="ref-howell2018" class="csl-entry">
 152. Howell KJ, Kraiczy J, Nayak KM, Gasparetto M, Ross A, Lee C, et al. <a href="https://doi.org/10.1053/j.gastro.2017.10.007">DNA Methylation and Transcription Patterns in Intestinal Epithelial Cells From Pediatric Patients With Inflammatory Bowel Diseases Differentiate Disease Subtypes and Associate With Outcome</a>. Gastroenterology. 2018;154:585–98.
+</div>
+<div id="ref-revilla2021" class="csl-entry">
+199. Revilla L, Mayorgas A, Corraliza AM, Masamunt MC, Metwaly A, Haller D, et al. <a href="https://doi.org/10.1371/journal.pone.0246367">Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a>. PLOS ONE. 2021;16:e0246367.
 </div>
 <div id="ref-nearing2022" class="csl-entry">
 200. Nearing JT, Douglas GM, Hayes MG, MacDonald J, Desai DK, Allward N, et al. <a href="https://doi.org/10.1038/s41467-022-28034-z">Microbiome differential abundance methods produce different results across 38 datasets</a>. Nature Communications. 2022;13:342.

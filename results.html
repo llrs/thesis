@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-03-27" />
+<meta name="date" content="2022-03-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -226,7 +226,11 @@ div.csl-indent {
 <li class="chapter" data-level="5.3" data-path="discussion.html"><a href="discussion.html#evaluating-models"><i class="fa fa-check"></i><b>5.3</b> Evaluating models<span></span></a></li>
 <li class="chapter" data-level="5.4" data-path="discussion.html"><a href="discussion.html#implications"><i class="fa fa-check"></i><b>5.4</b> Implications<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>6</b> Conclusions<span></span></a></li>
+<li class="chapter" data-level="6" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>6</b> Conclusions<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="conclusions.html"><a href="conclusions.html#study-1-multi-omic-modelling-of-inflammatory-bowel-disease-with-regularized-canonical-correlation-analysis"><i class="fa fa-check"></i><b>6.1</b> Study 1: Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis<span></span></a></li>
+<li class="chapter" data-level="6.2" data-path="conclusions.html"><a href="conclusions.html#study-2-genes-and-microbiome-relationship-on-inflammatory-bowel-disease"><i class="fa fa-check"></i><b>6.2</b> Study 2: Genes and microbiome relationship on inflammatory bowel disease<span></span></a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i><b>7</b> Acknowledgments<span></span></a></li>
 <li><a href="references.html#references">References<span></span></a></li>
 <li class="appendix"><span><b>Appendix<span></span></b></span></li>
@@ -355,7 +359,7 @@ Using the package <a href="https://github.com/llrs/intermodel" title="inteRmodel
 <p>The package has functions that can be grouped in three categories:</p>
 <ul>
 <li><p>Look for models and evaluate them:
-To search for a model given some conditions, such as that all the blocks are connected, and check the models via bootstraping or leave one out procedures.</p></li>
+To search for a model given some conditions, such as that all the blocks are connected, and check the models via bootstrapping or leave one out procedures.</p></li>
 <li><p>Reporting: To make better reports by improving handling of names or simplifying the objects or how to calculate scores.</p></li>
 <li><p>Building: To easier build correct models on RGCCA, simplifying the process to create a symmetric matrix.</p></li>
 </ul>
@@ -2005,9 +2009,9 @@ Figure 4.12: MCIA first two synthetic variables on the IBD related cohorts. In r
 </div>
 <p>The AUC of classifying the transcriptome in colon or ileum segments was compared between the models (see <a href="results.html#fig:hsct-auc-plot">4.13</a> and with MCIA.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-auc-plot"></span>
-<img src="images/hsct-auc-models.png" alt="ROC curve of the different datasets with the models from RGCCA and the result with MCIA. In gray the MCIA method and with discontinued lines the models of RGCCA." width="100%" />
+<img src="images/hsct-auc-models.png" alt="ROC curve of the different datasets with the models from RGCCA on the HSCT dataset." width="100%" />
 <p class="caption">
-Figure 4.13: ROC curve of the different datasets with the models from RGCCA and the result with MCIA. In gray the MCIA method and with discontinued lines the models of RGCCA.
+Figure 4.13: ROC curve of the different datasets with the models from RGCCA on the HSCT dataset.
 </p>
 </div>
 <p>These models have the following AUC to classify the location of the sample according to the first component of the transcriptome block.</p>
@@ -2096,9 +2100,9 @@ AUC
 This is on par with the models of family 2 as can be seen on the table <a href="results.html#tab:hsct-auc">4.17</a>.</p>
 <p>The different models selected different variables as can be seen below:</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-features"></span>
-<img src="images/hsct-features.png" alt="Upset plot of the variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes and OTUs." width="100%" />
+<img src="images/hsct-features.png" alt="Upset plot of variables selected on HSCT dataset. The variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes, panel A, and OTUs, panel B." width="100%" />
 <p class="caption">
-Figure 4.14: Upset plot of the variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes and OTUs.
+Figure 4.14: Upset plot of variables selected on HSCT dataset. The variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes, panel A, and OTUs, panel B.
 </p>
 </div>
 <p>Differences and similarities between the selected features of each model can be observed on Figure <a href="results.html#fig:hsct-features">4.14</a>.
