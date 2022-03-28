@@ -27,7 +27,7 @@ geometry:
  - bottom=31.8mm
 classoption: 
   - twoside
-  # - openright
+  - openright
 lot: yes
 lof: yes
 bibliography:
