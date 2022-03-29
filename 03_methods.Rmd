@@ -21,7 +21,7 @@ The copy number variation of the samples was processed with the ADM-2 algorithm,
 In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor [@puget2012].
 
 | Characteristic            | Puget's  |
-|---------------------------|----------|
+|:--------------------------|:--------:|
 | Samples                   | 53       |
 | Sex (female/male)         | 28/25    |
 | Location (cort/dipg/midl) | 20/22/11 |
@@ -30,7 +30,7 @@ In addition, this dataset contained information on age, localization of the tumo
 
 ### HSCT dataset {#methods-hsct}
 
-<!--# COPIED!!! from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
+<!--# Adapted from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
 
 Samples from the HSCT dataset used in this thesis were from a cohort of patients with severe refractory CD undergoing HSCT.
 Patients were treated in the Department of Gastroenterology (Hospital Clínic de Barcelona --Spain--).
@@ -47,7 +47,7 @@ The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen
 In total 158 samples with both RNA and DNA extraction of the same segment and time were available \@ref(tab:HSCT):
 
 | Characteristic                                       | HSCT        |
-|------------------------------------------------------|-------------|
+|:-----------------------------------------------------|:-----------:|
 | Sex (female/male)                                    | 22/15       |
 | Age at diagnostic (\<17/\<40/\>40 years)             | 7/11/0      |
 | Duration (in years): mean (min-max)                  | 14 (8-28)   |
@@ -69,7 +69,7 @@ These biopsies included samples from the terminal ileum and sigma from CD, UC, i
 The dataset included information about gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.
 
 | Characteristic                | Häsler's |
-|-------------------------------|----------|
+|:------------------------------|:--------:|
 | Disease status (non-IBD/IBD)  | 33/26    |
 | Sex (female/male)             | 42/17    |
 | Sample location (ileum/colon) | 30/29    |
@@ -86,7 +86,7 @@ This dataset included anonymous identifiers for patients, whether the sample was
 The pouch ileum might be inflamed or not.
 
 | Characteristic              | Morgan's |
-|-----------------------------|----------|
+|:----------------------------|:--------:|
 | Samples (n)                 | 255      |
 | Sex patients (female/male)  | 101/102  |
 | Sample location (Pouch/PPI) | 59/196   |
@@ -102,7 +102,7 @@ There are 10 non-IBD samples, 11 with CD and 11 with UC.
 Data has the following characteristics: disease, age at diagnostic, age at time of study, sex, sample location, and disease activity:
 
 | Characteristic                                  | Howell's  |
-|-------------------------------------------------|-----------|
+|:------------------------------------------------|:---------:|
 | Disease (non-IBD/CD/UC)                         | 11/10/11  |
 | Age at diagnostic (\<17/\<40/\>40 years)        | 32/0/0    |
 | Age: mean (min-max)                             | 12 (6-15) |
@@ -305,11 +305,10 @@ Later, it was divided by the square root of the number of variables of the block
 
 ### Output {#rgcca-output}
 
-RGCCA as other dimensional reduction techniques provides specific weights for each variable on each dimension and a sample score on each dimension, together with quality scores.
-The most important output are the canonical component of each block.
-These canonical components
-
-<!-- TODO expand about the canonical components -->
+RGCCA, as other dimensional reduction techniques, provides specific weights for each variable on each dimension and a sample score on each dimension, together with quality scores.
+The most important output are the canonical components of each block.
+For each block there can be as many canonical components as the number of variables of a block minus 1. 
+These canonical components represent a block by the largest source of variation on that block that satisfies the constrains explained below.
 
 To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE).
 RGCCA returns an AVE score for each block, which measures how the variables of the block correlate with the dimension component of the block.
@@ -321,8 +320,9 @@ It can also generate results as other related methods based on the maximization 
 Others methods are based on the maximization of a function of covariances: SUMCOV (sum of covariances method), SSQCOV (sum of squared covariances method), SABSCOV (sum of absolute values of the covariances method).
 The following table summarizes the equivalent parameters needed on RGCCA to work:
 
+
 | Method  | Scheme    | Normalization         | Shrinkage |
-|---------|-----------|-----------------------|-----------|
+|:-------:|:---------:|:---------------------:|:---------:|
 | SUMCOR  | Horst     | $Var(X_j a_j) = 1$    | 0         |
 | SSQCOR  | Factorial | $Var(X_j a_j) = 1$    | 0         |
 | SABSCOR | Centroid  | $Var(X_j a_j) = 1$    | 0         |
@@ -393,11 +393,11 @@ I describe the hypergeometric test and the proportion test below.
 The fisher test calculates how independently are two categories.
 Say if genes in category X are independent of category Y, if we use the contingency table
 
-|                       | In category X | Not in category X | Row total   |
-|-----------------------|---------------|-------------------|-------------|
-| **In category Y**     | a             | b                 | a+b         |
-| **Not in category Y** | c             | d                 | c+d         |
-| **Column total**      | a+c           | b+d               | a+b+c+d = n |
+|                       | In category X | Not in category X | Row total     |
+|:----------------------|:-------------:|:-----------------:|:-------------:|
+| **In category Y**     | $a$           | $b$               | $a+b$         |
+| **Not in category Y** | $c$           | $d$               | $c+d$         |
+| **Column total**      | $a+c$         | $b+d$             | $a+b+c+d = n$ |
 
 : (#tab:fisher) Fisher contingency table
 
