@@ -308,7 +308,7 @@ On the other hand, the major difference is the dispersion on the CGH component o
 The effect of the superblock and weights on different models to the inner AVE.
 There are significant differences between having the superblock and not having it.
 
-<!--TODO double check which interaction indicates yes/no -->
+<!--# TODO double check which interaction indicates yes/no -->
 
 ```{r puget-weights, fig.scap="Effect of superblock and weights on the inner AVE on Puget's dataset.", fig.cap="Effect of superblock and weights on the inner AVE on Puget's dataset. Designs with the superblock showed higher inner AVe scores than without it. Interaction yes/no indicates RNA and RNA interaction."}
 knitr::include_graphics("images/pugets-weights.png")
