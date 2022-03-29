@@ -305,11 +305,10 @@ This was not a surprise, as there are many factors that influence one's microbio
 The microbiome of each dataset seem capable to classify the samples according to the disease (data not shown).
 However, on further evaluation via bootstrapping this resulted not significant, as any relatively big amount of microbiome variables might classify the samples due to their specificity.
 
-<!--# TODO Finish-->
-
 On Howell's dataset and Häsler dataset, the best model is 1.2 which separates the microbiome component by location too (See Figure \@ref(fig:hasler-models) and table \@ref(tab:hasler-aves) for Häsler dataset and figures \@ref(fig:howell-models) and table \@ref(tab:howell-models-ave)).
-That models 2.2 according to the inner AVE are not that far away from models 1.2 seems to imply that the relationship of the microbiome is slightly stronger with the location than the relationship with the disease.
-As such both things should be considered when looking for a relationship with other genes.
+Those models 2.2 according to the inner AVE are not that far away from models 1.2. 
+Which seems to imply that the relationship of the microbiome is slightly stronger with the location than the relationship with the disease.
+Both factors should be considered when looking for relationships of genes with microbiome.
 
 ## Implications
 
@@ -318,7 +317,7 @@ On this thesis several methods has been developed for helping research.
 `BaseSets` and `inteRmodel` are more relevant for computational analysis.
 `BaseSets` might help beyond integration analysis such as single cell annotation[^discussion-1].
 
-[^discussion-1]: See an exploration of this using [AUCell](https://bioconductor.org/packages/AUCell) on this website: <https://llrs.github.io/BaseSet_scRNAseq/AUCell.html>
+[^discussion-1]: See an exploration of this using AUCell <https://bioconductor.org/packages/AUCell> on this website: <https://llrs.github.io/BaseSet_scRNAseq/AUCell.html>.
 
 Some studies using host transcriptomics of fecal wash infer inflammation without colonoscopy [@ungar2022].
 This would help patients to avoid an unpleasant experience, and reduce the usage of clinical facilities.
