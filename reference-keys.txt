@@ -26,6 +26,8 @@ tab:puget-models-ave
 tab:hsct-permanova-rnaseq
 tab:hsct-permanova-microbiome
 fig:hsct-diversity
+fig:hsct-pca-16s
+fig:hsct-pca-rnaseq
 fig:hsct-wgcna-power
 fig:hsct-models
 tab:hsct-model0
@@ -41,6 +43,8 @@ fig:hsct-mcia
 fig:hsct-auc-plot
 tab:hsct-auc
 fig:hsct-features
+fig:hasler-pca-16s
+fig:hasler-pca-rnaseq
 fig:hasler-tau
 tab:hasler-model-0
 tab:hasler-model-1-1
@@ -52,6 +56,8 @@ fig:hasler-models
 fig:hasler-auc-plot
 tab:hasler-auc
 fig:hasler-mcia
+fig:morgan-pca-16s
+fig:morgan-pca-rnaseq
 tab:morgan-model0
 tab:morgan-model1
 tab:morgan-model1-2
@@ -63,6 +69,8 @@ fig:morgan-bootstrap
 fig:morgan-auc-plot
 tab:morgan-auc
 fig:morgan-mcia-plot
+fig:howell-pca-16s
+fig:howell-pca-rnaseq
 tab:howell-model1-2
 fig:howell-models
 tab:howell-model2-2
