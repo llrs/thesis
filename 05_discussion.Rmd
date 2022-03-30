@@ -139,23 +139,20 @@ It also encourages to collect more data about the exposome (the stimuli patients
 It ends up advising to set up guidelines for multi-omic studies tailored to the field, coordinate in a global framework to prevent redundant studies and ensure efficient funding and resources and disseminate training and education on computational approaches to analyze multi-omic datasets.
 
 Current methodological approaches focus on comparing tools on (several) previously published datasets [@cantini2021], an approach that we have taken too.
-This approach was not used to compare different tools, that we also do it, but to validate findings of one dataset in other datasets.
+This approach was not used to compare different tools, we also did it, but to validate findings of one dataset in other datasets.
 This is specially important due to the lack of golden datasets or a way to reliable simulate datasets as discussed on the previous section \@ref(discussion-datasets).
 
-On IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria is related to inflammation [@tang2017].
-On this thesis, the focus was on finding a good representation of the relationships that allowed to identify genes and bacteria are relevant on the disease.
-We made the assumptions that the microbiome presence and the transcriptome are related.
-This assumption is backed up by several other previous studies supporting this relationship or others [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
+On IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria is related to inflammation [@tang2017]. On this thesis, the focus was on finding a good representation of the relationships that allowed to identify genes and bacteria are relevant on the disease. We made the assumptions that the microbiome presence and the transcriptome are related. This assumption is backed up by several other previous studies supporting this relationship or others [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
 
-Tools that relate the variance of a block with other variables, both numeric and categoric, are needed to search which variables are important.\
+Tools that relate the variance of a block with other variables, both numeric and categoric, are needed to search which variables are important.
 PERMANOVA and `globaltest` worked well to identify which variables about the samples were important.
-But they do not give any insight into which specific microbial species are driving the association between the microbiome and the variables [@susin2020].\
+But they do not give any insight into which specific microbial species are driving the association between the microbiome and the variables [@susin2020].
 In addition, we could miss some other important variables.
 It is known the role of other factors outside the omics data collected, mainly from environment factors, genetic susceptibility and immune response [@sartor2006].
 Sudhakar *et. al.* [@sudhakar2022] recommend being conscious of the gap between the data available and the biological process.
 However, even if we missed them, we probably have not collected it or it is not available, there is nothing at this point that can be done.
 This also enters in conflict with a principle of data protection: collect the minimum sufficient information needed.
-We might not identify a relevant variable but to identify it we would need to collect too much information from the patients and for little or no clear benefits.\
+We might not identify a relevant variable but to identify it we would need to collect too much information from the patients and for little or no clear benefits.
 One variable we did not keep track was the microbiome load which is linked to the gut's microbiome community variation [@vandeputte2017].
 We did not measure it because at the time of extraction we didn't quantify the cells present and after the DNA extraction it was too late.
 
@@ -164,7 +161,7 @@ It is a tool designed to find common co-occurring patterns based on correlations
 It requires homogeneous samples, with a minimum of 12 samples for condition.
 When applied to the whole dataset there might bee too much variance in order of WGCNA to find the proper signal.
 This might be the reason why it failed to achieve a good fit on the scale free topology with around 100 of mean connectivity.
-In addition, having microbiome and RNASeq on the same matrix, would probably be hard for the process to find good relationships if we applied the same normalization process to both of them without escalation.\
+In addition, having microbiome and RNASeq on the same matrix, would probably be hard for the process to find good relationships if we applied the same normalization process to both of them without escalation.
 We could have tried to make smaller groups and then compare the modules between them but it groups would be too small because samples were from multiple segments and conditions.
 
 We briefly considered using `STATegRa` but it is not possible to select which interactions between the blocks exists and by that time we already knew it was important to consider several of the variables collected from the patients.
@@ -180,7 +177,7 @@ This might be due to them relying purely on the Spearman $\rho$ metric instead o
 It failed because it is computationally expensive to calculate the likelihood of 1500 variables; there are too many combinations.
 In addition, the numeric precision of said calculations suffers from the floating point problem and must be considered carefully [@goldberg1991].
 To support multiplying more than 1000 float numbers a different strategy such as using log values might be better.
-We could not come up with a better strategy to find all the combinations needed, perhaps a better method exists that could be used to find which are the terms more influential to the end result.\
+We could not come up with a better strategy to find all the combinations needed, perhaps a better method exists that could be used to find which are the terms more influential to the end result.
 During the peer-review process of the package for its acceptance on rOpenSci, some concerns were raised about conflating probabilities with fuzzy-sets.
 For all these reasons this approach was no longer pursued.
 However, the package was mentioned as [top 40 packages](https://rviews.rstudio.com/2020/12/22/november-top-40-new-cran-packages/) added on CRAN that month and it might be useful on other circumstances or when less variables are needed.
@@ -266,12 +263,9 @@ The difference is so great that many times the colon and ileum samples are analy
 As such, it was a reasonable assumption to expect models to reflect this differences on the gene expression canonical component.
 
 The variability of microbiome challenges finding clear patterns.
-On healthy humans, it has been suggested that there is a common microbial composition on all humans [@arumugam2011].
-Such theory suggests three groups of similar microbiota composition, named enterotypes.
-However, the enterotypes classification is not unanimously accepted [@koren2013; @cheng2019].
+On healthy humans, it has been suggested that there is a common microbial composition on all humans [@arumugam2011]. Such theory suggests three groups of similar microbiota composition, named enterotypes. However, the enterotypes classification is not unanimously accepted [@koren2013; @cheng2019].
 
-There are many factors that influence the gut microbiome [@hasan2019].
-But the role of microbiome on IBD has recently gained some interest [@khanna2014; @bringiotti2014; @lloyd-price2019].
+There are many factors that influence the gut microbiome [@hasan2019]. But the role of microbiome on IBD has recently gained some interest [@khanna2014; @bringiotti2014; @lloyd-price2019].
 It has been associated with predictors of CD treatment response and suggested that they could be useful for building an improved classifier for CD and treatment response based on sufferers' microbiome in the future [@douglas2018].
 Thee is for instance, an association between IBD and butyrate producers (See [@takahashi2016]) which has shown to influence permeability of the epithelial barrier [@ferrer-picón2020].
 
@@ -306,7 +300,7 @@ The microbiome of each dataset seem capable to classify the samples according to
 However, on further evaluation via bootstrapping this resulted not significant, as any relatively big amount of microbiome variables might classify the samples due to their specificity.
 
 On Howell's dataset and Häsler dataset, the best model is 1.2 which separates the microbiome component by location too (See Figure \@ref(fig:hasler-models) and table \@ref(tab:hasler-aves) for Häsler dataset and figures \@ref(fig:howell-models) and table \@ref(tab:howell-models-ave)).
-Those models 2.2 according to the inner AVE are not that far away from models 1.2. 
+Those models 2.2 according to the inner AVE are not that far away from models 1.2.
 Which seems to imply that the relationship of the microbiome is slightly stronger with the location than the relationship with the disease.
 Both factors should be considered when looking for relationships of genes with microbiome.
 
