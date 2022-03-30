@@ -87,7 +87,6 @@ format_kable <- function(x) {
 }
 ```
 
-
 # Preface {.unnumbered}
 
 ![UB logo](images/ub_logo.png "University where I defend the thesis"){width="160"} ![IDIBAPS logo](images/idibaps_logo.png "Research center"){width="160"} ![CIBER logo](images/logo_ciber.png "Hiring institution"){width="160" height="38"}
@@ -100,13 +99,13 @@ On this thesis I seek these relationships using data from different sequencing t
 
 The thesis was carried out on the [Institut d'Investigacions Biomèdiques August Pi i Sunyer (IDIBAPS)](http://www.idibaps.org/ "IDIBAPS website") research institute and funded by [Centro de Investigación Biomédica en Red (CIBER)](https://www.ciberehd.org/ "CIBER website").
 The thesis was done on [the IBD unit](https://www.ibd-bcn.org/ "Group's website") which is a translational team of biologist, microbiologists, veterinaries, bioinformaticians, doctors and nurses (at [Hospital Clínic](https://www.clinicbarcelona.org/en "Hospital Clínic")) in a multidisciplinary team.
-The leading doctor of the unit was [Julian Panés](https://orcid.org/0000-0002-4971-6902 "Julià website") whose interest on the disease lead to receiving a grant that made possible this thesis.
+The leading doctor of the unit was [Julian Panés](https://orcid.org/0000-0002-4971-6902 "Julià website") whose interest on the disease made possible this thesis.
 
 The thesis is on the [doctoral programme in biomedicine](http://www.ub.edu/doctorat_biomedicina/eng/index.htm "Doctoral program's website") of the [University of Barcelona (UB)](https://www.ub.edu/web/portal/en/ "UB website").
 My thesis directors' were [Juanjo Lozano](https://orcid.org/0000-0001-7613-3908 "Juanjo's ORCID") and [Azucena Salas](https://orcid.org/0000-0003-4572-2907 "Azu's ORCID"), my boss, who helped as bioinformatician and disease expert respectively.
 They provided advice and guidance on how to analyse the data and where to focus on the different experiments/analysis.
 
-This thesis, available on [https://thesis.llrs.dev](https://thesis.llrs.dev) is licensed under the [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/ "License summary link").  
+This thesis, available on <https://thesis.llrs.dev> is licensed under the [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/ "License summary link").\
 !["CC-BY image"](images/by.png "CC-BY image of creative commons")
 
 # Abstracts {.unnumbered}
@@ -115,48 +114,51 @@ This thesis, available on [https://thesis.llrs.dev](https://thesis.llrs.dev) is 
 
 ## English {.unnumbered}
 
-**Introduction**: Inflammatory bowel disease is a complex disease with several factors that affect each other. 
-The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine. 
-Finding those relationships will help to advance treatments, diagnosis or prevent it. 
+**Introduction**: Inflammatory bowel disease is a complex disease with several factors that affect each other.
+The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine.
+There are some clues that microbiome is related to maintaining or starting this disease.
+Finding relationships between the microbiome and the gastrointestinal mucosa will help advance treatments, diagnosis or prevent it.
 
-**Methods**: To identify these relationships we based our analysis on intestinal bacterial 16S data and human transcriptome from biopsies. 
-We used canonical correlation analysis to find models that are coherent with previous knowledge on the biologiy of the disease and provide insights on the relationships between bacteria and genes. 
+**Methods**: We based our analysis on intestinal bacterial 16S data and human transcriptome from biopsies.
+We used canonical correlation analysis to find models that are coherent with previous knowledge on the disease.
+Multiple datasets of patients on different treatments and conditions were analysed.
 
-**Results**: We compared our own methods with previously published methods, mainly MCIA, to assess the advantages and disadvantages of the different proposed relationships. 
-Furthermore, the classification of samples was used to find which methods provide are more accurate. 
+**Results**: Our new method inteRmodel outperformed other existing methods to modelling the relationships and to classify the samples according to their location.
+Despite being used on datasets of different sources the resulting models are very similar.
 
-**Discussion**: Biological relevance, difficult.
+**Discussion**: Our method finds how strong are the relationships of the microbiome and the transcriptome taking into account other variables.
+This approach is robust and flexible to different datasets.
+Comparing multiple approaches to models helps elucidate the relationships of the data on the dataset.
 
-**Conclusion**: Chips or further tests.
+**Conclusion**: With inteRmodel we found that the microbiome is slightly more related to the location than to the disease, but the transcriptome is highly related to the location of the sample on the intestine.
 
 ## Spanish {.unnumbered}
 
-**Introducción**: Inflammatory bowel disease is a complex disease with several factors that affect each other. 
-The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine. 
-Finding those relationships will help to advance treatments, diagnosis or prevent it. 
+**Introducción**: Inflammatory bowel disease is a complex disease with several factors that affect each other.
+The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine.
+Finding those relationships will help to advance treatments, diagnosis or prevent it.
 
-**Métodos**: To identify these relationships we based our analysis on intestinal bacterial 16S data and human transcriptome from biopsies. 
-We used canonical correlation analysis to find models that are coherent with previous knowledge on the biologiy of the disease and provide insights on the relationships between bacteria and genes. 
+**Métodos**: To identify these relationships we based our analysis on intestinal bacterial 16S data and human transcriptome from biopsies.
+We used canonical correlation analysis to find models that are coherent with previous knowledge on the biologiy of the disease and provide insights on the relationships between bacteria and genes.
 
-**Resultados**: We compared our own methods with previously published methods, mainly MCIA, to assess the advantages and disadvantages of the different proposed relationships. 
-Furthermore, the classification of samples was used to find which methods provide are more accurate. 
+**Resultados**: We compared our own methods with previously published methods, mainly MCIA, to assess the advantages and disadvantages of the different proposed relationships.
+Furthermore, the classification of samples was used to find which methods provide are more accurate.
 
 **Discussión**: Biological relevance, difficult.
 
 **Conclusión**: Chips or further tests.
 
-
 ## Catalan {.unnumbered}
 
-**Introducció**: Inflammatory bowel disease is a complex disease with several factors that affect each other. 
-The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine. 
-Finding those relationships will help to advance treatments, diagnosis or prevent it. 
+**Introducció**: Inflammatory bowel disease is a complex disease with several factors that affect each other.
+The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine.
+Finding those relationships will help to advance treatments, diagnosis or prevent it.
 
-**Mètodos**: To identify these relationships we based our analysis on intestinal bacterial 16S data and human transcriptome from biopsies. 
-We used canonical correlation analysis to find models that are coherent with previous knowledge on the biologiy of the disease and provide insights on the relationships between bacteria and genes. 
+**Mètodos**: To identify these relationships we based our analysis on intestinal bacterial 16S data and human transcriptome from biopsies.
+We used canonical correlation analysis to find models that are coherent with previous knowledge on the biologiy of the disease and provide insights on the relationships between bacteria and genes.
 
-**Resultats**: We compared our own methods with previously published methods, mainly MCIA, to assess the advantages and disadvantages of the different proposed relationships. 
-Furthermore, the classification of samples was used to find which methods provide are more accurate. 
+**Resultats**: We compared our own methods with previously published methods, mainly MCIA, to assess the advantages and disadvantages of the different proposed relationships.
+Furthermore, the classification of samples was used to find which methods provide are more accurate.
 
 **Discussió**: Biological relevance, difficult.
 
