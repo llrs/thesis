@@ -383,6 +383,18 @@ knitr::include_graphics("images/hsct-ASV-diversity.png")
 Diversity indices of the samples were explored and compared for several subsets.
 Splitting by location of the sample and disease provided the highest differences and the diversity index along time did not change much.
 
+The PCA didn't show any pattern on the microbiome according to the location, as can be seen on the first dimensions of the PCA on figure \@ref(fig:hsct-pca-16s):
+
+```{r hsct-pca-16s, fig.scap="PCA of 16S data of HSCT dataset.", fig.cap = "PCA of the 16S data of the HSCT dataset. Samples colored by location of the segment. There are no clear patterns according to the location."}
+include_graphics("images/HSCT_PCA_16S.png")
+```
+
+The PCA on the transcriptome shows a clear pattern splitting by location of the sample on the first dimension (see figure \@ref(fig:hsct-pca-rnaseq)).
+
+```{r hsct-pca-rnaseq, fig.scap="PCA of RNAseq data of HSCT dataset.", fig.cap = "PCA of the RNAseq data of the HSCT dataset. Samples colored by location of the segment. The samples separate according to the location."}
+include_graphics("images/HSCT_PCA_RNAseq.png")
+```
+
 Weighted gene co-expression network analysis did not provide relevant links between bacteria and transcriptome as it failed to find an acceptable scale free degree.
 As can be seen on the Figure \@ref(fig:hsct-wgcna-power), the scale free topology does not reach the recommended threshold of 0.9 and the mean connectivity is also very low even for the first power.
 
@@ -591,6 +603,20 @@ Genes are very similar between model 0 to 1.2 and between 2 to 2.3, while OTUs a
 
 ### Häsler's dataset {#results-hasler}
 
+If we look at the dataset 16S, the PCA doe not show a pattern as can be seen on figure \@ref(fig:hasler-pca-16s):
+
+```{r hasler-pca-16s, fig.scap="PCA of 16S of Häsler's dataset.", fig.cap = "PCA of 16S of Häsler's dataset colored by the location of the samples."}
+include_graphics("images/hasler_PCA_16S.png")
+```
+
+The PCA on the transcriptome shows a distinction between colon and ileum according to the first dimension of the pca that can be seen on \@ref(fig:hasler-pca-rnaseq):
+
+```{r hasler-pca-rnaseq, fig.scap="PCA of RNAseq of Häsler's dataset.", fig.cap = "PCA of RNAseq of Häsler's dataset. The samples are colored by location sigma and ileum. There are two clear groups according to the location."}
+include_graphics("images/hasler_PCA_RNAseq.png")
+```
+
+
+
 In this dataset, the parameter tau behaved slightly differently than with the previous dataset but the value from the Schäfer's method for tau was close to the best value.
 
 ```{r hasler-tau, fig.scap="Tau effect on inner AVE on Häsler's dataset.", fig.cap="Changes on tau on the centroid scheme on the Häsler dataset affect the inner AVE score on the model 1. The panel A shows on the ordinate the RNAseq tau value, the panel B on the right, shows the tau of the microorganism; both of them show the y's tau on the abscissa."}
@@ -728,6 +754,21 @@ MCIA's AUC results was as high as the model 2.2 to classify samples according to
 It was even better to classify the samples according to the type of sample they are: 0.6248 vs 1 the best AUC from RGCCA that corresponds to model 1.2.
 
 ### Morgan's dataset {#results-morgan}
+
+To explore this dataset that is different from the others with the IBD 
+
+The PCA didn't show any pattern on the microbiome according to the location, see figure \@ref(fig:morgan-pca-16s).
+
+```{r morgan-pca-16s, fig.scap="PCA of 16S of Morgan's dataset", fig.cap="PCA of 16S of Morgan's dataset. The sample are colored by location. "}
+include_graphics("images/morgan_pca_16S.png")
+```
+
+The PCA on the transcriptome did not show a clear distinction between the prepouch ileum and the pouch on figure \@ref(fig:morgan-pca-rnaseq) but there is a pattern:
+
+```{r morgan-pca-rnaseq, fig.scap="PCA of RNAseq of Morgan's dataset", fig.cap="PCA of RNAseq of Morgan's dataset. The sample are colored by location. "}
+include_graphics("images/morgan_pca_RNAseq.png")
+```
+
 
 We tested if results of inteRmodel were consistent on this dataset with the other datasets. 
 The first model we tried is model 0 as in table \@ref(tab:morgan-model0):
@@ -883,6 +924,18 @@ include_graphics("images/morgan-mcia.png")
 If we quantify this separation by the first dimension of MCIA, the AUC is 0.818, which is slightly worst than the models of family 2.
 
 ### Howell's dataset {#results-howell}
+
+The 16S of this dataset doesn't show any clear pattern regarding the location of the samples according to the firsts dimensions of the PCA on \@ref(fig:howell-pca-16s):
+
+```{r howell-pca-16s, fig.scap="PCA of 16S data of Howell's dataset", fig.cap = "PCA of 16S data of Howell's dataset. Samples are colored by location. There are no pattern on any of the first do dimensions."}
+include_graphics("images/howell_PCA_16S.png")
+```
+
+The PCA on the transcriptome shows a distinction between colon and ileum \@ref(fig:howell-pca-rnaseq) there are almost two distinct groups according to location:
+
+```{r howell-pca-rnaseq, fig.scap="PCA of RNASeq data of Howell's dataset", fig.cap = "PCA of RNAseq data of Howell's dataset. Samples are colored by location. There are two groups of samples according to their location."}
+include_graphics("images/howell_PCA_RNAseq.png")
+```
 
 
 This dataset was processed to confirm the results on the previous datasets.
