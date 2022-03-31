@@ -634,7 +634,7 @@ Here I briefly describe some common mathematical frameworks, some of which have 
     L1-regularization adds a penalty equal to the absolute value of the magnitude of coefficients which might leads to some coefficients becoming zero and the variable eliminated from the model.
     On the other hand, L2-regularization does not result in elimination of coefficients or sparse models and can only be used when there is multicollinearity as it works well to avoid over-fitting.
 
-    Several tools use this approach, Momix [@cantini_benchmarking_2020], regularized canonical correlation analysis (RGCCA) [@tenenhaus2017], mixOmics [@rohart2017] and STATegRa [@gomez-cabrero2019].
+    Several tools use this approach, Momix [@cantini2021], regularized canonical correlation analysis (RGCCA) [@tenenhaus2017], mixOmics [@rohart2017] and STATegRa [@gomez-cabrero2019].
     Other methods use bayesian approches like the Bayesian Group Factor Analysis [@virtanen2012].
 
 -   Active module identification
@@ -691,16 +691,16 @@ In a principal component analysis for instance how do we interpret that some var
 What happens in a more complex method like canonical correlation analysis?
 
 There are some articles about how to interpret those methods on real datasets [@sherryConductingInterpretingCanonical1981].
-Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martinez-mira_mosim_2018].
+Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset [@chung_multi-omics_2019; @martínez-mira2018].
 Which is used to compare the results of the integration with the dataset of interest and to compare different tools.
 These datasets are created with some relationships that the tools are expected to find.
 
-There exists several methods to create synthetic datasets like MOSim [@haberman2019], metaSPARSim [@patuzzi2019], CAMISIM [@fritz2019], ballgown [@fu2021], polyester [@frazee2021] and even edgeR [@mccarthy2012].
+There exists several methods to create synthetic datasets like MOSim [@martínez-mira2018], metaSPARSim [@patuzzi2019], CAMISIM [@fritz2019], ballgown [@fu2021], polyester [@frazee2021] and even edgeR [@mccarthy2012].
 These methods are useful to compare different setup but they can miss some subtle not previously reported relations on real data.
 
 ### Reviews
 
-The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool to apply a given dataset and research question [@cantini_benchmarking_2020].
+The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool to apply a given dataset and research question [@cantini2021].
 
 Some of these reviews focus on a specific type of data integration: metabolomics [@cavill2016], genomics [@mcgovern2015], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies [@de_souza_ibd_2017; @tarazona2021; @valles-colomer2016].
 On this regard there are several efforts to integrate data on IBD but no comprehensive review to date is known to the author.
@@ -708,7 +708,23 @@ The most comprehensive article to date is a very recent review identifying probl
 
 ### Summary {#methods-integration}
 
-The field of integration is large and complex, with increasing interest over the last few years, specially in the psychology and omics fields As a methodology they are quite complex and diverse but there is a growing interest on them to help answer complex questions without using other complex tools like deep neuronal networks or other machine learning approches (despite not being incompatible).
+The field of integration is large and complex, with increasing interest over the last few years, specially in the psychology and omics fields.
+As a methodology they are quite complex and diverse but there is a growing interest on them to help answer complex questions without using other complex tools like deep neuronal networks or other machine learning approaches (despite not being incompatible).
 
 Methods to integrate have many characteristics, depending on the objectives and data that available.
 Regardless of the method used, interpretation and reporting is usually the main challenge.
+
+## Summary
+
+<!--# TODO add paragraphs to summarize the introduction -->
+
+IBD is a gastrointestinal disease that includes two different diseases UC and CD.
+It affects preferentially the lower intestinal tract causing lesions on the epithelial barrier. 
+Bacteria causes or use these lesions to further damage the patients.
+But this interaction is also influenced by many other variables.
+
+Data integration are methods to analyze datasets with data from multiple sources.
+They include a variety of methods and there are methods for several purposes. 
+On IBD it has been used mostly sequencing data, disregarding the other variables known to be relevant.
+
+Data integration on IBD has been underexplored despite being known that many factors interact on the pathogenesis and maintenance of the disease. 
