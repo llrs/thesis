@@ -2,16 +2,20 @@
 
 ## Hypothesis
 
-I hypothesize that the presence of certain microorganisms are related to the patient well being.
-Furthermore, the expression state of the epithelium and the amount of bacterial presence might identify whether patients are suffering an IBD.
-Finally, I believe that environmental factors interact with the IBD and are responsible of the big variability on the IBD discourse.
+<!--# TODO add paragraphs to summarize the introduction -->
+IBD is a gastrointestinal disease affecting preferentially the lower intestinal tract causing lesions on the epithelium. 
+Bacteria interact with host's epithelium and with many other variables.
+There are data integration methods for a variety of purposes, including finding relationships between variables. 
+On IBD these methods have not been used much to find which bacteria is related to the host's genes. 
+
+We hypothesize that the expression state of the epithelium and the **microorganisms present might identify whether patients are suffering IBD if environmental factors are taken into account**.
 
 ## Objectives
 
-The main objective of the thesis is finding the relationships between microbiome and gene expression in the intestinal mucosa. For this reason weIdentify microorganisms and genes related to the IBD.
+The main objective of this thesis is finding the relationships between microbiome and gene expression in the intestinal mucosa. For this reason we identify microorganisms and genes related to IBD.
 
--   Identify how is the relationship between the intestine mucose gene expression and the microbiome present on the intestine. 
+-   Identify relationships between intestinal mucosal gene expression and microbiome presence on the intestine. 
 
--   Find the influence of variables such as location (colon and ileum), the treatment received, IBD activity, sex, age, etc. in the microbiome and mucosa relationship.
+-   Determine the influence in the microbiota and mucosa relationship of clinical variables such as location (colon and ileum), disease status, sex, age, treatment received, etc. in the microbiome and mucosa relationship.
 
--   Identify possible mechanism of interaction between the microbiome and mucosa 
+-   Identify groups of possible underlying mechanism interactions between the microbiome and mucosa on IBD.
