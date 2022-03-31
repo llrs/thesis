@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2022-03-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -141,6 +141,7 @@ div.csl-indent {
 <li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#reviews"><i class="fa fa-check"></i><b>1.3.3</b> Reviews<span></span></a></li>
 <li class="chapter" data-level="1.3.4" data-path="introduction.html"><a href="introduction.html#methods-integration"><i class="fa fa-check"></i><b>1.3.4</b> Summary<span></span></a></li>
 </ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#summary"><i class="fa fa-check"></i><b>1.4</b> Summary<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="hypothesis-and-objectives.html"><a href="hypothesis-and-objectives.html"><i class="fa fa-check"></i><b>2</b> Hypothesis and objectives<span></span></a>
 <ul>
@@ -818,7 +819,7 @@ Some methods that use these approaches are Reconstructing Integrative Molecular 
 <p>These methods focus on finding just a few variables and summarizing them using a function that has some desired property such as the correlation between thre transformed variables is maximal while the components are orthogonal.s The selection of variables is usually done with L1 or Lasso Regression regularization technique or L2 also known as Ridge Regression.
 L1-regularization adds a penalty equal to the absolute value of the magnitude of coefficients which might leads to some coefficients becoming zero and the variable eliminated from the model.
 On the other hand, L2-regularization does not result in elimination of coefficients or sparse models and can only be used when there is multicollinearity as it works well to avoid over-fitting.</p>
-<p>Several tools use this approach, Momix <span class="citation">[<a href="#ref-cantini_benchmarking_2020" role="doc-biblioref">129</a>]</span>, regularized canonical correlation analysis (RGCCA) <span class="citation">[<a href="#ref-tenenhaus2017" role="doc-biblioref">130</a>]</span>, mixOmics <span class="citation">[<a href="#ref-rohart2017" role="doc-biblioref">131</a>]</span> and STATegRa <span class="citation">[<a href="#ref-gomez-cabrero2019" role="doc-biblioref">132</a>]</span>.
+<p>Several tools use this approach, Momix <span class="citation">[<a href="#ref-cantini2021" role="doc-biblioref">129</a>]</span>, regularized canonical correlation analysis (RGCCA) <span class="citation">[<a href="#ref-tenenhaus2017" role="doc-biblioref">130</a>]</span>, mixOmics <span class="citation">[<a href="#ref-rohart2017" role="doc-biblioref">131</a>]</span> and STATegRa <span class="citation">[<a href="#ref-gomez-cabrero2019" role="doc-biblioref">132</a>]</span>.
 Other methods use bayesian approches like the Bayesian Group Factor Analysis <span class="citation">[<a href="#ref-virtanen2012" role="doc-biblioref">133</a>]</span>.</p></li>
 <li><p>Active module identification</p>
 <p>Multiomic objective genetic algorithm (scores based in two metrics; node score and density of interactions score).
@@ -869,26 +870,39 @@ Or if looking by patient: how do interpret that in these patient variable A and 
 <p>In a principal component analysis for instance how do we interpret that some variables have the same loading?
 What happens in a more complex method like canonical correlation analysis?</p>
 <p>There are some articles about how to interpret those methods on real datasets <span class="citation">[<a href="#ref-sherryConductingInterpretingCanonical1981" role="doc-biblioref">138</a>]</span>.
-Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset <span class="citation">[<a href="#ref-chung_multi-omics_2019" role="doc-biblioref">139</a>, <a href="#ref-martinez-mira_mosim_2018" role="doc-biblioref">140</a>]</span>.
+Others, to benchmark and to learn how to interpret propose analyzing a simulated dataset <span class="citation">[<a href="#ref-chung_multi-omics_2019" role="doc-biblioref">139</a>, <a href="#ref-martínez-mira2018" role="doc-biblioref">140</a>]</span>.
 Which is used to compare the results of the integration with the dataset of interest and to compare different tools.
 These datasets are created with some relationships that the tools are expected to find.</p>
-<p>There exists several methods to create synthetic datasets like MOSim <span class="citation">[<a href="#ref-haberman2019" role="doc-biblioref">141</a>]</span>, metaSPARSim <span class="citation">[<a href="#ref-patuzzi2019" role="doc-biblioref">142</a>]</span>, CAMISIM <span class="citation">[<a href="#ref-fritz2019" role="doc-biblioref">143</a>]</span>, ballgown <span class="citation">[<a href="#ref-fu2021" role="doc-biblioref">144</a>]</span>, polyester <span class="citation">[<a href="#ref-frazee2021" role="doc-biblioref">145</a>]</span> and even edgeR <span class="citation">[<a href="#ref-mccarthy2012" role="doc-biblioref">146</a>]</span>.
+<p>There exists several methods to create synthetic datasets like MOSim <span class="citation">[<a href="#ref-martínez-mira2018" role="doc-biblioref">140</a>]</span>, metaSPARSim <span class="citation">[<a href="#ref-patuzzi2019" role="doc-biblioref">141</a>]</span>, CAMISIM <span class="citation">[<a href="#ref-fritz2019" role="doc-biblioref">142</a>]</span>, ballgown <span class="citation">[<a href="#ref-fu2021" role="doc-biblioref">143</a>]</span>, polyester <span class="citation">[<a href="#ref-frazee2021" role="doc-biblioref">144</a>]</span> and even edgeR <span class="citation">[<a href="#ref-mccarthy2012" role="doc-biblioref">145</a>]</span>.
 These methods are useful to compare different setup but they can miss some subtle not previously reported relations on real data.</p>
 </div>
 <div id="reviews" class="section level3 hasAnchor" number="1.3.3">
 <h3><span class="header-section-number">1.3.3</span> Reviews<a href="introduction.html#reviews" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool to apply a given dataset and research question <span class="citation">[<a href="#ref-cantini_benchmarking_2020" role="doc-biblioref">129</a>]</span>.</p>
-<p>Some of these reviews focus on a specific type of data integration: metabolomics <span class="citation">[<a href="#ref-cavill2016" role="doc-biblioref">99</a>]</span>, genomics <span class="citation">[<a href="#ref-mcgovern2015" role="doc-biblioref">10</a>]</span>, microbiomics… Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies <span class="citation">[<a href="#ref-tarazona2021" role="doc-biblioref">106</a>, <a href="#ref-de_souza_ibd_2017" role="doc-biblioref">147</a>, <a href="#ref-valles-colomer2016" role="doc-biblioref">148</a>]</span>.
+<p>The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool to apply a given dataset and research question <span class="citation">[<a href="#ref-cantini2021" role="doc-biblioref">129</a>]</span>.</p>
+<p>Some of these reviews focus on a specific type of data integration: metabolomics <span class="citation">[<a href="#ref-cavill2016" role="doc-biblioref">99</a>]</span>, genomics <span class="citation">[<a href="#ref-mcgovern2015" role="doc-biblioref">10</a>]</span>, microbiomics… Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies <span class="citation">[<a href="#ref-tarazona2021" role="doc-biblioref">106</a>, <a href="#ref-de_souza_ibd_2017" role="doc-biblioref">146</a>, <a href="#ref-valles-colomer2016" role="doc-biblioref">147</a>]</span>.
 On this regard there are several efforts to integrate data on IBD but no comprehensive review to date is known to the author.
-The most comprehensive article to date is a very recent review identifying problems and providing recommendations for future work <span class="citation">[<a href="#ref-sudhakar2022" role="doc-biblioref">149</a>]</span>.</p>
+The most comprehensive article to date is a very recent review identifying problems and providing recommendations for future work <span class="citation">[<a href="#ref-sudhakar2022" role="doc-biblioref">148</a>]</span>.</p>
 </div>
 <div id="methods-integration" class="section level3 hasAnchor" number="1.3.4">
 <h3><span class="header-section-number">1.3.4</span> Summary<a href="introduction.html#methods-integration" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The field of integration is large and complex, with increasing interest over the last few years, specially in the psychology and omics fields As a methodology they are quite complex and diverse but there is a growing interest on them to help answer complex questions without using other complex tools like deep neuronal networks or other machine learning approches (despite not being incompatible).</p>
+<p>The field of integration is large and complex, with increasing interest over the last few years, specially in the psychology and omics fields.
+As a methodology they are quite complex and diverse but there is a growing interest on them to help answer complex questions without using other complex tools like deep neuronal networks or other machine learning approaches (despite not being incompatible).</p>
 <p>Methods to integrate have many characteristics, depending on the objectives and data that available.
 Regardless of the method used, interpretation and reporting is usually the main challenge.</p>
-
 </div>
+</div>
+<div id="summary" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Summary<a href="introduction.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<!--# TODO add paragraphs to summarize the introduction -->
+<p>IBD is a gastrointestinal disease that includes two different diseases UC and CD.
+It affects preferentially the lower intestinal tract causing lesions on the epithelial barrier.
+Bacteria causes or use these lesions to further damage the patients.
+But this interaction is also influenced by many other variables.</p>
+<p>Data integration are methods to analyze datasets with data from multiple sources.
+They include a variety of methods and there are methods for several purposes.
+On IBD it has been used mostly sequencing data, disregarding the other variables known to be relevant.</p>
+<p>Data integration on IBD has been underexplored despite being known that many factors interact on the pathogenesis and maintenance of the disease.</p>
+
 </div>
 </div>
 <h3>References</h3>
@@ -1259,8 +1273,8 @@ Regardless of the method used, interpretation and reporting is usually the main 
 <div id="ref-lock2013" class="csl-entry">
 128. Lock EF, Dunson DB. <a href="https://doi.org/10.1093/bioinformatics/btt425">Bayesian consensus clustering</a>. Bioinformatics. 2013;29:2610–6.
 </div>
-<div id="ref-cantini_benchmarking_2020" class="csl-entry">
-129. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. <a href="https://doi.org/10.1101/2020.01.14.905760">Benchmarking joint multi-omics dimensionality reduction approaches for cancer study</a>. bioRxiv. 2020;2020.01.14.905760.
+<div id="ref-cantini2021" class="csl-entry">
+129. Cantini L, Zakeri P, Hernandez C, Naldi A, Thieffry D, Remy E, et al. <a href="https://doi.org/10.1038/s41467-020-20430-7">Benchmarking joint multi-omics dimensionality reduction approaches for the study of cancer</a>. Nature Communications. 2021;12:124.
 </div>
 <div id="ref-tenenhaus2017" class="csl-entry">
 130. Tenenhaus M, Tenenhaus A, Groenen PJF. <a href="https://doi.org/10.1007/s11336-017-9573-x">Regularized Generalized Canonical Correlation Analysis: A Framework for Sequential Multiblock Component Methods</a>. Psychometrika. 2017;82:737–77.
@@ -1292,35 +1306,32 @@ Regardless of the method used, interpretation and reporting is usually the main 
 <div id="ref-chung_multi-omics_2019" class="csl-entry">
 139. Chung R-H, Kang C-Y. <a href="https://doi.org/10.1093/gigascience/giz045">A multi-omics data simulator for complex disease studies and its application to evaluate multi-omics data analysis methods for disease classification</a>. GigaScience. 2019;8.
 </div>
-<div id="ref-martinez-mira_mosim_2018" class="csl-entry">
-140. Martínez-Mira C, Conesa A, Tarazona S. <a href="https://doi.org/10.1101/421834"><span>MOSim</span>: <span>Multi</span>-<span>Omics Simulation</span> in <span>R</span></a>. Preprint. <span>Bioinformatics</span>; 2018.
-</div>
-<div id="ref-haberman2019" class="csl-entry">
-141. Haberman Y, Karns R, Dexheimer PJ, Schirmer M, Somekh J, Jurickova I, et al. <a href="https://doi.org/10.1038/s41467-018-07841-3">Ulcerative colitis mucosal transcriptomes reveal mitochondriopathy and personalized mechanisms underlying disease severity and treatment response</a>. Nature Communications. 2019;10.
+<div id="ref-martínez-mira2018" class="csl-entry">
+140. Martínez-Mira C, Conesa A, Tarazona S. <a href="https://doi.org/10.1101/421834">MOSim: Multi-Omics Simulation in R</a>. 2018.
 </div>
 <div id="ref-patuzzi2019" class="csl-entry">
-142. Patuzzi I, Baruzzo G, Losasso C, Ricci A, Di Camillo B. <a href="https://doi.org/10.1186/s12859-019-2882-6">metaSPARSim: A 16S rRNA gene sequencing count data simulator</a>. BMC Bioinformatics. 2019;20:416.
+141. Patuzzi I, Baruzzo G, Losasso C, Ricci A, Di Camillo B. <a href="https://doi.org/10.1186/s12859-019-2882-6">metaSPARSim: A 16S rRNA gene sequencing count data simulator</a>. BMC Bioinformatics. 2019;20:416.
 </div>
 <div id="ref-fritz2019" class="csl-entry">
-143. Fritz A, Hofmann P, Majda S, Dahms E, Dröge J, Fiedler J, et al. <a href="https://doi.org/10.1186/s40168-019-0633-6">CAMISIM: Simulating metagenomes and microbial communities</a>. Microbiome. 2019;7:17.
+142. Fritz A, Hofmann P, Majda S, Dahms E, Dröge J, Fiedler J, et al. <a href="https://doi.org/10.1186/s40168-019-0633-6">CAMISIM: Simulating metagenomes and microbial communities</a>. Microbiome. 2019;7:17.
 </div>
 <div id="ref-fu2021" class="csl-entry">
-144. Fu J, Frazee AC, Collado-Torres L, Jaffe AE, Leek JT. <a href="https://doi.org/10.18129/B9.bioc.ballgown">Ballgown: Flexible, isoform-level differential expression analysis</a>. Bioconductor version: Release (3.13); 2021.
+143. Fu J, Frazee AC, Collado-Torres L, Jaffe AE, Leek JT. <a href="https://doi.org/10.18129/B9.bioc.ballgown">Ballgown: Flexible, isoform-level differential expression analysis</a>. Bioconductor version: Release (3.13); 2021.
 </div>
 <div id="ref-frazee2021" class="csl-entry">
-145. Frazee AC, Jaffe AE, Kirchner R, Leek JT. <a href="https://doi.org/10.18129/B9.bioc.polyester">Polyester: Simulate RNA-seq reads</a>. Bioconductor version: Release (3.13); 2021.
+144. Frazee AC, Jaffe AE, Kirchner R, Leek JT. <a href="https://doi.org/10.18129/B9.bioc.polyester">Polyester: Simulate RNA-seq reads</a>. Bioconductor version: Release (3.13); 2021.
 </div>
 <div id="ref-mccarthy2012" class="csl-entry">
-146. McCarthy DJ, Chen Y, Smyth GK. <a href="https://doi.org/10.1093/nar/gks042">Differential expression analysis of multifactor RNA-Seq experiments with respect to biological variation</a>. Nucleic Acids Research. 2012;40:4288–97.
+145. McCarthy DJ, Chen Y, Smyth GK. <a href="https://doi.org/10.1093/nar/gks042">Differential expression analysis of multifactor RNA-Seq experiments with respect to biological variation</a>. Nucleic Acids Research. 2012;40:4288–97.
 </div>
 <div id="ref-de_souza_ibd_2017" class="csl-entry">
-147. De Souza HSP, Fiocchi C, Iliopoulos D. <a href="https://doi.org/10.1038/nrgastro.2017.110">The <span>IBD</span> interactome: <span>An</span> integrated view of aetiology, pathogenesis and therapy</a>. 2017;14.
+146. De Souza HSP, Fiocchi C, Iliopoulos D. <a href="https://doi.org/10.1038/nrgastro.2017.110">The <span>IBD</span> interactome: <span>An</span> integrated view of aetiology, pathogenesis and therapy</a>. 2017;14.
 </div>
 <div id="ref-valles-colomer2016" class="csl-entry">
-148. Valles-Colomer M, Darzi Y, Vieira-Silva S, Falony G, Raes J, Joossens M. <a href="https://doi.org/10.1093/ecco-jcc/jjw024">Meta-omics in inflammatory bowel disease research: Applications, challenges, and guidelines</a>. Journal of Crohn’s and Colitis. 2016;10:735–46.
+147. Valles-Colomer M, Darzi Y, Vieira-Silva S, Falony G, Raes J, Joossens M. <a href="https://doi.org/10.1093/ecco-jcc/jjw024">Meta-omics in inflammatory bowel disease research: Applications, challenges, and guidelines</a>. Journal of Crohn’s and Colitis. 2016;10:735–46.
 </div>
 <div id="ref-sudhakar2022" class="csl-entry">
-149. Sudhakar P, Alsoud D, Wellens J, Verstockt S, Arnauts K, Verstockt B, et al. <a href="https://doi.org/10.1093/ecco-jcc/jjac027">Tailoring multi-omics to inflammatory bowel diseases: All for one and one for all</a>. Journal of Crohn’s and Colitis. 2022;jjac027.
+148. Sudhakar P, Alsoud D, Wellens J, Verstockt S, Arnauts K, Verstockt B, et al. <a href="https://doi.org/10.1093/ecco-jcc/jjac027">Tailoring multi-omics to inflammatory bowel diseases: All for one and one for all</a>. Journal of Crohn’s and Colitis. 2022;jjac027.
 </div>
 </div>
 <div class="footnotes">

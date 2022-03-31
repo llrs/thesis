@@ -115,6 +115,7 @@ output-results
 interpretation
 reviews
 methods-integration
+summary
 hypothesis-and-objectives
 hypothesis
 objectives
