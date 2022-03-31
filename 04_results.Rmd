@@ -564,7 +564,7 @@ However, due to big amount of small probabilities when using the BaseSet package
 
 MCIA was applied as a baseline of the integration, the first two components were represented similarly to those of the blocks when using RGCCA \@ref(fig:hsct-mcia).
 
-```{r hsct-mcia, fig.scap="MCIA on the HSCT dataset", fig.cap="MCIA first two synthetic variables on the IBD related cohorts. In red circles the colon and in blue triangles the ileum."}
+```{r hsct-mcia, fig.scap="MCIA on the HSCT dataset", fig.cap="MCIA first two synthetic variables on IBD related cohorts. In red circles the colon and in blue triangles the ileum."}
 include_graphics("images/hsct-mcia.png")
 ```
 
@@ -755,8 +755,9 @@ It was even better to classify the samples according to the type of sample they 
 
 ### Morgan's dataset {#results-morgan}
 
-To explore this dataset that is different from the others with the IBD 
+To explore this dataset that is different from the others with IBD .
 
+<!--# TODO finish linking PCAs to actual text -->
 The PCA didn't show any pattern on the microbiome according to the location, see figure \@ref(fig:morgan-pca-16s).
 
 ```{r morgan-pca-16s, fig.scap="PCA of 16S of Morgan's dataset", fig.cap="PCA of 16S of Morgan's dataset. The sample are colored by location. "}
