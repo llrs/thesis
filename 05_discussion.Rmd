@@ -32,7 +32,7 @@ To our knowledge there isn't a method to do this yet.
 Furthermore, the precision of 16S sequencing for classification of taxa is not enough to understand its role on the gut.
 Adherent invasive cells, are cells with same genetic content that show different behavior [@nadalian2021].
 Those bacteria is known to be present on patients with IBD.
-Thus, bacteria with the same complete sequence can play a different role in .
+Thus, bacteria with the same complete sequence can play a different role *in vivo*.
 
 While most of these steps were out of my control as they were performed by a lab teammate or by collaborators.
 Other concerns are currently unavoidable or could not have been found beforehand.
@@ -78,22 +78,23 @@ This treatment is reserved to patients for which all the other treatment failed 
 These patients are closely monitored and followed up for several years.
 This treatment is not indicated for UC, so this dataset includes only CD patients.
 
-The BARCELONA dataset (See appendix section \@ref(barcelona)) includes samples from CD and UC collected propsectively in patients starting biological treatment and followed up for up to a year.
-Patients were younger and had less years with the disease.
-Patients in HSCTthe group were refactry to treatment and may even be naive to any biologic , which could provide with more insights on the initial relationships between the microbiome and the mucosa of IBD patients.
+The BARCELONA dataset (See appendix section \@ref(barcelona)) includes samples from CD and UC collected prospectively in patients starting biological treatment and followed up for up to a year.
+Patients were younger and had less years with the disease but were refractory to non-biologic treatments and may even be naive to any biologic.
+This could provide with more insights on the initial relationships between the microbiome and the mucosa of IBD patients.
 
 Unfortunately, the 16S microbiol sequence data of BARCELONA was not good enough to make reliable analysis and confidently extract hypothesis or relationships (See appendix section \@ref(barcelona)).
 It is not clear what happened and as a consequence it is not clear how to avoid such problems on the future.
 It could be a problem of the original DNA extraction and/or of its sequencing process which did not include both positive and negative controls.
-Nevertheless, sample sequencing was repeated in an independent sequencing facility to overcome the of the first dataset but problems persisted rendering this data suboptimal for further analysis.
+Nevertheless, sample sequencing was repeated in an independent sequencing facility to overcome the limitations of the first dataset but problems persisted rendering this data suboptimal for further analysis.
 
 What happened with the BARCELONA dataset highlights the importance of data quality checks.
-In the BARCELONA cohort despite no batch effect or other quality issues with the data as checked with `experDesign`, the diversity indices suggested that there was some problem with the microbiome data.
+In the BARCELONA cohort despite no batch effect as checked with `experDesign` on the second sequencing, the diversity indices suggested that there was some problem with the microbiome data.
 This made us not trusting the data and not using it for data integration.
 Caution and a good relationship with the sample and data generator is important to discover these kind of problems and ensure the quality of the data.
 
 Other datasets used from published sourced were assumed they had already passed enough controls and had a good quality.
-Nevertheless, they were screened to avoid quality issues.
+Nevertheless, they were screened to avoid quality issues by visually inspecting several principal components colored by several factors, checking the genes expression and the microbiome profile and looking for known gene markers and microbiome taxaonmy that might indicate quality problems.
+RNAseq data was usually compared using previously described methods on \@ref(statistics).
 
 The Puget's dataset dataset provided a good benchmark to test the methods and understand how RGCCA works.
 CNV/CGH is a completely different type of data than microbiota, but the microarray data is similar to the RNAseq data from other datasets.
