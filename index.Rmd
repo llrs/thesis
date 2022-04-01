@@ -6,7 +6,7 @@ documentclass: book
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 github-repo: "llrs/thesis"
-url: 'https\://thesis.llrs.dev'
+url: 'https\://thesis.llrs.dev/'
 csl: bmc_bioinformatics.csl
 book_filename: data_integration_IBD
 split_by: chapter
@@ -18,6 +18,7 @@ colorlinks: yes
 # Only works here (set when printing and sending)
 links-as-notes: true
 # fontfamily: boisik
+# papersize: b5 # The printed size of the thesis
 papersize: a4
 fontsize: 12pt
 # Not needed https://tex.stackexchange.com/a/188337/178206
