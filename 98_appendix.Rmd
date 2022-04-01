@@ -272,15 +272,10 @@ Table: (#tab:hernandez) Characteristics of samples included from Hernández's da
 
 ### Results {#results-hernandez}
 
-This dataset was processed to confirm the results on the previous datasets.
+It substitutes the BARCELONA dataset to confirm the results on the previous datasets.
+However, at the time of writing the process is not complete.
 
-At the time of writing the process is not complete
-
-<!--# TODO models -->
-
-<!--# TODO Bootstrap -->
-
-<!--# TODO MCIA -->
+<!--# TODO add plots and tables -->
 
 # Models output
 
