@@ -1,21 +1,18 @@
 # Discussion
 
-In this chapter we will summarize the main findings in relation to the broad research community and other work as well as the impact of the results to improve further research in the future or be used on clinical environments.
+In this chapter we will summarize the main findings in relation to the broad research community and other work as well as the impact of the results on further research in or clinical practice.
 
 ## Preliminary steps
 
-Quality of the initial data for integration is important for a valid integration analysis.
-On RNAseq and 16S analysis the sequencing data quality is important.
-On sequencing data it is very important to avoid contamination and have enough amount of data for the analysis.
-To avoid contamination it is very important the protocol how are processed the samples before the sequencing.
+The quality of the initial RNAseq and 16S data is important for a valid integration analysis.
+In sequencing data it is very important to avoid contamination and have enough amount of data for the analysis.
+To avoid contamination it is very important to control the protocol used to process the samples before the sequencing.
 In addition control samples can be added, a blank to control for extraneous material and a sample with known content to confirm that the sequencing worked correctly.
 
-On bulk RNAseq the extraction procedure and sequencing protocol (Described on methods' section \@ref(processing)) has been setup many years ago and works very well.
-Rarely there are problems with bulk RNAseq sequencing and its quality.
-On the contrary DNA extraction and 16S sequencing was a new procedure on the laboratory.
-Initially it was done with the guidelines and support from collaborators.
-We did not include control samples on the first 16S sequencing batches but after some problems we started adding at least blank samples to identify those bacteria that might come with the solvent or be from a contamination on the sequencing facility.
-This allowed us to discard contamination sources on later sequencing batches and studies..
+Our lab uses a well established protocol to isolate and sequence RNA (Described on methods' section \@ref(processing)) and we rarely encounter problems during this phase.
+In contrast, DNA extraction and 16S sequencing had to be established and optimized, initially with the guidelines and support from collaborators [mention?]
+.
+After encountering some problems we added blank samples to control for bacterial contamination during sample pre-processing or sequencing.
 
 We initially processed the 16S data to obtain OTUs.
 OTUs were the standard some years back [@callahan2017].
@@ -27,7 +24,7 @@ However, comparing 16S taxa ASV or OTUs is hard and selecting the right tool to 
 It is also worth keeping in mind that several species have variable number of 16S rRNA genes.
 Higher sequences counts of certain 16S might not mean higher abundance of that species compared to another with lower 16S counts.
 However, the exact copy number status may change even within the same bacterial species, making the correction difficult [@louca2018].
-It is possible to accurately correct for copy number variation on mock populations where the species and the genomes are known (or at least the 16S rRNA), but harder or impossible on samples whose content is unknown.
+It is however possible to accurately correct for copy number variation on mock populations where the species and the genomes are known (or at least the 16S rRNA), but harder or impossible on samples whose content is unknown.
 To our knowledge there isn't a method to do this yet.
 
 <!--# In addition, there are differences on the sequencing reads depending on the  regions selected to amplify the 16S. It would be better to fully sequence the 16S. -->
@@ -35,70 +32,64 @@ To our knowledge there isn't a method to do this yet.
 Furthermore, the precision of 16S sequencing for classification of taxa is not enough to understand its role on the gut.
 Adherent invasive cells, are cells with same genetic content that show different behavior [@nadalian2021].
 Those bacteria is known to be present on patients with IBD.
-Thus, even with the complete sequence they could be undetected.
+Thus, bacteria with the same complete sequence can play a different role in .
 
-Most of these steps were out of my control as they were performed by a lab teammate or by collaborators.
+While most of these steps were out of my control as they were performed by a lab teammate or by collaborators.
 Other concerns are currently unavoidable or could not have been found beforehand.
+They had to consider them as they affect quality and interpretation of the data.
 
 ### The datasets {#discussion-datasets}
 
-There is not a methodology to calculate the size of cohorts for interaction or multi-omic studies.
-There are no clear rules about which alpha power or which kind of relations are tested.
-This might be due to a lack of mathematical background and modelization of the relations on the biological field.
-Further research on this area might help finding which kind of relationships can be found given certain dataset size.
-In addition to the highly local and not generalizable interactions that happen on biological samples.
-Usually size of the datasets is determined from practical reasons: either costs or patient recruitment on protocols.
+There is not an established methodology to calculate the size of cohorts for interaction or multi-omic studies.
+Indeed, There are no clear rules on which alpha power or which kind of relations can be tested.
+This might be due to the lack of mathematical background and modelization of the relevant relations in biology.
+Further research on this area might help finding which kind of relationships can be expected given certain dataset sizes.
+Usually size of the datasets is determined based on practical reasons: either costs or access to patients.
 
-There are some efforts to simulate multi-omic datasets [@martínez-mira2018; @chalise2016; @chung2019; @patuzzi2019; @fritz2019; @fu2021; @frazee2021; @mccarthy2012].
-They usually focus on RNA-seq, ATAC-seq (DNase-seq), ChIP-seq, small RNA-seq, Methyl-seq or proteomics but not 16S or microbiome data.
-To my knowledge there is no accurate generator of 16S datasets or other microbiome datasets.
-This made impossible to simulate and compare different tools on a similar synthetic dataset with known relationships to evaluate their performance.
+There have been some efforts to create artificial multi-omic datasets [@martínez-mira2018; @chalise2016; @chung2019; @patuzzi2019; @fritz2019; @fu2021; @frazee2021; @mccarthy2012].
+This could allow to benchmark different tools, impute missing data and do pilot studies.
+These efforts usually focus on RNA-seq, ATAC-seq (DNase-seq), ChIP-seq, small RNA-seq, Methyl-seq or proteomics but not 16S, microbiome data or metagenomics.
+These efforts also focus on relationships between samples missing relationships within cells (regulated DNA, protein recruitment, transcription factors, siRNA regulation,...) and between cells (immune response, adherence, cytokines signaling...) that might surface at the sample level.
+To my knowledge there is no accurate artificial method to create 16S datasets or related microbiome datasets.
+This made impossible to simulate and compare different tools on a synthetic dataset with known relationships on this thesis to evaluate performance of different methods.
 
-There is not a golden dataset for integration.
-There are many possible relationships between variables and different ways these relationships might be: regulated DNA, protein recruitment, transcription factors, siRNA regulation.
-Not a single one can be measured on a sufficiently detailed timescale that it can show those changes.
-As a result we are left with guessing what are the the relationships between variables or their more general patterns.
-In addition, this is compound by the lack of explanations about how this relationships might be, despite other indications.
+There is not a reference dataset for integration on IBD that accurately represents the disease.
+There is a large consortium effort with many samples[@humanmicrobiomeprojectconsortium2012].
+It does not have 16S and RNAseq data from the same location at the same time on as much samples as the datasets used on this thesis.
 
-Comparing different datasets is complicated because each is collected with different goals and processed differently.
-In addition, there is not a resource were datasets of publications are collected or the relationships between different datasets is not shared.
-Authors upload their data to different, not centralized, data repositories, such as, gene expression omnibus ([GEO](https://www.ncbi.nlm.nih.gov/geo/)), European Genome-Phenome Archive ([EGA](https://ega-archive.org/)), European Nucleotide Archive ([ENA](https://www.ebi.ac.uk/ena/browser/home)), among others.
-Authors might provide the processed data as supplementary material on their articles.
+In order to compare different methods we are limited to comparing different datasets.
+However, each dataset is collected with different goals and processed differently.
+In addition, authors upload their data to different, not centralized, data repositories, such as, gene expression omnibus ([GEO](https://www.ncbi.nlm.nih.gov/geo/)), European Genome-Phenome Archive ([EGA](https://ega-archive.org/)), European Nucleotide Archive ([ENA](https://www.ebi.ac.uk/ena/browser/home)), among others.
+Authors might also provide the processed data as supplementary material on their articles.
 Some projects whose primary purpose is providing data for the community establishing their own dedicated sites to store the data [@humanmicrobiomeprojectconsortium2012].
 
-Finding different datasets for very similarly data is very difficult.
-And once it is found there might be batch effects between them.
+There is not a resource were datasets of publications are collected with their characteristics.
+Finding different datasets for very similarly data is thus challenging.
+Furthermore when pooling together datasets batch effect correction will most likely be necessary.
 There are tools to overcome this, but currently only work if they share some features or samples in common [@ugidos2020].
-This usually means having undergone similar RNA sequencing procedures.
+These methods usually require datasets with similar RNA sequencing procedures.
 
-All this made finding annotated, appropriate and similar datasets difficult.
-We looked up for the most similar datasets in order to be able to confirm our results outside our own cohorts.
-Regardless we found several with 16S data and RNAseq from the intestine, that made it possible to compare with our own datasets.
-On this thesis there were two datasets collected and sequenced: the HSCT and the BARCELONA dataset.
+On this thesis there were two in house datasets collected and sequenced: the HSCT and the BARCELONA dataset.
+For the purpose of this thesis, we looked up for the most similar datasets published in order to be able to confirm our results outside our own cohorts.
+We found several with 16S and RNAseq data from the intestine from the same location, to compare with our own datasets.
 
-As explained on methods' section \@ref(methods-hsct), the HSCT dataset is a very special cohort of patients undergoing hematopoietic stem cell transplant.
-This treatment is reserved to patients whose all the other treatment failed and this is the only way to reach remission.
-This is common on patients with long time CD.
-These patients are highly characterized and there is follow up data for several years.
-However, it does not include UC patients and they are not representative of IBD, or even CD, patients.\
-On the HSCT dataset microbiome features were OTUs.
-OTUs can not be imputed afterwards to ASV.
-As such, the annotation of the 16S data is not the same as in the others datasets.
+As explained in methods' section \@ref(methods-hsct), the HSCT dataset is a very unique cohort of CD patients undergoing hematopoietic stem cell transplant.
+This treatment is reserved to patients for which all the other treatment failed and this may be the only way to reach remission.
+These patients are closely monitored and followed up for several years.
+This treatment is not indicated for UC, so this dataset includes only CD patients.
 
-The BARCELONA dataset (See appendix section \@ref(barcelona)) includes samples from CD and UC of an ongoing study.
-Similar to the HSCT dataset, patients on this study were followed up for up to a year.
-Patients were younger and had less years with the disease, which could provide with more insights on the initial relationships between the microbiome and the mucosa of IBD.
+The BARCELONA dataset (See appendix section \@ref(barcelona)) includes samples from CD and UC collected propsectively in patients starting biological treatment and followed up for up to a year.
+Patients were younger and had less years with the disease.
+Patients in HSCTthe group were refactry to treatment and may even be naive to any biologic , which could provide with more insights on the initial relationships between the microbiome and the mucosa of IBD patients.
 
-However, the data quality of BARCELONA was not good enough to make reliable analysis and confidently extract hypothesis or relationships (See appendix section \@ref(barcelona)).
+Unfortunately, the 16S microbiol sequence data of BARCELONA was not good enough to make reliable analysis and confidently extract hypothesis or relationships (See appendix section \@ref(barcelona)).
 It is not clear what happened and as a consequence it is not clear how to avoid such problems on the future.
 It could be a problem of the original DNA extraction and/or of its sequencing process which did not include both positive and negative controls.
+Nevertheless, sample sequencing was repeated in an independent sequencing facility to overcome the of the first dataset but problems persisted rendering this data suboptimal for further analysis.
 
-What happened with the BARCELONA dataset -and the organoids cohort not described here- highlights the importance of data quality checks.
-On the BARCELONA cohort despite no batch effect or other quality issues with the data as checked with `experDesign`, the diversity indices suggested that there was some problem with the microbiome data.
+What happened with the BARCELONA dataset highlights the importance of data quality checks.
+In the BARCELONA cohort despite no batch effect or other quality issues with the data as checked with `experDesign`, the diversity indices suggested that there was some problem with the microbiome data.
 This made us not trusting the data and not using it for data integration.
-The organoids cohort is a dataset that was sequenced following the `experDesign` recommendations for distribution of samples on different batches.
-However, a batch effect was found.
-The batch effect was created on the lab process before the samples' were sequenced.
 Caution and a good relationship with the sample and data generator is important to discover these kind of problems and ensure the quality of the data.
 
 Other datasets used from published sourced were assumed they had already passed enough controls and had a good quality.
@@ -147,7 +138,10 @@ Current methodological approaches focus on comparing tools on (several) previous
 This approach was not used to compare different tools, we also did it, but to validate findings of one dataset in other datasets.
 This is specially important due to the lack of golden datasets or a way to reliable simulate datasets as discussed on the previous section \@ref(discussion-datasets).
 
-On IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria is related to inflammation [@tang2017]. On this thesis, the focus was on finding a good representation of the relationships that allowed to identify genes and bacteria are relevant on the disease. We made the assumptions that microbiome presence and transcriptome are related. This assumption is backed up by several other previous studies supporting this relationship [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
+On IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria is related to inflammation [@tang2017].
+On this thesis, the focus was on finding a good representation of the relationships that allowed to identify genes and bacteria are relevant on the disease.
+We made the assumptions that microbiome presence and transcriptome are related.
+This assumption is backed up by several other previous studies supporting this relationship [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
 
 Tools that relate the variance of a block with other variables, both numeric and categoric, are needed to search which variables are important.
 PERMANOVA and `globaltest` identified which variables were important.
@@ -278,7 +272,8 @@ The variability of microbiome challenges finding clear patterns (See the PCAs of
 On healthy humans, it has been suggested that there is a common microbial composition on all humans [@arumugam2011]. Such theory suggests three groups of similar microbiota composition, named enterotypes. However, the enterotypes classification is not unanimously accepted [@koren2013; @cheng2019].
 Some suggest it is an artifact of the metodolody used.
 
-There are many factors that influence the gut microbiome [@hasan2019]. But the role of microbiome on IBD has recently gained some interest [@khanna2014; @bringiotti2014; @lloyd-price2019].
+There are many factors that influence the gut microbiome [@hasan2019].
+But the role of microbiome on IBD has recently gained some interest [@khanna2014; @bringiotti2014; @lloyd-price2019].
 It has been associated with predictors of CD treatment response and suggested that they could be useful for building an improved classifier for CD and treatment response based on sufferers' microbiome in the future [@douglas2018].
 Thee is for instance, an association between IBD and butyrate producers (See [@takahashi2016]) which has shown to influence permeability of the epithelial barrier [@ferrer-picón2020].
 
