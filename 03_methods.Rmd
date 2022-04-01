@@ -361,17 +361,6 @@ $$
 
 Each model is built similarly by adding the subtraction of the projected values of the other component keeping the relationship between them as stated on the third line.
 
-
-
-## Statistics
-
-Differential expression analysis was performed with the limma-trend method [@ritchie2015; @law2014] and edgeR [@mccarthy2012] (Bioconductor version 3.10 or superior) packages.
-Data was normalized using the trimmed mean of M-values and log-2 transformed into counts per millions following the workflow previously described using voom [@law2018].
-
-To correct for multiple testing, the false discovery rate was estimated using the method of Benjamini and Hochberg [@yoavbenjamini].
-A gene was considered differentially expressed when it was significant at 5% FDR.
-Special attention was given to those genes that showed a fold-change higher than \|1.5\|.
-
 ## Functional enrichment methods
 
 ### Over representation analysis {#ORA}
@@ -475,6 +464,8 @@ Gene pathways from the REACTOME database were tested on the weight of different 
 
 #### GSVA
 
+<!--# TODO mention GSVA on discussion or results...-->
+
 To estimate the expression of the pathways and compare their expression levels between conditions gene set variation analysis as implemented on [GSVA](https://bioconductor.org/packages/GSVA) was used [@hänzelmann2013].
 It is a method that summarizes the variables' numerical value changing the space of $\text{variable x sample}$ to $\text{group x sample}$ .
 This enables other methods to use this new space instead of the original variables, which provides a successful way to look into data [@escudero-hernández2021].
@@ -561,6 +552,39 @@ $\beta$-diversity is a diversity index that compares how similar are two samples
 It was calculated using the phyloseq package for exploratory analysis.
 
 ## Other methods
+
+### Statistics {#statistics}
+
+Differential expression analysis was performed with the limma-trend method [@ritchie2015; @law2014] and edgeR [@mccarthy2012] (Bioconductor version 3.10 or superior) packages.
+Data was normalized using the trimmed mean of M-values and log-2 transformed into counts per millions following the workflow previously described using voom [@law2018].
+This approach assumes tests for each gene that:
+
+$$
+H_0 : \mu_{X} = \mu_{Y}
+H_1 : \mu_{X} \neq \mu_{Y}
+$$
+
+Limma assumes that $E(y_g) = X \alpha_g$, and $var(y_g) = W_g \sigma_g^2$ where X is a design matrix and $\alpha_g$ is an unknown coefficient vector and $\sigma_g^2$  is the gene-variance and $W_g$ is a known non-negative definite weight matrix. 
+The design matrix of limma can be combined with contrast estimators defined such that $\beta_g = C^T \alpha_g$ where $C^T$ is a constant vector typically defining how a given variable is related to a sample.
+
+These statistics are later estimated via bayesian method whose prior is defined as:
+$$
+\dfrac{1}{\sigma_g^2} \sim \dfrac{1}{d_0 S_0^2} \chi_{d_0}^2
+$$
+
+This results on a moderated t-test:
+
+$$
+\widetilde t_{gj} = \dfrac{\hat \beta_{gj}}{\tilde S_g \sqrt{v_{gj}}} \sim t_{d_g + d_0}
+$$
+
+Were $\hat \beta_g$ can be interpreted as the difference of the effect of two factors. 
+
+As gene comparisons are done along many genes there is an increase probability to have a type I error. 
+Multiple testing correction method have been designed to correct this kind of family-wise comparisons. 
+To correct for multiple testing, the false discovery rate was estimated using the method of Benjamini and Hochberg [@yoavbenjamini].
+A gene was considered differentially expressed when it was significant at 5% FDR.
+Special attention was given to those genes that showed a fold-change higher than \|1.5\|.
 
 ### WGCNA
 
