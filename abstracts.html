@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-04-01" />
+<meta name="date" content="2022-04-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -294,18 +294,20 @@ This tesis is ongoing and still without hard date to finish it. Watch the <a hre
 <!--# Max length of 600 words-->
 <div id="english" class="section level2 unnumbered hasAnchor">
 <h2>English<a href="abstracts.html#english" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Introduction</strong>: Inflammatory bowel disease is a complex disease with several factors that affect each other.
-The origin and process that maintains the disease is not fully understood, and current treatments focus on early detection of the disease and prevent the accumulation of damage on the intestine.
-There are some clues that microbiome is related to maintaining or starting this disease.
-Finding relationships between the microbiome and the gastrointestinal mucosa will help advance treatments, diagnosis or prevent it.</p>
-<p><strong>Methods</strong>: We based our analysis on intestinal bacterial 16S data and human transcriptome from biopsies.
-We used canonical correlation analysis to find models that are coherent with previous knowledge on the disease.
+<p><strong>Introduction</strong>: Inflammatory bowel disease is a complex intestinal disease with several factors that affect each other.
+The origin and process that maintains the disease is not fully understood.
+There are some clues that microbiome is related to starting or maintaining this disease.
+Finding relationships between the microbiome and the gastrointestinal mucosa could help advance treatments, diagnosis or prevent it.</p>
+<p><strong>Methods</strong>: We based our analysis on intestinal bacterial 16S and human transcriptome data from biopsies from multiple timepoints and locations of the intestine.
+We extended regularized generalized canonical correlation analysis to find models that are coherent with previous knowledge on the disease taking into account samples’ information.
+The results were compared with multiple co-inertia analysis and evaluated according to how well they can classify the samples on their location.
 Multiple datasets of patients on different treatments and conditions were analysed.</p>
-<p><strong>Results</strong>: Our new method inteRmodel outperformed other existing methods to modelling the relationships and to classify the samples according to their location.
-Despite being used on datasets of different sources the resulting models are very similar.</p>
-<p><strong>Discussion</strong>: Our method finds how strong are the relationships of the microbiome and the transcriptome taking into account other variables.
-This approach is robust and flexible to different datasets.
-Comparing multiple approaches to models helps elucidate the relationships of the data on the dataset.</p>
+<p><strong>Results</strong>: Splitting samples variables into different blocks results on models of these relationships that show differences on the genes and microorganismes selected.
+These models of our new method inteRmodel outperformed multiple co-inertia analysis to classify the samples according to their location.
+Despite being used on datasets of different sources the resulting models show similar relationship strength between the variables.</p>
+<p><strong>Discussion</strong>: Our method finds how strong are the relationships of microbiome, transcriptome and other variables.
+This approach is robust and flexible to different datasets and settings.
+Comparing multiple models helps find out the relationships within datasets.</p>
 <p><strong>Conclusion</strong>: With inteRmodel we found that the microbiome is slightly more related to the location than to the disease, but the transcriptome is highly related to the location of the sample on the intestine.</p>
 </div>
 <div id="spanish" class="section level2 unnumbered hasAnchor">
