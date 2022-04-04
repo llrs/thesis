@@ -37,7 +37,7 @@ bibliography:
 - packages.bib
 ---
 
-<!--# TODO add the first two pages with the formal requirements of the faculty  -->
+<!--# TODO add the first two pages with the formal requirements of the faculty https://github.com/llrs/thesis/issues/13 -->
 
 ```{r setup, echo=FALSE, include=FALSE}
 Sys.setlocale('LC_ALL','C')

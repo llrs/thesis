@@ -716,8 +716,6 @@ Regardless of the method used, interpretation and reporting is usually the main 
 
 ## Summary
 
-<!--# TODO add paragraphs to summarize the introduction -->
-
 IBD is a gastrointestinal disease that includes two different diseases UC and CD.
 It affects preferentially the lower intestinal tract causing lesions on the epithelial barrier. 
 Bacteria causes or use these lesions to further damage the patients.

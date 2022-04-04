@@ -143,7 +143,7 @@ It is important to keep in mind the possible causal relationships on user's data
 
 On the following sections the main results of analyzing each dataset are presented.
 
-<!--# TODO Show taxonomy plots-->
+<!--# TODO Show taxonomy plots or abundance -->
 
 ### Puget's dataset {#results-puget}
 
@@ -308,7 +308,7 @@ On the other hand, the major difference is the dispersion on the CGH component o
 The effect of the superblock and weights on different models to the inner AVE.
 There are significant differences between having the superblock and not having it.
 
-<!--# TODO double check which interaction indicates yes/no -->
+<!--# TODO double check interaction RNA-RNA as yes -->
 
 ```{r puget-weights, fig.scap="Effect of superblock and weights on the inner AVE on Puget's dataset.", fig.cap="Effect of superblock and weights on the inner AVE on Puget's dataset. Designs with the superblock showed higher inner AVe scores than without it. Interaction yes/no indicates RNA and RNA interaction."}
 knitr::include_graphics("images/pugets-weights.png")
@@ -755,9 +755,8 @@ It was even better to classify the samples according to the type of sample they 
 
 ### Morgan's dataset {#results-morgan}
 
-To explore this dataset that is different from the others with IBD .
+To explore this dataset that is different from the others with IBD.
 
-<!--# TODO finish linking PCAs to actual text -->
 The PCA didn't show any pattern on the microbiome according to the location, see figure \@ref(fig:morgan-pca-16s).
 
 ```{r morgan-pca-16s, fig.scap="PCA of 16S of Morgan's dataset", fig.cap="PCA of 16S of Morgan's dataset. The sample are colored by location. "}
