@@ -360,7 +360,7 @@ It could have been a problem with the DNA sample and/or of the sequencing proces
 Nevertheless, sample sequencing was repeated in an independent sequencing facility to overcome the limitations of the first dataset but problems persisted rendering this data suboptimal for further analysis.</p>
 <p>What happened with the BARCELONA dataset highlights the importance of data quality checks.
 In the BARCELONA cohort despite no batch effect as checked with <code>experDesign</code> on the second sequencing, the low diversity indices suggested that there was some problem with the microbiome data.
-Caution and a good relationship with the sample and data generator is important to discover this kind of problems and ensure the quality of the data.</p>
+Caution and communication between all team members (i.e, clinicians, technicians and bioinformaticians) is important to discover this kind of problems and ensure the quality of the data.</p>
 <p>Other datasets used from published sourced were assumed they had already passed enough controls and were of good quality.
 Nevertheless, they were screened to avoid quality issues by visually inspecting several principal components colored by several factors, checking gene expression and the microbiome profile and looking for known gene markers and microbiome taxonomy that might indicate quality problems.
 RNAseq data was usually compared using previously described methods on <a href="materials-and-methods.html#statistics">3.6.1</a>.</p>
@@ -405,9 +405,6 @@ PERMANOVA and <code>globaltest</code> served that purpose, but they do not give 
 In addition, we could be missing some other important variables.
 It is known that other factors beyond the omics data collected, mainly environmental factors, genetic susceptibility and the immune response may play a role <span class="citation">[<a href="#ref-sartor2006" role="doc-biblioref">211</a>]</span>.
 Sudhakar <em>et. al.</em> <span class="citation">[<a href="#ref-sudhakar2022" role="doc-biblioref">148</a>]</span> recommend being conscious of the gap between the data available and the biological process.
-However, even if we missed them, we probably have not collected it or it is not available, there is nothing at this point that can be done.
-This would be in conflict with a data protection principle: collect the minimum sufficient information needed.
-We might not identify a relevant variable but to identify it we would need to collect too much information from the patients and for little or no clear benefits.
 One variable we did not keep track was the microbial load which is linked to the gut’s microbiome community variation <span class="citation">[<a href="#ref-vandeputte2017" role="doc-biblioref">212</a>]</span>.
 This needs to be quantified at the time of DNA isolation and most studies, including our own lack this data.</p>
 <p>We tried to find which genes and bacteria are correlated between them using <code>WGCNA</code>, a tool designed to find common co-occurring patterns based on correlations.
@@ -513,7 +510,7 @@ So even if two people are apparently healthy at a given time their microbiome mi
 <p>The relapsing nature of IBD, suggests that at different time points the gene expression or the microbiome might be different.
 For this reason, time is an important variable when modelling the disease.
 If samples at multiple timepoints are available the time difference should be taken into account to identify the state of the disease for each patient.
-Even in healthy non-IBD patients, multiple samples with microbiota from the same patients could provide a common microbiome background, which can help to identify core individual microbiome and altered microbiome states later on.</p>
+Even in healthy non-IBD patients, multiple samples with microbiota from the same patients could provide common microbiome signature, which can help identify altered microbiome states later on.</p>
 <p>Of the cohorts analyzed in this thesis, the HSCT and the Häsler dataset are the only ones including time related variables.
 However, the Häsler dataset only had age at date of sampling, and there were not several samples for the same patients at different timepoints.
 This leaves the HSCT dataset as the only one with multiple timepoints from the same patients.
