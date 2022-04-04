@@ -10,8 +10,7 @@ To avoid contamination it is very important to control the protocol used to proc
 In addition control samples can be added, a blank to correct for extraneous material and a sample with known content to confirm that the sequencing worked correctly.
 
 Our lab uses a well established protocol to isolate and sequence RNA (Described on methods' section \@ref(processing)) and we rarely encounter problems during this phase.
-In contrast, DNA extraction and 16S sequencing had to be established and optimized, initially with the guidelines and support from collaborators [mention?]
-.
+In contrast, DNA extraction and 16S sequencing had to be established and optimized, initially with the guidelines and support from collaborators especially Dr. Ilias Lagkouvardos.
 Indeed, as we encountered some problems we added blank samples to control for bacterial contamination during sample pre-processing or sequencing.
 
 We initially processed the 16S data to obtain OTUs.
@@ -31,7 +30,7 @@ To our knowledge there is no available method yet to do this.
 
 Furthermore, the precision of 16S sequencing for classification of taxa is not enough to understand its role in the gut.
 Adherent invasive cells, are bacteria share genetic content with but show different behavior [@nadalian2021].
-These bacteria are known to be more abundant on patients with IBD [ref:needed].
+These bacteria are known to be more abundant on patients with IBD [@nadalian2021].
 Thus, bacteria with the same complete sequence can play a different role *in vivo*.
 
 Most of these steps were, however, out of my control as they were performed by a lab teammate or by collaborators.
@@ -125,7 +124,7 @@ Methods differ in their quality, usage and the quality of the software.
 Some of them have been tested on several datasets but the most important validation process a method has to undergo is the mathematical validation.
 
 With the increase of available analytical tools side by side comparison has become increasingly important.
-There are reviews that apply different tools to the same datasets [@cantini2021], some are more theoretical [@bersanelli2016], others are focused on a different field [@cavill2016].
+There are reviews that apply different tools to the same datasets [@cantini2021], some are more theoretical [@bersanelli2016], others are focused on a different area like metabolomics [@cavill2016].
 
 Few of these methods have been applied on IBD datasets.
 However, recently there has been a review focused on integration on IBD [@sudhakar2022].
@@ -135,12 +134,9 @@ It ends up advising to set up guidelines for multi-omic studies tailored to the 
 
 Current methodological approaches focus on comparing tools on (several) previously published datasets [@cantini2021], an approach that we have taken too.
 This approach was not used to compare different tools, but to validate findings of one dataset in other datasets.
-This is especially important due to the lack of golden datasets or a way to reliable simulate datasets as discussed on the previous section @ref(discussion-datasets).
+This is especially important due to the lack of golden datasets or a way to reliable simulate datasets as discussed on the previous section \@ref(discussion-datasets).
 
-In IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria are related to inflammation [@tang2017] or disease activity.
-In this thesis, the focus was on finding a good representation of the relationships that identify groups of genes and bacteria that were relevant to the disease in an orchestrated manner.
-We made the assumptions that the microbiome composition and the host's transcriptome were related.
-This assumption is backed up by several other previous studies supporting this relationship [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
+In IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria are related to inflammation [@tang2017] or disease activity. In this thesis, the focus was on finding a good representation of the relationships that identify groups of genes and bacteria that were relevant to the disease in an orchestrated manner. We made the assumptions that the microbiome composition and the host's transcriptome were related. This assumption is backed up by several other previous studies supporting this relationship [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
 
 Tools that relate the variance of a block with other variables, both numeric and categoric, are needed to search which variables are important.
 PERMANOVA and `globaltest` served that purpose, but they do not give any insight into which specific microbial species are driving the association between the microbiome and the variables [@susin2020].
@@ -160,15 +156,15 @@ As we have patients of different ages and samples from different intestinal segm
 In addition, having microbiome and RNASeq in the same matrix, would probably be hard for the process to find good relationships if we applied the same normalization process to both of them without escalation.
 We could have tried to make smaller groups and then compare the modules between them but groups may have been too small since samples were from multiple segments and conditions.
 
-We briefly considered using `STATegRa`. However, it is not possible to select which interactions between the blocks exists. 
+We briefly considered using `STATegRa`.
+However, it is not possible to model specific interactions between blocks.
 The method implemented on `STATegRA` might be useful for cases where there is a great agreement between blocks or were environmental factor do not play a huge role on any of the blocks of data.
 
 To identify related variables other methods use correlations between the variables [@vila-casadesús2016].
 On our dataset we visually explored the correlations for all the datasets, but the significant correlations were usually driven by an outlier, or there was not a good fit of the data due to missing data (data not shown).
 We tried filtering those correlations identified by the models, being less restrictive by removing those samples that did not have microbiome presence on at least 5 samples, and removing those samples without that microbiome presence, separating based on intestinal segment and a combination of all.
-None of these variations provided a clear insight over which genes were correlated to which bacterial signatures. 
-This differs to other publications that relied on them to draw their conclusions [@häsler2017].
-This might be due to them relying purely on the Spearman $\rho$ metric instead of visualizing the correlation it measures or having more common microbiota between the samples.
+None of these variations provided a clear insight over which genes were correlated to which bacterial signatures.
+This is in contrast to other publications that relied purely on the Spearman $\rho$ metric [@häsler2017]. 
 
 We developed and applied `BaseSet` to find these relationships using a different approach.
 However, it failed because it is computationally expensive to calculate the likelihood of 1500 variables; there are too many combinations.
@@ -194,7 +190,7 @@ On the dataset analyzed we found that it performed similarly to `inteRmodel` but
 ## Designing models
 
 Previous publications using `RGCCA` in IBD have focused on validating genes *DUOX2* and *APOA1* as inflammation predictors (@tang2017) from previously published articles [@haberman2014].
-Some publication tried to summarize the existing relationships in IBD [@hasler_uncoupling_2016], but none were focused on finding the relationships on IBD using `RGCCA` as we did.
+Some publication tried to summarize the existing relationships in IBD [@hasler_uncoupling_2016], but none were focused on finding the relationships in IBD using `RGCCA` as we did.
 
 There are many variables outside transcriptomics and the microbiome that may be relevant in disease homeostasis.
 These variables should be included on the models to find which genes and bacteria are truly related and not confounded by other factors.
@@ -209,18 +205,18 @@ The connections tested required that all models should have all blocks indirectl
 This avoids optimizing two different networks of blocks that are not connected between them, thus, forcing the model to represent all the information.
 
 Typically blocks are defined by each omic data origin and no other information is included.
-However, we knew that the transcriptome is mainly related to the location of the samples, as we have seen it on the PCAs, and we expected that the microbiome would be more related to  the patients demographic characteristics and influenced by dietary and other environmental factors.
+However, we knew that the transcriptome is mainly related to the location of the samples, as we have seen it on the PCAs, and we expected that the microbiome would be more related to the patients demographic characteristics and influenced by dietary and other environmental factors.
 This is especially important because in our datasets we have samples from the same patient and time from multiple locations.
 On other studies there are less samples per individual and timepoint (if there are several timepoints) [@howell2018; @hasler_uncoupling_2016; @morgan2015].
 
-On models of family 2, variables were grouped according to type into the  Demographic block, Time block, and Location block (c.f. with tables on design of Puget's \@ref(tab:puget-model2-2), \@ref(tab:puget-model2); HSCT \@ref(tab:hsct-model2) \@ref(tab:hsct-model2-2), \@ref(tab:hsct-model2-3); Häsler: \@ref(tab:hasler-model-2-1), \@ref(tab:hasler-model-2-2), Morgan's \@ref(tab:morgan-model2), \@ref(tab:morgan-model2-2), Howell's \@ref(tab:howell-model2-2) models).
+On models of family 2, variables were grouped according to type into the Demographic block, Time block, and Location block (see tables on design of Puget's \@ref(tab:puget-model2-2), \@ref(tab:puget-model2); HSCT \@ref(tab:hsct-model2) \@ref(tab:hsct-model2-2), \@ref(tab:hsct-model2-3); Häsler: \@ref(tab:hasler-model-2-1), \@ref(tab:hasler-model-2-2), Morgan's \@ref(tab:morgan-model2), \@ref(tab:morgan-model2-2), Howell's \@ref(tab:howell-model2-2) models).
 
 The exploration of design on Puget's dataset, and the datasets analysis of HSCT, Häsler and Morgan's dataset was published after peer review [@revilla2021].
 
 ## Evaluating models
 
 To evaluate a model `RGCCA` provides the inner and outer average variance explained (AVE); (see section \@ref(rgcca-output)).
-As the inner AVE measures how good does the data fit in the model, it makes more sense to pay more attention to it.
+As the inner AVE measures how good does the data fit in the model, we used it to evaluate and compare the models.
 
 <!--# TODO Add tables of mean and sd of AVEs on the bootstrapping ? -->
 
@@ -248,7 +244,8 @@ If not done properly it can lead to undesired conclusions like the effect known 
 Unfortunately this cannot be automated and it is left for the practitioner.
 
 Splitting the variables of each sample into several blocks forces `RGCCA` to adjust for a new canonical dimension.
-The omics block such as gene expression and 16S data could be split, as the expression of some genes influence other genes, such as [transcriptor factors](https://en.wikipedia.org/wiki/Transcription_factor) (First mentioned on @stillman1984) , [miRNA](https://en.wikipedia.org/wiki/MicroRNA) [@lee1993], and [siRNA](https://en.wikipedia.org/wiki/Small_interfering_RNA) [@hamilton1999]. All these interactions and regulations could distort the canonical correlations.
+The omics block such as gene expression and 16S data could be split, as the expression of some genes influence other genes, such as [transcriptor factors](https://en.wikipedia.org/wiki/Transcription_factor) (First mentioned on @stillman1984) , [miRNA](https://en.wikipedia.org/wiki/MicroRNA) [@lee1993], and [siRNA](https://en.wikipedia.org/wiki/Small_interfering_RNA) [@hamilton1999].
+All these interactions and regulations could distort the canonical correlations.
 However, the nature of this relationships is not linear and the interaction between them is multiple and very complex.
 Its complexity has prevented to accurately account for all subcellular reactions at speeds that could be useful (it has only been recently accomplished for a prokaryote cell [@thornburg2022]).
 In addition, these interactions are time dependent, not linear and are highly interconnected between many variables.
@@ -257,19 +254,17 @@ For these reasons gene expression and 16S blocks were not split into several blo
 Besides comparing the results of different methods, these models need to be evaluated by the insights they provide on the biological system they are being applied to, in our case IBD.
 So far the models were only discussed on their technical merits.
 
-It is known that the mucosal transciptome is related to sample localization (of)i.e. small or large intestine) and disease activity [@criss2021].
+It is known that the mucosal transciptome is related to sample localization (of)i.e.
+small or large intestine) and disease activity [@criss2021].
 This can be seen on the PCAs which separate colon an ileum on the first dimension: See the PCAs of the different datasets \@ref(fig:hsct-pca-rnaseq), \@ref(fig:hasler-pca-rnaseq) and \@ref(fig:howell-pca-rnaseq).
 The difference is so great that many times the colon and ileum samples are analyzed separately.
-As such, it was a reasonable assumption to expect models to reflect these  differences on the gene expression canonical component.
+As such, it was a reasonable assumption to expect models to reflect these differences on the gene expression canonical component.
 
 The variability of microbiome difficults finding clear patterns (See the PCAs of the different datasets: \@ref(fig:hsct-pca-16s), \@ref(fig:hasler-pca-16s), \@ref(fig:morgan-pca-16s) and \@ref(fig:howell-pca-16s)).
-In healthy humans, it has been suggested that there is a shared microbial patterns among groups of individuals [@arumugam2011]. 
-Such theory proposes three groups of similar microbiota composition, named enterotypes. 
-However, the enterotypes classification is not unanimously accepted [@koren2013; @cheng2019].
+In healthy humans, it has been suggested that there is a shared microbial patterns among groups of individuals [@arumugam2011]. Such theory proposes three groups of similar microbiota composition, named enterotypes. However, the enterotypes classification is not unanimously accepted [@koren2013; @cheng2019].
 Some suggest it is an artifact of the methodology used.
 
-There are many factors that influence the gut microbiome [@hasan2019].
-But the role of microbiome in IBD has gained a lot of attention in the last 10 years [@khanna2014; @bringiotti2014; @lloyd-price2019].
+There are many factors that influence the gut microbiome [@hasan2019]. But the role of microbiome in IBD has gained a lot of attention in the last 10 years [@khanna2014; @bringiotti2014; @lloyd-price2019].
 The microbiome has been associated for instance with treatment response in CD and suggested it could be useful for building an improved classifier for CD [@douglas2018].
 
 In addition, it is known that microbiome of patients in remission is different from non-IBD patients [@halfvarson2017].
@@ -300,7 +295,7 @@ There were very few common taxonomic levels selected on both datasets (data not 
 This was not a surprise, as there are many factors that influence one's microbiome profile and the diversity indexes already showed high differences between samples of the same dataset.
 
 The microbiome of each dataset seemed capable to classify the samples according to the disease (data not shown).
-However, on further evaluation via bootstrapping this classification was not significant, as different relatively big amount of ASVs were able to classify the samples. 
+However, on further evaluation via bootstrapping this classification was not significant, as different relatively big amount of ASVs were able to classify the samples.
 This might be due to the uniqueness of microbial composition to each sample.
 
 In Howell's and Häsler dataset, the best model based on AVE is 1.2; which separates the microbiome component by location too (See Figure \@ref(fig:hasler-models) and table \@ref(tab:hasler-aves) for Häsler dataset and figures \@ref(fig:howell-models) and table \@ref(tab:howell-models-ave) for Howell dataset).

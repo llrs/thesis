@@ -116,25 +116,27 @@ This thesis, available on <https://thesis.llrs.dev> is licensed under the [Creat
 
 ## English {.unnumbered}
 
-**Introduction**: Inflammatory bowel disease is a complex intestinal disease with several factors that affect each other.
+**Introduction**: Inflammatory bowel disease is a complex intestinal disease with several environmental factors that affect each other.
 The origin and process that maintains the disease is not fully understood.
-There are some clues that microbiome is related to starting or maintaining this disease.
-Finding relationships between the microbiome and the gastrointestinal mucosa could help advance treatments, diagnosis or prevent it.
+There is some evidence that microbiome is related to starting or maintaining this disease.
+Finding relationships between microbiome and gastrointestinal mucosa could help advance treatments, diagnosis or prevent it.
 
-**Methods**: We based our analysis on intestinal bacterial 16S and human  transcriptome data from biopsies from multiple timepoints and locations of the intestine.
+**Methods**: We based our analysis on intestinal bacterial 16S and human transcriptome data from biopsies from multiple timepoints and intestine segments.
 We extended regularized generalized canonical correlation analysis to find models that are coherent with previous knowledge on the disease taking into account samples' information.
-The results were compared with multiple co-inertia analysis and evaluated according to how well they can classify the samples on their location.
-Multiple datasets of patients on different treatments and conditions were analysed.
+The results were compared with multiple co-inertia analysis and classified samples according to their location.
+Multiple inflammatory bowel disease datasets on different treatments and conditions were analysed and the models defining those dataset were compared.
 
-**Results**: Splitting samples variables into different blocks results on models of these relationships that show differences on the genes and microorganismes selected.
+**Results**: Splitting samples variables into different blocks results on models of these relationships that show differences on the genes and microorganisms selected.
 These models of our new method inteRmodel outperformed multiple co-inertia analysis to classify the samples according to their location.
 Despite being used on datasets of different sources the resulting models show similar relationship strength between the variables.
 
-**Discussion**: Our method finds how strong are the relationships of microbiome, transcriptome and other variables.
-This approach is robust and flexible to different datasets and settings.
+**Discussion**: 
 Comparing multiple models helps find out the relationships within datasets.
+Our method finds how strong are the relationships of microbiome, transcriptome and environmental variables.
+This approach is robust and flexible to different datasets and settings.
 
 **Conclusion**: With inteRmodel we found that the microbiome is slightly more related to the location than to the disease, but the transcriptome is highly related to the location of the sample on the intestine.
+
 
 ## Spanish {.unnumbered}
 
