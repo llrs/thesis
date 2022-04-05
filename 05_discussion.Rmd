@@ -136,7 +136,10 @@ Current methodological approaches focus on comparing tools on (several) previous
 This approach was not used to compare different tools, but to validate findings of one dataset in other datasets.
 This is especially important due to the lack of golden datasets or a way to reliable simulate datasets as discussed on the previous section \@ref(discussion-datasets).
 
-In IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria are related to inflammation [@tang2017] or disease activity. In this thesis, the focus was on finding a good representation of the relationships that identify groups of genes and bacteria that were relevant to the disease in an orchestrated manner. We made the assumptions that the microbiome composition and the host's transcriptome were related. This assumption is backed up by several other previous studies supporting this relationship [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
+In IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria are related to inflammation [@tang2017] or disease activity.
+In this thesis, the focus was on finding a good representation of the relationships that identify groups of genes and bacteria that were relevant to the disease in an orchestrated manner.
+We made the assumptions that the microbiome composition and the host's transcriptome were related.
+This assumption is backed up by several other previous studies supporting this relationship [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
 
 Tools that relate the variance of a block with other variables, both numeric and categoric, are needed to search which variables are important.
 PERMANOVA and `globaltest` served that purpose, but they do not give any insight into which specific microbial species are driving the association between the microbiome and the variables [@susin2020].
@@ -161,7 +164,7 @@ To identify related variables other methods use correlations between the variabl
 On our dataset we visually explored the correlations for all the datasets, but the significant correlations were usually driven by an outlier, or there was not a good fit of the data due to missing data (data not shown).
 We tried filtering those correlations identified by the models, being less restrictive by removing those samples that did not have microbiome presence on at least 5 samples, and removing those samples without that microbiome presence, separating based on intestinal segment and a combination of all.
 None of these variations provided a clear insight over which genes were correlated to which bacterial signatures.
-This is in contrast to other publications that relied purely on the Spearman $\rho$ metric [@häsler2017]. 
+This is in contrast to other publications that relied purely on the Spearman $\rho$ metric [@häsler2017].
 
 We developed and applied `BaseSet` to find these relationships using a different approach.
 However, it failed because it is computationally expensive to calculate the likelihood of 1500 variables; there are too many combinations.
@@ -261,7 +264,8 @@ The variability of microbiome difficults finding clear patterns (See the PCAs of
 In healthy humans, it has been suggested that there is a shared microbial patterns among groups of individuals [@arumugam2011]. Such theory proposes three groups of similar microbiota composition, named enterotypes. However, the enterotypes classification is not unanimously accepted [@koren2013; @cheng2019].
 Some suggest it is an artifact of the methodology used.
 
-There are many factors that influence the gut microbiome [@hasan2019]. But the role of microbiome in IBD has gained a lot of attention in the last 10 years [@khanna2014; @bringiotti2014; @lloyd-price2019].
+There are many factors that influence the gut microbiome [@hasan2019].
+But the role of microbiome in IBD has gained a lot of attention in the last 10 years [@khanna2014; @bringiotti2014; @lloyd-price2019].
 The microbiome has been associated for instance with treatment response in CD and suggested it could be useful for building an improved classifier for CD [@douglas2018].
 
 In addition, it is known that microbiome of patients in remission is different from non-IBD patients [@halfvarson2017].
@@ -301,9 +305,9 @@ This indicates that the relationship of the microbiome is stronger than with the
 
 ## Implications
 
-On this thesis several methods has been developed for helping research.
-`experDesign` is on the primary steps from moving from the bench to the in-silico experiments.
-`BaseSets` and `inteRmodel` are more relevant for computational analysis.
+On this thesis several methods has been developed to help multiomic data integration.
+`experDesign` was implemented during the initial steps when moving from bench to in-silico analysis.
+`BaseSets` and `inteRmodel` are useful for computational analysis.
 `BaseSets` might help beyond integration analysis such as single cell annotation[^discussion-1].
 
 [^discussion-1]: See an exploration of this using AUCell <https://bioconductor.org/packages/AUCell> on this website: <https://llrs.github.io/BaseSet_scRNAseq/AUCell.html>.
@@ -314,49 +318,47 @@ It could be possible that just sequencing the intestinal microbiome could be eno
 However, this requires further validation to ensure that the diagnosis is accurate enough on a diverse and big population.
 There are already studies on this direction, not only for IBD or intestine but for several different human regions [@humanmicrobiomeprojectconsortium2012].
 
-With these studies we hoped that they would provid which bacteria played a role on the disease, or which genes and bacteria are related on IBD.
+With our studies we hoped that we would provide which bacteria played a role on the disease, or which genes and bacteria are related on IBD.
 We obtained a list of putative genes and bacteria but not a clear pairing of which genes interact with which bacteria.
 This could mean that the microbiome community is related to all the genes.
 It could also mean that the methods are not powerful enough to find more tailored relationships as normalizations and generalizations present on `RGCCA` do not allow to subgroup or classify the variables already detected.
 Maybe a different method that would not depend on the same principles might be able to detect finer relationships on the variables selected.
 
-There is a disconnect between the computational side and the experimental side, driven by the difficulty to think an experiment to test the new information that multi-omic experiments provide.
+There is a disconnect between the computational side and the experimental side, driven by the difficulty to design and perform an experiment to test the new information that multi-omic experiments provide.
 This is referred as the gap in other publications [@sudhakar2022].
-This gap between the computational methods and the data origin and practical usages should close.
-Potentially this would require more closer collaboration between clinicians, statisticians, bioinformaticians and research software engineers; in addition to creative ideas accounting for the standard procedure on hospitals and points of care.
+Closing this gap between the computational methods and the data origin and practical usages would potentially require closer collaboration between clinicians, statisticians, bioinformaticians and research software engineers; in addition to creative ideas accounting for the standard procedure on hospitals and points of care.
 
 However, it is also possible that further developments or creatively applying statistical methods might help closing the gap.
-For instance, there are many combinations of interaction possible.
+For instance, there are many combinations of possible interactions.
 These interactions between microbiome and genes are currently hard to explore statistically.
 Further research on how to reduce the space of possible combinations of bacteria or evaluate which combinations are more important might be useful on the future.
 This might involve using more network integration methods.
 
-Krassowski's *et. al.* ([@krassowski2020]) advice and recommendations on software engineering and reproducibility practices to share awareness with new researchers in multi-omics for end-to-end workflow.
+Krassowski's *et. al.* ([@krassowski2020]) advise on software engineering and reproducibility practices to share awareness with new researchers in multi-omics for end-to-end workflow.
 In addition the recent recommendation about integration on IBD ([@sudhakar2022]) suggests that there is still much to be done to increase the results on these projects and the effectivity.
 We agree with them and encourage other researchers to carefully consider the proposed methodology before starting their own projects.
 
-There seems to be a tendency of multi-omics project to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing [@zhang2019].
-This could be explained by the numerous problems that 16S sequencing have.
+There seems to be a tendency of multi-omics projects to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing [@zhang2019].
+This could be explained by the numerous problems that 16S sequencing has.
 Some of these are avoided or solved by using these other omics techniques.
-For instance the metatranscriptomics and metaproteomics could help detect what is actively producing the microbiota and the metagenomics, what is actually there at a more detailed level than 16S.
+For instance the metatranscriptomics and metaproteomics of bacteria could help detect what is actively being produced by the microbiota and the metagenomics, what genes are actually there not just restricted to 16S rRNA sequences.
 But these methods also have their shortcomings.
-Metagenomics still does not detect adherent invasive cells and metatranscriptomics and metaproteomics do not provide who is producing what (even if paired with metagenomics or 16S data).
-Devonvoluting which bacteria produces something is also not clear.
+Metagenomics still does not detect adherent invasive cells and metatranscriptomics and metaproteomics can not explain which bacteria is expressing  which genes (even if paired with metagenomics or 16S data).
 The single cell revolution might provide more insights in the future, but at the moment the first studies of single-cell multi-omics are being published.
 
 Perhaps as suggested in other publications network methods might be able to provide more detailed information about the relationships [@jiang2019].
-But, it is unclear how complete and valid are these networks.
-There is some evidence that currently literature focus on already known and studied genes instead of more novel and with higher relevance genes [@haynes2018].
+But, it is unclear how complete and valid these networks are.
+Current literature focus on already known and studied genes instead of on more novel and with higher relevant genes [@haynes2018].
 By extension, this translates in bias in networks and pathways resources available for pathway analysis and integration methods.
 This could explain why there are many genes selected by the models with few pathways or gene sets.
 
 To study complex systems, new technologies like "organ-on-chip" or more specifically "gut-on-chip" are being developed [@collij2021].
-These systems expand on the already useful technique of using organoids to better mimic the epithelial cross-talk on the laboratory.
+These systems expand on the already useful technique of using organoids to better mimic the epithelial cross-talk in the laboratory.
 Latest developments include the addition of separate environments and distinct flow on these environments.
 By introducing gut microbiota, these systems will help studying the interaction of the gut microbiota and the intestinal epithelium.
-However, it is not clear how accurately accounts for other factors such as the accumulation of inflammation.
+However, it is not clear how accurately account for other factors such as the presence of inflammation.
 
-As shown with the PERMANOVA approach, several factors affect the disease and the relationship between gut's microbiome and gut's mucosa.
-Analysis or comparisons without taking into account them might provide misleading or false results.
+In summary, as shown with the PERMANOVA approach, several factors affect the disease and the relationship between gut's microbiome and gut's mucosa.
+Analysis or comparisons without taking them into account might provide misleading or false results.
 To our knowledge this is the first study using these variables as part of the integration study with canonical correlations.
 We hope this provides a first approximation to accurately understand the relationships between genes and bacteria on IBD.
