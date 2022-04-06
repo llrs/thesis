@@ -1,3 +1,11 @@
+.author {
+  font-style: bold;
+  text-align: center;
+}
+
+.date {
+  text-align: center;
+}
 
 .wip {
   background: #ffff66;
