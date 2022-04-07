@@ -191,7 +191,7 @@ Articles published on peer-review journals about this thesis:
 Article peer-reviewed published on 2021, freely [available online](https://doi.org/10.1371/journal.pone.0246367).
 
 ```{r, include=FALSE, eval=knitr::is_html_output(excludes = "epub"), results='asis'}
-The same article can be find below.
+paste0("The same article can be find below.")
 ```
 
 
@@ -205,7 +205,7 @@ The same article can be find below.
 Article peer-reviewed published on 2021, freely [available online](https://joss.theoj.org/papers/10.21105/joss.03358)
 
 ```{r, include=FALSE, eval=knitr::is_html_output(excludes = "epub"), results='asis'}
-The same article can be find below.
+paste0("The same article can be find below.")
 ```
 
 \includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - \voffset}, trim=0 0 0 20pt,]{paper_experDesign.pdf}
