@@ -182,13 +182,18 @@ Validation:
 
 # Articles
 
-Articles related to this project published during the thesis. 
+Articles published on peer-review journals about this thesis:
 
 ## Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis {#app-multiomics}
 <!-- Change header, https://texfaq.org/FAQ-runheadtoobig -->
 \sectionmark{inteRmodel: paper}
 
-Article peer-reviewed published on 2021, freely [available online](https://doi.org/10.1371/journal.pone.0246367). 
+Article peer-reviewed published on 2021, freely [available online](https://doi.org/10.1371/journal.pone.0246367).
+
+```{r, include=FALSE, eval=knitr::is_html_output(excludes = "epub"), results='asis'}
+The same article can be find below.
+```
+
 
 <!--Help page on https://texdoc.org/serve/pdfpages/0 -->
 \includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight  - 25pt}, trim=0 0 0 20pt,]{paper_multiomics.pdf} 
@@ -199,7 +204,11 @@ Article peer-reviewed published on 2021, freely [available online](https://doi.o
 
 Article peer-reviewed published on 2021, freely [available online](https://joss.theoj.org/papers/10.21105/joss.03358)
 
-\includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - 25pt}, trim=0 0 0 20pt,]{paper_experDesign.pdf}
+```{r, include=FALSE, eval=knitr::is_html_output(excludes = "epub"), results='asis'}
+The same article can be find below.
+```
+
+\includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - \voffset}, trim=0 0 0 20pt,]{paper_experDesign.pdf}
 
 # Other datasets
 
