@@ -1,7 +1,10 @@
-\usepackage{pdfpages} % To include other pdf
+% Include other pdf
+\usepackage{pdfpages}
 % \usepackage{navigator} % To mofidy the outline https://osl.ugr.es/CTAN/macros/generic/navigator/navigator-doc.pdf
-\usepackage{tocbibind} % To include the indices of tables and figures
-% https://tex.stackexchange.com/questions/48509/insert-list-of-figures-in-the-table-of-contents
+
+% Include the indices of tables and figures
+% https://tex.stackexchange.com/a/48512/178206
+\usepackage{tocbibind}
 
 % To add figure after the environment not later at the end of the section
 % From https://stackoverflow.com/a/33801326/2886003
@@ -15,14 +18,32 @@
     \endorigfigure
 }
 
+% Page number the same even for first page of chapter
+\usepackage[automark,headsepline]{scrlayer-scrpage}% sets page style scrheadings automatically
+\clearpairofpagestyles
+\ihead{\leftmark}
+\ohead*{\pagemark}
+\setkomafont{pagenumber}{}% default is \normalfont\normalcolor
+
+
+% Reduce space between chapter title and top of page
+% https://tex.stackexchange.com/a/63393/178206
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\null\hfill \chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-50pt}{40pt}
 
 % To handle captions and make them wide even if tables are not
 % https://stackoverflow.com/a/46101575/2886003
 \usepackage{caption}
-\captionsetup{width=\textwidth}
+% Set in bold the numbering of tables and chapters
+\captionsetup{labelfont=bf,width=\textwidth}
 % Set table caption below tables, from example code on: https://tex.stackexchange.com/a/508243/178206
-\captionsetup[table]{position=below}
-\captionsetup[longtable]{position=below}
+% But it doesn't work per design on kable https://github.com/yihui/knitr/issues/1189
+% \captionsetup{labelfont=bf,width=\textwidth,positon=below}
+
+% To be able to set table on the center and not overlap much on the right margin
+\usepackage{adjustbox}
 
 % Allow figures and tables in a page from https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html#adjust-latex-placement-rules
 \renewcommand{\topfraction}{.85}
