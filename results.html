@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-04-07" />
+<meta name="date" content="2022-04-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -308,9 +308,9 @@ There are some also that report how good a given distribution of the samples fel
 <li><p>Functions distributing the samples on indexes</p></li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:experdesign-flowchart"></span>
-<img src="images/experDesign-flowchart.png" alt="experDesign flowchart for users of the package showing which functions can be used depending on the experiment design they have." width="100%" />
+<img src="images/experDesign-flowchart.png" alt="`experDesign` functions and workflow. Workflow for users of the package showing which functions can be used depending on the experiment design they have." width="100%" />
 <p class="caption">
-Figure 4.1: experDesign flowchart for users of the package showing which functions can be used depending on the experiment design they have.
+Figure 4.1: <code>experDesign</code> functions and workflow. Workflow for users of the package showing which functions can be used depending on the experiment design they have.
 </p>
 </div>
 <p>Regarding time related variables <code>experDesign</code> will use them as factors, while issuing a warning to the user.</p>
@@ -371,9 +371,9 @@ This is also recommended even if the design matrices are created with <code>weig
 If the bootstrapped samples used is not important one can use <code>boot_samples_sgcca</code>.
 If the users want to perform a leave-one-out procedure they can use <code>looIndex</code>.</p>
 <div class="figure"><span style="display:block;" id="fig:intermodel-workflows"></span>
-<img src="images/inteRmodel-workflows.png" alt="Functions provided by the inteRmodel package to search and validate models of relationships using RGCCA. Created with BioRender.com" width="100%" />
+<img src="images/inteRmodel-workflows.png" alt="`inteRmodel` functions and workflow. Functions provided by the inteRmodel package to search and validate models of relationships using RGCCA. Created with BioRender.com" width="100%" />
 <p class="caption">
-Figure 4.2: Functions provided by the inteRmodel package to search and validate models of relationships using RGCCA. Created with BioRender.com
+Figure 4.2: <code>inteRmodel</code> functions and workflow. Functions provided by the inteRmodel package to search and validate models of relationships using RGCCA. Created with BioRender.com
 </p>
 </div>
 <p>For more information, you can access the <a href="https://llrs.github.io/inteRmodel/">manual online</a> or once it is installed.</p>
@@ -1270,9 +1270,9 @@ Residuals
 The resulting p-value was well below the 0,05 threshold defined for RNA-seq data on the models including the segment of the sample, sex and treatment.</p>
 <p>On the microbiome data the results were similar but the p-value was considerably higher but still below the threshold.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-diversity"></span>
-<img src="images/hsct-ASV-diversity.png" alt="Microbiome diversity on HSCT dataset. On the upper section the Shannon effective and on the lower row the Simpson effective diversity splitted by colon and ileum and controls and CD." width="100%" />
+<img src="images/hsct-ASV-diversity.png" alt="Microbiome diversity on the HSCT dataset. On the upper section the Shannon effective and on the lower row the Simpson effective diversity splitted by colon and ileum and controls and CD." width="100%" />
 <p class="caption">
-Figure 4.7: Microbiome diversity on HSCT dataset. On the upper section the Shannon effective and on the lower row the Simpson effective diversity splitted by colon and ileum and controls and CD.
+Figure 4.7: Microbiome diversity on the HSCT dataset. On the upper section the Shannon effective and on the lower row the Simpson effective diversity splitted by colon and ileum and controls and CD.
 </p>
 </div>
 <p>Diversity indices of the samples were explored and compared for several subsets.
@@ -2007,9 +2007,9 @@ Figure 4.13: Bootstrap of the models 0, 1.2 and 2.2. The point with the black ci
 However, due to big amount of small probabilities when using the BaseSet package to calculate which variables are more relevant it could not provide a good estimation on time.</p>
 <p>MCIA was applied as a baseline of the integration, the first two components were represented similarly to those of the blocks when using RGCCA <a href="results.html#fig:hsct-mcia">4.14</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-mcia"></span>
-<img src="images/hsct-mcia.png" alt="MCIA first two synthetic variables on IBD related cohorts. In red circles the colon and in blue triangles the ileum." width="100%" />
+<img src="images/hsct-mcia.png" alt="MCIA dimensions on the HSCT dataset. MCIA first two synthetic variables. In red circles the colon and in blue triangles the ileum." width="100%" />
 <p class="caption">
-Figure 4.14: MCIA first two synthetic variables on IBD related cohorts. In red circles the colon and in blue triangles the ileum.
+Figure 4.14: MCIA dimensions on the HSCT dataset. MCIA first two synthetic variables. In red circles the colon and in blue triangles the ileum.
 </p>
 </div>
 <p>The AUC of classifying the transcriptome in colon or ileum segments was compared between the models (see <a href="results.html#fig:hsct-auc-plot">4.15</a> and with MCIA.</p>
@@ -2105,9 +2105,9 @@ AUC
 This is on par with the models of family 2 as can be seen on the table <a href="results.html#tab:hsct-auc">4.17</a>.</p>
 <p>The different models selected different variables as can be seen below:</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-features"></span>
-<img src="images/hsct-features.png" alt="Upset plot of variables selected on HSCT dataset. The variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes, panel A, and OTUs, panel B." width="100%" />
+<img src="images/hsct-features.png" alt="Upset plot of variables selected on the HSCT dataset. The variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes, panel A, and OTUs, panel B." width="100%" />
 <p class="caption">
-Figure 4.16: Upset plot of variables selected on HSCT dataset. The variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes, panel A, and OTUs, panel B.
+Figure 4.16: Upset plot of variables selected on the HSCT dataset. The variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes, panel A, and OTUs, panel B.
 </p>
 </div>
 <p>Differences and similarities between the selected features of each model can be observed on Figure <a href="results.html#fig:hsct-features">4.16</a>.
@@ -2124,9 +2124,9 @@ Figure 4.17: PCA of 16S of Häsler’s dataset colored by the location of the sa
 </div>
 <p>The PCA on the transcriptome shows a distinction between colon and ileum according to the first dimension of the pca that can be seen on <a href="results.html#fig:hasler-pca-rnaseq">4.18</a>:</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-pca-rnaseq"></span>
-<img src="images/hasler_PCA_RNAseq.png" alt="PCA of RNAseq of Häsler's dataset. The samples are colored by location sigma and ileum. There are two clear groups according to the location." width="100%" />
+<img src="images/hasler_PCA_RNAseq.png" alt="PCA of RNAseq of the Häsler's dataset. The samples are colored by location sigma and ileum. There are two clear groups according to the location." width="100%" />
 <p class="caption">
-Figure 4.18: PCA of RNAseq of Häsler’s dataset. The samples are colored by location sigma and ileum. There are two clear groups according to the location.
+Figure 4.18: PCA of RNAseq of the Häsler’s dataset. The samples are colored by location sigma and ileum. There are two clear groups according to the location.
 </p>
 </div>
 <p>In this dataset, the parameter tau behaved slightly differently than with the previous dataset but the value from the Schäfer’s method for tau was close to the best value.</p>
@@ -2653,17 +2653,17 @@ The microbiome block is also related by a factor of 0.1 with the demographic blo
 Lastly, the time and the demographic block are related by a factor of a 0.1.
 In either case the family 1 and family 2 models can correctly separate by sample location (colon or ileum) but not by disease type or inflammation status as can be seen on figure <a href="results.html#fig:hasler-models">4.20</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-models"></span>
-<img src="images/hasler-models.png" alt="Models on the Häsler's dataset. Model 0 with just the transcriptome and microbiome data. Models 1.1 to 1.2 with transcriptome, microbiome and sample data in a single block. Models 2.1 and 2.2 with transcriptome, microbiome and sample data in multiple blocks. On the A panel colored by disease on the B panel colored by location of the sample." width="100%" />
+<img src="images/hasler-models.png" alt="Models from inteRmodel on the Häsler's dataset. Model 0 with just the transcriptome and microbiome data. Models 1.1 to 1.2 with transcriptome, microbiome and sample data in a single block. Models 2.1 and 2.2 with transcriptome, microbiome and sample data in multiple blocks. On the A panel colored by disease on the B panel colored by location of the sample." width="100%" />
 <p class="caption">
-Figure 4.20: Models on the Häsler’s dataset. Model 0 with just the transcriptome and microbiome data. Models 1.1 to 1.2 with transcriptome, microbiome and sample data in a single block. Models 2.1 and 2.2 with transcriptome, microbiome and sample data in multiple blocks. On the A panel colored by disease on the B panel colored by location of the sample.
+Figure 4.20: Models from inteRmodel on the Häsler’s dataset. Model 0 with just the transcriptome and microbiome data. Models 1.1 to 1.2 with transcriptome, microbiome and sample data in a single block. Models 2.1 and 2.2 with transcriptome, microbiome and sample data in multiple blocks. On the A panel colored by disease on the B panel colored by location of the sample.
 </p>
 </div>
 <p>There is no observable cluster of IBD samples and the other samples, showing that on this dataset the differences of the microbiome between the different type of samples are less stark.
 The classification of samples was very accurate in all the models, specially on model 2.2, see figure <a href="results.html#fig:hasler-auc-plot">4.21</a>:</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-auc-plot"></span>
-<img src="images/hasler-auc.png" alt="AUC for models with RGCCA on Häsler's dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample." width="100%" />
+<img src="images/hasler-auc.png" alt="AUC for models with RGCCA on the Häsler's dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample." width="100%" />
 <p class="caption">
-Figure 4.21: AUC for models with RGCCA on Häsler’s dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample.
+Figure 4.21: AUC for models with RGCCA on the Häsler’s dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample.
 </p>
 </div>
 <p>This accuracy resulted on high AUC values for all the models, as can be seen on table <a href="results.html#tab:hasler-auc">4.24</a>:</p>
@@ -2727,9 +2727,9 @@ AUC
 <p>MCIA was applied as a baseline of the integration and compared to the different models to know which one separates best colon and ileum samples.
 The result on the first two dimension is shown on figure <a href="results.html#fig:hasler-mcia">4.22</a>:</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-mcia"></span>
-<img src="images/hasler-mcia.png" alt="MCIA result on Häsler's dataset. MCIA first two dimensions of the dataset colored by state, the shape is according to the location of the samples. Shows two vertical groups on the first syntethic dimension according to the location of the samples." width="100%" />
+<img src="images/hasler-mcia.png" alt="MCIA dimensions on the Häsler's dataset. MCIA first two dimensions of the dataset colored by state, the shape is according to the location of the samples. Shows two vertical groups on the first syntethic dimension according to the location of the samples." width="100%" />
 <p class="caption">
-Figure 4.22: MCIA result on Häsler’s dataset. MCIA first two dimensions of the dataset colored by state, the shape is according to the location of the samples. Shows two vertical groups on the first syntethic dimension according to the location of the samples.
+Figure 4.22: MCIA dimensions on the Häsler’s dataset. MCIA first two dimensions of the dataset colored by state, the shape is according to the location of the samples. Shows two vertical groups on the first syntethic dimension according to the location of the samples.
 </p>
 </div>
 <p>MCIA’s AUC results was as high as the model 2.2 to classify samples according to their location.
@@ -2740,16 +2740,16 @@ It was even better to classify the samples according to the type of sample they 
 <p>To explore this dataset that is different from the others with IBD.</p>
 <p>The PCA didn’t show any pattern on the microbiome according to the location, see figure <a href="results.html#fig:morgan-pca-16s">4.23</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-pca-16s"></span>
-<img src="images/morgan_pca_16S.png" alt="PCA of 16S of Morgan's dataset. The sample are colored by location. " width="100%" />
+<img src="images/morgan_pca_16S.png" alt="PCA of 16S of the Morgan's dataset. The sample are colored by location. " width="100%" />
 <p class="caption">
-Figure 4.23: PCA of 16S of Morgan’s dataset. The sample are colored by location.
+Figure 4.23: PCA of 16S of the Morgan’s dataset. The sample are colored by location.
 </p>
 </div>
 <p>The PCA on the transcriptome did not show a clear distinction between the prepouch ileum and the pouch on figure <a href="results.html#fig:morgan-pca-rnaseq">4.24</a> but there is a pattern:</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-pca-rnaseq"></span>
-<img src="images/morgan_pca_RNAseq.png" alt="PCA of RNAseq of Morgan's dataset. The sample are colored by location. " width="100%" />
+<img src="images/morgan_pca_RNAseq.png" alt="PCA of RNAseq of the Morgan's dataset. The sample are colored by location. " width="100%" />
 <p class="caption">
-Figure 4.24: PCA of RNAseq of Morgan’s dataset. The sample are colored by location.
+Figure 4.24: PCA of RNAseq of the Morgan’s dataset. The sample are colored by location.
 </p>
 </div>
 <p>We tested if results of inteRmodel were consistent on this dataset with the other datasets.
@@ -3119,19 +3119,19 @@ Location
 </tbody>
 </table>
 <p>Each model is different from previous models.
-After model 2.2 we looked on the model similar to model 2.3 on HSCT dataset showed but it is the same as in model 2.2.
+After model 2.2 we looked on the model similar to model 2.3 on the HSCT dataset showed but it is the same as in model 2.2.
 However, it is kept on the further analysis.</p>
 <p>The different models were not able to separate the samples neither by location or sex.</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-models"></span>
-<img src="images/morgan_models.png" alt="First component of the transcriptome and microbiome of models on the Morgan's dataset. Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models." width="100%" />
+<img src="images/morgan_models.png" alt="Models from inteRmodel on the Morgan's dataset. First component of the transcriptome and microbiome of models on the Morgan's dataset. Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models." width="100%" />
 <p class="caption">
-Figure 4.25: First component of the transcriptome and microbiome of models on the Morgan’s dataset. Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models.
+Figure 4.25: Models from inteRmodel on the Morgan’s dataset. First component of the transcriptome and microbiome of models on the Morgan’s dataset. Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models.
 </p>
 </div>
 <p>Nevertheless, we compared the classification with the MCIA algorithm and still resulted that model 2.2 provide a better classification than MCIA.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:morgan-models-ave">Table 4.30: </span>The models on Morgan’s dataset and their AVE values. For each model the inner and outer AVE value is presented.
+<span id="tab:morgan-models-ave">Table 4.30: </span>The models on the Morgan’s dataset and their AVE values. For each model the inner and outer AVE value is presented.
 </caption>
 <thead>
 <tr>
@@ -3247,15 +3247,15 @@ Figure 4.26: Inner and outer AVE scores of the bootstrapped models 0 1.2 and 2.2
 <!--# TODO Add points of the models on the real dataset -->
 <p>In addition the model 2.2 usually has a lower inner AVE compared to model 1.2.</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-auc-plot"></span>
-<img src="images/morgan-auc.png" alt="AUC for Morgan's dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA." width="100%" />
+<img src="images/morgan-auc.png" alt="AUC for the Morgan's dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA." width="100%" />
 <p class="caption">
-Figure 4.27: AUC for Morgan’s dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA.
+Figure 4.27: AUC for the Morgan’s dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA.
 </p>
 </div>
 <p>The area under the curve for these models is:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:morgan-auc">Table 4.31: </span>AUC for Morgan’s dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA.
+<span id="tab:morgan-auc">Table 4.31: </span>AUC for the Morgan’s dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA.
 </caption>
 <thead>
 <tr>
@@ -3336,9 +3336,9 @@ AUC
 </table>
 <p>With MCIA:</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-mcia-plot"></span>
-<img src="images/morgan-mcia.png" alt="MCIA firsts dimensions on Morgan's dataset. Color and shape is according to the location of the sample. There is some separation by location." width="100%" />
+<img src="images/morgan-mcia.png" alt="MCIA dimensions on the Morgan's dataset. MCIA first two dimensions of the dataset. The color and shape match the location of the sample. There is some separation between samples by location." width="100%" />
 <p class="caption">
-Figure 4.28: MCIA firsts dimensions on Morgan’s dataset. Color and shape is according to the location of the sample. There is some separation by location.
+Figure 4.28: MCIA dimensions on the Morgan’s dataset. MCIA first two dimensions of the dataset. The color and shape match the location of the sample. There is some separation between samples by location.
 </p>
 </div>
 <p>If we quantify this separation by the first dimension of MCIA, the AUC is 0.818, which is slightly worst than the models of family 2.</p>
@@ -3347,16 +3347,16 @@ Figure 4.28: MCIA firsts dimensions on Morgan’s dataset. Color and shape is ac
 <h3><span class="header-section-number">4.2.5</span> Howell’s dataset<a href="results.html#results-howell" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The 16S of this dataset doesn’t show any clear pattern regarding the location of the samples according to the firsts dimensions of the PCA on <a href="results.html#fig:howell-pca-16s">4.29</a>:</p>
 <div class="figure"><span style="display:block;" id="fig:howell-pca-16s"></span>
-<img src="images/howell_PCA_16S.png" alt="PCA of 16S data of Howell's dataset. Samples are colored by location. There are no pattern on any of the first do dimensions." width="100%" />
+<img src="images/howell_PCA_16S.png" alt="PCA of 16S data of the Howell's dataset. Samples are colored by location. There are no pattern on any of the first do dimensions." width="100%" />
 <p class="caption">
-Figure 4.29: PCA of 16S data of Howell’s dataset. Samples are colored by location. There are no pattern on any of the first do dimensions.
+Figure 4.29: PCA of 16S data of the Howell’s dataset. Samples are colored by location. There are no pattern on any of the first do dimensions.
 </p>
 </div>
 <p>The PCA on the transcriptome shows a distinction between colon and ileum <a href="results.html#fig:howell-pca-rnaseq">4.30</a> there are almost two distinct groups according to location:</p>
 <div class="figure"><span style="display:block;" id="fig:howell-pca-rnaseq"></span>
-<img src="images/howell_PCA_RNAseq.png" alt="PCA of RNAseq data of Howell's dataset. Samples are colored by location. There are two groups of samples according to their location." width="100%" />
+<img src="images/howell_PCA_RNAseq.png" alt="PCA of RNAseq data of the Howell's dataset. Samples are colored by location. There are two groups of samples according to their location." width="100%" />
 <p class="caption">
-Figure 4.30: PCA of RNAseq data of Howell’s dataset. Samples are colored by location. There are two groups of samples according to their location.
+Figure 4.30: PCA of RNAseq data of the Howell’s dataset. Samples are colored by location. There are two groups of samples according to their location.
 </p>
 </div>
 <p>This dataset was processed to confirm the results on the previous datasets.
@@ -3430,9 +3430,9 @@ metadata
 </table>
 <p>Model 1.2 <a href="results.html#tab:howell-model1-2">4.32</a> was the best according to the AVE score but perform worse when attempting to recreate known biological differences via classifying samples as we can see below <a href="results.html#fig:howell-models">4.31</a>:</p>
 <div class="figure"><span style="display:block;" id="fig:howell-models"></span>
-<img src="images/howell-models.png" alt="The three main models, model 0, 1.2 and 2.2 on the Howell's dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks." width="100%" />
+<img src="images/howell-models.png" alt="Models from inteRmodel on the Howell's datset. The three main models, model 0, 1.2 and 2.2 on the Howell's dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks." width="100%" />
 <p class="caption">
-Figure 4.31: The three main models, model 0, 1.2 and 2.2 on the Howell’s dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn’s disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks.
+Figure 4.31: Models from inteRmodel on the Howell’s datset. The three main models, model 0, 1.2 and 2.2 on the Howell’s dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn’s disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks.
 </p>
 </div>
 <p>Model 2.2 was selected for further analysis as it describes more accurately the biology of the dataset it.
@@ -3595,22 +3595,22 @@ Figure 4.32: Bootstrap of the different models on the inner and outer AVE: Model
 <p>The bootstrapping showed that model 1.2 has indeed higher inner AVE values than model 2.2 and is more stable than model 1.2.
 While model 0 shows a high variation according to which samples are selected.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-mcia"></span>
-<img src="images/howell-mcia.png" alt="MCIA method on Howell's dataset. The first dimensions separates by location." width="100%" />
+<img src="images/howell-mcia.png" alt="MCIA dimensions on the Howell's dataset. The first dimensions separates by location." width="100%" />
 <p class="caption">
-Figure 4.33: MCIA method on Howell’s dataset. The first dimensions separates by location.
+Figure 4.33: MCIA dimensions on the Howell’s dataset. The first dimensions separates by location.
 </p>
 </div>
 <p>If we look at the classification of the models on figure <a href="results.html#fig:howell-auc-plot">4.34</a>, we can see that models 1.2, 2 and 2.2 classify perfectly the samples by the transcriptome into the location of the sample.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-auc-plot"></span>
-<img src="images/howell-rgcca-auc.png" alt="AUC of the RGCCA models on Howell's dataset. The classification of the location of the sample according to the first componenent of the models shown." width="100%" />
+<img src="images/howell-rgcca-auc.png" alt="AUC of the RGCCA models on the Howell's dataset. The classification of the location of the sample according to the first componenent of the models shown." width="100%" />
 <p class="caption">
-Figure 4.34: AUC of the RGCCA models on Howell’s dataset. The classification of the location of the sample according to the first componenent of the models shown.
+Figure 4.34: AUC of the RGCCA models on the Howell’s dataset. The classification of the location of the sample according to the first componenent of the models shown.
 </p>
 </div>
 <p>The AUC of each model can be seen on <a href="results.html#tab:howell-auc">4.35</a>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:howell-auc">Table 4.35: </span>AUC of the RGCCA models on Howell’s dataset. The classification of the location of the sample according to the first componenent of the models shown. Model 0, 2 and 2.2 have a perfect classification of the samples to their respective location.
+<span id="tab:howell-auc">Table 4.35: </span>AUC of the RGCCA models on the Howell’s dataset. The classification of the location of the sample according to the first componenent of the models shown. Model 0, 2 and 2.2 have a perfect classification of the samples to their respective location.
 </caption>
 <thead>
 <tr>
@@ -3672,7 +3672,7 @@ The dot product of the ASV and genes were also calculated and used to find out w
 <div id="between-datasets" class="section level3 hasAnchor" number="4.2.6">
 <h3><span class="header-section-number">4.2.6</span> Between datasets<a href="results.html#between-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The HSCT genes were compared to the Howell’s genes from model 2.2.
-There are 3580 selected on model 2.2 on HSCT dataset and 2189 genes on Howell’s dataset.
+There are 3580 selected on model 2.2 on the HSCT dataset and 2189 genes on the Howell’s dataset.
 From them the 1228 genes in common were analyzed for which GO terms and pathways they are enriched.
 The results is represented on <a href="results.html#fig:pathways-hsct-howell">4.35</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:pathways-hsct-howell"></span>
@@ -3763,7 +3763,7 @@ gitbook.start({
 "link": "https://github.com/llrs/thesis/blob/master/04_results.Rmd",
 "text": "View"
 },
-"download": ["_main.pdf", "_main.epub"],
+"download": ["IBD_integration_Lluis_Revilla.pdf", "IBD_integration_Lluis_Revilla.epub"],
 "search": {
 "engine": "fuse",
 "options": null
