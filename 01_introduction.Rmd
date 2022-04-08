@@ -639,7 +639,7 @@ Here I briefly describe some common mathematical frameworks, some of which have 
 
 -   Active module identification
 
-    Multiomic objective genetic algorithm (scores based in two metrics; node score and density of interactions score).
+    Multi-omic objective genetic algorithm (scores based in two metrics; node score and density of interactions score).
     An example of a method using this approach is Multi-Objective Genetic Algorithm to Find Active Modules in Multiplex Biological Networks (MOGAMUN) [@novoa-del-toro2020]
 
 Usually depending on the mathematical framework used, these methods return similar outputs.

@@ -57,7 +57,7 @@ In total 158 samples with both RNA and DNA extraction of the same segment and ti
 | Local simple endoscopic score for CD: mean (min-max) | 2.15 (0-12) |
 | CDAI: mean (min-max)                                 | 120 (0-450  |
 
-: (#tab:HSCT) Characteristics of samples from HSCT dataset.
+: (#tab:HSCT) Characteristics of samples from the HSCT dataset.
 
 ### Häsler's dataset {#methods-hasler}
 
@@ -74,7 +74,7 @@ The dataset included information about gender, location, age, and the status (in
 | Sex (female/male)             | 42/17    |
 | Sample location (ileum/colon) | 30/29    |
 
-: (#tab:Hasler) Characteristics of samples from Häsler's dataset.
+: (#tab:Hasler) Characteristics of samples from the Häsler's dataset.
 
 ### Morgan's dataset {#methods-morgan}
 
@@ -91,7 +91,7 @@ The pouch ileum might be inflamed or not.
 | Sex patients (female/male)  | 101/102  |
 | Sample location (Pouch/PPI) | 59/196   |
 
-: (#tab:Morgan) Characteristics of samples from Morgan's dataset.
+: (#tab:Morgan) Characteristics of samples from the Morgan's dataset.
 
 ### Howell's dataset {#methods-howell}
 
@@ -110,7 +110,7 @@ Data has the following characteristics: disease, age at diagnostic, age at time 
 | Segment (ileum/colon)                           | 31/46     |
 | Clinical history (inflammation/no inflammation) | 24/53     |
 
-: (#tab:howell) Characteristics of samples from Howell's dataset.
+: (#tab:howell) Characteristics of samples from the Howell's dataset.
 
 ## Sample processing {#processing}
 
@@ -175,7 +175,7 @@ Canonical correlation is a method that uses data about the same unit but from di
 Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017] which was used here.
 The method and implementation will be explained in detail in the next section.
 
-```{r multiomic-datasets, fig.scap="Multiomic relationships.", fig.cap="Multiomic relationships on different datasets. Integration methods focus on relationships within datasets. Common relationships between datasets are used as confirmation/validation. Created with BioRender.com"}
+```{r multiomic-datasets, fig.scap="Multi-omic relationships.", fig.cap="Multi-omic relationships on different datasets. Integration methods focus on relationships within datasets. Common relationships between datasets are used as confirmation/validation. Created with BioRender.com"}
 knitr::include_graphics("images/multiomic_datasets.png")
 ```
 

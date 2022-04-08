@@ -211,7 +211,7 @@ On other studies there are less samples per individual and timepoint (if there a
 
 On models of family 2, variables were grouped according to type into the Demographic block, Time block, and Location block (see tables on design of Puget's \@ref(tab:puget-model2-2), \@ref(tab:puget-model2); HSCT \@ref(tab:hsct-model2) \@ref(tab:hsct-model2-2), \@ref(tab:hsct-model2-3); Häsler: \@ref(tab:hasler-model-2-1), \@ref(tab:hasler-model-2-2), Morgan's \@ref(tab:morgan-model2), \@ref(tab:morgan-model2-2), Howell's \@ref(tab:howell-model2-2) models).
 
-The exploration of design on Puget's dataset, and the datasets analysis of HSCT, Häsler and Morgan's dataset was published after peer review [@revilla2021].
+The exploration of design on Puget's dataset, and the datasets analysis of HSCT, Häsler and Morgan's datasets was published after peer review [@revilla2021].
 
 ## Evaluating models
 
@@ -289,9 +289,9 @@ In addition, in this thesis we used dataset obtained with different primers and 
 For these reasons a direct comparison is not possible.
 A comparison of the taxonomy of the annotated microbiome on the datasets is the next possibility.
 
-However, some datasets used did not provide the annotation (Häsler's and Morgan's dataset).
+However, some datasets used did not provide the annotation (Häsler's and Morgan's datasets).
 So we are are left with comparing OTUs (HSCT dataset) with ASVs (Howell's).
-Despite the errors on ASV annotation (@edgar2018), OTUs from the HSCT dataset can be compared to ASV from Howell's dataset.
+Despite the errors on ASV annotation (@edgar2018), OTUs from the HSCT dataset can be compared to ASV from the Howell's dataset.
 There were very few common taxonomic levels selected on both datasets (data not shown).
 This was not a surprise, as there are many factors that influence one's microbiome profile and the diversity indexes already showed high differences between samples of the same dataset.
 
@@ -305,7 +305,7 @@ This indicates that the relationship of the microbiome is stronger than with the
 
 ## Implications
 
-On this thesis several methods has been developed to help multiomic data integration.
+On this thesis several methods has been developed to help multi-omic data integration.
 `experDesign` was implemented during the initial steps when moving from bench to in-silico analysis.
 `BaseSets` and `inteRmodel` are useful for computational analysis.
 `BaseSets` might help beyond integration analysis such as single cell annotation[^discussion-1].
