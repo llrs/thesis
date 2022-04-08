@@ -10,4 +10,4 @@ language:
     chapter_name: "Chapter "
 clean: ["packages.bib"]
 delete_merged_file: true
-
+book_filename: "IBD_integration_Lluis_Revilla"
