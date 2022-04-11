@@ -136,9 +136,9 @@ Current methodological approaches focus on comparing tools on (several) previous
 This approach was not used to compare different tools, but to validate findings of one dataset in other datasets.
 This is especially important due to the lack of golden datasets or a way to reliable simulate datasets as discussed on the previous section \@ref(discussion-datasets).
 
-In IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria are related to inflammation [@tang2017] or disease activity.
-In this thesis, the focus was on finding a good representation of the relationships that identify groups of genes and bacteria that were relevant to the disease in an orchestrated manner.
-We made the assumptions that the microbiome composition and the host's transcriptome were related.
+In IBD, many studies focus on finding some genes or bacteria to answer a narrow question they have in mind, like which bacteria are related to inflammation [@tang2017] or disease activity. 
+In this thesis, the focus was on finding a good representation of the relationships that identify groups of genes and bacteria that were relevant to the disease in an orchestrated manner. 
+We made the assumptions that the microbiome composition and the host's transcriptome were related. 
 This assumption is backed up by several other previous studies supporting this relationship [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
 
 Tools that relate the variance of a block with other variables, both numeric and categoric, are needed to search which variables are important.
@@ -343,7 +343,7 @@ This could be explained by the numerous problems that 16S sequencing has.
 Some of these are avoided or solved by using these other omics techniques.
 For instance the metatranscriptomics and metaproteomics of bacteria could help detect what is actively being produced by the microbiota and the metagenomics, what genes are actually there not just restricted to 16S rRNA sequences.
 But these methods also have their shortcomings.
-Metagenomics still does not detect adherent invasive cells and metatranscriptomics and metaproteomics can not explain which bacteria is expressing  which genes (even if paired with metagenomics or 16S data).
+Metagenomics still does not detect adherent invasive cells and metatranscriptomics and metaproteomics can not explain which bacteria is expressing which genes (even if paired with metagenomics or 16S data).
 The single cell revolution might provide more insights in the future, but at the moment the first studies of single-cell multi-omics are being published.
 
 Perhaps as suggested in other publications network methods might be able to provide more detailed information about the relationships [@jiang2019].
