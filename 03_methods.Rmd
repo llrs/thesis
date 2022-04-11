@@ -26,7 +26,7 @@ In addition, this dataset contained information on age, localization of the tumo
 | Sex (female/male)         | 28/25    |
 | Location (cort/dipg/midl) | 20/22/11 |
 
-: (#tab:Puget) Characteristics of samples from Puget's dataset.
+: (#tab:Puget) Characteristics of samples from the Puget's dataset.
 
 ### HSCT dataset {#methods-hsct}
 
@@ -280,7 +280,7 @@ The following table summarizes the equivalent parameters needed on RGCCA to work
 | SSQCOV  | Factorial | $\Vert a_j \Vert = 1$ | 1         |
 | SABSCOV | Centroid  | $\Vert a_j \Vert = 1$ | 1         |
 
-: (#tab:RGCCA-methods) Equivalences of RGCCA for multi-block data analysis to other methods
+: (#tab:RGCCA-methods) Equivalences of RGCCA to other methods
 
 There are other methods that can be performed with RGCCA, for example: The classical canonical correlation analysis would be equivalent to data variance equal to 1 and shrinkage of 0.
 Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1 in RGCCA.
