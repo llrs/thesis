@@ -53,7 +53,7 @@ Disease can be classified based on age at onset as very early, early or adult on
 Genome-wide association studies (GWAS) have linked IBD to over 100 genetic loci, including a *NOD2* gene, but so far there is not any known mechanism how polymorfism on this genes are driving the disease [@horowitz2021].
 On early pedriatic and adult disease the genetic component is lower than on very early on set and it is thought that the environmental factors are the main cause of the disease at those ages.
 
-On the following sections I will explore the role of several of the possible factors involved on the pahtogenesis, starting with the genetics.
+On the following sections we will explore the role of several of the possible factors involved on the pahtogenesis, starting with the genetics.
 
 #### Genetics
 
@@ -423,12 +423,12 @@ If done with multiple sequencing technologies it is usually referred as multi-om
 
 It is crucial to classify, review and compare tools available, as well as, to benchmark these tools against the same dataset as a way to provide clear recommendations to anyone wishing to use them [@wu_selective_2019].
 Part of these efforts use the methods' strategies to classify them [@cavill2016; @chongComputationalApproachesIntegrative2017].
-Following this view I will review the available integration methods according to several axes: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
+Following this view we will review the available integration methods according to several axes: type of data used, aim of the method, relationships between variables, relationships between samples, relationship between variables and samples, input data, mathematical framework and results of the method.
 
 ### Classification of integration methods
 
 Integration methods have very different properties that allow them to be classified and compared [@huang2017].
-Here I classify those meant to be used with omics datasets, with references to concrete methodology and in occasionally to articles using them.
+Here we classify those meant to be used with omics datasets, with references to concrete methodology and in occasionally to articles using them.
 
 ```{r classification, fig.scap="Unsupervised data integration methodology.", fig.cap="Unsupervised data integration methodology. Figure 1 from Huang 2017."}
 include_graphics("images/figure1_huang2017.jpg")
@@ -616,7 +616,7 @@ Also even with the same data depending on the processing of the data they can ha
 #### Mathematical framework
 
 Methods use different mathematical frameworks to process the data.
-Here I briefly describe some common mathematical frameworks, some of which have previously appeared:
+Here we briefly describe some common mathematical frameworks, some of which have previously appeared:
 
 -   Networks
 

@@ -182,7 +182,7 @@ knitr::include_graphics("images/multiomic_datasets.png")
 
 ### Regularized generalized canonical correlation analysis
 
-To understand the regularized canonical correlation analysis I first provide a brief description of principal component analysis.
+To understand the regularized canonical correlation analysis we first provide a brief description of principal component analysis.
 
 Principal component analysis defines a new orthogonal coordinate system that optimally describes variance in a single dataset.
 It does so by decomposing the numerical matrix into the eigenvalues and eigenvectors with decreasing variance.
@@ -295,7 +295,7 @@ The hypothesis we made was that more blocks with highly related variables but in
 
 To model what might be the relationships within datasets current practices include using a pre-selected model of relations between blocks (See figure \@ref(fig:multiomic-datasets)).
 However, this model might not be an accurate representation of the relations between blocks and several models might need to be fitted.
-To help find the fitting model for the data I created an R package, named [inteRmodel](https://llrs.github.io/inteRmodel/), which helps finding the right model for the dataset via a bootstrapping procedure.
+To help find the fitting model for the data we created an R package, named [inteRmodel](https://llrs.github.io/inteRmodel/), which helps finding the right model for the dataset via a bootstrapping procedure.
 
 This method was applied to the previously described datasets to find the relationship between microorganisms and the disease.
 Following this method; to provide a ground truth, a model with only the relationships between the two experimental obtained data is analyzed, on what it is called the model 0.\
@@ -380,7 +380,7 @@ H_1 : P_{subset} > P_{overall}
 $$
 
 The statistical test used is usually the fisher test, the hypergeometric test or the proportion test.
-I describe the hypergeometric test and the proportion test below.
+We describe the hypergeometric test and the proportion test below.
 
 #### Fisher test
 
@@ -459,7 +459,7 @@ At least 1000 permutations are usually used but a high number of permutations ar
 However, when more than one pathway ($S$) is evaluated in order to compare between their enrichment scores, they must be normalized by dividing the scores by the mean of all the ES.
 When power $p$ is 0 it is equivalent to the standard Kolmogorov--Smirnov statistic, though it is usually set to 1.
 
-For testing GSEA I used [`fgsea`](https://bioconductor.org/packages/fgsea) [@korotkevich2021] implementation for its speed and integration with other methods used in this thesis.
+For testing GSEA we used [`fgsea`](https://bioconductor.org/packages/fgsea) [@korotkevich2021] implementation for its speed and integration with other methods used in this thesis.
 Gene pathways from the REACTOME database were tested on the weight of different models or on the comparisons performed [@fabregat2016].
 
 #### GSVA
@@ -520,7 +520,7 @@ This allows to test if the variables are related to the variance of the data as 
 ### globaltest
 
 It is a method for testing complex hypothesis and calculate the influence of each variable on a given outcome [@goeman2006].
-I tested which variables, (sex, age, location, time since diagnosis, treatment) are important on the datasets with [globaltest](https://bioconductor.org/packages/globaltest) (Version 5.40 or later).
+We tested which variables, (sex, age, location, time since diagnosis, treatment) are important on the datasets with [globaltest](https://bioconductor.org/packages/globaltest) (Version 5.40 or later).
 This method provides a general statistic to test hypothesis against a high dimensional dataset.
 
 $$
@@ -535,7 +535,7 @@ It was performed with variables individually and also with interactions between 
 
 Microbiome diversity was measured using vegan and [phyloseq](https://bioconductor.org/packages/phyloseq) methods [@oksanen2020].
 $\alpha$-diversity is a measure of how much a given microbiome at a taxonomic level is present on a sample.
-Several measures exists, on the thesis I used the effective Simpson or effective Shannon diversity index to compare diversity between samples and conditions.
+Several measures exists, on the thesis we used the effective Simpson or effective Shannon diversity index to compare diversity between samples and conditions.
 
 The effective Simpson (also known as inverse Simpson) and the effective Shannon are:
 
@@ -649,7 +649,7 @@ It can take into account spatial distribution and, given the number of samples t
 
 ### ROC- AUC {#ROC}
 
-To estimate if the selected features (genes or microorganism) by the integration methods have some biological meaningful contribution I measured if they can classify features, such as, which gastrointestinal segment is each sample from, or which type of disease does each patient have.
+To estimate if the selected features (genes or microorganism) by the integration methods have some biological meaningful contribution we measured if they can classify features, such as, which gastrointestinal segment is each sample from, or which type of disease does each patient have.
 
 To compare between different models the area under the curve (AUC) of the receiver operating characteristic (ROC) was calculated with the [pROC](https://cran.r-project.org/package=pROC) package [@robin2011].
 It is based on the following formulas, where $\text{FP}$ is false positive, $N$ is a negative, $P$ is positive, $\text{TP}$ is true positive and $\text{FN}$ is false negative:

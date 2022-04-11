@@ -108,7 +108,7 @@ The package has functions that can be grouped in three categories:
 Currently it is only [available on github](https:intermodel.llrs.dev), so the number of downloads and usage is unknown but since its release a user has contacted to keep it up to date with development versions of RGCCA.
 Currently, it is compatible with the next release of [RGCCA being prepared](https://github.com/rgcca-factory/RGCCA/tree/CRAN)[^results-2].
 
-[^results-2]: I also contributed with some comments and feedback to the package to make it easier to read the source and check the inputs and improve the documentation so that it is coherent with the code and previous results of the functions.
+[^results-2]: We also contributed with some comments and feedback to the package to make it easier to read the source and check the inputs and improve the documentation so that it is coherent with the code and previous results of the functions.
 
 The functions `analyze` helps to analyze code of a single integration, providing the results on a tidy format for further processing.
 To create the connections between blocks the function `weight_design` is available.

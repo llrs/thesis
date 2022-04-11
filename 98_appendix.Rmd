@@ -2,7 +2,7 @@
 
 # Online resources
 
-Some links that I found useful on the thesis and could be useful if you are interested on the multi-omics field.
+Some links that we found useful on the thesis and could be useful if you are interested on the multi-omics field.
 
 -   [Awesome multi-omics https://github.com/mikelove/awesome-multi-omics](https://github.com/mikelove/awesome-multi-omics) : An online repository of references to multi-omics methods. Reproduced here with their references [^references-1]:
 
@@ -129,9 +129,9 @@ Code used for RSEM
 ## Listed
 
 An improved/tested version of [RGCCA](https://github.com/llrs/RGCCA), some modifications on the internal functions to ease the maintenance as well as adding tests and sometimes improving the documentation.
-Also modified so that it is possible to provide a vector of models so that the model of the first dimension is not the same as the model on the second dimension (not sure if mathematically speaking makes sense but from a biological one I think it might be interesting to have it).
+Also modified so that it is possible to provide a vector of models so that the model of the first dimension is not the same as the model on the second dimension (not sure if mathematically speaking makes sense but from a biological one we think might be interesting to have it).
 
-Designed to be used with RGCCA I wrote the package [inteRmodel](https:github.com/llrs/inteRmodel) to ease the bootstrapping and model selection.
+Designed to be used with RGCCA we wrote the package [inteRmodel](https:github.com/llrs/inteRmodel) to ease the bootstrapping and model selection.
 
 A package to design batches to avoid batch effect [experDesign](https://cran.r-project.org/package=experDesign) and its website on [GitHub](https://github.com/llrs/experDesign).
 
@@ -142,7 +142,7 @@ The code used can be found in [this repository](https://github.com/llrs/pouchiti
 
 Some functions used to explore the TRIM dataset ended up in the [integration](https://github.com/llrs/integration-helper) package.This include functions for correlation, network analysis, enrichment, normalization of metadata...
 
-I developed a package to analyze sets and fuzzy sets [BaseSet](https://github.com/rOpenSci/BaseSet) (based on what I learned from a previous iteration of the [package](https://github.com/llrs/GSEAdv "GSEAdv package")).
+We developed a package to analyze sets and fuzzy sets [BaseSet](https://github.com/rOpenSci/BaseSet) (based on what we learned from a previous iteration of the [package](https://github.com/llrs/GSEAdv "GSEAdv package")).
 This package was meant to be used with the probabilities that arise from bootstrapping the models.
 However, due to the long times of calculation that it would require it was not used.
 
@@ -159,7 +159,7 @@ All code of the analysis of the publications is available (in his messed state a
 -   [inteRmodel](https://github.com/llrs/inteRmodel "Integration package on github"): Package for easy repeating the methodology developed on TRIM.
 -   [Morgan's](https://github.com/llrs/pouchitis "Pouchitis code on github"): Work with the pouchitis cohort used in this article.
 -   [Häsler's](https://github.com/llrs/Uncoupling "Uncoupling code on github"): Work with the UC/CD dataset used in this article.
--   [integration](https://github.com/llrs/integration-helper "Integration package on github"): Package with functions that I wrote or used on different parts of exploring the TRIM dataset ended up here.
+-   [integration](https://github.com/llrs/integration-helper "Integration package on github"): Package with functions that we wrote or used on different parts of exploring the TRIM dataset ended up here.
 
 BaseSet:
 
