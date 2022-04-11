@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-04-08" />
+<meta name="date" content="2022-04-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -927,9 +927,9 @@ Figure 4.4: First components of the superblock which has all the data of the sam
 <p>The same data was used to look for a good model from the data itself including a model with a superblock but looking at the first component of the CGH and transcriptome block.
 This allowed to visually inspect if each model’s components helped to classify the samples (Figure <a href="results.html#fig:puget-models">4.5</a>):</p>
 <div class="figure"><span style="display:block;" id="fig:puget-models"></span>
-<img src="images/pugets_models.png" alt="Different models tried with the same data showing the first components of the CGH data and the transcriptome. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data." width="100%" />
+<img src="images/pugets_models.png" alt="Different RGCCA models on the Puget's dataset. The different models with the same data showing the sample position on the first components of the CGH  and the transcriptome block. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data." width="100%" />
 <p class="caption">
-Figure 4.5: Different models tried with the same data showing the first components of the CGH data and the transcriptome. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data.
+Figure 4.5: Different RGCCA models on the Puget’s dataset. The different models with the same data showing the sample position on the first components of the CGH and the transcriptome block. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data.
 </p>
 </div>
 <p>The first components of the CGH and the transcriptomics blocks of the superblock.2 model show better classification than that of the superblock.
@@ -958,7 +958,7 @@ Figure 4.6: Effect of superblock and weights on the inner AVE on Puget’s datas
 <p>The different models resulted on the following AVE values as reported on <a href="results.html#tab:puget-models-ave">4.7</a>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:puget-models-ave">Table 4.7: </span>AVE values of RGCCA models on Puget’s dataset. Values for both inner and outer AVE of the first canonical component of models 1, 1.2, 2 2.2 and superblock and superblock.2 are shown.
+<span id="tab:puget-models-ave">Table 4.7: </span>AVE values of RGCCA models on the Puget’s dataset. Values for both inner and outer AVE of the first canonical component of models 1, 1.2, 2 2.2 and superblock and superblock.2 are shown.
 </caption>
 <thead>
 <tr>
@@ -2014,9 +2014,9 @@ Figure 4.14: MCIA dimensions on the HSCT dataset. MCIA first two synthetic varia
 </div>
 <p>The AUC of classifying the transcriptome in colon or ileum segments was compared between the models (see <a href="results.html#fig:hsct-auc-plot">4.15</a> and with MCIA.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-auc-plot"></span>
-<img src="images/hsct-auc-models.png" alt="ROC curve of the different datasets with the models from RGCCA on the HSCT dataset." width="100%" />
+<img src="images/hsct-auc-models.png" alt="AUC of the RGCCA models on the HSCT dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the HSCT dataset." width="100%" />
 <p class="caption">
-Figure 4.15: ROC curve of the different datasets with the models from RGCCA on the HSCT dataset.
+Figure 4.15: AUC of the RGCCA models on the HSCT dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the HSCT dataset.
 </p>
 </div>
 <p>These models have the following AUC to classify the location of the sample according to the first component of the transcriptome block.</p>
@@ -2139,7 +2139,7 @@ Figure 4.19: Changes on tau on the centroid scheme on the Häsler dataset affect
 <p>Models for Häsler dataset are:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:hasler-model-0">Table 4.18: </span>Model 0 of Häsler dataset
+<span id="tab:hasler-model-0">Table 4.18: </span>Model 0 of Häsler dataset. 0 indicates no relationship and 1 indicates a strong relationship.
 </caption>
 <thead>
 <tr>
@@ -2182,7 +2182,7 @@ micro
 <p>The first model for family 1 is on table <a href="results.html#tab:hasler-model-1-1">4.19</a>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:hasler-model-1-1">Table 4.19: </span>Model 1.1 of Häsler dataset
+<span id="tab:hasler-model-1-1">Table 4.19: </span>Model 1.1 of the Häsler dataset. 0 indicates no relationship and 1 indicates a strong relationship.
 </caption>
 <thead>
 <tr>
@@ -2248,7 +2248,7 @@ meta
 <p>The after optimization of the model of family 1, the best one is on table <a href="results.html#tab:hasler-model-1-2">4.20</a>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:hasler-model-1-2">Table 4.20: </span>Model 1.2 of Häsler dataset
+<span id="tab:hasler-model-1-2">Table 4.20: </span>Model 1.2 of the Häsler dataset. 0 indicates no relationship and 1 indicates a strong relationship.
 </caption>
 <thead>
 <tr>
@@ -2314,7 +2314,7 @@ meta
 <p>The first model for family 2 is on table <a href="results.html#tab:hasler-model-2-1">4.21</a>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:hasler-model-2-1">Table 4.21: </span>Model 2.1 of Häsler dataset
+<span id="tab:hasler-model-2-1">Table 4.21: </span>Model 2.1 of the Häsler dataset. 0 indicates no relationship and 1 indicates a strong relationship.
 </caption>
 <thead>
 <tr>
@@ -2444,7 +2444,7 @@ Time
 <p>After optimization of models of family 1 the best model according to the inner AVE score is on table <a href="results.html#tab:hasler-model-2-2">4.22</a>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:hasler-model-2-2">Table 4.22: </span>Model 2.2 of Häsler dataset
+<span id="tab:hasler-model-2-2">Table 4.22: </span>Model 2.2 of the Häsler dataset. 0 indicates no relationship and 1 indicates a strong relationship.
 </caption>
 <thead>
 <tr>
@@ -2574,7 +2574,7 @@ Time
 <p>On table <a href="results.html#tab:hasler-aves">4.23</a>, we can see here the AVE scores of each of the previous models:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:hasler-aves">Table 4.23: </span>AVE values of RGCCA models on Häsler’s dataset. The inner and the outer AVE scores of multiple models tested on the Häsler dataset are shown. The model with the hightes inner AVE is model 1.2.
+<span id="tab:hasler-aves">Table 4.23: </span>AVE values of RGCCA models on Häsler’s dataset. The inner and the outer AVE scores of multiple models tested on the Häsler dataset are shown. The model with the hightest inner AVE is model 1.2.
 </caption>
 <thead>
 <tr>
@@ -2661,15 +2661,15 @@ Figure 4.20: Models from inteRmodel on the Häsler’s dataset. Model 0 with jus
 <p>There is no observable cluster of IBD samples and the other samples, showing that on this dataset the differences of the microbiome between the different type of samples are less stark.
 The classification of samples was very accurate in all the models, specially on model 2.2, see figure <a href="results.html#fig:hasler-auc-plot">4.21</a>:</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-auc-plot"></span>
-<img src="images/hasler-auc.png" alt="AUC for models with RGCCA on the Häsler's dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample." width="100%" />
+<img src="images/hasler-auc.png" alt="AUC of models with RGCCA on the Häsler's dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Häsler's dataset." width="100%" />
 <p class="caption">
-Figure 4.21: AUC for models with RGCCA on the Häsler’s dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample.
+Figure 4.21: AUC of models with RGCCA on the Häsler’s dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Häsler’s dataset.
 </p>
 </div>
 <p>This accuracy resulted on high AUC values for all the models, as can be seen on table <a href="results.html#tab:hasler-auc">4.24</a>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:hasler-auc">Table 4.24: </span>AUC for models with RGCCA on Häsler’s dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample.
+<span id="tab:hasler-auc">Table 4.24: </span>AUC of the RGCCA models in Häsler’s dataset. The AUC was calculated with the first dimension of the gene expression block ability to predict location of the sample.
 </caption>
 <thead>
 <tr>
@@ -3131,7 +3131,7 @@ Figure 4.25: Models from inteRmodel on the Morgan’s dataset. First component o
 <p>Nevertheless, we compared the classification with the MCIA algorithm and still resulted that model 2.2 provide a better classification than MCIA.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:morgan-models-ave">Table 4.30: </span>The models on the Morgan’s dataset and their AVE values. For each model the inner and outer AVE value is presented.
+<span id="tab:morgan-models-ave">Table 4.30: </span>AVE values of RGCCA for the Morgan’s dataset. The inner and the outer AVE scores of multiple models tested on the Morgan dataset are shown. The model with the hightest inner AVE is model 1.2.
 </caption>
 <thead>
 <tr>
@@ -3247,9 +3247,9 @@ Figure 4.26: Inner and outer AVE scores of the bootstrapped models 0 1.2 and 2.2
 <!--# TODO Add points of the models on the real dataset -->
 <p>In addition the model 2.2 usually has a lower inner AVE compared to model 1.2.</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-auc-plot"></span>
-<img src="images/morgan-auc.png" alt="AUC for the Morgan's dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA." width="100%" />
+<img src="images/morgan-auc.png" alt="AUC of RGCCA models on the Morgan's dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Morgan's dataset." width="100%" />
 <p class="caption">
-Figure 4.27: AUC for the Morgan’s dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA.
+Figure 4.27: AUC of RGCCA models on the Morgan’s dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Morgan’s dataset.
 </p>
 </div>
 <p>The area under the curve for these models is:</p>
@@ -3535,7 +3535,7 @@ location
 While model 2.2 has a relationship of 1 between location and transcriptome and demographics and ASV but only of 0.1 between demographics and location.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:howell-models-ave">Table 4.34: </span>Relationships between the different blocks on the Howell’s dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
+<span id="tab:howell-models-ave">Table 4.34: </span>AVE values of RGCCA for the Howell’s dataset. The inner and the outer AVE scores of multiple models tested on the Howell dataset are shown. The model with the hightest inner AVE is model 1.2.
 </caption>
 <thead>
 <tr>
@@ -3543,10 +3543,10 @@ While model 2.2 has a relationship of 1 between location and transcriptome and d
 Model
 </th>
 <th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
-inner.AVE
+inner AVE
 </th>
 <th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
-outer.AVE
+outer AVE
 </th>
 </tr>
 </thead>
@@ -3587,9 +3587,9 @@ outer.AVE
 </tbody>
 </table>
 <div class="figure"><span style="display:block;" id="fig:howell-bootstrap"></span>
-<img src="images/howells_models_bootstrap.png" alt="Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset." width="100%" />
+<img src="images/howells_models_bootstrap.png" alt="Bootstrap of models in Howell's datset. Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset." width="100%" />
 <p class="caption">
-Figure 4.32: Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset.
+Figure 4.32: Bootstrap of models in Howell’s datset. Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset.
 </p>
 </div>
 <p>The bootstrapping showed that model 1.2 has indeed higher inner AVE values than model 2.2 and is more stable than model 1.2.
@@ -3602,9 +3602,9 @@ Figure 4.33: MCIA dimensions on the Howell’s dataset. The first dimensions sep
 </div>
 <p>If we look at the classification of the models on figure <a href="results.html#fig:howell-auc-plot">4.34</a>, we can see that models 1.2, 2 and 2.2 classify perfectly the samples by the transcriptome into the location of the sample.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-auc-plot"></span>
-<img src="images/howell-rgcca-auc.png" alt="AUC of the RGCCA models on the Howell's dataset. The classification of the location of the sample according to the first componenent of the models shown." width="100%" />
+<img src="images/howell-rgcca-auc.png" alt="AUC of the RGCCA models on the Howell's dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Howell's dataset." width="100%" />
 <p class="caption">
-Figure 4.34: AUC of the RGCCA models on the Howell’s dataset. The classification of the location of the sample according to the first componenent of the models shown.
+Figure 4.34: AUC of the RGCCA models on the Howell’s dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Howell’s dataset.
 </p>
 </div>
 <p>The AUC of each model can be seen on <a href="results.html#tab:howell-auc">4.35</a>:</p>
@@ -3676,9 +3676,9 @@ There are 3580 selected on model 2.2 on the HSCT dataset and 2189 genes on the H
 From them the 1228 genes in common were analyzed for which GO terms and pathways they are enriched.
 The results is represented on <a href="results.html#fig:pathways-hsct-howell">4.35</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:pathways-hsct-howell"></span>
-<img src="images/pathways_hsct_howell.png" alt="Significance of pathways on common genes on HSCT and Howell's dataset ordered by p-value, the size is according to the number of genes on the pathway found on the dataset." width="100%" />
+<img src="images/pathways_hsct_howell.png" alt="Significance of pathways on common genes on HSCT and Howell's dataset ordered by p-value, size according to the number of genes on the pathway found on the dataset and color blue for pathways and red for gene ontologies of biological process." width="100%" />
 <p class="caption">
-Figure 4.35: Significance of pathways on common genes on HSCT and Howell’s dataset ordered by p-value, the size is according to the number of genes on the pathway found on the dataset.
+Figure 4.35: Significance of pathways on common genes on HSCT and Howell’s dataset ordered by p-value, size according to the number of genes on the pathway found on the dataset and color blue for pathways and red for gene ontologies of biological process.
 </p>
 </div>
 
@@ -3708,7 +3708,7 @@ Figure 4.35: Significance of pathways on common genes on HSCT and Howell’s dat
 <ol start="5">
 <li id="fn5"><p>S4 is one of the object programming paradigms on R.
 For a more complete overview and differences see <a href="https://adv-r.hadley.nz/oo.html" title="2nd edition">Advanced R</a> <span class="citation">[<a href="#ref-wickham2019" role="doc-biblioref">196</a>]</span>.<a href="results.html#fnref5" class="footnote-back">↩︎</a></p></li>
-<li id="fn6"><p>I also contributed with some comments and feedback to the package to make it easier to read the source and check the inputs and improve the documentation so that it is coherent with the code and previous results of the functions.<a href="results.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>We also contributed with some comments and feedback to the package to make it easier to read the source and check the inputs and improve the documentation so that it is coherent with the code and previous results of the functions.<a href="results.html#fnref6" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

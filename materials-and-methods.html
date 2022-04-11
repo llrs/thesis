@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-04-08" />
+<meta name="date" content="2022-04-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -307,7 +307,7 @@ The data came from diffuse intrinsic pontine glioma patients whose transcriptome
 The copy number variation of the samples was processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using <a href="https://www.softgenetics.com/mutationSurveyor.php" title="Website of the software">Mutation Surveyor software</a>.
 In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor <span class="citation">[<a href="#ref-puget2012" role="doc-biblioref">149</a>]</span>.</p>
 <table>
-<caption><span id="tab:Puget">Table 3.1: </span> Characteristics of samples from Puget’s dataset.</caption>
+<caption><span id="tab:Puget">Table 3.1: </span> Characteristics of samples from the Puget’s dataset.</caption>
 <thead>
 <tr class="header">
 <th align="left">Characteristic</th>
@@ -564,7 +564,7 @@ Figure 3.2: Multi-omic relationships on different datasets. Integration methods 
 </div>
 <div id="regularized-generalized-canonical-correlation-analysis" class="section level3 hasAnchor" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> Regularized generalized canonical correlation analysis<a href="materials-and-methods.html#regularized-generalized-canonical-correlation-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To understand the regularized canonical correlation analysis I first provide a brief description of principal component analysis.</p>
+<p>To understand the regularized canonical correlation analysis we first provide a brief description of principal component analysis.</p>
 <p>Principal component analysis defines a new orthogonal coordinate system that optimally describes variance in a single dataset.
 It does so by decomposing the numerical matrix into the eigenvalues and eigenvectors with decreasing variance.
 Its results include new variables (the eigenvectors) and a vector of loadings or weight indicating the importance of the original variables for these new variables.
@@ -630,7 +630,7 @@ However, that mathematically fits better to the data does not guarantee that the
 Others methods are based on the maximization of a function of covariances: SUMCOV (sum of covariances method), SSQCOV (sum of squared covariances method), SABSCOV (sum of absolute values of the covariances method).
 The following table summarizes the equivalent parameters needed on RGCCA to work:</p>
 <table>
-<caption><span id="tab:RGCCA-methods">Table 3.6: </span> Equivalences of RGCCA for multi-block data analysis to other methods</caption>
+<caption><span id="tab:RGCCA-methods">Table 3.6: </span> Equivalences of RGCCA to other methods</caption>
 <thead>
 <tr class="header">
 <th align="center">Method</th>
@@ -690,7 +690,7 @@ We decided to split the block with the variables about the samples to separate i
 The hypothesis we made was that more blocks with highly related variables but independent from the other blocks would fit better the data and thus help to identify causal or dependent variables.</p>
 <p>To model what might be the relationships within datasets current practices include using a pre-selected model of relations between blocks (See figure <a href="materials-and-methods.html#fig:multiomic-datasets">3.2</a>).
 However, this model might not be an accurate representation of the relations between blocks and several models might need to be fitted.
-To help find the fitting model for the data I created an R package, named <a href="https://llrs.github.io/inteRmodel/">inteRmodel</a>, which helps finding the right model for the dataset via a bootstrapping procedure.</p>
+To help find the fitting model for the data we created an R package, named <a href="https://llrs.github.io/inteRmodel/">inteRmodel</a>, which helps finding the right model for the dataset via a bootstrapping procedure.</p>
 <p>This method was applied to the previously described datasets to find the relationship between microorganisms and the disease.
 Following this method; to provide a ground truth, a model with only the relationships between the two experimental obtained data is analyzed, on what it is called the model 0.<br />
 The next models analyzed consisted on relationships between the two experimental blocks and a block with all the metadata of the samples.
@@ -759,7 +759,7 @@ H_1 : P_{subset} &gt; P_{overall}
 \end{aligned}
 \]</span></p>
 <p>The statistical test used is usually the fisher test, the hypergeometric test or the proportion test.
-I describe the hypergeometric test and the proportion test below.</p>
+We describe the hypergeometric test and the proportion test below.</p>
 <div id="fisher-test" class="section level4 hasAnchor" number="3.4.1.1">
 <h4><span class="header-section-number">3.4.1.1</span> Fisher test<a href="materials-and-methods.html#fisher-test" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The fisher test calculates how independently are two categories.
@@ -846,7 +846,7 @@ It has been widely used since its original publication, also on IBD <span class=
 At least 1000 permutations are usually used but a high number of permutations are required for an accurate estimation of the enrichment score.
 However, when more than one pathway (<span class="math inline">\(S\)</span>) is evaluated in order to compare between their enrichment scores, they must be normalized by dividing the scores by the mean of all the ES.
 When power <span class="math inline">\(p\)</span> is 0 it is equivalent to the standard Kolmogorov–Smirnov statistic, though it is usually set to 1.</p>
-<p>For testing GSEA I used <a href="https://bioconductor.org/packages/fgsea"><code>fgsea</code></a> <span class="citation">[<a href="#ref-korotkevich2021" role="doc-biblioref">179</a>]</span> implementation for its speed and integration with other methods used in this thesis.
+<p>For testing GSEA we used <a href="https://bioconductor.org/packages/fgsea"><code>fgsea</code></a> <span class="citation">[<a href="#ref-korotkevich2021" role="doc-biblioref">179</a>]</span> implementation for its speed and integration with other methods used in this thesis.
 Gene pathways from the REACTOME database were tested on the weight of different models or on the comparisons performed <span class="citation">[<a href="#ref-fabregat2016" role="doc-biblioref">180</a>]</span>.</p>
 <div id="gsva" class="section level4 hasAnchor" number="3.4.2.1">
 <h4><span class="header-section-number">3.4.2.1</span> GSVA<a href="materials-and-methods.html#gsva" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -895,7 +895,7 @@ F = \dfrac{SS_A/(\alpha -1)}{SS_W/(N-\alpha)}
 <div id="globaltest" class="section level3 hasAnchor" number="3.5.2">
 <h3><span class="header-section-number">3.5.2</span> globaltest<a href="materials-and-methods.html#globaltest" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>It is a method for testing complex hypothesis and calculate the influence of each variable on a given outcome <span class="citation">[<a href="#ref-goeman2006" role="doc-biblioref">185</a>]</span>.
-I tested which variables, (sex, age, location, time since diagnosis, treatment) are important on the datasets with <a href="https://bioconductor.org/packages/globaltest">globaltest</a> (Version 5.40 or later).
+We tested which variables, (sex, age, location, time since diagnosis, treatment) are important on the datasets with <a href="https://bioconductor.org/packages/globaltest">globaltest</a> (Version 5.40 or later).
 This method provides a general statistic to test hypothesis against a high dimensional dataset.</p>
 <p><span class="math display">\[
 S = \sum_{i=1}^p x_i^{&#39;} x_i g(t_i^2)
@@ -907,7 +907,7 @@ S = \sum_{i=1}^p x_i^{&#39;} x_i g(t_i^2)
 <h3><span class="header-section-number">3.5.3</span> Diversity indices<a href="materials-and-methods.html#diversity-indices" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Microbiome diversity was measured using vegan and <a href="https://bioconductor.org/packages/phyloseq">phyloseq</a> methods <span class="citation">[<a href="#ref-oksanen2020" role="doc-biblioref">186</a>]</span>.
 <span class="math inline">\(\alpha\)</span>-diversity is a measure of how much a given microbiome at a taxonomic level is present on a sample.
-Several measures exists, on the thesis I used the effective Simpson or effective Shannon diversity index to compare diversity between samples and conditions.</p>
+Several measures exists, on the thesis we used the effective Simpson or effective Shannon diversity index to compare diversity between samples and conditions.</p>
 <p>The effective Simpson (also known as inverse Simpson) and the effective Shannon are:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -999,7 +999,7 @@ It can take into account spatial distribution and, given the number of samples t
 </div>
 <div id="ROC" class="section level3 hasAnchor" number="3.6.5">
 <h3><span class="header-section-number">3.6.5</span> ROC- AUC<a href="materials-and-methods.html#ROC" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To estimate if the selected features (genes or microorganism) by the integration methods have some biological meaningful contribution I measured if they can classify features, such as, which gastrointestinal segment is each sample from, or which type of disease does each patient have.</p>
+<p>To estimate if the selected features (genes or microorganism) by the integration methods have some biological meaningful contribution we measured if they can classify features, such as, which gastrointestinal segment is each sample from, or which type of disease does each patient have.</p>
 <p>To compare between different models the area under the curve (AUC) of the receiver operating characteristic (ROC) was calculated with the <a href="https://cran.r-project.org/package=pROC">pROC</a> package <span class="citation">[<a href="#ref-robin2011" role="doc-biblioref">195</a>]</span>.
 It is based on the following formulas, where <span class="math inline">\(\text{FP}\)</span> is false positive, <span class="math inline">\(N\)</span> is a negative, <span class="math inline">\(P\)</span> is positive, <span class="math inline">\(\text{TP}\)</span> is true positive and <span class="math inline">\(\text{FN}\)</span> is false negative:</p>
 <p><span class="math display">\[
