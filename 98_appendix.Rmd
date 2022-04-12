@@ -35,7 +35,7 @@ Some links that we found useful on the thesis and could be useful if you are int
 | CCAGFA                         | [@leppäaho2017]               |
 | CMF                            | [@klami2014]                  |
 | MOGSA                          | [@meng2018]                   |
-| iNMF                           | [@yang2016b]                  |
+| iNMF                           | [@yang2016]                  |
 | BASS                           | [@zhao2015]                   |
 | imputeMFA                      | [@voillet2016]                |
 | PLSCA                          | [@beaton2016]                 |
