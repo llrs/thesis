@@ -1,5 +1,7 @@
 # Discussion
 
+\ChapFrame 
+
 In this chapter we will summarize the main findings in relation to the broad research community and other work as well as the impact of the results on further research in or clinical practice.
 
 ## Preliminary steps

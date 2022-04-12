@@ -1,5 +1,7 @@
 # Conclusions
 
+\ChapFrame
+
 In this doctoral thesis, we assessed the relationships between the microbiota and the gut transcriptome in inflammatory bowel disease.
 
 It allows us to conclude the following:

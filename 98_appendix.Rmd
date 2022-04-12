@@ -1,5 +1,7 @@
 # (APPENDIX) Appendix {-}
 
+\ChapFrame
+
 # Online resources
 
 Some links that we found useful on the thesis and could be useful if you are interested on the multi-omics field.

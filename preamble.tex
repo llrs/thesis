@@ -25,7 +25,6 @@
 \ohead*{\pagemark}
 \setkomafont{pagenumber}{}% default is \normalfont\normalcolor
 
-
 % Reduce space between chapter title and top of page
 % https://tex.stackexchange.com/a/63393/178206
 % Remove chapter number
@@ -58,38 +57,48 @@
 
 % Creating marker on the page margins
 % https://tex.stackexchange.com/questions/113323/how-can-one-put-a-marker-to-every-page-in-a-chapter
+% Check this answer https://tex.stackexchange.com/questions/262950/modify-chapter-thumb-for-appendix
+\usepackage[scale=1,angle=0,opacity=1,contents={}]{background}
+\usetikzlibrary{calc}
+\usepackage{ifthen}
+\usepackage{lipsum}
+% auxiliary counter
+\newcounter{chapshift}
+\addtocounter{chapshift}{-1}
 
-% \usepackage[a4paper,margin=15mm]{geometry}
-% \usepackage{background}
-% \usetikzlibrary{calc}
-% \usepackage{xifthen}
-% \usepackage{totcount}
-% \usepackage{lipsum}
-% \usepackage{zref}
-% \regtotcounter{chapter}
+% the list of colors to be used (add more if needed)
+\newcommand\BoxColor{%
+  \ifcase\thechapshift blue!30\or red!30\or olive!30\or magenta!30\or teal!30\or lime!30\or orange!30\or violet!30\or brown!30\else yellow!30\fi}
 
-% \backgroundsetup{
-% contents={
-%         \begin{tikzpicture}[overlay]
-%             \pgfmathtruncatemacro{\mytotalchapters}{\totvalue{chapter} > 0 ? \totvalue{chapter} : 20}
-%             \pgfmathsetmacro{\mypaperheight}{\paperheight/28.453}
-%             \pgfmathsetmacro{\mytop}{-(\thechapter-1)/\mytotalchapters*\mypaperheight}
-%             \pgfmathsetmacro{\mybottom}{-\thechapter/\mytotalchapters*\mypaperheight}
-%             \ifcase \thechapter
-%                 \xdef \mycolor{white}
-%                 \or \xdef \mycolor{red}
-%                 \or \xdef \mycolor{orange}
-%                 \or \xdef \mycolor{yellow}
-%                 \or \xdef \mycolor{green}
-%                 \or \xdef \mycolor{blue}
-%                 \or \xdef \mycolor{violet}
-%                 \else \xdef \mycolor{black}
-%             \fi
-%             \ifthenelse{\isodd{\value{page}}}
-%             {\fill[\mycolor] ($(current page.north east)+(0,\mytop)$) rectangle ($(current page.north east)+(-0.5,\mybottom)$);}
-%             {\fill[\mycolor] ($(current page.north west)+(0,\mytop)$) rectangle ($(current page.north west)+(0.5,\mybottom)$);}
-%         \end{tikzpicture}
-%     },
-%     scale=1,
-%     angle=0
-% }
+% the main command; the mandatory argument sets the color of the vertical box
+\newcommand\ChapFrame{%
+\def\TitleText{\leftmark}%
+\AddEverypageHook{%
+\ifthenelse{\isodd{\value{page}}}
+{\backgroundsetup{
+  contents={%
+  \begin{tikzpicture}[overlay,remember picture]
+  \node[fill=\BoxColor,inner sep=0pt,rectangle,text width=1cm,
+    text height=4cm,align=center,anchor=north east]
+  at ($ (current page.north east) + (-0cm,-2*\thechapshift cm) $)
+  {\rotatebox{90}{\parbox{4cm}{%
+    \centering\textcolor{black}{\scshape\leftmark}}}};
+  \end{tikzpicture}}%
+}}
+{\backgroundsetup{
+  contents={%
+  \begin{tikzpicture}[overlay,remember picture]
+  \node[fill=\BoxColor,inner sep=0pt,rectangle,text width=1cm,
+    text height=4cm,align=center,anchor=north west]
+  at ($ (current page.north west) + (-0cm,-2*\thechapshift cm) $)
+  {\rotatebox{90}{\parbox{4cm}{%
+    \centering\textcolor{black}{\scshape\leftmark}}}};
+  \end{tikzpicture}}
+}}
+\BgMaterial}%
+\stepcounter{chapshift}
+}
+
+% redefinition of \chaptermark to contain only the title
+\renewcommand\chaptermark[1]{\markboth{\thechapter.~#1}{}}
+

@@ -1,5 +1,7 @@
 # Hypothesis and objectives
 
+\ChapFrame
+
 ## Hypothesis
 
 <!--# TODO add paragraphs to summarize the introduction -->

@@ -1,5 +1,7 @@
 # Acknowledgments
 
+\ChapFrame
+
 A la directora, tutora, jefa i tants papers que fas, moltes gràcies Azu per haver estat a sobre de la tesis, he aprés molt de tot sobre com treballar amb intensitat i eficiencia, tocant de peus a terra. També per preguntar i tenir presents sobre com es pot fer servir això i com pot ajudar cada idea que tenia. 
 
 Gràcies Juanjo per donar-me la oportunitat d'entrar a IDIBAPS i per tota la ajuda al llarg d'aquests anys per ser un bioinformàtic independent. Sempre has estat disponible quan no sabia com seguir i aportaves alguna idea o paquet per probar. 
