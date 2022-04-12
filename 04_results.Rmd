@@ -176,7 +176,7 @@ df <- data.frame(
 )
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Model 1 for the Puget's dataset.",
-           caption = "Model 1 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Model 1 for Puget's dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -194,7 +194,7 @@ df <- data.frame(
 )
 k <- kable(df, align =  rep("c", ncol(df)), 
            caption.short = "Model 1.2 for the Puget's dataset.",
-           caption = "Model 1.2 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Model 1.2 for Puget's dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -212,7 +212,7 @@ df <- data.frame(
 )
 k <- kable(df, align =  rep("c", ncol(df)), 
            caption.short = "Model 2 for the Puget's dataset.",
-           caption = "Model 2 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Model 2 for Puget's dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -229,7 +229,7 @@ df <- data.frame(
       )
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Model 2.2 the for Puget's dataset.",
-           caption = "Model 2.2 for Puget's dataset. Relationships between the different blocks on the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Model 2.2 for Puget's dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -246,7 +246,7 @@ df <- data.frame(
       )
 k <- kable(df, align =  rep("c", ncol(df)),
            caption.short = "Model with superblock for Puget's dataset.",
-           caption = "Relationships between the different blocks on the Puget's dataset for model superblock. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the Puget's dataset for model superblock. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -264,7 +264,7 @@ df <- data.frame(
       )
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Model with superblock.2 for the Puget's dataset.",
-           caption = "Relationships between the different blocks on the Puget's dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the Puget's dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -279,7 +279,7 @@ knitr::include_graphics("images/pugets_superblock.png")
 The same data was used to look for a good model from the data itself including a model with a superblock but looking at the first component of the CGH and transcriptome block.
 This allowed to visually inspect if each model's components helped to classify the samples (Figure \@ref(fig:puget-models)):
 
-```{r puget-models, fig.scap="Different RGCCA models on the Puget's dataset.", fig.cap="Different RGCCA models on the Puget's dataset. The different models with the same data showing the sample position on the first components of the CGH  and the transcriptome block. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data."}
+```{r puget-models, fig.scap="Different RGCCA models in the Puget's dataset.", fig.cap="Different RGCCA models in the Puget's dataset. The different models with the same data showing the sample position on the first components of the CGH  and the transcriptome block. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data."}
 knitr::include_graphics("images/pugets_models.png")
 ```
 
@@ -328,8 +328,8 @@ df <- data.frame(
   check.names = FALSE
 )
 k <- kable(df, align = rep("c", ncol(df)), 
-           caption.short = "AVE values of RGCCA models on the Puget's dataset.", 
-           caption = "AVE values of RGCCA models on the Puget's dataset. Values for both inner and outer AVE of the first canonical component of models 1, 1.2, 2 2.2 and superblock and superblock.2 are shown.")
+           caption.short = "AVE values of RGCCA models in the Puget's dataset.", 
+           caption = "AVE values of RGCCA models in the Puget's dataset. Values for both inner and outer AVE of the first canonical component of models 1, 1.2, 2 2.2 and superblock and superblock.2 are shown.")
 format_design(k, df)
 ```
 
@@ -375,7 +375,7 @@ The resulting p-value was well below the 0,05 threshold defined for RNA-seq data
 
 On the microbiome data the results were similar but the p-value was considerably higher but still below the threshold.
 
-```{r hsct-diversity, fig.cap="Microbiome diversity on the HSCT dataset. On the upper section the Shannon effective and on the lower row the Simpson effective diversity splitted by colon and ileum and controls and CD.", fig.scap="Microbiome diversity on the HSCT dataset."}
+```{r hsct-diversity, fig.cap="Microbiome diversity in the HSCT dataset. On the upper section the Shannon effective and on the lower row the Simpson effective diversity splitted by colon and ileum and controls and CD.", fig.scap="Microbiome diversity in the HSCT dataset."}
 knitr::include_graphics("images/hsct-ASV-diversity.png")
 ```
 
@@ -409,7 +409,7 @@ In addition, the model is fixed, so it did not allow to find new or other relati
 With RGCCA we could select different models and use all the data available without much assumptions.
 The models with the highest inner AVE of the family 1 and the family 2 models were similar to those on the Häsler dataset.
 
-```{r hsct-models, fig.scap="Models on the HSCT dataset.", fig.cap="On the abscissa the transcriptome, on the ordinate the Microbiome. Each square represents a different model of the HSCT dataset. On panel A colored by disease status, on panel B colored by sample location. Model 0 has only transcriptome and microbiome data, models 1 to 1.2 with data about the samples and models 2.1 to 2.3 with data about the samples split in 3 blocks."}
+```{r hsct-models, fig.scap="Models in the HSCT dataset.", fig.cap="Models in the HSCT dataset. On the abscissa the transcriptome, on the ordinate the Microbiome. Each square represents a different model of the HSCT dataset. On panel A colored by disease status, on panel B colored by sample location. Model 0 has only transcriptome and microbiome data, models 1 to 1.2 with data about the samples and models 2.1 to 2.3 with data about the samples split in 3 blocks."}
 include_graphics("images/hsct-models.png")
 ```
 
@@ -426,7 +426,7 @@ df <- data.frame(
 )
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Model 0 of the HSCT dataset.",
-      caption = "Relationships between the different blocks on the HSCT dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.")
+      caption = "Relationships between the different blocks in the HSCT dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -443,7 +443,7 @@ df <- data.frame(
 )
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Model 1.1 the of HSCT dataset.",
-           caption = "elationships between the different blocks on the HSCT dataset for model 1.1. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "elationships between the different blocks in the HSCT dataset for model 1.1. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -460,7 +460,7 @@ df <- data.frame(
 )
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Model 1.2 of the HSCT dataset.", 
-           caption = "Relationships between the different blocks on the HSCT dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the HSCT dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -478,7 +478,7 @@ df <- data.frame(
   check.names = FALSE)
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 2 of the HSCT dataset.",
-           caption = "Relationships between the different blocks on the HSCT dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the HSCT dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -497,7 +497,7 @@ df <- data.frame(
   check.names = FALSE)
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 2.2 of the HSCT dataset.", 
-           caption = "Relationships between the different blocks on the HSCT dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the HSCT dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -517,7 +517,7 @@ df <- data.frame(
       )
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Model 2.3 of the HSCT dataset.", 
-           caption = "Relationships between the different blocks on the HSCT dataset for model 2.3. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the HSCT dataset for model 2.3. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -536,8 +536,8 @@ df <- data.frame(
        check.names = FALSE
       )
 k <- kable(df, align = rep("c", ncol(df)),
-      caption.short = "The models on the HSCT and their AVE values.",
-      caption = "The models on the HSCT and their AVE values. For each model the inner AVE and the outer AVE is presented.")
+      caption.short = "The models in the HSCT dataset and their AVE values.",
+      caption = "The models in the HSCT and their AVE values. For each model the inner AVE and the outer AVE is presented.")
 format_design(k, df)
 ```
 
@@ -565,13 +565,13 @@ However, due to big amount of small probabilities when using the BaseSet package
 
 MCIA was applied as a baseline of the integration, the first two components were represented similarly to those of the blocks when using RGCCA \@ref(fig:hsct-mcia).
 
-```{r hsct-mcia, fig.scap="MCIA dimensions on the HSCT dataset.", fig.cap="MCIA dimensions on the HSCT dataset. MCIA first two synthetic variables. In red circles the colon and in blue triangles the ileum."}
+```{r hsct-mcia, fig.scap="MCIA dimensions in the HSCT dataset.", fig.cap="MCIA dimensions in the HSCT dataset. MCIA first two synthetic variables. In red circles the colon and in blue triangles the ileum."}
 include_graphics("images/hsct-mcia.png")
 ```
 
 The AUC of classifying the transcriptome in colon or ileum segments was compared between the models (see \@ref(fig:hsct-auc-plot) and with MCIA.
 
-```{r hsct-auc-plot, fig.scap="AUC of the RGCCA models on the HSCT dataset.", fig.cap="AUC of the RGCCA models on the HSCT dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the HSCT dataset."}
+```{r hsct-auc-plot, fig.scap="AUC of the RGCCA models in the HSCT dataset.", fig.cap="AUC of the RGCCA models in the HSCT dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the HSCT dataset."}
 include_graphics("images/hsct-auc-models.png")
 ```
 
@@ -583,7 +583,7 @@ df <- data.frame(Model = c("0", "1", "1.1", "1.2", "2", "2.1", "2.2", "2.3"),
 0.945023148148148, 0.998842592592593, 0.998070987654321, 0.996913580246914
 ))
 k <- kable(df, align = rep("c", ncol(df)),
-           caption.short = "AUC values of RGCCA models on the HSCT dataset.",
+           caption.short = "AUC values of RGCCA models in the HSCT dataset.",
            caption = "AUC values of RGCCA models of the HSCT dataset classyfing the location of the sample according to the first component of the transcriptome block. From model 0 to model 2.3, the best classification is achieved with model 2.1. Note that this is removing two samples for which the location is unkown.")
 format_design(k, df)
 ```
@@ -594,7 +594,7 @@ This is on par with the models of family 2 as can be seen on the table \@ref(tab
 
 The different models selected different variables as can be seen below:
 
-```{r hsct-features, fig.scap="Upset plot of variables selected on the HSCT dataset.", fig.cap="Upset plot of variables selected on the HSCT dataset. The variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes, panel A, and OTUs, panel B."}
+```{r hsct-features, fig.scap="Upset plot of variables selected in the HSCT dataset.", fig.cap="Upset plot of variables selected in the HSCT dataset. The variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes, panel A, and OTUs, panel B."}
 include_graphics("images/hsct-features.png")
 ```
 
@@ -620,7 +620,7 @@ include_graphics("images/hasler_PCA_RNAseq.png")
 
 In this dataset, the parameter tau behaved slightly differently than with the previous dataset but the value from the Schäfer's method for tau was close to the best value.
 
-```{r hasler-tau, fig.scap="Tau effect on inner AVE on the Häsler's dataset.", fig.cap="Changes on tau on the centroid scheme on the Häsler dataset affect the inner AVE score on the model 1. The panel A shows on the ordinate the RNAseq tau value, the panel B on the right, shows the tau of the microorganism; both of them show the y's tau on the abscissa."}
+```{r hasler-tau, fig.scap="Tau effect on inner AVE in the Häsler's dataset.", fig.cap="Changes on tau on the centroid scheme in the Häsler dataset affect the inner AVE score on the model 1. The panel A shows on the ordinate the RNAseq tau value, the panel B on the right, shows the tau of the microorganism; both of them show the y's tau on the abscissa."}
 include_graphics("images/hasler-centroid_tau.png")
 ```
 
@@ -708,8 +708,8 @@ df <- data.frame(Model = c("0", "1.1", "1.2", "2.1", "2.2"),
            "outer AVE" = c(0.0961236, 0.1024148, 0.1025486, 0.1008395, 0.1009915),
          check.names = FALSE)
 k <- kable(df, align = rep("c", ncol(df)),
-           caption.short = "AVE values of RGCCA models on H\u00E4sler's dataset.",
-      caption = "AVE values of RGCCA models on H\u00E4sler's dataset. The inner and the outer AVE scores of multiple models tested on the H\u00E4sler dataset are shown. The model with the hightest inner AVE is model 1.2.")
+           caption.short = "AVE values of RGCCA models in H\u00E4sler's dataset.",
+      caption = "AVE values of RGCCA models in H\u00E4sler's dataset. The inner and the outer AVE scores of multiple models tested on the H\u00E4sler dataset are shown. The model with the hightest inner AVE is model 1.2.")
 format_design(k, df)
 ```
 
@@ -719,7 +719,7 @@ The microbiome block is also related by a factor of 0.1 with the demographic blo
 Lastly, the time and the demographic block are related by a factor of a 0.1.
 In either case the family 1 and family 2 models can correctly separate by sample location (colon or ileum) but not by disease type or inflammation status as can be seen on figure \@ref(fig:hasler-models).
 
-```{r hasler-models, fig.scap="Models from inteRmodel on the Häsler's datset.", fig.cap="Models from inteRmodel on the Häsler's dataset. Model 0 with just the transcriptome and microbiome data. Models 1.1 to 1.2 with transcriptome, microbiome and sample data in a single block. Models 2.1 and 2.2 with transcriptome, microbiome and sample data in multiple blocks. On the A panel colored by disease on the B panel colored by location of the sample."}
+```{r hasler-models, fig.scap="Models from inteRmodel in the Häsler's datset.", fig.cap="Models from inteRmodel in the Häsler's dataset. Model 0 with just the transcriptome and microbiome data. Models 1.1 to 1.2 with transcriptome, microbiome and sample data in a single block. Models 2.1 and 2.2 with transcriptome, microbiome and sample data in multiple blocks. On the A panel colored by disease on the B panel colored by location of the sample."}
 include_graphics("images/hasler-models.png")
 ```
 
@@ -728,7 +728,7 @@ There is no observable cluster of IBD samples and the other samples, showing tha
 The classification of samples was very accurate in all the models, specially on model 2.2, see figure \@ref(fig:hasler-auc-plot):
 
 
-```{r hasler-auc-plot, fig.scap="AUC of RGCCA models on the Häsler's dataset", fig.cap="AUC of models with RGCCA on the Häsler's dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Häsler's dataset."}
+```{r hasler-auc-plot, fig.scap="AUC of RGCCA models in the Häsler's dataset", fig.cap="AUC of models with RGCCA in the Häsler's dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Häsler's dataset."}
 include_graphics("images/hasler-auc.png")
 ```
 
@@ -747,7 +747,7 @@ format_design(k, df)
 MCIA was applied as a baseline of the integration and compared to the different models to know which one separates best colon and ileum samples.
 The result on the first two dimension is shown on figure \@ref(fig:hasler-mcia):
 
-```{r hasler-mcia, fig.scap="MCIA dimensions on the Häsler's dataset.", fig.cap="MCIA dimensions on the Häsler's dataset. MCIA first two dimensions of the dataset colored by state, the shape is according to the location of the samples. Shows two vertical groups on the first syntethic dimension according to the location of the samples."}
+```{r hasler-mcia, fig.scap="MCIA dimensions in the Häsler's dataset.", fig.cap="MCIA dimensions in the Häsler's dataset. MCIA first two dimensions of the dataset colored by state, the shape is according to the location of the samples. Shows two vertical groups on the first syntethic dimension according to the location of the samples."}
 include_graphics("images/hasler-mcia.png")
 ```
 
@@ -784,7 +784,7 @@ df <- data.frame(
       )
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 0 of the Morgan's dataset.",
-           caption = "Relationships between the different blocks on the Morgan's dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the Morgan's dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -801,7 +801,7 @@ df <- data.frame(
       )
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 1 of the Morgan's dataset.",
-           caption = "Relationships between the different blocks on the Morgan's dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the Morgan's dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -819,7 +819,7 @@ df <- data.frame(
       )
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 1.2 of the Morgan's dataset.",
-           caption = "Relationships between the different blocks on the Morgan's dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the Morgan's dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -839,7 +839,7 @@ df <- data.frame(
       )
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 2 of the Morgan's dataset.",
-           caption = "Relationships between the different blocks on the Morgan's dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the Morgan's dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -859,17 +859,17 @@ df <- data.frame(
       )
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 2.2 of the Morgan's dataset.",
-           caption = "Relationships between the different blocks on the Morgan's dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the Morgan's dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
 Each model is different from previous models.
-After model 2.2 we looked on the model similar to model 2.3 on the HSCT dataset showed but it is the same as in model 2.2. 
+After model 2.2 we looked on the model similar to model 2.3 in the HSCT dataset showed but it is the same as in model 2.2. 
 However, it is kept on the further analysis.
 
 The different models were not able to separate the samples neither by location or sex.
 
-```{r morgan-models, fig.scap="Models from inteRmodel on the Morgan's dataset. ", fig.cap="Models from inteRmodel on the Morgan's dataset. First component of the transcriptome and microbiome of models on the Morgan's dataset. Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models."}
+```{r morgan-models, fig.scap="Models from inteRmodel in the Morgan's dataset. ", fig.cap="Models from inteRmodel in the Morgan's dataset. First component of the transcriptome and microbiome of models on the Morgan's dataset. Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models."}
 include_graphics("images/morgan_models.png")
 ```
 
@@ -900,7 +900,7 @@ include_graphics("images/morgan_bootstrap.png")
 
 In addition the model 2.2 usually has a lower inner AVE compared to model 1.2.
 
-```{r morgan-auc-plot, fig.scap="AUC of RGCCA models on the Morgan's dataset", fig.cap="AUC of RGCCA models on the Morgan's dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Morgan's dataset."}
+```{r morgan-auc-plot, fig.scap="AUC of RGCCA models in the Morgan's dataset", fig.cap="AUC of RGCCA models in the Morgan's dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Morgan's dataset."}
 include_graphics("images/morgan-auc.png")
 ```
 
@@ -919,7 +919,7 @@ format_design(k, df)
 
 With MCIA:
 
-```{r morgan-mcia-plot, fig.scap="MCIA dimensions on the Morgan's dataset.", fig.cap="MCIA dimensions on the Morgan's dataset. MCIA first two dimensions of the dataset. The color and shape match the location of the sample. There is some separation between samples by location."}
+```{r morgan-mcia-plot, fig.scap="MCIA dimensions in the Morgan's dataset.", fig.cap="MCIA dimensions in the Morgan's dataset. MCIA first two dimensions of the dataset. The color and shape match the location of the sample. There is some separation between samples by location."}
 include_graphics("images/morgan-mcia.png")
 ```
 If we quantify this separation by the first dimension of MCIA, the AUC is 0.818, which is slightly worst than the models of family 2.
@@ -952,7 +952,7 @@ df <- data.frame(
       )
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 0 of the Howell's dataset.",
-           caption = "Relationships between the different blocks on the Howell's dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the Howell's dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.")
 ```
 
 Later we look for the best model of family 1 (without looking at any previous model of family 1).
@@ -969,14 +969,14 @@ df <- data.frame(
       )
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 1.2 of the Howell's dataset.",
-           caption = "Relationships between the different blocks on the Howell's dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the Howell's dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
 
 Model 1.2 \@ref(tab:howell-model1-2) was the best according to the AVE score but perform worse when attempting to recreate known biological differences via classifying samples as we can see below \@ref(fig:howell-models):
 
-```{r howell-models, fig.scap="Models from inteRmodel on the Howell's datset.", fig.cap="Models from inteRmodel on the Howell's datset. The three main models, model 0, 1.2 and 2.2 on the Howell's dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks."}
+```{r howell-models, fig.scap="Models from inteRmodel in the Howell's datset.", fig.cap="Models from inteRmodel in the Howell's datset. The three main models, model 0, 1.2 and 2.2 on the Howell's dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks."}
 include_graphics("images/howell-models.png")
 ```
 
@@ -995,7 +995,7 @@ df <- data.frame(
       )
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 2.2 of the Howell's dataset.",
-           caption = "Relationships between the different blocks on the Howell's dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the Howell's dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.")
 format_design(k, df)
 ```
 
@@ -1011,7 +1011,7 @@ df <- data.frame(
       )
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "AVE values of RGCCA for the Howell's dataset.",
-           caption = "AVE values of RGCCA for the Howell's dataset. The inner and the outer AVE scores of multiple models tested on the Howell dataset are shown. The model with the hightest inner AVE is model 1.2.")
+           caption = "AVE values of RGCCA for the Howell's dataset. The inner and the outer AVE scores of multiple models tested in the Howell dataset are shown. The model with the hightest inner AVE is model 1.2.")
 format_design(k, df)
 ```
 
@@ -1025,13 +1025,13 @@ The bootstrapping showed that model 1.2 has indeed higher inner AVE values than 
 While model 0 shows a high variation according to which samples are selected.
 
 
-```{r howell-mcia, fig.scap="MCIA dimensions on the Howell's dataset.", fig.cap="MCIA dimensions on the Howell's dataset. The first dimensions separates by location."}
+```{r howell-mcia, fig.scap="MCIA dimensions in the Howell's dataset.", fig.cap="MCIA dimensions on the Howell's dataset. The first dimensions separates by location."}
 include_graphics("images/howell-mcia.png")
 ```
 
 If we look at the classification of the models on figure \@ref(fig:howell-auc-plot), we can see that models 1.2, 2 and 2.2 classify perfectly the samples by the transcriptome into the location of the sample. 
 
-```{r howell-auc-plot, fig.scap="AUC of the RGCCA models on the Howell's dataset.", fig.cap="AUC of the RGCCA models on the Howell's dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Howell's dataset."}
+```{r howell-auc-plot, fig.scap="AUC of the RGCCA models in the Howell's dataset.", fig.cap="AUC of the RGCCA models in the Howell's dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Howell's dataset."}
 include_graphics("images/howell-rgcca-auc.png")
 ```
 
@@ -1043,13 +1043,13 @@ df <- data.frame(
   AUC = c(0.625525946704067, 0.597475455820477, 1, 1, 1)
 )
 k <- kable(df, align = rep("c", ncol(df)), 
-           caption.short = "AUC of the RGCCA models on the Howell's dataset",
-      caption = "AUC of the RGCCA models on the Howell's dataset. The classification of the location of the sample according to the first componenent of the models shown. Model 0, 2 and 2.2 have a perfect classification of the samples to their respective location.")
+           caption.short = "AUC of the RGCCA models in the Howell's dataset",
+      caption = "AUC of the RGCCA models in the Howell's dataset. The classification of the location of the sample according to the first componenent of the models shown. Model 0, 2 and 2.2 have a perfect classification of the samples to their respective location.")
 format_design(k, df)
 ```
 
 
-On this dataset we also focused on the most important ASV according to the model 2.2 that were present in more than 2 samples that in total were present in the whole dataset.
+In this dataset we also focused on the most important ASV according to the model 2.2 that were present in more than 2 samples that in total were present in the whole dataset.
 These ASV were summarized to a single value and then used to calculate the AUC, which was 0.85.
 The dot product of the ASV and genes were also calculated and used to find out which ASV are related to which genes.
 
@@ -1057,11 +1057,11 @@ The dot product of the ASV and genes were also calculated and used to find out w
 ### Between datasets
 
 The HSCT genes were compared to the Howell's genes from model 2.2.
-There are 3580 selected on model 2.2 on the HSCT dataset and 2189 genes on the Howell's dataset.
+There are 3580 selected on model 2.2 in the HSCT dataset and 2189 genes on the Howell's dataset.
 From them the 1228 genes in common were analyzed for which GO terms and pathways they are enriched.
 The results is represented on \@ref(fig:pathways-hsct-howell).
 
-```{r pathways-hsct-howell, fig.scap="Pathways from common genes on HSCT and Howell's dataset.", fig.cap="Significance of pathways on common genes on HSCT and Howell's dataset ordered by p-value, size according to the number of genes on the pathway found on the dataset and color blue for pathways and red for gene ontologies of biological process."}
+```{r pathways-hsct-howell, fig.scap="Pathways from common genes on HSCT and Howell's dataset.", fig.cap="Significance of pathways on common genes in HSCT and Howell's dataset ordered by p-value, size according to the number of genes on the pathway found on the dataset and color blue for pathways and red for gene ontologies of biological process."}
 include_graphics("images/pathways_hsct_howell.png")
 ```
 

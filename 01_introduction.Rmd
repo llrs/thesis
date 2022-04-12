@@ -33,7 +33,7 @@ Nonetheless, the disease could result from an imbalanced microbial composition l
 The role of the gut microbiome in IBD is an active ongoing field of research.
 Several authors are currently studying the alterations reported in IBD of the intestinal microbiome.
 However, it is still unclear the cause-effect relation between dysbiosis and IBD.
-Partly due to the multiple variables already identified that have been linked to IBD; for instance, age, diet, usage of antibiotic, tobacco, and socioeconomic status [@humanmicrobiomeprojectconsortium2012].
+Partly due to the multiple variables already identified that have been linked to IBD; for instance, age, diet, usage of antibiotic, tobacco, and socioeconomic status [@humanmicrobiomeprojectconsortium2012; @shaw2016].
 
 The relationship between host and microbiome has been proposed to play a fundamental role in maintaining disease.
 For instance, some *Proteobacteria* species which have adherent and invasive properties might exploit host defenses and promote a proinflammatory environment, altering the intestinal microbiota in favor of dysbiosis [@mukhopadhya2012].
@@ -415,7 +415,7 @@ Other words used are integration, and if specific to data from sequencing techno
 Here integration will be used as it is the more general one and not restricted to omics or sequencing technologies.
 
 Since the beginning of the integration methods there have been many methods proposed [@krassowski2020].
-Some of the early methods were initially used for surveying the agreement of different evaluating systems [@yannakoudakis2015], others were developed for agricultural sciences [@hotelling_relations_1936] or food industry [@biancolillo].
+Some of the early methods were initially used for surveying the agreement of different evaluating systems [@yannakoudakis2015], others were developed for agricultural sciences [@hotelling1936] or food industry [@biancolillo].
 Some of these methods are specific for one application or data type while others are more generally applicable.
 Lately, the access to bigger datasets with more variables and often from the same samples has increased the focus of the research community on the methodologies available on several disciplines but mainly on biological sciences.
 The explosion of data on biological sciences has been driven by the new sequencing technologies that allow to measure thousand of variables of many samples at the same time.
@@ -600,7 +600,7 @@ But, some methods to account for relationships of variables only work when a dat
 
 These methods do not handle well or at all missing data.
 They need complete cases/data of the samples in order to be able to integrate the results.
-These methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], Multiple co-inertia analysis (MCIA) [@culhane_cross-platform_2003], Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019], Multi-Omics Factor Analysis (MOFA) [@argelaguet_multi-omics_2018] and STATegRa [@gomez-cabreroSTATegraComprehensiveMultiomics2019].
+These methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], Multiple co-inertia analysis (MCIA) [@culhane_cross-platform_2003], Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019], Multi-Omics Factor Analysis (MOFA) [@argelaguet_multi-omics_2018] and STATegRa [@gomez-cabrero2019].
 
 -   Data from different samples:
 

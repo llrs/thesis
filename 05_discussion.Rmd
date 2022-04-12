@@ -164,7 +164,7 @@ To identify related variables other methods use correlations between the variabl
 On our dataset we visually explored the correlations for all the datasets, but the significant correlations were usually driven by an outlier, or there was not a good fit of the data due to missing data (data not shown).
 We tried filtering those correlations identified by the models, being less restrictive by removing those samples that did not have microbiome presence on at least 5 samples, and removing those samples without that microbiome presence, separating based on intestinal segment and a combination of all.
 None of these variations provided a clear insight over which genes were correlated to which bacterial signatures.
-This is in contrast to other publications that relied purely on the Spearman $\rho$ metric [@häsler2017].
+This is in contrast to other publications that relied purely on the Spearman $\rho$ metric [@hasler_uncoupling_2016].
 
 We developed and applied `BaseSet` to find these relationships using a different approach.
 However, it failed because it is computationally expensive to calculate the likelihood of 1500 variables; there are too many combinations.
