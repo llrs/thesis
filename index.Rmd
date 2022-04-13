@@ -12,12 +12,12 @@ book_filename: data_integration_IBD
 split_by: chapter
 twitter-handle: Lluis_Revilla
 # Pandoc options
-# link-citations: true # Only activate for actual printing 
+link-citations: true 
 always_allow_html: true
 colorlinks: yes
 # https://bookdown.org/yihui/rmarkdown-cookbook/latex-variables.html
 # Only works here (set when printing and sending)
-links-as-notes: true
+# links-as-notes: true # Only activate for actual printing
 # fontfamily: boisik
 # papersize: b5 # The printed size of the thesis
 papersize: a4
