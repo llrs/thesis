@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-04-12" />
+<meta name="date" content="2022-04-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -319,10 +319,11 @@ They are listed on two ways, one with a brief explanation and another one ordere
     --runThreadN &quot;$threads&quot; \
     --readFilesCommand zcat \
     --readFilesIn &quot;$file1&quot; &quot;$file2&quot;</code></pre>
+<p>The <code>$genome</code> is the path to the location on the computer where the genome is, <code>$output</code> is the prefix of the output file, <code>$threads</code> is the number of threads used and <code>$file1</code> and <code>$file2</code> are the paired fastq files.</p>
 </div>
 <div id="rsem" class="section level2 hasAnchor" number="9.2">
 <h2><span class="header-section-number">B.2</span> RSEM<a href="software.html#rsem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Code used for RSEM</p>
+<p>Code used for RSEM where <code>$threads</code> is the number of threads used, <code>$rseminp</code> is the input file in BAM format, <code>$genome</code> is the path to the location on the computer where the genome is, and <code>$rsem</code> is the output file.</p>
 <pre><code>rsem-calculate-expression \
     --quiet \
     --paired-end \
