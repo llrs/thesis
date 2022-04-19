@@ -18,4 +18,4 @@ The main objective of this thesis is finding the relationships between microbiom
 
 -   Determine the influence in the microbiota and mucosa relationship of clinical variables such as location (colon and ileum), disease status, sex, age, treatment received, etc. in the microbiome and mucosa relationship.
 
--   Identify groups of possible underlying mechanism interactions between the microbiome and mucosa on IBD.
+-   Identify groups of possible underlying mechanism interactions between the microbiome and mucosa in IBD.

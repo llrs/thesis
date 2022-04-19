@@ -126,8 +126,8 @@ Some of them have been tested on several datasets but the most important validat
 With the increase of available analytical tools side by side comparison has become increasingly important.
 There are reviews that apply different tools to the same datasets [@cantini2021], some are more theoretical [@bersanelli2016], others are focused on a different area like metabolomics [@cavill2016].
 
-Few of these methods have been applied on IBD datasets.
-However, recently there has been a review focused on integration on IBD [@sudhakar2022].
+Few of these methods have been applied in IBD datasets.
+However, recently there has been a review focused on integration in IBD [@sudhakar2022].
 In this publication the authors suggest that one must be mindful of the gap between the experimental conditions and the real world.
 It also encourages to collect more data about the exposome (the environment patients are exposed to).
 It ends up advising to set up guidelines for multi-omic studies tailored to the field, coordinate a global framework to prevent redundant studies and to ensure efficient funding and resources and disseminate training and education on computational approaches to analyze multi-omic datasets.
@@ -318,7 +318,7 @@ It could be possible that just sequencing the intestinal microbiome could be eno
 However, this requires further validation to ensure that the diagnosis is accurate enough on a diverse and big population.
 There are already studies on this direction, not only for IBD or intestine but for several different human regions [@humanmicrobiomeprojectconsortium2012].
 
-With our studies we hoped that we would provide which bacteria played a role on the disease, or which genes and bacteria are related on IBD.
+With our studies we hoped that we would provide which bacteria played a role on the disease, or which genes and bacteria are related in IBD.
 We obtained a list of putative genes and bacteria but not a clear pairing of which genes interact with which bacteria.
 This could mean that the microbiome community is related to all the genes.
 It could also mean that the methods are not powerful enough to find more tailored relationships as normalizations and generalizations present on `RGCCA` do not allow to subgroup or classify the variables already detected.
@@ -335,7 +335,7 @@ Further research on how to reduce the space of possible combinations of bacteria
 This might involve using more network integration methods.
 
 Krassowski's *et. al.* ([@krassowski2020]) advise on software engineering and reproducibility practices to share awareness with new researchers in multi-omics for end-to-end workflow.
-In addition the recent recommendation about integration on IBD ([@sudhakar2022]) suggests that there is still much to be done to increase the results on these projects and the effectivity.
+In addition the recent recommendation about integration in IBD ([@sudhakar2022]) suggests that there is still much to be done to increase the results on these projects and the effectivity.
 We agree with them and encourage other researchers to carefully consider the proposed methodology before starting their own projects.
 
 There seems to be a tendency of multi-omics projects to focus on metagenomics, metatranscriptomics and metaproteomics and abandon plain 16S sequencing [@zhang2019].
@@ -361,4 +361,4 @@ However, it is not clear how accurately account for other factors such as the pr
 In summary, as shown with the PERMANOVA approach, several factors affect the disease and the relationship between gut's microbiome and gut's mucosa.
 Analysis or comparisons without taking them into account might provide misleading or false results.
 To our knowledge this is the first study using these variables as part of the integration study with canonical correlations.
-We hope this provides a first approximation to accurately understand the relationships between genes and bacteria on IBD.
+We hope this provides a first approximation to accurately understand the relationships between genes and bacteria in IBD.

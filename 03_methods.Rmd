@@ -443,7 +443,7 @@ This increases the $p$-value as it raises the Chi-square statistic.
 There are other methods that test if some variables show an unexpected importance according to a statistic like fold change or value, such as gene set enrichment analysis (GSEA) [@subramanian2005].
 GSEA is a computational method originally developed to determine whether a priori defined set of genes shows statistically significant and concordant differences between two biological states.
 This methods check if a group of variables present in an ordered list shows a skewed distribution and it compares it against a random group of similar size.
-It has been widely used since its original publication, also on IBD [@protiva2016].
+It has been widely used since its original publication, also in IBD [@protiva2016].
 
 This method calculates the rank of genes $rank(g_j)=r_j$ where each $g$ is a gene, and then it calculates the following functions:
 

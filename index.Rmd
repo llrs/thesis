@@ -63,7 +63,7 @@ meta() %>%
   meta_name("github-repo" = "llrs/thesis") %>% 
   meta_viewport() %>% 
   meta_social(
-    title = "Data integration on inflammatory bowel disease",
+    title = "Data integration in inflammatory bowel disease",
     url = "https://thesis.llrs.dev",
     # image = "https://r4ds.had.co.nz/cover.png", # TODO
     image_alt = "The cover of the thesis.",

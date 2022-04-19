@@ -59,7 +59,7 @@ On the following sections we will explore the role of several of the possible fa
 
 IBD is not an heritable disease, except for very early onset IBD, but it has some genetic influence that predisposes people to have it.
 
-This has lead to look for genetic factors on IBD both on general population and on the early cases.
+This has lead to look for genetic factors in IBD both on general population and on the early cases.
 Genome wide association studies (GWAS) are one of the most common genetic studies performed, together with methylation studies.
 To discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.
 
@@ -142,7 +142,7 @@ Immune response in the intestinal mucous is mainly excreted by the gut associate
 Genetically predisposed patients when exposed to certain environmental factors activate immune responses against microbials or self-antigens which in turn, may impair the mucosal barrier of the intestinal mucosa, the first physical barrier on the mucosal surface.
 
 Both the adaptive and the innate immune cells are present in the intestine, right below the epithelium.
-On IBD due to antigen translocation into the lamina propria, the immune response leads the adaptive cells to generate immune response to harmless components of the intestinal microbiota.
+In IBD due to antigen translocation into the lamina propria, the immune response leads the adaptive cells to generate immune response to harmless components of the intestinal microbiota.
 This initial response induces a local increase in the production of pro-inflammatory cytokines and mediators which damages the mucosa.
 Therefore, the loss of integrity on this barrier enables the intestinal luminal bacteria to access the intestinal epithelium and to interact with the immune system underneath it more directly [@hisamatsu2013].
 
@@ -173,7 +173,7 @@ Overall the presence of certain cytokines and the response to self-antigens are 
 
 <!--# End tesis Aida/ more or less -->
 
-On these kind of diseases autologous hematopoietic stem cell transplantation has shown some benefits on IBD [@corraliza].
+On these kind of diseases autologous hematopoietic stem cell transplantation has shown some benefits in IBD [@corraliza].
 The benefit of hematopoietic stem cell transplant (HSCT) in autoimmunity is thought to originate from the depletion of auto-reactive cells regardless of their specificity.
 However, due to its associated risk this therapy is only given when patients are refractory to all available therapeutic options.
 
@@ -350,7 +350,7 @@ Several factors, such as becoming refractory to drugs, intermittent course of th
 
 Lack of knowledge of what are the factors cause of the disease make those treatments and drugs to be addressed to block further inflammation and damage, but cannot prevent it and often they do not stop it completely.
 
-## Integration studies on IBD
+## Integration studies in IBD
 
 Many studies have looked up to the origin of the disease.
 As seen, one of the hypothesis behind the maintenance of the inflammation involves the microbiome and the host epithelium.
@@ -368,7 +368,7 @@ However, confirming causal interactions of the variables of each essay is diffic
 To find relationships some articles use correlation [@hasler_uncoupling_2016], there are others that use a combination of methods from correlations, partial correlations to integrative methods [@tang2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations [@hernández-rocha2021].
 
 Very rarely there is an experimental confirmation of the relationships between variables of the different assays because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
-One of the few methods published that shows an interaction between genes and microorganisms on IBD is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
+One of the few methods published that shows an interaction between genes and microorganisms in IBD is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
 
 ### Type of data used for integration analysis {#data-origin}
 
@@ -384,16 +384,16 @@ Single cell technologies are starting to be used for integration.
 
 #### Microbiome
 
-Many of the integration analysis on IBD are done between host transcriptome and the microbiome.
+Many of the integration analysis in IBD are done between host transcriptome and the microbiome.
 These studies use datasets from IBD patients usually stratified by disease activity or severity of inflammation or location of the disease.
 Most of them are based on correlation analysis between the microbiome and RNA-seq [@hasler_uncoupling_2016].
 Conclusions of these integrations range from finding differences on the correlation depending on the type of disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang2017].
 
 #### Genetics
 
-Genetics is the next most common data source used to integrate data on IBD.
+Genetics is the next most common data source used to integrate data in IBD.
 Most studies on genetics and IBD are genome-wide association studies.
-The genetic component is specially important on IBD that starts on children [@kumar2019; @knights2013; @huWholeExomeSequencing2021].
+The genetic component is specially important in IBD that starts on children [@kumar2019; @knights2013; @huWholeExomeSequencing2021].
 
 When using genetic data to integrate it with transcriptomics it is usually to understand how a genetic variant is affecting a gene expression.
 This has lead to the identification of expression quantitative trait loci (eQTL) [@repnik2016; @hu2021; @jung2020; @dai2019].
@@ -703,7 +703,7 @@ These methods are useful to compare different setup but they can miss some subtl
 The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool to apply a given dataset and research question [@cantini2021].
 
 Some of these reviews focus on a specific type of data integration: metabolomics [@cavill2016], genomics [@mcgovern2015], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies [@de_souza_ibd_2017; @tarazona2021; @valles-colomer2016].
-On this regard there are several efforts to integrate data on IBD but no comprehensive review to date is known to the author.
+On this regard there are several efforts to integrate data in IBD but no comprehensive review to date is known to the author.
 The most comprehensive article to date is a very recent review identifying problems and providing recommendations for future work [@sudhakar2022].
 
 ### Summary {#methods-integration}
@@ -723,6 +723,6 @@ But this interaction is also influenced by many other variables.
 
 Data integration are methods to analyze datasets with data from multiple sources.
 They include a variety of methods and there are methods for several purposes. 
-On IBD it has been used mostly sequencing data, disregarding the other variables known to be relevant.
+In IBD it has been used mostly sequencing data, disregarding the other variables known to be relevant.
 
-Data integration on IBD has been underexplored despite being known that many factors interact on the pathogenesis and maintenance of the disease. 
+Data integration in IBD has been underexplored despite being known that many factors interact on the pathogenesis and maintenance of the disease. 
