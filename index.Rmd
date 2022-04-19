@@ -114,12 +114,6 @@ They provided advice and guidance on how to analyse the data and where to focus 
 This thesis, available on <https://thesis.llrs.dev> is licensed under the [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/ "License summary link").\
 !["CC-BY image"](images/by.png "CC-BY image of creative commons")
 
-````{=html, eval=knitr::is_latex_output(), include=FALSE, echo=FALSE}
-```{r, echo=FALSE, results='asis'}
-xfun::file_string('print.html')
-```
-````
-
 # Abstracts {.unnumbered}
 
 <!--# Max length of 600 words-->

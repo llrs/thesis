@@ -1,7 +1,8 @@
 bookdown::gitbook:
   css: style.css
   includes:
-    before_body: wip.html
+    # before_body: wip.html
+    before_body: print.html
   dev: svglite
   citation_package: none
   link-citations: yes
