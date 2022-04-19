@@ -13,7 +13,7 @@ bookdown::gitbook:
       toc_depth: 2
       scroll_highlight: yes
       before: |
-        <li><strong><a href="./">Data integration on IBD</a></strong></li>
+        <li><strong><a href="./">Data integration in IBD</a></strong></li>
     download: [pdf, epub]
     sharing:
       github:

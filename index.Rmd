@@ -1,5 +1,5 @@
 ---
-title: "Data integration on inflammatory bowel disease"
+title: "Data integration in inflammatory bowel disease"
 author: "Lluís Revilla Sancho"
 date: "`r Sys.Date()`"
 documentclass: book
