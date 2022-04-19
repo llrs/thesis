@@ -1,6 +1,5 @@
 # Results
 
-\ChapFrame
 
 ## Packages/methods
 

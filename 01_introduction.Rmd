@@ -1,5 +1,4 @@
 # Introduction
-\ChapFrame
 
 [Inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) (IBD) involves [Crohn's disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD) and [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (UC).
 It generally affects the terminal ileum and the colon but it can involve any segment of the gastrointestinal tract.

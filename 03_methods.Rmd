@@ -1,7 +1,5 @@
 # Materials and methods
 
-\ChapFrame
-
 <!-- # Some sections of this chapter has been adapted from "Multi-Omic Modelling of IBD with Regularized Canonical Correlation Analysis" [@revilla2021] or other publications of the research group. -->
 
 This chapter contains a brief description of the main characteristics of the different datasets used on this thesis .

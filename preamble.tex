@@ -31,9 +31,14 @@
 % https://tex.stackexchange.com/a/63393/178206
 % Remove chapter number
 % https://tex.stackexchange.com/a/519236/178206
+\usepackage{microtype} % For lsstyle
 \usepackage{titlesec}
-\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{}{20pt}{\Huge}
+% \titleformat{\chapter}[display]{\normalfont\huge\bfseries}{}{20pt}{\Huge}
 % \titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\null\hfill \chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\chapter}[block]{\fontsize{32pt}{48pt}\bfseries\sffamily\filcenter}{
+  \fontsize{72pt}{72pt}\selectfont\scalebox{1.4}[1]{\thechapter \ChapFrame} % Content on the chapter title page
+}{0.67em}{\lsstyle}[\thispagestyle{empty} \cleardoublepage]% https://tex.stackexchange.com/a/347162/178206
+\titleformat{name=\chapter, numberless}{\normalfont\huge\bfseries}{}{20pt}{\Huge}
 \titlespacing*{\chapter}{0pt}{-50pt}{40pt}
 
 % To handle captions and make them wide even if tables are not
