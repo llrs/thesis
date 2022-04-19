@@ -13,6 +13,19 @@
   padding: 10px;
 }
 
+.print {
+  background: #ff6600;
+  padding: 10px;
+}
+
+.print::before {
+  content: "\f02f";
+  font-family: FontAwesome;
+  left: 10px;
+  top: 10px;
+  bottom: 0px;
+  font-size: 30px;
+}
 .wip::before {
   content: "\f071";
   font-family: FontAwesome;

@@ -96,7 +96,7 @@ CD
 UC
 treatment
 summary-ibd
-integration-studies-on-ibd
+integration-studies-in-ibd
 data-origin
 transcriptome
 microbiome-1
