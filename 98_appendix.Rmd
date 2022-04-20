@@ -292,10 +292,57 @@ However, at the time of writing the process is not complete.
 
 # Models output
 
-<!--# TODO include files for these genes and otus?-->
+<!--# TODO include files for these genes and otus?-->`
+
+```{r handle}
+format_models <- function(x, scap, cap){
+  max_rows <- 30
+  tables_n <- 2
+  xx <- x[seq_len(max_rows*tables_n), ]
+  a <- split(xx, rep(letters[seq_len(tables_n)], each = max_rows))
+  y <- kable(a[[1]], align = rep("c", ncol(x)), caption.short = scap, caption = cap, 
+             row.names = FALSE, booktabs = TRUE, longtable = TRUE)
+  # dims <- dim(data)
+  # nrow <- nrow(data)
+  # ncol <- ncol(data) + as.numeric(!all(rownames(data) == seq_len(nrow(data))))
+  # k <- kable_styling(x, latex_options = c("striped", "HOLD_position", "repeat_header"), 
+  #                           full_width = FALSE, fixed_thead = TRUE)
+  # k <- column_spec(k, column = 2, border_left = TRUE, bold = TRUE, include_thead = FALSE)
+  # k <- column_spec(k, column = ncol, border_right = TRUE, bold = FALSE, include_thead = FALSE)
+  # row_spec(k, row = 0, bold = TRUE, italic = TRUE)
+  y
+}
+
+read_table <- function(dataset, model, option = 1) {
+  path <- paste0("data/", dataset, "_m", model, ".RDS")
+  model <- readRDS(path)
+  m <- model$a[[option]][, 1, drop = FALSE]
+  m <- m[m[, 1] != 0, , drop = FALSE]
+  m <- as.data.frame(m)
+  if (option == 1) {
+    m$Genes <- rownames(m)
+    colnames(m) <- c("Weight", "Genes")
+    m <- m[, c("Genes", "Weight")]
+  } else if (option == 2) {
+    m$Bacteria <- rownames(m)
+    colnames(m) <- c("Weight", "Bacterias ID")
+    m <- m[, c("Bacterias ID", "Weight")]
+  }
+  rownames(m) <- NULL
+  m[order(abs(m$Weight), decreasing = TRUE), ]
+}
+```
+
 
 ## HSCT
 ### Genes
+
+```{r hsct-genes}
+format_models(read_table("hsct", "0"), 
+              scap = "HSCT genes weight in model 0", 
+              cap = "HSCT genes weight in model 0. Genes (with the ENSEMBL ID) and their weight on the first dimension of model 0 in HSCT dataset.")
+```
+
 ### Microbiome
 ## Häsler
 ### Genes
