@@ -313,26 +313,40 @@ format_models <- function(x, scap, cap){
   y
 }
 
+genes_names <- function(x) {
+  x <- as.character(x)
+  if (any(startsWith(x, "ENSG"))) {
+    x <- strtrim(x, 15)
+    EnsDb.Hsapiens.v86::mapIds(EnsDb.Hsapiens.v86, 
+                               keys = ~ x[tx_biotype == "protein_coding"], 
+                               keytype =  "GENEID", 
+                               column = "SYMBOL")
+  }
+  
+}
+
 read_table <- function(dataset, model, option = 1) {
   path <- paste0("data/", dataset, "_m", model, ".RDS")
   model <- readRDS(path)
   m <- model$a[[option]][, 1, drop = FALSE]
   m <- m[m[, 1] != 0, , drop = FALSE]
   m <- as.data.frame(m)
-  if (option == 1) {
-    m$Genes <- rownames(m)
-    colnames(m) <- c("Weight", "Genes")
-    m <- m[, c("Genes", "Weight")]
-  } else if (option == 2) {
-    m$Bacteria <- rownames(m)
-    colnames(m) <- c("Weight", "Bacterias ID")
-    m <- m[, c("Bacterias ID", "Weight")]
-  }
+  m$variables <- rownames(m)
   rownames(m) <- NULL
+  m <- m[, c(2, 1)]
+  max_width <- 20
+  if (option == 1) {
+    colnames(m) <- c("Gens", "Weight")
+  } else if (option == 2) {
+    colnames(m) <- c("Bacterias ID", "Weight")
+    width <- nchar(m[, 1])
+    m[, 1] <- ifelse(width > max_width, paste0(strtrim(m[, 1], max_width), "..."), m[, 1])
+  }
   m[order(abs(m$Weight), decreasing = TRUE), ]
 }
 ```
 
+The following appendices show the top variables for models of each dataset and their weight according to a model. 
 
 ## HSCT
 ### Genes
@@ -343,13 +357,144 @@ format_models(read_table("hsct", "0"),
               cap = "HSCT genes weight in model 0. Genes (with the ENSEMBL ID) and their weight on the first dimension of model 0 in HSCT dataset.")
 ```
 
+```{r hsct-genes-1-2}
+format_models(read_table("hsct", "1.2"), 
+              scap = "HSCT genes weight in model 1.2", 
+              cap = "HSCT genes weight in model 1.2. Genes (with the ENSEMBL ID) and their weight on the first dimension of model 1.2 in HSCT dataset.")
+```
+
+```{r hsct-genes-2-2}
+format_models(read_table("hsct", "2.2"), 
+              scap = "HSCT genes weight in model 2.2", 
+              cap = "HSCT genes weight in model 2.2. Genes (with the ENSEMBL ID) and their weight on the first dimension of model 2.2 in HSCT dataset.")
+```
+
 ### Microbiome
+
+```{r hsct-microbiome}
+format_models(read_table("hsct", "0", option = 2), 
+              scap = "HSCT microbiome weight in model 0", 
+              cap = "HSCT microbiome weight in model 0. OTUs and their weight on the first dimension of model 0 in HSCT dataset.")
+```
+```{r hsct-microbiome-1-2}
+format_models(read_table("hsct", "1.2", option = 2), 
+              scap = "HSCT microbiome weight in model 1.2", 
+              cap = "HSCT microbiome weight in model 1.2. OTUs and their weight on the first dimension of model 1.2 in HSCT dataset.")
+```
+```{r hsct-microbiome-2-2}
+format_models(read_table("hsct", "2.2", option = 2), 
+              scap = "HSCT microbiome weight in model 2.2", 
+              cap = "HSCT microbiome weight in model 2.2. OTUs and their weight on the first dimension of model 2.2 in HSCT dataset.")
+```
+
 ## Häsler
+
 ### Genes
+
+```{r hasler-genes}
+format_models(read_table("hasler", "0"), 
+              scap = "H\u00E4sler genes weight in model 0", 
+              cap = "H\u00E4sler genes weight in model 0. Genes and their weight on the first dimension of model 0 in H\u00E4sler dataset.")
+```
+```{r hasler-genes-1-2}
+format_models(read_table("hasler", "1.2"), 
+              scap = "H\u00E4sler genes weight in model 1.2", 
+              cap = "H\u00E4sler genes weight in model 1.2. Genes and their weight on the first dimension of model 1.2 in H\u00E4sler dataset.")
+```
+```{r hasler-genes-2-2}
+format_models(read_table("hasler", "2.2"), 
+              scap = "H\u00E4sler genes weight in model 2.2", 
+              cap = "H\u00E4sler genes weight in model 2.2. Genes and their weight on the first dimension of model 2.2 in H\u00E4sler dataset.")
+```
+
 ### Microbiome
+
+```{r hasler-microbiome}
+format_models(read_table("hasler", "0", option = 2), 
+              scap = "H\u00E4sler microbiome weight in model 0", 
+              cap = "H\u00E4sler microbiome weight in model 0. ASVs and their weight on the first dimension of model 0 in H\u00E4sler dataset.")
+```
+```{r hasler-microbiome-1-2}
+format_models(read_table("hasler", "1.2", option = 2), 
+              scap = "H\u00E4sler microbiome weight in model 1.2", 
+              cap = "H\u00E4sler microbiome weight in model 1.2. ASVs and their weight on the first dimension of model 1.2 in H\u00E4sler dataset.")
+```
+```{r hasler-microbiome-2-2}
+format_models(read_table("hasler", "2.2", option = 2), 
+              scap = "H\u00E4sler microbiome weight in model 2.2", 
+              cap = "H\u00E4sler microbiome weight in model 2.2. ASVs and their weight on the first dimension of model 2.2 in H\u00E4sler dataset.")
+```
+
 ## Morgan
 ### Genes
+
+```{r morgan-genes}
+format_models(read_table("morgan", "0"), 
+              scap = "Morgan genes weight in model 0", 
+              cap = "Morgan genes weight in model 0. Genes and their weight on the first dimension of model 0 in Morgan dataset.")
+```
+```{r morgan-genes-1-2}
+format_models(read_table("morgan", "1.2"), 
+              scap = "Morgan genes weight in model 1.2", 
+              cap = "Morgan genes weight in model 1.2. Genes and their weight on the first dimension of model 1.2 in Morgan dataset.")
+```
+```{r morgan-genes-2-2}
+format_models(read_table("morgan", "2.2"), 
+              scap = "Morgan genes weight in model 2.2", 
+              cap = "Morgan genes weight in model 2.2. Genes and their weight on the first dimension of model 2.2 in Morgan dataset.")
+```
+
 ### Microbiome
+
+```{r morgan-microbiome}
+format_models(read_table("morgan", "0", option = 2), 
+              scap = "Morgan microbiome weight in model 0", 
+              cap = "Morgan microbiome weight in model 0. OTUs and their weight on the first dimension of model 0 in Morgan dataset.")
+```
+```{r morgan-microbiome-1-2}
+format_models(read_table("morgan", "1.2", option = 2), 
+              scap = "Morgan microbiome weight in model 1.2", 
+              cap = "Morgan microbiome weight in model 1.2. OTUs and their weight on the first dimension of model 1.2 in Morgan dataset.")
+```
+```{r morgan-microbiome-2-2}
+format_models(read_table("morgan", "2.2", option = 2), 
+              scap = "Morgan microbiome weight in model 2.2", 
+              cap = "Morgan microbiome weight in model 2.2. OTUs and their weight on the first dimension of model 2.2 in Morgan dataset.")
+```
+
 ## Howell
 ### Genes
+
+```{r howell-genes}
+format_models(read_table("howell", "0"), 
+              scap = "Howell genes weight in model 0", 
+              cap = "Howell genes weight in model 0. Genes and their weight on the first dimension of model 0 in Howell dataset.")
+```
+```{r howell-genes-1-2}
+format_models(read_table("howell", "1.2"), 
+              scap = "Howell genes weight in model 1.2", 
+              cap = "Howell genes weight in model 1.2. Genes and their weight on the first dimension of model 1.2 in Howell dataset.")
+```
+```{r howell-genes-2-2}
+format_models(read_table("howell", "2.2"), 
+              scap = "Howell genes weight in model 2.2", 
+              cap = "Howell genes weight in model 2.2. Genes and their weight on the first dimension of model 2.2 in Howell dataset.")
+```
+
 ### Microbiome
+
+```{r howell-microbiome}
+format_models(read_table("howell", "0", option = 2), 
+              scap = "Howell microbiome weight in model 0", 
+              cap = "Howell microbiome weight in model 0. OTUs and their weight on the first dimension of model 0 in Howell dataset.")
+```
+```{r howell-microbiome-1-2}
+format_models(read_table("howell", "1.2", option = 2), 
+              scap = "Howell microbiome weight in model 1.2", 
+              cap = "Howell microbiome weight in model 1.2. OTUs and their weight on the first dimension of model 1.2 in Howell dataset.")
+```
+```{r howell-microbiome-2-2}
+format_models(read_table("howell", "2.2", option = 2), 
+              scap = "Howell microbiome weight in model 2.2", 
+              cap = "Howell microbiome weight in model 2.2. OTUs and their weight on the first dimension of model 2.2 in Howell dataset.")
+```
