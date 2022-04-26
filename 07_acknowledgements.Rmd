@@ -1,23 +1,26 @@
 # Acknowledgments
 
-A la directora, tutora, jefa i tants papers que fas, moltes gràcies Azu per haver estat a sobre de la tesis, he aprés molt de tot sobre com treballar amb intensitat i eficiencia, tocant de peus a terra. També per preguntar i tenir presents sobre com es pot fer servir això i com pot ajudar cada idea que tenia. 
+A la directora, tutora, jefa i tants papers que fas, moltes gràcies Azu per haver estat a sobre de la tesis, he aprés molt de tot sobre com treballar amb intensitat i eficiencia, tocant de peus a terra. 
+També per preguntar i tenir presents sobre com es pot fer servir això i com pot ajudar cada idea que tenia. 
 
-Gràcies Juanjo per donar-me la oportunitat d'entrar a IDIBAPS i per tota la ajuda al llarg d'aquests anys per ser un bioinformàtic independent. Sempre has estat disponible quan no sabia com seguir i aportaves alguna idea o paquet per probar. 
+Gràcies Juanjo per donar-me la oportunitat d'entrar a IDIBAPS i per tota la ajuda al llarg d'aquests anys per apendre a ser un bioinformàtic independent. 
+Sempre has estat disponible quan no sabia com seguir i aportaves alguna idea o paquet per probar. 
 
 A tot el laboratori per el bon ambient que hi ha hagut fent les alegries més grans al llarg de aquests anys i les adversitats més lleugeres. 
 Cadascú ho ha fet a la seva manera: a l'Ana per ser el complement perfecte de l'equip bioinformàtic i sempre estar disponible per aconsellar-me. 
-L'Alba pel seu optimisme i perseverancia, también por tu buen criterio diseñando, espero que algo se me pegue.
+L'Alba pel seu optimisme, perseverancia i ambició, también por tu buen criterio diseñando, espero que algo se me pegue.
 A l'Isa pel seu detallisme i exemple de fer bé les coses, les orquidies siempre están preciosas!
 La Marisol per la seva senzillesa i estar sempre pendent dels petits detalls de la paperasa. 
-La Elisa per la seva alegria i il·lusió que mai defalleixen i s'encomanen.
+La Elisa per encomanar la seva alegria i il·lusió que mai defalleixen.
 La Victòria per la seva paciència i consells sobre com descriure els projectes. 
-L'Angela per acceptar amb paciència les meves sortides friquis.
+L'Angela por tu paciencia con mis salidas friquis.
 La Míriam perqué sempre ens toca moure trastos, a veure si algun dia montem el wallapop científic! i l'Iris que sempre té alguna cosa a aportar.  
 Moltes gràcies a totes, només lamento no haver aprés més de vosaltres. 
 
 Hi ha persones que estan sempre com la Pepa, gràcies per no tancar-me mai el email, i altres que marxen a altres projectes. 
 Gràcies per compartir una part d'aquest projecte amb mí:
-l'Aida per tota l'empenta que ha posat en aquests anys, moltes gràcies per introduir-me en el món de la microbiota! també per la teva acollida al lab. La Montse per organitzar els primers viatges fòra i ensenyar-me a organitzar-me.
+l'Aida per la teva acollida al lab i per tota l'empenta que ha posat en aquests anys, moltes gràcies per introduir-me en el món de la microbiota!
+La Montse per organitzar els primers viatges fòra i ensenyar-me a organitzar-me.
 La Núria per introduir-me en el grup i animar-me a fer el doctorat amb l'Azu.
 També en Daniel pel curset de processament de RNAseq. 
 
@@ -32,17 +35,16 @@ A la Maria per convidar-me sovint a casa seva a descansar.
 A la Maria del Mar per la teva alegria i plantejar reptes amb el python. 
 A la Marta pels consells, el cotxe i les excursions. 
 A l'Ana per seguir amb interés la investigació i estar pendent dels avanços sobre la microbiota. 
-A l'Albert per convidar-me a dinar sovint i conèixer racons i històries de Barcelona o la familia. 
+A l'Albert per convidar-me a dinar sovint i conèixer racons i històries de Barcelona. 
 
-Als amics de Xaloc, en Mario per posar la casa tantes vegades al llarg de la tesis, un día tienes que venir a la mía!
+Als amics en especial, en Mario per posar la casa tantes vegades al llarg de la tesis, un día tienes que venir a la mía!
 L'Albert Mateo per les refrescants sortides en bici i excursions, a ver si hacemos más y con todos!
-A, l'Alejandro que sempre ha estat un suport moral com a doctorand.
-En Bruno per acollir-me a casa seva (he de repetir la visita a Munich!). 
-A l'Edu per estar sempre disposat a acostar-me en cotxe o trobar un lloc fàcil d'arribar en transport públic.
-Als amics de la carrera, en Frederic per compartir molts dinars, penes i alegries.
+L'Alejandro que sempre ha estat un suport moral com a doctorand.
+A l'Edu per estar sempre disposat a acostar-me en cotxe o trobar un lloc fàcil d'arribar en transport públic. 
+En Frederic per compartir molts dinars, penes i alegries.
 En Joan per marcar el camí, sempre has estat per davant! i l'Aleix, espero que la bioinformàtica vagi a més! 
 
-Els amics d'Obenc, el Cristian per tantes aventures que em viscut aquests anys.
+Els amics d'Obenc, el Cristian pels canvis que hem viscut aquests anys.
 En Daniel per ensenyar-me que el temps no es barrera per fer coses (Encara no m'has presentat els teus gossos!). 
 A en Lluís que tampoc no pares mai i m'has transmés la teva gran ambició.
 A en Ricard per totes les discussions sobre el futur profesional, de la programació, els jocs, películes i tantes coses, segur que trobes una manera de passar al seguent nivell!
@@ -50,11 +52,12 @@ A en Joaquín per ensenyar-me el món empresarial de software i tants detalls t�
 A tots els que han vingut a fútbol, en especial al Josep Mª per ser l'incansable impulsor i treure gent de sota les pedres i a en Josep per ser el més constant, ja chutaré més sovint!
 
 I also received  many help from numerous and anonymous people from several corners of the world.
-They might have shared some interesting tip, advice or tale on twitter, or answered my questions on [Bioconductor's support forum](https://support.bioconductor.org), [Biostars](https://biostars.org), [Bioinformatics SE](https://bioinformatics.stackexchange.com/) or Stackexchange network. 
-Also those that made and provided the software for free that made all this possible on your own time, R core, CRAN, Bioconductor and rOpenSci team, package developers and maintainers of the ~500 packages I use. 
+They might have shared some interesting tip, advice or experiences on Twitter, or answered my questions on [Bioconductor's support forum](https://support.bioconductor.org), [Biostars](https://biostars.org), [Bioinformatics SE](https://bioinformatics.stackexchange.com/) or Stackexchange network. 
+Also those that made and provided the software for free that made all this possible on your own time, R core, CRAN, Bioconductor and rOpenSci teams, package developers and maintainers of the ~500 packages I use. 
 
+Thanks to those that made possible accessing their data without problems.
 Dr. Häsler for kindly providing data of the samples from their cohort and Dr. Cristian Hernández and Dr. Mark S. Silverber for their collaboration and selfless sharing the data of their cohort.
 
-Last but not least, those without all this could not be possible. 
-Thanks to all the patients that allowed clinicians to collect samples and data for research. 
-I hope that the knowledge we gain with on this thesis and other studies will bring us closer to heal you. 
+Last but not least, those without all this could not have been possible: 
+Thanks to all the patients that participated on the studies and allowed clinicians to collect samples and data for research. 
+I hope that the knowledge we gain with on this thesis and other studies will bring us closer to heal this disease. 
