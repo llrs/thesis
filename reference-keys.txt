@@ -85,6 +85,7 @@ tab:appendix-methods
 tab:BARCELONA
 fig:barcelona-diversity
 tab:hernandez
+fig:unnamed-chunk-5
 tab:hsct-genes
 tab:hsct-genes-1-2
 tab:hsct-genes-2-2
@@ -212,6 +213,7 @@ by-projectpublication
 articles
 app-multiomics
 app-experDesign
+app-upa
 other-datasets
 barcelona
 hernandez
