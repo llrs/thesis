@@ -227,7 +227,7 @@ This article is not part of the PhD thesis, but included here for completeness.
 cat("The same article can be find below.")
 ```
 
-\includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - \voffset}, trim=0 0 0 20pt,]{paper_upa.pdf}
+\includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - \voffset}, trim=0 0 0 20pt,]{paper_celest.pdf}
 
 
 # Other datasets
