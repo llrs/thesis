@@ -131,7 +131,7 @@ For the bootstrap procedure there is the function `boot_index` to create the boo
 If the bootstrapped samples used is not important one can use `boot_samples_sgcca`.
 If the users want to perform a leave-one-out procedure they can use `looIndex`.
 
-```{r intermodel-workflows, fig.scap="inteRmodel functions and workflow.", fig.cap="`inteRmodel` functions and workflow. Functions provided by the inteRmodel package to search and validate models of relationships using RGCCA. Created with BioRender.com"}
+```{r intermodel-workflows, fig.scap="inteRmodel functions and workflow.", fig.cap="`inteRmodel` functions and workflow. Functions provided by the inteRmodel package to help on the process, search and validate models of relationships using RGCCA. Created with BioRender.com"}
 include_graphics("images/inteRmodel-workflows.png")
 ```
 
@@ -160,13 +160,13 @@ The horst and the centroid scheme were similar while the factorial resulted in t
 The centroid scheme was selected because it takes into account all the relationship regardless of the sign of the canonical correlation between the blocks.
 It is similarity to horst scheme.
 
-The effect of the sparsity value was measured by its effect on the inner AVE scores and the combination of the different values for each block as can be seen on Figure \@ref(fig:puget-tau2AVE).
+The effect of the sparsity value was measured by its effect on the inner AVE scores and the combination of the different values for each block as can be seen in figure \@ref(fig:puget-tau2AVE).
 
 ```{r puget-tau2AVE, fig.cap="Effect of tau on the inner AVE on Puget's dataset. The suggested tau value is the column between the regular grid, on the ordinate axis the y's tau values and on the abscissa the gene expression (GE) on the left and the comparative genomic hybridization (CGH) on the right. The highest inner AVE is with high tau values for y and middle to upper values for GE and CGH.", fig.scap="Effect of tau on the inner AVE on Puget's dataset."}
 knitr::include_graphics("images/pugets_tau_to_AVE.png")
 ```
 
-The first model of the family of models 1 can be seen on Table \@ref(tab:puget-model1):
+The first model of the family of models 1 can be seen in table \@ref(tab:puget-model1):
 
 
 ```{r puget-model1}
@@ -185,7 +185,7 @@ format_design(k, df)
 ```
 
 
-When looking for the model that adjust better following this structure we arrived to model 1.2, described below (Table \@ref(tab:puget-model1-2)) :
+When looking for the model that adjust better following this structure we arrived to model 1.2, described in (Table \@ref(tab:puget-model1-2)).
 
 
 ```{r puget-model1-2}
@@ -273,7 +273,7 @@ format_design(k, df)
 ```
 
 Exploratory analysis with the superblock model was done.
-The first two components of the superblock did not help to explain the biology or classify the tumors (See \@ref(fig:puget-superblock)):
+The first two components of the superblock did not help to explain the biology or classify the tumors (See figure \@ref(fig:puget-superblock)):
 
 ```{r puget-superblock, fig.cap="First components of the superblock which has all the data of the samples on the Puget's dataset.", fig.scap="Superblock components on Puget's dataset"}
 knitr::include_graphics("images/pugets_superblock.png")
@@ -297,7 +297,7 @@ To find these models the three blocks with the best tau and the centroid scheme 
 According to the inner AVE, the best model was the one in which the weights (1) between the host transcriptome and location, (2) the host transcriptome and the CGH, and (3) the CGH block were linked to variables related to the location with weights of 1, 0.1 and 0.1, respectively.
 
 When we added a superblock to the data, there was a slight increase of 0.01 on the inner AVE of the model (See Table \@ref(tab:puget-models-ave)).
-The model with the superblock that explained most of the variance was that in which the weights of the interaction within (1) the host transcriptome, (2) between the superblock and the CGH, (3) between the host transcriptome and the localization, and (4) between CGH and the host transcriptome were 1, 1, 1 and 1/3, respectively (See table \@ref(tab:puget-model-superblock-2).
+The model with the superblock that explained most of the variance was that in which the weights of the interaction within (1) the host transcriptome, (2) between the superblock and the CGH, (3) between the host transcriptome and the localization, and (4) between CGH and the host transcriptome were 1, 1, 1 and 1/3, respectively (See table \@ref(tab:puget-model-superblock-2)).
 To see if the superblock could classify the sample by location, we plotted the first two components of the superblock.
 
 We can clearly see that they do not classify the samples according to the location of the tumor, which is known to affect the tumor phenotype [@puget2012].
@@ -388,7 +388,7 @@ knitr::include_graphics("images/hsct-ASV-diversity.png")
 Diversity indices of the samples were explored and compared for several subsets.
 Splitting by location of the sample and disease provided the highest differences and the diversity index along time did not change much.
 
-The PCA didn't show any pattern on the microbiome according to the location, as can be seen on the first dimensions of the PCA on figure \@ref(fig:hsct-pca-16s):
+The PCA didn't show any pattern on the microbiome according to the location, as can be seen in the first dimensions of the PCA in figure \@ref(fig:hsct-pca-16s):
 
 ```{r hsct-pca-16s, fig.scap="PCA of 16S data of the HSCT dataset.", fig.cap = "PCA of the 16S data of the HSCT dataset. Samples colored by location of the segment. There are no clear patterns according to the location."}
 include_graphics("images/HSCT_PCA_16S.png")
@@ -401,7 +401,7 @@ include_graphics("images/HSCT_PCA_RNAseq.png")
 ```
 
 Weighted gene co-expression network analysis did not provide relevant links between bacteria and transcriptome as it failed to find an acceptable scale free degree.
-As can be seen on the Figure \@ref(fig:hsct-wgcna-power), the scale free topology does not reach the recommended threshold of 0.9 and the mean connectivity is also very low even for the first power.
+As can be seen in the figure \@ref(fig:hsct-wgcna-power), the scale free topology does not reach the recommended threshold of 0.9 and the mean connectivity is also very low even for the first power.
 
 ```{r hsct-wgcna-power, fig.scap="Power evaluation of WGCNA of the HSCT dataset.", fig.cap="Power evaluation of WGCNA of the HSCT dataset. On the ordinate the power on the abscissa on the left the scale free topology model fit; on the right the mean connectivity. There is a low fit even on large power and the mean connectivity is below 100 from the very first value."}
 include_graphics("images/hsct-wgcna-power.png")
@@ -452,7 +452,7 @@ k <- kable(df, align = rep("c", ncol(df)),
 format_design(k, df)
 ```
 
-When looking for the model that adjust better following this blocks we arrived to model 1.2 thanks to `inteRmodel`, described below on table \@ref(tab:hsct-model1-2):
+When looking for the model that adjust better following this blocks we arrived to model 1.2 thanks to `inteRmodel`, described in table \@ref(tab:hsct-model1-2).
 
 ```{r hsct-model1-2}
 df <- data.frame(
@@ -487,7 +487,7 @@ k <- kable(df, align = rep("c", ncol(df)),
 format_design(k, df)
 ```
 
-Following this split, we used `inteRmodel` (See section above \@ref(intermodel)) to find the model that has higher inner AVE for these blocks is the one on table \@ref(tab:hsct-model2-2):
+Following this split, we used `inteRmodel` (See section above \@ref(intermodel)) to find the model that has higher inner AVE for these blocks is the one in table \@ref(tab:hsct-model2-2):
 
 ```{r hsct-model2-2}
 df <- data.frame(
@@ -506,7 +506,7 @@ k <- kable(df, align = rep("c", ncol(df)),
 format_design(k, df)
 ```
 
-We also tested specifically a model from the family 2.3, which can be seen on table \@ref(tab:hsct-model2-3):
+We also tested specifically a model from the family 2.3, which can be seen in table \@ref(tab:hsct-model2-3):
 
 ```{r hsct-model2-3}
 df <- data.frame(
@@ -568,13 +568,13 @@ include_graphics("images/hsct-bootstrap.png")
 With the bootstrapped models we used BaseSet to estimate the probability that each variable to be relevant for the association with a disease.
 However, due to big amount of small probabilities when using the BaseSet package to calculate which variables are more relevant it could not provide a good estimation on time.
 
-MCIA was applied as a baseline of the integration, the first two components were represented similarly to those of the blocks when using RGCCA \@ref(fig:hsct-mcia).
+MCIA was applied as a baseline of the integration, the first two components were represented similarly to those of the blocks when using RGCCA, see figure \@ref(fig:hsct-mcia) of its outcome.
 
 ```{r hsct-mcia, fig.scap="MCIA dimensions in the HSCT dataset.", fig.cap="MCIA dimensions in the HSCT dataset. MCIA first two synthetic variables. In red circles the colon and in blue triangles the ileum."}
 include_graphics("images/hsct-mcia.png")
 ```
 
-The AUC of classifying the transcriptome in colon or ileum segments was compared between the models (see \@ref(fig:hsct-auc-plot) and with MCIA.
+The AUC of classifying the transcriptome in colon or ileum segments was compared between the models (see figure  \@ref(fig:hsct-auc-plot) and with MCIA.
 
 ```{r hsct-auc-plot, fig.scap="AUC of the RGCCA models in the HSCT dataset.", fig.cap="AUC of the RGCCA models in the HSCT dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the HSCT dataset."}
 include_graphics("images/hsct-auc-models.png")
@@ -595,27 +595,29 @@ format_design(k, df)
 
 
 On MCIA the AUC for the classification of ileum or colon samples is of 0.9851 once those two samples with unknown location are excluded. 
-This is on par with the models of family 2 as can be seen on the table \@ref(tab:hsct-auc).
+This is on par with the models of family 2 as can be seen in the table \@ref(tab:hsct-auc).
 
-The different models selected different variables as can be seen below:
+The different models selected different variables as can be seen in figure \@ref(fig:hsct-features).
 
 ```{r hsct-features, fig.scap="Upset plot of variables selected in the HSCT dataset.", fig.cap="Upset plot of variables selected in the HSCT dataset. The variables selected on each model from 0 to 2.3 showing the intersection between them regarding genes, panel A, and OTUs, panel B."}
 include_graphics("images/hsct-features.png")
 ```
 
 
-Differences and similarities between the selected features of each model can be observed on Figure \@ref(fig:hsct-features).
+Differences and similarities between the selected features of each model can be observed in figure \@ref(fig:hsct-features).
 Genes are very similar between model 0 to 1.2 and between 2 to 2.3, while OTUs are very unique on model 0 and others shared between most models.
+
+\FloatBarrier
 
 ### Häsler's dataset {#results-hasler}
 
-If we look at the dataset 16S, the PCA doe not show a pattern as can be seen on figure \@ref(fig:hasler-pca-16s):
+If we look at the dataset 16S, the PCA doe not show a pattern as can be seen in figure \@ref(fig:hasler-pca-16s).
 
 ```{r hasler-pca-16s, fig.scap="PCA of 16S of the Häsler's dataset.", fig.cap = "PCA of 16S of Häsler's dataset colored by the location of the samples."}
 include_graphics("images/hasler_PCA_16S.png")
 ```
 
-The PCA on the transcriptome shows a distinction between colon and ileum according to the first dimension of the pca that can be seen on \@ref(fig:hasler-pca-rnaseq):
+The PCA on the transcriptome shows a distinction between colon and ileum according to the first dimension of the PCA that can be seen in figure \@ref(fig:hasler-pca-rnaseq).
 
 ```{r hasler-pca-rnaseq, fig.scap="PCA of RNAseq of the Häsler's dataset.", fig.cap = "PCA of RNAseq of the Häsler's dataset. The samples are colored by location sigma and ileum. There are two clear groups according to the location."}
 include_graphics("images/hasler_PCA_RNAseq.png")
@@ -642,7 +644,7 @@ k <- kable(m0, align = rep("c", ncol(m0)),
 format_design(k, m0)
 ```
 
-The first model for family 1 is on table \@ref(tab:hasler-model-1-1):
+The first model for family 1 is in table \@ref(tab:hasler-model-1-1):
 
 ```{r hasler-model-1-1}
 df <- data.frame(
@@ -658,7 +660,7 @@ k <- kable(df, align = rep("c", ncol(df)),
 format_design(k, df)
 ```
 
-The after optimization of the model of family 1, the best one is on table \@ref(tab:hasler-model-1-2):
+The after optimization of the model of family 1, the best one is in table \@ref(tab:hasler-model-1-2):
 
 ```{r hasler-model-1-2}
 df <- data.frame("Model 1.2" = c("RNAseq", "micro", "meta"),
@@ -673,7 +675,7 @@ k <- kable(df,
 format_design(k, df)
 ```
 
-The first model for family 2 is on table \@ref(tab:hasler-model-2-1):
+The first model for family 2 is in table \@ref(tab:hasler-model-2-1):
 
 ```{r hasler-model-2-1}
 df <- data.frame(list(
@@ -690,7 +692,7 @@ k <- kable(df, align = rep("c", ncol(df)),
 format_design(k, df)
 ```
 
-After optimization of models of family 1 the best model according to the inner AVE score is on table \@ref(tab:hasler-model-2-2):
+After optimization of models of family 1 the best model according to the inner AVE score is in table \@ref(tab:hasler-model-2-2):
 
 ```{r hasler-model-2-2}
 df <- data.frame(list("Model 2.2" = c("RNAseq", "micro", "Location", "Demographic", "Time"), 
@@ -705,7 +707,7 @@ k <- kable(df, align = rep("c", ncol(df)),
 format_design(k, df)
 ```
 
-On table \@ref(tab:hasler-aves), we can see here the AVE scores of each of the previous models:
+In table \@ref(tab:hasler-aves), we can see here the AVE scores of each of the previous models:
 
 ```{r hasler-aves}
 df <- data.frame(Model = c("0", "1.1", "1.2", "2.1", "2.2"),
@@ -722,7 +724,7 @@ In contrast to the HSCT's dataset (table \@ref(tab:hsct-models-ave)), the model 
 Model 2.2 has a relationship of 0.1 between microbiome and the host transcriptome and of 1 between the location and the host transcriptome.
 The microbiome block is also related by a factor of 0.1 with the demographic block and of 1 with the time block.
 Lastly, the time and the demographic block are related by a factor of a 0.1.
-In either case the family 1 and family 2 models can correctly separate by sample location (colon or ileum) but not by disease type or inflammation status as can be seen on figure \@ref(fig:hasler-models).
+In either case the family 1 and family 2 models can correctly separate by sample location (colon or ileum) but not by disease type or inflammation status as can be seen in figure \@ref(fig:hasler-models).
 
 ```{r hasler-models, fig.scap="Models from inteRmodel in the Häsler's datset.", fig.cap="Models from inteRmodel in the Häsler's dataset. Model 0 with just the transcriptome and microbiome data. Models 1.1 to 1.2 with transcriptome, microbiome and sample data in a single block. Models 2.1 and 2.2 with transcriptome, microbiome and sample data in multiple blocks. On the A panel colored by disease on the B panel colored by location of the sample."}
 include_graphics("images/hasler-models.png")
@@ -737,7 +739,7 @@ The classification of samples was very accurate in all the models, specially on 
 include_graphics("images/hasler-auc.png")
 ```
 
-This accuracy resulted on high AUC values for all the models, as can be seen on table \@ref(tab:hasler-auc):
+This accuracy resulted on high AUC values for all the models, as can be seen in table \@ref(tab:hasler-auc):
 
 ```{r hasler-auc}
 df <- data.frame(
@@ -750,7 +752,7 @@ format_design(k, df)
 ```
 
 MCIA was applied as a baseline of the integration and compared to the different models to know which one separates best colon and ileum samples.
-The result on the first two dimension is shown on figure \@ref(fig:hasler-mcia):
+The result on the first two dimension is shown in figure \@ref(fig:hasler-mcia):
 
 ```{r hasler-mcia, fig.scap="MCIA dimensions in the Häsler's dataset.", fig.cap="MCIA dimensions in the Häsler's dataset. MCIA first two dimensions of the dataset colored by state, the shape is according to the location of the samples. Shows two vertical groups on the first syntethic dimension according to the location of the samples."}
 include_graphics("images/hasler-mcia.png")
@@ -759,20 +761,22 @@ include_graphics("images/hasler-mcia.png")
 MCIA's AUC results was as high as the model 2.2 to classify samples according to their location.
 It was even better to classify the samples according to the type of sample they are: 0.6248 vs 1 the best AUC from RGCCA that corresponds to model 1.2.
 
+\FloatBarrier
+
 ### Morgan's dataset {#results-morgan}
 
 To explore this dataset that is different from the others with IBD.
 
 The PCA didn't show any pattern on the microbiome according to the location, see figure \@ref(fig:morgan-pca-16s).
 
-```{r morgan-pca-16s, fig.scap="PCA of 16S of the Morgan's dataset", fig.cap="PCA of 16S of the Morgan's dataset. The sample are colored by location. "}
-include_graphics("images/morgan_pca_16S.png")
+```{r morgan-pca-16s, fig.scap="PCA of 16S of the Morgan's dataset", fig.cap="PCA of 16S of the Morgan's dataset. The sample are colored by location: red circles pouch, blue triangles pre-pouch ileum (PPI). There seems to be quite a diverse microbiota based on the first dimension."}
+include_graphics("images/PCA_16S_morgan.png")
 ```
 
-The PCA on the transcriptome did not show a clear distinction between the prepouch ileum and the pouch on figure \@ref(fig:morgan-pca-rnaseq) but there is a pattern:
+The PCA on the transcriptome did not show a clear distinction between the prepouch ileum (PPI) and the pouch in figure \@ref(fig:morgan-pca-rnaseq) but there is a pattern:
 
-```{r morgan-pca-rnaseq, fig.scap="PCA of RNAseq of the Morgan's dataset", fig.cap="PCA of RNAseq of the Morgan's dataset. The sample are colored by location. "}
-include_graphics("images/morgan_pca_RNAseq.png")
+```{r morgan-pca-rnaseq, fig.scap="PCA of RNAseq of the Morgan's dataset", fig.cap="PCA of RNAseq of the Morgan's dataset. The sample are colored by location: red circles pouch, blue triangles prepouch ileum (PPI). There is no clear separation of the two locations on the first dimensions of the PCA."}
+include_graphics("images/PCA_RNASeq_morgan.png")
 ```
 
 
@@ -811,7 +815,7 @@ format_design(k, df)
 ```
 
 
-When looking for the model that adjust better following this structure we arrived to model 1.2, described below:
+When looking for the model that adjust better following this structure we arrived to model 1.2, described in table \@ref(tab:morgan-model1-2):
 
 ```{r morgan-model1-2}
 df <- data.frame(
@@ -897,7 +901,7 @@ format_design(k, df)
 
 When exploring the bootstraps of the data we found that model 1.2 is highly variable:
 
-```{r morgan-bootstrap, fig.scap="AVE scores of bootstrapped models on Morgans' dataset.", fig.cap="Inner and outer AVE scores of the bootstrapped models 0 1.2 and 2.2. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptonme and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks."}
+```{r morgan-bootstrap, fig.scap="AVE scores of bootstrapped models on Morgans' dataset.", fig.cap="Inner and outer AVE scores of the bootstrapped models 0, 1.2 and 2.2 on the Morgan's dataset. Model 0 does not have sample data. The ellipses show a normal distribution Model 1.2 has microbiome, transcriptonme and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks. Model 2.2 shows less variance than all models but lower inner values than model 1.2. "}
 include_graphics("images/morgan_bootstrap.png")
 ```
 
@@ -981,14 +985,14 @@ format_design(k, df)
 ```
 
 
-Model 1.2 \@ref(tab:howell-model1-2) was the best according to the AVE score but perform worse when attempting to recreate known biological differences via classifying samples as we can see below \@ref(fig:howell-models):
+Model 1.2, in table \@ref(tab:howell-model1-2), was the best according to the AVE score but perform worse when attempting to recreate known biological differences via classifying samples as we can see in \@ref(fig:howell-models).
 
 ```{r howell-models, fig.scap="Models from inteRmodel in the Howell's datset.", fig.cap="Models from inteRmodel in the Howell's datset. The three main models, model 0, 1.2 and 2.2 on the Howell's dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks."}
 include_graphics("images/howell-models.png")
 ```
 
 Model 2.2 was selected for further analysis as it describes more accurately the biology of the dataset it.
-Model 2.2 can be seen on \@ref(tab:howell-model2-2).
+Model 2.2 can be seen in \@ref(tab:howell-model2-2).
 
 ```{r howell-model2-2}
 df <- data.frame(
@@ -1036,13 +1040,13 @@ While model 0 shows a high variation according to which samples are selected.
 include_graphics("images/howell-mcia.png")
 ```
 
-If we look at the classification of the models on figure \@ref(fig:howell-auc-plot), we can see that models 1.2, 2 and 2.2 classify perfectly the samples by the transcriptome into the location of the sample. 
+If we look at the classification of the models in figure \@ref(fig:howell-auc-plot), we can see that models 1.2, 2 and 2.2 classify perfectly the samples by the transcriptome into the location of the sample. 
 
 ```{r howell-auc-plot, fig.scap="AUC of the RGCCA models in the Howell's dataset.", fig.cap="AUC of the RGCCA models in the Howell's dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Howell's dataset."}
 include_graphics("images/howell-rgcca-auc.png")
 ```
 
-The AUC of each model can be seen on \@ref(tab:howell-auc):
+The AUC of each model can be seen in table \@ref(tab:howell-auc).
 
 ```{r howell-auc}
 df <- data.frame(

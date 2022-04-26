@@ -44,7 +44,7 @@ The protocol was approved by the Institutional Ethics Committee of the Hospital 
 
 At least one biopsy was collected and fresh-frozen at -80°C for microbial DNA extraction.
 The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen, Hilde, Germany) and stored at -80°C until total RNA extraction.
-In total 158 samples with both RNA and DNA extraction of the same segment and time were available \@ref(tab:HSCT):
+In total 158 samples with both RNA and DNA extraction of the same segment and time were available, check table  \@ref(tab:HSCT):
 
 | Characteristic                                       | HSCT        |
 |:-----------------------------------------------------|:-----------:|
@@ -164,7 +164,7 @@ It is an alternative to the use of OTUs which allows to compare results between 
 We used Silva v138.1 to annotate the 16S fragments whenever possible [@quast2013].
 If we did not have access to the direct ASV we used the annotation provided by the original authors of the dataset.
 
-```{r workflow-process, fig.scap="Workflow of the analysis process.", fig.cap="Workflow of the main analysis process of the thesis. Created with BioRender.com"}
+```{r workflow-process, fig.scap="Workflow of the analysis process.", fig.cap="Workflow of the main analysis process of the thesis. It shows the biopsy collection, extraction of genetic and transcriptomic material, sequencing and analysis. Created with BioRender.com"}
 knitr::include_graphics("images/workflow_integration2.png")
 ```
 

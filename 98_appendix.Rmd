@@ -267,7 +267,7 @@ The sequence of the primers used was:
 
 The result of MiSeq Nano were processed with bcl2fastq (v1.8.4).
 
-This dataset was processed as usual but as part of the quality controls of the dataset the diversity measures of the samples was analyzed on \@ref(fig:barcelona-diversity):
+This dataset was processed as usual but as part of the quality controls of the dataset the diversity measures of the samples was analyzed and displayed in figure \@ref(fig:barcelona-diversity):
 
 ```{r barcelona-diversity, fig.cap = "Diversity indices of Barcelona according to the location and disease status. There is a lot of diversity between different groups but importantly the control samples overlap with the patients with inflammatory bowel disease.", fig.scap = "Diversity indices of Barcelona according to the location and disease status."}
 knitr::include_graphics("images/barcelona-diversity.png")
