@@ -216,6 +216,20 @@ cat("The same article can be find below.")
 
 \includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - \voffset}, trim=0 0 0 20pt,]{paper_experDesign.pdf}
 
+## Randomized Controlled Trial Substudy of Cell-specific Mechanisms of Janus Kinase 1 Inhibition With Upadacitinib in the Crohn’s Disease Intestinal Mucosa: Analysis From the CELEST Study {#app-upa}
+
+\sectionmark{CELEST: paper}
+
+Article peer-reviewed published on 2021, freely [available online](https://joss.theoj.org/papers/10.21105/joss.03358). 
+This article is not part of the PhD thesis, but included here for completeness.
+
+```{r, echo=FALSE, eval=!knitr::is_html_output(excludes = "epub"), results='asis'}
+cat("The same article can be find below.")
+```
+
+\includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - \voffset}, trim=0 0 0 20pt,]{paper_upa.pdf}
+
+
 # Other datasets
 
 ## BARCELONA dataset {#barcelona}
