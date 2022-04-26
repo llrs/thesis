@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-04-25" />
+<meta name="date" content="2022-04-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -71,6 +71,15 @@
 <meta property="article:author" content="Llu&lt;U+00ED&gt;s Revilla Sancho"/>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EN2MTH2FCR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EN2MTH2FCR');
+    </script>
 
 
 
@@ -237,6 +246,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="C.1" data-path="articles.html"><a href="articles.html#app-multiomics"><i class="fa fa-check"></i><b>C.1</b> Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a></li>
 <li class="chapter" data-level="C.2" data-path="articles.html"><a href="articles.html#app-experDesign"><i class="fa fa-check"></i><b>C.2</b> experDesign: stratifying samples into batches with minimal bias</a></li>
+<li class="chapter" data-level="C.3" data-path="articles.html"><a href="articles.html#app-upa"><i class="fa fa-check"></i><b>C.3</b> Randomized Controlled Trial Substudy of Cell-specific Mechanisms of Janus Kinase 1 Inhibition With Upadacitinib in the Crohn’s Disease Intestinal Mucosa: Analysis From the CELEST Study</a></li>
 </ul></li>
 <li class="chapter" data-level="D" data-path="other-datasets.html"><a href="other-datasets.html"><i class="fa fa-check"></i><b>D</b> Other datasets</a>
 <ul>
@@ -407,7 +417,14 @@ In addition, asymptomatic healthy controls (HC) were recruited during routine, a
 <h3><span class="header-section-number">D.2.1</span> Results<a href="other-datasets.html#results-hernandez" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>It substitutes the BARCELONA dataset to confirm the results on the previous datasets.
 However, at the time of writing the process is not complete.</p>
-<!--# TODO add plots and tables -->
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="images/hernandez_PCA_RNAseq.png" alt="PCA of RNASeq of the Hernandez's dataset. The plot shows a clear separation between colon and ileum for most samples except for some that seem mislabeled." width="100%" />
+<p class="caption">
+Figure D.2: PCA of RNASeq of the Hernandez’s dataset. The plot shows a clear separation between colon and ileum for most samples except for some that seem mislabeled.
+</p>
+</div>
+<p>There seems to be some samples that might be mislabeled as their corresponding RNA profile does not match those samples of the similar location.
+This could be from taking the sample from a region near a surgery, for which the expression profile might not match the usual patterns.</p>
 </div>
 </div>
 </div>

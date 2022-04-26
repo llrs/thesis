@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-04-25" />
+<meta name="date" content="2022-04-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -71,6 +71,15 @@
 <meta property="article:author" content="Llu&lt;U+00ED&gt;s Revilla Sancho"/>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EN2MTH2FCR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EN2MTH2FCR');
+    </script>
 
 
 
@@ -237,6 +246,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="C.1" data-path="articles.html"><a href="articles.html#app-multiomics"><i class="fa fa-check"></i><b>C.1</b> Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a></li>
 <li class="chapter" data-level="C.2" data-path="articles.html"><a href="articles.html#app-experDesign"><i class="fa fa-check"></i><b>C.2</b> experDesign: stratifying samples into batches with minimal bias</a></li>
+<li class="chapter" data-level="C.3" data-path="articles.html"><a href="articles.html#app-upa"><i class="fa fa-check"></i><b>C.3</b> Randomized Controlled Trial Substudy of Cell-specific Mechanisms of Janus Kinase 1 Inhibition With Upadacitinib in the Crohn’s Disease Intestinal Mucosa: Analysis From the CELEST Study</a></li>
 </ul></li>
 <li class="chapter" data-level="D" data-path="other-datasets.html"><a href="other-datasets.html"><i class="fa fa-check"></i><b>D</b> Other datasets</a>
 <ul>
@@ -292,21 +302,24 @@ div.csl-indent {
   </div>
 <div id="acknowledgments" class="section level1 hasAnchor" number="7">
 <h1><span class="header-section-number">Chapter 7</span> Acknowledgments<a href="acknowledgments.html#acknowledgments" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>A la directora, tutora, jefa i tants papers que fas, moltes gràcies Azu per haver estat a sobre de la tesis, he aprés molt de tot sobre com treballar amb intensitat i eficiencia, tocant de peus a terra. També per preguntar i tenir presents sobre com es pot fer servir això i com pot ajudar cada idea que tenia.</p>
-<p>Gràcies Juanjo per donar-me la oportunitat d’entrar a IDIBAPS i per tota la ajuda al llarg d’aquests anys per ser un bioinformàtic independent. Sempre has estat disponible quan no sabia com seguir i aportaves alguna idea o paquet per probar.</p>
+<p>A la directora, tutora, jefa i tants papers que fas, moltes gràcies Azu per haver estat a sobre de la tesis, he aprés molt de tot sobre com treballar amb intensitat i eficiencia, tocant de peus a terra.
+També per preguntar i tenir presents sobre com es pot fer servir això i com pot ajudar cada idea que tenia.</p>
+<p>Gràcies Juanjo per donar-me la oportunitat d’entrar a IDIBAPS i per tota la ajuda al llarg d’aquests anys per apendre a ser un bioinformàtic independent.
+Sempre has estat disponible quan no sabia com seguir i aportaves alguna idea o paquet per probar.</p>
 <p>A tot el laboratori per el bon ambient que hi ha hagut fent les alegries més grans al llarg de aquests anys i les adversitats més lleugeres.
 Cadascú ho ha fet a la seva manera: a l’Ana per ser el complement perfecte de l’equip bioinformàtic i sempre estar disponible per aconsellar-me.
-L’Alba pel seu optimisme i perseverancia, también por tu buen criterio diseñando, espero que algo se me pegue.
+L’Alba pel seu optimisme, perseverancia i ambició, también por tu buen criterio diseñando, espero que algo se me pegue.
 A l’Isa pel seu detallisme i exemple de fer bé les coses, les orquidies siempre están preciosas!
 La Marisol per la seva senzillesa i estar sempre pendent dels petits detalls de la paperasa.
-La Elisa per la seva alegria i il·lusió que mai defalleixen i s’encomanen.
+La Elisa per encomanar la seva alegria i il·lusió que mai defalleixen.
 La Victòria per la seva paciència i consells sobre com descriure els projectes.
-L’Angela per acceptar amb paciència les meves sortides friquis.
+L’Angela por tu paciencia con mis salidas friquis.
 La Míriam perqué sempre ens toca moure trastos, a veure si algun dia montem el wallapop científic! i l’Iris que sempre té alguna cosa a aportar.<br />
 Moltes gràcies a totes, només lamento no haver aprés més de vosaltres.</p>
 <p>Hi ha persones que estan sempre com la Pepa, gràcies per no tancar-me mai el email, i altres que marxen a altres projectes.
 Gràcies per compartir una part d’aquest projecte amb mí:
-l’Aida per tota l’empenta que ha posat en aquests anys, moltes gràcies per introduir-me en el món de la microbiota! també per la teva acollida al lab. La Montse per organitzar els primers viatges fòra i ensenyar-me a organitzar-me.
+l’Aida per la teva acollida al lab i per tota l’empenta que ha posat en aquests anys, moltes gràcies per introduir-me en el món de la microbiota!
+La Montse per organitzar els primers viatges fòra i ensenyar-me a organitzar-me.
 La Núria per introduir-me en el grup i animar-me a fer el doctorat amb l’Azu.
 També en Daniel pel curset de processament de RNAseq.</p>
 <p>A tots de l’equip de l’hospital, per intentar entendre aquestes caixes negres de les tesis i ajudar a que no perdi de vista l’objectiu de la recerca; en especial al Julià, per fer sempre les millors preguntes i a la Maica per resoldre molts dubtes a l’inici.</p>
@@ -318,27 +331,27 @@ A la Maria per convidar-me sovint a casa seva a descansar.
 A la Maria del Mar per la teva alegria i plantejar reptes amb el python.
 A la Marta pels consells, el cotxe i les excursions.
 A l’Ana per seguir amb interés la investigació i estar pendent dels avanços sobre la microbiota.
-A l’Albert per convidar-me a dinar sovint i conèixer racons i històries de Barcelona o la familia.</p>
-<p>Als amics de Xaloc, en Mario per posar la casa tantes vegades al llarg de la tesis, un día tienes que venir a la mía!
+A l’Albert per convidar-me a dinar sovint i conèixer racons i històries de Barcelona.</p>
+<p>Als amics en especial, en Mario per posar la casa tantes vegades al llarg de la tesis, un día tienes que venir a la mía!
 L’Albert Mateo per les refrescants sortides en bici i excursions, a ver si hacemos más y con todos!
-A, l’Alejandro que sempre ha estat un suport moral com a doctorand.
-En Bruno per acollir-me a casa seva (he de repetir la visita a Munich!).
+L’Alejandro que sempre ha estat un suport moral com a doctorand.
 A l’Edu per estar sempre disposat a acostar-me en cotxe o trobar un lloc fàcil d’arribar en transport públic.
-Als amics de la carrera, en Frederic per compartir molts dinars, penes i alegries.
+En Frederic per compartir molts dinars, penes i alegries.
 En Joan per marcar el camí, sempre has estat per davant! i l’Aleix, espero que la bioinformàtica vagi a més!</p>
-<p>Els amics d’Obenc, el Cristian per tantes aventures que em viscut aquests anys.
+<p>Els amics d’Obenc, el Cristian pels canvis que hem viscut aquests anys.
 En Daniel per ensenyar-me que el temps no es barrera per fer coses (Encara no m’has presentat els teus gossos!).
 A en Lluís que tampoc no pares mai i m’has transmés la teva gran ambició.
 A en Ricard per totes les discussions sobre el futur profesional, de la programació, els jocs, películes i tantes coses, segur que trobes una manera de passar al seguent nivell!
 A en Joaquín per ensenyar-me el món empresarial de software i tants detalls tècnics.
 A tots els que han vingut a fútbol, en especial al Josep Mª per ser l’incansable impulsor i treure gent de sota les pedres i a en Josep per ser el més constant, ja chutaré més sovint!</p>
 <p>I also received many help from numerous and anonymous people from several corners of the world.
-They might have shared some interesting tip, advice or tale on twitter, or answered my questions on <a href="https://support.bioconductor.org">Bioconductor’s support forum</a>, <a href="https://biostars.org">Biostars</a>, <a href="https://bioinformatics.stackexchange.com/">Bioinformatics SE</a> or Stackexchange network.
-Also those that made and provided the software for free that made all this possible on your own time, R core, CRAN, Bioconductor and rOpenSci team, package developers and maintainers of the ~500 packages I use.</p>
-<p>Dr. Häsler for kindly providing data of the samples from their cohort and Dr. Cristian Hernández and Dr. Mark S. Silverber for their collaboration and selfless sharing the data of their cohort.</p>
-<p>Last but not least, those without all this could not be possible.
-Thanks to all the patients that allowed clinicians to collect samples and data for research.
-I hope that the knowledge we gain with on this thesis and other studies will bring us closer to heal you.</p>
+They might have shared some interesting tip, advice or experiences on Twitter, or answered my questions on <a href="https://support.bioconductor.org">Bioconductor’s support forum</a>, <a href="https://biostars.org">Biostars</a>, <a href="https://bioinformatics.stackexchange.com/">Bioinformatics SE</a> or Stackexchange network.
+Also those that made and provided the software for free that made all this possible on your own time, R core, CRAN, Bioconductor and rOpenSci teams, package developers and maintainers of the ~500 packages I use.</p>
+<p>Thanks to those that made possible accessing their data without problems.
+Dr. Häsler for kindly providing data of the samples from their cohort and Dr. Cristian Hernández and Dr. Mark S. Silverber for their collaboration and selfless sharing the data of their cohort.</p>
+<p>Last but not least, those without all this could not have been possible:
+Thanks to all the patients that participated on the studies and allowed clinicians to collect samples and data for research.
+I hope that the knowledge we gain with on this thesis and other studies will bring us closer to heal this disease.</p>
 
 </div>
             </section>

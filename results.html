@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-04-25" />
+<meta name="date" content="2022-04-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -71,6 +71,15 @@
 <meta property="article:author" content="Llu&lt;U+00ED&gt;s Revilla Sancho"/>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EN2MTH2FCR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EN2MTH2FCR');
+    </script>
 
 
 
@@ -237,6 +246,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="C.1" data-path="articles.html"><a href="articles.html#app-multiomics"><i class="fa fa-check"></i><b>C.1</b> Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a></li>
 <li class="chapter" data-level="C.2" data-path="articles.html"><a href="articles.html#app-experDesign"><i class="fa fa-check"></i><b>C.2</b> experDesign: stratifying samples into batches with minimal bias</a></li>
+<li class="chapter" data-level="C.3" data-path="articles.html"><a href="articles.html#app-upa"><i class="fa fa-check"></i><b>C.3</b> Randomized Controlled Trial Substudy of Cell-specific Mechanisms of Janus Kinase 1 Inhibition With Upadacitinib in the Crohn’s Disease Intestinal Mucosa: Analysis From the CELEST Study</a></li>
 </ul></li>
 <li class="chapter" data-level="D" data-path="other-datasets.html"><a href="other-datasets.html"><i class="fa fa-check"></i><b>D</b> Other datasets</a>
 <ul>
@@ -412,23 +422,23 @@ Figure 4.3: Effect of tau on the inner AVE on Puget’s dataset. The suggested t
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 1
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 GE
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 CGH
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Localization
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 GE
 </td>
 <td style="text-align:center;">
@@ -437,12 +447,12 @@ GE
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 CGH
 </td>
 <td style="text-align:center;">
@@ -451,12 +461,12 @@ CGH
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Localization
 </td>
 <td style="text-align:center;">
@@ -465,7 +475,7 @@ Localization
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -478,23 +488,23 @@ Localization
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model.1.2
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 GE
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 CGH
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Localization
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 GE
 </td>
 <td style="text-align:center;">
@@ -503,12 +513,12 @@ GE
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1.0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 CGH
 </td>
 <td style="text-align:center;">
@@ -517,12 +527,12 @@ CGH
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Localization
 </td>
 <td style="text-align:center;">
@@ -531,7 +541,7 @@ Localization
 <td style="text-align:center;">
 0.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
@@ -544,26 +554,26 @@ Localization
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model.2
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 GE
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 CGH
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Invariable
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Localization
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 GE
 </td>
 <td style="text-align:center;">
@@ -575,12 +585,12 @@ GE
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 CGH
 </td>
 <td style="text-align:center;">
@@ -592,12 +602,12 @@ CGH
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Invariable
 </td>
 <td style="text-align:center;">
@@ -609,12 +619,12 @@ Invariable
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Localization
 </td>
 <td style="text-align:center;">
@@ -626,7 +636,7 @@ Localization
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -639,26 +649,26 @@ Localization
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model.2.2
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 GE
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 CGH
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Invariable
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Localization
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 GE
 </td>
 <td style="text-align:center;">
@@ -670,12 +680,12 @@ GE
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 CGH
 </td>
 <td style="text-align:center;">
@@ -687,12 +697,12 @@ CGH
 <td style="text-align:center;">
 1/3
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Invariable
 </td>
 <td style="text-align:center;">
@@ -704,12 +714,12 @@ Invariable
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Localization
 </td>
 <td style="text-align:center;">
@@ -721,7 +731,7 @@ Localization
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -734,26 +744,26 @@ Localization
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model.superblock
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 GE
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 CGH
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Superblock
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Localization
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 GE
 </td>
 <td style="text-align:center;">
@@ -765,12 +775,12 @@ GE
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 CGH
 </td>
 <td style="text-align:center;">
@@ -782,12 +792,12 @@ CGH
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Superblock
 </td>
 <td style="text-align:center;">
@@ -799,12 +809,12 @@ Superblock
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Localization
 </td>
 <td style="text-align:center;">
@@ -816,7 +826,7 @@ Localization
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -829,26 +839,26 @@ Localization
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model.superblock
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 GE
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 CGH
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Superblock
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Localization
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 GE
 </td>
 <td style="text-align:center;">
@@ -860,12 +870,12 @@ GE
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 CGH
 </td>
 <td style="text-align:center;">
@@ -877,12 +887,12 @@ CGH
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Superblock
 </td>
 <td style="text-align:center;">
@@ -894,12 +904,12 @@ Superblock
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Localization
 </td>
 <td style="text-align:center;">
@@ -911,7 +921,7 @@ Localization
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -963,81 +973,81 @@ Figure 4.6: Effect of superblock and weights on the inner AVE on Puget’s datas
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 inner AVE
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 outer AVE
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1
 </td>
 <td style="text-align:center;">
 0.6333592
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0692097
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.2
 </td>
 <td style="text-align:center;">
 0.8512360
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0692319
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2
 </td>
 <td style="text-align:center;">
 0.2791546
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0738695
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.2
 </td>
 <td style="text-align:center;">
 0.6902329
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0692707
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 superblock
 </td>
 <td style="text-align:center;">
 0.7055847
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0734578
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 superblock.2
 </td>
 <td style="text-align:center;">
 0.8047477
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0695821
 </td>
 </tr>
@@ -1058,103 +1068,103 @@ On the transcriptome the most important factor is location which is more than 15
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Factor
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 R
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 p-value
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location
 </td>
 <td style="text-align:center;">
 0.18057
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.00020
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 IBD
 </td>
 <td style="text-align:center;">
 0.03120
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.00020
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Sex
 </td>
 <td style="text-align:center;">
 0.01306
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.00120
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 IBD:Sex
 </td>
 <td style="text-align:center;">
 0.01279
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.11798
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location:IBD
 </td>
 <td style="text-align:center;">
 0.02427
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.11458
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location:Sex
 </td>
 <td style="text-align:center;">
 0.00816
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.03519
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location:IBD:Sex
 </td>
 <td style="text-align:center;">
 0.00486
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.52190
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Residuals
 </td>
 <td style="text-align:center;">
 0.72508
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 </td>
 </tr>
 </tbody>
@@ -1165,103 +1175,103 @@ Residuals
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Factor
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 R
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 p-value
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location
 </td>
 <td style="text-align:center;">
 0.06061
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0002000
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 IBD
 </td>
 <td style="text-align:center;">
 0.04967
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0002000
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Sex
 </td>
 <td style="text-align:center;">
 0.01712
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0003999
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 IBD:Sex
 </td>
 <td style="text-align:center;">
 0.01091
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.6604679
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location:IBD
 </td>
 <td style="text-align:center;">
 0.02089
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.8476305
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location:Sex
 </td>
 <td style="text-align:center;">
 0.01139
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0075918
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location:IBD:Sex
 </td>
 <td style="text-align:center;">
 0.00289
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.9994001
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Residuals
 </td>
 <td style="text-align:center;">
 0.82652
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 </td>
 </tr>
 </tbody>
@@ -1318,37 +1328,37 @@ Figure 4.11: Models in the HSCT dataset. On the abscissa the transcriptome, on t
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 0
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Transcriptome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Microbiome
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Transcriptome
 </td>
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Microbiome
 </td>
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -1361,23 +1371,23 @@ Microbiome
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 1.1
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Transcriptome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Microbiome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 metadata
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Transcriptome
 </td>
 <td style="text-align:center;">
@@ -1386,12 +1396,12 @@ Transcriptome
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Microbiome
 </td>
 <td style="text-align:center;">
@@ -1400,12 +1410,12 @@ Microbiome
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 metadata
 </td>
 <td style="text-align:center;">
@@ -1414,7 +1424,7 @@ metadata
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -1427,23 +1437,23 @@ metadata
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 1.2
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Transcriptome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Microbiome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 metadata
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Transcriptome
 </td>
 <td style="text-align:center;">
@@ -1452,12 +1462,12 @@ Transcriptome
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1.0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Microbiome
 </td>
 <td style="text-align:center;">
@@ -1466,12 +1476,12 @@ Microbiome
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 metadata
 </td>
 <td style="text-align:center;">
@@ -1480,7 +1490,7 @@ metadata
 <td style="text-align:center;">
 0.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
@@ -1493,29 +1503,29 @@ metadata
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 2
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Transcriptome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Microbiome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Demographic
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Location
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Time
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Transcriptome
 </td>
 <td style="text-align:center;">
@@ -1530,12 +1540,12 @@ Transcriptome
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Microbiome
 </td>
 <td style="text-align:center;">
@@ -1550,12 +1560,12 @@ Microbiome
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Demographic
 </td>
 <td style="text-align:center;">
@@ -1570,12 +1580,12 @@ Demographic
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location
 </td>
 <td style="text-align:center;">
@@ -1590,12 +1600,12 @@ Location
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Time
 </td>
 <td style="text-align:center;">
@@ -1610,7 +1620,7 @@ Time
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -1623,29 +1633,29 @@ Time
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 2.2
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Transcriptome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Microbiome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Demographic
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Location
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Time
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Transcriptome
 </td>
 <td style="text-align:center;">
@@ -1660,12 +1670,12 @@ Transcriptome
 <td style="text-align:center;">
 1.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Microbiome
 </td>
 <td style="text-align:center;">
@@ -1680,12 +1690,12 @@ Microbiome
 <td style="text-align:center;">
 0.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Demographic
 </td>
 <td style="text-align:center;">
@@ -1700,12 +1710,12 @@ Demographic
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.6
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location
 </td>
 <td style="text-align:center;">
@@ -1720,12 +1730,12 @@ Location
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Time
 </td>
 <td style="text-align:center;">
@@ -1740,7 +1750,7 @@ Time
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
@@ -1753,29 +1763,29 @@ Time
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 2.3
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Transcriptome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Microbiome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Demographic
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Location
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Time
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Transcriptome
 </td>
 <td style="text-align:center;">
@@ -1790,12 +1800,12 @@ Transcriptome
 <td style="text-align:center;">
 1.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Microbiome
 </td>
 <td style="text-align:center;">
@@ -1810,12 +1820,12 @@ Microbiome
 <td style="text-align:center;">
 0.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Demographic
 </td>
 <td style="text-align:center;">
@@ -1830,12 +1840,12 @@ Demographic
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location
 </td>
 <td style="text-align:center;">
@@ -1850,12 +1860,12 @@ Location
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Time
 </td>
 <td style="text-align:center;">
@@ -1870,7 +1880,7 @@ Time
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -1884,103 +1894,103 @@ Overall, we see that the relationships in the model affected the distribution of
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 inner AVE
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 outer AVE
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 0.0
 </td>
 <td style="text-align:center;">
 0.3999234
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1001689
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.0
 </td>
 <td style="text-align:center;">
 0.6230190
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0842333
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.1
 </td>
 <td style="text-align:center;">
 0.5678189
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0848714
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.2
 </td>
 <td style="text-align:center;">
 0.7043881
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0775766
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.0
 </td>
 <td style="text-align:center;">
 0.2517363
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0982050
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.1
 </td>
 <td style="text-align:center;">
 0.6940253
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0940266
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.2
 </td>
 <td style="text-align:center;">
 0.8187640
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0941628
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.3
 </td>
 <td style="text-align:center;">
 0.7761846
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0943938
 </td>
 </tr>
@@ -2027,76 +2037,76 @@ Figure 4.15: AUC of the RGCCA models in the HSCT dataset. The classification of 
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 AUC
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.4537037
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.4309414
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.4639275
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.2
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.5958719
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.9450231
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.9988426
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.2
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.9980710
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.3
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.9969136
 </td>
 </tr>
@@ -2144,37 +2154,37 @@ Figure 4.19: Changes on tau on the centroid scheme in the Häsler dataset affect
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 0
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 RNAseq
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 micro
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 RNAseq
 </td>
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 micro
 </td>
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -2187,23 +2197,23 @@ micro
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 1.1
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 RNAseq
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 micro
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 meta
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 RNAseq
 </td>
 <td style="text-align:center;">
@@ -2212,12 +2222,12 @@ RNAseq
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 micro
 </td>
 <td style="text-align:center;">
@@ -2226,12 +2236,12 @@ micro
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 meta
 </td>
 <td style="text-align:center;">
@@ -2240,7 +2250,7 @@ meta
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -2253,23 +2263,23 @@ meta
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 1.2
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 RNAseq
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 micro
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 meta
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 RNAseq
 </td>
 <td style="text-align:center;">
@@ -2278,12 +2288,12 @@ RNAseq
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1.0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 micro
 </td>
 <td style="text-align:center;">
@@ -2292,12 +2302,12 @@ micro
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 meta
 </td>
 <td style="text-align:center;">
@@ -2306,7 +2316,7 @@ meta
 <td style="text-align:center;">
 0.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
@@ -2319,29 +2329,29 @@ meta
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 2.1
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 RNAseq
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 micro
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Location
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Demographic
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Time
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 RNAseq
 </td>
 <td style="text-align:center;">
@@ -2356,12 +2366,12 @@ RNAseq
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 micro
 </td>
 <td style="text-align:center;">
@@ -2376,12 +2386,12 @@ micro
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location
 </td>
 <td style="text-align:center;">
@@ -2396,12 +2406,12 @@ Location
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Demographic
 </td>
 <td style="text-align:center;">
@@ -2416,12 +2426,12 @@ Demographic
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Time
 </td>
 <td style="text-align:center;">
@@ -2436,7 +2446,7 @@ Time
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -2449,29 +2459,29 @@ Time
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 2.2
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 RNAseq
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 micro
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Location
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Demographic
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Time
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 RNAseq
 </td>
 <td style="text-align:center;">
@@ -2486,12 +2496,12 @@ RNAseq
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 micro
 </td>
 <td style="text-align:center;">
@@ -2506,12 +2516,12 @@ micro
 <td style="text-align:center;">
 0.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1.0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location
 </td>
 <td style="text-align:center;">
@@ -2526,12 +2536,12 @@ Location
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Demographic
 </td>
 <td style="text-align:center;">
@@ -2546,12 +2556,12 @@ Demographic
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Time
 </td>
 <td style="text-align:center;">
@@ -2566,7 +2576,7 @@ Time
 <td style="text-align:center;">
 0.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
@@ -2579,70 +2589,70 @@ Time
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 inner AVE
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 outer AVE
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 0
 </td>
 <td style="text-align:center;">
 0.8217371
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0961236
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.1
 </td>
 <td style="text-align:center;">
 0.7461423
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1024148
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.2
 </td>
 <td style="text-align:center;">
 0.8349410
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1025486
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.1
 </td>
 <td style="text-align:center;">
 0.4980681
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1008395
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.2
 </td>
 <td style="text-align:center;">
 0.7513065
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1009915
 </td>
 </tr>
@@ -2674,52 +2684,52 @@ Figure 4.21: AUC of models with RGCCA in the Häsler’s dataset. The classifica
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 AUC
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.8011494
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.9781609
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.2
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.9977011
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1.0000000
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.2
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1.0000000
 </td>
 </tr>
@@ -2761,37 +2771,37 @@ The first model we tried is model 0 as in table <a href="results.html#tab:morgan
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 0
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Transcriptome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Microbiome
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Transcriptome
 </td>
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Microbiome
 </td>
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -2804,23 +2814,23 @@ Microbiome
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 1
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Transcriptome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Microbiome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 metadata
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Transcriptome
 </td>
 <td style="text-align:center;">
@@ -2829,12 +2839,12 @@ Transcriptome
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Microbiome
 </td>
 <td style="text-align:center;">
@@ -2843,12 +2853,12 @@ Microbiome
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 metadata
 </td>
 <td style="text-align:center;">
@@ -2857,7 +2867,7 @@ metadata
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -2870,23 +2880,23 @@ metadata
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 1.2
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Transcriptome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Microbiome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 metadata
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Transcriptome
 </td>
 <td style="text-align:center;">
@@ -2895,12 +2905,12 @@ Transcriptome
 <td style="text-align:center;">
 0.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Microbiome
 </td>
 <td style="text-align:center;">
@@ -2909,12 +2919,12 @@ Microbiome
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 metadata
 </td>
 <td style="text-align:center;">
@@ -2923,7 +2933,7 @@ metadata
 <td style="text-align:center;">
 1.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -2936,26 +2946,26 @@ metadata
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 2
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Transcriptome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Microbiome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Demographic
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Location
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Transcriptome
 </td>
 <td style="text-align:center;">
@@ -2967,12 +2977,12 @@ Transcriptome
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Microbiome
 </td>
 <td style="text-align:center;">
@@ -2984,12 +2994,12 @@ Microbiome
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Demographic
 </td>
 <td style="text-align:center;">
@@ -3001,12 +3011,12 @@ Demographic
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location
 </td>
 <td style="text-align:center;">
@@ -3018,7 +3028,7 @@ Location
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -3031,26 +3041,26 @@ Location
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 2.2
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Transcriptome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Microbiome
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Demographic
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Location
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Transcriptome
 </td>
 <td style="text-align:center;">
@@ -3062,12 +3072,12 @@ Transcriptome
 <td style="text-align:center;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Microbiome
 </td>
 <td style="text-align:center;">
@@ -3079,12 +3089,12 @@ Microbiome
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Demographic
 </td>
 <td style="text-align:center;">
@@ -3096,12 +3106,12 @@ Demographic
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 Location
 </td>
 <td style="text-align:center;">
@@ -3113,7 +3123,7 @@ Location
 <td style="text-align:center;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
@@ -3136,103 +3146,103 @@ Figure 4.25: Models from inteRmodel in the Morgan’s dataset. First component o
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 inner AVE
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 outer AVE
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 0.0
 </td>
 <td style="text-align:center;">
 0.4735601
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1098639
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.0
 </td>
 <td style="text-align:center;">
 0.6333592
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1152280
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.1
 </td>
 <td style="text-align:center;">
 0.2448234
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1104746
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.2
 </td>
 <td style="text-align:center;">
 0.7868443
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0422660
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.0
 </td>
 <td style="text-align:center;">
 0.4404123
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1088730
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.1
 </td>
 <td style="text-align:center;">
 0.6052598
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1074900
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.2
 </td>
 <td style="text-align:center;">
 0.6895661
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1081315
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.3
 </td>
 <td style="text-align:center;">
 0.6895661
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1081315
 </td>
 </tr>
@@ -3260,76 +3270,76 @@ Figure 4.27: AUC of RGCCA models in the Morgan’s dataset. The classification o
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 AUC
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.4969734
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.7934971
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.8161536
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.2
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.5606192
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.8546351
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.8473712
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.2
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.8352646
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.3
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.8352646
 </td>
 </tr>
@@ -3370,23 +3380,23 @@ This resulted on the following model <a href="results.html#tab:howell-model1-2">
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 1.2
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 RNAseq
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 16S
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 metadata
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 RNAseq
 </td>
 <td style="text-align:center;">
@@ -3395,12 +3405,12 @@ RNAseq
 <td style="text-align:center;">
 0.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 16S
 </td>
 <td style="text-align:center;">
@@ -3409,12 +3419,12 @@ RNAseq
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 metadata
 </td>
 <td style="text-align:center;">
@@ -3423,7 +3433,7 @@ metadata
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0
 </td>
 </tr>
@@ -3444,26 +3454,26 @@ Model 2.2 can be seen on <a href="results.html#tab:howell-model2-2">4.33</a>.</p
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model 2.2
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 RNAseq
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 16S
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 demographics
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 location
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 RNAseq
 </td>
 <td style="text-align:center;">
@@ -3475,12 +3485,12 @@ RNAseq
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1.0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 16S
 </td>
 <td style="text-align:center;">
@@ -3492,12 +3502,12 @@ RNAseq
 <td style="text-align:center;">
 1.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 demographics
 </td>
 <td style="text-align:center;">
@@ -3509,12 +3519,12 @@ demographics
 <td style="text-align:center;">
 0.0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 location
 </td>
 <td style="text-align:center;">
@@ -3526,7 +3536,7 @@ location
 <td style="text-align:center;">
 0.1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.0
 </td>
 </tr>
@@ -3540,48 +3550,48 @@ While model 2.2 has a relationship of 1 between location and transcriptome and d
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 Model
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 inner AVE
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 outer AVE
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 0.0
 </td>
 <td style="text-align:center;">
 0.7180980
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1112390
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.2
 </td>
 <td style="text-align:center;">
 0.8972258
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1660267
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.2
 </td>
 <td style="text-align:center;">
 0.8433274
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.1659844
 </td>
 </tr>
@@ -3615,52 +3625,52 @@ Figure 4.34: AUC of the RGCCA models in the Howell’s dataset. The classificati
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 model
 </th>
-<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;font-weight: bold;font-style: italic;">
+<th style="text-align:center;font-weight: bold;">
 AUC
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 0
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.6255259
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 0.5974755
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 1.2
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1.0000000
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1.0000000
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;border-left:1px solid;">
+<td style="text-align:center;font-weight: bold;">
 2.2
 </td>
-<td style="text-align:center;border-right:1px solid;">
+<td style="text-align:center;">
 1.0000000
 </td>
 </tr>
