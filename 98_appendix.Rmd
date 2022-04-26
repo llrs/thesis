@@ -288,7 +288,12 @@ Table: (#tab:hernandez) Characteristics of samples included from Hernández's da
 It substitutes the BARCELONA dataset to confirm the results on the previous datasets.
 However, at the time of writing the process is not complete.
 
-<!--# TODO add plots and tables -->
+```{r, fig.scap="PCA of RNASeq of the Hernandez's dataset", fig.cap="PCA of RNASeq of the Hernandez's dataset. The plot shows a clear separation between colon and ileum for most samples except for some that seem mislabeled."}
+include_graphics("images/hernandez_PCA_RNAseq.png")
+```
+
+There seems to be some samples that might be mislabeled as their corresponding RNA profile does not match those samples of the similar location. 
+This could be from taking the sample from a region near a surgery, for which the expression profile might not match the usual patterns.
 
 # Models output
 
