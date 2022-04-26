@@ -3,7 +3,7 @@ bookdown::gitbook:
   includes:
     in_header: GA.html
     # before_body: wip.html
-    before_body: print.html,
+    before_body: print.html
   dev: svglite
   citation_package: none
   link-citations: yes
