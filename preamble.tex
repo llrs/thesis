@@ -3,7 +3,6 @@
 % \usepackage{navigator} % To mofidy the outline https://osl.ugr.es/CTAN/macros/generic/navigator/navigator-doc.pdf
 
 
-
 % Include the indices of tables and figures
 % https://tex.stackexchange.com/a/48512/178206
 \usepackage{tocbibind}
@@ -19,6 +18,19 @@
 } {
     \endorigfigure
 }
+
+% Floats on the same section of chapters https://tex.stackexchange.com/questions/4854/floats-how-to-restrict-floating-to-subsection-only-in-one-section-of-the-docum#comment7317_4856
+% https://tex.stackexchange.com/a/4856/178206
+\usepackage[section]{placeins}
+% Change space after floats https://tex.stackexchange.com/a/49709/178206
+\setlength{\textfloatsep}{0.1cm}
+
+\usepackage{caption}
+% Ick up fonts https://tug.org/FontCatalogue/libertinusserif/
+%select attributes for table caption
+\captionsetup[table]{labelsep=period,textfont={it}}
+%select attribute for figure caption
+\captionsetup[figure]{labelsep=period,textfont={it}}
 
 % Page number the same even for first page of chapter
 \usepackage[automark,headsepline]{scrlayer-scrpage}% sets page style scrheadings automatically
