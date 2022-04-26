@@ -18,7 +18,7 @@ colorlinks: yes
 # https://bookdown.org/yihui/rmarkdown-cookbook/latex-variables.html
 # Only works here (set when printing and sending)
 # links-as-notes: true # Only activate for actual printing
-# fontfamily: boisik
+fontfamily: libertine
 # papersize: b5 # The printed size of the thesis
 papersize: a4
 fontsize: 12pt
