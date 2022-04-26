@@ -1,6 +1,5 @@
 # Results
 
-
 ## Packages/methods
 
 ### experDesign
@@ -47,6 +46,8 @@ cran_stats("experDesign") %>%
 
 Since its release on CRAN it has had a median of \~400 downloads each month from RStudio repository mirror, showing the interest the community have on solutions like this.
 
+\FloatBarrier
+
 ### BaseSet
 
 `BaseSet` package, built in R, was released for the first time on CRAN on 2020-11-11, nearly two years after the initial work started on [github](https://github.com/llrs/BaseSet "Repository").
@@ -91,6 +92,8 @@ cran_stats("BaseSet") %>%
 ```
 
 Since its release on CRAN it has had a median close to \~400 downloads each month from RStudio package manager.
+
+\FloatBarrier
 
 ### inteRmodel
 
@@ -334,6 +337,7 @@ k <- kable(df, align = rep("c", ncol(df)),
 format_design(k, df)
 ```
 
+\FloatBarrier
 
 ### HSCT dataset {#results-hsct}
 
@@ -925,6 +929,8 @@ include_graphics("images/morgan-mcia.png")
 ```
 If we quantify this separation by the first dimension of MCIA, the AUC is 0.818, which is slightly worst than the models of family 2.
 
+\FloatBarrier
+
 ### Howell's dataset {#results-howell}
 
 The 16S of this dataset doesn't show any clear pattern regarding the location of the samples according to the firsts dimensions of the PCA on \@ref(fig:howell-pca-16s):
@@ -1054,13 +1060,14 @@ In this dataset we also focused on the most important ASV according to the model
 These ASV were summarized to a single value and then used to calculate the AUC, which was 0.85.
 The dot product of the ASV and genes were also calculated and used to find out which ASV are related to which genes.
 
+\FloatBarrier
 
 ### Between datasets
 
 The HSCT genes were compared to the Howell's genes from model 2.2.
 There are 3580 selected on model 2.2 in the HSCT dataset and 2189 genes on the Howell's dataset.
 From them the 1228 genes in common were analyzed for which GO terms and pathways they are enriched.
-The results is represented on \@ref(fig:pathways-hsct-howell).
+The results is represented on figure \@ref(fig:pathways-hsct-howell).
 
 ```{r pathways-hsct-howell, fig.scap="Pathways from common genes on HSCT and Howell's dataset.", fig.cap="Significance of pathways on common genes in HSCT and Howell's dataset ordered by p-value, size according to the number of genes on the pathway found on the dataset and color blue for pathways and red for gene ontologies of biological process."}
 include_graphics("images/pathways_hsct_howell.png")
