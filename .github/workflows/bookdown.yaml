@@ -21,7 +21,9 @@ jobs:
           use-public-rspm: true
 
       - name: Install bookdown
-        run: Rscript -e "install.packages(c('knitr', 'bookdown', 'metathis', 'kableExtra', 'rchaput/acronymsdown')"
+        run: |
+          Rscript -e "install.packages(c('knitr', 'bookdown', 'tinytext', 'kableExtra', 'remotes'))"
+          Rscript -e "remotes::install_github('rchaput/acronymsdown')"
 
       # - name: Setup Debug Session
       #   uses: csexton/debugger-action@v1
@@ -58,7 +60,9 @@ jobs:
 
 
       - name: Install bookdown
-        run: Rscript -e "install.packages(c('knitr', 'bookdown', 'metathis', 'kableExtra', 'rchaput/acronymsdown'))"
+        run: |
+          Rscript -e "install.packages(c('knitr', 'bookdown', 'tinytext', 'kableExtra', 'remotes'))"
+          Rscript -e "remotes::install_github('rchaput/acronymsdown')"
 
       # - name: Setup Debug Session
       #   uses: csexton/debugger-action@v1
@@ -110,7 +114,9 @@ jobs:
           && sudo apt-get clean
 
       - name: Install bookdown
-        run: Rscript -e "install.packages(c('knitr', 'bookdown', 'tinytext', 'kableExtra', 'rchaput/acronymsdown'))"
+        run: |
+          Rscript -e "install.packages(c('knitr', 'bookdown', 'tinytext', 'kableExtra', 'remotes'))"
+          Rscript -e "remotes::install_github('rchaput/acronymsdown')"
       # - name: Setup Debug Session
       #   uses: csexton/debugger-action@v1
 
