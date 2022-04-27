@@ -10,4 +10,48 @@ acronyms:
       longname: ulcerative colitis
     - shortname: HSCT
       longname: hematopoietic stem cell transplant
+    - shortname: eQTL
+      longname: expression quantitative trait loci
+    - shortname: GWAS
+      longname: genome wide association studies
+    - shortname: TLR
+      longname: toll-like receptors
+    - shortname: T~h~
+      longname: T helpers
+    - shortname: T~reg~
+      longname: T regulators
+    - shortname: IL
+      longname: interleukin
+    - shortname: TNF
+      longname: tumor necrosis factor
+    - shortname: IFN
+      longname: interferons
+    - shortname: TGF
+      longname: transforming/tumor growth factor
+    - shortname: PAMPs
+      longname: pathogen associated molecular patterns
+    - shortname: IBDQ
+      longname: inflammatory bowel disease questionnaire
+    - shortname: UCEIS
+      longname: ulcerative colitis endoscopic index of severity
+    - shortname: RGCCA
+      longname: regularized canonical correlation analysis
+    - shortname: MCIA
+      longname: multiple co-inertia analysis
+    - shortname: AUC
+      longname: area under the curve
+    - shortname: AVE
+      longname: average variance explained
+    - shortname: ASV
+      longname: amplicon sequence variant
+    - shortname: OTUs
+      longname: operational taxonomic units
+    - shortname: PPI
+      longname: pre-pouch ileum
+    - shortname: PCA
+      longname: principal component analysis
+    - shortname: BARCELONA
+      longname: Biologic Assesment of Response and relation to Clinical activity, Endoscopic and radiologic Lesions, in inflammatory bowel disease patients ON Anti TNF-therapies
+    - shortname: 16S
+      longname: 16S rRNA
 ---

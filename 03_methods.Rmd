@@ -15,7 +15,7 @@ The code used can be found on the links provided in the [appendix](#software "Li
 
 ### Puget's dataset {#methods-puget}
 
-The glioma dataset is the data provided as an example of biological data by the authors of RGCCA from a previous publication [@puget2012].
+The glioma dataset is the data provided as an example of biological data by the authors of \acr{RGCCA} from a previous publication [@puget2012].
 The data came from diffuse intrinsic pontine glioma patients whose transcriptome was analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F.
 The copy number variation of the samples was processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using [Mutation Surveyor software](https://www.softgenetics.com/mutationSurveyor.php "Website of the software").
 In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor [@puget2012].
@@ -32,14 +32,14 @@ In addition, this dataset contained information on age, localization of the tumo
 
 <!--# Adapted from article https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#sec005 -->
 
-Samples from the HSCT dataset used in this thesis were from a cohort of patients with severe refractory CD undergoing HSCT.
+Samples from the \acr{HSCT} dataset used in this thesis were from a cohort of patients with severe refractory \acr{CD} undergoing \acr{HSCT}.
 Patients were treated in the Department of Gastroenterology (Hospital Clínic de Barcelona --Spain--).
 The protocol was approved by the Catalan Transplantation Organization and by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7244).
 All patients provided written consent following extensive counselling about being included on the study and using their data on publications.
 
-Colonic and ileal biopsies were obtained at several time points during ileo-colonoscopy, at inclusion and every 6 or 12 months after HSCT up to 4 years after the start of the treatment.
+Colonic and ileal biopsies were obtained at several time points during ileo-colonoscopy, at inclusion and every 6 or 12 months after \acr{HSCT} up to 4 years after the start of the treatment.
 Samples were obtained when possible from both uninvolved and involved areas.
-In addition, biopsies were taken from the ileum and colon regions of 19 non-IBD controls consisting of individuals with no history of IBD and who presented no significant pathological findings following endoscopic examination for colon cancer surveillance (Hospital Univesitari Mútua de Terrassa --Spain--).
+In addition, biopsies were taken from the ileum and colon regions of 19 non-\acr{IBD} controls consisting of individuals with no history of \acr{IBD} and who presented no significant pathological findings following endoscopic examination for colon cancer surveillance (Hospital Univesitari Mútua de Terrassa --Spain--).
 The protocol was approved by the Institutional Ethics Committee of the Hospital Univesitari Mútua de Terrassa (Study Number NA1651).
 
 At least one biopsy was collected and fresh-frozen at -80°C for microbial DNA extraction.
@@ -52,25 +52,25 @@ In total 158 samples with both RNA and DNA extraction of the same segment and ti
 | Age at diagnostic (\<17/\<40/\>40 years)             | 7/11/0      |
 | Duration (in years): mean (min-max)                  | 14 (8-28)   |
 | Age: mean (min-max)                                  | 44 (23-70)  |
-| Disease status (non-IBD/CD)                          | 51/107      |
+| Disease status (non-\acr{IBD}/\acr{CD})                          | 51/107      |
 | Sample location (ileum/colon/unknown)                | 48/108/2    |
-| Local simple endoscopic score for CD: mean (min-max) | 2.15 (0-12) |
-| CDAI: mean (min-max)                                 | 120 (0-450  |
+| Local simple endoscopic score for \acr{CD}: mean (min-max) | 2.15 (0-12) |
+| \acr{CD}AI: mean (min-max)                                 | 120 (0-450  |
 
 : (#tab:HSCT) Characteristics of samples from the HSCT dataset.
 
 ### Häsler's dataset {#methods-hasler}
 
-An IBD-related dataset was obtained by Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler [@hasler_uncoupling_2016].
+An \acr{IBD}-related dataset was obtained by Prof. Dr. Rosentiel and Prof. Dr. Robert Häsler [@hasler_uncoupling_2016].
 Biopsies were obtained endoscopically during routine diagnosis RNA and DNA were extracted using standard procedures.
-DNA from the 16S rRNA gene was amplified with primers 319F and 806R.
+DNA from the \acr{16S} gene was amplified with primers 319F and 806R.
 Both RNA and DNA was then sequenced on HiSeq 2000 and MiSeq respectively.
-These biopsies included samples from the terminal ileum and sigma from CD, \acr{UC}, infectious disease-controls and healthy non-IBD.
+These biopsies included samples from the terminal ileum and sigma from \acr{CD}, \acr{UC}, infectious disease-controls and healthy non-\acr{IBD}.
 The dataset included information about gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.
 
 | Characteristic                | Häsler's |
 |:------------------------------|:--------:|
-| Disease status (non-IBD/IBD)  | 33/26    |
+| Disease status (non-\acr{IBD}/\acr{IBD})  | 33/26    |
 | Sex (female/male)             | 42/17    |
 | Sample location (ileum/colon) | 30/29    |
 
@@ -79,31 +79,31 @@ The dataset included information about gender, location, age, and the status (in
 ### Morgan's dataset {#methods-morgan}
 
 A previously published dataset from a pouchitis study was analyzed [@morgan2015].
-In this study patients having undergone proctocolectomy with ileal pouch-anal anastomosis for treatment of \acr{UC} or familial adenomatous polyposis at least 1 year prior to enrollment were recruited at Mount Sinai Hospital (Toronto, Canada) excluding individuals with a diagnosis of CD.
+In this study patients having undergone proctocolectomy with ileal pouch-anal anastomosis for treatment of \acr{UC} or familial adenomatous polyposis at least 1 year prior to enrollment were recruited at Mount Sinai Hospital (Toronto, Canada) excluding individuals with a diagnosis of \acr{CD}.
 The dataset has a total of 255 samples from 203 patients, containing data for both host transcriptome and intestinal microbiome.
 On some cases several biopsyes were collected from the same patients.
-This dataset included anonymous identifiers for patients, whether the sample was from the pre-pouch ileum (PPI) or from the pouch, the sex, the outcome of the procedure and an inflammation score.
+This dataset included anonymous identifiers for patients, whether the sample was from the \acr{PPI} or from the pouch, the sex, the outcome of the procedure and an inflammation score.
 The pouch ileum might be inflamed or not.
 
 | Characteristic              | Morgan's |
 |:----------------------------|:--------:|
 | Samples (n)                 | 255      |
 | Sex patients (female/male)  | 101/102  |
-| Sample location (Pouch/PPI) | 59/196   |
+| Sample location (Pouch/\acr{PPI}) | 59/196   |
 
 : (#tab:Morgan) Characteristics of samples from the Morgan's dataset.
 
 ### Howell's dataset {#methods-howell}
 
-This dataset included a cohort of 66 treatment-naïve children at diagnosis of their IBD, along with 30 age- and sex-matched non-inflammatory control children, recruited at the Paediatric Gastroenterology unit at Addenbrooke's Hospital (England) [@howell2018].
+This dataset included a cohort of 66 treatment-naïve children at diagnosis of their \acr{IBD}, along with 30 age- and sex-matched non-inflammatory control children, recruited at the Paediatric Gastroenterology unit at Addenbrooke's Hospital (England) [@howell2018].
 
-Data from 77 samples that had both RNAseq and 16S data was used.
-There are 10 non-IBD samples, 11 with CD and 11 with \acr{UC}.
+Data from 77 samples that had both RNAseq and \acr{16S} data was used.
+There are 10 non-\acr{IBD} samples, 11 with \acr{CD} and 11 with \acr{UC}.
 Data has the following characteristics: disease, age at diagnostic, age at time of study, sex, sample location, and disease activity:
 
 | Characteristic                                  | Howell's  |
 |:------------------------------------------------|:---------:|
-| Disease (non-IBD/CD/\acr{UC})                         | 11/10/11  |
+| Disease (non-\acr{IBD}/\acr{CD}/\acr{UC})                         | 11/10/11  |
 | Age at diagnostic (\<17/\<40/\>40 years)        | 32/0/0    |
 | Age: mean (min-max)                             | 12 (6-15) |
 | Sex (female/male)                               | 10/22     |
@@ -116,7 +116,7 @@ Data has the following characteristics: disease, age at diagnostic, age at time 
 
 ### RNA sequencing
 
-Total RNA from mucosal samples (HSCT cohort) was isolated using the RNAeasy kit (Qiagen, Hilde, Germany).
+Total RNA from mucosal samples ( cohort) was isolated using the RNAeasy kit (Qiagen, Hilde, Germany).
 RNA sequencing libraries were prepared for paired-end sequencing using HighSeq-4000 platform.
 Samples with good enough quality as recommended by [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ "FastQC website") were processed with [cutadapt](https://github.com/marcelm/cutadapt "cutadapt repository") (version 1.7.1 [@martin2011]) for quality filtering.
 Later, the libraries were mapped against the human reference genome using the [STAR aligner](https://github.com/alexdobin/STAR "STAR repository") (2.5.2a) with Ensembl annotation ([release 26 of GENCODE](https://www.gencodegenes.org/human/release_26.html "GENCODE release 26"), GRCh38.p10 or superior) [@dobin2013].
@@ -125,7 +125,7 @@ Read counts per gene were obtained with [RSEM](https://github.com/deweylab/RSEM 
 
 ### Microbial DNA sequencing
 
-Biopsies from the HSCT CD cohort were resuspended in 180 $\mu$l TET (TrisHCl 0.02M, EDTA 0.002M, Triton 1X) buffer and 20mg/ml lysozyme (Carl Roth, Quimivita, S.A.). Samples were incubated for 1h at 37°C and vortexed with 25 $\mu$l Proteinase K before incubating at 56°C for 3h.
+Biopsies from the  \acr{CD} cohort were resuspended in 180 $\mu$l TET (TrisHCl 0.02M, EDTA 0.002M, Triton 1X) buffer and 20mg/ml lysozyme (Carl Roth, Quimivita, S.A.). Samples were incubated for 1h at 37°C and vortexed with 25 $\mu$l Proteinase K before incubating at 56°C for 3h.
 Buffer B3 (NucleoSpin Tissue Kit--Macherey-Nagel) was added followed by a heat treatment for 10 min at 70°C.
 After adding 100% ethanol, samples were centrifuged at 11000 x g for 1 min.
 Two washing steps were performed before eluting DNA.
@@ -138,31 +138,31 @@ Microbial cells were disrupted by mechanical lysis using FastPrep-24.
 Heat treatment and centrifugation were conducted after adding a cooling adaptor.
 Supernatants were treated with RNase to eliminate RNA.
 Total DNA was purified using gDNA columns as described in detail previously [@berry2011].
-Briefly, the V3-V4 regions of 16S rRNA gene were amplified (15x15 cycles) following a previously described two-step protocol [@klindworth2013] using forward and reverse primers 341F-ovh/785R-ovh [@edgar2013].
+Briefly, the V3-V4 regions of \acr{16S} gene were amplified (15x15 cycles) following a previously described two-step protocol [@klindworth2013] using forward and reverse primers 341F-ovh/785R-ovh [@edgar2013].
 Purification of amplicons was performed by using the AMPure XP system (Beckmann).
 Next, sequencing was performed with pooled samples in paired-end modus (PE275) using an MiSeq system (Illumina, Inc.) according to the manufacturer's instructions and 25% (v/v) PhiX standard library.
 
-Library preparation and sequencing of the HSCT dataset were performed at the Technische Universität München.
+Library preparation and sequencing of the  dataset were performed at the Technische Universität München.
 Briefly, volumes of 600$\mu$L DNA stabilization solution (STRATEC biomedical) and 400$\mu$L Phenol:choloform:isoamyl alcohol (25:24:1, Sigma-Aldrich) were added to the aliquots.
 
 #### Microbial profiling
 
-For the HSCT dataset the processing of raw-reads was performed by using the [IMNGS](https://www.imngs.org/ "IMNGS website") (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the [UPARSE](https://www.drive5.com/uparse/ "UPARSE website") approach [@edgar2013].
+For the  dataset the processing of raw-reads was performed by using the [IMNGS](https://www.imngs.org/ "IMNGS website") (version 1.0 Build 2007) [@lagkouvardos2016] pipeline based on the [UPARSE](https://www.drive5.com/uparse/ "UPARSE website") approach [@edgar2013].
 Sequences were demultiplexed, trimmed to the first base with a quality score \<3 and then paired.
 Sequences with less than 300 and more than 600 nucleotides and paired reads with an expected error \>3 were excluded from the analysis.
 The 5 nucleotides from each end of the remaining reads were trimmed to avoid GC bias and non-random base composition.
-Operational taxonomic units (OTUs) were clustered at 97% sequence similarity.
+\acr{OTUs} were clustered at 97% sequence similarity.
 Taxonomy assignment was performed at 80% confidence level using the RDP classifier and the SILVA ribosomal RNA gene database project.
-Later the data was normalized using the same method as for RNA-seq described above.
-The microbiome was visually inspected for batch effects in PCA; none were found.
-The resulting OTUs table was normalized using edgeR (Version 3.28 or later) [@mccarthy2012].
+Later the data was normalized using the same method as for RNAseq described above.
+The microbiome was visually inspected for batch effects in \acr{PCA}; none were found.
+The resulting \acr{OTUs} table was normalized using edgeR (Version 3.28 or later) [@mccarthy2012].
 
 For all the other datasets [dada2](https://bioconductor.org/packages/dada2) [@callahan2016] (Version 1.14 or later) was used to analyze microbiome data.
-It creates amplicon sequencing variants from the 16S sequencing data, without merging similar sequences at any threshold.
-It is an alternative to the use of OTUs which allows to compare results between studies and provides more resolution to identify differences on the fragment of 16S amplified.
+It creates \acr{ASV} from the \acr{16S} sequencing data, without merging similar sequences at any threshold.
+It is an alternative to the use of \acr{OTUs} which allows to compare results between studies and provides more resolution to identify differences on the fragment of \acr{16S} amplified.
 
-We used Silva v138.1 to annotate the 16S fragments whenever possible [@quast2013].
-If we did not have access to the direct ASV we used the annotation provided by the original authors of the dataset.
+We used SILVA v138.1 to annotate the \acr{16S} fragments whenever possible [@quast2013].
+If we did not have access to the direct \acr{ASV} we used the annotation provided by the original authors of the dataset.
 
 ```{r workflow-process, fig.scap="Workflow of the analysis process.", fig.cap="Workflow of the main analysis process of the thesis. It shows the biopsy collection, extraction of genetic and transcriptomic material, sequencing and analysis. Created with BioRender.com"}
 knitr::include_graphics("images/workflow_integration2.png")
@@ -170,9 +170,9 @@ knitr::include_graphics("images/workflow_integration2.png")
 
 ## Integration methods
 
-The main method used on this thesis has been regularized generalized canonical correlation analysis (RGCCA) a method derived from the canonical correlation.
+The main method used on this thesis has been regularized \acr{RGCCA} a method derived from the canonical correlation.
 Canonical correlation is a method that uses data about the same unit but from different origins to find how much the different sources agree.
-Regularized generalized canonical correlation analysis is implemented on the homonymous package [RGCCA](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017] which was used here.
+\acr{RGCCA} is implemented on the homonymous package [`RGCCA`](https://cran.r-project.org/package=RGCCA) [@tenenhaus2017] which was used here.
 The method and implementation will be explained in detail in the next section.
 
 ```{r multiomic-datasets, fig.scap="Multi-omic relationships.", fig.cap="Multi-omic relationships on different datasets. Integration methods focus on relationships within datasets. Common relationships between datasets are used as confirmation/validation. Created with BioRender.com"}
@@ -190,7 +190,7 @@ Its results include new variables (the eigenvectors) and a vector of loadings or
 Typically, data is normalized and standardized to avoid that a variable with higher variance and different scale dominate the results.
 
 The canonical correlation analysis [@jordan1875; @hotelling1936] is a method to find agreement between two, or more, scorers (as it was first introduced on the literature) or sources.
-It extends the PCA to a two sources of data.
+It extends the \acr{PCA} to a two sources of data.
 It provides a similar output, new variables and weights of the existing variables indicating their importance.
 The function it maximizes is:
 
@@ -201,11 +201,11 @@ $$
 On this equation $a$ and $b$ are random variables that given $X$ and $Y$, the two data sources, maximize the correlation between $a^T X$ and $b^T Y$, the first canonical variables, the new variables.
 $a$ and $b$ are also known as weights or loadings of the variables.
 
-Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020], regularized generalized canonical correlation analysis (RGCCA) emerged with a generalization from canonical correlations extending the procedure to more than two sources of data [@R-RGCCA] and being made more flexible generalizing from other proposed methods.
+Over several years of progress on the field of canonical correlations [@tenenhaus_component-based_2008; @esposito_vinzi_bridge_2010; @tenenhaus_regularized_2011; @tenenhaus_regularized_2014; @tenenhaus_variable_2014; @tenenhaus_kernel_2015; @gloaguen2020], \acr{RGCCA} emerged with a generalization from canonical correlations extending the procedure to more than two sources of data [@R-RGCCA] and being made more flexible generalizing from other proposed methods.
 
 #### Description
 
-RGCCA works with numeric matrices that can be as big as needed, as it is designed for datasets with more variables than samples ( $p \gg n$).
+\acr{RGCCA} works with numeric matrices that can be as big as needed, as it is designed for datasets with more variables than samples ( $p \gg n$).
 However, for each sample it needs to have a complete case with no missing values (at the time of writing this thesis there is an [in-development version](https://github.com/rgcca-factory/RGCCA/tree/CRAN "RGCCA repository on github"), not released on CRAN[^methods-1] yet, that replaces any missing value by a 0) and in which time is not considered as a special variable.
 It uses a dimensional reduction approach to relate the different blocks of data between them and produce specific factors for each dataset.
 The objective function is:
@@ -236,7 +236,7 @@ $$
 And its components are: $w_{kij}=(x_{ki}-\overline{x}_i)(x_{kj}-\overline{x}_j)$ and $\overline{w}_{ij}=\frac{1}{n}\sum_{k=1}^nw_{kij}$ representing $x_{ij}$ the values of a sample $j$ on a variable $i$.
 
 The authors realized that there is a special problem due to sparsity on biological data which could be handled using first another normalization to improve the stability and success of the canonical correlation methodology.
-The method to perform the dimensional reduction using the sparse method consists on maximizing the same equation but with a different constraint: Specifically, RGCCA with all $\tau_j = 1$, combined with an L1-penalty that gives rise to SGCCA:
+The method to perform the dimensional reduction using the sparse method consists on maximizing the same equation but with a different constraint: Specifically, \acr{RGCCA} with all $\tau_j = 1$, combined with an L1-penalty that gives rise to SGCCA:
 
 $$
 \underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g( \text{cov}(X_j a_j, X_k a_k)) \text{~~s.t.~~} \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
@@ -244,7 +244,7 @@ $$
 
 The $s_j$ controls the sparsity estimated of the data, the smaller it is, the higher the sparsity of $X_j$ is.
 As $s_j$ is closer to 0, more features are selected as it looks to optimize covariance; while if it is closer to 1, less features are selected and the function resembles the correlation.
-The values of $s_j$ were estimated using the Schäfer method [@schäfer2005] when the block included 16S data or RNAseq, otherwise 1 was used.
+The values of $s_j$ were estimated using the Schäfer method [@schäfer2005] when the block included \acr{16S} data or RNAseq, otherwise 1 was used.
 
 As previously mentioned, there are different $g$ functions that could be used; but the centroid method was chosen to detect both positive and negative relationships.
 
@@ -255,20 +255,20 @@ Later, it was divided by the square root of the number of variables of the block
 
 #### Output {#rgcca-output}
 
-RGCCA, as other dimensional reduction techniques, provides specific weights for each variable on each dimension and a sample score on each dimension, together with quality scores.
+\acr{RGCCA}, as other dimensional reduction techniques, provides specific weights for each variable on each dimension and a sample score on each dimension, together with quality scores.
 The most important output are the canonical components of each block.
 For each block there can be as many canonical components as the number of variables of a block minus 1. 
 These canonical components represent a block by the largest source of variation on that block that satisfies the constrains explained below.
 
-To measure the quality of the model, the implementation provides indicators based on the Average Variance Explained (AVE).
-RGCCA returns an AVE score for each block, which measures how the variables of the block correlate with the dimension component of the block.
-It also provides two AVE scores of the whole model: the inner, which measures how each dimension accounts for the variance, and the outer, which measures how variables correlate with the dimension components.
-The closer the inner AVE is to 1, the better the model adjusts to the data.
+To measure the quality of the model, the implementation provides indicators based on the \acr{AVE}.
+\acr{RGCCA} returns an \acr{AVE} score for each block, which measures how the variables of the block correlate with the dimension component of the block.
+It also provides two \acr{AVE} scores of the whole model: the inner, which measures how each dimension accounts for the variance, and the outer, which measures how variables correlate with the dimension components.
+The closer the inner \acr{AVE} is to 1, the better the model adjusts to the data.
 However, that mathematically fits better to the data does not guarantee that the model provides more insights into the biology.
 
 It can also generate results as other related methods based on the maximization of a function of correlations: SUMCOR (sum of correlations method) [@horst1961], SSQCOR (sum of squared correlations method) [@kettenring1971], SABSCOR (sum of absolute values of the correlations method) [@vandegeer1984].
 Others methods are based on the maximization of a function of covariances: SUMCOV (sum of covariances method), SSQCOV (sum of squared covariances method), SABSCOV (sum of absolute values of the covariances method).
-The following table summarizes the equivalent parameters needed on RGCCA to work:
+The following table summarizes the equivalent parameters needed on \acr{RGCCA} to work:
 
 
 | Method  | Scheme    | Normalization         | Shrinkage |
@@ -282,8 +282,8 @@ The following table summarizes the equivalent parameters needed on RGCCA to work
 
 : (#tab:RGCCA-methods) Equivalences of RGCCA to other methods
 
-There are other methods that can be performed with RGCCA, for example: The classical canonical correlation analysis would be equivalent to data variance equal to 1 and shrinkage of 0.
-Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1 in RGCCA.
+There are other methods that can be performed with \acr{RGCCA}, for example: The classical canonical correlation analysis would be equivalent to data variance equal to 1 and shrinkage of 0.
+Partial least squares (PLS) regression, which maximizes covariance, would be equal to data variance of 1 and shrinkage of 1 in \acr{RGCCA}
 Finally, redundancy analysis could be performed where one block's weight normalized value is 1 and the variance of the other equals to 1.
 
 #### Models
@@ -314,9 +314,9 @@ The final models were further validated using a bootstrap approach to measure th
 
 #### MCIA
 
-Multiple co-inertia analysis, also known as MCIA, is a method to examine covariant gene expression patterns between two blocks [@meng2014].
+This is a method to examine covariant gene expression patterns between two blocks [@meng2014].
 It is implemented on the package [omicade4](https://bioconductor.org/packages/omicade4).
-On its core MCIA maximizes the following formula:
+On its core \acr{MCIA} maximizes the following formula:
 
 $$
 \sum_{k=1}^K w_k {cov}^2 (X_k Q_k u_k, v)
@@ -325,7 +325,7 @@ $$
 where $K$ is the total number of matrices, $X_k$ the transformed matrices and $Q_k$ is a square matrix with $r_{ij}$ in diagonal elements indicating the hyperspace of features metrics, $u_k$ are auxiliary axes, $v$ the reference structure and w the weights of the matrices.
 This can be used to obtain a dimension of $P_k^d=u_k^d(u_k^d Q_k {u_k^d}^T)^{-1} u_k^d Q_k$ given that for each dimension the residuals are obtained following $X_k^{d-1} = X_1^d- X_1^d P_1^{d-1}$ where $d$ are the dimensions needed.
 
-MCIA was used as a baseline method to compare the RGCCA integration.
+\acr{MCIA} was used as a baseline method to compare the \acr{RGCCA} integration.
 
 #### STATegRa
 
@@ -443,7 +443,7 @@ This increases the $p$-value as it raises the Chi-square statistic.
 There are other methods that test if some variables show an unexpected importance according to a statistic like fold change or value, such as gene set enrichment analysis (GSEA) [@subramanian2005].
 GSEA is a computational method originally developed to determine whether a priori defined set of genes shows statistically significant and concordant differences between two biological states.
 This methods check if a group of variables present in an ordered list shows a skewed distribution and it compares it against a random group of similar size.
-It has been widely used since its original publication, also in IBD [@protiva2016].
+It has been widely used since its original publication, also in \acr{IBD} [@protiva2016].
 
 This method calculates the rank of genes $rank(g_j)=r_j$ where each $g$ is a gene, and then it calculates the following functions:
 
@@ -611,7 +611,7 @@ Assimilating the membership function to probability we can calculate the probabi
 Which applied to the data and the case at hand, it is the probability that a given variable is associated with a given outcome and not with any other outcome.
 
 The membership function was derived from the bootstraps used for each model on the thousand iterations of the integrative method applied to give an estimation of how probable is a given gene and bacteria to be selected as relevant for the model.
-The bootstraps of the models where used to calculate the probability of a variable to be selected by RGCCA.
+The bootstraps of the models where used to calculate the probability of a variable to be selected by \acr{RGCCA}
 This probability was used to calculate (via `set_size`) the genes and bacteria that are specific of the model that allows to separate the transcriptome by its location and the microbiome by the disease status.
 
 ### experDesign

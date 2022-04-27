@@ -3,8 +3,6 @@
 
 # (APPENDIX) Appendix {-}
 
-\printacronyms
-
 # Online resources
 
 Some links that we found useful on the thesis and could be useful if you are interested on the multi-omics field.
@@ -134,14 +132,14 @@ Code used for RSEM where `$threads` is the number of threads used, `$rseminp` is
         
 ## Listed
 
-An improved/tested version of [RGCCA](https://github.com/llrs/RGCCA), some modifications on the internal functions to ease the maintenance as well as adding tests and sometimes improving the documentation.
+An improved/tested version of [`RGCCA`](https://github.com/llrs/RGCCA), some modifications on the internal functions to ease the maintenance as well as adding tests and sometimes improving the documentation.
 Also modified so that it is possible to provide a vector of models so that the model of the first dimension is not the same as the model on the second dimension (not sure if mathematically speaking makes sense but from a biological one we think might be interesting to have it).
 
-Designed to be used with RGCCA we wrote the package [inteRmodel](https:github.com/llrs/inteRmodel) to ease the bootstrapping and model selection.
+Designed to be used with `RGCCA` we wrote the package [inteRmodel](https:github.com/llrs/inteRmodel) to ease the bootstrapping and model selection.
 
 A package to design batches to avoid batch effect [experDesign](https://cran.r-project.org/package=experDesign) and its website on [GitHub](https://github.com/llrs/experDesign).
 
-Explore the effects of the hyperparameters on RGCCA on the provided dataset of [gliomaData](https://github.com/llrs/gliomaData) (Originally provided [here](http://biodev.cea.fr/sgcca/)) there is this repository [sgcca_hyperparameters](https://github.com/llrs/sgcca_hyperparameters).
+Explore the effects of the hyperparameters on \acr{RGCCA} on the provided dataset of [gliomaData](https://github.com/llrs/gliomaData) (Originally provided [here](http://biodev.cea.fr/sgcca/)) there is this repository [sgcca_hyperparameters](https://github.com/llrs/sgcca_hyperparameters).
 
 We used a pouchitis cohort published in this [article](https://dx.doi.org/10.1186/s13059-015-0637-x)[@morgan2015] that was used to compare how performs our method in other's dataset.
 The code used can be found in [this repository](https://github.com/llrs/pouchitis).
@@ -152,7 +150,7 @@ We developed a package to analyze sets and fuzzy sets [BaseSet](https://github.c
 This package was meant to be used with the probabilities that arise from bootstrapping the models.
 However, due to the long times of calculation that it would require it was not used.
 
-To analyze the BARCELONA cohort (also named antiTNF) a [different repository](https://github.com/llrs/Barcelona "Barcelona repository") was created to analyze the data using the previously developed packages.
+To analyze the \acr{BARCELONA} cohort (also named antiTNF) a [different repository](https://github.com/llrs/Barcelona "Barcelona repository") was created to analyze the data using the previously developed packages.
 
 ## By project/publication
 
@@ -178,7 +176,7 @@ experDesign:
 
 BARCELONA:
 
-- [BARCELONA](https://github.com/llrs/Barcelona): Code to analyze the BARCELONA's dataset
+- [BARCELONA](https://github.com/llrs/Barcelona): Code to analyze the \acr{BARCELONA}'s dataset
 
 Validation:
 
@@ -240,7 +238,7 @@ All patients with an established diagnosis of \acr{IBD}, including Crohn's disea
 The protocol was approved by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7845 and HCB/2012/7956).
 
 Patients that were referred to the Hospital Clínic de Barcelona \acr{IBD} unit, who had already started treatment with a biologic agent in another center, were also included adapting to the corresponding time-schedule of their treatment.
-In all patients, starting anti-TNF treatment will be decided before the protocol entry decision according to medical clinical practice.
+In all patients, starting anti-\acr{TNF} treatment will be decided before the protocol entry decision according to medical clinical practice.
 
 Anonymized identification of the patients, disease, sex age at diagnostic, age at the moment of the sample taking, time since the start of the treatment and sample segment was collected.
 
@@ -274,7 +272,7 @@ knitr::include_graphics("images/barcelona-diversity.png")
 ```
 
 Control samples diversity should be lower and not on the same range as with samples of patients with \acr{IBD}.
-The dataset's 16S was sequenced several times by different platforms.
+The dataset's \acr{16S} was sequenced several times by different platforms.
 Despite the pilots and the negative controls on the sequencing process, each time there were different problems: contamination, low quality and then this suspicious diversity.
 It does not seem to be a problem of the sequencing facility, so this data was abandoned as unreliable.
 
@@ -299,10 +297,10 @@ Table: (#tab:hernandez) Characteristics of samples included from Hernández's da
 
 ### Results {#results-hernandez}
 
-It substitutes the BARCELONA dataset to confirm the results on the previous datasets.
+It substitutes the \acr{BARCELONA} dataset (See section \@ref(barcelona)on it purpose to confirm the results on the previous datasets.
 However, at the time of writing the process is not complete.
 
-```{r, fig.scap="PCA of RNASeq of the Hernandez's dataset", fig.cap="PCA of RNASeq of the Hernandez's dataset. The plot shows a clear separation between colon and ileum for most samples except for some that seem mislabeled."}
+```{r, fig.scap="PCA of RNAseq of the Hernandez's dataset", fig.cap="PCA of RNAseq of the Hernandez's dataset. The plot shows a clear separation between colon and ileum for most samples except for some that seem mislabeled."}
 include_graphics("images/hernandez_PCA_RNAseq.png")
 ```
 

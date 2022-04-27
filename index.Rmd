@@ -25,8 +25,10 @@ fontsize: 12pt
 # Not needed https://tex.stackexchange.com/a/188337/178206
 # fontenc: utf8 
 acronyms:
+  loa_title: ""
   insert_loa: false
-  sorting: initial
+  sorting: usage
+  include_unused: false
   fromfile: ./style/acronyms.yml
 geometry:
  - top=25.4mm
@@ -100,17 +102,17 @@ format_kable <- function(x) {
 
 ![UB logo](images/ub_logo.png "University where I defend the thesis"){width="160"} ![IDIBAPS logo](images/idibaps_logo.png "Research center"){width="160"} ![CIBER logo](images/logo_ciber.png "Hiring institution"){width="160" height="38"}
 
-The main topic of the thesis is [data integration](https://en.wikipedia.org/wiki/Data_integration "Wikipedia page of integration") applied in the \acr{IBD} research (check [wikipedia page](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) for a brief introduction).
+The main topic of the thesis is [data integration](https://en.wikipedia.org/wiki/Data_integration "Wikipedia page of integration") applied in the [inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease "Wikipedia page for IBD") .
 This disease is complex, for instance it is not known if the cause behind Crohn's disease and ulcerative colitis is the same.
-There are hypothesis pointing that the [microbiome](https://en.wikipedia.org/wiki/Microbiota) is a major factor in the disease, which together with an aberrant immune response is the dominant theory.
+There are hypothesis pointing that the [microbiome](https://en.wikipedia.org/wiki/Microbiota "Wikipedia page for microbiota") is a major factor in the disease, which together with an aberrant immune response is the dominant theory.
 In order to find robust relationships between the microbiome and the immune system it is important to consider all the relevant variables that influence a disease.
 On this thesis we seek these relationships using data from different sequencing technologies and the observed or reported phenotype of the patients.
 
-The thesis was carried out on the [Institut d'Investigacions Biomèdiques August Pi i Sunyer (IDIBAPS)](http://www.idibaps.org/ "IDIBAPS website") research institute and funded by [Centro de Investigación Biomédica en Red (CIBER)](https://www.ciberehd.org/ "CIBER website").
+The thesis was carried out on the [Institut d'Investigacions Biomèdiques August Pi i Sunyer (IDIBAPS)](https://www.idibaps.org/ "IDIBAPS website") research institute and funded by [Centro de Investigación Biomédica en Red (CIBER)](https://www.ciberehd.org/ "CIBER website").
 The thesis was done on [the IBD unit](https://www.ibd-bcn.org/ "Group's website") which is a translational team of biologist, microbiologists, veterinaries, bioinformaticians, doctors and nurses (at [Hospital Clínic](https://www.clinicbarcelona.org/en "Hospital Clínic")) in a multidisciplinary team.
 The leading doctor of the unit was [Julian Panés](https://orcid.org/0000-0002-4971-6902 "Julià website") whose interest on the disease made possible this thesis.
 
-The thesis is on the [doctoral programme in biomedicine](http://www.ub.edu/doctorat_biomedicina/eng/index.htm "Doctoral program's website") of the [University of Barcelona (UB)](https://www.ub.edu/web/portal/en/ "UB website").
+The thesis is on the [doctoral programme in biomedicine](https://www.ub.edu/doctorat_biomedicina/eng/index.htm "Doctoral program's website") of the [University of Barcelona (UB)](https://www.ub.edu/web/portal/en/ "UB website").
 My thesis directors' were [Juanjo Lozano](https://orcid.org/0000-0001-7613-3908 "Juanjo's ORCID") and [Azucena Salas](https://orcid.org/0000-0003-4572-2907 "Azu's ORCID"), my boss, who helped as bioinformatician and disease expert respectively.
 They provided advice and guidance on how to analyse the data and where to focus on the different experiments/analysis.
 
@@ -145,7 +147,7 @@ This approach is robust and flexible to different datasets and settings.
 
 **Conclusion**: With inteRmodel we found that the microbiome relates more closely to the sample location than to disease, but the transcriptome is highly related to the location of the sample on the intestine.
 There is a common transcriptome between datasets while microorganisms depend of the dataset.
-We can improve sample classification by taking into account both bacterial 16S rRNA and host transcriptome. 
+We can improve sample classification by taking into account both bacterial 16S and host transcriptome. 
 
 
 ## Spanish {.unnumbered}
@@ -197,3 +199,7 @@ Aquest enfocament és robust i flexible per a diferents conjunts de dades i conf
 **Conclusió**: Amb inteRmodel vam trobar que el microbioma es relaciona més estretament amb la ubicació de la mostra que amb la malaltia, però el transcriptoma està molt relacionat amb la ubicació de la mostra a l'intestí.
 Hi ha un transcriptoma comú entre conjunts de dades, mentre que els microorganismes depenen del conjunt de dades.
 Podem millorar la classificació de les mostres tenint en compte tant l'ARNr 16S bacterià com el transcriptoma hoste.
+
+# Glossary {-}
+
+\printacronyms

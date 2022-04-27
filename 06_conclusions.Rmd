@@ -14,4 +14,4 @@ It allows us to conclude the following:
 
 1.  The host's transcriptomics is heavily influenced by location and to a lesser degree by the type of activity.
 2.  The microbiome composition relates better to the sample location than to the disease status but both are almost equally important
-3.  Microorganisms highly tied to intestinal location might indicate the disease type, (Crohn's disease, ulcerative colitis or non-IBD) of the patients, but microorganisms related to the disease are common in all the locations.
+3.  Microorganisms highly tied to intestinal location might indicate the disease type, (Crohn's disease, ulcerative colitis or non-\acr{IBD}) of the patients, but microorganisms related to the disease are common in all the locations.

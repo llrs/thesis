@@ -1,39 +1,39 @@
 # Introduction
 
-[Inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) (IBD) involves [Crohn's disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD) and [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (\acr{UC}).
+[Inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) (IBD) involves [Crohn's disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD) and [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (UC).
 It generally affects the terminal ileum and the colon but it can involve any segment of the gastrointestinal tract.
-\acr{UC} is a recurrent, chronic and continuous inflammation of the colon and rectum while the CD is not a continuous inflammation and affects the whole gastrointestinal tract causing transmural inflammation.
+\acr{UC} is a recurrent, chronic and continuous inflammation of the colon and rectum while the \acr{CD} is not a continuous inflammation and affects the whole gastrointestinal tract causing transmural inflammation.
 
-IBD etiology is unknown.
+\acr{IBD} etiology is unknown.
 However, once it has initiated the most prevalent hypothesis of its chronicity suggests an aberrant immunological response to antigens of the commensal microbiome.
 
-To diagnose IBD doctors use endoscopy and/or magnetic resonance imaging and histologies.
+To diagnose \acr{IBD} doctors use endoscopy and/or magnetic resonance imaging and histologies.
 
-Treatments provided for IBD include, noninflammatory drugs, suppressors and biologics, i.e, anti TNF- anti-IL2, 23, anti-integrin $\alpha4\beta7$.
+Treatments provided for \acr{IBD} include, noninflammatory drugs, suppressors and biologics, i.e, anti-TNF- anti-\acr{IL} IL-2, 23, anti-integrin $\alpha4\beta7$.
 The therapeutic options can induce remission in some patients, but they often need continuous treatment to avoid recurrence.
 Nevertheless, many patients are refractory or intolerant to those therapies and need to undergo surgery or other strategies like dietetic and psychological support [@raine2021] .
 
 ## Inflammatory bowel disease {#IBD}
 
-IBD includes the CD and \acr{UC} which are characterized by alternating periods of remission and clinical relapse that mainly affect the gastrointestinal tract.
-CD is a progressive relapsing disease that can affect all the gastrointestinal tract but shows mostly on both terminal ileum and colon with a discontinuous inflammation.
+\acr{IBD} includes the \acr{CD} and \acr{UC} which are characterized by alternating periods of remission and clinical relapse that mainly affect the gastrointestinal tract.
+\acr{CD} is a progressive relapsing disease that can affect all the gastrointestinal tract but shows mostly on both terminal ileum and colon with a discontinuous inflammation.
 \acr{UC} is a colonic relapsing disease characterized by continuous inflammation of the colon.
-Both of them have different risk factors, clinical, endoscopic an histological characteristics (see sections \@ref(CD) and \@ref(\acr{UC}) ).
+Both of them have different risk factors, clinical, endoscopic an histological characteristics (see sections \@ref(CD) and \@ref(UC)).
 
-Around 3.5 million individuals have IBD in Europe and North America combined [@jairath2020].
-IBD is more commonly found in industrialized and developed regions, suggesting that environmental factors might greatly influence IBD occurrence.
-In addition, the incidence of IBD is increasing in areas, such as Asia or Eastern Europe, where the number of cases was relatively low hitherto [@burisch2015].
+Around 3.5 million individuals have \acr{IBD} in Europe and North America combined [@jairath2020].
+\acr{IBD} is more commonly found in industrialized and developed regions, suggesting that environmental factors might greatly influence \acr{IBD} occurrence.
+In addition, the incidence of \acr{IBD} is increasing in areas, such as Asia or Eastern Europe, where the number of cases was relatively low hitherto [@burisch2015].
 
-The dysregulation of the inflammatory response observed in IBD requires interplay between host genetic factors and the intestinal microbiome.
-Several studies support the concept that IBD arise from an exacerbate immune response against commensal gut microorganisms.
+The dysregulation of the inflammatory response observed in \acr{IBD} requires interplay between host genetic factors and the intestinal microbiome.
+Several studies support the concept that \acr{IBD} arise from an exacerbate immune response against commensal gut microorganisms.
 Nonetheless, the disease could result from an imbalanced microbial composition leading to generalized or localized dysbiosis[^introduction-1].
 
 [^introduction-1]: A signature is usually a group of features that describe/are representative of a cell line or a process or a stage.
 
-The role of the gut microbiome in IBD is an active ongoing field of research.
-Several authors are currently studying the alterations reported in IBD of the intestinal microbiome.
-However, it is still unclear the cause-effect relation between dysbiosis and IBD.
-Partly due to the multiple variables already identified that have been linked to IBD; for instance, age, diet, usage of antibiotic, tobacco, and socioeconomic status [@humanmicrobiomeprojectconsortium2012; @shaw2016].
+The role of the gut microbiome in \acr{IBD} is an active ongoing field of research.
+Several authors are currently studying the alterations reported in \acr{IBD} of the intestinal microbiome.
+However, it is still unclear the cause-effect relation between dysbiosis and \acr{IBD}.
+Partly due to the multiple variables already identified that have been linked to \acr{IBD}; for instance, age, diet, usage of antibiotic, tobacco, and socioeconomic status [@humanmicrobiomeprojectconsortium2012; @shaw2016].
 
 The relationship between host and microbiome has been proposed to play a fundamental role in maintaining disease.
 For instance, some *Proteobacteria* species which have adherent and invasive properties might exploit host defenses and promote a proinflammatory environment, altering the intestinal microbiota in favor of dysbiosis [@mukhopadhya2012].
@@ -44,31 +44,31 @@ But once a segment is affected by the disease it can be considered as involved, 
 
 ### Etiology and pathogenesis
 
-Several mechanisms have been proposed to drive IBD pathogenesis [@zhang2014; @hugot2004].
+Several mechanisms have been proposed to drive \acr{IBD} pathogenesis [@zhang2014; @hugot2004].
 Some of them are based on a relationship between the immune system and the microbiome [@silva2016; @demattos2015].
-It is also unclear if CD and the \acr{UC} share the same origin considering their different symptoms.
+It is also unclear if \acr{CD} and the \acr{UC} share the same origin considering their different symptoms.
 
 There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015; @satsangi2006].
 Disease can be classified based on age at onset as very early, early or adult on-set disease [@satsangi2006].
-Genome-wide association studies (GWAS) have linked IBD to over 100 genetic loci, including a *NOD2* gene, but so far there is not any known mechanism how polymorfism on this genes are driving the disease [@horowitz2021].
+\acr{GWAS} have linked \acr{IBD} to over 100 genetic loci, including a *NOD2* gene, but so far there is not any known mechanism how polymorfism on this genes are driving the disease [@horowitz2021].
 On early pedriatic and adult disease the genetic component is lower than on very early on set and it is thought that the environmental factors are the main cause of the disease at those ages.
 
 On the following sections we will explore the role of several of the possible factors involved on the pahtogenesis, starting with the genetics.
 
 #### Genetics
 
-IBD is not an heritable disease, except for very early onset IBD, but it has some genetic influence that predisposes people to have it.
+\acr{IBD} is not an heritable disease, except for very early onset \acr{IBD}, but it has some genetic influence that predisposes people to have it.
 
-This has lead to look for genetic factors in IBD both on general population and on the early cases.
-Genome wide association studies (GWAS) are one of the most common genetic studies performed, together with methylation studies.
+This has lead to look for genetic factors in \acr{IBD} both on general population and on the early cases.
+\acr{GWAS} are one of the most common genetic studies performed, together with methylation studies.
 To discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.
 
-With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019].
-Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in \acr{UC} [@jostins2012; @momozawa2018].
+With \acr{GWAS} several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019].
+Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for \acr{CD} loci but show significant protective effects in \acr{UC} [@jostins2012; @momozawa2018].
 The mechanism of how this gene protects from \acr{UC} has not been confirmed yet [@horowitz2021].
 
-Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
-Recently expression quantitative trait loci (eQTL) particularly showed [@mcgovern2015] that locis are on enhancers or promoters like e.g.
+Many of the relevant genetic loci related to \acr{IBD} are not on protein coding fragments of the genome.
+Recently \acr{eQTL} particularly showed [@mcgovern2015] that locis are on enhancers or promoters like e.g.
 H3K27Ac or promoter e.g.
 H3K4me1 marks as found by chromatin immunoprecipitation sequencing ([ChIP-Seq](https://en.wikipedia.org/wiki/ChIP_sequencing "Wikipedia: ChIP-seq")).
 
@@ -79,23 +79,23 @@ H3K4me1 marks as found by chromatin immunoprecipitation sequencing ([ChIP-Seq](h
 The human intestine is a large reservoir of co-existing microorganisms (bacteria, fungi, viruses, and unicellular eukaryotes) .
 This microbiome community exerts different functions in the human body influencing nutrients' metabolism, the maturation of the immune system while suppressing the growth of harmful microorganisms' [@khanna2014].
 
-The role of the gut microbiota has been proposed to play a role in IBD pathogenesis.
-IBD has been characterized by a breakdown in the balance between beneficial and harmful bacteria that are present in the human gut compared to healthy individuals [@swidsinski2002; @tamboli2004].
+The role of the gut microbiota has been proposed to play a role in \acr{IBD} pathogenesis.
+\acr{IBD} has been characterized by a breakdown in the balance between beneficial and harmful bacteria that are present in the human gut compared to healthy individuals [@swidsinski2002; @tamboli2004].
 
 <!--# End-->
 
 <!--# Elena tesis p18-->
 
-Indeed, many studies show that patients with IBD have less biodiversity.
+Indeed, many studies show that patients with \acr{IBD} have less biodiversity.
 Biodiversity is measured on $\alpha$ (alfa) and $\beta$ (beta) diversity.
 $\alpha$-diversity is a measure of the species present on a single sample and its abundance while $\beta$-diversity compares the diversity between samples.
-There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of IBD patients [@ott2004].
-At the same time there is often a reduction of protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium* which might be able to protect individuals from mucosal inflammation via several mechanism such as a downregulation of proinflammatory cytokines or the stimulation of IL-10 and antiinflammatory cytokines [@ott2004].
+There are some reports of taxonomic changes and increase on *Enterobacteriaceae sp*, *Escherichia coli* (specially the invasive strain) at the mucosal layer of \acr{IBD} patients [@ott2004].
+At the same time there is often a reduction of protective species like *Bifidobacterium*, *Lactobacillus* and *Faecalibacterium* which might be able to protect individuals from mucosal inflammation via several mechanism such as a downregulation of proinflammatory cytokines or the stimulation of \acr{IL}-10 and antiinflammatory cytokines [@ott2004].
 Specially *Faecalibacterium prausnitzii* is one microorganism of interest [@kostic2014; @sender2016].
 
 <!--# Aida 2.3 p24-->
 
-In fact, it has been recently proposed that several unique microbial species can distinguish healthy controls from \acr{UC} and CD patients [@sankarasubramanian2020; @lopez-siles2014].
+In fact, it has been recently proposed that several unique microbial species can distinguish healthy controls from \acr{UC} and \acr{CD} patients [@sankarasubramanian2020; @lopez-siles2014].
 
 ```{r composition, fig.scap="The microbial composition in the gut.", fig.cap="The microbial composition in the gut. On the left healthy gut is represented as having a high microbiome diversity and no damage on the epithelial barrier. On the right the IBD gut were microbiome diversity is lower and some bacteria is in physical contact with the damaged epithelium. Adapted with permission from Mayorgas' 2021.", fig.alt="The microbial composition in the gut. On the left healthy gut is represented as having a high microbiome diversity and no damage on the epithelial barrier. On the right the IBD gut were microbiome diversity is lower and some bacteria is in physical contact with the damaged epithelium. Adapted with permission from Mayorgas' 2021 thesis."}
 knitr::include_graphics("images/tesis_AM_Figure2.png")
@@ -107,8 +107,8 @@ One of the proposed mechanism of crosstalk between bacteria and host is through 
 They interact with the cells and modulate the state of the intestine.
 One example of such metabolite is butyrate which has been linked to microorganisms presents on healthy intestines and shown to interact with intestine cells and help regulate some genes [@ferrer-picón2020].
 
-As previously mentioned, adherent invasive *Escherichia coli*, a proteobacteria specie, has been associated with IBD [@darfeuille-michaud1998].
-Adherent invasive strains are mainly found in ileal and colonic samples of CD patients and their presence in \acr{UC} is less clear.
+As previously mentioned, adherent invasive *Escherichia coli*, a proteobacteria specie, has been associated with \acr{IBD} [@darfeuille-michaud1998].
+Adherent invasive strains are mainly found in ileal and colonic samples of \acr{CD} patients and their presence in \acr{UC} is less clear.
 These adherent invasive cells enter through the epithelium of the more permeable cells and live on their cytosol.
 
 <!--# End-->
@@ -121,7 +121,7 @@ The metabolic cocktail composed of soluble factors secreted by life probiotic ba
 
 #### Immune response
 
-As explained previously the immune system plays a role in IBD pathogenesis and pathophysiology.
+As explained previously the immune system plays a role in \acr{IBD} pathogenesis and pathophysiology.
 
 Loss of tolerance to commensal bacteria has been suggested as the underlying mechanism triggering the inflammation on the intestine.
 The immune response involves many different cells lines and regions, which are important to know how they organize for a better understanding of the disease.
@@ -142,39 +142,39 @@ Immune response in the intestinal mucous is mainly excreted by the gut associate
 Genetically predisposed patients when exposed to certain environmental factors activate immune responses against microbials or self-antigens which in turn, may impair the mucosal barrier of the intestinal mucosa, the first physical barrier on the mucosal surface.
 
 Both the adaptive and the innate immune cells are present in the intestine, right below the epithelium.
-In IBD due to antigen translocation into the lamina propria, the immune response leads the adaptive cells to generate immune response to harmless components of the intestinal microbiota.
+In \acr{IBD} due to antigen translocation into the lamina propria, the immune response leads the adaptive cells to generate immune response to harmless components of the intestinal microbiota.
 This initial response induces a local increase in the production of pro-inflammatory cytokines and mediators which damages the mucosa.
 Therefore, the loss of integrity on this barrier enables the intestinal luminal bacteria to access the intestinal epithelium and to interact with the immune system underneath it more directly [@hisamatsu2013].
 
 The intestinal epithelium is another line of defense against bacterial invasion.
-Intestinal epithelial cells play a key role in controlling the integrity of the physical barrier to the intestinal microorganisms [@hisamatsu2013] not only physically but also secreting antimicrobial peptides and defensins, both of which are altered in IBD patients [@michielan2015].
+Intestinal epithelial cells play a key role in controlling the integrity of the physical barrier to the intestinal microorganisms [@hisamatsu2013] not only physically but also secreting antimicrobial peptides and defensins, both of which are altered in \acr{IBD} patients [@michielan2015].
 The intestinal epithelium also plays a key role on the intake and diffusion of metabolites from the intestinal lumen to the lamina propia.
 
 Damaging or increasing the permeability of the intestinal epithelium results on a response from the immune system.
 Detecting signals of any foreign particle can also trigger the immune system.
 On the intestine this starts with the identification of these signals by intestinal epithelial cells have pattern recognition receptors.
-There are two main pattern recognition receptors: toll-like receptors (TLR), which are present on the surface, and nucleotide-binding oligomerization domain-like receptors (NOD-like receptors), present on the cytoplasm of the cells.
-These receptors upon recognition of pathogen associated molecular patterns (PAMPs) start an amplifying signaling producing chemokines and cytokines which activates the transcription and translation of pro-inflammatory mediators to ensure an effective immune response.
+There are two main pattern recognition receptors: \acr{TLR}, which are present on the surface, and nucleotide-binding oligomerization domain-like receptors (NOD-like receptors), present on the cytoplasm of the cells.
+These receptors upon recognition of \acr{PAMPs} start an amplifying signaling producing chemokines and cytokines which activates the transcription and translation of pro-inflammatory mediators to ensure an effective immune response.
 Initially the innate response is triggered but the cells also increase the antigen presentation to T cells and thus activate the immune adaptive response [@mayorgas2021a].
 
 Other cell types, such as monocytes, macrophages and dendritic cells also present the pattern recognition receptors.
 From those, macrophages and dendritic cells are antigen presenting cells too and secrete several cytokines to activate other immune cells.
-Usually CD patients express higher amounts of TLR than healthy individuals, which might trigger a stronger immune response.
-This response is driven by CD4^+^ T cells proliferation in secondary lymphoid tissues to T helpers in the presence of the antigens and cytokines nearby.
+Usually \acr{CD} patients express higher amounts of \acr{TLR} than healthy individuals, which might trigger a stronger immune response.
+This response is driven by CD4^+^ T cells proliferation in secondary lymphoid tissues to \acr{Th} in the presence of the antigens and cytokines nearby.
 
-T helpers (T~h~) differentiate depending of the cytokines at which they are exposed.
-Th type 1 are driven by exposure to IL-12 secreted primarily by dentritic cells.
-T~h~2 are driven by cytokines secreted by macrophages.
-The imbalance between T~h~1 and T~h~2-promoting cytokines determines the intensity and duration of the inflammatory response in experimental colitis [@neurath1996].
+\acr{Th} differentiate depending of the cytokines at which they are exposed.
+\acr{Th} type 1 are driven by exposure to \acr{IL}-12 secreted primarily by dentritic cells.
+\acr{Th}2 are driven by cytokines secreted by macrophages.
+The imbalance between \acr{Th}1 and \acr{Th}2-promoting cytokines determines the intensity and duration of the inflammatory response in experimental colitis [@neurath1996].
 
-T~h~17-promoting cytokines are less well characterized in human.
-T~reg~ cells differentiate after exposure to cytokines IL-10, IFN-$\gamma$ and TGF-$\beta$.
-Overall the presence of certain cytokines and the response to self-antigens are factors leads to an inflammation and damage that is related to the onset and establishment of IBD
+\acr{Th}17-promoting cytokines are less well characterized in human.
+T~reg~ cells differentiate after exposure to cytokines \acr{IL}-10, IFN-$\gamma$ and TGF-$\beta$.
+Overall the presence of certain cytokines and the response to self-antigens are factors leads to an inflammation and damage that is related to the onset and establishment of \acr{IBD}.
 
 <!--# End tesis Aida/ more or less -->
 
-On these kind of diseases autologous hematopoietic stem cell transplantation has shown some benefits in IBD [@corraliza].
-The benefit of hematopoietic stem cell transplant (HSCT) in autoimmunity is thought to originate from the depletion of auto-reactive cells regardless of their specificity.
+On these kind of diseases autologous hematopoietic stem cell transplantation has shown some benefits in \acr{IBD} [@corraliza].
+The benefit of \acr{HSCT} in autoimmunity is thought to originate from the depletion of auto-reactive cells regardless of their specificity.
 However, due to its associated risk this therapy is only given when patients are refractory to all available therapeutic options.
 
 #### Environmental
@@ -184,20 +184,20 @@ However, due to its associated risk this therapy is only given when patients are
 Chronic inflammatory disorders and neoplasms have become the main cause of morbidity and mortality in the countries with high standards of personal cleanliness.
 A decrease in human exposure to microbes or hygene which might affect the proper maturation of the immune system so that it provides less immune response or exacerbated response towards "friendly" microbes [@strachan1989; @scudellari2017].
 
-From other environmental factors related to IBD such as tobacco, diet, certain drugs and stress; tobacco is the most influential environmental factor.
-Surprisingly, it has an opposite effect on \acr{UC} and CD: in CD tobacco is a risk factor that increases the risk of relapse and/or surgical intervention.
+From other environmental factors related to \acr{IBD} such as tobacco, diet, certain drugs and stress; tobacco is the most influential environmental factor.
+Surprisingly, it has an opposite effect on \acr{UC} and \acr{CD}: in \acr{CD} tobacco is a risk factor that increases the risk of relapse and/or surgical intervention.
 In \acr{UC}, it has been observed that smoking cessation worsens the disease [@thomas1998].
 
 Pharmacological treatments such as oral contraceptives, non steroidal anti-inflammatory drugs are also related to develop or relapse the disease [@cornish2008; @kaufmann1987].
 
 The psychological welfare of people also plays an important role in the disease progression, stress, anxiety and depression might be important in relapse and deterioration of the disease [@bitton2008].
-Other environmental factors have been linked to IBD but without enough evidence to support a causative effect in the development of the disease.
+Other environmental factors have been linked to \acr{IBD} but without enough evidence to support a causative effect in the development of the disease.
 
 <!--# End-->
 
-### CD physiology {#CD}
+### \acr{CD} physiology {#CD}
 
-As previously introduced, CD is a chronic inflammatory disorder characterized by a discontinuous inflammation of the gastrointestinal tract.
+As previously introduced, \acr{CD} is a chronic inflammatory disorder characterized by a discontinuous inflammation of the gastrointestinal tract.
 Inflammation on the gastrointestinal tract is transmural and can affect from the mouth to the anus, but mainly it manifests on the ileum and colon [@demattos2015].
 It is frequently associated with extraintestinal manifestation and/or concomitant immune-mediated diseases.
 
@@ -210,28 +210,28 @@ All these can lead to delays on correct diagnosis of the disease.
 
 <!--# Tesis Ana p21-->
 
-The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with CD [@khanna2017].
+The detection of parasites or bacteria, such as *Clostridium difficile*, have been associated with \acr{CD} [@khanna2017].
 The detection of fecal calprotectin, is generally a good marker of endoscopic activity with sensitivity above 70% and specificity above 80% [@guardiola2018; @sands2015].
 
 <!--# End-->
 
-Usually the best diagnosis method is to perform a colonoscopy, whether there is inflammation on the gastrointestinal tract on discontinuous regions then is CD.
+Usually the best diagnosis method is to perform a colonoscopy, whether there is inflammation on the gastrointestinal tract on discontinuous regions then is \acr{CD}.
 This inflammation could also present ulceration with rectal sparing and histological lesions which also help to diagnose the patients [@corralizamárquez2019].
 
 <!--# Check with Elena Basolas Tesis p18-->
 
-Usually on CD a granulome, that is a region with big multinucleous cells, can appear on any intestinal layer.
-In addition to the inflamed location(s), mosaic zones (patches of inflamed and non-inflamed areas) are more characteristic of CD [@bassolasmolina2018].
+Usually on \acr{CD} a granulome, that is a region with big multinucleous cells, can appear on any intestinal layer.
+In addition to the inflamed location(s), mosaic zones (patches of inflamed and non-inflamed areas) are more characteristic of \acr{CD} [@bassolasmolina2018].
 
 <!--# End -->
 
 The Montreal classification aims to classify patients according to their age of disease onset, standardized anatomical disease location an disease behavior.
-This classification assumes that the location of CD remains stable over time after diagnosis but behavioral phenotypes change.
+This classification assumes that the location of \acr{CD} remains stable over time after diagnosis but behavioral phenotypes change.
 Other scores consider area affected:
 
 -   Montreal classification allows for early onset of disease to be categorized separately those with age of diagnosis at 16 years or younger, diagnosis at 17--40 years and \>40 years, respectively [@satsangi2006].
--   SES-CD: simple endoscopic score for CD [@daperno2004]. Score based on size of ulcers, ulcerate surface percentage, affected surface and presence of narrowing on the bowel.
--   CDAI: CD Activity Index takes into account weight, ideal body weight, sex, and events on the last week such as liquid stools, abdominal pain, general well-being and if anti-diarrhea drug usage, as well as knowing if there are fistulas, fever, and other complications [@best1976]
+-   SES-CD: simple endoscopic score for \acr{CD} [@daperno2004]. Score based on size of ulcers, ulcerate surface percentage, affected surface and presence of narrowing on the bowel.
+-   CDAI: \acr{CD} Activity Index takes into account weight, ideal body weight, sex, and events on the last week such as liquid stools, abdominal pain, general well-being and if anti-diarrhea drug usage, as well as knowing if there are fistulas, fever, and other complications [@best1976]
 
 <!--# Add Figure 2 from ACM thesis?-->
 
@@ -247,14 +247,14 @@ When there is clinical remission, there can still remain some other lesions and 
 Frequently the damage caused by the disease evolves to fibrostenotic stricture or penetrating lesions (fistula and abscess).
 
 Damage of the disease might not be apparent to patients and might be only seen several years later than the first detection [@bhattacharya2016].
-Mucosal healing is a first step towards the healing of deeper layers of the inflamed bowel wall on the CD.
+Mucosal healing is a first step towards the healing of deeper layers of the inflamed bowel wall on the \acr{CD}.
 
 Patients might progress from an inflammatory phenotype to a stricturing or penetrating one [@satsangi2006].
 Stricturing is a narrowing of a part of the intestine often because of scar tissue and fibrosis in its wall.
 Penetrating is when the epithelium has some holes or tubes.
 If these tubes result in an abnormal connection between two body parts it is a fistula, it might also result in an abcess, a collections of pus, often developed in the abdomen, pelvis, or around the anal area.
 
-### \acr{UC} physiology {#\acr{UC}}
+### \acr{UC} physiology {#UC}
 
 As previously introduced, \acr{UC} is a chronic inflammatory disorder characterized by a continuous inflammation of the colon.
 Depending on the inflamed segments of the intestine it is classified in several phenotypes.
@@ -269,7 +269,7 @@ In addition, the damage usually consists in many neutrophil in the lumen crypt [
 <!--# Clinical care -->
 
 The goal of the clinical care is to recover.
-As a first step, the symptoms of IBD have to lessen to the point that they are mostly absent, gone, or barely noticeable, this is known as clinical remission.
+As a first step, the symptoms of \acr{IBD} have to lessen to the point that they are mostly absent, gone, or barely noticeable, this is known as clinical remission.
 However, this is not enough as the mucosa might be still inflamed and thus the reconstitution of the structure and function of the intestinal mucosa is not complete.
 Other lesions, might aid to the progression to other phenotypes such as fibrostenotic stricture or penetrating lesions or primary sclerosing cholangitis [@boonstra2012].
 
@@ -284,9 +284,13 @@ Among the scores most used are the following:
 
 -   Mayo: A score designed to be simple to calculate based on stool frequency, bleeding, mucosal appearance at endoscopy and physicians assessment [@schroeder1987].
 
--   IBDQ: A 32 questionnaire used to assess the quality of life grouped into four categories: bowel, systemic, social and emotional [@irvine1999].
+-   IBDQ[^introduction-2]: A 32 questionnaire used to assess the quality of life grouped into four categories: bowel, systemic, social and emotional [@irvine1999].
 
--   \acr{UC}EDIS: An endoscopic score based on vascular pattern, internal bleeding and erosion and ulcers [@travis2012].
+-   UCEIS[^introduction-3]: An endoscopic score based on vascular pattern, internal bleeding and erosion and ulcers [@travis2012].
+
+[^introduction-2]: \acr{IBD} questionnaire
+
+[^introduction-3]: \acr{UC} endoscopic index of severity
 
 Other measured parameters include, weight, effective weight, fecal calprotectin, C reactive protein and hemoglobine.
 
@@ -300,26 +304,26 @@ Current treatment attempt to induce and keep the remission of patients and reduc
 As standard of care corticosteroids, aminosalicylates and immunosuppressor and some other drugs like antibiotics or metronidazol are util in some cases.
 
 Acid 5-aminosalicylic (5-ASA or mesalazina, pentasa) can be given in a topic way (either liquid, enemas, or suppository) or in oral form (pills or dilutions).
-In CU it helps in the clinic remission but it does not always mean that there is remission (is twice much likely than placebo to reach remission) [@travis2006].
-On CD the effects are not so stark and generally it does not produce changes on the disease [@akobeng2016].
+In \acr{UC} it helps in the clinic remission but it does not always mean that there is remission (is twice much likely than placebo to reach remission) [@travis2006].
+On \acr{CD} the effects are not so stark and generally it does not produce changes on the disease [@akobeng2016].
 
-Antibiotics, such as metronidazol and ciprofloxacina, are effective to deal with secondary effects of IBD such as abscess and bacterian overgrowth in CD [@feller2010; @prantera2009], but they do not seem effective on \acr{UC} [@prantera2009].
+Antibiotics, such as metronidazol and ciprofloxacina, are effective to deal with secondary effects of \acr{IBD} such as abscess and bacterian overgrowth in \acr{CD} [@feller2010; @prantera2009], but they do not seem effective on \acr{UC} [@prantera2009].
 
 Corticosteroids can be taken orally, such as prednisolona, prednisona and Budesonide; intravenous, hidrocortisona, metilprednisolona; or via enemas and suppositories.
-Budesonide is not absorved well and has a limited biodistribution but it has good therapeutic benefits with a reduced systemic toxicity in IBD [@rezaie2015; @peyrin-biroulet2010].
-These drugs work very well as antiinflammatory for mild or severe IBD but do not work well as maintenance drug [@lichtenstein2009; @ouellette2001].
+Budesonide is not absorved well and has a limited biodistribution but it has good therapeutic benefits with a reduced systemic toxicity in \acr{IBD} [@rezaie2015; @peyrin-biroulet2010].
+These drugs work very well as antiinflammatory for mild or severe \acr{IBD} but do not work well as maintenance drug [@lichtenstein2009; @ouellette2001].
 
 Thiopurines (Azathioprine, mercaptopurina) are immunosuppressants drugs that deactivate key process of limphocytes T that might trigger the inflammation.
 As a side effect they are toxic due to their interaction with nucleic acids [@warner2018].
-on CD they are useful to induce and keep remission [@chande2015], while on \acr{UC} they are used to keep the remission [@gisbert2009].
+on \acr{CD} they are useful to induce and keep remission [@chande2015], while on \acr{UC} they are used to keep the remission [@gisbert2009].
 
-In the last two decades IBD treatment has moved from aminosalicylates, corticosteroids and immunomodulators to anti-TNF$\alpha$.
-Anti-TNF$\alpha$ drugs has changed IBD treatment as it reduced the hospitalization associated with previous treatments, reducing medical costs and risk of surgery as well as induce a better mucosal healing and quality of life for patients [@peyrin-biroulet2011].
+In the last two decades \acr{IBD} treatment has moved from aminosalicylates, corticosteroids and immunomodulators to anti-TNF$\alpha$.
+Anti-TNF$\alpha$ drugs has changed \acr{IBD} treatment as it reduced the hospitalization associated with previous treatments, reducing medical costs and risk of surgery as well as induce a better mucosal healing and quality of life for patients [@peyrin-biroulet2011].
 However, 20-30% of patients have no response to this treatments and another 30-40% lose response in a year [@billioud2011].
 
 <!--# Pause to give names of drugs used on other targets previously mentioned -->
 
-Recently a new wave of drugs has been developed targeting different molecules such as vedolizumab, targeting anti-integrin$\alpha 4 \beta 7$, ustekinumab, targeting both IL-12 and IL-23, risankizumab an anti IL-23, tofacitinib an inhibitor of JAKs, infliximab an anti-TNF$\alpha$.
+Recently a new wave of drugs has been developed targeting different molecules such as vedolizumab, targeting anti-integrin$\alpha 4 \beta 7$, ustekinumab, targeting both \acr{IL}-12 and \acr{IL}-23, risankizumab an anti \acr{IL}-23, tofacitinib an inhibitor of JAKs, infliximab an anti-TNF$\alpha$.
 
 Patients might become refractory to drug.
 Thus, drugs do not have the same effect as previously and the dose might need to be increased with the risk of more secondary effects [@raine2021].
@@ -330,27 +334,27 @@ Surgery resection might be needed on these patients.
 Close to 35% of patients with \acr{UC} will need to have a surgery resection, either due to complications or because the inflammation can not be controlled.
 Surgery usually removes the inflamed segment of the colon.
 The most common procedure used is a colectomy (whole colon removal), with ileostomy [@hwang2008].
-CD patients usually require surgery associated to complications like stenosis, abscess, and fistulas ) between 70% and 90% at some point of their lives [@gardiner2007].
+\acr{CD} patients usually require surgery associated to complications like stenosis, abscess, and fistulas ) between 70% and 90% at some point of their lives [@gardiner2007].
 Usually the surgery is limited to removing the inflamed segment but occasionally an ileostomy is required [@lewis2010].
 
 <!--# End -->
 
 If the drugs fail to contain the inflammation and heal the mucosa doctors might recommend a different procedure.
-In some cases HSCT is recommended which have shown to improve the life of the patients [@corralizab].
+In some cases \acr{HSCT} is recommended which have shown to improve the life of the patients [@corralizab].
 This is a new procedure given only to the most extreme cases to reset the immunological state of the patient.
 
 To reset or hugely modify the microbiota fecal microbiota transplantation between different people is currently being explored [@weingarden2017].
 
 ### Summary {#summary-ibd}
 
-IBD is a complex disease that impacts the health of many people for long time and with lasting impact on their quality of life.
+\acr{IBD} is a complex disease that impacts the health of many people for long time and with lasting impact on their quality of life.
 
 Current clinical care in some cases is enough to have a sustained clinical and endoscopic remission but most often is not enough and relapse is expected.
 Several factors, such as becoming refractory to drugs, intermittent course of the disease and lack of validated predictors of disease course or response to therapy make the treatment complex.
 
 Lack of knowledge of what are the factors cause of the disease make those treatments and drugs to be addressed to block further inflammation and damage, but cannot prevent it and often they do not stop it completely.
 
-## Integration studies in IBD
+## Integration studies in \acr{IBD}
 
 Many studies have looked up to the origin of the disease.
 As seen, one of the hypothesis behind the maintenance of the inflammation involves the microbiome and the host epithelium.
@@ -368,7 +372,7 @@ However, confirming causal interactions of the variables of each essay is diffic
 To find relationships some articles use correlation [@hasler_uncoupling_2016], there are others that use a combination of methods from correlations, partial correlations to integrative methods [@tang2017; @hernández-rocha2021; @huWholeExomeSequencing2021] and network integrations [@hernández-rocha2021].
 
 Very rarely there is an experimental confirmation of the relationships between variables of the different assays because it is complicated to test an interaction and to set up the right conditions for the many variables that are accounted for on the integrations.
-One of the few methods published that shows an interaction between genes and microorganisms in IBD is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
+One of the few methods published that shows an interaction between genes and microorganisms in \acr{IBD} is to expose the *ex-vivo* sample or cell lines with microbiomes or supernatant of at their culture [@mayorgas2021].
 
 ### Type of data used for integration analysis {#data-origin}
 
@@ -379,28 +383,28 @@ According to the data used, we can classify the studies:
 Most of the integrations refer some other source of data to the transcriptomics of the patient.
 The transcriptome of patients derived samples has been extensively studied since the existence of microarrays.
 There are known marker gens of inflammation and many research focus on identifying prognosis predictors and treatment response prediction based on gene expression [@planell2013; @leal2015; @massimino2021].
-Recently single-cell RNA-seq technology has enabled to estimate cell populations of the samples with better degree of success than bulk RNA-sequencing.
+Recently single-cell RNAseq technology has enabled to estimate cell populations of the samples with better degree of success than bulk RNAsequencing.
 Single cell technologies are starting to be used for integration.
 
 #### Microbiome
 
-Many of the integration analysis in IBD are done between host transcriptome and the microbiome.
-These studies use datasets from IBD patients usually stratified by disease activity or severity of inflammation or location of the disease.
-Most of them are based on correlation analysis between the microbiome and RNA-seq [@hasler_uncoupling_2016].
+Many of the integration analysis in \acr{IBD} are done between host transcriptome and the microbiome.
+These studies use datasets from \acr{IBD} patients usually stratified by disease activity or severity of inflammation or location of the disease.
+Most of them are based on correlation analysis between the microbiome and RNAseq [@hasler_uncoupling_2016].
 Conclusions of these integrations range from finding differences on the correlation depending on the type of disease ([@hasler_uncoupling_2016]) to finding relationships with inflammatory genes [@tang2017].
 
 #### Genetics
 
-Genetics is the next most common data source used to integrate data in IBD.
-Most studies on genetics and IBD are genome-wide association studies.
-The genetic component is specially important in IBD that starts on children [@kumar2019; @knights2013; @huWholeExomeSequencing2021].
+Genetics is the next most common data source used to integrate data in \acr{IBD}.
+Most studies on genetics and \acr{IBD} are \acr{GWAS}
+The genetic component is specially important in \acr{IBD} that starts on children [@kumar2019; @knights2013; @huWholeExomeSequencing2021].
 
 When using genetic data to integrate it with transcriptomics it is usually to understand how a genetic variant is affecting a gene expression.
-This has lead to the identification of expression quantitative trait loci (eQTL) [@repnik2016; @hu2021; @jung2020; @dai2019].
+This has lead to the identification of \acr{eQTL} [@repnik2016; @hu2021; @jung2020; @dai2019].
 
 #### Metabolome
 
-More recently there have been an increased interest on the study of the metabolic stat of IBD patients, given that microorganisms interact with the host also via their products and metabolites.
+More recently there have been an increased interest on the study of the metabolic stat of \acr{IBD} patients, given that microorganisms interact with the host also via their products and metabolites.
 There is evidence some of these metabolomic products come from the microbiome [@ferrer-picón2020; @mayorgas2021].
 Some studies have integrated the metabolome with the RNAseq and state of the epithelium [@ahmed2016; @gallagher2021].
 
@@ -486,7 +490,7 @@ A signature is usually a group of features that describe/are representative of a
 Identifying a subset of variables from the omics that are related is often a desired goal because it reduces the amount of variables allowing to perform experiments on the bench on just those that might be important.
 In other fields, such as machine learning, selecting the important variables is known as [feature selection](https://en.wikipedia.org/wiki/Feature_selection "Wikipedia page of feature selection").
 There are several methods that are used to do this [@cavill2016].
-An example of this is when performing eQTL analysis, where a locus is related to a change in gene expression [@repnik2016; @hu2021; @jung2020; @dai2019].
+An example of this is when performing \acr{eQTL} analysis, where a locus is related to a change in gene expression [@repnik2016; @hu2021; @jung2020; @dai2019].
 
 -   A predictive model
 
@@ -537,7 +541,7 @@ Depending on the method this blocks might have special meaning: when all the dat
 
 Depending on the relationship between the samples, the questions answerable and the methods that work on them differ.
 
-A sample can have multiple or one data source, for instance we could have RNA-seq and 16S data from the same sample.
+A sample can have multiple or one data source, for instance we could have RNAseq and \acr{16S} data from the same sample.
 In a study if all the samples have all the data from multiple data sources it is a complete case.
 If some samples have data from some data sources but not from others the study is not a with a complete case.
 
@@ -563,7 +567,7 @@ During *in vitro* experiments, conditions can be reproduced even if they are at 
 However, when using patients material replicates can not usually be performed like *in vitro* experiments.
 This makes it harder to study time-related change on patients.
 
-Lastly, time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNA-seq [@massoni-badosa2020; @zhu2017].
+Lastly, time between the collection of a fresh samples and its processing also influences the readings of the samples of the omics technology, specially RNAseq [@massoni-badosa2020; @zhu2017].
 Some genes are more influenced by time than others but as they are measured at the same time in all samples this might distort the data.
 Keeping track of the time that it takes to process samples is also hard to due and requires a highly coordinated effort [@ferreira2018].
 
@@ -572,7 +576,7 @@ Keeping track of the time that it takes to process samples is also hard to due a
 Once data is collected, the next step is to understand the relationship between the variables present.
 As mentioned earlier, some variables influence others which can affect the outcome in complex ways.
 With many variables present in a dataset it is important to be aware of known relationships between variables.
-Even in a simple dataset, like an RNA-seq dataset, it is important to be aware of the relationships between variables.
+Even in a simple dataset, like an RNAseq dataset, it is important to be aware of the relationships between variables.
 
 Since the discovery of the lactose [operon](https://en.wikipedia.org/wiki/Operon) it is known how some genes regulate each other [@jacob1961].
 However, it is not know how other variables are related between them.
@@ -600,7 +604,7 @@ But, some methods to account for relationships of variables only work when a dat
 
 These methods do not handle well or at all missing data.
 They need complete cases/data of the samples in order to be able to integrate the results.
-These methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], Multiple co-inertia analysis (MCIA) [@culhane_cross-platform_2003], Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019], Multi-Omics Factor Analysis (MOFA) [@argelaguet_multi-omics_2018] and STATegRa [@gomez-cabrero2019].
+These methods include \acr{RGCCA} [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], \acr{MCIA} [@culhane_cross-platform_2003], Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019], Multi-Omics Factor Analysis (MOFA) [@argelaguet_multi-omics_2018] and STATegRa [@gomez-cabrero2019].
 
 -   Data from different samples:
 
@@ -610,8 +614,8 @@ Some of them handle missing data, while others do use the data at face value.
 These method includes MetaPhlAn2 [@franzosaSpecieslevelFunctionalProfiling2018], HUMAnN,[@truongMetaPhlAn2EnhancedMetagenomic2015] and LEfSe [@segataMetagenomicBiomarkerDiscovery2011].
 
 Furthermore, some methods are designed to integrate specific types of datasets, (usually because they make some assumptions that are only met on that kind of data).
-For instance, HCG, 16S rRNA-seq, RNA-seq and metabolomics do not share the same data distribution, and are different between them.
-Also even with the same data depending on the processing of the data they can have very different properties: OTUs (operational taxonomic unit) properties are not the same as ASV (amplicon sequence variants) when analyzing 16S rRNAseq data.
+For instance, HCG, \acr{16S} sequencing, RNAseq and metabolomics do not share the same data distribution, and are different between them.
+Also even with the same data depending on the processing of the data they can have very different properties: \acr{OTUs} properties are not the same as \acr{ASV} when analyzing \acr{16S} data.
 
 #### Mathematical framework
 
@@ -634,7 +638,7 @@ Here we briefly describe some common mathematical frameworks, some of which have
     L1-regularization adds a penalty equal to the absolute value of the magnitude of coefficients which might leads to some coefficients becoming zero and the variable eliminated from the model.
     On the other hand, L2-regularization does not result in elimination of coefficients or sparse models and can only be used when there is multicollinearity as it works well to avoid over-fitting.
 
-    Several tools use this approach, Momix [@cantini2021], regularized canonical correlation analysis (RGCCA) [@tenenhaus2017], mixOmics [@rohart2017] and STATegRa [@gomez-cabrero2019].
+    Several tools use this approach, Momix [@cantini2021], \acr{RGCCA} [@tenenhaus2017], mixOmics [@rohart2017] and STATegRa [@gomez-cabrero2019].
     Other methods use bayesian approches like the Bayesian Group Factor Analysis [@virtanen2012].
 
 -   Active module identification
@@ -660,7 +664,7 @@ Such methods include iCluster, Multi-Omics Factor Analysis (MOFA) [@argelaguet_m
 -   Specific factors:
 
 Integration results in several vectors of the samples in a lower dimensional space of each data set used to integrate.
-Such methods include Regularized Generalized Canonical Correlation Analysis (RGCCA) [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], Multiple co-inertia analysis (MCIA) [@culhane_cross-platform_2003] and Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019].
+Such methods include \acr{RGCCA} [@tenenhaus_regularized_2011; @tenenhaus_variable_2014], \acr{MCIA} [@culhane_cross-platform_2003] and Multi-Study Factor Analysis (MSFA) [@vito_multi-study_2019].
 
 -   Mixed factors:
 
@@ -703,7 +707,7 @@ These methods are useful to compare different setup but they can miss some subtl
 The comparison and review of methods independently from original authors have become a crucial step for selecting the right tool to apply a given dataset and research question [@cantini2021].
 
 Some of these reviews focus on a specific type of data integration: metabolomics [@cavill2016], genomics [@mcgovern2015], microbiomics... Others focus on the disease and the challenges of each omics and the need of an integrative approach to provide better therapies [@de_souza_ibd_2017; @tarazona2021; @valles-colomer2016].
-On this regard there are several efforts to integrate data in IBD but no comprehensive review to date is known to the author.
+On this regard there are several efforts to integrate data in \acr{IBD} but no comprehensive review to date is known to the author.
 The most comprehensive article to date is a very recent review identifying problems and providing recommendations for future work [@sudhakar2022].
 
 ### Summary {#methods-integration}
@@ -716,13 +720,13 @@ Regardless of the method used, interpretation and reporting is usually the main 
 
 ## Summary
 
-IBD is a gastrointestinal disease that includes two different diseases \acr{UC} and CD.
-It affects preferentially the lower intestinal tract causing lesions on the epithelial barrier. 
+\acr{IBD} is a gastrointestinal disease that includes two different diseases \acr{UC} and \acr{CD}.
+It affects preferentially the lower intestinal tract causing lesions on the epithelial barrier.
 Bacteria causes or use these lesions to further damage the patients.
 But this interaction is also influenced by many other variables.
 
 Data integration are methods to analyze datasets with data from multiple sources.
-They include a variety of methods and there are methods for several purposes. 
-In IBD it has been used mostly sequencing data, disregarding the other variables known to be relevant.
+They include a variety of methods and there are methods for several purposes.
+In \acr{IBD} it has been used mostly sequencing data, disregarding the other variables known to be relevant.
 
-Data integration in IBD has been underexplored despite being known that many factors interact on the pathogenesis and maintenance of the disease. 
+Data integration in \acr{IBD} has been underexplored despite being known that many factors interact on the pathogenesis and maintenance of the disease.
