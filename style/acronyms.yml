@@ -1,0 +1,13 @@
+---
+acronyms:
+  keys:
+    # Define your keys here
+    - shortname: IBD
+      longname: inflammatory bowel disease
+    - shortname: CD
+      longname: Crohn's disease
+    - shortname: UC
+      longname: ulcerative colitis
+    - shortname: HSCT
+      longname: hematopoietic stem cell transplant
+---

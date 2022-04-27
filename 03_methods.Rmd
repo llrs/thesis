@@ -65,7 +65,7 @@ An IBD-related dataset was obtained by Prof. Dr. Rosentiel and Prof. Dr. Robert 
 Biopsies were obtained endoscopically during routine diagnosis RNA and DNA were extracted using standard procedures.
 DNA from the 16S rRNA gene was amplified with primers 319F and 806R.
 Both RNA and DNA was then sequenced on HiSeq 2000 and MiSeq respectively.
-These biopsies included samples from the terminal ileum and sigma from CD, UC, infectious disease-controls and healthy non-IBD.
+These biopsies included samples from the terminal ileum and sigma from CD, \acr{UC}, infectious disease-controls and healthy non-IBD.
 The dataset included information about gender, location, age, and the status (inflamed or non-inflamed) of the region from which the biopsy was taken.
 
 | Characteristic                | Häsler's |
@@ -79,7 +79,7 @@ The dataset included information about gender, location, age, and the status (in
 ### Morgan's dataset {#methods-morgan}
 
 A previously published dataset from a pouchitis study was analyzed [@morgan2015].
-In this study patients having undergone proctocolectomy with ileal pouch-anal anastomosis for treatment of UC or familial adenomatous polyposis at least 1 year prior to enrollment were recruited at Mount Sinai Hospital (Toronto, Canada) excluding individuals with a diagnosis of CD.
+In this study patients having undergone proctocolectomy with ileal pouch-anal anastomosis for treatment of \acr{UC} or familial adenomatous polyposis at least 1 year prior to enrollment were recruited at Mount Sinai Hospital (Toronto, Canada) excluding individuals with a diagnosis of CD.
 The dataset has a total of 255 samples from 203 patients, containing data for both host transcriptome and intestinal microbiome.
 On some cases several biopsyes were collected from the same patients.
 This dataset included anonymous identifiers for patients, whether the sample was from the pre-pouch ileum (PPI) or from the pouch, the sex, the outcome of the procedure and an inflammation score.
@@ -98,12 +98,12 @@ The pouch ileum might be inflamed or not.
 This dataset included a cohort of 66 treatment-naïve children at diagnosis of their IBD, along with 30 age- and sex-matched non-inflammatory control children, recruited at the Paediatric Gastroenterology unit at Addenbrooke's Hospital (England) [@howell2018].
 
 Data from 77 samples that had both RNAseq and 16S data was used.
-There are 10 non-IBD samples, 11 with CD and 11 with UC.
+There are 10 non-IBD samples, 11 with CD and 11 with \acr{UC}.
 Data has the following characteristics: disease, age at diagnostic, age at time of study, sex, sample location, and disease activity:
 
 | Characteristic                                  | Howell's  |
 |:------------------------------------------------|:---------:|
-| Disease (non-IBD/CD/UC)                         | 11/10/11  |
+| Disease (non-IBD/CD/\acr{UC})                         | 11/10/11  |
 | Age at diagnostic (\<17/\<40/\>40 years)        | 32/0/0    |
 | Age: mean (min-max)                             | 12 (6-15) |
 | Sex (female/male)                               | 10/22     |
@@ -647,11 +647,11 @@ It can take into account spatial distribution and, given the number of samples t
 [^methods-3]: Technical replicates are samples that are measured multiple times to ensure the accuracy of the measurement.
     In contrast biological replicates are sample with the same conditions but different individuals or process before the measurement.
 
-### ROC- AUC {#ROC}
+### ROC- A\acr{UC} {#ROC}
 
 To estimate if the selected features (genes or microorganism) by the integration methods have some biological meaningful contribution we measured if they can classify features, such as, which gastrointestinal segment is each sample from, or which type of disease does each patient have.
 
-To compare between different models the area under the curve (AUC) of the receiver operating characteristic (ROC) was calculated with the [pROC](https://cran.r-project.org/package=pROC) package [@robin2011].
+To compare between different models the area under the curve (A\acr{UC}) of the receiver operating characteristic (ROC) was calculated with the [pROC](https://cran.r-project.org/package=pROC) package [@robin2011].
 It is based on the following formulas, where $\text{FP}$ is false positive, $N$ is a negative, $P$ is positive, $\text{TP}$ is true positive and $\text{FN}$ is false negative:
 
 $$

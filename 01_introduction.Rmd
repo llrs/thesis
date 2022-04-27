@@ -1,8 +1,8 @@
 # Introduction
 
-[Inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) (IBD) involves [Crohn's disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD) and [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (UC).
+[Inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease) (IBD) involves [Crohn's disease](https://en.wikipedia.org/wiki/Crohn%27s_disease) (CD) and [ulcerative colitis](https://en.wikipedia.org/wiki/Ulcerative_colitis) (\acr{UC}).
 It generally affects the terminal ileum and the colon but it can involve any segment of the gastrointestinal tract.
-UC is a recurrent, chronic and continuous inflammation of the colon and rectum while the CD is not a continuous inflammation and affects the whole gastrointestinal tract causing transmural inflammation.
+\acr{UC} is a recurrent, chronic and continuous inflammation of the colon and rectum while the CD is not a continuous inflammation and affects the whole gastrointestinal tract causing transmural inflammation.
 
 IBD etiology is unknown.
 However, once it has initiated the most prevalent hypothesis of its chronicity suggests an aberrant immunological response to antigens of the commensal microbiome.
@@ -15,10 +15,10 @@ Nevertheless, many patients are refractory or intolerant to those therapies and 
 
 ## Inflammatory bowel disease {#IBD}
 
-IBD includes the CD and UC which are characterized by alternating periods of remission and clinical relapse that mainly affect the gastrointestinal tract.
+IBD includes the CD and \acr{UC} which are characterized by alternating periods of remission and clinical relapse that mainly affect the gastrointestinal tract.
 CD is a progressive relapsing disease that can affect all the gastrointestinal tract but shows mostly on both terminal ileum and colon with a discontinuous inflammation.
-UC is a colonic relapsing disease characterized by continuous inflammation of the colon.
-Both of them have different risk factors, clinical, endoscopic an histological characteristics (see sections \@ref(CD) and \@ref(UC) ).
+\acr{UC} is a colonic relapsing disease characterized by continuous inflammation of the colon.
+Both of them have different risk factors, clinical, endoscopic an histological characteristics (see sections \@ref(CD) and \@ref(\acr{UC}) ).
 
 Around 3.5 million individuals have IBD in Europe and North America combined [@jairath2020].
 IBD is more commonly found in industrialized and developed regions, suggesting that environmental factors might greatly influence IBD occurrence.
@@ -46,7 +46,7 @@ But once a segment is affected by the disease it can be considered as involved, 
 
 Several mechanisms have been proposed to drive IBD pathogenesis [@zhang2014; @hugot2004].
 Some of them are based on a relationship between the immune system and the microbiome [@silva2016; @demattos2015].
-It is also unclear if CD and the UC share the same origin considering their different symptoms.
+It is also unclear if CD and the \acr{UC} share the same origin considering their different symptoms.
 
 There is also evidence of some genetic component on the onset of the disease, specially if the disease appears very early (less than 2 years old patients) [@mcgovern2015; @satsangi2006].
 Disease can be classified based on age at onset as very early, early or adult on-set disease [@satsangi2006].
@@ -64,8 +64,8 @@ Genome wide association studies (GWAS) are one of the most common genetic studie
 To discover through linkage desequilibrium genetic variations linked to phenotypes and regulatory transcription changes, respectively.
 
 With GWAS several allels on protein coding loci have been found, rising to around 300 genetic variants [@kumar2019].
-Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in UC [@jostins2012; @momozawa2018].
-The mechanism of how this gene protects from UC has not been confirmed yet [@horowitz2021].
+Particularly, the *NOD2* gene is highly relevant for the disease on European patients, as it is a risk alleles for CD loci but show significant protective effects in \acr{UC} [@jostins2012; @momozawa2018].
+The mechanism of how this gene protects from \acr{UC} has not been confirmed yet [@horowitz2021].
 
 Many of the relevant genetic loci related to IBD are not on protein coding fragments of the genome.
 Recently expression quantitative trait loci (eQTL) particularly showed [@mcgovern2015] that locis are on enhancers or promoters like e.g.
@@ -95,7 +95,7 @@ Specially *Faecalibacterium prausnitzii* is one microorganism of interest [@kost
 
 <!--# Aida 2.3 p24-->
 
-In fact, it has been recently proposed that several unique microbial species can distinguish healthy controls from UC and CD patients [@sankarasubramanian2020; @lopez-siles2014].
+In fact, it has been recently proposed that several unique microbial species can distinguish healthy controls from \acr{UC} and CD patients [@sankarasubramanian2020; @lopez-siles2014].
 
 ```{r composition, fig.scap="The microbial composition in the gut.", fig.cap="The microbial composition in the gut. On the left healthy gut is represented as having a high microbiome diversity and no damage on the epithelial barrier. On the right the IBD gut were microbiome diversity is lower and some bacteria is in physical contact with the damaged epithelium. Adapted with permission from Mayorgas' 2021.", fig.alt="The microbial composition in the gut. On the left healthy gut is represented as having a high microbiome diversity and no damage on the epithelial barrier. On the right the IBD gut were microbiome diversity is lower and some bacteria is in physical contact with the damaged epithelium. Adapted with permission from Mayorgas' 2021 thesis."}
 knitr::include_graphics("images/tesis_AM_Figure2.png")
@@ -108,7 +108,7 @@ They interact with the cells and modulate the state of the intestine.
 One example of such metabolite is butyrate which has been linked to microorganisms presents on healthy intestines and shown to interact with intestine cells and help regulate some genes [@ferrer-picón2020].
 
 As previously mentioned, adherent invasive *Escherichia coli*, a proteobacteria specie, has been associated with IBD [@darfeuille-michaud1998].
-Adherent invasive strains are mainly found in ileal and colonic samples of CD patients and their presence in UC is less clear.
+Adherent invasive strains are mainly found in ileal and colonic samples of CD patients and their presence in \acr{UC} is less clear.
 These adherent invasive cells enter through the epithelium of the more permeable cells and live on their cytosol.
 
 <!--# End-->
@@ -185,8 +185,8 @@ Chronic inflammatory disorders and neoplasms have become the main cause of morbi
 A decrease in human exposure to microbes or hygene which might affect the proper maturation of the immune system so that it provides less immune response or exacerbated response towards "friendly" microbes [@strachan1989; @scudellari2017].
 
 From other environmental factors related to IBD such as tobacco, diet, certain drugs and stress; tobacco is the most influential environmental factor.
-Surprisingly, it has an opposite effect on UC and CD: in CD tobacco is a risk factor that increases the risk of relapse and/or surgical intervention.
-In UC, it has been observed that smoking cessation worsens the disease [@thomas1998].
+Surprisingly, it has an opposite effect on \acr{UC} and CD: in CD tobacco is a risk factor that increases the risk of relapse and/or surgical intervention.
+In \acr{UC}, it has been observed that smoking cessation worsens the disease [@thomas1998].
 
 Pharmacological treatments such as oral contraceptives, non steroidal anti-inflammatory drugs are also related to develop or relapse the disease [@cornish2008; @kaufmann1987].
 
@@ -254,15 +254,15 @@ Stricturing is a narrowing of a part of the intestine often because of scar tiss
 Penetrating is when the epithelium has some holes or tubes.
 If these tubes result in an abnormal connection between two body parts it is a fistula, it might also result in an abcess, a collections of pus, often developed in the abdomen, pelvis, or around the anal area.
 
-### UC physiology {#UC}
+### \acr{UC} physiology {#\acr{UC}}
 
-As previously introduced, UC is a chronic inflammatory disorder characterized by a continuous inflammation of the colon.
+As previously introduced, \acr{UC} is a chronic inflammatory disorder characterized by a continuous inflammation of the colon.
 Depending on the inflamed segments of the intestine it is classified in several phenotypes.
 
-Around a third of the patients with UC suffer proctitis, the inflammation of the rectum.
+Around a third of the patients with \acr{UC} suffer proctitis, the inflammation of the rectum.
 If the segments from rectum to the sigmoid colon are affected is a distal colitis, if it affects the left colon then it becomes a left colitis.
 If the inflammation continues to the descending colon it is then an extensive colitis until it affects the whole colon when it becomes a pancolitis.
-The extension of UC is inversely related to the frequency.
+The extension of \acr{UC} is inversely related to the frequency.
 However, the extension and severity of the disease correlates: the prognosis is worse the more extended it is [@etchevers2009].
 In addition, the damage usually consists in many neutrophil in the lumen crypt [@bassolasmolina2018].
 
@@ -286,7 +286,7 @@ Among the scores most used are the following:
 
 -   IBDQ: A 32 questionnaire used to assess the quality of life grouped into four categories: bowel, systemic, social and emotional [@irvine1999].
 
--   UCEDIS: An endoscopic score based on vascular pattern, internal bleeding and erosion and ulcers [@travis2012].
+-   \acr{UC}EDIS: An endoscopic score based on vascular pattern, internal bleeding and erosion and ulcers [@travis2012].
 
 Other measured parameters include, weight, effective weight, fecal calprotectin, C reactive protein and hemoglobine.
 
@@ -303,7 +303,7 @@ Acid 5-aminosalicylic (5-ASA or mesalazina, pentasa) can be given in a topic way
 In CU it helps in the clinic remission but it does not always mean that there is remission (is twice much likely than placebo to reach remission) [@travis2006].
 On CD the effects are not so stark and generally it does not produce changes on the disease [@akobeng2016].
 
-Antibiotics, such as metronidazol and ciprofloxacina, are effective to deal with secondary effects of IBD such as abscess and bacterian overgrowth in CD [@feller2010; @prantera2009], but they do not seem effective on UC [@prantera2009].
+Antibiotics, such as metronidazol and ciprofloxacina, are effective to deal with secondary effects of IBD such as abscess and bacterian overgrowth in CD [@feller2010; @prantera2009], but they do not seem effective on \acr{UC} [@prantera2009].
 
 Corticosteroids can be taken orally, such as prednisolona, prednisona and Budesonide; intravenous, hidrocortisona, metilprednisolona; or via enemas and suppositories.
 Budesonide is not absorved well and has a limited biodistribution but it has good therapeutic benefits with a reduced systemic toxicity in IBD [@rezaie2015; @peyrin-biroulet2010].
@@ -311,7 +311,7 @@ These drugs work very well as antiinflammatory for mild or severe IBD but do not
 
 Thiopurines (Azathioprine, mercaptopurina) are immunosuppressants drugs that deactivate key process of limphocytes T that might trigger the inflammation.
 As a side effect they are toxic due to their interaction with nucleic acids [@warner2018].
-on CD they are useful to induce and keep remission [@chande2015], while on UC they are used to keep the remission [@gisbert2009].
+on CD they are useful to induce and keep remission [@chande2015], while on \acr{UC} they are used to keep the remission [@gisbert2009].
 
 In the last two decades IBD treatment has moved from aminosalicylates, corticosteroids and immunomodulators to anti-TNF$\alpha$.
 Anti-TNF$\alpha$ drugs has changed IBD treatment as it reduced the hospitalization associated with previous treatments, reducing medical costs and risk of surgery as well as induce a better mucosal healing and quality of life for patients [@peyrin-biroulet2011].
@@ -327,7 +327,7 @@ Surgery resection might be needed on these patients.
 
 <!--# Back to Elena -->
 
-Close to 35% of patients with UC will need to have a surgery resection, either due to complications or because the inflammation can not be controlled.
+Close to 35% of patients with \acr{UC} will need to have a surgery resection, either due to complications or because the inflammation can not be controlled.
 Surgery usually removes the inflamed segment of the colon.
 The most common procedure used is a colectomy (whole colon removal), with ileostomy [@hwang2008].
 CD patients usually require surgery associated to complications like stenosis, abscess, and fistulas ) between 70% and 90% at some point of their lives [@gardiner2007].
@@ -716,7 +716,7 @@ Regardless of the method used, interpretation and reporting is usually the main 
 
 ## Summary
 
-IBD is a gastrointestinal disease that includes two different diseases UC and CD.
+IBD is a gastrointestinal disease that includes two different diseases \acr{UC} and CD.
 It affects preferentially the lower intestinal tract causing lesions on the epithelial barrier. 
 Bacteria causes or use these lesions to further damage the patients.
 But this interaction is also influenced by many other variables.

@@ -73,9 +73,9 @@ We found several with intestinal 16S and RNAseq data from the same location, to 
 As explained in the methods' section \@ref(methods-hsct), the HSCT dataset is a very unique cohort of CD patients undergoing hematopoietic stem cell transplant.
 This treatment is reserved to patients for which all the other treatment failed and this may be the only way to reach remission.
 These patients are closely monitored and followed up for several years.
-This treatment is not indicated for UC, so this dataset includes only CD patients.
+This treatment is not indicated for \acr{UC}, so this dataset includes only CD patients.
 
-The BARCELONA dataset (See appendix section \@ref(barcelona)) includes samples from CD and UC collected prospectively in patients starting biological treatment and followed up for up to a year.
+The BARCELONA dataset (See appendix section \@ref(barcelona)) includes samples from CD and \acr{UC} collected prospectively in patients starting biological treatment and followed up for up to a year.
 Patients had shorter disease duration but were not refractory to biologic treatments and may even be naive to any biologic.
 Thus, analysis of this cohort could have provided us with a better understanding on the initial relationships between the microbiome and the mucosa of IBD patients.
 
@@ -109,7 +109,7 @@ No healthy samples are included and there is no follow up.
 Thus, it was unlikely that a classification of the location could be achieved and that classification of the samples according to the microbiota could not be based on the disease (as all of them had undergone the same procedure and had the same disease type).
 Nonetheless, there seems to be a partial separation by location on the models in figure \@ref(fig:morgan-models) that could partially be explained by different degrees of inflammation.
 
-The Howell dataset includes both pediatric CD and UC (and non-IBD) samples.
+The Howell dataset includes both pediatric CD and \acr{UC} (and non-IBD) samples.
 It is very similar to our BARCELONA dataset.
 As expected, time of the disease duration of these patients is lower, however, they were not followed up at different time points.
 
@@ -310,7 +310,7 @@ On this thesis several methods has been developed to help multi-omic data integr
 `BaseSets` and `inteRmodel` are useful for computational analysis.
 `BaseSets` might help beyond integration analysis such as single cell annotation[^discussion-1].
 
-[^discussion-1]: See an exploration of this using AUCell <https://bioconductor.org/packages/AUCell> on this website: <https://llrs.github.io/BaseSet_scRNAseq/AUCell.html>.
+[^discussion-1]: See an exploration of this using A\acr{UC}ell <https://bioconductor.org/packages/A\acr{UC}ell> on this website: <https://llrs.github.io/BaseSet_scRNAseq/A\acr{UC}ell.html>.
 
 Some studies using host transcriptomics of fecal wash infer inflammation without colonoscopy [@ungar2022].
 This would help patients to avoid an unpleasant experience, and reduce the usage of clinical facilities.

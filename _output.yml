@@ -1,9 +1,10 @@
 bookdown::gitbook:
-  css: style.css
+  pandoc_args: !expr acronymsdown::add_filter()
+  css: style/style.css
   includes:
-    in_header: GA.html
+    in_header: style/GA.html
     # before_body: wip.html
-    before_body: print.html
+    before_body: style/print.html
   dev: svglite
   citation_package: none
   link-citations: yes
@@ -44,6 +45,7 @@ bookdown::pdf_book:
   toc_unnumbered: true
   toc_depth: 3
 bookdown::word_document2:
+  pandoc_args: !expr acronymsdown::add_filter()
   fig_caption: true
   link-citations: yes
   toc: yes

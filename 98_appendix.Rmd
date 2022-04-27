@@ -3,7 +3,7 @@
 
 # (APPENDIX) Appendix {-}
 
-<!--# Restart counter to start again the position -->
+\printacronyms
 
 # Online resources
 
@@ -164,7 +164,7 @@ All code of the analysis of the publications is available (in his messed state a
 -   [Puget's](https://github.com/llrs/sgcca_hyperparameters "RGCCA exploration code on github"): Explore the effects of the hyperparameters on RGCCA on the provided dataset.
 -   [inteRmodel](https://github.com/llrs/inteRmodel "Integration package on github"): Package for easy repeating the methodology developed on TRIM.
 -   [Morgan's](https://github.com/llrs/pouchitis "Pouchitis code on github"): Work with the pouchitis cohort used in this article.
--   [Häsler's](https://github.com/llrs/Uncoupling "Uncoupling code on github"): Work with the UC/CD dataset used in this article.
+-   [Häsler's](https://github.com/llrs/Uncoupling "Uncoupling code on github"): Work with the \acr{UC}/\acr{CD} dataset used in this article.
 -   [integration](https://github.com/llrs/integration-helper "Integration package on github"): Package with functions that we wrote or used on different parts of exploring the TRIM dataset ended up here.
 
 BaseSet:
@@ -236,10 +236,10 @@ cat("The same article can be find below.")
 
 <!--# Adapted from the ethical committee submission-->
 
-All patients with an established diagnosis of IBD, including Crohn's disease, ulcerative colitis, unclassified IBD, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 46 weeks a biopsy from an ileocolonoscopy.
+All patients with an established diagnosis of \acr{IBD}, including Crohn's disease, ulcerative colitis, unclassified \acr{IBD}, indeterminate colitis, or pouchitis, starting treatment with a biologic agent were monitored following the schedule of clinical visits, laboratory tests, imaging procedures and biologic sampling at the beginning of their treatment with anti-TNF therapy and after 14 weeks and 46 weeks a biopsy from an ileocolonoscopy.
 The protocol was approved by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7845 and HCB/2012/7956).
 
-Patients that were referred to the Hospital Clínic de Barcelona IBD unit, who had already started treatment with a biologic agent in another center, were also included adapting to the corresponding time-schedule of their treatment.
+Patients that were referred to the Hospital Clínic de Barcelona \acr{IBD} unit, who had already started treatment with a biologic agent in another center, were also included adapting to the corresponding time-schedule of their treatment.
 In all patients, starting anti-TNF treatment will be decided before the protocol entry decision according to medical clinical practice.
 
 Anonymized identification of the patients, disease, sex age at diagnostic, age at the moment of the sample taking, time since the start of the treatment and sample segment was collected.
@@ -247,7 +247,7 @@ Anonymized identification of the patients, disease, sex age at diagnostic, age a
 | Characteristic                           | BARCELONA  |
 |------------------------------------------|------------|
 | Individuals                              | 62         |
-| Status (non-IBD/CD/UC)                   | 8/33/21    |
+| Status (non\-\acr{IBD}/\acr{CD}/\acr{UC})                   | 8/33/21    |
 | Sex (female/male)                        | 29/33      |
 | Age at diagnostic (\<17/\<40/\>40 years) | 2/44/8     |
 | Years of disease: mean (min-max)         | 7.6 (0-32) |
@@ -273,7 +273,7 @@ This dataset was processed as usual but as part of the quality controls of the d
 knitr::include_graphics("images/barcelona-diversity.png")
 ```
 
-Control samples diversity should be lower and not on the same range as with samples of patients with IBD.
+Control samples diversity should be lower and not on the same range as with samples of patients with \acr{IBD}.
 The dataset's 16S was sequenced several times by different platforms.
 Despite the pilots and the negative controls on the sequencing process, each time there were different problems: contamination, low quality and then this suspicious diversity.
 It does not seem to be a problem of the sequencing facility, so this data was abandoned as unreliable.
@@ -282,13 +282,13 @@ It does not seem to be a problem of the sequencing facility, so this data was ab
 
 This dataset was obtained from collaborators at Mount Sinai, Toronto, Canada [@hernández-rocha2021].
 
-Patients with UC, CD were recruited when attending regularly scheduled visits or surveillance.
+Patients with \acr{UC}, \acr{CD} were recruited when attending regularly scheduled visits or surveillance.
 In addition, asymptomatic healthy controls (HC) were recruited during routine, age-related colorectal cancer screening by colonoscopy.
 290 samples were collected together with information about the disease, age at diagnosis, age at the moment of the sampling, sex, sample location and smoking status.
 
 | Characteristic                           | Hernández' |
 |------------------------------------------|------------|
-| Disease (non-IBD/CD/UC)                  | 46/54/66   |
+| Disease (non\-\acr{IBD}/\acr{CD}/\acr{UC})                  | 46/54/66   |
 | Age at diagnostic (\<17/\<40/\>40 years) | 29/73/18   |
 | Age: mean (min-max)                      | 40 (17-71) |
 | Sex (female/male)                        | 81/85      |
