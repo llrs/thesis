@@ -1,0 +1,85 @@
+/* .class */
+/* type */
+
+.author {
+  font-style: bold;
+  text-align: center;
+}
+
+.date {
+  text-align: center;
+}
+
+.wip {
+  background: #ffff66;
+  font-style: italic;
+  padding: 10px;
+}
+
+.print {
+  background: #ff6600;
+  padding: 10px;
+}
+
+.print::before {
+  content: "\f02f";
+  font-family: FontAwesome;
+  left: 10px;
+  top: 10px;
+  bottom: 0px;
+  font-size: 30px;
+}
+.wip::before {
+  content: "\f071";
+  font-family: FontAwesome;
+  left: 10px;
+  top: 10px;
+  bottom: 0px;
+  font-size: 30px;
+}
+
+.tab {
+  tab-size: 4;
+}
+
+/*Align caption to the right and change color*/
+
+.figure {
+  position: center;
+  width: 100%;
+}
+
+.table {
+  position: center;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+table.style {
+  width: 100%;
+  color: darkgrey;
+  font-style: bold;
+}
+
+/* Caption for figures */
+.caption {
+  width: 100%;
+  color: darkgrey;
+  font-style: bold;
+}
+
+/* Caption for tables */
+caption {
+  width: 100%;
+  color: darkgrey;
+  font-style: bold;
+}
+
+table.table caption[style] {
+  width: 100%;
+  color: darkgrey;
+  font-style: bold;
+}
