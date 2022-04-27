@@ -7,7 +7,7 @@ knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 github-repo: "llrs/thesis"
 url: 'https\://thesis.llrs.dev/'
-csl: bmc_bioinformatics.csl
+csl: style/bmc_bioinformatics.csl
 book_filename: data_integration_IBD
 split_by: chapter
 twitter-handle: Lluis_Revilla
@@ -24,6 +24,10 @@ papersize: a4
 fontsize: 12pt
 # Not needed https://tex.stackexchange.com/a/188337/178206
 # fontenc: utf8 
+acronyms:
+  insert_loa: false
+  sorting: initial
+  fromfile: ./style/acronyms.yml
 geometry:
  - top=25.4mm
  - bottom=25.4mm

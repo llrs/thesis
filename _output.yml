@@ -25,8 +25,9 @@ bookdown::gitbook:
         href: https://twitter.com/intent/tweet?text=Nice%20read%20of%20%40Lluis_Revilla%20thesis
 bookdown::epub_book: default
 bookdown::pdf_book:
+  pandoc_args: !expr acronymsdown::add_filter()
   includes:
-    in_header: "preamble.tex"
+    in_header: "style/preamble.tex"
     # before_body: "before_body.tex"
   keep_tex: yes
   dev: "cairo_pdf"
