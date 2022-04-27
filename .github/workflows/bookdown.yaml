@@ -22,7 +22,7 @@ jobs:
 
       - name: Install bookdown
         run: |
-          Rscript -e "install.packages(c('knitr', 'bookdown', 'tinytext', 'kableExtra', 'remotes'))"
+          Rscript -e "install.packages(c('knitr', 'bookdown', 'tinytext', 'kableExtra', 'remotes', 'metathis'))"
           Rscript -e "remotes::install_github('rchaput/acronymsdown')"
 
       # - name: Setup Debug Session
@@ -61,7 +61,7 @@ jobs:
 
       - name: Install bookdown
         run: |
-          Rscript -e "install.packages(c('knitr', 'bookdown', 'tinytext', 'kableExtra', 'remotes'))"
+          Rscript -e "install.packages(c('knitr', 'bookdown', 'tinytext', 'kableExtra', 'remotes', 'metathis'))"
           Rscript -e "remotes::install_github('rchaput/acronymsdown')"
 
       # - name: Setup Debug Session

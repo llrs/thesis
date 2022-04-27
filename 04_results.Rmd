@@ -560,7 +560,7 @@ include_graphics("images/hsct-bootstrap-characteristics.png")
 Evaluating the same model on each bootstrap lead to a dispersion on the inner \acr{AVE} of the model.
 The lower the dispersion, the more robust the model was to different conditions than in the initial testing.
 
-```{r hsct-bootstrap, fig.scap="Bootstrap results on HSCT dataset.", fig.cap="Bootstrap of the models 0, 1.2 and 2.2. The point with the black circle is the AVE of the original data. The dispersion is shown by the ellipses. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped."}
+```{r hsct-bootstrap, fig.scap="Bootstrap results on HSCT dataset.", fig.cap="Bootstrap of the models 0, 1.2 and 2.2 on the HSCT dataset. The point with the black circle is the AVE of the original data. The dispersion is shown by the ellipses. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped."}
 include_graphics("images/hsct-bootstrap.png")
 ```
 
