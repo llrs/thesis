@@ -573,7 +573,7 @@ However, due to big amount of small probabilities when using the `BaseSet` packa
 include_graphics("images/hsct-mcia.png")
 ```
 
-The \acr{AUC} of classifying the transcriptome in colon or ileum segments was compared between the models (see figure \@ref(fig:hsct-auc-plot) and with \acr{MCIA}.
+The \acr{AUC} of classifying the transcriptome in colon or ileum segments was compared between the models (see figure \@ref(fig:hsct-auc-plot) and with \acr{MCIA}).
 
 ```{r hsct-auc-plot, fig.scap="AUC of the RGCCA models in the HSCT dataset.", fig.cap="AUC of the RGCCA models in the HSCT dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the HSCT dataset."}
 include_graphics("images/hsct-auc-models.png")
