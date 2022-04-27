@@ -202,7 +202,7 @@ cat("The same article can be find below.")
 
 
 <!--Help page on https://texdoc.org/serve/pdfpages/0 -->
-\includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight  - 25pt}, trim=0 0 0 20pt,]{paper_multiomics.pdf} 
+\includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight  - 25pt}, trim=0 0 0 20pt,]{pdf/paper_multiomics.pdf} 
 
 ## experDesign: stratifying samples into batches with minimal bias {#app-experDesign}
 
@@ -214,7 +214,7 @@ Article peer-reviewed published on 2021, freely [available online](https://joss.
 cat("The same article can be find below.")
 ```
 
-\includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - \voffset}, trim=0 0 0 20pt,]{paper_experDesign.pdf}
+\includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - \voffset}, trim=0 0 0 20pt,]{pdf/paper_experDesign.pdf}
 
 ## Randomized Controlled Trial Substudy of Cell-specific Mechanisms of Janus Kinase 1 Inhibition With Upadacitinib in the Crohn’s Disease Intestinal Mucosa: Analysis From the CELEST Study {#app-upa}
 
@@ -227,7 +227,7 @@ This article is not part of the PhD thesis, but included here for completeness.
 cat("The same article can be find below.")
 ```
 
-\includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - \voffset}, trim=0 0 0 20pt,]{paper_celest.pdf}
+\includepdf[pages=-, pagecommand={}, templatesize={\textwidth}{\textheight - \voffset}, trim=0 0 0 20pt,]{pdf/paper_celest.pdf}
 
 
 # Other datasets
