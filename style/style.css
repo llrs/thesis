@@ -1,3 +1,6 @@
+/* .class */
+/* type */
+
 .author {
   font-style: bold;
   text-align: center;
@@ -43,14 +46,40 @@
 
 .figure {
   position: center;
+  width: 100%;
 }
 
 .table {
   position: center;
+  width: 100%;
 }
 
+table {
+  width: 100%;
+}
+
+table.style {
+  width: 100%;
+  color: darkgrey;
+  font-style: bold;
+}
+
+/* Caption for figures */
+.caption {
+  width: 100%;
+  color: darkgrey;
+  font-style: bold;
+}
+
+/* Caption for tables */
 caption {
-  text-align: center;
+  width: 100%;
+  color: darkgrey;
+  font-style: bold;
+}
+
+table.table caption[style] {
+  width: 100%;
   color: darkgrey;
   font-style: bold;
 }
