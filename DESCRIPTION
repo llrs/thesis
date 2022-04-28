@@ -7,4 +7,5 @@ License: CC BY 4.0
 Encoding: UTF-8
 ByteCompile: true
 Type: Book
-Imports: bookdown
+Imports: bookdown, knitr, bookdown, tinytext, kableExtra, remotes, metathis
+Remotes: rchaput/acronymsdown
