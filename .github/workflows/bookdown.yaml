@@ -20,7 +20,6 @@ jobs:
         with:
           use-public-rspm: true
 
-
       - name: Install TinyTeX
         uses: r-lib/actions/setup-tinytex@v2
         env:
@@ -38,6 +37,7 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - uses: r-lib/actions/setup-r-dependencies@v2
       - name: Build site
         shell: bash
         run: Rscript -e "bookdown::render_book('index.Rmd', output_format = 'bookdown::gitbook', encoding = 'UTF-8')"
@@ -61,6 +61,7 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - uses: r-lib/actions/setup-r-dependencies@v2
       - name: Build site
         shell: bash
         run: Rscript -e "bookdown::render_book('index.Rmd', output_format = 'bookdown::epub_book', encoding = 'UTF-8')"
@@ -88,6 +89,7 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - uses: r-lib/actions/setup-r-dependencies@v2
       - name: Build site
         shell: bash
         run: Rscript -e "bookdown::render_book('index.Rmd', output_format = 'bookdown::pdf_book', encoding = 'UTF-8')"
