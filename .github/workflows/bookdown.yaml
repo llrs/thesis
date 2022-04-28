@@ -28,10 +28,9 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
 
-      # - name: Install bookdown
-      #   run: |
-      #     Rscript -e "install.packages(c('knitr', 'bookdown', 'tinytex', 'kableExtra', 'remotes', 'metathis'))"
-      #     Rscript -e "remotes::install_github('rchaput/acronymsdown')"
+      - name: Install acronymsdown
+        run: |
+          Rscript -e "remotes::install_github('rchaput/acronymsdown')"
 
       # - name: Setup Debug Session
       #   uses: csexton/debugger-action@v1
