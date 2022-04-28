@@ -7,7 +7,7 @@ on:
 name: bookdown
 
 jobs:
-  bookdown-web:
+  bookdown-deps:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -20,6 +20,7 @@ jobs:
         with:
           use-public-rspm: true
 
+
       - name: Install TinyTeX
         uses: r-lib/actions/setup-tinytex@v2
         env:
@@ -31,10 +32,12 @@ jobs:
       - name: Install acronymsdown
         run: |
           Rscript -e "remotes::install_github('rchaput/acronymsdown')"
-
-      # - name: Setup Debug Session
-      #   uses: csexton/debugger-action@v1
-
+  bookdown-web:
+    needs: bookdown-deps
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
       - name: Build site
         shell: bash
         run: Rscript -e "bookdown::render_book('index.Rmd', output_format = 'bookdown::gitbook', encoding = 'UTF-8')"
@@ -53,27 +56,11 @@ jobs:
           branch: gh-pages
           folder: _book
   bookdown-epub:
+    needs: bookdown-deps
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: r-lib/actions/setup-pandoc@v2
-
-      - uses: r-lib/actions/setup-r@v2
-        with:
-          use-public-rspm: true
-
-
-      - name: Install bookdown
-        run: |
-          Rscript -e "install.packages(c('knitr', 'bookdown', 'tinytext', 'kableExtra', 'remotes', 'metathis'))"
-          Rscript -e "remotes::install_github('rchaput/acronymsdown')"
-
-      # - name: Setup Debug Session
-      #   uses: csexton/debugger-action@v1
-
       - name: Build site
         shell: bash
         run: Rscript -e "bookdown::render_book('index.Rmd', output_format = 'bookdown::epub_book', encoding = 'UTF-8')"
@@ -96,37 +83,11 @@ jobs:
           folder: _book
           clean: false
   bookdown-pdf:
+    needs: bookdown-deps
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: r-lib/actions/setup-pandoc@v2
-
-      - uses: r-lib/actions/setup-r@v2
-        with:
-          use-public-rspm: false
-      - uses: r-lib/actions/setup-tinytex@master
-      - name: Install pdflatex
-        run: |
-          sudo apt-get install -y \
-          libcurl4-openssl-dev \
-          texlive-base \
-          texlive-binaries \
-          texlive-fonts-recommended \
-          texlive-latex-base \
-          texlive-latex-recommended \
-          texlive-latex-extra \
-          && sudo apt-get clean
-
-      - name: Install bookdown
-        run: |
-          Rscript -e "install.packages(c('knitr', 'bookdown', 'tinytext', 'kableExtra', 'remotes'))"
-          Rscript -e "remotes::install_github('rchaput/acronymsdown')"
-      # - name: Setup Debug Session
-      #   uses: csexton/debugger-action@v1
-
       - name: Build site
         shell: bash
         run: Rscript -e "bookdown::render_book('index.Rmd', output_format = 'bookdown::pdf_book', encoding = 'UTF-8')"
