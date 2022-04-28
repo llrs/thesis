@@ -7,7 +7,42 @@ on:
 name: bookdown
 
 jobs:
-  bookdown-deps:
+  bookdown-web:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-pandoc@v2
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+
+      - name: Install acronymsdown
+        run: |
+          Rscript -e "remotes::install_github('rchaput/acronymsdown')"
+      - name: Build site
+        shell: bash
+        run: Rscript -e "bookdown::render_book('index.Rmd', output_format = 'bookdown::gitbook', encoding = 'UTF-8')"
+
+      - name: Cache bookdown results
+        uses: actions/cache@v2
+        with:
+          path: _bookdown_files
+          key: bookdown-${{ hashFiles('**/*Rmd') }}
+          restore-keys: bookdown-
+
+
+      - name: Deploy to GitHub pages 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages
+          folder: _book
+  bookdown-epub:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -31,37 +66,6 @@ jobs:
       - name: Install acronymsdown
         run: |
           Rscript -e "remotes::install_github('rchaput/acronymsdown')"
-  bookdown-web:
-    needs: bookdown-deps
-    runs-on: ubuntu-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-    steps:
-      - uses: r-lib/actions/setup-r-dependencies@v2
-      - name: Build site
-        shell: bash
-        run: Rscript -e "bookdown::render_book('index.Rmd', output_format = 'bookdown::gitbook', encoding = 'UTF-8')"
-
-      - name: Cache bookdown results
-        uses: actions/cache@v2
-        with:
-          path: _bookdown_files
-          key: bookdown-${{ hashFiles('**/*Rmd') }}
-          restore-keys: bookdown-
-
-
-      - name: Deploy to GitHub pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
-        with:
-          branch: gh-pages
-          folder: _book
-  bookdown-epub:
-    needs: bookdown-deps
-    runs-on: ubuntu-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-    steps:
-      - uses: r-lib/actions/setup-r-dependencies@v2
       - name: Build site
         shell: bash
         run: Rscript -e "bookdown::render_book('index.Rmd', output_format = 'bookdown::epub_book', encoding = 'UTF-8')"
@@ -84,12 +88,29 @@ jobs:
           folder: _book
           clean: false
   bookdown-pdf:
-    needs: bookdown-deps
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-pandoc@v2
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Install TinyTeX
+        uses: r-lib/actions/setup-tinytex@v2
+        env:
+          # install full prebuilt version
+          TINYTEX_INSTALLER: TinyTeX
+
       - uses: r-lib/actions/setup-r-dependencies@v2
+
+      - name: Install acronymsdown
+        run: |
+          Rscript -e "remotes::install_github('rchaput/acronymsdown')"
       - name: Build site
         shell: bash
         run: Rscript -e "bookdown::render_book('index.Rmd', output_format = 'bookdown::pdf_book', encoding = 'UTF-8')"
