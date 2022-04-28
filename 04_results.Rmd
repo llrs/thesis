@@ -372,7 +372,7 @@ df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD",
                  check.names = FALSE)
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Permanova analysis of transcriptome.",
-      caption = "Permanova analysis of transcriptome. The variables and their interactions (shown with \textbf{:}) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
+      caption = "Permanova analysis of transcriptome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
 format_design(k, df)
 ```
 
@@ -383,7 +383,7 @@ df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD",
                  check.names = FALSE)
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Permanova analysis of microbiome",
-      caption = "Permanova analysis of microbiome. The variables and their interactions (shown with $\textbf{:}$) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
+      caption = "Permanova analysis of microbiome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
 format_design(k, df)
 ```
 
