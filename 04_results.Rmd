@@ -166,53 +166,59 @@ The effect of the sparsity value was measured by its effect on the inner \acr{AV
 knitr::include_graphics("images/pugets_tau_to_AVE.png")
 ```
 
-The first model of the family of models 1 can be seen in table \@ref(tab:puget-model1):
+The first model of the family of models 1 can be seen in table \@ref(tab:puget-model1). 
+The \acr{GE} is related to the metadata available.
+Similarly, \acr{CGH} is also related to the location data available. 
+All other relationships are not included on the model.
 
 
 ```{r puget-model1}
 df <- data.frame(
   stringsAsFactors = FALSE,
-  "Model 1" = c("GE", "CGH", "Localization"),
+  "Model 1" = c("GE", "CGH", "metadata"),
   GE = c(0L, 0L, 1L),
   CGH = c(0L, 0L, 1L),
-  Localization = c(1L, 1L, 0L),
+  metadata = c(1L, 1L, 0L),
   check.names = FALSE
 )
-k <- kable(df, align = rep("c", ncol(df)), 
+k <- kable(df, align = rep("c", ncol(df)), digits = 2,
            caption.short = "Model 1 for the Puget's dataset.",
-           caption = "Model 1 for Puget's dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Model 1 for Puget's dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship. The matrix represent relations between the gene expression and CGH with the metadata.")
 format_design(k, df)
 ```
 
 
-When looking for the model that adjust better following this structure we arrived to model 1.2, described in (Table \@ref(tab:puget-model1-2)).
-
+When looking for the model that adjust better following this structure we arrived to model 1.2, described in (Table \@ref(tab:puget-model1-2)). 
+In this model the \acr{CGH} relationship with the location variables is much weaker than \acr{GE} with them. 
 
 ```{r puget-model1-2}
 df <- data.frame(
   stringsAsFactors = FALSE,
-         "Model 1.2" = c("GE", "CGH", "Localization"),
-                GE = c(0L, 0L, 1L),
-               CGH = c(0, 0, 0.1),
-      Localization = c(1, 0.1, 0)
+  "Model 1.2" = c("GE", "CGH", "metadata"),
+  GE = c(0L, 0L, 1L),
+  CGH = c(0, 0, 0.1),
+  metadata = c(1, 0.1, 0),
+  check.names = FALSE
 )
-k <- kable(df, align =  rep("c", ncol(df)), 
+k <- kable(df, align =  rep("c", ncol(df)), digits = 2,
            caption.short = "Model 1.2 for the Puget's dataset.",
-           caption = "Model 1.2 for Puget's dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Model 1.2 for Puget's dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship. CGH has a weaker relationship with the metadata than GE. ")
 format_design(k, df)
 ```
 
 
-On model 2 we split the invariable variables from those related to the location (Table \@ref(tab:puget-model2)):
+On model 2 we split the metadata variables into invariable variables and those related to the location (Table \@ref(tab:puget-model2)).
+We relate the \acr{GE} and \acr{CGH} to these blocks and between them.
 
 ```{r puget-model2}
 df <- data.frame(
   stringsAsFactors = FALSE,
-           Model.2 = c("GE", "CGH", "Invariable", "Localization"),
+         'Model 2' = c("GE", "CGH", "Invariable", "Location"),
                 GE = c(0L, 1L, 1L, 1L),
                CGH = c(1L, 0L, 1L, 1L),
         Invariable = c(1L, 1L, 0L, 0L),
-      Localization = c(1L, 1L, 0L, 0L)
+          Location = c(1L, 1L, 0L, 0L),
+  check.names = FALSE
 )
 k <- kable(df, align =  rep("c", ncol(df)), 
            caption.short = "Model 2 for the Puget's dataset.",
@@ -220,16 +226,17 @@ k <- kable(df, align =  rep("c", ncol(df)),
 format_design(k, df)
 ```
 
-Following this split, the model that has higher inner \acr{AVE} for these blocks is the following (Table \@ref(tab:puget-model2-2)):
+Following this split, the model that has higher inner \acr{AVE} for these blocks is the following (Table \@ref(tab:puget-model2-2)).
 
 ```{r puget-model2-2}
 df <- data.frame(
   stringsAsFactors = FALSE,
-         Model.2.2 = c("GE", "CGH", "Invariable", "Localization"),
-                GE = c("1", "1/3", "0", "1"),
+       'Model 2.2' = c("GE", "CGH", "Invariable", "Location"),
+                GE = c("0", "1/3", "0", "1"),
                CGH = c("1/3", "0", "1/3", "0"),
         Invariable = c("0", "1/3", "0", "0"),
-      Localization = c(1L, 0L, 0L, 0L)
+          Location = c(1L, 0L, 0L, 0L),
+  check.names = FALSE
       )
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Model 2.2 the for Puget's dataset.",
@@ -237,84 +244,88 @@ k <- kable(df, align = rep("c", ncol(df)),
 format_design(k, df)
 ```
 
-If we added a superblock with all the data of the different blocks from model 1 we started with the standard relationship between blocks (Table \@ref(tab:puget-model-superblock)):
+If we added a superblock with all the data of the different blocks from model 1 we started with the standard relationship between blocks (Table \@ref(tab:puget-model-superblock)).
 
 ```{r puget-model-superblock}
 df <- data.frame(
   stringsAsFactors = FALSE,
-  Model.superblock = c("GE", "CGH", "Superblock", "Localization"),
+  'Model superblock' = c("GE", "CGH", "Superblock", "metadata"),
                 GE = c(0L, 0L, 1L, 0L),
                CGH = c(0L, 0L, 1L, 0L),
         Superblock = c(1L, 1L, 0L, 1L),
-      Localization = c(0L, 0L, 1L, 0L)
+      metadata = c(0L, 0L, 1L, 0L),
+  check.names = FALSE
       )
 k <- kable(df, align =  rep("c", ncol(df)),
            caption.short = "Model with superblock for Puget's dataset.",
-           caption = "Relationships between the different blocks in the Puget's dataset for model superblock. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the Puget's dataset for model superblock. 0 indicates no relationship and 1 indicates a strong relationship. The superblock is related to all other blocks but they are only related to the superblock.")
 format_design(k, df)
 ```
 
-But when the best model with the superblock that had highest inner \acr{AVE} is quite different (Table \@ref(tab:puget-model-superblock-2)):
+But when the best model with the superblock that had highest inner \acr{AVE} is quite different (Table \@ref(tab:puget-model-superblock-2)).
+It does not have a relationship between the superblock and the \acr{GE} and the metadata is related to \acr{GE} and \acr{CGH} too. 
 
 
 ```{r puget-model-superblock-2}
 df <- data.frame(
   stringsAsFactors = FALSE,
-  Model.superblock = c("GE", "CGH", "Superblock", "Localization"),
+  'Model superblock.2' = c("GE", "CGH", "Superblock", "metadata"),
                 GE = c("1", "1/3", "0", "1"),
                CGH = c("1/3", "0", "1", "0"),
         Superblock = c(0L, 1L, 0L, 1L),
-      Localization = c(1L, 0L, 0L, 0L)
+      metadata = c(1L, 0L, 0L, 0L),
+  check.names = FALSE
       )
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Model with superblock.2 for the Puget's dataset.",
-           caption = "Relationships between the different blocks in the Puget's dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship.")
+           caption = "Relationships between the different blocks in the Puget's dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship. In this optimized design the GE and the metadata is related to GE and CGH too. The relationship between GE and CGH is weaker than other relations.")
 format_design(k, df)
 ```
 
 Exploratory analysis with the superblock model was done.
-The first two components of the superblock did not help to explain the biology or classify the tumors (See figure \@ref(fig:puget-superblock)):
+The first two components of the superblock did not help to explain the biology or classify the tumors (See figure \@ref(fig:puget-superblock)).
 
-```{r puget-superblock, fig.cap="First components of the superblock which has all the data of the samples on the Puget's dataset.", fig.scap="Superblock components on Puget's dataset"}
+```{r puget-superblock, fig.cap="First components of the model superblock.2 which has all the data of the samples on the Puget's dataset. Samples colored and shaped acording to the localization of the tumor. There is a mix of samples of all locations and then some far from it.", fig.scap="Superblock components in Puget's dataset"}
 knitr::include_graphics("images/pugets_superblock.png")
 ```
 
 
-The same data was used to look for a good model from the data itself including a model with a superblock but looking at the first component of the CGH and transcriptome block.
-This allowed to visually inspect if each model's components helped to classify the samples (Figure \@ref(fig:puget-models)):
+The same data was used to look for a good model from the data itself including a model with a superblock but looking at the first component of the \acr{CGH} and transcriptome block.
+This allowed to visually inspect if each model's components helped to classify the samples (Figure \@ref(fig:puget-models)).
 
-```{r puget-models, fig.scap="Different RGCCA models in the Puget's dataset.", fig.cap="Different RGCCA models in the Puget's dataset. The different models with the same data showing the sample position on the first components of the CGH  and the transcriptome block. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data bout the samples on different blocks. Model superblock and superblock.2 have all the data in different blokcs and one block with all the data."}
+```{r puget-models, fig.scap="Different RGCCA models in the Puget's dataset.", fig.cap="Different RGCCA models in the Puget's dataset. The different models with the same data showing the sample position on the first components of the CGH  and the transcriptome (or GE) block. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data about the samples on different blocks. Model superblock and superblock.2 have all the data from different blokcs and one block with all the data. All of them separate the samples according according to the transcriptome component by the localization of the tumors."}
 knitr::include_graphics("images/pugets_models.png")
 ```
 
 
-The first components of the CGH and the transcriptomics blocks of the superblock.2 model show better classification than that of the superblock.
+The first components of the \acr{CGH} and the transcriptomics blocks of the superblock.2 model show better classification than that of the superblock.
 However, the other models show a better classification of the samples with much simpler models.
 
 <!--# Slightly modified from the article!! -->
 
 To find these models the three blocks with the best tau and the centroid scheme were analyzed by changing the weights between 0 and 1 by 0.1 intervals.
-According to the inner \acr{AVE}, the best model was the one in which the weights (1) between the host transcriptome and location, (2) the host transcriptome and the CGH, and (3) the CGH block were linked to variables related to the location with weights of 1, 0.1 and 0.1, respectively.
+According to the inner \acr{AVE}, the best model was the one in which the weights (1) between the host transcriptome and location, (2) the host transcriptome and the \acr{CGH}, and (3) the \acr{CGH} block were linked to variables related to the location with weights of 1, 0.1 and 0.1, respectively.
 
 When we added a superblock to the data, there was a slight increase of 0.01 on the inner \acr{AVE} of the model (See Table \@ref(tab:puget-models-ave)).
-The model with the superblock that explained most of the variance was that in which the weights of the interaction within (1) the host transcriptome, (2) between the superblock and the CGH, (3) between the host transcriptome and the localization, and (4) between CGH and the host transcriptome were 1, 1, 1 and 1/3, respectively (See table \@ref(tab:puget-model-superblock-2)).
+The model with the superblock that explained most of the variance was that in which the weights of the interaction within (1) the host transcriptome, (2) between the superblock and the \acr{CGH}, (3) between the host transcriptome and the localization, and (4) between acr{CGH} and the host transcriptome were 1, 1, 1 and 1/3, respectively (See table \@ref(tab:puget-model-superblock-2)).
 To see if the superblock could classify the sample by location, we plotted the first two components of the superblock.
 
 We can clearly see that they do not classify the samples according to the location of the tumor, which is known to affect the tumor phenotype [@puget2012].
 
 Adding one block containing the age of the patient and the severity of the tumor to the model, decreased the inner \acr{AVE}.
-The best model with these blocks, according to the inner \acr{AVE}, was that in which the interactions (1) within the host transcriptome, (2) between the host transcriptome and the localization, (3) between the host transcriptome and(4) the CGH and between the CGH and the other variables were 1, 1, 1/3 and 1/3, respectively.
+The best model with these blocks, according to the inner \acr{AVE}, was that in which the interactions (1) within the host transcriptome, (2) between the host transcriptome and the localization, (3) between the host transcriptome and(4) the \acr{CGH} and between the \acr{CGH} and the other variables were 1, 1, 1/3 and 1/3, respectively.
 The first components of each model can be seen in the figure:
 
-We can observe on the figure \@ref(fig:puget-models), the strong dependency between gene expression and location since the first model while the weaker relationship with the CGH assay [@puget2012].
-On the other hand, the major difference is the dispersion on the CGH component on each model.
+We can observe on the figure \@ref(fig:puget-models), the strong dependency between gene expression and location since the first model while the weaker relationship with the \acr{CGH} assay [@puget2012].
+On the other hand, the major difference is the dispersion on the \acr{CGH} component on each model.
 
-The effect of the superblock and weights on different models to the inner \acr{AVE}.
+We explored the effect of the superblock and weights on different models to the inner \acr{AVE}.
 There are significant differences between having the superblock and not having it.
+There is also some significant increase of the inner \acr{AVE} when adding a superblock.
 
 <!--# TODO double check interaction RNA-RNA as yes -->
 
-```{r puget-weights, fig.scap="Effect of superblock and weights on the inner AVE on Puget's dataset.", fig.cap="Effect of superblock and weights on the inner AVE on Puget's dataset. Designs with the superblock showed higher inner AVe scores than without it. Interaction yes/no indicates RNA and RNA interaction."}
+```{r puget-weights, fig.scap="Effect of superblock and weights on the inner AVE on Puget's dataset.", fig.cap="Effect of superblock and weights on the inner AVE on Puget's dataset. Designs with the superblock showed higher inner AVE scores than without it. Interaction yes/no indicates RNA and RNA interaction. Higher inner AVE values are associated with relationships within the GE (p-values shown on top of the violin plots)."}
 knitr::include_graphics("images/pugets-weights.png")
 ```
 
@@ -333,9 +344,12 @@ df <- data.frame(
 )
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "AVE values of RGCCA models in the Puget's dataset.", 
-           caption = "AVE values of RGCCA models in the Puget's dataset. Values for both inner and outer AVE of the first canonical component of models 1, 1.2, 2 2.2 and superblock and superblock.2 are shown.")
+           caption = "AVE values of RGCCA models in the Puget's dataset. Values for both inner and outer AVE of the first canonical component of models 1, 1.2, 2 2.2 and superblock and superblock.2 are shown. The model with the highest inner AVE is the model 1.2 and  superblock.2 of those with superblock.")
 format_design(k, df)
 ```
+
+The model 1.2, is the one with the highest inner AVE, followed by model superblock.2.
+All of them classify the samples according to the type of tumor by the first component of the transcriptome. 
 
 \FloatBarrier
 
@@ -358,7 +372,7 @@ df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD",
                  check.names = FALSE)
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Permanova analysis of transcriptome.",
-      caption = "Permanova analysis of transcriptome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
+      caption = "Permanova analysis of transcriptome. The variables and their interactions (shown with \textbf{:}) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
 format_design(k, df)
 ```
 
@@ -369,13 +383,13 @@ df <- data.frame(Factor = c("Location", "IBD", "Sex", "IBD:Sex", "Location:IBD",
                  check.names = FALSE)
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Permanova analysis of microbiome",
-      caption = "Permanova analysis of microbiome. The variables and their interactions (shown with :) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
+      caption = "Permanova analysis of microbiome. The variables and their interactions (shown with $\textbf{:}$) and the $R^2$ values and the associated p-value. The higher the $R^2$ the more variance is explained by that factor.")
 format_design(k, df)
 ```
 
 <!--# global test from the comments on TRIM/intestinal_16S_RNAseq_metadb/variance.R -->
 
-With globaltest the results were similar: sex, \acr{IBD}, location, age and time since diagnosis were able to explain the SESCD score (p-value $5.7 \cdot 10^{-21}$ ).
+With globaltest the results were similar: sex, \acr{IBD}, location, age and time since diagnosis were able to explain the simple endoscopic score for Crohn's disease (p-value $5.7 \cdot 10^{-21}$ ).
 The resulting p-value was well below the 0,05 threshold defined for RNAseq data on the models including the segment of the sample, sex and treatment.
 
 On the microbiome data the results were similar but the p-value was considerably higher but still below the threshold.
@@ -560,8 +574,8 @@ include_graphics("images/hsct-bootstrap-characteristics.png")
 Evaluating the same model on each bootstrap lead to a dispersion on the inner \acr{AVE} of the model.
 The lower the dispersion, the more robust the model was to different conditions than in the initial testing.
 
-```{r hsct-bootstrap, fig.scap="Bootstrap results on HSCT dataset.", fig.cap="Bootstrap of the models 0, 1.2 and 2.2 on the HSCT dataset. The point with the black circle is the AVE of the original data. The dispersion is shown by the ellipses. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped."}
-include_graphics("images/hsct-bootstrap.png")
+```{r hsct-bootstrap, fig.scap="Bootstrap results in HSCT dataset.", fig.cap="Bootstrap of the models 0, 1.2 and 2.2 in the HSCT dataset. The point with the black circle is the AVE of the original data. The dispersion is shown by the ellipses. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped."}
+include_graphics("images/hsct_bootstrap_models.png")
 ```
 
 With the bootstrapped models we used `BaseSet` to estimate the probability that each variable to be relevant for the association with a disease.
@@ -1069,7 +1083,7 @@ There are 3580 selected on model 2.2 in the \acr{HSCT} dataset and 2189 genes on
 From them the 1228 genes in common were analyzed for which GO terms and pathways they are enriched.
 The results is represented on figure \@ref(fig:pathways-hsct-howell).
 
-```{r pathways-hsct-howell, fig.scap="Pathways from common genes on HSCT and Howell's dataset.", fig.cap="Significance of pathways on common genes in HSCT and Howell's dataset ordered by p-value, size according to the number of genes on the pathway found on the dataset and color blue for pathways and red for gene ontologies of biological process."}
+```{r pathways-hsct-howell, fig.scap="Pathways from common genes in HSCT and Howell's dataset.", fig.cap="Significance of pathways on common genes in HSCT and Howell's dataset ordered by p-value, size according to the number of genes on the pathway found on the dataset and color blue for pathways and red for gene ontologies of biological process."}
 include_graphics("images/pathways_hsct_howell.png")
 ```
 

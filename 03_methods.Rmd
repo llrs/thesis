@@ -3,7 +3,7 @@
 <!-- # Some sections of this chapter has been adapted from "Multi-Omic Modelling of IBD with Regularized Canonical Correlation Analysis" [@revilla2021] or other publications of the research group. -->
 
 This chapter contains a brief description of the main characteristics of the different datasets used on this thesis .
-The complete processing protocol before obtaining the data of those dataset that were not generated at Hosptial Clínic can be found on their respective reference.
+The complete processing protocol before obtaining the data of those dataset that were not generated at Hospital Clínic can be found on their respective reference.
 
 Samples of the different cohorts collected in Hospital Clínic were collected similarly and described only once.
 Differences between protocols are noted on the respective dataset's section.
@@ -17,7 +17,7 @@ The code used can be found on the links provided in the [appendix](#software "Li
 
 The glioma dataset is the data provided as an example of biological data by the authors of \acr{RGCCA} from a previous publication [@puget2012].
 The data came from diffuse intrinsic pontine glioma patients whose transcriptome was analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F.
-The copy number variation of the samples was processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using [Mutation Surveyor software](https://www.softgenetics.com/mutationSurveyor.php "Website of the software").
+The copy number variation of the samples was processed with the ADM-2 algorithm, and data from \acr{CGH} analyzed using [Mutation Surveyor software](https://www.softgenetics.com/mutationSurveyor.php "Website of the software").
 In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor [@puget2012].
 
 | Characteristic            | Puget's  |

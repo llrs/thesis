@@ -54,4 +54,8 @@ acronyms:
       longname: Biologic Assesment of Response and relation to Clinical activity, Endoscopic and radiologic Lesions, in inflammatory bowel disease patients ON Anti TNF-therapies
     - shortname: 16S
       longname: 16S rRNA
+    - shortname: GE
+      longname: gene expression
+    - shortname: CGH
+      longname: comparative genomic hybridization
 ---

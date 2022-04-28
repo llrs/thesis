@@ -93,10 +93,10 @@ Nevertheless, they were screened to avoid quality issues by visually inspecting 
 RNAseq data was usually compared using previously described methods on \@ref(statistics).
 
 The Puget's dataset provided a good benchmark to test the methods and performance of \acr{RGCCA} works.
-CNV/CGH is not comparable to microbial data, but the microarray data is similar to the RNAseq data from other datasets.
+\acr{CGH} is not comparable to microbial data, but the microarray data is similar to the RNAseq data from other datasets.
 We were not as much interested on the biology as on learning about the \acr{RGCCA} method and its applicability to integrate different omics.
 
-The Häsler \acr{IBD} dataset was obtained using the same sequencing techniques from endoscopic biopsies as our dataset \acr{HSCT} and acr{BARCELONA}.
+The Häsler \acr{IBD} dataset was obtained using the same sequencing techniques from endoscopic biopsies as our dataset \acr{HSCT} and \acr{BARCELONA}.
 The \acr{16S} data was very similar to the \acr{HSCT} dataset.
 We could confirm that the `inteRmodel` approach works on more than one dataset.
 
@@ -280,7 +280,7 @@ Of the cohorts analyzed in this thesis, the \acr{HSCT} and the Häsler dataset a
 However, the Häsler dataset only had age at date of sampling, and there were not several samples for the same patients at different timepoints.
 This leaves the \acr{HSCT} dataset as the only one with multiple timepoints from the same patients.
 Having that many samples from the same patient might explain why the classification of the disease on this cohort works so well, despite being a cohort of complicated patients with several background treatments, refractory to all previous treatments, some of them having undergone surgery too and undergoing severe immunosupression during follow up.
-Despite all of this, there was large agreement in the genes and pathways identified as relevant between datasets (See figure \@ref(fig:pathways-\acr{HSCT}-howell)).
+Despite all of this, there was large agreement in the genes and pathways identified as relevant between datasets (See figure \@ref(fig:pathways-hsct-howell)).
 
 Comparing the microbiome between datasets is less straight forward.
 If the same primers are used the \acr{ASV} could be directly compared.
@@ -299,7 +299,7 @@ The microbiome of each dataset seemed capable to classify the samples according 
 However, on further evaluation via bootstrapping this classification was not significant, as different relatively big amount of \acr{ASV}s were able to classify the samples.
 This might be due to the uniqueness of microbial composition to each sample.
 
-In Howell's and Häsler dataset, the best model based on \acr{AVE} is 1.2; which separates the microbiome component by location too (See Figure \@ref(fig:hasler-models) and table \@ref(tab:hasler-aves) for Häsler dataset and figures \@ref(fig:howell-models) and table \@ref(tab:howell-models-ave) for Howell dataset).
+In Howell's and Häsler dataset, the best model based on \acr{AVE} is 1.2; which separates the microbiome component by location too (See figure \@ref(fig:hasler-models) and table \@ref(tab:hasler-aves) for Häsler dataset and figures \@ref(fig:howell-models) and table \@ref(tab:howell-models-ave) for Howell dataset).
 The 2.2 models according to the inner \acr{AVE} were not that far away from models 1.2.
 This indicates that the relationship of the microbiome is stronger than with the location, but both factors should be considered when looking for relationships of genes with microbiome.
 
