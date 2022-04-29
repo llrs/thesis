@@ -149,9 +149,12 @@ On the following sections the main results of analyzing each dataset are present
 
 
 (ref:poins-col-shape) Each point represents a sample (colored and shaped by location).
+
+
 (ref:poins-col-disease) Each point represents a sample (colored by location and shape by disease).
-(ref:poins-boot) Each point represents a bootstrapped sample (colored by model used).
-The dispersion is shown by the ellipses.
+
+
+(ref:points-boot) Each point represents a bootstrapped sample (colored by model used).
 
 ### Puget's dataset {#results-puget}
 
@@ -577,7 +580,7 @@ include_graphics("images/hsct-bootstrap-characteristics.png")
 Evaluating the same model on each bootstrap lead to a dispersion on the inner \acr{AVE} of the model.
 The lower the dispersion, the more robust the model was to different conditions than in the initial testing.
 
-```{r hsct-bootstrap, fig.scap="Bootstrap results in HSCT dataset.", fig.cap="Bootstrap of the models 0, 1.2 and 2.2 in the HSCT dataset. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped. (ref:poins-boot) The point with the black circle is the AVE of the original data."}
+```{r hsct-bootstrap, fig.scap="Bootstrap results in HSCT dataset.", fig.cap="Bootstrap of the models 0, 1.2 and 2.2 in the HSCT dataset. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped. (ref:points-boot) The dispersion is shown by the ellipses. The point with the black circle is the AVE of the original data."}
 include_graphics("images/hsct_bootstrap_models.png")
 ```
 
@@ -918,7 +921,7 @@ format_design(k, df)
 
 When exploring the bootstraps of the data we found that model 1.2 is highly variable:
 
-```{r morgan-bootstrap, fig.scap="AVE scores of bootstrapped models on Morgans' dataset.", fig.cap="Inner and outer AVE scores of the bootstrapped models 0, 1.2 and 2.2 on the Morgan's dataset. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptome and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks. Model 2.2 shows less variance than all models but lower inner values than model 1.2. (ref:poins-boot)"}
+```{r morgan-bootstrap, fig.scap="AVE scores of bootstrapped models on Morgans' dataset.", fig.cap="Inner and outer AVE scores of the bootstrapped models 0, 1.2 and 2.2 on the Morgan's dataset. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptome and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks. Model 2.2 shows less variance than all models but lower inner values than model 1.2. (ref:points-boot) The dispersion is shown by the ellipses."}
 include_graphics("images/morgan_bootstrap.png")
 ```
 
@@ -1043,7 +1046,7 @@ format_design(k, df)
 ```
 
 
-```{r howell-bootstrap, fig.scap="Bootstrap of models in Howell's datset.", fig.cap="Bootstrap of models in Howell's datset. Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset. (ref:poins-boot)"}
+```{r howell-bootstrap, fig.scap="Bootstrap of models in Howell's datset.", fig.cap="Bootstrap of models in Howell's datset. Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset. (ref:points-boot) The dispersion is shown by the ellipses."}
 include_graphics("images/howells_models_bootstrap.png")
 ```
 
