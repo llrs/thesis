@@ -309,7 +309,6 @@ This could be from taking the sample from a region near a surgery, for which the
 
 # Models output
 
-<!--# TODO include files for these genes and otus?-->`
 
 ```{r handle}
 format_models <- function(x, scap, cap){
