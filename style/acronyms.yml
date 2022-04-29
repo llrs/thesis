@@ -58,4 +58,10 @@ acronyms:
       longname: gene expression
     - shortname: CGH
       longname: comparative genomic hybridization
+    - shortname: PERMANOVA
+      longname: permutational multivariate analysis of variance
+    - shortname: ROC
+      longname: receiver operating characteristic
+    - shortname: CDAI
+      longname: Crohn's disease activity index
 ---

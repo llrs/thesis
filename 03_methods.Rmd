@@ -35,7 +35,7 @@ In addition, this dataset contained information on age, localization of the tumo
 Samples from the \acr{HSCT} dataset used in this thesis were from a cohort of patients with severe refractory \acr{CD} undergoing \acr{HSCT}.
 Patients were treated in the Department of Gastroenterology (Hospital Clínic de Barcelona --Spain--).
 The protocol was approved by the Catalan Transplantation Organization and by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7244).
-All patients provided written consent following extensive counselling about being included on the study and using their data on publications.
+All patients provided written consent following extensive counselling about being included on the study and using their data on publications. Variables collected include: sex, age at diagnostic, duration of the disease, age, disease status, sample location, local simple endoscopic score and \acr{CDAI}.
 
 Colonic and ileal biopsies were obtained at several time points during ileo-colonoscopy, at inclusion and every 6 or 12 months after \acr{HSCT} up to 4 years after the start of the treatment.
 Samples were obtained when possible from both uninvolved and involved areas.
@@ -44,7 +44,7 @@ The protocol was approved by the Institutional Ethics Committee of the Hospital 
 
 At least one biopsy was collected and fresh-frozen at -80°C for microbial DNA extraction.
 The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen, Hilde, Germany) and stored at -80°C until total RNA extraction.
-In total 158 samples with both RNA and DNA extraction of the same segment and time were available, check table  \@ref(tab:HSCT):
+In total 158 samples with both RNA and DNA extraction of the same segment and time were available, check table  \@ref(tab:HSCT).
 
 | Characteristic                                       | HSCT        |
 |:-----------------------------------------------------|:-----------:|
@@ -55,7 +55,7 @@ In total 158 samples with both RNA and DNA extraction of the same segment and ti
 | Disease status (non-\acr{IBD}/\acr{CD})                          | 51/107      |
 | Sample location (ileum/colon/unknown)                | 48/108/2    |
 | Local simple endoscopic score for \acr{CD}: mean (min-max) | 2.15 (0-12) |
-| \acr{CD}AI: mean (min-max)                                 | 120 (0-450  |
+| \acr{CDAI}: mean (min-max)                                 | 120 (0-450  |
 
 : (#tab:HSCT) Characteristics of samples from the HSCT dataset.
 
@@ -497,7 +497,7 @@ This score can be calculated as a difference of hits and misses or the maximum d
 
 ### PERMANOVA
 
-The PERMANOVA method [@anderson2001; @warton2012], provided by the [vegan](https://cran.r-project.org/package=vegan) package on the `adonis` function, was used to test if microbiome data variance is due to other variables when using distances metrics.
+The \acr{PERMANOVA} method [@anderson2001; @warton2012], provided by the [vegan](https://cran.r-project.org/package=vegan) package on the `adonis` function, was used to test if microbiome data variance is due to other variables when using distances metrics.
 It uses the residual sum of squares such as:
 
 $$
@@ -623,22 +623,10 @@ On pseudo code the core of the program can be described as:
 
 ``` {#pseudocode-experDesign}
 for each index:
-
     for each batch
-
-        pick size(batch) samples
-
-        if samples are in another batch
-
-            pick other samples
-
-    for each batch
-
-        calculate some summary statistics
-
-        compare with the summary statistics of all the samples
-
-keep the index with less differences between the index and all the samples
+        calculate batch specific summary statistics: SSb
+        compare SSb with the SS of all the samples
+  keep index with the smallest difference on all batches
 ```
 
 Summary statistics taken into account are the median, the variance, the range, the number of missing values, and the entropy of the categorical variables.
@@ -647,11 +635,11 @@ It can take into account spatial distribution and, given the number of samples t
 [^methods-3]: Technical replicates are samples that are measured multiple times to ensure the accuracy of the measurement.
     In contrast biological replicates are sample with the same conditions but different individuals or process before the measurement.
 
-### ROC- A\acr{UC} {#ROC}
+### ROC- AUC {#ROC}
 
 To estimate if the selected features (genes or microorganism) by the integration methods have some biological meaningful contribution we measured if they can classify features, such as, which gastrointestinal segment is each sample from, or which type of disease does each patient have.
 
-To compare between different models the area under the curve (A\acr{UC}) of the receiver operating characteristic (ROC) was calculated with the [pROC](https://cran.r-project.org/package=pROC) package [@robin2011].
+To compare between different models the \acr{AUC} of the \acr{ROC} was calculated with the [pROC](https://cran.r-project.org/package=pROC) package [@robin2011].
 It is based on the following formulas, where $\text{FP}$ is false positive, $N$ is a negative, $P$ is positive, $\text{TP}$ is true positive and $\text{FN}$ is false negative:
 
 $$
@@ -661,6 +649,6 @@ TPR = \frac{TP}{P} = \dfrac{FP}{FP+FN}
 \end{aligned}
 $$
 
-The ROC curve is that where the true positive rate (TPR) or sensitivity, recall or hit rate is represented against the false positive rate (FPR) on the abscissa.
+The \acr{ROC} curve is that where the true positive rate (TPR) or sensitivity, recall or hit rate is represented against the false positive rate (FPR) on the abscissa.
 The area under this curve is a measure of how good such classifications performs overall, being 0.5 as good as a random selection.
 The closer it is to 1 the better as it classifies incorrectly less samples and accurately classify more.

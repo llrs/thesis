@@ -6,7 +6,7 @@
 \acr{IBD} is a gastrointestinal disease affecting preferentially the lower intestinal tract causing lesions on the epithelium. 
 Bacteria interact with host's epithelium and with many other variables.
 There are data integration methods for a variety of purposes, including finding relationships between variables. 
-On IBD these methods have not been used much to find which bacteria is related to the host's genes. 
+On \acr{IBD} these methods have not been used much to find which bacteria is related to the host's genes. 
 
 We hypothesize that the expression state of the epithelium and the **microorganisms present might identify whether patients are suffering \acr{IBD} if environmental factors are taken into account**.
 

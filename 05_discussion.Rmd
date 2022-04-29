@@ -142,7 +142,7 @@ We made the assumptions that the microbiome composition and the host's transcrip
 This assumption is backed up by several other previous studies supporting this relationship [@holmes2012; @stappenbeck2002; @brand2021; @cornish2008; @thomas1998].
 
 Tools that relate the variance of a block with other variables, both numeric and categoric, are needed to search which variables are important.
-PERMANOVA and `globaltest` served that purpose, but they do not give any insight into which specific microbial species are driving the association between the microbiome and the variables [@susin2020].
+\acr{PERMANOVA} and `globaltest` served that purpose, but they do not give any insight into which specific microbial species are driving the association between the microbiome and the variables [@susin2020].
 In addition, we could be missing some other important variables.
 It is known that other factors beyond the omics data collected, mainly environmental factors, genetic susceptibility and the immune response may play a role [@sartor2006].
 Sudhakar *et. al.* [@sudhakar2022] recommend being conscious of the gap between the data available and the biological process.
@@ -218,7 +218,7 @@ The exploration of design on Puget's dataset, and the datasets analysis of \acr{
 To evaluate a model `RGCCA` provides the inner and outer \acr{AVE}; (see section \@ref(rgcca-output)).
 As the inner AVE measures how good does the data fit in the model, we used it to evaluate and compare the models.
 
-<!--# TODO Add tables of mean and sd of AVEs on the bootstrapping ? -->
+<!--# TODO Add tables of mean and sd of AVEs on the bootstrapping ? Long enough could be added-->
 
 Furthermore, bootstrapping was used to evaluate the fitness of a design on a diverse collection of datasets.
 Although on `inteRmodel` there is the option to use a leave-one-out procedure, we did not use it to evaluate the fitness of the models.
@@ -358,7 +358,7 @@ Latest developments include the addition of separate environments and distinct f
 By introducing gut microbiota, these systems will help studying the interaction of the gut microbiota and the intestinal epithelium.
 However, it is not clear how accurately account for other factors such as the presence of inflammation.
 
-In summary, as shown with the PERMANOVA approach, several factors affect the disease and the relationship between gut's microbiome and gut's mucosa.
+In summary, as shown with the \acr{PERMANOVA} approach, several factors affect the disease and the relationship between gut's microbiome and gut's mucosa.
 Analysis or comparisons without taking them into account might provide misleading or false results.
 To our knowledge this is the first study using these variables as part of the integration study with canonical correlations.
 We hope this provides a first approximation to accurately understand the relationships between genes and bacteria in \acr{IBD}.

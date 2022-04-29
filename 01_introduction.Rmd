@@ -231,7 +231,7 @@ Other scores consider area affected:
 
 -   Montreal classification allows for early onset of disease to be categorized separately those with age of diagnosis at 16 years or younger, diagnosis at 17--40 years and \>40 years, respectively [@satsangi2006].
 -   SES-CD: simple endoscopic score for \acr{CD} [@daperno2004]. Score based on size of ulcers, ulcerate surface percentage, affected surface and presence of narrowing on the bowel.
--   CDAI: \acr{CD} Activity Index takes into account weight, ideal body weight, sex, and events on the last week such as liquid stools, abdominal pain, general well-being and if anti-diarrhea drug usage, as well as knowing if there are fistulas, fever, and other complications [@best1976]
+-   \acr{CDAI}: \acr{CD} Activity Index takes into account weight, ideal body weight, sex, and events on the last week such as liquid stools, abdominal pain, general well-being and if anti-diarrhea drug usage, as well as knowing if there are fistulas, fever, and other complications [@best1976]
 
 <!--# Add Figure 2 from ACM thesis?-->
 
