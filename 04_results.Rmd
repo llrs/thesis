@@ -327,8 +327,6 @@ We explored the effect of the superblock and weights on different models to the 
 There are significant differences between having the superblock and not having it.
 There is also some significant increase of the inner \acr{AVE} when adding a superblock.
 
-<!--# TODO double check interaction RNA-RNA as yes -->
-
 ```{r puget-weights, fig.scap="Effect of superblock and weights on the inner AVE on Puget's dataset.", fig.cap="Effect of superblock and weights on the inner AVE on Puget's dataset. Designs with the superblock showed higher inner AVE scores than without it. Interaction yes/no indicates RNA and RNA interaction. Higher inner AVE values are associated with relationships within the GE (p-values shown on top of the violin plots)."}
 knitr::include_graphics("images/pugets-weights.png")
 ```

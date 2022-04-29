@@ -464,8 +464,6 @@ Gene pathways from the REACTOME database were tested on the weight of different 
 
 #### GSVA
 
-<!--# TODO mention GSVA on discussion or results...-->
-
 To estimate the expression of the pathways and compare their expression levels between conditions gene set variation analysis as implemented on [GSVA](https://bioconductor.org/packages/GSVA) was used [@hänzelmann2013].
 It is a method that summarizes the variables' numerical value changing the space of $\text{variable x sample}$ to $\text{group x sample}$ .
 This enables other methods to use this new space instead of the original variables, which provides a successful way to look into data [@escudero-hernández2021].
