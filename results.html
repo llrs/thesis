@@ -399,10 +399,9 @@ It is important to keep in mind the possible causal relationships on user’s da
 <div id="analysis" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Analysis<a href="results.html#analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>On the following sections the main results of analyzing each dataset are presented.</p>
-<p>(ref:poins-col-shape) Each point represents a sample (colored and shaped by location).
-(ref:poins-col-disease) Each point represents a sample (colored by location and shape by disease).
-(ref:poins-boot) Each point represents a bootstrapped sample (colored by model used).
-The dispersion is shown by the ellipses.</p>
+
+
+
 <div id="results-puget" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Puget’s dataset<a href="results.html#results-puget" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>On this dataset the different parameters and capabilities of <a href="glossary.html#acronyms_RGCCA">RGCCA</a> were tested.</p>
@@ -1303,16 +1302,16 @@ Figure 4.7: Microbiome diversity in the HSCT dataset. On the upper section the S
 Splitting by location of the sample and disease provided the highest differences and the diversity index along time did not change much.</p>
 <p>The <a href="glossary.html#acronyms_PCA">PCA</a> didn’t show any pattern on the microbiome according to the location, as can be seen in the first dimensions of the <a href="glossary.html#acronyms_PCA">PCA</a> in figure <a href="results.html#fig:hsct-pca-16s">4.8</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-pca-16s"></span>
-<img src="images/HSCT_PCA_16S.png" alt="PCA of the 16S data of the HSCT dataset. There are no clear patterns according to the location. (ref:poins-col-shape)" width="100%" />
+<img src="images/HSCT_PCA_16S.png" alt="PCA of the 16S data of the HSCT dataset. There are no clear patterns according to the location. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.8: PCA of the 16S data of the HSCT dataset. There are no clear patterns according to the location. (ref:poins-col-shape)
+Figure 4.8: PCA of the 16S data of the HSCT dataset. There are no clear patterns according to the location. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>The <a href="glossary.html#acronyms_PCA">PCA</a> on the transcriptome shows a clear pattern splitting by location of the sample on the first dimension (see figure <a href="results.html#fig:hsct-pca-RNAseq">4.9</a>).</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-pca-RNAseq"></span>
-<img src="images/HSCT_PCA_RNAseq.png" alt="PCA of the RNAseq data of the HSCT dataset. The samples separate according to the location. (ref:poins-col-shape)" width="100%" />
+<img src="images/HSCT_PCA_RNAseq.png" alt="PCA of the RNAseq data of the HSCT dataset. The samples separate according to the location. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.9: PCA of the RNAseq data of the HSCT dataset. The samples separate according to the location. (ref:poins-col-shape)
+Figure 4.9: PCA of the RNAseq data of the HSCT dataset. The samples separate according to the location. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>Weighted gene co-expression network analysis did not provide relevant links between bacteria and transcriptome as it failed to find an acceptable scale free degree.
@@ -2022,18 +2021,18 @@ Figure 4.12: Dispersion of the bootstraped samples on age and percentage of colo
 <p>Evaluating the same model on each bootstrap lead to a dispersion on the inner <a href="glossary.html#acronyms_AVE">AVE</a> of the model.
 The lower the dispersion, the more robust the model was to different conditions than in the initial testing.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-bootstrap"></span>
-<img src="images/hsct_bootstrap_models.png" alt="Bootstrap of the models 0, 1.2 and 2.2 in the HSCT dataset. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped. (ref:poins-boot) The point with the black circle is the AVE of the original data." width="100%" />
+<img src="images/hsct_bootstrap_models.png" alt="Bootstrap of the models 0, 1.2 and 2.2 in the HSCT dataset. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses. The point with the black circle is the AVE of the original data." width="100%" />
 <p class="caption">
-Figure 4.13: Bootstrap of the models 0, 1.2 and 2.2 in the HSCT dataset. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped. (ref:poins-boot) The point with the black circle is the AVE of the original data.
+Figure 4.13: Bootstrap of the models 0, 1.2 and 2.2 in the HSCT dataset. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses. The point with the black circle is the AVE of the original data.
 </p>
 </div>
 <p>With the bootstrapped models we used <code>BaseSet</code> to estimate the probability that each variable to be relevant for the association with a disease.
 However, due to big amount of small probabilities when using the <code>BaseSet</code> package to calculate which variables are more relevant it could not provide a good estimation on time.</p>
 <p><a href="glossary.html#acronyms_MCIA">MCIA</a> was applied as a baseline of the integration, the first two components were represented similarly to those of the blocks when using <a href="glossary.html#acronyms_RGCCA">RGCCA</a>, see figure <a href="results.html#fig:hsct-mcia">4.14</a> of its outcome.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-mcia"></span>
-<img src="images/hsct-mcia.png" alt="MCIA dimensions in the HSCT dataset. MCIA first two synthetic variables. The first variable separates the samples in colon and ileum. (ref:poins-col-disease)" width="100%" />
+<img src="images/hsct-mcia.png" alt="MCIA dimensions in the HSCT dataset. MCIA first two synthetic variables. The first variable separates the samples in colon and ileum. Each point represents a sample (colored by location and shape by disease)." width="100%" />
 <p class="caption">
-Figure 4.14: MCIA dimensions in the HSCT dataset. MCIA first two synthetic variables. The first variable separates the samples in colon and ileum. (ref:poins-col-disease)
+Figure 4.14: MCIA dimensions in the HSCT dataset. MCIA first two synthetic variables. The first variable separates the samples in colon and ileum. Each point represents a sample (colored by location and shape by disease).
 </p>
 </div>
 <p>The <a href="glossary.html#acronyms_AUC">AUC</a> of classifying the transcriptome in colon or ileum segments was compared between the models (see figure <a href="results.html#fig:hsct-auc-plot">4.15</a> and with <a href="glossary.html#acronyms_MCIA">MCIA</a>).</p>
@@ -2141,16 +2140,16 @@ Genes are very similar between model 0 to 1.2 and between 2 to 2.3, while <a hre
 <h3><span class="header-section-number">4.2.3</span> Häsler’s dataset<a href="results.html#results-hasler" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If we look at the dataset 16S, the <a href="glossary.html#acronyms_PCA">PCA</a> does not show a pattern as can be seen in figure <a href="results.html#fig:hasler-pca-16s">4.17</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-pca-16s"></span>
-<img src="images/hasler_PCA_16S.png" alt="PCA of 16S of Häsler's dataset. There are some samples that are very different from the others. (ref:poins-col-shape)" width="100%" />
+<img src="images/hasler_PCA_16S.png" alt="PCA of 16S of Häsler's dataset. There are some samples that are very different from the others. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.17: PCA of 16S of Häsler’s dataset. There are some samples that are very different from the others. (ref:poins-col-shape)
+Figure 4.17: PCA of 16S of Häsler’s dataset. There are some samples that are very different from the others. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>The <a href="glossary.html#acronyms_PCA">PCA</a> on the transcriptome shows a distinction between colon and ileum according to the first dimension of the <a href="glossary.html#acronyms_PCA">PCA</a> that can be seen in figure <a href="results.html#fig:hasler-pca-RNAseq">4.18</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-pca-RNAseq"></span>
-<img src="images/hasler_PCA_RNAseq.png" alt="PCA of RNAseq of the Häsler's dataset. There are two clear groups according to the location on the first component. (ref:poins-col-shape)" width="100%" />
+<img src="images/hasler_PCA_RNAseq.png" alt="PCA of RNAseq of the Häsler's dataset. There are two clear groups according to the location on the first component. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.18: PCA of RNAseq of the Häsler’s dataset. There are two clear groups according to the location on the first component. (ref:poins-col-shape)
+Figure 4.18: PCA of RNAseq of the Häsler’s dataset. There are two clear groups according to the location on the first component. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>In this dataset, the parameter tau behaved slightly differently than with the previous dataset but the value from the Schäfer’s method for tau was close to the best value.</p>
@@ -2766,16 +2765,16 @@ It was even better to classify the samples according to the type of sample they 
 <p>To explore this dataset that is different from the others with <a href="glossary.html#acronyms_IBD">IBD</a>.</p>
 <p>The <a href="glossary.html#acronyms_PCA">PCA</a> didn’t show any pattern on the microbiome according to the location, see figure <a href="results.html#fig:morgan-pca-16s">4.23</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-pca-16s"></span>
-<img src="images/PCA_16S_morgan.png" alt="PCA of 16S of the Morgan's dataset. There seems to be quite a diverse microbiota based on the first dimension. (ref:poins-col-shape)" width="100%" />
+<img src="images/PCA_16S_morgan.png" alt="PCA of 16S of the Morgan's dataset. There seems to be quite a diverse microbiota based on the first dimension. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.23: PCA of 16S of the Morgan’s dataset. There seems to be quite a diverse microbiota based on the first dimension. (ref:poins-col-shape)
+Figure 4.23: PCA of 16S of the Morgan’s dataset. There seems to be quite a diverse microbiota based on the first dimension. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>The <a href="glossary.html#acronyms_PCA">PCA</a> on the transcriptome did not show a clear distinction between the <a href="glossary.html#acronyms_PPI">PPI</a> and the pouch in figure <a href="results.html#fig:morgan-pca-RNAseq">4.24</a> but there is a pattern.</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-pca-RNAseq"></span>
-<img src="images/PCA_RNASeq_morgan.png" alt="PCA of RNAseq of the Morgan's dataset. There is no clear separation of the two locations on the first dimensions of the PCA. (ref:poins-col-shape)" width="100%" />
+<img src="images/PCA_RNASeq_morgan.png" alt="PCA of RNAseq of the Morgan's dataset. There is no clear separation of the two locations on the first dimensions of the PCA. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.24: PCA of RNAseq of the Morgan’s dataset. There is no clear separation of the two locations on the first dimensions of the PCA. (ref:poins-col-shape)
+Figure 4.24: PCA of RNAseq of the Morgan’s dataset. There is no clear separation of the two locations on the first dimensions of the PCA. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>We tested if results of <code>inteRmodel</code> were consistent on this dataset with the other datasets.
@@ -3266,9 +3265,9 @@ outer AVE
 </table>
 <p>When exploring the bootstraps of the data we found that model 1.2 is highly variable:</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-bootstrap"></span>
-<img src="images/morgan_bootstrap.png" alt="Inner and outer AVE scores of the bootstrapped models 0, 1.2 and 2.2 on the Morgan's dataset. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptome and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks. Model 2.2 shows less variance than all models but lower inner values than model 1.2. (ref:poins-boot)" width="100%" />
+<img src="images/morgan_bootstrap.png" alt="Inner and outer AVE scores of the bootstrapped models 0, 1.2 and 2.2 on the Morgan's dataset. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptome and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks. Model 2.2 shows less variance than all models but lower inner values than model 1.2. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses." width="100%" />
 <p class="caption">
-Figure 4.26: Inner and outer AVE scores of the bootstrapped models 0, 1.2 and 2.2 on the Morgan’s dataset. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptome and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks. Model 2.2 shows less variance than all models but lower inner values than model 1.2. (ref:poins-boot)
+Figure 4.26: Inner and outer AVE scores of the bootstrapped models 0, 1.2 and 2.2 on the Morgan’s dataset. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptome and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks. Model 2.2 shows less variance than all models but lower inner values than model 1.2. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses.
 </p>
 </div>
 <p>In addition the model 2.2 (<a href="results.html#tab:morgan-model2-2">4.29</a>) usually has a lower inner <a href="glossary.html#acronyms_AVE">AVE</a> compared to model 1.2 (<a href="results.html#tab:morgan-model2">4.28</a>).</p>
@@ -3362,9 +3361,9 @@ AUC
 </table>
 <p>With <a href="glossary.html#acronyms_MCIA">MCIA</a>:</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-mcia-plot"></span>
-<img src="images/morgan-mcia.png" alt="MCIA dimensions in the Morgan's dataset. MCIA first two dimensions of the dataset shows some separation between samples by location. (ref:poins-col-shape)" width="100%" />
+<img src="images/morgan-mcia.png" alt="MCIA dimensions in the Morgan's dataset. MCIA first two dimensions of the dataset shows some separation between samples by location. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.28: MCIA dimensions in the Morgan’s dataset. MCIA first two dimensions of the dataset shows some separation between samples by location. (ref:poins-col-shape)
+Figure 4.28: MCIA dimensions in the Morgan’s dataset. MCIA first two dimensions of the dataset shows some separation between samples by location. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>If we quantify this separation by the first dimension of <a href="glossary.html#acronyms_MCIA">MCIA</a>, the <a href="glossary.html#acronyms_AUC">AUC</a> is 0.818, which is slightly worst than the models of family 2.</p>
@@ -3373,16 +3372,16 @@ Figure 4.28: MCIA dimensions in the Morgan’s dataset. MCIA first two dimension
 <h3><span class="header-section-number">4.2.5</span> Howell’s dataset<a href="results.html#results-howell" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <a href="glossary.html#acronyms_16S">16S</a> of this dataset doesn’t show any clear pattern regarding the location of the samples according to the firsts dimensions of the <a href="glossary.html#acronyms_PCA">PCA</a> on <a href="results.html#fig:howell-pca-16s">4.29</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-pca-16s"></span>
-<img src="images/howell_PCA_16S.png" alt="PCA of 16S data of the Howell's dataset. The first component separates the samples by their location. (ref:poins-col-shape)" width="100%" />
+<img src="images/howell_PCA_16S.png" alt="PCA of 16S data of the Howell's dataset. The first component separates the samples by their location. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.29: PCA of 16S data of the Howell’s dataset. The first component separates the samples by their location. (ref:poins-col-shape)
+Figure 4.29: PCA of 16S data of the Howell’s dataset. The first component separates the samples by their location. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>The <a href="glossary.html#acronyms_PCA">PCA</a> on the transcriptome shows a distinction between colon and ileum <a href="results.html#fig:howell-pca-RNAseq">4.30</a> there are almost two distinct groups according to location:</p>
 <div class="figure"><span style="display:block;" id="fig:howell-pca-RNAseq"></span>
-<img src="images/howell_PCA_RNAseq.png" alt="PCA of RNAseq data of the Howell's dataset. There are two groups of samples according to their location. (ref:poins-col-shape)" width="100%" />
+<img src="images/howell_PCA_RNAseq.png" alt="PCA of RNAseq data of the Howell's dataset. There are two groups of samples according to their location. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.30: PCA of RNAseq data of the Howell’s dataset. There are two groups of samples according to their location. (ref:poins-col-shape)
+Figure 4.30: PCA of RNAseq data of the Howell’s dataset. There are two groups of samples according to their location. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>This dataset was processed to confirm the results on the previous datasets.
@@ -3613,17 +3612,17 @@ outer AVE
 </tbody>
 </table>
 <div class="figure"><span style="display:block;" id="fig:howell-bootstrap"></span>
-<img src="images/howells_models_bootstrap.png" alt="Bootstrap of models in Howell's datset. Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset. (ref:poins-boot)" width="100%" />
+<img src="images/howells_models_bootstrap.png" alt="Bootstrap of models in Howell's datset. Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses." width="100%" />
 <p class="caption">
-Figure 4.32: Bootstrap of models in Howell’s datset. Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset. (ref:poins-boot)
+Figure 4.32: Bootstrap of models in Howell’s datset. Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses.
 </p>
 </div>
 <p>The bootstrapping showed that model 1.2 has indeed higher inner <a href="glossary.html#acronyms_AVE">AVE</a> values than model 2.2 and is more stable than model 1.2.
 While model 0 shows a high variation according to which samples are selected.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-mcia"></span>
-<img src="images/howell-mcia.png" alt="MCIA dimensions on the Howell's dataset. The first dimensions separates by location. (ref:poins-col-disease)" width="100%" />
+<img src="images/howell-mcia.png" alt="MCIA dimensions on the Howell's dataset. The first dimensions separates by location. Each point represents a sample (colored by location and shape by disease)." width="100%" />
 <p class="caption">
-Figure 4.33: MCIA dimensions on the Howell’s dataset. The first dimensions separates by location. (ref:poins-col-disease)
+Figure 4.33: MCIA dimensions on the Howell’s dataset. The first dimensions separates by location. Each point represents a sample (colored by location and shape by disease).
 </p>
 </div>
 <p>If we look at the classification of the models in figure <a href="results.html#fig:howell-auc-plot">4.34</a>, we can see that models 1.2, 2 and 2.2 classify perfectly the samples by the transcriptome into the location of the sample.</p>
