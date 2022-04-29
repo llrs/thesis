@@ -2,7 +2,6 @@
 
 ## Hypothesis
 
-<!--# TODO add paragraphs to summarize the introduction -->
 \acr{IBD} is a gastrointestinal disease affecting preferentially the lower intestinal tract causing lesions on the epithelium. 
 Bacteria interact with host's epithelium and with many other variables.
 There are data integration methods for a variety of purposes, including finding relationships between variables. 
