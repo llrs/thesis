@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-04-28" />
+<meta name="date" content="2022-04-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -195,7 +195,7 @@ div.csl-indent {
 <li class="chapter" data-level="3.6.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#wgcna"><i class="fa fa-check"></i><b>3.6.2</b> WGCNA</a></li>
 <li class="chapter" data-level="3.6.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#baseset"><i class="fa fa-check"></i><b>3.6.3</b> BaseSet</a></li>
 <li class="chapter" data-level="3.6.4" data-path="materials-and-methods.html"><a href="materials-and-methods.html#experdesign"><i class="fa fa-check"></i><b>3.6.4</b> experDesign</a></li>
-<li class="chapter" data-level="3.6.5" data-path="materials-and-methods.html"><a href="materials-and-methods.html#ROC"><i class="fa fa-check"></i><b>3.6.5</b> ROC- A<span>UC</span></a></li>
+<li class="chapter" data-level="3.6.5" data-path="materials-and-methods.html"><a href="materials-and-methods.html#ROC"><i class="fa fa-check"></i><b>3.6.5</b> ROC- AUC</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a>
@@ -377,9 +377,9 @@ Caution and communication between all team members (i.e, clinicians, technicians
 Nevertheless, they were screened to avoid quality issues by visually inspecting several principal components colored by several factors, checking gene expression and the microbiome profile and looking for known gene markers and microbiome taxonomy that might indicate quality problems.
 RNAseq data was usually compared using previously described methods on <a href="materials-and-methods.html#statistics">3.6.1</a>.</p>
 <p>The Puget’s dataset provided a good benchmark to test the methods and performance of <a href="glossary.html#acronyms_RGCCA">RGCCA</a> works.
-CNV/CGH is not comparable to microbial data, but the microarray data is similar to the RNAseq data from other datasets.
+<a href="glossary.html#acronyms_CGH">CGH</a> is not comparable to microbial data, but the microarray data is similar to the RNAseq data from other datasets.
 We were not as much interested on the biology as on learning about the <a href="glossary.html#acronyms_RGCCA">RGCCA</a> method and its applicability to integrate different omics.</p>
-<p>The Häsler <a href="glossary.html#acronyms_IBD">IBD</a> dataset was obtained using the same sequencing techniques from endoscopic biopsies as our dataset <a href="glossary.html#acronyms_HSCT">HSCT</a> and acr{BARCELONA}.
+<p>The Häsler <a href="glossary.html#acronyms_IBD">IBD</a> dataset was obtained using the same sequencing techniques from endoscopic biopsies as our dataset <a href="glossary.html#acronyms_HSCT">HSCT</a> and <a href="glossary.html#acronyms_BARCELONA">BARCELONA</a>.
 The <a href="glossary.html#acronyms_16S">16S</a> data was very similar to the <a href="glossary.html#acronyms_HSCT">HSCT</a> dataset.
 We could confirm that the <code>inteRmodel</code> approach works on more than one dataset.</p>
 <p>The taxonomy analysis of the different datasets was done differently.
@@ -416,7 +416,7 @@ In this thesis, the focus was on finding a good representation of the relationsh
 We made the assumptions that the microbiome composition and the host’s transcriptome were related.
 This assumption is backed up by several other previous studies supporting this relationship <span class="citation">[<a href="#ref-thomas1998" role="doc-biblioref">41</a>, <a href="#ref-cornish2008" role="doc-biblioref">42</a>, <a href="#ref-holmes2012" role="doc-biblioref">206</a>–<a href="#ref-brand2021" role="doc-biblioref">208</a>]</span>.</p>
 <p>Tools that relate the variance of a block with other variables, both numeric and categoric, are needed to search which variables are important.
-PERMANOVA and <code>globaltest</code> served that purpose, but they do not give any insight into which specific microbial species are driving the association between the microbiome and the variables <span class="citation">[<a href="#ref-susin2020" role="doc-biblioref">209</a>]</span>.
+<a href="glossary.html#acronyms_PERMANOVA">PERMANOVA</a> and <code>globaltest</code> served that purpose, but they do not give any insight into which specific microbial species are driving the association between the microbiome and the variables <span class="citation">[<a href="#ref-susin2020" role="doc-biblioref">209</a>]</span>.
 In addition, we could be missing some other important variables.
 It is known that other factors beyond the omics data collected, mainly environmental factors, genetic susceptibility and the immune response may play a role <span class="citation">[<a href="#ref-sartor2006" role="doc-biblioref">210</a>]</span>.
 Sudhakar <em>et. al.</em> <span class="citation">[<a href="#ref-sudhakar2022" role="doc-biblioref">148</a>]</span> recommend being conscious of the gap between the data available and the biological process.
@@ -480,7 +480,7 @@ On other studies there are less samples per individual and timepoint (if there a
 <h2><span class="header-section-number">5.3</span> Evaluating models<a href="discussion.html#evaluating-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To evaluate a model <code>RGCCA</code> provides the inner and outer <a href="glossary.html#acronyms_AVE">AVE</a>; (see section <a href="materials-and-methods.html#rgcca-output">3.3.1.2</a>).
 As the inner AVE measures how good does the data fit in the model, we used it to evaluate and compare the models.</p>
-<!--# TODO Add tables of mean and sd of AVEs on the bootstrapping ? -->
+<!--# TODO Add tables of mean and sd of AVEs on the bootstrapping ? Long enough could be added-->
 <p>Furthermore, bootstrapping was used to evaluate the fitness of a design on a diverse collection of datasets.
 Although on <code>inteRmodel</code> there is the option to use a leave-one-out procedure, we did not use it to evaluate the fitness of the models.</p>
 <p>Using an external cohort to validate the same model, or using a different method to see if it finds the same relationships or explains the data as accurately is also a common approach to evaluate and validate models.
@@ -531,7 +531,7 @@ Even in healthy non-<a href="glossary.html#acronyms_IBD">IBD</a> patients, multi
 However, the Häsler dataset only had age at date of sampling, and there were not several samples for the same patients at different timepoints.
 This leaves the <a href="glossary.html#acronyms_HSCT">HSCT</a> dataset as the only one with multiple timepoints from the same patients.
 Having that many samples from the same patient might explain why the classification of the disease on this cohort works so well, despite being a cohort of complicated patients with several background treatments, refractory to all previous treatments, some of them having undergone surgery too and undergoing severe immunosupression during follow up.
-Despite all of this, there was large agreement in the genes and pathways identified as relevant between datasets (See figure @ref(fig:pathways-<a href="glossary.html#acronyms_HSCT">HSCT</a>-howell)).</p>
+Despite all of this, there was large agreement in the genes and pathways identified as relevant between datasets (See figure <a href="results.html#fig:pathways-hsct-howell">4.35</a>).</p>
 <p>Comparing the microbiome between datasets is less straight forward.
 If the same primers are used the <a href="glossary.html#acronyms_ASV">ASV</a> could be directly compared.
 However, the <a href="glossary.html#acronyms_ASV">ASV</a>’ length might be different.
@@ -546,7 +546,7 @@ This was not a surprise, as there are many factors that influence one’s microb
 <p>The microbiome of each dataset seemed capable to classify the samples according to the disease (data not shown).
 However, on further evaluation via bootstrapping this classification was not significant, as different relatively big amount of <a href="glossary.html#acronyms_ASV">ASV</a>s were able to classify the samples.
 This might be due to the uniqueness of microbial composition to each sample.</p>
-<p>In Howell’s and Häsler dataset, the best model based on <a href="glossary.html#acronyms_AVE">AVE</a> is 1.2; which separates the microbiome component by location too (See Figure <a href="results.html#fig:hasler-models">4.20</a> and table <a href="results.html#tab:hasler-aves">4.23</a> for Häsler dataset and figures <a href="results.html#fig:howell-models">4.31</a> and table <a href="results.html#tab:howell-models-ave">4.34</a> for Howell dataset).
+<p>In Howell’s and Häsler dataset, the best model based on <a href="glossary.html#acronyms_AVE">AVE</a> is 1.2; which separates the microbiome component by location too (See figure <a href="results.html#fig:hasler-models">4.20</a> and table <a href="results.html#tab:hasler-aves">4.23</a> for Häsler dataset and figures <a href="results.html#fig:howell-models">4.31</a> and table <a href="results.html#tab:howell-models-ave">4.34</a> for Howell dataset).
 The 2.2 models according to the inner <a href="glossary.html#acronyms_AVE">AVE</a> were not that far away from models 1.2.
 This indicates that the relationship of the microbiome is stronger than with the location, but both factors should be considered when looking for relationships of genes with microbiome.</p>
 </div>
@@ -594,7 +594,7 @@ These systems expand on the already useful technique of using organoids to bette
 Latest developments include the addition of separate environments and distinct flow on these environments.
 By introducing gut microbiota, these systems will help studying the interaction of the gut microbiota and the intestinal epithelium.
 However, it is not clear how accurately account for other factors such as the presence of inflammation.</p>
-<p>In summary, as shown with the PERMANOVA approach, several factors affect the disease and the relationship between gut’s microbiome and gut’s mucosa.
+<p>In summary, as shown with the <a href="glossary.html#acronyms_PERMANOVA">PERMANOVA</a> approach, several factors affect the disease and the relationship between gut’s microbiome and gut’s mucosa.
 Analysis or comparisons without taking them into account might provide misleading or false results.
 To our knowledge this is the first study using these variables as part of the integration study with canonical correlations.
 We hope this provides a first approximation to accurately understand the relationships between genes and bacteria in <a href="glossary.html#acronyms_IBD">IBD</a>.</p>

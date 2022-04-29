@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-04-28" />
+<meta name="date" content="2022-04-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -195,7 +195,7 @@ div.csl-indent {
 <li class="chapter" data-level="3.6.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#wgcna"><i class="fa fa-check"></i><b>3.6.2</b> WGCNA</a></li>
 <li class="chapter" data-level="3.6.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#baseset"><i class="fa fa-check"></i><b>3.6.3</b> BaseSet</a></li>
 <li class="chapter" data-level="3.6.4" data-path="materials-and-methods.html"><a href="materials-and-methods.html#experdesign"><i class="fa fa-check"></i><b>3.6.4</b> experDesign</a></li>
-<li class="chapter" data-level="3.6.5" data-path="materials-and-methods.html"><a href="materials-and-methods.html#ROC"><i class="fa fa-check"></i><b>3.6.5</b> ROC- A<span>UC</span></a></li>
+<li class="chapter" data-level="3.6.5" data-path="materials-and-methods.html"><a href="materials-and-methods.html#ROC"><i class="fa fa-check"></i><b>3.6.5</b> ROC- AUC</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a>
@@ -305,7 +305,7 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 3</span> Materials and methods<a href="materials-and-methods.html#materials-and-methods" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <!-- # Some sections of this chapter has been adapted from "Multi-Omic Modelling of IBD with Regularized Canonical Correlation Analysis" [@revilla2021] or other publications of the research group. -->
 <p>This chapter contains a brief description of the main characteristics of the different datasets used on this thesis .
-The complete processing protocol before obtaining the data of those dataset that were not generated at Hosptial Clínic can be found on their respective reference.</p>
+The complete processing protocol before obtaining the data of those dataset that were not generated at Hospital Clínic can be found on their respective reference.</p>
 <p>Samples of the different cohorts collected in Hospital Clínic were collected similarly and described only once.
 Differences between protocols are noted on the respective dataset’s section.</p>
 <p>Here we describe all the methods used to analyze data from the multiple cohorts included in this thesis.
@@ -316,7 +316,7 @@ The code used can be found on the links provided in the <a href="software.html#s
 <h3><span class="header-section-number">3.1.1</span> Puget’s dataset<a href="materials-and-methods.html#methods-puget" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The glioma dataset is the data provided as an example of biological data by the authors of <a href="glossary.html#acronyms_RGCCA">RGCCA</a> from a previous publication <span class="citation">[<a href="#ref-puget2012" role="doc-biblioref">149</a>]</span>.
 The data came from diffuse intrinsic pontine glioma patients whose transcriptome was analyzed with Agilent 44K Whole Human Genome Array G4410B and G4112F.
-The copy number variation of the samples was processed with the ADM-2 algorithm, and data from comparative genomic hybridization (CGH) analyzed using <a href="https://www.softgenetics.com/mutationSurveyor.php" title="Website of the software">Mutation Surveyor software</a>.
+The copy number variation of the samples was processed with the ADM-2 algorithm, and data from <a href="glossary.html#acronyms_CGH">comparative genomic hybridization (CGH)</a> analyzed using <a href="https://www.softgenetics.com/mutationSurveyor.php" title="Website of the software">Mutation Surveyor software</a>.
 In addition, this dataset contained information on age, localization of the tumor, sex and a numerical grading of the severity of the tumor <span class="citation">[<a href="#ref-puget2012" role="doc-biblioref">149</a>]</span>.</p>
 <table>
 <caption><span id="tab:Puget">Table 3.1: </span> Characteristics of samples from the Puget’s dataset.</caption>
@@ -348,14 +348,14 @@ In addition, this dataset contained information on age, localization of the tumo
 <p>Samples from the <a href="glossary.html#acronyms_HSCT">HSCT</a> dataset used in this thesis were from a cohort of patients with severe refractory <a href="glossary.html#acronyms_CD">CD</a> undergoing <a href="glossary.html#acronyms_HSCT">HSCT</a>.
 Patients were treated in the Department of Gastroenterology (Hospital Clínic de Barcelona –Spain–).
 The protocol was approved by the Catalan Transplantation Organization and by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7244).
-All patients provided written consent following extensive counselling about being included on the study and using their data on publications.</p>
+All patients provided written consent following extensive counselling about being included on the study and using their data on publications. Variables collected include: sex, age at diagnostic, duration of the disease, age, disease status, sample location, local simple endoscopic score and <a href="glossary.html#acronyms_CDAI">CDAI</a>.</p>
 <p>Colonic and ileal biopsies were obtained at several time points during ileo-colonoscopy, at inclusion and every 6 or 12 months after <a href="glossary.html#acronyms_HSCT">HSCT</a> up to 4 years after the start of the treatment.
 Samples were obtained when possible from both uninvolved and involved areas.
 In addition, biopsies were taken from the ileum and colon regions of 19 non-<a href="glossary.html#acronyms_IBD">IBD</a> controls consisting of individuals with no history of <a href="glossary.html#acronyms_IBD">IBD</a> and who presented no significant pathological findings following endoscopic examination for colon cancer surveillance (Hospital Univesitari Mútua de Terrassa –Spain–).
 The protocol was approved by the Institutional Ethics Committee of the Hospital Univesitari Mútua de Terrassa (Study Number NA1651).</p>
 <p>At least one biopsy was collected and fresh-frozen at -80°C for microbial DNA extraction.
 The remaining biopsies were placed in RNAlater RNA Stabilization Reagent (Qiagen, Hilde, Germany) and stored at -80°C until total RNA extraction.
-In total 158 samples with both RNA and DNA extraction of the same segment and time were available, check table <a href="materials-and-methods.html#tab:HSCT">3.2</a>:</p>
+In total 158 samples with both RNA and DNA extraction of the same segment and time were available, check table <a href="materials-and-methods.html#tab:HSCT">3.2</a>.</p>
 <table>
 <caption><span id="tab:HSCT">Table 3.2: </span> Characteristics of samples from the HSCT dataset.</caption>
 <thead>
@@ -394,7 +394,7 @@ In total 158 samples with both RNA and DNA extraction of the same segment and ti
 <td align="center">2.15 (0-12)</td>
 </tr>
 <tr class="even">
-<td align="left"><a href="glossary.html#acronyms_CD">CD</a>AI: mean (min-max)</td>
+<td align="left"><a href="glossary.html#acronyms_CDAI">CDAI</a>: mean (min-max)</td>
 <td align="center">120 (0-450</td>
 </tr>
 </tbody>
@@ -862,7 +862,6 @@ When power <span class="math inline">\(p\)</span> is 0 it is equivalent to the s
 Gene pathways from the REACTOME database were tested on the weight of different models or on the comparisons performed <span class="citation">[<a href="#ref-fabregat2016" role="doc-biblioref">179</a>]</span>.</p>
 <div id="gsva" class="section level4 hasAnchor" number="3.4.2.1">
 <h4><span class="header-section-number">3.4.2.1</span> GSVA<a href="materials-and-methods.html#gsva" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<!--# TODO mention GSVA on discussion or results...-->
 <p>To estimate the expression of the pathways and compare their expression levels between conditions gene set variation analysis as implemented on <a href="https://bioconductor.org/packages/GSVA">GSVA</a> was used <span class="citation">[<a href="#ref-hänzelmann2013" role="doc-biblioref">180</a>]</span>.
 It is a method that summarizes the variables’ numerical value changing the space of <span class="math inline">\(\text{variable x sample}\)</span> to <span class="math inline">\(\text{group x sample}\)</span> .
 This enables other methods to use this new space instead of the original variables, which provides a successful way to look into data <span class="citation">[<a href="#ref-escudero-hernández2021" role="doc-biblioref">181</a>]</span>.
@@ -889,7 +888,7 @@ This score can be calculated as a difference of hits and misses or the maximum d
 <h2><span class="header-section-number">3.5</span> Variance and diversity methods<a href="materials-and-methods.html#variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="permanova" class="section level3 hasAnchor" number="3.5.1">
 <h3><span class="header-section-number">3.5.1</span> PERMANOVA<a href="materials-and-methods.html#permanova" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The PERMANOVA method <span class="citation">[<a href="#ref-anderson2001" role="doc-biblioref">182</a>, <a href="#ref-warton2012" role="doc-biblioref">183</a>]</span>, provided by the <a href="https://cran.r-project.org/package=vegan">vegan</a> package on the <code>adonis</code> function, was used to test if microbiome data variance is due to other variables when using distances metrics.
+<p>The <a href="glossary.html#acronyms_PERMANOVA">permutational multivariate analysis of variance (PERMANOVA)</a> method <span class="citation">[<a href="#ref-anderson2001" role="doc-biblioref">182</a>, <a href="#ref-warton2012" role="doc-biblioref">183</a>]</span>, provided by the <a href="https://cran.r-project.org/package=vegan">vegan</a> package on the <code>adonis</code> function, was used to test if microbiome data variance is due to other variables when using distances metrics.
 It uses the residual sum of squares such as:</p>
 <p><span class="math display">\[
 SS_W = \frac{1}{n} \sum_{i=1}^{N-1}\sum_{j=i+1}^N d_{ij}^2\epsilon{ij} 
@@ -990,29 +989,17 @@ This probability was used to calculate (via <code>set_size</code>) the genes and
 It might help to detect a bad design of the experiment.</p>
 <p>On pseudo code the core of the program can be described as:</p>
 <pre id="pseudocode-experDesign"><code>for each index:
-
     for each batch
-
-        pick size(batch) samples
-
-        if samples are in another batch
-
-            pick other samples
-
-    for each batch
-
-        calculate some summary statistics
-
-        compare with the summary statistics of all the samples
-
-keep the index with less differences between the index and all the samples</code></pre>
+        calculate batch specific summary statistics: SSb
+        compare SSb with the SS of all the samples
+  keep index with the smallest difference on all batches</code></pre>
 <p>Summary statistics taken into account are the median, the variance, the range, the number of missing values, and the entropy of the categorical variables.
 It can take into account spatial distribution and, given the number of samples that fit on a batch, provide which technical replicates<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> are best to use.</p>
 </div>
 <div id="ROC" class="section level3 hasAnchor" number="3.6.5">
-<h3><span class="header-section-number">3.6.5</span> ROC- A<a href="glossary.html#acronyms_UC">UC</a><a href="materials-and-methods.html#ROC" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">3.6.5</span> ROC- AUC<a href="materials-and-methods.html#ROC" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To estimate if the selected features (genes or microorganism) by the integration methods have some biological meaningful contribution we measured if they can classify features, such as, which gastrointestinal segment is each sample from, or which type of disease does each patient have.</p>
-<p>To compare between different models the area under the curve (A<a href="glossary.html#acronyms_UC">UC</a>) of the receiver operating characteristic (ROC) was calculated with the <a href="https://cran.r-project.org/package=pROC">pROC</a> package <span class="citation">[<a href="#ref-robin2011" role="doc-biblioref">194</a>]</span>.
+<p>To compare between different models the <a href="glossary.html#acronyms_AUC">area under the curve (AUC)</a> of the <a href="glossary.html#acronyms_ROC">receiver operating characteristic (ROC)</a> was calculated with the <a href="https://cran.r-project.org/package=pROC">pROC</a> package <span class="citation">[<a href="#ref-robin2011" role="doc-biblioref">194</a>]</span>.
 It is based on the following formulas, where <span class="math inline">\(\text{FP}\)</span> is false positive, <span class="math inline">\(N\)</span> is a negative, <span class="math inline">\(P\)</span> is positive, <span class="math inline">\(\text{TP}\)</span> is true positive and <span class="math inline">\(\text{FN}\)</span> is false negative:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1020,7 +1007,7 @@ FPR = \frac{FP}{N} = \dfrac{FP}{FP+TN} \\
 TPR = \frac{TP}{P} = \dfrac{FP}{FP+FN} 
 \end{aligned}
 \]</span></p>
-<p>The ROC curve is that where the true positive rate (TPR) or sensitivity, recall or hit rate is represented against the false positive rate (FPR) on the abscissa.
+<p>The <a href="glossary.html#acronyms_ROC">ROC</a> curve is that where the true positive rate (TPR) or sensitivity, recall or hit rate is represented against the false positive rate (FPR) on the abscissa.
 The area under this curve is a measure of how good such classifications performs overall, being 0.5 as good as a random selection.
 The closer it is to 1 the better as it classifies incorrectly less samples and accurately classify more.</p>
 
