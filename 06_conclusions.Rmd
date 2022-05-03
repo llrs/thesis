@@ -1,17 +1,17 @@
 # Conclusions
 
-In this doctoral thesis, we assessed the relationships between the microbiota and the gut transcriptome in inflammatory bowel disease.
+In this doctoral thesis, we assessed the relationships between the microbiota and the gut transcriptome as they interact in inflammatory bowel disease.
 
-It allows us to conclude the following:
+We are able to draw the following conclusions:
 
 ## Study 1: Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis
 
-1.  Applying methods that use information about the samples show better results than omitting this information.
-2.  Correlations are not enough to identify relationship between genes and microorganisms.
-3.  The `inteRmodel` method provides consistent connections between blocks on different datasets of inflammatory bowel disease.
+1.  Applying methods that use information concerning the samples show better results than omitting such information.
+2.  Correlations are not sufficient for identifying relationship between genes and microorganisms.
+3.  The `inteRmodel` method provides consistent evidence of the connections between blocks among different datasets of inflammatory bowel disease.
 
-## Study 2: Genes and microbiome relationship on inflammatory bowel disease
+## Study 2: The relationship of genes and the microbiome with inflammatory bowel disease
 
-1.  The host's transcriptomics is heavily influenced by location and to a lesser degree by the type of activity.
-2.  The microbiome composition relates better to the sample location than to the disease status but both are almost equally important
-3.  Microorganisms highly tied to intestinal location might indicate the disease type, (Crohn's disease, ulcerative colitis or non-\acr{IBD}) of the patients, but microorganisms related to the disease are common in all the locations.
+1.  At host's transcriptomics is heavily influenced by location and, to a lesser degree, by the type of activity.
+2.  The microbiome's composition more relates to the sample location and to the disease status both are almost equally important
+3.  Those microorganisms closely tied to intestinal location might be indicative of at patient's disease type, (e.g., Crohn's disease, ulcerative colitis or non-\acr{IBD}), although disease-related microorganisms can be common to all all locations.

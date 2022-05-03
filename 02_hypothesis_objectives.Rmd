@@ -2,19 +2,20 @@
 
 ## Hypothesis
 
-\acr{IBD} is a gastrointestinal disease affecting preferentially the lower intestinal tract causing lesions on the epithelium. 
-Bacteria interact with host's epithelium and with many other variables.
-There are data integration methods for a variety of purposes, including finding relationships between variables. 
-On \acr{IBD} these methods have not been used much to find which bacteria is related to the host's genes. 
+\acr{IBD} is a gastrointestinal disease preferentially affecting the lower intestinal tract and causing lesions on the epithelium. 
+Bacteria interact with a host's epithelium, as well as, with many other variables.
+There are data integration methods for a variety of purposes, including methods to most effectively identify relationships between variables. 
+These methods have not been used as much in \acr{IBD} to determine which bacteria is related a host's genes. 
 
-We hypothesize that the expression state of the epithelium and the **microorganisms present might identify whether patients are suffering \acr{IBD} if environmental factors are taken into account**.
+We hypothesize that the expression state of the epithelium , in tandem with the **microorganisms present, might help determine whether patients are suffering \acr{IBD} when environmental factors are taken into account**.
 
 ## Objectives
 
-The main objective of this thesis is finding the relationships between microbiome and gene expression in the intestinal mucosa. For this reason we identify microorganisms and genes related to \acr{IBD}.
+The main objective of this thesis was determining the relationships between the microbiome and gene expression in the intestinal mucosa. 
+Thus we sought to identify those microorganisms and genes associated with \acr{IBD}.
 
--   Identify relationships between intestinal mucosal gene expression and microbiome presence on the intestine. 
+-   Identify any relationships between intestinal mucosal gene expression and the microbiome's presence in the intestine. 
 
--   Determine the influence in the microbiota and mucosa relationship of clinical variables such as location (colon and ileum), disease status, sex, age, treatment received, etc. in the microbiome and mucosa relationship.
+-   Determine the influence and mucosal relationships of clinical variables such as location (colon and ileum), disease status, sex, age, treatment received, etc. on the microbiota, the microbiome and the attendant mucosal relationship.
 
--   Identify groups of possible underlying mechanism interactions between the microbiome and mucosa in \acr{IBD}.
+-   Identify those groups of mechanisms underlying the interactions between the microbiome and the mucosa in \acr{IBD}.

@@ -103,21 +103,21 @@ format_kable <- function(x) {
 
 ![UB logo](images/ub_logo.png "University where I defend the thesis"){width="160"} ![IDIBAPS logo](images/idibaps_logo.png "Research center"){width="160"} ![CIBER logo](images/logo_ciber.png "Hiring institution"){width="160" height="38"}
 
-The main topic of the thesis is [data integration](https://en.wikipedia.org/wiki/Data_integration "Wikipedia page of integration") applied in the [inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease "Wikipedia page for IBD") .
-This disease is complex, for instance it is not known if the cause behind Crohn's disease and ulcerative colitis is the same.
-There are hypothesis pointing that the [microbiome](https://en.wikipedia.org/wiki/Microbiota "Wikipedia page for microbiota") is a major factor in the disease, which together with an aberrant immune response is the dominant theory.
-In order to find robust relationships between the microbiome and the immune system it is important to consider all the relevant variables that influence a disease.
-On this thesis we seek these relationships using data from different sequencing technologies and the observed or reported phenotype of the patients.
+The main topic of the thesis is [data integration](https://en.wikipedia.org/wiki/Data_integration "Wikipedia page of integration") applied to [inflammatory bowel disease](https://en.wikipedia.org/wiki/Inflammatory_bowel_disease "Wikipedia page for IBD") .
+This disease is complex; for instance it is not currently known if the cause behind Crohn's disease and ulcerative colitis are one and the same.
+There are hypothesis suggesting that the [microbiome](https://en.wikipedia.org/wiki/Microbiota "Wikipedia page for microbiota") is a major factor in the disease, which together with an aberrant immune response, constitutes the dominant theory.
+In order to find robust relationships between the microbiome and the immune system, it is important to consider all the relevant variables that influence a disease.
+In this thesis we explored these relationships using data from different sequencing technologies and the observed or reported phenotype of the patients.
 
-The thesis was carried out on the [Institut d'Investigacions Biomèdiques August Pi i Sunyer (IDIBAPS)](https://www.idibaps.org/ "IDIBAPS website") research institute and funded by [Centro de Investigación Biomédica en Red (CIBER)](https://www.ciberehd.org/ "CIBER website").
-The thesis was done on [the IBD unit](https://www.ibd-bcn.org/ "Group's website") which is a translational team of biologist, microbiologists, veterinaries, bioinformaticians, doctors and nurses (at [Hospital Clínic](https://www.clinicbarcelona.org/en "Hospital Clínic")) in a multidisciplinary team.
-The leading doctor of the unit was [Julian Panés](https://orcid.org/0000-0002-4971-6902 "Julià website") whose interest on the disease made possible this thesis.
+This thesis was carried out at the [Institut d'Investigacions Biomèdiques August Pi i Sunyer (IDIBAPS)](https://www.idibaps.org/ "IDIBAPS website") research institute and was funded by the [Centro de Investigación Biomédica en Red (CIBER)](https://www.ciberehd.org/ "CIBER website").
+The thesis was conducted at [the IBD unit](https://www.ibd-bcn.org/ "Group's website") which is comprised of a multidisciplinary translational team of biologist, microbiologists, veterinarians, bioinformaticians, doctors and nurses (at [Hospital Clínic](https://www.clinicbarcelona.org/en "Hospital Clínic")).
+The leading doctor of the unit was [Julian Panés](https://orcid.org/0000-0002-4971-6902 "Julià website") whose interest in the disease made this thesis possible.
 
-The thesis is on the [doctoral programme in biomedicine](https://www.ub.edu/doctorat_biomedicina/eng/index.htm "Doctoral program's website") of the [University of Barcelona (UB)](https://www.ub.edu/web/portal/en/ "UB website").
-My thesis directors' were [Juanjo Lozano](https://orcid.org/0000-0001-7613-3908 "Juanjo's ORCID") and [Azucena Salas](https://orcid.org/0000-0003-4572-2907 "Azu's ORCID"), my boss, who helped as bioinformatician and disease expert respectively.
-They provided advice and guidance on how to analyse the data and where to focus on the different experiments/analysis.
+The thesis is on the [doctoral programme in biomedicine](https://www.ub.edu/doctorat_biomedicina/eng/index.htm "Doctoral program's website") at the [University of Barcelona (UB)](https://www.ub.edu/web/portal/en/ "UB website").
+My thesis directors' were [Juanjo Lozano](https://orcid.org/0000-0001-7613-3908 "Juanjo's ORCID") and [Azucena Salas](https://orcid.org/0000-0003-4572-2907 "Azu's ORCID"), my direct supervisor, who guided me as a bioinformatician and disease expert, respectively.
+They provided advice and guidance on how to analyze the data and on where to focus the different experiments/analyses.
 
-This thesis, available on <https://thesis.llrs.dev> is licensed under the [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/ "License summary link").\
+This thesis, available on <https://thesis.llrs.dev>, is licensed under the [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/ "License summary link").\
 !["CC-BY image"](images/by.png "CC-BY image of creative commons")
 
 # Abstracts {.unnumbered}
@@ -126,29 +126,29 @@ This thesis, available on <https://thesis.llrs.dev> is licensed under the [Creat
 
 ## English {.unnumbered}
 
-**Introduction**: Inflammatory bowel disease is a complex intestinal disease with several genetic and environmental factors that can influence its course.
-The ethiology and pathophysiology of the disease is not fully understood.
-There is some evidence that microbiome can play a role.
-Finding relationships between microbiome and host's mucosa could help advance prevention, diagnosis or treatment.
+**Introduction**: Inflammatory bowel disease is a complex intestinal disease with several genetic and environmental components that can influence its course.
+The etiology and pathophysiology of the disease is not fully understood, although there is some evidence that the microbiome can play a role.
+Determining the relationships between the microbiome and host's mucosa could help advance prevention, diagnosis or treatment of the disease.
 
-**Methods**: We based our analysis on intestinal bacterial 16S rRNA and human transcriptome data from biopsies from multiple timepoints and intestine segments.
-We extended regularized generalized canonical correlation analysis to find models that are coherent with previous knowledge on the disease taking into account the samples' information.
-Multiple inflammatory bowel disease datasets on different treatments and conditions were analysed and the models defining those dataset were compared.
-The results were compared with multiple co-inertia analysis.
+**Methods**: We based our analysis on intestinal bacterial 16S rRNA and human transcriptome data from biopsies extracted at multiple timepoints from intestinal segments.
+We expanded regularized generalized canonical correlation analysis to formulate models that were consistent with previous knowledge of the disease, taking into account all sample information.
+Multiple inflammatory bowel disease datasets vis-à-vis different treatments and conditions were analyzed and the models defining those dataset were compared.
+The results were compared using multiple co-inertia analysis.
 
-**Results**: Splitting sample variables into different blocks results in models of these relationships that show differences on the genes and microorganisms selected.
-The models generated using our new method inteRmodel outperformed multiple co-inertia analysis to classify the samples according to their location.
-Despite being used on datasets of different sources the resulting models show similar relationships between  variables.
+**Results**: Splitting sample variables into different blocks results in models of these relationships that revealed differences in the selected genes and microorganisms.
+The models generated using our new method inteRmodel outperformed multiple co-inertia analysis in terms of classifying the samples according to their location.
+Despite their use on datasets drawn from different sources, the resulting models showed similar relationships between  variables.
 
 **Discussion**: 
-Comparing multiple models helps find out the relationships within datasets.
-Our method finds how strong are the relationships between the microbiome, transcriptome and environmental variables.
-On different datasets genes selected were common. 
-This approach is robust and flexible to different datasets and settings.
+Comparing multiple models helps delineate relationships within datasets.
+Our method determines the strengths of the relationships between the microbiome, transcriptome and environmental variables.
+Among the different datasets, the selected genes proved to be shared in common. 
+This approach is sufficiently robust and flexible to characterize the different datasets and settings.
 
-**Conclusion**: With inteRmodel we found that the microbiome relates more closely to the sample location than to disease, but the transcriptome is highly related to the location of the sample on the intestine.
-There is a common transcriptome between datasets while microorganisms depend of the dataset.
-We can improve sample classification by taking into account both bacterial 16S and host transcriptome. 
+**Conclusion**: Using inteRmodel we found that the microbiome is more closely related to the sample location than to disease.
+In addition, the transcriptome is closely associated with the location of the sample in the intestine.
+We determined that there is a common transcriptome between datasets while microorganisms, in contrast, depend upon the dataset.
+In summary we can improve sample classification by taking into account both bacterial 16S and the host transcriptome. 
 
 
 ## Spanish {.unnumbered}

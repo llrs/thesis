@@ -26,7 +26,7 @@ In addition, this dataset contained information on age, localization of the tumo
 | Sex (female/male)         | 28/25    |
 | Location (cort/dipg/midl) | 20/22/11 |
 
-: (#tab:Puget) Characteristics of samples from the Puget's dataset.
+: (#tab:Puget) Characteristics of samples from the Puget dataset.
 
 ### HSCT dataset {#methods-hsct}
 
@@ -35,7 +35,7 @@ In addition, this dataset contained information on age, localization of the tumo
 Samples from the \acr{HSCT} dataset used in this thesis were from a cohort of patients with severe refractory \acr{CD} undergoing \acr{HSCT}.
 Patients were treated in the Department of Gastroenterology (Hospital Clínic de Barcelona --Spain--).
 The protocol was approved by the Catalan Transplantation Organization and by the Institutional Ethics Committee of the Hospital Clinic de Barcelona (Study Number HCB/2012/7244).
-All patients provided written consent following extensive counselling about being included on the study and using their data on publications. Variables collected include: sex, age at diagnostic, duration of the disease, age, disease status, sample location, local simple endoscopic score and \acr{CDAI}.
+All patients provided written consent following extensive counselling about being included on the study and using their data on publications. Variables collected include: sex, age at diagnosis, duration of the disease, age, disease status, sample location, local simple endoscopic score and \acr{CDAI}.
 
 Colonic and ileal biopsies were obtained at several time points during ileo-colonoscopy, at inclusion and every 6 or 12 months after \acr{HSCT} up to 4 years after the start of the treatment.
 Samples were obtained when possible from both uninvolved and involved areas.
@@ -49,10 +49,10 @@ In total 158 samples with both RNA and DNA extraction of the same segment and ti
 | Characteristic                                       | HSCT        |
 |:-----------------------------------------------------|:-----------:|
 | Sex (female/male)                                    | 22/15       |
-| Age at diagnostic (\<17/\<40/\>40 years)             | 7/11/0      |
+| Age at diagnosis (\<17/\<40/\>40 years)              | 7/11/0      |
 | Duration (in years): mean (min-max)                  | 14 (8-28)   |
 | Age: mean (min-max)                                  | 44 (23-70)  |
-| Disease status (non-\acr{IBD}/\acr{CD})                          | 51/107      |
+| Disease status (non-\acr{IBD}/\acr{CD})              | 51/107      |
 | Sample location (ileum/colon/unknown)                | 48/108/2    |
 | Local simple endoscopic score for \acr{CD}: mean (min-max) | 2.15 (0-12) |
 | \acr{CDAI}: mean (min-max)                                 | 120 (0-450  |
@@ -74,7 +74,7 @@ The dataset included information about gender, location, age, and the status (in
 | Sex (female/male)             | 42/17    |
 | Sample location (ileum/colon) | 30/29    |
 
-: (#tab:Hasler) Characteristics of samples from the Häsler's dataset.
+: (#tab:Hasler) Characteristics of samples from the Häsler dataset.
 
 ### Morgan's dataset {#methods-morgan}
 
@@ -91,7 +91,7 @@ The pouch ileum might be inflamed or not.
 | Sex patients (female/male)  | 101/102  |
 | Sample location (Pouch/\acr{PPI}) | 59/196   |
 
-: (#tab:Morgan) Characteristics of samples from the Morgan's dataset.
+: (#tab:Morgan) Characteristics of samples from the Morgan dataset.
 
 ### Howell's dataset {#methods-howell}
 
@@ -99,18 +99,18 @@ This dataset included a cohort of 66 treatment-naïve children at diagnosis of t
 
 Data from 77 samples that had both RNAseq and \acr{16S} data was used.
 There are 10 non-\acr{IBD} samples, 11 with \acr{CD} and 11 with \acr{UC}.
-Data has the following characteristics: disease, age at diagnostic, age at time of study, sex, sample location, and disease activity:
+Data has the following characteristics: disease, age at diagnosis, age at time of study, sex, sample location, and disease activity:
 
 | Characteristic                                  | Howell's  |
 |:------------------------------------------------|:---------:|
 | Disease (non-\acr{IBD}/\acr{CD}/\acr{UC})                         | 11/10/11  |
-| Age at diagnostic (\<17/\<40/\>40 years)        | 32/0/0    |
+| Age at diagnosis (\<17/\<40/\>40 years)         | 32/0/0    |
 | Age: mean (min-max)                             | 12 (6-15) |
 | Sex (female/male)                               | 10/22     |
 | Segment (ileum/colon)                           | 31/46     |
 | Clinical history (inflammation/no inflammation) | 24/53     |
 
-: (#tab:howell) Characteristics of samples from the Howell's dataset.
+: (#tab:howell) Characteristics of samples from the Howell dataset.
 
 ## Sample processing {#processing}
 
