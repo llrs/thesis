@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-04-29" />
+<meta name="date" content="2022-05-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -230,7 +230,7 @@ div.csl-indent {
 <li class="chapter" data-level="6" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>6</b> Conclusions</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="conclusions.html"><a href="conclusions.html#study-1-multi-omic-modelling-of-inflammatory-bowel-disease-with-regularized-canonical-correlation-analysis"><i class="fa fa-check"></i><b>6.1</b> Study 1: Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a></li>
-<li class="chapter" data-level="6.2" data-path="conclusions.html"><a href="conclusions.html#study-2-genes-and-microbiome-relationship-on-inflammatory-bowel-disease"><i class="fa fa-check"></i><b>6.2</b> Study 2: Genes and microbiome relationship on inflammatory bowel disease</a></li>
+<li class="chapter" data-level="6.2" data-path="conclusions.html"><a href="conclusions.html#study-2-the-relationship-of-genes-and-the-microbiome-with-inflammatory-bowel-disease"><i class="fa fa-check"></i><b>6.2</b> Study 2: The relationship of genes and the microbiome with inflammatory bowel disease</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i><b>7</b> Acknowledgments</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -252,7 +252,7 @@ div.csl-indent {
 <li class="chapter" data-level="D" data-path="other-datasets.html"><a href="other-datasets.html"><i class="fa fa-check"></i><b>D</b> Other datasets</a>
 <ul>
 <li class="chapter" data-level="D.1" data-path="other-datasets.html"><a href="other-datasets.html#barcelona"><i class="fa fa-check"></i><b>D.1</b> BARCELONA dataset</a></li>
-<li class="chapter" data-level="D.2" data-path="other-datasets.html"><a href="other-datasets.html#hernandez"><i class="fa fa-check"></i><b>D.2</b> Hernández’ dataset</a>
+<li class="chapter" data-level="D.2" data-path="other-datasets.html"><a href="other-datasets.html#hernandez"><i class="fa fa-check"></i><b>D.2</b> Hernández’s dataset</a>
 <ul>
 <li class="chapter" data-level="D.2.1" data-path="other-datasets.html"><a href="other-datasets.html#results-hernandez"><i class="fa fa-check"></i><b>D.2.1</b> Results</a></li>
 </ul></li>
@@ -413,9 +413,9 @@ The centroid scheme was selected because it takes into account all the relations
 It is similarity to horst scheme.</p>
 <p>The effect of the sparsity value was measured by its effect on the inner <a href="glossary.html#acronyms_AVE">AVE</a> scores and the combination of the different values for each block as can be seen in figure <a href="results.html#fig:puget-tau2AVE">4.3</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:puget-tau2AVE"></span>
-<img src="images/pugets_tau_to_AVE.png" alt="Effect of tau on the inner AVE on Puget's dataset. The suggested tau value is the column between the regular grid, on the ordinate axis the y's tau values and on the abscissa the gene expression (GE) on the left and the comparative genomic hybridization (CGH) on the right. The highest inner AVE is with high tau values for y and middle to upper values for GE and CGH." width="100%" />
+<img src="images/pugets_tau_to_AVE.png" alt="Effect of tau on the inner AVE in the Puget dataset. The suggested tau value is the column between the regular grid, on the ordinate axis the y's tau values and on the abscissa the gene expression (GE) on the left and the comparative genomic hybridization (CGH) on the right. The highest inner AVE is with high tau values for y and middle to upper values for GE and CGH." width="100%" />
 <p class="caption">
-Figure 4.3: Effect of tau on the inner AVE on Puget’s dataset. The suggested tau value is the column between the regular grid, on the ordinate axis the y’s tau values and on the abscissa the gene expression (GE) on the left and the comparative genomic hybridization (CGH) on the right. The highest inner AVE is with high tau values for y and middle to upper values for GE and CGH.
+Figure 4.3: Effect of tau on the inner AVE in the Puget dataset. The suggested tau value is the column between the regular grid, on the ordinate axis the y’s tau values and on the abscissa the gene expression (GE) on the left and the comparative genomic hybridization (CGH) on the right. The highest inner AVE is with high tau values for y and middle to upper values for GE and CGH.
 </p>
 </div>
 <p>The first model of the family of models 1 can be seen in table <a href="results.html#tab:puget-model1">4.1</a>.
@@ -424,7 +424,7 @@ Similarly, <a href="glossary.html#acronyms_CGH">CGH</a> is also related to the l
 All other relationships are not included on the model.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:puget-model1">Table 4.1: </span>Model 1 for Puget’s dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship. The matrix represent relations between the gene expression and CGH with the metadata.
+<span id="tab:puget-model1">Table 4.1: </span>Model 1 for Puget dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship. The matrix represent relations between the gene expression and CGH with the metadata.
 </caption>
 <thead>
 <tr>
@@ -491,7 +491,7 @@ metadata
 In this model the <a href="glossary.html#acronyms_CGH">CGH</a> relationship with the location variables is much weaker than <a href="glossary.html#acronyms_GE">GE</a> with them.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:puget-model1-2">Table 4.2: </span>Model 1.2 for Puget’s dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship. CGH has a weaker relationship with the metadata than GE.
+<span id="tab:puget-model1-2">Table 4.2: </span>Model 1.2 for the Puget dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship. CGH has a weaker relationship with the metadata than GE.
 </caption>
 <thead>
 <tr>
@@ -558,7 +558,7 @@ metadata
 We relate the <a href="glossary.html#acronyms_GE">GE</a> and <a href="glossary.html#acronyms_CGH">CGH</a> to these blocks and between them.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:puget-model2">Table 4.3: </span>Model 2 for Puget’s dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.
+<span id="tab:puget-model2">Table 4.3: </span>Model 2 for the Puget dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.
 </caption>
 <thead>
 <tr>
@@ -653,7 +653,7 @@ Location
 <p>Following this split, the model that has higher inner <a href="glossary.html#acronyms_AVE">AVE</a> for these blocks is the following (Table <a href="results.html#tab:puget-model2-2">4.4</a>).</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:puget-model2-2">Table 4.4: </span>Model 2.2 for Puget’s dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.
+<span id="tab:puget-model2-2">Table 4.4: </span>Model 2.2 for the Puget dataset. Relationships between the different blocks in the Puget dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship.
 </caption>
 <thead>
 <tr>
@@ -748,7 +748,7 @@ Location
 <p>If we added a superblock with all the data of the different blocks from model 1 we started with the standard relationship between blocks (Table <a href="results.html#tab:puget-model-superblock">4.5</a>).</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:puget-model-superblock">Table 4.5: </span>Relationships between the different blocks in the Puget’s dataset for model superblock. 0 indicates no relationship and 1 indicates a strong relationship. The superblock is related to all other blocks but they are only related to the superblock.
+<span id="tab:puget-model-superblock">Table 4.5: </span>Model with superblock for the Puget dataset. Relationships between the different blocks in the Puget dataset for model superblock. 0 indicates no relationship and 1 indicates a strong relationship. The superblock is related to all other blocks but they are only related to the superblock.
 </caption>
 <thead>
 <tr>
@@ -844,7 +844,7 @@ metadata
 It does not have a relationship between the superblock and the <a href="glossary.html#acronyms_GE">GE</a> and the metadata is related to <a href="glossary.html#acronyms_GE">GE</a> and <a href="glossary.html#acronyms_CGH">CGH</a> too.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:puget-model-superblock-2">Table 4.6: </span>Relationships between the different blocks in the Puget’s dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship. In this optimized design the GE and the metadata is related to GE and CGH too. The relationship between GE and CGH is weaker than other relations.
+<span id="tab:puget-model-superblock-2">Table 4.6: </span>Model with superblock.2 for the Puget dataset. Relationships between the different blocks in the Puget dataset for model superblock.2. 0 indicates no relationship and 1 indicates a strong relationship. In this optimized design the GE and the metadata is related to GE and CGH too. The relationship between GE and CGH is weaker than other relations.
 </caption>
 <thead>
 <tr>
@@ -939,17 +939,17 @@ metadata
 <p>Exploratory analysis with the superblock model was done.
 The first two components of the superblock did not help to explain the biology or classify the tumors (See figure <a href="results.html#fig:puget-superblock">4.4</a>).</p>
 <div class="figure"><span style="display:block;" id="fig:puget-superblock"></span>
-<img src="images/pugets_superblock.png" alt="First components of the model superblock.2 which has all the data of the samples on the Puget's dataset. Samples colored and shaped acording to the localization of the tumor. There is a mix of samples of all locations and then some far from it." width="100%" />
+<img src="images/pugets_superblock.png" alt="Superblock components of the Puget dataset. First components of the model superblock.2 which has all the data of the samples on the Puget's dataset. Samples colored and shaped acording to the localization of the tumor. There is a mix of samples of all locations and then some far from it." width="100%" />
 <p class="caption">
-Figure 4.4: First components of the model superblock.2 which has all the data of the samples on the Puget’s dataset. Samples colored and shaped acording to the localization of the tumor. There is a mix of samples of all locations and then some far from it.
+Figure 4.4: Superblock components of the Puget dataset. First components of the model superblock.2 which has all the data of the samples on the Puget’s dataset. Samples colored and shaped acording to the localization of the tumor. There is a mix of samples of all locations and then some far from it.
 </p>
 </div>
 <p>The same data was used to look for a good model from the data itself including a model with a superblock but looking at the first component of the <a href="glossary.html#acronyms_CGH">CGH</a> and transcriptome block.
 This allowed to visually inspect if each model’s components helped to classify the samples (Figure <a href="results.html#fig:puget-models">4.5</a>).</p>
 <div class="figure"><span style="display:block;" id="fig:puget-models"></span>
-<img src="images/pugets_models.png" alt="Different RGCCA models in the Puget's dataset. The different models with the same data showing the sample position on the first components of the CGH  and the transcriptome (or GE) block. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data about the samples on different blocks. Model superblock and superblock.2 have all the data from different blokcs and one block with all the data. All of them separate the samples according according to the transcriptome component by the localization of the tumors." width="100%" />
+<img src="images/pugets_models.png" alt="Different RGCCA models in the Puget dataset. The different models with the same data showing the sample position on the first components of the CGH  and the transcriptome (or GE) block. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data about the samples on different blocks. Model superblock and superblock.2 have all the data from different blokcs and one block with all the data. All of them separate the samples according according to the transcriptome component by the localization of the tumors." width="100%" />
 <p class="caption">
-Figure 4.5: Different RGCCA models in the Puget’s dataset. The different models with the same data showing the sample position on the first components of the CGH and the transcriptome (or GE) block. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data about the samples on different blocks. Model superblock and superblock.2 have all the data from different blokcs and one block with all the data. All of them separate the samples according according to the transcriptome component by the localization of the tumors.
+Figure 4.5: Different RGCCA models in the Puget dataset. The different models with the same data showing the sample position on the first components of the CGH and the transcriptome (or GE) block. Model 1 and 1.2 with transcriptomics, CGH data and all the data about the samples together. Model 2 and 2.2 with transcriptomics, CGH data and all the data about the samples on different blocks. Model superblock and superblock.2 have all the data from different blokcs and one block with all the data. All of them separate the samples according according to the transcriptome component by the localization of the tumors.
 </p>
 </div>
 <p>The first components of the <a href="glossary.html#acronyms_CGH">CGH</a> and the transcriptomics blocks of the superblock.2 model show better classification than that of the superblock.
@@ -970,15 +970,15 @@ On the other hand, the major difference is the dispersion on the <a href="glossa
 There are significant differences between having the superblock and not having it.
 There is also some significant increase of the inner <a href="glossary.html#acronyms_AVE">AVE</a> when adding a superblock.</p>
 <div class="figure"><span style="display:block;" id="fig:puget-weights"></span>
-<img src="images/pugets-weights.png" alt="Effect of superblock and weights on the inner AVE on Puget's dataset. Designs with the superblock showed higher inner AVE scores than without it. Interaction yes/no indicates RNA and RNA interaction. Higher inner AVE values are associated with relationships within the GE (p-values shown on top of the violin plots)." width="100%" />
+<img src="images/pugets-weights.png" alt="Effects of superblock and weights on the inner AVE on Puget's dataset. Designs with the superblock showed higher inner AVE scores than without it. Interaction yes/no indicates RNA and RNA interaction. Higher inner AVE values are associated with relationships within the GE (p-values shown on top of the violin plots)." width="100%" />
 <p class="caption">
-Figure 4.6: Effect of superblock and weights on the inner AVE on Puget’s dataset. Designs with the superblock showed higher inner AVE scores than without it. Interaction yes/no indicates RNA and RNA interaction. Higher inner AVE values are associated with relationships within the GE (p-values shown on top of the violin plots).
+Figure 4.6: Effects of superblock and weights on the inner AVE on Puget’s dataset. Designs with the superblock showed higher inner AVE scores than without it. Interaction yes/no indicates RNA and RNA interaction. Higher inner AVE values are associated with relationships within the GE (p-values shown on top of the violin plots).
 </p>
 </div>
 <p>The different models resulted on the following <a href="glossary.html#acronyms_AVE">AVE</a> values as reported on <a href="results.html#tab:puget-models-ave">4.7</a>.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:puget-models-ave">Table 4.7: </span>AVE values of RGCCA models in the Puget’s dataset. Values for both inner and outer AVE of the first canonical component of models 1, 1.2, 2 2.2 and superblock and superblock.2 are shown. The model with the highest inner AVE is the model 1.2 and superblock.2 of those with superblock.
+<span id="tab:puget-models-ave">Table 4.7: </span>AVE values of RGCCA models in the Puget dataset. Values for both inner and outer AVE of the first canonical component of models 1, 1.2, 2 2.2 and superblock and superblock.2 are shown. The model with the highest inner AVE is the model 1.2 and superblock.2 of those with superblock.
 </caption>
 <thead>
 <tr>
@@ -1075,7 +1075,7 @@ On the transcriptome the most important factor is location which is more than 15
 <!-- # Data on TRIM/intestinal_16S_RNAseq_metadb/models.RData and on TRIM/intestinal_16S_RNAseq_metadb/variance.R-->
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:hsct-permanova-RNAseq">Table 4.8: </span>Permanova analysis of transcriptome. The variables and their interactions (shown with :) and the <span class="math inline">\(R^2\)</span> values and the associated p-value. The higher the <span class="math inline">\(R^2\)</span> the more variance is explained by that factor. Location and IBD are the biggest variables affecting the transcriptome, but overall they explain a small part of all the variability.
+<span id="tab:hsct-permanova-RNAseq">Table 4.8: </span>PERMANOVA analysis of the transcriptome in the HSCT dataset. The variables and their interactions (shown with :) and the <span class="math inline">\(R^2\)</span> values and the associated p-value. The higher the <span class="math inline">\(R^2\)</span> the more variance is explained by that factor. Location and IBD are the biggest variables affecting the transcriptome, but overall they explain a small part of all the variability.
 </caption>
 <thead>
 <tr>
@@ -1182,7 +1182,7 @@ Residuals
 </table>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:hsct-permanova-microbiome">Table 4.9: </span>Permanova analysis of microbiome. The variables and their interactions (shown with :) and the <span class="math inline">\(R^2\)</span> values and the associated p-value. The higher the <span class="math inline">\(R^2\)</span> the more variance is explained by that factor. Location and IBD are the biggest variables affecting the microbiome, but overall they explain a small part of all the variability (smaller than with the gene expression).
+<span id="tab:hsct-permanova-microbiome">Table 4.9: </span>PERMANOVA analysis of the microbiome in the HSCT dataset. The variables and their interactions (shown with :) and the <span class="math inline">\(R^2\)</span> values and the associated p-value. The higher the <span class="math inline">\(R^2\)</span> the more variance is explained by that factor. Location and IBD are the biggest variables affecting the microbiome, but overall they explain a small part of all the variability (smaller than with the gene expression).
 </caption>
 <thead>
 <tr>
@@ -1302,24 +1302,24 @@ Figure 4.7: Microbiome diversity in the HSCT dataset. On the upper section the S
 Splitting by location of the sample and disease provided the highest differences and the diversity index along time did not change much.</p>
 <p>The <a href="glossary.html#acronyms_PCA">PCA</a> didn’t show any pattern on the microbiome according to the location, as can be seen in the first dimensions of the <a href="glossary.html#acronyms_PCA">PCA</a> in figure <a href="results.html#fig:hsct-pca-16s">4.8</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-pca-16s"></span>
-<img src="images/HSCT_PCA_16S.png" alt="PCA of the 16S data of the HSCT dataset. There are no clear patterns according to the location. Each point represents a sample (colored and shaped by location)." width="100%" />
+<img src="images/HSCT_PCA_16S.png" alt="PCA of the 16S data from the HSCT dataset. There are no clear patterns according to the location. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.8: PCA of the 16S data of the HSCT dataset. There are no clear patterns according to the location. Each point represents a sample (colored and shaped by location).
+Figure 4.8: PCA of the 16S data from the HSCT dataset. There are no clear patterns according to the location. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>The <a href="glossary.html#acronyms_PCA">PCA</a> on the transcriptome shows a clear pattern splitting by location of the sample on the first dimension (see figure <a href="results.html#fig:hsct-pca-RNAseq">4.9</a>).</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-pca-RNAseq"></span>
-<img src="images/HSCT_PCA_RNAseq.png" alt="PCA of the RNAseq data of the HSCT dataset. The samples separate according to the location. Each point represents a sample (colored and shaped by location)." width="100%" />
+<img src="images/HSCT_PCA_RNAseq.png" alt="PCA of the RNAseq data from the HSCT dataset. The samples separate according to the location. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.9: PCA of the RNAseq data of the HSCT dataset. The samples separate according to the location. Each point represents a sample (colored and shaped by location).
+Figure 4.9: PCA of the RNAseq data from the HSCT dataset. The samples separate according to the location. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>Weighted gene co-expression network analysis did not provide relevant links between bacteria and transcriptome as it failed to find an acceptable scale free degree.
 As can be seen in the figure <a href="results.html#fig:hsct-wgcna-power">4.10</a>, the scale free topology does not reach the recommended threshold of 0.9 and the mean connectivity is also very low even for the first power.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-wgcna-power"></span>
-<img src="images/hsct-wgcna-power.png" alt="Power evaluation of WGCNA of the HSCT dataset. On the ordinate the power on the abscissa on the left the scale free topology model fit; on the right the mean connectivity. There is a low fit even on large power and the mean connectivity is below 100 from the very first value." width="100%" />
+<img src="images/hsct-wgcna-power.png" alt="Power evaluation of WGCNA in the HSCT dataset. On the ordinate the power on the abscissa on the left the scale free topology model fit; on the right the mean connectivity. There is a low fit even on large power and the mean connectivity is below 100 from the very first value." width="100%" />
 <p class="caption">
-Figure 4.10: Power evaluation of WGCNA of the HSCT dataset. On the ordinate the power on the abscissa on the left the scale free topology model fit; on the right the mean connectivity. There is a low fit even on large power and the mean connectivity is below 100 from the very first value.
+Figure 4.10: Power evaluation of WGCNA in the HSCT dataset. On the ordinate the power on the abscissa on the left the scale free topology model fit; on the right the mean connectivity. There is a low fit even on large power and the mean connectivity is below 100 from the very first value.
 </p>
 </div>
 <p>STATegRa was used between stool <a href="glossary.html#acronyms_16S">16S</a> data and intestinal <a href="glossary.html#acronyms_16S">16S</a> data under the assumption that there is a shared common factor without influence of other categorical variables.
@@ -2013,17 +2013,17 @@ The most similar models are those that have split the metadata into 3 blocks, fo
 <p>In order to analyze the accuracy of the models, one thousand bootstraps were used to integrate the data from the <a href="glossary.html#acronyms_HSCT">HSCT</a> <a href="glossary.html#acronyms_CD">CD</a> dataset.
 Each bootstrap had its own dispersion on the variables according to the samples selected, the distribution of the bootstraps used are represented here:</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-bootstrap-quality"></span>
-<img src="images/hsct-bootstrap-characteristics.png" alt="Dispersion of the bootstraped samples on age and percentage of colon and controls samples. The bootstraps represent a wide range of different composition." width="100%" />
+<img src="images/hsct-bootstrap-characteristics.png" alt="Characteristics of the samples from the HSCT bootstraped samples. Dispersion of the bootstraped samples on age and percentage of colon and controls samples. The bootstraps represent a wide range of different composition." width="100%" />
 <p class="caption">
-Figure 4.12: Dispersion of the bootstraped samples on age and percentage of colon and controls samples. The bootstraps represent a wide range of different composition.
+Figure 4.12: Characteristics of the samples from the HSCT bootstraped samples. Dispersion of the bootstraped samples on age and percentage of colon and controls samples. The bootstraps represent a wide range of different composition.
 </p>
 </div>
 <p>Evaluating the same model on each bootstrap lead to a dispersion on the inner <a href="glossary.html#acronyms_AVE">AVE</a> of the model.
 The lower the dispersion, the more robust the model was to different conditions than in the initial testing.</p>
 <div class="figure"><span style="display:block;" id="fig:hsct-bootstrap"></span>
-<img src="images/hsct_bootstrap_models.png" alt="Bootstrap of the models 0, 1.2 and 2.2 in the HSCT dataset. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses. The point with the black circle is the AVE of the original data." width="100%" />
+<img src="images/hsct_bootstrap_models.png" alt="Bootstrap results from the HSCT dataset. Bootstrap of the models 0, 1.2 and 2.2 in the HSCT dataset. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses. The point with the black circle is the AVE of the original data." width="100%" />
 <p class="caption">
-Figure 4.13: Bootstrap of the models 0, 1.2 and 2.2 in the HSCT dataset. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses. The point with the black circle is the AVE of the original data.
+Figure 4.13: Bootstrap results from the HSCT dataset. Bootstrap of the models 0, 1.2 and 2.2 in the HSCT dataset. Model 0 and 1.2 have lower inner and outer AVE score, model 2.2 has lower outer score but higher inner value than the bootstrapped. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses. The point with the black circle is the AVE of the original data.
 </p>
 </div>
 <p>With the bootstrapped models we used <code>BaseSet</code> to estimate the probability that each variable to be relevant for the association with a disease.
@@ -2140,29 +2140,29 @@ Genes are very similar between model 0 to 1.2 and between 2 to 2.3, while <a hre
 <h3><span class="header-section-number">4.2.3</span> Häsler’s dataset<a href="results.html#results-hasler" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If we look at the dataset 16S, the <a href="glossary.html#acronyms_PCA">PCA</a> does not show a pattern as can be seen in figure <a href="results.html#fig:hasler-pca-16s">4.17</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-pca-16s"></span>
-<img src="images/hasler_PCA_16S.png" alt="PCA of 16S of Häsler's dataset. There are some samples that are very different from the others. Each point represents a sample (colored and shaped by location)." width="100%" />
+<img src="images/hasler_PCA_16S.png" alt="PCA of 16S of Häsler dataset. There are some samples that are very different from the others. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.17: PCA of 16S of Häsler’s dataset. There are some samples that are very different from the others. Each point represents a sample (colored and shaped by location).
+Figure 4.17: PCA of 16S of Häsler dataset. There are some samples that are very different from the others. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>The <a href="glossary.html#acronyms_PCA">PCA</a> on the transcriptome shows a distinction between colon and ileum according to the first dimension of the <a href="glossary.html#acronyms_PCA">PCA</a> that can be seen in figure <a href="results.html#fig:hasler-pca-RNAseq">4.18</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-pca-RNAseq"></span>
-<img src="images/hasler_PCA_RNAseq.png" alt="PCA of RNAseq of the Häsler's dataset. There are two clear groups according to the location on the first component. Each point represents a sample (colored and shaped by location)." width="100%" />
+<img src="images/hasler_PCA_RNAseq.png" alt="PCA of RNAseq of the Häsler dataset. There are two clear groups according to the location on the first component. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.18: PCA of RNAseq of the Häsler’s dataset. There are two clear groups according to the location on the first component. Each point represents a sample (colored and shaped by location).
+Figure 4.18: PCA of RNAseq of the Häsler dataset. There are two clear groups according to the location on the first component. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>In this dataset, the parameter tau behaved slightly differently than with the previous dataset but the value from the Schäfer’s method for tau was close to the best value.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-tau"></span>
-<img src="images/hasler-centroid_tau.png" alt="Changes on tau on the centroid scheme in the Häsler dataset affect the inner AVE score on the model 1. The panel A shows on the ordinate the RNAseq tau value, the panel B on the right, shows the tau of the microorganism; both of them show the y's tau on the abscissa." width="100%" />
+<img src="images/hasler-centroid_tau.png" alt="Tau effect on the inner AVE in the Häsler dataset. Changes on tau on the centroid scheme in the Häsler dataset affect the inner AVE score on the model 1. The panel A shows on the ordinate the RNAseq tau value, the panel B on the right, shows the tau of the microorganism; both of them show the y's tau on the abscissa." width="100%" />
 <p class="caption">
-Figure 4.19: Changes on tau on the centroid scheme in the Häsler dataset affect the inner AVE score on the model 1. The panel A shows on the ordinate the RNAseq tau value, the panel B on the right, shows the tau of the microorganism; both of them show the y’s tau on the abscissa.
+Figure 4.19: Tau effect on the inner AVE in the Häsler dataset. Changes on tau on the centroid scheme in the Häsler dataset affect the inner AVE score on the model 1. The panel A shows on the ordinate the RNAseq tau value, the panel B on the right, shows the tau of the microorganism; both of them show the y’s tau on the abscissa.
 </p>
 </div>
 <p>Models for Häsler dataset are the following:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:hasler-model-0">Table 4.18: </span>Model 0 of Häsler dataset. 0 indicates no relationship and 1 indicates a strong relationship.
+<span id="tab:hasler-model-0">Table 4.18: </span>Model 0 of the Häsler dataset. 0 indicates no relationship and 1 indicates a strong relationship.
 </caption>
 <thead>
 <tr>
@@ -2597,7 +2597,7 @@ Time
 <p>In table <a href="results.html#tab:hasler-aves">4.23</a>, we can see here the AVE scores of each of the previous models.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:hasler-aves">Table 4.23: </span>AVE values of RGCCA models in Häsler’s dataset. The inner and the outer AVE scores of multiple models tested on the Häsler dataset are shown. The model with the hightest inner AVE is model 1.2 followed by model 2.2.
+<span id="tab:hasler-aves">Table 4.23: </span>AVE values of RGCCA models in the Häsler dataset. The inner and the outer AVE scores of multiple models tested on the Häsler dataset are shown. The model with the hightest inner AVE is model 1.2 followed by model 2.2.
 </caption>
 <thead>
 <tr>
@@ -2684,9 +2684,9 @@ Figure 4.20: Models from inteRmodel in the Häsler’s dataset. Model 0 with jus
 <p>There is no observable cluster of <a href="glossary.html#acronyms_IBD">IBD</a> samples and the other samples, showing that on this dataset the differences of the microbiome between the different type of samples are less stark.
 The classification of samples was very accurate in all the models, specially on model 2.2, see figure <a href="results.html#fig:hasler-auc-plot">4.21</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-auc-plot"></span>
-<img src="images/hasler-auc.png" alt="AUC of models with RGCCA in the Häsler's dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Häsler's dataset." width="100%" />
+<img src="images/hasler-auc.png" alt="AUC of the RGCCA models in the Häsler dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Häsler's dataset." width="100%" />
 <p class="caption">
-Figure 4.21: AUC of models with RGCCA in the Häsler’s dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Häsler’s dataset.
+Figure 4.21: AUC of the RGCCA models in the Häsler dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Häsler’s dataset.
 </p>
 </div>
 <p>This accuracy resulted on high <a href="glossary.html#acronyms_AUC">AUC</a> values for all the models, as can be seen in table <a href="results.html#tab:hasler-auc">4.24</a>.</p>
@@ -2752,9 +2752,9 @@ AUC
 <p><a href="glossary.html#acronyms_MCIA">MCIA</a> was applied as a baseline of the integration and compared to the different models to know which one separates best colon and ileum samples.
 The result on the first two dimension is shown in figure <a href="results.html#fig:hasler-mcia">4.22</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:hasler-mcia"></span>
-<img src="images/hasler-mcia.png" alt="MCIA dimensions in the Häsler's dataset. MCIA first two dimensions of the dataset shows two vertical groups on the first syntethic dimension according to the location of the samples and colored by the state. Each point represents a sample (colored by location and shape by State)." width="100%" />
+<img src="images/hasler-mcia.png" alt="MCIA dimensions in the Häsler dataset. MCIA first two dimensions of the dataset shows two vertical groups on the first syntethic dimension according to the location of the samples and colored by the state. Each point represents a sample (colored by location and shape by State)." width="100%" />
 <p class="caption">
-Figure 4.22: MCIA dimensions in the Häsler’s dataset. MCIA first two dimensions of the dataset shows two vertical groups on the first syntethic dimension according to the location of the samples and colored by the state. Each point represents a sample (colored by location and shape by State).
+Figure 4.22: MCIA dimensions in the Häsler dataset. MCIA first two dimensions of the dataset shows two vertical groups on the first syntethic dimension according to the location of the samples and colored by the state. Each point represents a sample (colored by location and shape by State).
 </p>
 </div>
 <p><a href="glossary.html#acronyms_MCIA">MCIA</a>’s <a href="glossary.html#acronyms_AUC">AUC</a> results was as high as the model 2.2 to classify samples according to their location.
@@ -2765,23 +2765,23 @@ It was even better to classify the samples according to the type of sample they 
 <p>To explore this dataset that is different from the others with <a href="glossary.html#acronyms_IBD">IBD</a>.</p>
 <p>The <a href="glossary.html#acronyms_PCA">PCA</a> didn’t show any pattern on the microbiome according to the location, see figure <a href="results.html#fig:morgan-pca-16s">4.23</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-pca-16s"></span>
-<img src="images/PCA_16S_morgan.png" alt="PCA of 16S of the Morgan's dataset. There seems to be quite a diverse microbiota based on the first dimension. Each point represents a sample (colored and shaped by location)." width="100%" />
+<img src="images/PCA_16S_morgan.png" alt="PCA of 16S in the Morgan dataset. There seems to be quite a diverse microbiota based on the first dimension. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.23: PCA of 16S of the Morgan’s dataset. There seems to be quite a diverse microbiota based on the first dimension. Each point represents a sample (colored and shaped by location).
+Figure 4.23: PCA of 16S in the Morgan dataset. There seems to be quite a diverse microbiota based on the first dimension. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>The <a href="glossary.html#acronyms_PCA">PCA</a> on the transcriptome did not show a clear distinction between the <a href="glossary.html#acronyms_PPI">PPI</a> and the pouch in figure <a href="results.html#fig:morgan-pca-RNAseq">4.24</a> but there is a pattern.</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-pca-RNAseq"></span>
-<img src="images/PCA_RNASeq_morgan.png" alt="PCA of RNAseq of the Morgan's dataset. There is no clear separation of the two locations on the first dimensions of the PCA. Each point represents a sample (colored and shaped by location)." width="100%" />
+<img src="images/PCA_RNASeq_morgan.png" alt="PCA of RNAseq in the Morgan dataset. There is no clear separation of the two locations on the first dimensions of the PCA. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.24: PCA of RNAseq of the Morgan’s dataset. There is no clear separation of the two locations on the first dimensions of the PCA. Each point represents a sample (colored and shaped by location).
+Figure 4.24: PCA of RNAseq in the Morgan dataset. There is no clear separation of the two locations on the first dimensions of the PCA. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>We tested if results of <code>inteRmodel</code> were consistent on this dataset with the other datasets.
 The first model we tried is model 0 as in table <a href="results.html#tab:morgan-model0">4.25</a>.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:morgan-model0">Table 4.25: </span>Relationships between the different blocks in the Morgan’s dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship. Transcriptome and microbiome are linked.
+<span id="tab:morgan-model0">Table 4.25: </span>Relationships between the different blocks in the Morgan dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship. Transcriptome and microbiome are linked.
 </caption>
 <thead>
 <tr>
@@ -2824,7 +2824,7 @@ Microbiome
 <p>We then added the data about the samples as provided <a href="materials-and-methods.html#methods-morgan">3.1.4</a>, on a simple model as in table <a href="results.html#tab:morgan-model1">4.26</a>.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:morgan-model1">Table 4.26: </span>Relationships between the different blocks in the Morgan’s dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship. Transcriptome and microbiome are related to the metadata.
+<span id="tab:morgan-model1">Table 4.26: </span>Relationships between the different blocks in the Morgan dataset for model 1. 0 indicates no relationship and 1 indicates a strong relationship. Transcriptome and microbiome are related to the metadata.
 </caption>
 <thead>
 <tr>
@@ -2891,7 +2891,7 @@ metadata
 
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:morgan-model1-2">Table 4.27: </span>Model 1.2 of the Morgan’s dataset. Relationships between the different blocks in the Morgan’s dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship. Transcriptome is related to the microbiome but weakly and the microbiome is also related to the metadata.
+<span id="tab:morgan-model1-2">Table 4.27: </span>Model 1.2 of the Morgan dataset. Relationships between the different blocks in the Morgan dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship. Transcriptome is related to the microbiome but weakly and the microbiome is also related to the metadata.
 </caption>
 <thead>
 <tr>
@@ -2957,7 +2957,7 @@ metadata
 <p>On model two we split the invariable variables from those related to the location (see <a href="results.html#tab:morgan-model2">4.28</a>).</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:morgan-model2">Table 4.28: </span>Relationships between the different blocks in the Morgan’s dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship. Transcriptome and the microbiome are linked and related to demographic and location variables.
+<span id="tab:morgan-model2">Table 4.28: </span>Relationships between the different blocks in the Morgan dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship. Transcriptome and the microbiome are linked and related to demographic and location variables.
 </caption>
 <thead>
 <tr>
@@ -3052,7 +3052,7 @@ Location
 <p>The model that has higher inner <a href="glossary.html#acronyms_AVE">AVE</a> for these blocks is the following:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:morgan-model2-2">Table 4.29: </span>Relationships between the different blocks in the Morgan’s dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship. The transcriptome is weakly related to the microbiome and location but much stronger related to the demographic variables.
+<span id="tab:morgan-model2-2">Table 4.29: </span>Relationships between the different blocks in the Morgan dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship. The transcriptome is weakly related to the microbiome and location but much stronger related to the demographic variables.
 </caption>
 <thead>
 <tr>
@@ -3149,15 +3149,15 @@ After model 2.2 we looked on the model similar to model 2.3 in the <a href="glos
 However, it is kept on the further analysis.</p>
 <p>The different models were not able to separate the samples neither by location or sex.</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-models"></span>
-<img src="images/morgan_models.png" alt="Models from inteRmodel in the Morgan's dataset. First component of the transcriptome and microbiome of models on the Morgan's dataset. Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models." width="100%" />
+<img src="images/morgan_models.png" alt="Models from inteRmodel in the Morgan dataset. First component of the transcriptome and microbiome of models on the Morgan dataset. Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models." width="100%" />
 <p class="caption">
-Figure 4.25: Models from inteRmodel in the Morgan’s dataset. First component of the transcriptome and microbiome of models on the Morgan’s dataset. Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models.
+Figure 4.25: Models from inteRmodel in the Morgan dataset. First component of the transcriptome and microbiome of models on the Morgan dataset. Model 0 without sample data. Model 1 to 1.2 with all the sample data in a single block and models 2.1 to 2.3 with sample data in several blocks. Panel A shows samples colored by sex and panel B by segment of the sample. There is no clear classification neither by location nor sex on any of the models.
 </p>
 </div>
 <p>Nevertheless, we compared the classification with the <a href="glossary.html#acronyms_MCIA">MCIA</a> algorithm and still resulted that model 2.2 provide a better classification than <a href="glossary.html#acronyms_MCIA">MCIA</a>.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:morgan-models-ave">Table 4.30: </span>AVE values of RGCCA for the Morgan’s dataset. The inner and the outer AVE scores of multiple models tested on the Morgan dataset are shown. The model with the highest inner AVE is model 1.2 followed by 2.2.
+<span id="tab:morgan-models-ave">Table 4.30: </span>AVE values of RGCCA for the Morgan dataset. The inner and the outer AVE scores of multiple models tested on the Morgan dataset are shown. The model with the highest inner AVE is model 1.2 followed by 2.2.
 </caption>
 <thead>
 <tr>
@@ -3265,22 +3265,22 @@ outer AVE
 </table>
 <p>When exploring the bootstraps of the data we found that model 1.2 is highly variable:</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-bootstrap"></span>
-<img src="images/morgan_bootstrap.png" alt="Inner and outer AVE scores of the bootstrapped models 0, 1.2 and 2.2 on the Morgan's dataset. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptome and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks. Model 2.2 shows less variance than all models but lower inner values than model 1.2. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses." width="100%" />
+<img src="images/morgan_bootstrap.png" alt="AVE scores of bootstrapped models from Morgan dataset. Inner and outer AVE scores of the bootstrapped models 0, 1.2 and 2.2 on the Morgan dataset. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptome and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks. Model 2.2 shows less variance than all models but lower inner values than model 1.2. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses." width="100%" />
 <p class="caption">
-Figure 4.26: Inner and outer AVE scores of the bootstrapped models 0, 1.2 and 2.2 on the Morgan’s dataset. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptome and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks. Model 2.2 shows less variance than all models but lower inner values than model 1.2. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses.
+Figure 4.26: AVE scores of bootstrapped models from Morgan dataset. Inner and outer AVE scores of the bootstrapped models 0, 1.2 and 2.2 on the Morgan dataset. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptome and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks. Model 2.2 shows less variance than all models but lower inner values than model 1.2. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses.
 </p>
 </div>
 <p>In addition the model 2.2 (<a href="results.html#tab:morgan-model2-2">4.29</a>) usually has a lower inner <a href="glossary.html#acronyms_AVE">AVE</a> compared to model 1.2 (<a href="results.html#tab:morgan-model2">4.28</a>).</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-auc-plot"></span>
-<img src="images/morgan-auc.png" alt="AUC of RGCCA models in the Morgan's dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Morgan's dataset." width="100%" />
+<img src="images/morgan-auc.png" alt="AUC of the RGCCA models in the Morgan dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Morgan dataset." width="100%" />
 <p class="caption">
-Figure 4.27: AUC of RGCCA models in the Morgan’s dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Morgan’s dataset.
+Figure 4.27: AUC of the RGCCA models in the Morgan dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Morgan dataset.
 </p>
 </div>
 <p>The area under the curve for these models is:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:morgan-auc">Table 4.31: </span>AUC for the Morgan’s dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA.
+<span id="tab:morgan-auc">Table 4.31: </span>AUC for the Morgan dataset classificating the localization of the sample according to the first component of the gene expression of the models generated with RGCCA.
 </caption>
 <thead>
 <tr>
@@ -3361,9 +3361,9 @@ AUC
 </table>
 <p>With <a href="glossary.html#acronyms_MCIA">MCIA</a>:</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-mcia-plot"></span>
-<img src="images/morgan-mcia.png" alt="MCIA dimensions in the Morgan's dataset. MCIA first two dimensions of the dataset shows some separation between samples by location. Each point represents a sample (colored and shaped by location)." width="100%" />
+<img src="images/morgan-mcia.png" alt="MCIA dimensions in the Morgan dataset. MCIA first two dimensions of the dataset shows some separation between samples by location. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.28: MCIA dimensions in the Morgan’s dataset. MCIA first two dimensions of the dataset shows some separation between samples by location. Each point represents a sample (colored and shaped by location).
+Figure 4.28: MCIA dimensions in the Morgan dataset. MCIA first two dimensions of the dataset shows some separation between samples by location. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>If we quantify this separation by the first dimension of <a href="glossary.html#acronyms_MCIA">MCIA</a>, the <a href="glossary.html#acronyms_AUC">AUC</a> is 0.818, which is slightly worst than the models of family 2.</p>
@@ -3372,16 +3372,16 @@ Figure 4.28: MCIA dimensions in the Morgan’s dataset. MCIA first two dimension
 <h3><span class="header-section-number">4.2.5</span> Howell’s dataset<a href="results.html#results-howell" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <a href="glossary.html#acronyms_16S">16S</a> of this dataset doesn’t show any clear pattern regarding the location of the samples according to the firsts dimensions of the <a href="glossary.html#acronyms_PCA">PCA</a> on <a href="results.html#fig:howell-pca-16s">4.29</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-pca-16s"></span>
-<img src="images/howell_PCA_16S.png" alt="PCA of 16S data of the Howell's dataset. The first component separates the samples by their location. Each point represents a sample (colored and shaped by location)." width="100%" />
+<img src="images/howell_PCA_16S.png" alt="PCA of 16S data from the Howell dataset. The first component separates the samples by their location. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.29: PCA of 16S data of the Howell’s dataset. The first component separates the samples by their location. Each point represents a sample (colored and shaped by location).
+Figure 4.29: PCA of 16S data from the Howell dataset. The first component separates the samples by their location. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>The <a href="glossary.html#acronyms_PCA">PCA</a> on the transcriptome shows a distinction between colon and ileum <a href="results.html#fig:howell-pca-RNAseq">4.30</a> there are almost two distinct groups according to location:</p>
 <div class="figure"><span style="display:block;" id="fig:howell-pca-RNAseq"></span>
-<img src="images/howell_PCA_RNAseq.png" alt="PCA of RNAseq data of the Howell's dataset. There are two groups of samples according to their location. Each point represents a sample (colored and shaped by location)." width="100%" />
+<img src="images/howell_PCA_RNAseq.png" alt="PCA of RNAseq data from the Howell dataset. There are two groups of samples according to their location. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
-Figure 4.30: PCA of RNAseq data of the Howell’s dataset. There are two groups of samples according to their location. Each point represents a sample (colored and shaped by location).
+Figure 4.30: PCA of RNAseq data from the Howell dataset. There are two groups of samples according to their location. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
 <p>This dataset was processed to confirm the results on the previous datasets.
@@ -3390,7 +3390,7 @@ As always first we started with model 0, connecting both the RNAseq and the <a h
 This resulted on the following model <a href="results.html#tab:howell-model1-2">4.32</a>.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:howell-model1-2">Table 4.32: </span>Relationships between the different blocks in the Howell’s dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.
+<span id="tab:howell-model1-2">Table 4.32: </span>Relationships between the different blocks in the Howell dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.
 </caption>
 <thead>
 <tr>
@@ -3455,16 +3455,16 @@ metadata
 </table>
 <p>Model 1.2, in table <a href="results.html#tab:howell-model1-2">4.32</a>, was the best according to the <a href="glossary.html#acronyms_AVE">AVE</a> score but perform worse when attempting to recreate known biological differences via classifying samples as we can see in <a href="results.html#fig:howell-models">4.31</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-models"></span>
-<img src="images/howell-models.png" alt="Models from inteRmodel in the Howell's datset. The three main models, model 0, 1.2 and 2.2 on the Howell's dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks." width="100%" />
+<img src="images/howell-models.png" alt="Models from the inteRmodel of the Howell dataset. The three main models, model 0, 1.2 and 2.2 on the Howell dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks." width="100%" />
 <p class="caption">
-Figure 4.31: Models from inteRmodel in the Howell’s datset. The three main models, model 0, 1.2 and 2.2 on the Howell’s dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn’s disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks.
+Figure 4.31: Models from the inteRmodel of the Howell dataset. The three main models, model 0, 1.2 and 2.2 on the Howell dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn’s disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks.
 </p>
 </div>
 <p>Model 2.2 was selected for further analysis as it describes more accurately the biology of the dataset it.
 Model 2.2 can be seen in <a href="results.html#tab:howell-model2-2">4.33</a>.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:howell-model2-2">Table 4.33: </span>Relationships between the different blocks in the Howell’s dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
+<span id="tab:howell-model2-2">Table 4.33: </span>Relationships between the different blocks in the Howell dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
 </caption>
 <thead>
 <tr>
@@ -3560,7 +3560,7 @@ location
 While model 2.2 has a relationship of 1 between location and transcriptome and demographics and <a href="glossary.html#acronyms_ASV">ASV</a> but only of 0.1 between demographics and location.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:howell-models-ave">Table 4.34: </span>AVE values of RGCCA for the Howell’s dataset. The inner and the outer AVE scores of multiple models tested in the Howell dataset are shown. The model with the hightest inner AVE is model 1.2.
+<span id="tab:howell-models-ave">Table 4.34: </span>AVE values of RGCCA for the Howell dataset. The inner and the outer AVE scores of multiple models tested in the Howell dataset are shown. The model with the hightest inner AVE is model 1.2.
 </caption>
 <thead>
 <tr>
@@ -3612,30 +3612,30 @@ outer AVE
 </tbody>
 </table>
 <div class="figure"><span style="display:block;" id="fig:howell-bootstrap"></span>
-<img src="images/howells_models_bootstrap.png" alt="Bootstrap of models in Howell's datset. Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses." width="100%" />
+<img src="images/howells_models_bootstrap.png" alt="Bootstrap of models in the Howell dataset. Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses." width="100%" />
 <p class="caption">
-Figure 4.32: Bootstrap of models in Howell’s datset. Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses.
+Figure 4.32: Bootstrap of models in the Howell dataset. Bootstrap of the different models on the inner and outer AVE: Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks. The bigger points are the models on the original dataset. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses.
 </p>
 </div>
 <p>The bootstrapping showed that model 1.2 has indeed higher inner <a href="glossary.html#acronyms_AVE">AVE</a> values than model 2.2 and is more stable than model 1.2.
 While model 0 shows a high variation according to which samples are selected.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-mcia"></span>
-<img src="images/howell-mcia.png" alt="MCIA dimensions on the Howell's dataset. The first dimensions separates by location. Each point represents a sample (colored by location and shape by disease)." width="100%" />
+<img src="images/howell-mcia.png" alt="MCIA dimensions in the Howell dataset. The first dimensions separates by location. Each point represents a sample (colored by location and shape by disease)." width="100%" />
 <p class="caption">
-Figure 4.33: MCIA dimensions on the Howell’s dataset. The first dimensions separates by location. Each point represents a sample (colored by location and shape by disease).
+Figure 4.33: MCIA dimensions in the Howell dataset. The first dimensions separates by location. Each point represents a sample (colored by location and shape by disease).
 </p>
 </div>
 <p>If we look at the classification of the models in figure <a href="results.html#fig:howell-auc-plot">4.34</a>, we can see that models 1.2, 2 and 2.2 classify perfectly the samples by the transcriptome into the location of the sample.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-auc-plot"></span>
-<img src="images/howell-rgcca-auc.png" alt="AUC of the RGCCA models in the Howell's dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Howell's dataset." width="100%" />
+<img src="images/howell-rgcca-auc.png" alt="AUC of the RGCCA models in the Howell dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Howell dataset." width="100%" />
 <p class="caption">
-Figure 4.34: AUC of the RGCCA models in the Howell’s dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Howell’s dataset.
+Figure 4.34: AUC of the RGCCA models in the Howell dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Howell dataset.
 </p>
 </div>
 <p>The <a href="glossary.html#acronyms_AUC">AUC</a> of each model can be seen in table <a href="results.html#tab:howell-auc">4.35</a>.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:howell-auc">Table 4.35: </span>AUC of the RGCCA models in the Howell’s dataset. The classification of the location of the sample according to the first componenent of the models shown. Model 0, 2 and 2.2 have a perfect classification of the samples to their respective location.
+<span id="tab:howell-auc">Table 4.35: </span>AUC of the RGCCA models in the Howell dataset. The classification of the location of the sample according to the first componenent of the models shown. Model 0, 2 and 2.2 have a perfect classification of the samples to their respective location.
 </caption>
 <thead>
 <tr>
@@ -3697,13 +3697,13 @@ The dot product of the <a href="glossary.html#acronyms_ASV">ASV</a> and genes we
 <div id="between-datasets" class="section level3 hasAnchor" number="4.2.6">
 <h3><span class="header-section-number">4.2.6</span> Between datasets<a href="results.html#between-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <a href="glossary.html#acronyms_HSCT">HSCT</a> genes were compared to the Howell’s genes from model 2.2.
-There are 3580 selected on model 2.2 in the <a href="glossary.html#acronyms_HSCT">HSCT</a> dataset and 2189 genes on the Howell’s dataset.
+There are 3580 selected on model 2.2 in the <a href="glossary.html#acronyms_HSCT">HSCT</a> dataset and 2189 genes on the Howell dataset.
 From them the 1228 genes in common were analyzed for which GO terms and pathways they are enriched.
 The results is represented on figure <a href="results.html#fig:pathways-hsct-howell">4.35</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:pathways-hsct-howell"></span>
-<img src="images/pathways_hsct_howell.png" alt="Significance of pathways on common genes in HSCT and Howell's dataset ordered by p-value, size according to the number of genes on the pathway found on the dataset and color blue for pathways and red for gene ontologies of biological process." width="100%" />
+<img src="images/pathways_hsct_howell.png" alt="Significance of pathways on common genes in HSCT and the Howell dataset ordered by p-value, size according to the number of genes on the pathway found on the dataset and color blue for pathways and red for gene ontologies of biological process." width="100%" />
 <p class="caption">
-Figure 4.35: Significance of pathways on common genes in HSCT and Howell’s dataset ordered by p-value, size according to the number of genes on the pathway found on the dataset and color blue for pathways and red for gene ontologies of biological process.
+Figure 4.35: Significance of pathways on common genes in HSCT and the Howell dataset ordered by p-value, size according to the number of genes on the pathway found on the dataset and color blue for pathways and red for gene ontologies of biological process.
 </p>
 </div>
 

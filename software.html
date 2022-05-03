@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-04-29" />
+<meta name="date" content="2022-05-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -230,7 +230,7 @@ div.csl-indent {
 <li class="chapter" data-level="6" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>6</b> Conclusions</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="conclusions.html"><a href="conclusions.html#study-1-multi-omic-modelling-of-inflammatory-bowel-disease-with-regularized-canonical-correlation-analysis"><i class="fa fa-check"></i><b>6.1</b> Study 1: Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a></li>
-<li class="chapter" data-level="6.2" data-path="conclusions.html"><a href="conclusions.html#study-2-genes-and-microbiome-relationship-on-inflammatory-bowel-disease"><i class="fa fa-check"></i><b>6.2</b> Study 2: Genes and microbiome relationship on inflammatory bowel disease</a></li>
+<li class="chapter" data-level="6.2" data-path="conclusions.html"><a href="conclusions.html#study-2-the-relationship-of-genes-and-the-microbiome-with-inflammatory-bowel-disease"><i class="fa fa-check"></i><b>6.2</b> Study 2: The relationship of genes and the microbiome with inflammatory bowel disease</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i><b>7</b> Acknowledgments</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -252,7 +252,7 @@ div.csl-indent {
 <li class="chapter" data-level="D" data-path="other-datasets.html"><a href="other-datasets.html"><i class="fa fa-check"></i><b>D</b> Other datasets</a>
 <ul>
 <li class="chapter" data-level="D.1" data-path="other-datasets.html"><a href="other-datasets.html#barcelona"><i class="fa fa-check"></i><b>D.1</b> BARCELONA dataset</a></li>
-<li class="chapter" data-level="D.2" data-path="other-datasets.html"><a href="other-datasets.html#hernandez"><i class="fa fa-check"></i><b>D.2</b> Hernández’ dataset</a>
+<li class="chapter" data-level="D.2" data-path="other-datasets.html"><a href="other-datasets.html#hernandez"><i class="fa fa-check"></i><b>D.2</b> Hernández’s dataset</a>
 <ul>
 <li class="chapter" data-level="D.2.1" data-path="other-datasets.html"><a href="other-datasets.html#results-hernandez"><i class="fa fa-check"></i><b>D.2.1</b> Results</a></li>
 </ul></li>
@@ -303,12 +303,12 @@ div.csl-indent {
   </div>
 <div id="software" class="section level1 hasAnchor" number="9">
 <h1><span class="header-section-number">B</span> Software<a href="software.html#software" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Along the years of this thesis several pieces of software have been generated as well as packages.
-Here they are listed for easier retrieval.
-They are listed on two ways, one with a brief explanation and another one ordered by what software piece is used on each analysis.</p>
+<p>In the years since this thesis was first embarked upon, several software pieces have been developed, including some packages.
+We listed them here for easier retrieval.
+They are provided below in two ways, the first with a brief explanation and the second ordered by the relevant software used for each analysis.</p>
 <div id="star" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">B.1</span> STAR<a href="software.html#star" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The parameters and options used with STAR are:</p>
+<p>The parameters and options used with STAR are as follows:</p>
 <pre><code>STAR \
     --outSAMtype BAM SortedByCoordinate \
     --outFilterIntronMotifs RemoveNoncanonical \
@@ -331,11 +331,11 @@ They are listed on two ways, one with a brief explanation and another one ordere
     --runThreadN &quot;$threads&quot; \
     --readFilesCommand zcat \
     --readFilesIn &quot;$file1&quot; &quot;$file2&quot;</code></pre>
-<p>The <code>$genome</code> is the path to the location on the computer where the genome is, <code>$output</code> is the prefix of the output file, <code>$threads</code> is the number of threads used and <code>$file1</code> and <code>$file2</code> are the paired fastq files.</p>
+<p>The <code>$genome</code> is the path to the location on the computer where the genome is located, <code>$output</code> is the prefix of the output file, <code>$threads</code> is the number of threads used and <code>$file1</code> and <code>$file2</code> are the paired fastq files.</p>
 </div>
 <div id="rsem" class="section level2 hasAnchor" number="9.2">
 <h2><span class="header-section-number">B.2</span> RSEM<a href="software.html#rsem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Code used for RSEM where <code>$threads</code> is the number of threads used, <code>$rseminp</code> is the input file in BAM format, <code>$genome</code> is the path to the location on the computer where the genome is, and <code>$rsem</code> is the output file.</p>
+<p>The code used for RSEM where <code>$threads</code> is the number of threads used, <code>$rseminp</code> is the input file in BAM format, <code>$genome</code> is the path to the location on the computer where the genome is located, and <code>$rsem</code> is the output file.</p>
 <pre><code>rsem-calculate-expression \
     --quiet \
     --paired-end \
@@ -349,47 +349,47 @@ They are listed on two ways, one with a brief explanation and another one ordere
 </div>
 <div id="listed" class="section level2 hasAnchor" number="9.3">
 <h2><span class="header-section-number">B.3</span> Listed<a href="software.html#listed" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>An improved/tested version of <a href="https://github.com/llrs/RGCCA"><code>RGCCA</code></a>, some modifications on the internal functions to ease the maintenance as well as adding tests and sometimes improving the documentation.
-Also modified so that it is possible to provide a vector of models so that the model of the first dimension is not the same as the model on the second dimension (not sure if mathematically speaking makes sense but from a biological one we think might be interesting to have it).</p>
-<p>Designed to be used with <code>RGCCA</code> we wrote the package <a href="https:github.com/llrs/inteRmodel">inteRmodel</a> to ease the bootstrapping and model selection.</p>
-<p>A package to design batches to avoid batch effect <a href="https://cran.r-project.org/package=experDesign">experDesign</a> and its website on <a href="https://github.com/llrs/experDesign">GitHub</a>.</p>
-<p>Explore the effects of the hyperparameters on <a href="glossary.html#acronyms_RGCCA">RGCCA</a> on the provided dataset of <a href="https://github.com/llrs/gliomaData">gliomaData</a> (Originally provided <a href="http://biodev.cea.fr/sgcca/">here</a>) there is this repository <a href="https://github.com/llrs/sgcca_hyperparameters">sgcca_hyperparameters</a>.</p>
-<p>We used a pouchitis cohort published in this <a href="https://dx.doi.org/10.1186/s13059-015-0637-x">article</a><span class="citation">[<a href="#ref-morgan2015" role="doc-biblioref">150</a>]</span> that was used to compare how performs our method in other’s dataset.
-The code used can be found in <a href="https://github.com/llrs/pouchitis">this repository</a>.</p>
-<p>Some functions used to explore the TRIM dataset ended up in the <a href="https://github.com/llrs/integration-helper">integration</a> package.This include functions for correlation, network analysis, enrichment, normalization of metadata…</p>
-<p>We developed a package to analyze sets and fuzzy sets <a href="https://github.com/rOpenSci/BaseSet">BaseSet</a> (based on what we learned from a previous iteration of the <a href="https://github.com/llrs/GSEAdv" title="GSEAdv package">package</a>).
-This package was meant to be used with the probabilities that arise from bootstrapping the models.
-However, due to the long times of calculation that it would require it was not used.</p>
-<p>To analyze the <a href="glossary.html#acronyms_BARCELONA">BARCELONA</a> cohort (also named antiTNF) a <a href="https://github.com/llrs/Barcelona" title="Barcelona repository">different repository</a> was created to analyze the data using the previously developed packages.</p>
+<p>An improved/tested version of <a href="https://github.com/llrs/RGCCA"><code>RGCCA</code></a>, includes some modifications concerning internal functions to simplify the maintenance, as well as, additional tests and better documentation.
+Moreover, it has been modified such that it is possible to use a vector of models whereby the model of the first dimension is not the same as the model on the second dimension (Mathematically speaking, we cannot attest to its coherence, but from a biological standpoint we believe such a version of RGCCA might prove very useful).</p>
+<p>We coded the package <a href="https:github.com/llrs/inteRmodel">inteRmodel</a> to make the bootstrapping and model selection for <code>RGCCA</code> easier and more readily accessible.</p>
+<p>A package to assist in batch design in order to avoid batch effects - see <a href="https://cran.r-project.org/package=experDesign">experDesign</a> and its corresponding website on <a href="https://github.com/llrs/experDesign">GitHub</a>.</p>
+<p>Explore the effects of hyperparameters on <a href="glossary.html#acronyms_RGCCA">RGCCA</a> on the provided dataset of <a href="https://github.com/llrs/gliomaData">gliomaData</a> (originally provided <a href="http://biodev.cea.fr/sgcca/">here</a>) available at the <a href="https://github.com/llrs/sgcca_hyperparameters">sgcca_hyperparameters</a> repository.</p>
+<p>We utilized a pouchitis cohort published in this <a href="https://dx.doi.org/10.1186/s13059-015-0637-x">article</a><span class="citation">[<a href="#ref-morgan2015" role="doc-biblioref">150</a>]</span>, which was used to compare the effectiveness of our method with other’s dataset.
+The code used can be found at <a href="https://github.com/llrs/pouchitis">this repository</a>.</p>
+<p>Some functions used to explore the TRIM dataset were incorporated into the <a href="https://github.com/llrs/integration-helper">integration</a> package.This includes functions for correlation, network analysis, enrichment, and normalization of metadata, among other components…</p>
+<p>We developed a package to analyze both sets and fuzzy sets; see <a href="https://github.com/rOpenSci/BaseSet">BaseSet</a>, which is based on what we learned from a previous iteration of the <a href="https://github.com/llrs/GSEAdv" title="GSEAdv package">GSEAdv package</a>.
+This package was intended to be used with those probabilities that arise from bootstrapping the models.
+However, due to the prolonged calculation times required, ultimately it was not used.</p>
+<p>To analyze the <a href="glossary.html#acronyms_BARCELONA">BARCELONA</a> cohort (also designated antiTNF) a <a href="https://github.com/llrs/Barcelona" title="Barcelona repository">different repository</a> was created in order to analyze the data using the previously developed packages.</p>
 </div>
 <div id="by-projectpublication" class="section level2 hasAnchor" number="9.4">
 <h2><span class="header-section-number">B.4</span> By project/publication<a href="software.html#by-projectpublication" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>All code of the analysis of the publications is available (in his messed state and complicated history) and a brief description as to why they were used:</p>
+<p>All of the code underlying our analysis of the publications is available (in its messed state and complicated history) as well as a brief description of the code used:</p>
 <p><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367">Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a>:</p>
 <ul>
-<li><a href="https://github.com/llrs/TRIM" title="HSCT dataset exploration code on github">TRIM</a>: Mangle with the sample, dataset, explore several methods…</li>
-<li><a href="https://github.com/llrs/sgcca_hyperparameters" title="RGCCA exploration code on github">Puget’s</a>: Explore the effects of the hyperparameters on RGCCA on the provided dataset.</li>
-<li><a href="https://github.com/llrs/inteRmodel" title="Integration package on github">inteRmodel</a>: Package for easy repeating the methodology developed on TRIM.</li>
-<li><a href="https://github.com/llrs/pouchitis" title="Pouchitis code on github">Morgan’s</a>: Work with the pouchitis cohort used in this article.</li>
-<li><a href="https://github.com/llrs/Uncoupling" title="Uncoupling code on github">Häsler’s</a>: Work with the <a href="glossary.html#acronyms_UC">UC</a>/<a href="glossary.html#acronyms_CD">CD</a> dataset used in this article.</li>
-<li><a href="https://github.com/llrs/integration-helper" title="Integration package on github">integration</a>: Package with functions that we wrote or used on different parts of exploring the TRIM dataset ended up here.</li>
+<li><a href="https://github.com/llrs/TRIM/" title="HSCT dataset exploration code on github">TRIM</a>: Data cleaning with the sample, dataset, explore several methods…</li>
+<li><a href="https://github.com/llrs/sgcca_hyperparameters/" title="RGCCA exploration code on github">Puget’s</a>: Explore the effects of the hyperparameters on <code>RGCCA</code> with the provided dataset.</li>
+<li><a href="https://github.com/llrs/inteRmodel/" title="Integration package on github">inteRmodel</a>: Package for easily reproducing the methodology developed with TRIM.</li>
+<li><a href="https://github.com/llrs/pouchitis/" title="Pouchitis code on github">Morgan’s</a>: Work with the pouchitis cohort used in this article.</li>
+<li><a href="https://github.com/llrs/Uncoupling/" title="Uncoupling code on github">Häsler’s</a>: Work with the <a href="glossary.html#acronyms_UC">UC</a>/<a href="glossary.html#acronyms_CD">CD</a> dataset used in this article.</li>
+<li><a href="https://github.com/llrs/integration-helper/" title="Integration package on github">integration</a>: Package that incorporates functions we wrote or used for the different aspects of exploring the TRIM dataset are published here.</li>
 </ul>
 <p>BaseSet:</p>
 <ul>
-<li><a href="https://cran.r-project.org/package=BaseSet" title="BaseSet landing page on CRAN">BaseSet</a>: Fuzzy logic implementation, available on <a href="https://github.com/ropensci/BaseSet" title="BaseSet git repository">rOpenSci too</a> and its <a href="https://docs.ropensci.org/BaseSet" title="BaseSet">documentation website</a> .</li>
+<li><a href="https://cran.r-project.org/package=BaseSet" title="BaseSet landing page on CRAN">BaseSet</a>: Fuzzy logic implementation, available at <a href="https://github.com/ropensci/BaseSet/" title="BaseSet git repository">rOpenSci too</a> see also its corresponding <a href="https://docs.ropensci.org/BaseSet/" title="BaseSet">documentation website</a> .</li>
 </ul>
 <p>experDesign:</p>
 <ul>
-<li><a href="https://cran.r-project.org/package=experDesign" title="experDesign landing page on CRAN">experDesign</a>: Help design experiments in batches. It has a <a href="https://experDesign.llrs.dev/" title="experDesign">documentation website too</a>.</li>
+<li><a href="https://cran.r-project.org/package=experDesign" title="experDesign landing page on CRAN">experDesign</a>: Can assist in the design of batch experiments; also with a <a href="https://experDesign.llrs.dev/" title="experDesign">documentation website too</a>.</li>
 </ul>
 <p>BARCELONA:</p>
 <ul>
-<li><a href="https://github.com/llrs/Barcelona">BARCELONA</a>: Code to analyze the <a href="glossary.html#acronyms_BARCELONA">BARCELONA</a>’s dataset</li>
+<li><a href="https://github.com/llrs/Barcelona/">BARCELONA</a>: Code for analyzing the <a href="glossary.html#acronyms_BARCELONA">BARCELONA</a>’s dataset</li>
 </ul>
 <p>Validation:</p>
 <ul>
-<li><a href="https://github.com/llrs/howell_2018">Howell’s</a>: Work with Howell’s 2018 dataset.</li>
-<li><a href="https://github.com/llrs/cristian_mark">Cristian’s</a>: Work with Cristian’s 2020 dataset.</li>
+<li><a href="https://github.com/llrs/howell_2018/">Howell’s</a>: Code to work with Howell’s 2018 dataset.</li>
+<li><a href="https://github.com/llrs/cristian_mark/">Cristian’s</a>: Code to work with Cristian’s 2020 dataset.</li>
 </ul>
 </div>
 </div>
