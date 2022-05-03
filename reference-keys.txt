@@ -202,7 +202,7 @@ evaluating-models
 implications
 conclusions
 study-1-multi-omic-modelling-of-inflammatory-bowel-disease-with-regularized-canonical-correlation-analysis
-study-2-genes-and-microbiome-relationship-on-inflammatory-bowel-disease
+study-2-the-relationship-of-genes-and-the-microbiome-with-inflammatory-bowel-disease
 acknowledgments
 online-resources
 software
