@@ -218,7 +218,7 @@ cat("The same article can be find below.")
 
 \sectionmark{CELEST: paper}
 
-Article peer-reviewed published on 2021, freely [available online](https://joss.theoj.org/papers/10.21105/joss.03358). 
+Article peer-reviewed published on 2021, freely [available online](https://doi.org/10.1093/ibd/izab116). 
 This article is not part of the PhD thesis, but included here for completeness.
 
 ```{r, echo=FALSE, eval=!knitr::is_html_output(excludes = "epub"), results='asis'}
