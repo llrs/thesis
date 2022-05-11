@@ -983,6 +983,7 @@ df <- data.frame(
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 0 of the Howell dataset.",
            caption = "**Relationships between the different blocks in the Howell dataset for model 0**. 0 indicates no relationship and 1 indicates a strong relationship.")
+format_design(k, df)
 ```
 
 Later we look for the best model of family 1 (without looking at any previous model of family 1).
