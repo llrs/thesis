@@ -71,6 +71,7 @@ tab:morgan-auc
 fig:morgan-mcia-plot
 fig:howell-pca-16s
 fig:howell-pca-RNAseq
+tab:howell-model0
 tab:howell-model1-2
 fig:howell-models
 tab:howell-model2-2

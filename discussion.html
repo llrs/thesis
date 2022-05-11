@@ -71,6 +71,15 @@
 <meta property="article:author" content="Llu&lt;U+00ED&gt;s Revilla Sancho"/>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/site.webmanifest">
+<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EN2MTH2FCR"></script>
     <script>
@@ -375,7 +384,7 @@ In the <a href="glossary.html#acronyms_BARCELONA">BARCELONA</a> cohort despite n
 Caution and communication between all team members (i.e, clinicians, technicians and bioinformaticians) is important to discover this kind of problems and ensure the quality of the data.</p>
 <p>Other datasets used from published sourced were assumed they had already passed enough controls and were of good quality.
 Nevertheless, they were screened to avoid quality issues by visually inspecting several principal components colored by several factors, checking gene expression and the microbiome profile and looking for known gene markers and microbiome taxonomy that might indicate quality problems.
-RNAseq data was usually compared using previously described methods on <a href="materials-and-methods.html#statistics">3.6.1</a>.</p>
+RNAseq data was usually compared using previously described methods on section <a href="materials-and-methods.html#statistics">3.6.1</a>.</p>
 <p>The Puget’s dataset provided a good benchmark to test the methods and performance of <a href="glossary.html#acronyms_RGCCA">RGCCA</a> works.
 <a href="glossary.html#acronyms_CGH">CGH</a> is not comparable to microbial data, but the microarray data is similar to the RNAseq data from other datasets.
 We were not as much interested on the biology as on learning about the <a href="glossary.html#acronyms_RGCCA">RGCCA</a> method and its applicability to integrate different omics.</p>
@@ -473,7 +482,7 @@ This avoids optimizing two different networks of blocks that are not connected b
 However, we knew that the transcriptome is mainly related to the location of the samples, as we have seen it on the <a href="glossary.html#acronyms_PCA">PCA</a>s, and we expected that the microbiome would be more related to the patients demographic characteristics and influenced by dietary and other environmental factors.
 This is especially important because in our datasets we have samples from the same patient and time from multiple locations.
 On other studies there are less samples per individual and timepoint (if there are several timepoints) <span class="citation">[<a href="#ref-hasler_uncoupling_2016" role="doc-biblioref">80</a>, <a href="#ref-morgan2015" role="doc-biblioref">150</a>, <a href="#ref-howell2018" role="doc-biblioref">151</a>]</span>.</p>
-<p>On models of family 2, variables were grouped according to type into the Demographic block, Time block, and Location block (see tables on design of Puget’s <a href="results.html#tab:puget-model2-2">4.4</a>, <a href="results.html#tab:puget-model2">4.3</a>; <a href="glossary.html#acronyms_HSCT">HSCT</a> @ref(tab:<a href="glossary.html#acronyms_HSCT">HSCT</a>-model2) @ref(tab:<a href="glossary.html#acronyms_HSCT">HSCT</a>-model2-2), @ref(tab:<a href="glossary.html#acronyms_HSCT">HSCT</a>-model2-3); Häsler: <a href="results.html#tab:hasler-model-2-1">4.21</a>, <a href="results.html#tab:hasler-model-2-2">4.22</a>, Morgan’s <a href="results.html#tab:morgan-model2">4.28</a>, <a href="results.html#tab:morgan-model2-2">4.29</a>, Howell’s <a href="results.html#tab:howell-model2-2">4.33</a> models).</p>
+<p>On models of family 2, variables were grouped according to type into the Demographic block, Time block, and Location block (see tables on design of Puget’s <a href="results.html#tab:puget-model2-2">4.4</a>, <a href="results.html#tab:puget-model2">4.3</a>; <a href="glossary.html#acronyms_HSCT">HSCT</a> @ref(tab:<a href="glossary.html#acronyms_HSCT">HSCT</a>-model2) @ref(tab:<a href="glossary.html#acronyms_HSCT">HSCT</a>-model2-2), @ref(tab:<a href="glossary.html#acronyms_HSCT">HSCT</a>-model2-3); Häsler: <a href="results.html#tab:hasler-model-2-1">4.21</a>, <a href="results.html#tab:hasler-model-2-2">4.22</a>, Morgan’s <a href="results.html#tab:morgan-model2">4.28</a>, <a href="results.html#tab:morgan-model2-2">4.29</a>, Howell’s <a href="results.html#tab:howell-model2-2">4.34</a> models).</p>
 <p>The exploration of design on Puget’s dataset, and the datasets analysis of <a href="glossary.html#acronyms_HSCT">HSCT</a>, Häsler and Morgan’s datasets was published after peer review <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">197</a>]</span>.</p>
 </div>
 <div id="evaluating-models" class="section level2 hasAnchor" number="5.3">
@@ -510,12 +519,11 @@ In addition, these interactions are time dependent, not linear and are highly in
 For these reasons gene expression and <a href="glossary.html#acronyms_16S">16S</a> blocks were not split into several blocks.</p>
 <p>Besides comparing the results of different methods, these models need to be evaluated by the insights they provide on the biological system they are being applied to, in our case <a href="glossary.html#acronyms_IBD">IBD</a>.
 So far the models were only discussed on their technical merits.</p>
-<p>It is known that the mucosal transciptome is related to sample localization (of)i.e.
-small or large intestine) and disease activity <span class="citation">[<a href="#ref-criss2021" role="doc-biblioref">226</a>]</span>.
-This can be seen in the <a href="glossary.html#acronyms_PCA">PCA</a> which separate colon an ileum on the first dimension: See the <a href="glossary.html#acronyms_PCA">PCA</a> of the different datasets <a href="results.html#fig:hsct-pca-RNAseq">4.9</a>, <a href="results.html#fig:hasler-pca-RNAseq">4.18</a> and <a href="results.html#fig:howell-pca-RNAseq">4.30</a>.
+<p>It is known that the mucosal transciptome is related to sample localization (i.e. small or large intestine) and disease activity <span class="citation">[<a href="#ref-criss2021" role="doc-biblioref">226</a>]</span>.
+This can be seen in the <a href="glossary.html#acronyms_PCA">PCA</a> which separate colon an ileum on the first dimension: See the <a href="glossary.html#acronyms_PCA">PCA</a> figures of the different datasets <a href="results.html#fig:hsct-pca-RNAseq">4.9</a>, <a href="results.html#fig:hasler-pca-RNAseq">4.18</a> and <a href="results.html#fig:howell-pca-RNAseq">4.30</a>.
 The difference is so great that many times the colon and ileum samples are analyzed separately.
 As such, it was a reasonable assumption to expect models to reflect these differences on the gene expression canonical component.</p>
-<p>The variability of microbiome difficults finding clear patterns (See the <a href="glossary.html#acronyms_PCA">PCA</a> of the different datasets: <a href="results.html#fig:hsct-pca-16s">4.8</a>, <a href="results.html#fig:hasler-pca-16s">4.17</a>, <a href="results.html#fig:morgan-pca-16s">4.23</a> and <a href="results.html#fig:howell-pca-16s">4.29</a>).
+<p>The variability of microbiome difficults finding clear patterns (See the <a href="glossary.html#acronyms_PCA">PCA</a> figures of the different datasets: <a href="results.html#fig:hsct-pca-16s">4.8</a>, <a href="results.html#fig:hasler-pca-16s">4.17</a>, <a href="results.html#fig:morgan-pca-16s">4.23</a> and <a href="results.html#fig:howell-pca-16s">4.29</a>).
 In healthy humans, it has been suggested that there is a shared microbial patterns among groups of individuals <span class="citation">[<a href="#ref-arumugam2011" role="doc-biblioref">227</a>]</span>. Such theory proposes three groups of similar microbiota composition, named enterotypes. However, the enterotypes classification is not unanimously accepted <span class="citation">[<a href="#ref-koren2013" role="doc-biblioref">228</a>, <a href="#ref-cheng2019" role="doc-biblioref">229</a>]</span>.
 Some suggest it is an artifact of the methodology used.</p>
 <p>There are many factors that influence the gut microbiome <span class="citation">[<a href="#ref-hasan2019" role="doc-biblioref">230</a>]</span>.
@@ -546,7 +554,7 @@ This was not a surprise, as there are many factors that influence one’s microb
 <p>The microbiome of each dataset seemed capable to classify the samples according to the disease (data not shown).
 However, on further evaluation via bootstrapping this classification was not significant, as different relatively big amount of <a href="glossary.html#acronyms_ASV">ASV</a>s were able to classify the samples.
 This might be due to the uniqueness of microbial composition to each sample.</p>
-<p>In Howell’s and Häsler dataset, the best model based on <a href="glossary.html#acronyms_AVE">AVE</a> is 1.2; which separates the microbiome component by location too (See figure <a href="results.html#fig:hasler-models">4.20</a> and table <a href="results.html#tab:hasler-aves">4.23</a> for Häsler dataset and figures <a href="results.html#fig:howell-models">4.31</a> and table <a href="results.html#tab:howell-models-ave">4.34</a> for Howell dataset).
+<p>In Howell’s and Häsler dataset, the best model based on <a href="glossary.html#acronyms_AVE">AVE</a> is 1.2; which separates the microbiome component by location too (See figure <a href="results.html#fig:hasler-models">4.20</a> and table <a href="results.html#tab:hasler-aves">4.23</a> for Häsler dataset and figures <a href="results.html#fig:howell-models">4.31</a> and table <a href="results.html#tab:howell-models-ave">4.35</a> for Howell dataset).
 The 2.2 models according to the inner <a href="glossary.html#acronyms_AVE">AVE</a> were not that far away from models 1.2.
 This indicates that the relationship of the microbiome is stronger than with the location, but both factors should be considered when looking for relationships of genes with microbiome.</p>
 </div>

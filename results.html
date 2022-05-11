@@ -71,6 +71,15 @@
 <meta property="article:author" content="Llu&lt;U+00ED&gt;s Revilla Sancho"/>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/site.webmanifest">
+<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EN2MTH2FCR"></script>
     <script>
@@ -975,7 +984,7 @@ There is also some significant increase of the inner <a href="glossary.html#acro
 Figure 4.6: Effects of superblock and weights on the inner AVE on Puget’s dataset. Designs with the superblock showed higher inner AVE scores than without it. Interaction yes/no indicates RNA and RNA interaction. Higher inner AVE values are associated with relationships within the GE (p-values shown on top of the violin plots).
 </p>
 </div>
-<p>The different models resulted on the following <a href="glossary.html#acronyms_AVE">AVE</a> values as reported on <a href="results.html#tab:puget-models-ave">4.7</a>.</p>
+<p>The different models resulted on the following <a href="glossary.html#acronyms_AVE">AVE</a> values as reported in table <a href="results.html#tab:puget-models-ave">4.7</a>.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:puget-models-ave">Table 4.7: </span>AVE values of RGCCA models in the Puget dataset. Values for both inner and outer AVE of the first canonical component of models 1, 1.2, 2 2.2 and superblock and superblock.2 are shown. The model with the highest inner AVE is the model 1.2 and superblock.2 of those with superblock.
@@ -1333,7 +1342,7 @@ The models with the highest inner <a href="glossary.html#acronyms_AVE">AVE</a> o
 Figure 4.11: Models in the HSCT dataset. On the abscissa the transcriptome, on the ordinate the Microbiome. Each square represents a different model of the HSCT dataset. On panel A colored by disease status, on panel B colored by sample location. Model 0 has only transcriptome and microbiome data, models 1 to 1.2 with data about the samples and models 2.1 to 2.3 with data about the samples split in 3 blocks.
 </p>
 </div>
-<p>The weights of these models can be observed here:</p>
+<p>The weights of these models can be observed here in table <a href="results.html#tab:hsct-model0">4.10</a>.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:hsct-model0">Table 4.10: </span>Relationships between the different blocks in the HSCT dataset for model 0. 0 indicates no relationship and 1 indicates a strong relationship.
@@ -1376,7 +1385,7 @@ Microbiome
 </tr>
 </tbody>
 </table>
-<p>If we include the information about the samples all together in a block called metadata we can start from this model on <a href="results.html#tab:hsct-model1-1">4.11</a>.</p>
+<p>If we include the information about the samples all together in a block called metadata we can start from this model in table <a href="results.html#tab:hsct-model1-1">4.11</a>.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:hsct-model1-1">Table 4.11: </span>elationships between the different blocks in the HSCT dataset for model 1.1. 0 indicates no relationship and 1 indicates a strong relationship.
@@ -2954,7 +2963,7 @@ metadata
 </tr>
 </tbody>
 </table>
-<p>On model two we split the invariable variables from those related to the location (see <a href="results.html#tab:morgan-model2">4.28</a>).</p>
+<p>On model two we split the invariable variables from those related to the location (see table <a href="results.html#tab:morgan-model2">4.28</a>).</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:morgan-model2">Table 4.28: </span>Relationships between the different blocks in the Morgan dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship. Transcriptome and the microbiome are linked and related to demographic and location variables.
@@ -3270,7 +3279,7 @@ outer AVE
 Figure 4.26: AVE scores of bootstrapped models from Morgan dataset. Inner and outer AVE scores of the bootstrapped models 0, 1.2 and 2.2 on the Morgan dataset. Model 0 does not have sample data. Model 1.2 has microbiome, transcriptome and sample data in a single block and model 2.2 has microbiome, transcriptome and the sample data split in several blocks. Model 2.2 shows less variance than all models but lower inner values than model 1.2. Each point represents a bootstrapped sample (colored by model used). The dispersion is shown by the ellipses.
 </p>
 </div>
-<p>In addition the model 2.2 (<a href="results.html#tab:morgan-model2-2">4.29</a>) usually has a lower inner <a href="glossary.html#acronyms_AVE">AVE</a> compared to model 1.2 (<a href="results.html#tab:morgan-model2">4.28</a>).</p>
+<p>In addition the model 2.2 (table <a href="results.html#tab:morgan-model2-2">4.29</a>) usually has a lower inner <a href="glossary.html#acronyms_AVE">AVE</a> compared to model 1.2 (table <a href="results.html#tab:morgan-model2">4.28</a>).</p>
 <div class="figure"><span style="display:block;" id="fig:morgan-auc-plot"></span>
 <img src="images/morgan-auc.png" alt="AUC of the RGCCA models in the Morgan dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Morgan dataset." width="100%" />
 <p class="caption">
@@ -3370,14 +3379,14 @@ Figure 4.28: MCIA dimensions in the Morgan dataset. MCIA first two dimensions of
 </div>
 <div id="results-howell" class="section level3 hasAnchor" number="4.2.5">
 <h3><span class="header-section-number">4.2.5</span> Howell’s dataset<a href="results.html#results-howell" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <a href="glossary.html#acronyms_16S">16S</a> of this dataset doesn’t show any clear pattern regarding the location of the samples according to the firsts dimensions of the <a href="glossary.html#acronyms_PCA">PCA</a> on <a href="results.html#fig:howell-pca-16s">4.29</a>.</p>
+<p>The <a href="glossary.html#acronyms_16S">16S</a> of this dataset doesn’t show any clear pattern regarding the location of the samples according to the firsts dimensions of the <a href="glossary.html#acronyms_PCA">PCA</a> on figure <a href="results.html#fig:howell-pca-16s">4.29</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-pca-16s"></span>
 <img src="images/howell_PCA_16S.png" alt="PCA of 16S data from the Howell dataset. The first component separates the samples by their location. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
 Figure 4.29: PCA of 16S data from the Howell dataset. The first component separates the samples by their location. Each point represents a sample (colored and shaped by location).
 </p>
 </div>
-<p>The <a href="glossary.html#acronyms_PCA">PCA</a> on the transcriptome shows a distinction between colon and ileum <a href="results.html#fig:howell-pca-RNAseq">4.30</a> there are almost two distinct groups according to location:</p>
+<p>The <a href="glossary.html#acronyms_PCA">PCA</a> on the transcriptome shows a distinction between colon and ileum, see figure <a href="results.html#fig:howell-pca-RNAseq">4.30</a>, there are almost two distinct groups according to location.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-pca-RNAseq"></span>
 <img src="images/howell_PCA_RNAseq.png" alt="PCA of RNAseq data from the Howell dataset. There are two groups of samples according to their location. Each point represents a sample (colored and shaped by location)." width="100%" />
 <p class="caption">
@@ -3385,12 +3394,54 @@ Figure 4.30: PCA of RNAseq data from the Howell dataset. There are two groups of
 </p>
 </div>
 <p>This dataset was processed to confirm the results on the previous datasets.
-As always first we started with model 0, connecting both the RNAseq and the <a href="glossary.html#acronyms_16S">16S</a> blocks:</p>
-<p>Later we look for the best model of family 1 (without looking at any previous model of family 1).
-This resulted on the following model <a href="results.html#tab:howell-model1-2">4.32</a>.</p>
+As always first we started with model 0, see table <a href="results.html#tab:howell-model0">4.32</a>, connecting both the RNAseq and the <a href="glossary.html#acronyms_16S">16S</a> blocks.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:howell-model1-2">Table 4.32: </span>Relationships between the different blocks in the Howell dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.
+<span id="tab:howell-model0">Table 4.32: </span><strong>Relationships between the different blocks in the Howell dataset for model 0</strong>. 0 indicates no relationship and 1 indicates a strong relationship.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;font-weight: bold;">
+Model 0
+</th>
+<th style="text-align:center;font-weight: bold;">
+RNAseq
+</th>
+<th style="text-align:center;font-weight: bold;">
+16S
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;font-weight: bold;">
+RNAseq
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;font-weight: bold;">
+16S
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+<p>Later we look for the best model of family 1 (without looking at any previous model of family 1).
+This resulted on the following model in table <a href="results.html#tab:howell-model1-2">4.33</a>.</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:howell-model1-2">Table 4.33: </span>Relationships between the different blocks in the Howell dataset for model 1.2. 0 indicates no relationship and 1 indicates a strong relationship.
 </caption>
 <thead>
 <tr>
@@ -3453,7 +3504,7 @@ metadata
 </tr>
 </tbody>
 </table>
-<p>Model 1.2, in table <a href="results.html#tab:howell-model1-2">4.32</a>, was the best according to the <a href="glossary.html#acronyms_AVE">AVE</a> score but perform worse when attempting to recreate known biological differences via classifying samples as we can see in <a href="results.html#fig:howell-models">4.31</a>.</p>
+<p>Model 1.2, in table <a href="results.html#tab:howell-model1-2">4.33</a>, was the best according to the <a href="glossary.html#acronyms_AVE">AVE</a> score but perform worse when attempting to recreate known biological differences via classifying samples as we can see in table <a href="results.html#fig:howell-models">4.31</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:howell-models"></span>
 <img src="images/howell-models.png" alt="Models from the inteRmodel of the Howell dataset. The three main models, model 0, 1.2 and 2.2 on the Howell dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks." width="100%" />
 <p class="caption">
@@ -3461,10 +3512,10 @@ Figure 4.31: Models from the inteRmodel of the Howell dataset. The three main mo
 </p>
 </div>
 <p>Model 2.2 was selected for further analysis as it describes more accurately the biology of the dataset it.
-Model 2.2 can be seen in <a href="results.html#tab:howell-model2-2">4.33</a>.</p>
+Model 2.2 can be seen in table <a href="results.html#tab:howell-model2-2">4.34</a>.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:howell-model2-2">Table 4.33: </span>Relationships between the different blocks in the Howell dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
+<span id="tab:howell-model2-2">Table 4.34: </span>Relationships between the different blocks in the Howell dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.
 </caption>
 <thead>
 <tr>
@@ -3560,7 +3611,7 @@ location
 While model 2.2 has a relationship of 1 between location and transcriptome and demographics and <a href="glossary.html#acronyms_ASV">ASV</a> but only of 0.1 between demographics and location.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:howell-models-ave">Table 4.34: </span>AVE values of RGCCA for the Howell dataset. The inner and the outer AVE scores of multiple models tested in the Howell dataset are shown. The model with the hightest inner AVE is model 1.2.
+<span id="tab:howell-models-ave">Table 4.35: </span>AVE values of RGCCA for the Howell dataset. The inner and the outer AVE scores of multiple models tested in the Howell dataset are shown. The model with the hightest inner AVE is model 1.2.
 </caption>
 <thead>
 <tr>
@@ -3632,10 +3683,10 @@ Figure 4.33: MCIA dimensions in the Howell dataset. The first dimensions separat
 Figure 4.34: AUC of the RGCCA models in the Howell dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Howell dataset.
 </p>
 </div>
-<p>The <a href="glossary.html#acronyms_AUC">AUC</a> of each model can be seen in table <a href="results.html#tab:howell-auc">4.35</a>.</p>
+<p>The <a href="glossary.html#acronyms_AUC">AUC</a> of each model can be seen in table <a href="results.html#tab:howell-auc">4.36</a>.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:howell-auc">Table 4.35: </span>AUC of the RGCCA models in the Howell dataset. The classification of the location of the sample according to the first componenent of the models shown. Model 0, 2 and 2.2 have a perfect classification of the samples to their respective location.
+<span id="tab:howell-auc">Table 4.36: </span>AUC of the RGCCA models in the Howell dataset. The classification of the location of the sample according to the first componenent of the models shown. Model 0, 2 and 2.2 have a perfect classification of the samples to their respective location.
 </caption>
 <thead>
 <tr>
@@ -3732,7 +3783,7 @@ Figure 4.35: Significance of pathways on common genes in HSCT and the Howell dat
 <hr />
 <ol start="7">
 <li id="fn7"><p>S4 is one of the object programming paradigms on R.
-For a more complete overview and differences see <a href="https://adv-r.hadley.nz/oo.html" title="2nd edition">Advanced R</a> <span class="citation">[<a href="#ref-wickham2019" role="doc-biblioref">195</a>]</span>.<a href="results.html#fnref7" class="footnote-back">↩︎</a></p></li>
+For a more complete overview and differences see Advanced R, freely available online: <a href="https://adv-r.hadley.nz/oo.html" class="uri">https://adv-r.hadley.nz/oo.html</a> <span class="citation">[<a href="#ref-wickham2019" role="doc-biblioref">195</a>]</span>.<a href="results.html#fnref7" class="footnote-back">↩︎</a></p></li>
 <li id="fn8"><p>We also contributed with some comments and feedback to the package to make it easier to read the source and check the inputs and improve the documentation so that it is coherent with the code and previous results of the functions.<a href="results.html#fnref8" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
