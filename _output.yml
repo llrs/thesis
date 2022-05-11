@@ -2,7 +2,7 @@ bookdown::gitbook:
   pandoc_args: !expr acronymsdown::add_filter()
   css: style/style.css
   includes:
-    in_header: style/GA.html
+    in_header: ["style/favicon.html", "style/GA.html"]
     # before_body: wip.html
     before_body: style/print.html
   dev: svglite
