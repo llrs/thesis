@@ -78,7 +78,7 @@ a <- meta() %>%
                   "At the bottom doctoral thesis."),
     og_type = "book",
     og_author = c("Lluís Revilla Sancho"),
-    twitter_card_type = "summary_large_image",
+    twitter_card_type = "summary",
     twitter_creator = "@Lluis_Revilla"
   )
 write_meta(a, path = "style/meta.html")
