@@ -72,8 +72,10 @@ meta() %>%
   meta_social(
     title = "Data integration in inflammatory bowel disease",
     url = "https://thesis.llrs.dev",
-    # image = "https://r4ds.had.co.nz/cover.png", # TODO
-    image_alt = "The cover of the thesis.",
+    image = "https://thesis.llrs.dev/images/cover.png", 
+    image_alt = c("The cover of the thesis showing the title, and author.", 
+                  "Below a drawing of a colon with microbiome on the ascending colon, numbers in a the transversal segment and some epithelium with different smoothness, thickness and colors (red, orange and brown).",
+                  "At the bottom doctoral thesis."),
     og_type = "book",
     og_author = c("Lluís Revilla Sancho"),
     twitter_card_type = "summary_large_image",
