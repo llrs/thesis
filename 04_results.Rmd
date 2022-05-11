@@ -57,7 +57,7 @@ Mixing it with S3 generic functions it provides a powerful interface compatible 
 The package provides a new class to handle fuzzy sets and the associate information.
 
 [^results-1]: S4 is one of the object programming paradigms on R.
-    For a more complete overview and differences see [Advanced R](https://adv-r.hadley.nz/oo.html "2nd edition") [@wickham2019].
+    For a more complete overview and differences see Advanced R, freely available online: https://adv-r.hadley.nz/oo.html [@wickham2019].
 
 `BaseSet` methods are divided into several categories:
 
@@ -335,7 +335,7 @@ knitr::include_graphics("images/pugets-weights.png")
 ```
 
 
-The different models resulted on the following \acr{AVE} values as reported on \@ref(tab:puget-models-ave).
+The different models resulted on the following \acr{AVE} values as reported in table  \@ref(tab:puget-models-ave).
 
 ```{r puget-models-ave}
 df <- data.frame(
@@ -439,7 +439,7 @@ include_graphics("images/hsct-models.png")
 ```
 
 
-The weights of these models can be observed here:
+The weights of these models can be observed here in table \@ref(tab:hsct-model0).
 
 ```{r hsct-model0}
 df <- data.frame(
@@ -455,7 +455,7 @@ k <- kable(df, align = rep("c", ncol(df)),
 format_design(k, df)
 ```
 
-If we include the information about the samples all together in a block called metadata we can start from this model on \@ref(tab:hsct-model1-1).
+If we include the information about the samples all together in a block called metadata we can start from this model in table \@ref(tab:hsct-model1-1).
 
 ```{r hsct-model1-1}
 df <- data.frame(
@@ -854,7 +854,7 @@ format_design(k, df)
 ```
 
 
-On model two we split the invariable variables from those related to the location (see \@ref(tab:morgan-model2)).
+On model two we split the invariable variables from those related to the location (see table  \@ref(tab:morgan-model2)).
 
 ```{r morgan-model2}
 df <- data.frame(
@@ -925,7 +925,7 @@ When exploring the bootstraps of the data we found that model 1.2 is highly vari
 include_graphics("images/morgan_bootstrap.png")
 ```
 
-In addition the model 2.2 (\@ref(tab:morgan-model2-2)) usually has a lower inner \acr{AVE} compared to model 1.2 (\@ref(tab:morgan-model2)).
+In addition the model 2.2 (table \@ref(tab:morgan-model2-2)) usually has a lower inner \acr{AVE} compared to model 1.2 (table \@ref(tab:morgan-model2)).
 
 ```{r morgan-auc-plot, fig.scap="AUC of the RGCCA models in the Morgan dataset", fig.cap="AUC of the RGCCA models in the Morgan dataset. The classification of the localization of the sample according to the first component of the gene expression of the models generated with RGCCA on the Morgan dataset."}
 include_graphics("images/morgan-auc.png")
@@ -956,13 +956,13 @@ If we quantify this separation by the first dimension of \acr{MCIA}, the \acr{AU
 
 ### Howell's dataset {#results-howell}
 
-The \acr{16S} of this dataset doesn't show any clear pattern regarding the location of the samples according to the firsts dimensions of the \acr{PCA} on \@ref(fig:howell-pca-16s).
+The \acr{16S} of this dataset doesn't show any clear pattern regarding the location of the samples according to the firsts dimensions of the \acr{PCA} on figure \@ref(fig:howell-pca-16s).
 
 ```{r howell-pca-16s, fig.scap="PCA of 16S data from the Howell dataset", fig.cap = "PCA of 16S data from the Howell dataset. The first component separates the samples by their location. (ref:poins-col-shape)"}
 include_graphics("images/howell_PCA_16S.png")
 ```
 
-The \acr{PCA} on the transcriptome shows a distinction between colon and ileum \@ref(fig:howell-pca-RNAseq) there are almost two distinct groups according to location:
+The \acr{PCA} on the transcriptome shows a distinction between colon and ileum, see figure \@ref(fig:howell-pca-RNAseq), there are almost two distinct groups according to location.
 
 ```{r howell-pca-RNAseq, fig.scap="PCA of RNAseq data from the Howell dataset", fig.cap = "PCA of RNAseq data from the Howell dataset. There are two groups of samples according to their location. (ref:poins-col-shape)"}
 include_graphics("images/howell_PCA_RNAseq.png")
@@ -970,7 +970,7 @@ include_graphics("images/howell_PCA_RNAseq.png")
 
 
 This dataset was processed to confirm the results on the previous datasets.
-As always first we started with model 0, connecting both the RNAseq and the \acr{16S} blocks:
+As always first we started with model 0, see table \@ref(tab:howell-model0), connecting both the RNAseq and the \acr{16S} blocks.
 
 ```{r howell-model0}
 df <- data.frame(
@@ -986,7 +986,7 @@ k <- kable(df, align = rep("c", ncol(df)),
 ```
 
 Later we look for the best model of family 1 (without looking at any previous model of family 1).
-This resulted on the following model \@ref(tab:howell-model1-2).
+This resulted on the following model in table \@ref(tab:howell-model1-2).
 
 ```{r howell-model1-2}
 df <- data.frame(
@@ -1004,14 +1004,14 @@ format_design(k, df)
 ```
 
 
-Model 1.2, in table \@ref(tab:howell-model1-2), was the best according to the \acr{AVE} score but perform worse when attempting to recreate known biological differences via classifying samples as we can see in \@ref(fig:howell-models).
+Model 1.2, in table \@ref(tab:howell-model1-2), was the best according to the \acr{AVE} score but perform worse when attempting to recreate known biological differences via classifying samples as we can see in table \@ref(fig:howell-models).
 
 ```{r howell-models, fig.scap="Models from the inteRmodel of the Howell dataset.", fig.cap="Models from the inteRmodel of the Howell dataset. The three main models, model 0, 1.2 and 2.2 on the Howell dataset colored by section colon, ileum and shape according to the disease: square, ulcerative colitis; triangle, normal; circle, Crohn's disease. Model 0 has just trancriptomic and microbiome data, model 1.2 has transcriptomic, microbiome and sample data and model 2.2 has transcriptomic, microbiome and sample data split in different blocks."}
 include_graphics("images/howell-models.png")
 ```
 
 Model 2.2 was selected for further analysis as it describes more accurately the biology of the dataset it.
-Model 2.2 can be seen in \@ref(tab:howell-model2-2).
+Model 2.2 can be seen in table \@ref(tab:howell-model2-2).
 
 ```{r howell-model2-2}
 df <- data.frame(

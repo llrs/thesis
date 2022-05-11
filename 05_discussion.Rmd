@@ -90,7 +90,7 @@ Caution and communication between all team members (i.e, clinicians, technicians
 
 Other datasets used from published sourced were assumed they had already passed enough controls and were of good quality.
 Nevertheless, they were screened to avoid quality issues by visually inspecting several principal components colored by several factors, checking gene expression and the microbiome profile and looking for known gene markers and microbiome taxonomy that might indicate quality problems.
-RNAseq data was usually compared using previously described methods on \@ref(statistics).
+RNAseq data was usually compared using previously described methods on section \@ref(statistics).
 
 The Puget's dataset provided a good benchmark to test the methods and performance of \acr{RGCCA} works.
 \acr{CGH} is not comparable to microbial data, but the microarray data is similar to the RNAseq data from other datasets.
@@ -254,13 +254,12 @@ For these reasons gene expression and \acr{16S} blocks were not split into sever
 Besides comparing the results of different methods, these models need to be evaluated by the insights they provide on the biological system they are being applied to, in our case \acr{IBD}.
 So far the models were only discussed on their technical merits.
 
-It is known that the mucosal transciptome is related to sample localization (of)i.e.
-small or large intestine) and disease activity [@criss2021].
-This can be seen in the \acr{PCA} which separate colon an ileum on the first dimension: See the \acr{PCA} of the different datasets \@ref(fig:hsct-pca-RNAseq), \@ref(fig:hasler-pca-RNAseq) and \@ref(fig:howell-pca-RNAseq).
+It is known that the mucosal transciptome is related to sample localization (i.e. small or large intestine) and disease activity [@criss2021].
+This can be seen in the \acr{PCA} which separate colon an ileum on the first dimension: See the \acr{PCA} figures of the different datasets \@ref(fig:hsct-pca-RNAseq), \@ref(fig:hasler-pca-RNAseq) and \@ref(fig:howell-pca-RNAseq).
 The difference is so great that many times the colon and ileum samples are analyzed separately.
 As such, it was a reasonable assumption to expect models to reflect these differences on the gene expression canonical component.
 
-The variability of microbiome difficults finding clear patterns (See the \acr{PCA} of the different datasets: \@ref(fig:hsct-pca-16s), \@ref(fig:hasler-pca-16s), \@ref(fig:morgan-pca-16s) and \@ref(fig:howell-pca-16s)).
+The variability of microbiome difficults finding clear patterns (See the \acr{PCA} figures of the different datasets: \@ref(fig:hsct-pca-16s), \@ref(fig:hasler-pca-16s), \@ref(fig:morgan-pca-16s) and \@ref(fig:howell-pca-16s)).
 In healthy humans, it has been suggested that there is a shared microbial patterns among groups of individuals [@arumugam2011]. Such theory proposes three groups of similar microbiota composition, named enterotypes. However, the enterotypes classification is not unanimously accepted [@koren2013; @cheng2019].
 Some suggest it is an artifact of the methodology used.
 
