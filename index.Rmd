@@ -61,11 +61,11 @@ library("knitr")
 
 <!--# TODO Fix metathis to provide good media coverage -->
 
-```{r metathis, cache=TRUE, include=FALSE, eval=knitr::is_html_output(excludes = "epub")}
+```{r metathis, cache=FALSE, include=FALSE, eval=knitr::is_html_output(excludes = "epub")}
 library("metathis")
 a <- meta() %>%
   meta_description(
-    "Thesis searching the relationship between microbiome and transcriptome on the intestine on patients with IBD to discover key genes and bacteria."
+    "Thesis searching the relationship between microbiome and transcriptome in the intestine on patients with IBD."
   ) %>% 
   meta_name("github-repo" = "llrs/thesis") %>% 
   meta_viewport() %>% 
