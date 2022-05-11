@@ -63,7 +63,7 @@ library("knitr")
 
 ```{r metathis, cache=TRUE, include=FALSE, eval=knitr::is_html_output(excludes = "epub")}
 library("metathis")
-meta() %>%
+a <- meta() %>%
   meta_description(
     "Thesis searching the relationship between microbiome and transcriptome on the intestine on patients with IBD to discover key genes and bacteria."
   ) %>% 
@@ -81,6 +81,7 @@ meta() %>%
     twitter_card_type = "summary_large_image",
     twitter_creator = "@Lluis_Revilla"
   )
+write_meta(a, path = "style/meta.html")
 ```
 
 ```{r tables-formatting}
