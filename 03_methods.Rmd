@@ -213,7 +213,11 @@ The objective function is:
 [^methods-1]: CRAN is The Comprehensive R Archive Network available at <https://cran.r-project.org/>
 
 $$
-\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk} g( \text{cov}(X_j a_j, X_k a_k)) \\ \text{ s.t. } (1-\tau_j)var(X_j a_j)+\tau_j \Vert a_j \Vert^2 = 1, j=1, \ldots, J
+\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk} g( \text{cov}(X_j a_j, X_k a_k))
+$$
+
+$$
+\text{ s.t. } (1-\tau_j)var(X_j a_j)+\tau_j \Vert a_j \Vert^2 = 1, j=1, \ldots, J
 $$
 
 Being $X_j$ the values from sample $j$, the weights of the variables of said sample are represented by $a$.
@@ -239,7 +243,11 @@ The authors realized that there is a special problem due to sparsity on biologic
 The method to perform the dimensional reduction using the sparse method consists on maximizing the same equation but with a different constraint: Specifically, \acr{RGCCA} with all $\tau_j = 1$, combined with an L1-penalty that gives rise to SGCCA:
 
 $$
-\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g( \text{cov}(X_j a_j, X_k a_k)) \text{~~s.t.~~} \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
+\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g( \text{cov}(X_j a_j, X_k a_k))
+$$
+
+$$
+\text{ s.t. } \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
 $$
 
 The $s_j$ controls the sparsity estimated of the data, the smaller it is, the higher the sparsity of $X_j$ is.

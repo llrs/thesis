@@ -931,7 +931,7 @@ In addition the model 2.2 (table \@ref(tab:morgan-model2-2)) usually has a lower
 include_graphics("images/morgan-auc.png")
 ```
 
-The area under the curve for these models is:
+The area under the curve for these models are:
 
 ```{r morgan-auc}
 df <- data.frame(Model = c("0", "1", "1.1", "1.2", "2", "2.1", "2.2", "2.3"),
@@ -944,7 +944,7 @@ k <- kable(df, align = rep("c", ncol(df)),
 format_design(k, df)
 ```
 
-With \acr{MCIA}:
+With \acr{MCIA} we can observe that the location does not separate the samples (see table \@ref(fig:morgan-mcia-plot)):
 
 ```{r morgan-mcia-plot, fig.scap="MCIA dimensions in the Morgan dataset.", fig.cap="MCIA dimensions in the Morgan dataset. MCIA first two dimensions of the dataset shows some separation between samples by location. (ref:poins-col-shape)"}
 include_graphics("images/morgan-mcia.png")
