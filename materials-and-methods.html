@@ -608,7 +608,10 @@ However, for each sample it needs to have a complete case with no missing values
 It uses a dimensional reduction approach to relate the different blocks of data between them and produce specific factors for each dataset.
 The objective function is:</p>
 <p><span class="math display">\[
-\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk} g( \text{cov}(X_j a_j, X_k a_k)) \\ \text{ s.t. } (1-\tau_j)var(X_j a_j)+\tau_j \Vert a_j \Vert^2 = 1, j=1, \ldots, J
+\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk} g( \text{cov}(X_j a_j, X_k a_k))
+\]</span></p>
+<p><span class="math display">\[
+\text{ s.t. } (1-\tau_j)var(X_j a_j)+\tau_j \Vert a_j \Vert^2 = 1, j=1, \ldots, J
 \]</span></p>
 <p>Being <span class="math inline">\(X_j\)</span> the values from sample <span class="math inline">\(j\)</span>, the weights of the variables of said sample are represented by <span class="math inline">\(a\)</span>.
 While <span class="math inline">\(g\)</span> is a function that can take the form of <span class="math inline">\(x\)</span>, also known as Horst method, <span class="math inline">\(|x|\)</span> known as centroid method, <span class="math inline">\(x^2\)</span> known as factorial method, or any user-supplied function.
@@ -626,7 +629,10 @@ Where the variance is defined as:</p>
 <p>The authors realized that there is a special problem due to sparsity on biological data which could be handled using first another normalization to improve the stability and success of the canonical correlation methodology.
 The method to perform the dimensional reduction using the sparse method consists on maximizing the same equation but with a different constraint: Specifically, <a href="glossary.html#acronyms_RGCCA">RGCCA</a> with all <span class="math inline">\(\tau_j = 1\)</span>, combined with an L1-penalty that gives rise to SGCCA:</p>
 <p><span class="math display">\[
-\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g( \text{cov}(X_j a_j, X_k a_k)) \text{~~s.t.~~} \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
+\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk}g( \text{cov}(X_j a_j, X_k a_k))
+\]</span></p>
+<p><span class="math display">\[
+\text{ s.t. } \Vert a_j \Vert_2 = 1 \text{ and } \Vert a_j \Vert_1 \le s_j, j=1,\ldots,J
 \]</span></p>
 <p>The <span class="math inline">\(s_j\)</span> controls the sparsity estimated of the data, the smaller it is, the higher the sparsity of <span class="math inline">\(X_j\)</span> is.
 As <span class="math inline">\(s_j\)</span> is closer to 0, more features are selected as it looks to optimize covariance; while if it is closer to 1, less features are selected and the function resembles the correlation.
