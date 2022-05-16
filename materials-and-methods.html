@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-05-11" />
+<meta name="date" content="2022-05-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -608,7 +608,7 @@ However, for each sample it needs to have a complete case with no missing values
 It uses a dimensional reduction approach to relate the different blocks of data between them and produce specific factors for each dataset.
 The objective function is:</p>
 <p><span class="math display">\[
-\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk} g( \text{cov}(X_j a_j, X_k a_k)) \text{ s.t. } (1-\tau_j)var(X_j a_j)+\tau_j \Vert a_j \Vert^2 = 1, j=1, \ldots, J
+\underset{a_1,a_2, \dots,a_J}{\text{maximize}} \sum_{j, k = 1}^J c_{jk} g( \text{cov}(X_j a_j, X_k a_k)) \\ \text{ s.t. } (1-\tau_j)var(X_j a_j)+\tau_j \Vert a_j \Vert^2 = 1, j=1, \ldots, J
 \]</span></p>
 <p>Being <span class="math inline">\(X_j\)</span> the values from sample <span class="math inline">\(j\)</span>, the weights of the variables of said sample are represented by <span class="math inline">\(a\)</span>.
 While <span class="math inline">\(g\)</span> is a function that can take the form of <span class="math inline">\(x\)</span>, also known as Horst method, <span class="math inline">\(|x|\)</span> known as centroid method, <span class="math inline">\(x^2\)</span> known as factorial method, or any user-supplied function.
@@ -787,7 +787,7 @@ We describe the hypergeometric test and the proportion test below.</p>
 <p>The fisher test calculates how independently are two categories.
 Say if genes in category X are independent of category Y, if we use the contingency table</p>
 <table>
-<caption><span id="tab:fisher">Table 3.7: </span> Fisher contingency table</caption>
+<caption><span id="tab:fisher">Table 3.7: </span> Fisher contingency table.</caption>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -999,10 +999,10 @@ This probability was used to calculate (via <code>set_size</code>) the genes and
 It might help to detect a bad design of the experiment.</p>
 <p>On pseudo code the core of the program can be described as:</p>
 <pre id="pseudocode-experDesign"><code>for each index:
-    for each batch
-        calculate batch specific summary statistics: SSb
-        compare SSb with the SS of all the samples
-  keep index with the smallest difference on all batches</code></pre>
+  for each batch
+   calculate batch specific summary statistics: SSb
+   compare SSb with the SS of all the samples
+ keep index with smallest difference on all batches</code></pre>
 <p>Summary statistics taken into account are the median, the variance, the range, the number of missing values, and the entropy of the categorical variables.
 It can take into account spatial distribution and, given the number of samples that fit on a batch, provide which technical replicates<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> are best to use.</p>
 </div>
