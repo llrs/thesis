@@ -523,7 +523,7 @@ df <- data.frame(
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 2.2 of the HSCT dataset.", 
            caption = "Relationships between the different blocks in the HSCT dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship.")
-format_design(k, df)
+format_design(k, df, out = "scale_down")
 ```
 
 We also tested specifically a model from the family 2.3, which can be seen in table \@ref(tab:hsct-model2-3).
@@ -543,7 +543,7 @@ df <- data.frame(
 k <- kable(df, align = rep("c", ncol(df)), 
            caption.short = "Model 2.3 of the HSCT dataset.", 
            caption = "Relationships between the different blocks in the HSCT dataset for model 2.3. 0 indicates no relationship and 1 indicates a strong relationship.")
-format_design(k, df)
+format_design(k, df, out = "scale_down")
 ```
 
 The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see figure \@ref(fig:hsct-models) and [S2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002) data of [@revilla2021]).
@@ -706,7 +706,7 @@ df <- data.frame(list(
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 2.1 of the H\u00E4sler dataset.", 
            caption = "Model 2.1 of the H\u00E4sler dataset. 0 indicates no relationship and 1 indicates a strong relationship. RNAseq is related to the location, microbiota to location and demographic variables and demographic variables are also related to time.")
-format_design(k, df)
+format_design(k, df, out = "scale_down")
 ```
 
 After optimization of models of family 1 the best model according to the inner \acr{AVE} score is in table \@ref(tab:hasler-model-2-2).
@@ -721,7 +721,7 @@ df <- data.frame(list("Model 2.2" = c("RNAseq", "micro", "Location", "Demographi
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 2.2 of the H\u00E4sler dataset.", 
            caption = "Model 2.2 of the H\u00E4sler dataset. 0 indicates no relationship and 1 indicates a strong relationship. RNAseq is related to the microbiota and location (much stronger), the microbiota to the demographic and time (stronger) and demographic and time are linked too.")
-format_design(k, df)
+format_design(k, df, out = "scale_down")
 ```
 
 In table \@ref(tab:hasler-aves), we can see here the AVE scores of each of the previous models.
@@ -870,7 +870,7 @@ df <- data.frame(
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 2 of the Morgan dataset.",
            caption = "Relationships between the different blocks in the Morgan dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship. Transcriptome and the microbiome are linked and related to demographic and location variables.")
-format_design(k, df)
+format_design(k, df, out = "scale_down")
 ```
 
 The model that has higher inner \acr{AVE} for these blocks is the following:
@@ -889,7 +889,7 @@ df <- data.frame(
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 2.2 of the Morgan dataset.",
            caption = "Relationships between the different blocks in the Morgan dataset for model 2.2. 0 indicates no relationship and 1 indicates a strong relationship. The transcriptome is weakly related to the microbiome and location but much stronger related to the demographic variables.")
-format_design(k, df)
+format_design(k, df, out = "scale_down")
 ```
 
 Each model is different from previous models.

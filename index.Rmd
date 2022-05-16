@@ -87,12 +87,12 @@ write_meta(a, path = "style/meta.html")
 ```{r tables-formatting}
 library("kableExtra")
 options(knitr.kable.NA = "")
-format_design <- function(x, data){
+format_design <- function(x, data, out = NULL){
   dims <- dim(data)
   nrow <- nrow(data)
   ncol <- ncol(data) + as.numeric(!all(rownames(data) == seq_len(nrow(data))))
-  k <- kable_styling(x, latex_options = c("striped", "HOLD_position", "repeat_header"), 
-                            full_width = FALSE)
+  k <- kable_styling(x, latex_options = c("striped", "HOLD_position", out), 
+                     full_width = FALSE)
   k <- column_spec(k, column = 1, border_left = FALSE, bold = TRUE, include_thead = FALSE)
   row_spec(k, row = 0, bold = TRUE, italic = FALSE)
 }
