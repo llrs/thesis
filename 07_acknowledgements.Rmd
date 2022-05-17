@@ -44,12 +44,13 @@ A l'Edu per estar sempre disposat a acostar-me en cotxe o trobar un lloc fàcil 
 En Frederic per compartir molts dinars, penes i alegries.
 En Joan per marcar el camí, sempre has estat per davant! i l'Aleix, espero que la bioinformàtica vagi a més! 
 
-Els amics d'Obenc, el Cristian pels canvis que hem viscut aquests anys.
-En Daniel per ensenyar-me que el temps no es barrera per fer coses (Encara no m'has presentat els teus gossos!). 
+
+Als amics d'Obenc, el Cristian pels canvis que hem viscut aquests anys.
+En Daniel per ensenyar-me que el temps no es barrera per fer coses (encara no m'has presentat els teus gossos!). 
 A en Lluís que tampoc no pares mai i m'has transmés la teva gran ambició.
-A en Ricard per totes les discussions sobre el futur profesional, de la programació, els jocs, películes i tantes coses, segur que trobes una manera de passar al seguent nivell!
+A en Ricard per totes les discussions sobre el futur profesional, de la programació, els jocs, pel·lícules i tantes coses, segur que trobes una manera de passar al seguent nivell!
 A en Joaquín per ensenyar-me el món empresarial de software i tants detalls tècnics. 
-A tots els que han vingut a fútbol, en especial al Josep Mª per ser l'incansable impulsor i treure gent de sota les pedres i a en Josep per ser el més constant, ja chutaré més sovint!
+A tots els que han vingut a futbol, en especial al Josep Mª per ser l'incansable impulsor i treure gent de sota les pedres i a en Josep per ser el més constant, ja xutaré més sovint!
 
 I also received  many help from numerous and anonymous people from several corners of the world.
 They might have shared some interesting tip, advice or experiences on Twitter, or answered my questions on [Bioconductor's support forum](https://support.bioconductor.org), [Biostars](https://biostars.org), [Bioinformatics SE](https://bioinformatics.stackexchange.com/) or Stackexchange network. 
