@@ -392,7 +392,7 @@ k <- kable(df, align = rep("c", ncol(df)),
 format_design(k, df)
 ```
 
-Both tables (\@ref(tab:hsct-permanova-RNAseq) \ref(tab:hsct-permanova-microbiome)) show that location and IBD is a variable that affects the \acr{GE} and microbiome, but there are some interactions that explain similar percentage of variance.
+Both tables (\@ref(tab:hsct-permanova-RNAseq) and \@ref(tab:hsct-permanova-microbiome)) show that location and IBD is a variable that affects the \acr{GE} and microbiome, but there are some interactions that explain similar percentage of variance.
 <!--# global test from the comments on TRIM/intestinal_16S_RNAseq_metadb/variance.R -->
 
 With globaltest the results were similar: sex, \acr{IBD}, location, age and time since diagnosis were able to explain the simple endoscopic score for Crohn's disease (p-value $5.7 \cdot 10^{-21}$ ).
@@ -944,7 +944,7 @@ k <- kable(df, align = rep("c", ncol(df)),
 format_design(k, df)
 ```
 
-With \acr{MCIA} we can observe that the location does not separate the samples (see table \@ref(fig:morgan-mcia-plot)):
+With \acr{MCIA} we can observe that the location does not separate the samples (see figure \@ref(fig:morgan-mcia-plot)).
 
 ```{r morgan-mcia-plot, fig.scap="MCIA dimensions in the Morgan dataset.", fig.cap="MCIA dimensions in the Morgan dataset. MCIA first two dimensions of the dataset shows some separation between samples by location. (ref:poins-col-shape)"}
 include_graphics("images/morgan-mcia.png")
