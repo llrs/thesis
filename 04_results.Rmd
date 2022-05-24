@@ -504,7 +504,7 @@ df <- data.frame(
 k <- kable(df, align = rep("c", ncol(df)),
            caption.short = "Model 2 of the HSCT dataset.",
            caption = "Relationships between the different blocks in the HSCT dataset for model 2. 0 indicates no relationship and 1 indicates a strong relationship.")
-format_design(k, df)
+format_design(k, df, out = "scale_down")
 ```
 
 Following this split, we used `inteRmodel` (See section above \@ref(intermodel)) to find the model that has higher inner \acr{AVE} for these blocks is the one in table \@ref(tab:hsct-model2-2).
