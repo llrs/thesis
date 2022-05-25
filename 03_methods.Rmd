@@ -330,7 +330,7 @@ $$
 \sum_{k=1}^K w_k {cov}^2 (X_k Q_k u_k, v)
 $$
 
-where $K$ is the total number of matrices, $X_k$ the transformed matrices and $Q_k$ is a square matrix with $r_{ij}$ in diagonal elements indicating the hyperspace of features metrics, $u_k$ are auxiliary axes, $v$ the reference structure and w the weights of the matrices.
+where $K$ is the total number of matrices, $X_k$ the transformed matrices and $Q_k$ is a square matrix with $r_{ij}$ in diagonal elements indicating the hyperspace of features metrics, $u_k$ are auxiliary axes, $v$ the reference structure and $w_k$ the weights of the matrices.
 This can be used to obtain a dimension of $P_k^d=u_k^d(u_k^d Q_k {u_k^d}^T)^{-1} u_k^d Q_k$ given that for each dimension the residuals are obtained following $X_k^{d-1} = X_1^d- X_1^d P_1^{d-1}$ where $d$ are the dimensions needed.
 
 \acr{MCIA} was used as a baseline method to compare the \acr{RGCCA} integration.
