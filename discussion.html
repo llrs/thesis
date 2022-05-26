@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-05-25" />
+<meta name="date" content="2022-05-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -326,7 +326,7 @@ Indeed, as we encountered some problems we added blank samples to control for ba
 <p>We initially processed the <a href="glossary.html#acronyms_16S">16S</a> data to obtain <a href="glossary.html#acronyms_OTUs">OTUs</a>
 <a href="glossary.html#acronyms_OTUs">OTUs</a> were the standard some years back <span class="citation">[<a href="#ref-callahan2017" role="doc-biblioref">198</a>]</span>.
 However, <a href="glossary.html#acronyms_OTUs">OTUs</a> are not comparable between studies even those that use the same primers.
-For this reason, and after a suggestion from a reviewer (on the review process of <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">197</a>]</span>), we moved to process later <a href="glossary.html#acronyms_16S">16S</a> sequencing datasets to obtain <a href="glossary.html#acronyms_ASV">ASV</a>.
+For this reason, and after a suggestion from a reviewer (on the review process of <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">156</a>]</span>), we moved to process later <a href="glossary.html#acronyms_16S">16S</a> sequencing datasets to obtain <a href="glossary.html#acronyms_ASV">ASV</a>.
 <a href="glossary.html#acronyms_ASV">ASV</a> allow the comparison of the taxonomic imputation between studies using the same primers.
 However, comparing <a href="glossary.html#acronyms_16S">16S</a> taxa <a href="glossary.html#acronyms_ASV">ASV</a> or <a href="glossary.html#acronyms_OTUs">OTUs</a> is hard and selecting the right tool to compare them is important <span class="citation">[<a href="#ref-nearing2022" role="doc-biblioref">199</a>]</span>.</p>
 <p>It is also worth keeping in mind that several species have variable number of <a href="glossary.html#acronyms_16S">16S</a> genes.
@@ -393,7 +393,7 @@ We were not as much interested on the biology as on learning about the <a href="
 The <a href="glossary.html#acronyms_16S">16S</a> data was very similar to the <a href="glossary.html#acronyms_HSCT">HSCT</a> dataset.
 We could confirm that the <code>inteRmodel</code> approach works on more than one dataset.</p>
 <p>The taxonomy analysis of the different datasets was done differently.
-On <a href="glossary.html#acronyms_HSCT">HSCT</a> following our collaborators advise we used IMNGS to annotate its microbiota data <span class="citation">[<a href="#ref-lagkouvardos2016" role="doc-biblioref">159</a>]</span>.
+On <a href="glossary.html#acronyms_HSCT">HSCT</a> following our collaborators advise we used IMNGS to annotate its microbiota data <span class="citation">[<a href="#ref-lagkouvardos2016" role="doc-biblioref">160</a>]</span>.
 Afterwards we used S<a href="glossary.html#acronyms_IL">IL</a>VA database to annotate the microbiome data on their corresponding taxa.</p>
 <p>The Morgan pouchitis dataset was also related to <a href="glossary.html#acronyms_IBD">IBD</a> but it included patients that underwent colectomy and samples are specific of the pouch or pre-pouch ileum.
 No healthy samples are included and there is no follow up.
@@ -456,7 +456,7 @@ For all these reasons this approach was no longer pursued.
 However, the package was mentioned as <a href="https://rviews.rstudio.com/2020/12/22/november-top-40-new-cran-packages/">top 40 packages</a> added on CRAN that month and it will be useful under other circumstances or when less combinations are possible.</p>
 <p>The development of the <code>experDesign</code> package helped us to avoid batch effects on the sequencing step.
 However, as seen in the previous section, batch effects were not completely prevented.
-As discussed in the related publication <span class="citation">[<a href="#ref-revillasancho2021" role="doc-biblioref">193</a>]</span>, there are several tools already focused on this problem: <code>OSAT</code> (<span class="citation">[<a href="#ref-yan2012" role="doc-biblioref">214</a>]</span>), <code>anticlust</code> (<span class="citation">[<a href="#ref-papenberg2020" role="doc-biblioref">215</a>]</span>) and <code>Omixer</code> (<span class="citation">[<a href="#ref-sinke2021" role="doc-biblioref">216</a>]</span>).
+As discussed in the related publication <span class="citation">[<a href="#ref-revillasancho2021" role="doc-biblioref">194</a>]</span>, there are several tools already focused on this problem: <code>OSAT</code> (<span class="citation">[<a href="#ref-yan2012" role="doc-biblioref">214</a>]</span>), <code>anticlust</code> (<span class="citation">[<a href="#ref-papenberg2020" role="doc-biblioref">215</a>]</span>) and <code>Omixer</code> (<span class="citation">[<a href="#ref-sinke2021" role="doc-biblioref">216</a>]</span>).
 But these tools have some shortcomings, that are covered by <code>experDesign</code>: <code>OSAT</code> cannot handle missing values and does not work well for arbitrary batches, <code>anticlust</code> only accepts numerical variables but it is based on a powerful mathematical theorem and <code>Omixer</code> has bugs that prevent comparing with the other tools with no possible workaround.<br />
 In addition, <code>experDesign</code> received <a href="https://github.com/llrs/experDesign/issues/22#issuecomment-1033508578">requests</a> to have a new feature for expanding experiments.
 This might help improve the quality of bigger datasets to ensure they can be extended in several sequencing runs.
@@ -484,7 +484,7 @@ However, we knew that the transcriptome is mainly related to the location of the
 This is especially important because in our datasets we have samples from the same patient and time from multiple locations.
 On other studies there are less samples per individual and timepoint (if there are several timepoints) <span class="citation">[<a href="#ref-hasler_uncoupling_2016" role="doc-biblioref">80</a>, <a href="#ref-morgan2015" role="doc-biblioref">150</a>, <a href="#ref-howell2018" role="doc-biblioref">151</a>]</span>.</p>
 <p>On models of family 2, variables were grouped according to type into the Demographic block, Time block, and Location block (see tables on design of Puget’s <a href="results.html#tab:puget-model2-2">4.4</a>, <a href="results.html#tab:puget-model2">4.3</a>; <a href="glossary.html#acronyms_HSCT">HSCT</a> <a href="results.html#tab:hsct-model2">4.13</a> <a href="results.html#tab:hsct-model2-2">4.14</a>, <a href="results.html#tab:hsct-model2-3">4.15</a>; Häsler: <a href="results.html#tab:hasler-model-2-1">4.21</a>, <a href="results.html#tab:hasler-model-2-2">4.22</a>, Morgan’s <a href="results.html#tab:morgan-model2">4.28</a>, <a href="results.html#tab:morgan-model2-2">4.29</a>, Howell’s <a href="results.html#tab:howell-model2-2">4.34</a> models).</p>
-<p>The exploration of design on Puget’s dataset, and the datasets analysis of <a href="glossary.html#acronyms_HSCT">HSCT</a>, Häsler and Morgan’s datasets was published after peer review <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">197</a>]</span>.</p>
+<p>The exploration of design on Puget’s dataset, and the datasets analysis of <a href="glossary.html#acronyms_HSCT">HSCT</a>, Häsler and Morgan’s datasets was published after peer review <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">156</a>]</span>.</p>
 </div>
 <div id="evaluating-models" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Evaluating models<a href="discussion.html#evaluating-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -654,14 +654,14 @@ We hope this provides a first approximation to accurately understand the relatio
 <div id="ref-howell2018" class="csl-entry">
 151. Howell KJ, Kraiczy J, Nayak KM, Gasparetto M, Ross A, Lee C, et al. <a href="https://doi.org/10.1053/j.gastro.2017.10.007">DNA Methylation and Transcription Patterns in Intestinal Epithelial Cells From Pediatric Patients With Inflammatory Bowel Diseases Differentiate Disease Subtypes and Associate With Outcome</a>. Gastroenterology. 2018;154:585–98.
 </div>
+<div id="ref-revilla2021" class="csl-entry">
+156. Revilla L, Mayorgas A, Corraliza AM, Masamunt MC, Metwaly A, Haller D, et al. <a href="https://doi.org/10.1371/journal.pone.0246367">Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a>. PLOS ONE. 2021;16:e0246367.
+</div>
 <div id="ref-lagkouvardos2016" class="csl-entry">
-159. Lagkouvardos I, Joseph D, Kapfhammer M, Giritli S, Horn M, Haller D, et al. <a href="https://doi.org/10.1038/srep33721">IMNGS: A comprehensive open resource of processed 16S rRNA microbial profiles for ecology and diversity studies</a>. Scientific Reports. 2016;6.
+160. Lagkouvardos I, Joseph D, Kapfhammer M, Giritli S, Horn M, Haller D, et al. <a href="https://doi.org/10.1038/srep33721">IMNGS: A comprehensive open resource of processed 16S rRNA microbial profiles for ecology and diversity studies</a>. Scientific Reports. 2016;6.
 </div>
 <div id="ref-revillasancho2021" class="csl-entry">
-193. Revilla Sancho L, Lozano J-J, Salas A. <a href="https://doi.org/10.21105/joss.03358">experDesign: stratifying samples into batches with minimal bias</a>. Journal of Open Source Software. 2021;6:3358.
-</div>
-<div id="ref-revilla2021" class="csl-entry">
-197. Revilla L, Mayorgas A, Corraliza AM, Masamunt MC, Metwaly A, Haller D, et al. <a href="https://doi.org/10.1371/journal.pone.0246367">Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a>. PLOS ONE. 2021;16:e0246367.
+194. Revilla Sancho L, Lozano J-J, Salas A. <a href="https://doi.org/10.21105/joss.03358">experDesign: stratifying samples into batches with minimal bias</a>. Journal of Open Source Software. 2021;6:3358.
 </div>
 <div id="ref-callahan2017" class="csl-entry">
 198. Callahan BJ, McMurdie PJ, Holmes SP. <a href="https://doi.org/10.1038/ismej.2017.119">Exact sequence variants should replace operational taxonomic units in marker-gene data analysis</a>. The ISME Journal. 2017;11:2639–43.

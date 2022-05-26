@@ -23,7 +23,7 @@
 <meta name="author" content="Lluís Revilla Sancho" />
 
 
-<meta name="date" content="2022-05-25" />
+<meta name="date" content="2022-05-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -318,7 +318,7 @@ div.csl-indent {
 <div id="experdesign-1" class="section level3 hasAnchor" number="4.1.1">
 <h3><span class="header-section-number">4.1.1</span> experDesign<a href="results.html#experdesign-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><code>experDesign</code> package built in R was released for the first time on CRAN on 2020-09-08 after nearly a year after the initial release made on <a href="https://github.com/llrs/experDesign">github</a>.
-After peer review it was published on a journal on 2021-11 <span class="citation">[<a href="#ref-revillasancho2021" role="doc-biblioref">193</a>]</span>.</p>
+After peer review it was published on a journal on 2021-11 <span class="citation">[<a href="#ref-revillasancho2021" role="doc-biblioref">194</a>]</span>.</p>
 <p>The package uses functional programming to create and modify objects and the features used.
 The package bases its performance on the large body of work made by the R core team.
 It adds the information to the introduced <code>data.frame</code> or returns an vector with the appropriate information.</p>
@@ -403,7 +403,7 @@ Figure 4.2: <code>inteRmodel</code> functions and workflow. Functions provided b
 However, it provides the <code>model_RGCCA</code> function to make it easy to prepare such variables for RGCCA input.
 The inteRmodel procedure will only be useful if the user should decide which variables are independent from others and split them into different blocks.
 To asses this the user can use the methods we used, as described on the above section <a href="materials-and-methods.html#variance">3.5</a>.
-It is important to keep in mind the possible causal relationships on user’s data <span class="citation">[<a href="#ref-greenland2002" role="doc-biblioref">196</a>]</span>.</p>
+It is important to keep in mind the possible causal relationships on user’s data <span class="citation">[<a href="#ref-greenland2002" role="doc-biblioref">197</a>]</span>.</p>
 </div>
 </div>
 <div id="analysis" class="section level2 hasAnchor" number="4.2">
@@ -418,7 +418,7 @@ It is important to keep in mind the possible causal relationships on user’s da
 <p>The three different methods, centroid, factorial or horst were tested and compared.
 The main result of this comparison was that the differences of the selection of the variables mattered more than the number of variables selected with each method.
 The models were tested with different weights on all three schemes: horst, centroid and factorial.
-The horst and the centroid scheme were similar while the factorial resulted in the most different <a href="glossary.html#acronyms_AVE">AVE</a> values (see <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s001">S1 Data</a> of <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">197</a>]</span>).
+The horst and the centroid scheme were similar while the factorial resulted in the most different <a href="glossary.html#acronyms_AVE">AVE</a> values (see <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s001">S1 Data</a> of <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">156</a>]</span>).
 The centroid scheme was selected because it takes into account all the relationship regardless of the sign of the canonical correlation between the blocks.
 It is similarity to horst scheme.</p>
 <p>The effect of the sparsity value was measured by its effect on the inner <a href="glossary.html#acronyms_AVE">AVE</a> scores and the combination of the different values for each block as can be seen in figure <a href="results.html#fig:puget-tau2AVE">4.3</a>.</p>
@@ -1908,7 +1908,7 @@ Time
 </tr>
 </tbody>
 </table>
-<p>The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see figure <a href="results.html#fig:hsct-models">4.11</a> and <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002">S2</a> data of <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">197</a>]</span>).
+<p>The best model of the family 2 confirmed a relationship between the host transcriptome and the location-related variables, while the microbiome was associated with the demographic and location-related variables (see figure <a href="results.html#fig:hsct-models">4.11</a> and <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246367#pone.0246367.s002">S2</a> data of <span class="citation">[<a href="#ref-revilla2021" role="doc-biblioref">156</a>]</span>).
 Overall, we see that the relationships in the model affected the distribution of samples on the components of both the host transcriptome and the microbiome.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
@@ -3767,24 +3767,24 @@ Figure 4.35: Significance of pathways on common genes in HSCT and the Howell dat
 <div id="ref-puget2012" class="csl-entry">
 149. Puget S, Philippe C, Bax DA, Job B, Varlet P, Junier M-P, et al. <a href="https://doi.org/10.1371/journal.pone.0030313">Mesenchymal Transition and PDGFRA Amplification/Mutation Are Key Distinct Oncogenic Events in Pediatric Diffuse Intrinsic Pontine Gliomas</a>. PLOS ONE. 2012;7:e30313.
 </div>
+<div id="ref-revilla2021" class="csl-entry">
+156. Revilla L, Mayorgas A, Corraliza AM, Masamunt MC, Metwaly A, Haller D, et al. <a href="https://doi.org/10.1371/journal.pone.0246367">Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a>. PLOS ONE. 2021;16:e0246367.
+</div>
 <div id="ref-revillasancho2021" class="csl-entry">
-193. Revilla Sancho L, Lozano J-J, Salas A. <a href="https://doi.org/10.21105/joss.03358">experDesign: stratifying samples into batches with minimal bias</a>. Journal of Open Source Software. 2021;6:3358.
+194. Revilla Sancho L, Lozano J-J, Salas A. <a href="https://doi.org/10.21105/joss.03358">experDesign: stratifying samples into batches with minimal bias</a>. Journal of Open Source Software. 2021;6:3358.
 </div>
 <div id="ref-wickham2019" class="csl-entry">
-195. Wickham H. <a href="https://adv-r.hadley.nz/index.html">Advanced r</a>. Second Edition. Boca Raton: Chapman &amp; Hall; 2019.
+196. Wickham H. <a href="https://adv-r.hadley.nz/index.html">Advanced r</a>. Second Edition. Boca Raton: Chapman &amp; Hall; 2019.
 </div>
 <div id="ref-greenland2002" class="csl-entry">
-196. Greenland S, Brumback B. <a href="https://doi.org/10.1093/ije/31.5.1030">An overview of relations among causal modelling methods</a>. International Journal of Epidemiology. 2002;31:1030–7.
-</div>
-<div id="ref-revilla2021" class="csl-entry">
-197. Revilla L, Mayorgas A, Corraliza AM, Masamunt MC, Metwaly A, Haller D, et al. <a href="https://doi.org/10.1371/journal.pone.0246367">Multi-omic modelling of inflammatory bowel disease with regularized canonical correlation analysis</a>. PLOS ONE. 2021;16:e0246367.
+197. Greenland S, Brumback B. <a href="https://doi.org/10.1093/ije/31.5.1030">An overview of relations among causal modelling methods</a>. International Journal of Epidemiology. 2002;31:1030–7.
 </div>
 </div>
 <div class="footnotes">
 <hr />
 <ol start="7">
 <li id="fn7"><p>S4 is one of the object programming paradigms on R.
-For a more complete overview and differences see Advanced R, freely available online: <a href="https://adv-r.hadley.nz/oo.html" class="uri">https://adv-r.hadley.nz/oo.html</a> <span class="citation">[<a href="#ref-wickham2019" role="doc-biblioref">195</a>]</span>.<a href="results.html#fnref7" class="footnote-back">↩︎</a></p></li>
+For a more complete overview and differences see Advanced R, freely available online: <a href="https://adv-r.hadley.nz/oo.html" class="uri">https://adv-r.hadley.nz/oo.html</a> <span class="citation">[<a href="#ref-wickham2019" role="doc-biblioref">196</a>]</span>.<a href="results.html#fnref7" class="footnote-back">↩︎</a></p></li>
 <li id="fn8"><p>We also contributed with some comments and feedback to the package to make it easier to read the source and check the inputs and improve the documentation so that it is coherent with the code and previous results of the functions.<a href="results.html#fnref8" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
